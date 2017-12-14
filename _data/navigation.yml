@@ -1,7 +1,7 @@
 # Belongs at: /_data/navigation.yml
 toc:
 - title: ATutor
-  url: /atutor/index.html
+  url: http://atutor.github.io/atutor/index.html
   sublinks:
     - title: ATutor Details
       url: /atutor/index.html
