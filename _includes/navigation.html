@@ -1,0 +1,14 @@
+<!-- Belongs at: /_includes/navigation.html -->
+<nav>
+<h3><a href="/">Home</a></h3>
+    {% for item in  site.data.navigation.toc %}
+    <ul>
+    <li><h3>{{ item.title }}</h3>
+  
+        {% for entry in item.sublinks %}
+        {% assign fullurl = page.path | prepend : '/' %}
+          <li class="{% if entry.url == fullurl %}active{% endif %}"><a href="{{ entry.url }}">{% if entry.url == fullurl %}<div class="arrow-right"></div>{% endif %}{{ entry.title }}</a></li>
+        {% endfor %}
+      </ul>
+  {% endfor %}
+</nav>
