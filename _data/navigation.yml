@@ -18,22 +18,22 @@ toc:
     - title: Translation
       url: http://atutor.github.io/atutor/languages.html
 - title: AContent
-  url: /acontent/
+  url: http://atutor.github.io/acontent/
   sublinks:
     - title: AContent Details
-      url: /acontent/index.html
+      url: http://atutor.github.io/acontent/index.html
     - title: Downloads
-      url: /acontent/downloads.html
+      url: http://atutor.github.io/acontent/downloads.html
     - title: Documentation
-      url: /acontent/docs/index.html
+      url: http://atutor.github.io/acontent/docs/index.html
     - title: Translation
-      url: /acontent/languages.html
+      url: http://atutor.github.io/acontent/languages.html
 - title: Developers
-  url: /devel/
+  url: http://atutor.github.io/devel/
   sublinks:
     - title: Developer Docs
-      url: /developer/guidelines.html
+      url: http://atutor.github.io/developer/guidelines.html
     - title: Module Developer
-      url:  /developer/modules.html
+      url:  http://atutor.github.io/developer/modules.html
     - title: Translation
-      url: /developer/languages.html
+      url: http://atutor.github.io/developer/languages.html
