@@ -11,7 +11,7 @@ layout: home
             {% for repository in public_repositories%}
                 {% if repository.fork == false  and repository.name != 'atutorlangs.github.io' %}
                 <li> <a href="{{ repository.html_url }}"> {{ repository.name }} </a><br /> {{ repository.description }}
-			<br />"{{ repository.archived = true }}
+			<br />" 
 			<a href="https://github.com/atutorlangs/{{ repository.name }}/archive/master.zip">Download {{ repository.name }}</a>
 			<br />Last updated: {{ repository.updated_at }}</li>
                 {% endif %}
