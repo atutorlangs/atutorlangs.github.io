@@ -7,7 +7,6 @@ layout: home
             <h2>Languages</h2>
 
             <ul>
-            {% comment %}
             {% assign public_repositories = site.github.public_repositories | sort: 'updated_at'| reverse %}
             {% for repository in public_repositories%}
                 {% if repository.fork == false  and repository.name != 'atutorlangs.github.io' %}
@@ -16,7 +15,6 @@ layout: home
 			<br />Last updated: {{ repository.updated_at }}</li>
                 {% endif %}
             {% endfor %}
-             {% endcomment %}
             </ul>
             </div>
 	</div>     	
