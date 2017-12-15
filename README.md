@@ -1,2 +1,2 @@
 # atutorlangs.github.io
-Languages for ATutor LMA
+Languages for ATutor LMS
