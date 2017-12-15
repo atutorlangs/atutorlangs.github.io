@@ -12,8 +12,8 @@ layout: home
                 {% if repository.fork == false  and repository.name != 'atutorlangs.github.io' %}
                 <li> <a href="{{ repository.html_url }}"> {{ repository.name }} </a><br /> {{ repository.description }}
 			<br />"{{ repository.archived = true }}
-			<a href="https://github.com/atutorlangs/{{ repository.name }}/archive/master.zip {{ repository.url }}">Download {{ repository.name }}</a>
-			<br />{{ repository }}<br />Last updated: {{ repository.updated_at}}</li>
+			<a href="https://github.com/atutorlangs/{{ repository.name }}/archive/master.zip">Download {{ repository.name }}</a>
+			<br />Last updated: {{ repository.updated_at }}</li>
                 {% endif %}
             {% endfor %}
             </ul>
