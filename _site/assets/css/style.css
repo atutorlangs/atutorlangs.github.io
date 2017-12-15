@@ -354,6 +354,10 @@ div.google_ads { margin-left: auto; margin-right: auto; max-width: 66em; margin-
 
 .repos h2 { color: black; text-align: left !important; }
 
+.langs_repo ul { width: 95%; margin-left: auto; margin-right: auto; }
+
+.langs_repo ul li { border-radius: .2em; padding: 1em; margin-top: 1em; list-style-type: none; background-color: #ffffff; }
+
 .site-footer { padding-top: 0; margin-top: 0; }
 
 .stds_table td { vertical-align: top; }
