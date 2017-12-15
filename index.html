@@ -10,8 +10,7 @@ layout: home
             {% for repository in public_repositories%}
                 {% if repository.fork == false  and repository.name != 'atutorlangs.github.io' %}
                 <li> <a href="{{ repository.html_url }}"> {{ repository.name }} </a><br /> {{ repository.description }}
-			<br /> 
-			<a href="https://github.com/atutorlangs/{{ repository.name }}/archive/master.zip">Download {{ repository.name }}</a>
+			<br /> <div style="float:right;"><a href="https://github.com/atutorlangs/{{ repository.name }}/archive/master.zip"><img src="https://atutorlangs.github.com/images/download.png" alt="download {{ repository.name }}" title="download {{ repository.name }}" /></a> | <a href="https://github.com/atutorlangs/{{ repository.name }}"><img src="https://atutorlangs.github.io" alt="{{ repository.name }} on github" title="{{ repository.name }} on github" /></a></div>
 			<br />Last updated: {{ repository.updated_at }}</li>
                 {% endif %}
             {% endfor %}
