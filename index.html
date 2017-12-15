@@ -10,7 +10,10 @@ layout: home
             {% assign public_repositories = site.github.public_repositories | sort: 'updated_at'| reverse %}
             {% for repository in public_repositories%}
                 {% if repository.fork == false  and repository.name != 'atutorlangs.github.io' %}
-                <li> <a href="{{ repository.html_url }}"> {{ repository.name }} </a><br /> {{ repository.description }}<br /><a href="{{ repository.downloads_url }}">Download {{ repository.name }}</a><br />{{ repository }}<br />Last updated: {{ repository.updated_at}}</li>
+                <li> <a href="{{ repository.html_url }}"> {{ repository.name }} </a><br /> {{ repository.description }}
+			<br />
+			<a href="{{ repository.archive_url }}">Download {{ repository.name }}</a>
+			<br />{{ repository }}<br />Last updated: {{ repository.updated_at}}</li>
                 {% endif %}
             {% endfor %}
             </ul>
