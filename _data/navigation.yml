@@ -4,19 +4,19 @@ toc:
   url: http://atutor.github.io/atutor/index.html
   sublinks:
     - title: ATutor Details
-      url: /atutor/index.html
+      url: http://atutor.github.io/atutor/index.html
     - title: Downloads
-      url: /atutor/downloads.html
+      url: http://atutor.github.io/atutor/downloads.html
     - title: Features
-      url: /atutor/features.html
+      url: http://atutor.github.io/atutor/features.html
     - title: Documentation
-      url: /atutor/docs/index.html
+      url: http://atutor.github.io/atutor/docs/index.html
     - title: Modules
-      url: /atutor/modules.html
+      url: http://atutor.github.io/atutor/modules.html
     - title: Themes
-      url: /atutor/themes.html
+      url: http://atutor.github.io/atutor/themes.html
     - title: Translation
-      url: /atutor/languages.html
+      url: http://atutor.github.io/atutor/languages.html
 - title: AContent
   url: /acontent/
   sublinks:
