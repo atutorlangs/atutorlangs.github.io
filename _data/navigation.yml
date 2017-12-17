@@ -1,43 +1,43 @@
 # Belongs at: /_data/navigation.yml
 toc:
-- title: ATutor
-  url: http://atutor.github.io/atutor/index.html
+- title: ATutor LMS
+  url: https://atutor.github.io/atutor/index.html
   sublinks:
     - title: ATutor Details
-      url: http://atutor.github.io/atutor/index.html
+      url: https://atutor.github.io/atutor/index.html
     - title: Downloads
-      url: http://atutor.github.io/atutor/downloads.html
+      url: https://atutor.github.io/atutor/downloads.html
     - title: Features
-      url: http://atutor.github.io/atutor/features.html
+      url: http:s//atutor.github.io/atutor/features.html
     - title: Documentation
-      url: http://atutor.github.io/atutor/docs/index.html
+      url: https://atutor.github.io/atutor/docs/index.html
     - title: Modules
-      url: http://atutor.github.io/atutor/modules.html
+      url: https://atutor.github.io/atutor/modules.html
     - title: Themes
-      url: http://atutor.github.io/atutor/themes.html
+      url: https://atutor.github.io/atutor/themes.html
     - title: Translation
-      url: http://atutorlangs.github.io/index.html
+      url: https://atutorlangs.github.io/index.html
      - title: Code Repositories
-      url: http://atutor.github.io/atutor/repositories.html
-- title: AContent
+      url: https://atutor.github.io/atutor/repositories.html
+- title: AContent LCMS
   url: http://atutor.github.io/acontent/
   sublinks:
     - title: AContent Details
-      url: http://atutor.github.io/acontent/index.html
+      url: https://atutor.github.io/acontent/index.html
     - title: Downloads
-      url: http://atutor.github.io/acontent/downloads.html
+      url: https://atutor.github.io/acontent/downloads.html
     - title: Documentation
-      url: http://atutor.github.io/acontent/docs/index.html
+      url: https://atutor.github.io/acontent/docs/index.html
     - title: Translation
-      url: http://atutor.github.io/acontent/languages.html
+      url: https://atutor.github.io/acontent/languages.html
 - title: Developers
   url: http://atutor.github.io/devel/
   sublinks:
-    - title: Developer Docs
-      url: http://atutor.github.io/developer/guidelines.html
+    - title: Developer Docss
+      url: https://atutor.github.io/developer/guidelines.html
     - title: Module Developer
-      url:  http://atutor.github.io/developer/modules.html
+      url:  https://atutor.github.io/developer/modules.html
     - title: Translation
-      url: http://atutor.github.io/developer/languages.html
+      url: https://atutor.github.io/developer/languages.html
     - title: Report Issues
       url: https://github.com/atutor/ATutor/issues
