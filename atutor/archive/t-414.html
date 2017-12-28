@@ -1,0 +1,658 @@
+---
+ title: Add Top Level Page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Add Top Level Page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="414"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 12:28:35</p>
+            </div>
+            <div class="postheader"><h3>Add Top Level Page</h3></div>
+				
+			<div class="body">
+				<p>On Add Top Level Page, if I type the Title and body, i can create a new page.  but if I try to add content by Paste From File, it will not upload.<br />
+<br />
+I set the content folder to 777 (recursively) thinking that this might be the problem but no luck.<br />
+<br />
+Any ideas?<br />
+<br />
+thanks<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="415"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 12:57:31</p>
+            </div>
+            <div class="postheader"><h3>What are you uploading</h3></div>
+				
+			<div class="body">
+				<p>The paste from file function imports either valid HTML files or text files. It does not upload the file. It pastes it into the title/body areas, after which you must click the Add Content button.<br />
+<br />
+Please read:<br />
+http://www.atutor.ca/forums/view.php?fid=7;pid=149</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="416"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 13:10:09</p>
+            </div>
+            <div class="postheader"><h3>Add Top Level Page</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg<br />
+<br />
+The  define(\'CACHE_DIR\', \'/temp\'); was commented out in the config.inc.php file.  I assume it should have the // removed.<br />
+<br />
+Is temp the appropriate location for Mac OS X?<br />
+<br />
+======<br />
+<br />
+1. The version of ATutor :1.2.2<br />
+<br />
+2. The operating system ATutor is installed on: Mac OS 10.2.6 Server<br />
+<br />
+3. The Web server you are using and its version: Apache<br />
+<br />
+4. The version of PHP and MySQL being used: php 4.3.2+ and MySql 3.23.49 .<br />
+<br />
+5. The Web browser you are using to view ATutor, it\'s version number, and any default settings you may have changed: safari 1.o, IE 5.2<br />
+<br />
+6. Do you have root access to your server: yes<br />
+ <br />
+<br />
+9. Provide a URL to a phpinfo page so we can see how php has been installed on your system:<br />
+http://cvhs.ednet.ns.ca:16080/info.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="418"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 13:21:51</p>
+            </div>
+            <div class="postheader"><h3>Let me try</h3></div>
+				
+			<div class="body">
+				<p>You can comment out CACHE_DIR and everything should still function (thought a little slower).<br />
+<br />
+I don't know my way around MAC so I can not say where your cache dir should be located.<br />
+<br />
+Give me access to one of your course as an instructor so I can see what's happening. infoATatutor.ca<br />
+<br />
+I assume you are trying to upload html? What are you creating them with?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Thanks Greg<br />
+<br />
+The  define(\'CACHE_DIR\', \'/temp\'); was commented out in the config.inc.php file.  I assume it should have the // removed.<br />
+<br />
+Is temp the appropriate location for Mac OS X?<br />
+...<br />
+[op]forums/view.php?fid=7;pid=414;page=1#416[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="419"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 13:39:25</p>
+            </div>
+            <div class="postheader"><h3>Course site</h3></div>
+				
+			<div class="body">
+				<p>define('CACHE_DIR', '/tmp/'); worked for the cache location.<br />
+But as you suggested, it did not solve my problem.<br />
+<br />
+The pages are created in Freeway (similar to Dreamweaver)<br />
+<br />
+It does upload ok on the demo site at<br />
+http://www.opensourcecms.com<br />
+<br />
+I set you up as greg/aTutor<br />
+<br />
+When we do get it to work, will my images folde rbe at the root level of aTutor?<br />
+<br />
+cheers from Nova Scotia<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="420"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 13:41:22</p>
+            </div>
+            <div class="postheader"><h3>My Server</h3></div>
+				
+			<div class="body">
+				<p>http://cvhs.ednet.ns.ca/aTutor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="421"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 16:15:01</p>
+            </div>
+            <div class="postheader"><h3>HTML parsing problem in Mac php?</h3></div>
+				
+			<div class="body">
+				<p>It seems to be related to the complexity of the html being saved. Could be a regular expression bug in Mac php, not liking something about the html. <br />
+<br />
+I was able to import some simple html and it saved ok. Importing worked fine but the file would not save when a complex html page was imported. Pasting the same html manually gave me the same result.<br />
+<br />
+We will add it to the list, but it's far down the list, so you may want to try tackling it yourself. Or, limit the complexity of your html until we figure it out.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="422"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 16:30:55</p>
+            </div>
+            <div class="postheader"><h3>HTML parsing problem</h3></div>
+				
+			<div class="body">
+				<p>It is strange that the code was accepted and worked on www.opensourcecms.com ... but that would not be a Mac OS X box.<br />
+<br />
+I pasted the code (that I would import into the body) directly into the mySQL database and it works, except for the images not showing up.  Check out your test page on my server.<br />
+<br />
+The solution works but I don't want to give this level of access to my course authors.<br />
+<br />
+It must have something to do with how it is being uploaded to the database.<br />
+<br />
+<br />
+Where should I put my images folder so they will be picked up by the html that is in the database?<br />
+<br />
+Thanks Greg<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="423"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 16:42:04</p>
+            </div>
+            <div class="postheader"><h3>Solved the images issue  ... aTutor root level</h3></div>
+				
+			<div class="body">
+				<p>.... but rollovers do not work <br />
+That's not a big issue for me.<br />
+<br />
+http://cvhs.ednet.ns.ca/atutor/?cid=8&g=3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="427"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-15 12:29:06</p>
+            </div>
+            <div class="postheader"><h3>Probably a Mac/PHP problem</h3></div>
+				
+			<div class="body">
+				<p>I suspect the ATutor code is fine, but the problem lies in the Mac implementation of PHP. There is no problem pasting and saving from files on other OSs. We will likely have to create a workaround for Mac, or wait for the problem to be fixed in PHP. <br />
+<br />
+Where you place your images will depend on where they are located relative to the file in the original version of the page. We generally create a directory called images/ at the top level of the filemanager directory tree. Then link to thise files with: <br />
+<br />
+CONTENT_DIR/image/myimage.gif<br />
+<br />
+Which rollovers are you referring to. ATutor mouseovers seem to work fine.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+It is strange that the code was accepted and worked on www.opensourcecms.com ... but that would not be a Mac OS X box.<br />
+<br />
+I pasted the code (that I would import into the body) directly into the mySQL ...<br />
+[op]forums/view.php?fid=7;pid=414;page=1#422[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="428"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-15 12:57:40</p>
+            </div>
+            <div class="postheader"><h3>Probably a Mac/PHP problem</h3></div>
+				
+			<div class="body">
+				<p>The app I used to create the html uses Resources by default ... so I placed the images into that folder (which is also part of your schema) and they came in fine.<br />
+<br />
+The rollovers are part of the html code of the webpage that I pasted in the mySQL database.<br />
+<br />
+When I  get a chance, i'll install on another Mac OS X box and see if the upload/import of html works any better.<br />
+<br />
+Thanks Greg<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="447"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-20 07:07:25</p>
+            </div>
+            <div class="postheader"><h3>Still curious</h3></div>
+				
+			<div class="body">
+				<p>Greg:<br />
+<br />
+Should whatever appears in the text box not just be imported into the TEXT field of the CONTENT database when adding a top level (or other level) page? The complexity of the html should have little to do with it, I would think.<br />
+<br />
+Does it not go in to this field as text (0s and 1s) and is not acted upon in terms of html output until it appears in the ATutor course content window?<br />
+<br />
+The fact that it works when pasted into mySQL and displayed in ATutor illustrates that the display part is not the issue.<br />
+<br />
+Of the three LMS solutions that I looked at, I think ATutor can best meet my needs (and that's coming from a former Claroline user) ... but this issue will make it difficult to get course authors to submit their content directly into the system.<br />
+<br />
+Thanks in advance<br />
+<br />
+......<br />
+On an unrelated matter, do you know if there is an issue with .css pages and Mac OS X IE?  I modified graphics for chrome.css and they display fine on Win IE, Safari (Mac OS X), but not Mac OS X IE.  Strange!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="449"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-20 08:03:29</p>
+            </div>
+            <div class="postheader"><h3>Addenda to previous message</h3></div>
+				
+			<div class="body">
+				<p>If I type text, it is accepted ok.<br />
+<br />
+If I paste text into the body (without any html coding), it is not.<br />
+<br />
+Supports my theory that it is not the code.<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="450"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-20 08:30:28</p>
+            </div>
+            <div class="postheader"><h3>Its Mac Specific</h3></div>
+				
+			<div class="body">
+				<p>This paste problem only seems to happen when using a MAC server. I agree that it is not likely the ATutor code that's the problem, its likely the MAC version of PHP. I can't say for sure without some investigation.<br />
+<br />
+We do not have a MAC server running so we are unable to research the problem. I'd like to say we'll try to fix it, but its going to take time,  which we can't spare at the moment, and equipment, which is not in our budget. <br />
+<br />
+I encourage you to do the investigation yourself, and contribute your findings to ATutor for the benefit of other MAC users.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+The app I used to create the html uses Resources by default ... so I placed the images into that folder (which is also part of your schema) and they came in fine.<br />
+<br />
+The rollovers are part of the html...<br />
+[op]forums/view.php?fid=7;pid=414;page=1#428[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="451"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-20 11:09:41</p>
+            </div>
+            <div class="postheader"><h3>Mac issue</h3></div>
+				
+			<div class="body">
+				<p>Greg<br />
+<br />
+If you have a windows box, I could provide you with Timbuktu and a user/pass to control one of my mac servers (via your gui)  that this could be tested on<br />
+<br />
+Let me know<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="452"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-20 12:07:55</p>
+            </div>
+            <div class="postheader"><h3>We're out of cycles</h3></div>
+				
+			<div class="body">
+				<p>Like I said, it's going to take time that we don't have available at the moment. Please attempt to solve the problem on your own.<br />
+<br />
+Our focus right now is getting the next release ready for mid October. We can not address this problem until at least then.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="453"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-20 17:43:46</p>
+            </div>
+            <div class="postheader"><h3>Got it to work</h3></div>
+				
+			<div class="body">
+				<p>Greg<br />
+<br />
+On a second box, I installed a different release of PHP <br />
+<br />
+I don't understand the following, but you might make sense of it.<br />
+<br />
+It works with the first version but not the second<br />
+<br />
+larry<br />
+<br />
+=====<br />
+PHP Version 4.3.2 <br />
+<br />
+Darwin cvhs2.ednet.ns.ca 6.6 Darwin Kernel Version 6.6: Thu May  1 21:48:54 PDT 2003; root:xnu/xnu-344.34.obj~1/RELEASE_PPC  Power Macintosh <br />
+<br />
+Build Date <br />
+Jul 14 2003 13:07:52 <br />
+<br />
+Configure Command <br />
+'./configure' '--prefix=/Library/PHP4' '--with-apxs2=/Library/Apache2/bin/apxs' '--with-openssl=/usr' '--with-zlib=/usr' '--enable-calendar' '--enable-shared' '--enable-exif' '--enable-ftp' '--enable-mbstring' '--enable-mbregex' '--enable-session' '--enable-sockets' '--enable-tokenizer' '--enable-wddx' '--with-xml' '--enable-yp' '--enable-versioning' '--enable-trans-id' '--enable-track-vars' '--with-mysql' '--with-ldap=/usr' '--with-iodbc=/usr' '--with-gd=/Library/PHP4' '--with-jpeg-dir=/Library/PHP4' '--with-png-dir=/Library/PHP4' '--enable-xslt' '--with-xslt-sablot=/Library/PHP4' '--with-pdflib=/Library/PHP4' '--with-tiff-dir=/Library/PHP4' '--with-pgsql=/Library/PHP4' '--with-iconv=/Library/PHP4' '--with-sybase=/Library/PHP4' '--with-mcrypt=/Library/PHP4' '--with-curl=/Library/PHP4' '--with-freetype-dir=/Library/PHP4' '--with-ttf=/Library/PHP4' '--with-gettext=/Library/PHP4' '--with-xmlrpc' '--enable-mime-magic' '--with-pspell=/Library/PHP4' '--with-expat-dir=/Library/Apache2' '--with-t1lib=/Library/PHP4' '--enable-dbx' '--with-imap=/Library/PHP4' '--with-imap-ssl=/usr' '--enable-cli' '--without-xpm-dir' '--enable-dbase' '--with-bz2=/usr' '--enable-cgi' '--with-pear' '--with-java' '--with-dom=/Library/PHP4' '--with-dom-xslt=/Library/PHP4' '--with-dom-exslt=/Library/PHP4' '--with-snmp=/Library/PHP4' '--enable-ucd-snmp-hack' '--with-mhash=/Library/PHP4' <br />
+<br />
+<br />
+PHP Version 4.3.2 <br />
+<br />
+www.entropy.ch Release 8 <br />
+<br />
+<br />
+System <br />
+Darwin Macintosh 6.6 Darwin Kernel Version 6.6: Thu May  1 21:48:54 PDT 2003; root:xnu/xnu-344.34.obj~1/RELEASE_PPC  Power Macintosh <br />
+<br />
+Build Date <br />
+Aug  5 2003 17:17:36 <br />
+<br />
+Configure Command <br />
+'./configure' '--prefix=/usr/local/php' '--with-config-file-path=/usr/local/php/lib' '--with-apxs' '--with-iconv=/usr/local/php' '--with-openssl=/usr' '--with-zlib=/usr' '--with-mysql' '--with-pgsql=/Users/marc/cvs/entropy/php-module/build/postgresql-build' '--with-gd' '--with-png-dir=/usr/local/php' '--with-freetype-dir=/usr/local/php' '--with-t1lib=/usr/local/php' '--with-jpeg-dir=/usr/local/php' '--with-tiff-dir=/usr/local/php' '--with-curl=/usr/local/php' '--with-mcal=/usr/local/php' '--with-mcrypt=/usr/local/php' '--with-mhash=/usr/local/php' '--with-mcve=/usr/local/php' '--with-pdflib=/usr/local/php' '--with-imap=../imap-2002d' '--with-imap-ssl=/usr' '--with-expat-dir=/usr/local/php' '--with-gettext=/usr/local/php' '--with-dom=/usr/local/php' '--with-dom-xslt=/usr/local/php' '--with-dom-exslt=/usr/local/php' '--with-ldap' '--with-xmlrpc' '--with-xml' '--with-iodbc' '--with-xslt-sablot=/usr/local/php' '--enable-xslt' '--enable-sockets' '--enable-dbx' '--enable-dbase' '--enable-trans-sid' '--enable-exif' '--enable-wddx' '--enable-ftp' '--enable-mbstring'</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17913"></a>
+		<div class="forum-post-author">
+			<label class="title">obamausa8</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-01 03:15:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Mac issue</h3></div>
+				
+			<div class="body">
+				<p>spammer</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17914"></a>
+		<div class="forum-post-author">
+			<label class="title">obamausa8</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-01 03:16:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Mac issue</h3></div>
+				
+			<div class="body">
+				<p>spammer</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17923"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-01 09:53:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Mac issue</h3></div>
+				
+			<div class="body">
+				<p>obamausa8 is a spammer</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22611"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-08 08:09:02</p>
+            </div>
+            <div class="postheader"><h3>How to go about installing gadgets</h3></div>
+				
+			<div class="body">
+				<p>I'm having problem installing gadgets both on remote server and local server. On remote server it will successfully install but after subsequent visit of the gadget it will complain web server not found. On local server it complains about curl library not installed. I'm really in a dilemma. Pls kindly assist. Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22612"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-08 08:09:07</p>
+            </div>
+            <div class="postheader"><h3>How to go about installing gadgets</h3></div>
+				
+			<div class="body">
+				<p>I'm having problem installing gadgets both on remote server and local server. On remote server it will successfully install but after subsequent visit of the gadget it will complain web server not found. On local server it complains about curl library not installed. I'm really in a dilemma. Pls kindly assist. Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22613"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-08 08:09:23</p>
+            </div>
+            <div class="postheader"><h3>How to go about installing gadgets</h3></div>
+				
+			<div class="body">
+				<p>I'm having problem installing gadgets both on remote server and local server. On remote server it will successfully install but after subsequent visit of the gadget it will complain web server not found. On local server it complains about curl library not installed. I'm really in a dilemma. Pls kindly assist. Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22614"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-08 08:14:54</p>
+            </div>
+            <div class="postheader"><h3>Re: How to go about installing gadgets</h3></div>
+				
+			<div class="body">
+				<p>Sorry for the reiteration and my submission under a wrong topic (which i discovered later).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22615"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-08 08:50:05</p>
+            </div>
+            <div class="postheader"><h3>Re: How to go about installing gadgets</h3></div>
+				
+			<div class="body">
+				<p>Curl needs to be installed for gadgets to function. <br />
+<br />
+see:<br />
+http://www.php.net/manual/en/curl.installation.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

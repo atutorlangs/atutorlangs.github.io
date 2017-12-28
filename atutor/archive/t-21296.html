@@ -1,0 +1,103 @@
+---
+ title: There are no languages installed And mysqlfetchassoc warnings
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>There are no languages installed And mysqlfetchassoc warnings</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21296"></a>
+		<div class="forum-post-author">
+			<label class="title">muso</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-24 11:25:57</p>
+            </div>
+            <div class="postheader"><h3>There are no languages installed And mysqlfetchassoc warnings</h3></div>
+				
+			<div class="body">
+				<p>I was getting multiple warnings (Warning: mysql_fetch_assoc()...) and ending with "There are no languages installed!".  When I looked through the forums, the only solutions I found were to "reinstall", or related to installing a new language file.<br />
+<br />
+The problem in my case was different, and I thought that perhaps other people have had the same problem.  My development machine is a Windows XP PC running XAMPP.  The remote PC is a Linux machine running Apache.<br />
+<br />
+I made a complete back-up of the working files and database and put them onto the remote site, and got the problems mentioned above.<br />
+<br />
+My problem ended up being the TABLE_PREFIX setting in the conf file.  It defaults to "AT_", but some databases are case sensitive while others aren't. So, the tables that were created were "at_users", etc but on the Linux PC it was looking for "AT_users".<br />
+<br />
+By changing the TABLE_PREFIX to "at_" it worked... so can I ask that a convention of lower-case names be used for tables and fields?<br />
+<br />
+As an added note, I think it would be better if there were better error handling on the core queries as some of those warnings could have been suppressed, while others indicate a more serious config problem and should, in my opinion, gracefully exit the application.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21298"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-24 13:53:10</p>
+            </div>
+            <div class="postheader"><h3>Re: There are no languages installed! And mysql_fetch_assoc() warnings....</h3></div>
+				
+			<div class="body">
+				<p>Its unlikely we'd change the prefix convention. It has been that way since the beginning, without any issues. It is windows really that does not distinguish case. You can always change the prefix during an install. <br />
+<br />
+Error messages are controlled in the php.ini file, if you want to suppress warnings.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21299"></a>
+		<div class="forum-post-author">
+			<label class="title">muso</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-24 15:09:09</p>
+            </div>
+            <div class="postheader"><h3>Re: There are no languages installed! And mysql_fetch_assoc() warnings....</h3></div>
+				
+			<div class="body">
+				<p>Yes, I understand that it would be tricky to change it at this stage.<br />
+<br />
+It was mainly a "fyi"... I'd argue it is likely that I'm not the only person that has moved atutor between Windows and Linux (a lot of people develop in Windows and use Linux-based hosting), and possible that they have had similar problems. Checking your forums, I thought that one or two people had been asking something that may have related to this issue, so I thought I'd share what I'd found.<br />
+<br />
+I also don't think it's a good idea to suppress warnings during development.  They usually have a purpose, and MySQL related ones point to something that can (often should) be handled - in this case, that the database had connected but the sql failed because of the table names and how the database was created (and on the assumption that $result contains a valid handle).<br />
+<br />
+Anyway, I hope come across as constructive rather than critical in my comments!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21300"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-24 16:47:03</p>
+            </div>
+            <div class="postheader"><h3>Re: There are no languages installed! And mysql_fetch_assoc() warnings....</h3></div>
+				
+			<div class="body">
+				<p>thx Alex. I'll will think about adding another case to handle table prefix mismatches.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

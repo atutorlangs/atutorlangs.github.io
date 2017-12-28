@@ -1,0 +1,88 @@
+---
+ title: nickname in atutor forum
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>nickname in atutor forum</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18620"></a>
+		<div class="forum-post-author">
+			<label class="title">davman</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-09 06:11:50</p>
+            </div>
+            <div class="postheader"><h3>nickname in atutor forum</h3></div>
+				
+			<div class="body">
+				<p>For privacy law I need to change in atutor forum the real name in the user name or a nickname.<br />
+Can you tell me the files i need to modify or if i need to installa new module?<br />
+Thanks a lot!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18621"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-09 06:17:04</p>
+            </div>
+            <div class="postheader"><h3>Re: nickname in atutor forum</h3></div>
+				
+			<div class="body">
+				<p>You'll need to edit the database entry. See table AT_members, search for the login field there.<br />
+You may need a tool like phpMyAdmin for that.<br />
+<br />
+There's no way to change that via the ATutor interface.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18622"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-09 08:37:25</p>
+            </div>
+            <div class="postheader"><h3>Re: nickname in atutor forum</h3></div>
+				
+			<div class="body">
+				<p>You can also set the Display Name format in the admin's System Preferences to display only the login name.<br />
+<br />
+If you want to remove the real name altogether, you'd need top remove or comment out the checks for first name and last name from the registration.php script:<br />
+<br />
+<br />
+[php]<br />
+<br />
+//	if (!$_POST['first_name']) { <br />
+//		$missing_fields[] = _AT('first_name');<br />
+//	}<br />
+//<br />
+//	if (!$_POST['last_name']) { <br />
+//		$missing_fields[] = _AT('last_name');<br />
+//	}<br />
+<br />
+<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,261 @@
+---
+ title: Is this a bug
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Is this a bug</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25208"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 06:45:05</p>
+            </div>
+            <div class="postheader"><h3>Is this a bug</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+<br />
+I think I have found a bug in ATutor with regard to prerequisites and lesson order. I am not sure so I thought I would ask you.<br />
+<br />
+First, I discovered that you don't need to create folders for prerequisites to work. Simply attaching a test to a piece of content and setting the prerequisites will do it.<br />
+<br />
+Anyway I have tests 1 2 3 4 5 etc numbered in the order they are entered each test or attached content, has all the preceding tests set as prerequisites.<br />
+<br />
+so <br />
+<br />
+1 has none<br />
+2 has 1<br />
+3 has 1 and 2<br />
+4 has 123<br />
+5 has 1234<br />
+<br />
+The prerequisites work well until you delete and recreate the test.<br />
+<br />
+<br />
+if for instance you delete test 1 and recreate it and reattach its questions<br />
+it then has a test id of 6 even if it is the first test set by the priorities of the prerequisites. So the test order becomes<br />
+<br />
+6 2 3 4 5 and the prerequisite looks like this<br />
+<br />
+6<br />
+2 has 6<br />
+3 has 2 and 6<br />
+4 has 236<br />
+5 has 2346<br />
+<br />
+The problem comes when you then try to enforce a new user to follow the prerequisite.<br />
+<br />
+So for someone who has not started the course the following happens.<br />
+<br />
+Whether the tests are in folders with prerequisites or just attached to content with prerequisites, if you click on item 2 it will tell you to complete item 1 and show you the appropriate content for test 1. <br />
+<br />
+This is because item 2 only has one prerequisite which is test 1 with an id of 6.<br />
+<br />
+But if you select item 3 or greater it will tell you you have to do the prerequisite of 2 and show you the corresponding test start with the begin button. And a user can press it and attempt the questions, but upon submission get an error saying there is no such item. <br />
+<br />
+What I believe is happening is that the prerequisite function is looking at the test id in the database but assuming that the lowest test id is the prerequisite rather than an actual prerequisite order.<br />
+<br />
+I hope this is clear<br />
+<br />
+The answer of course is to delete all the tests and recreate them in order and reattach questions then reattach them to their content.<br />
+<br />
+So is there a way to set prerequisite order other than just saying which tests have to be done before a piece of content is available? <br />
+<br />
+Thanks<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25210"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 09:18:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Is this a bug</h3></div>
+				
+			<div class="body">
+				<p>First I'd suggest just one prerequisite per folder. You can sequence them so that earlier prerequisites need to be complete before access to latter prerequisites.<br />
+<br />
+Test this on the demo site and see if you can reproduce it there.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25211"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 16:58:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Is this a bug</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg<br />
+<br />
+That's what I did one, prerequisite per folder.<br />
+<br />
+All prerequisites were set correctly to ensure their sequence.<br />
+<br />
+Then the first test was deleted and recreated. Checking the database shows that it was allocated a higher id than the last test.<br />
+<br />
+But I will test it on the demo server and see what happens there.<br />
+<br />
+cheers<br />
+<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25213"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 18:03:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Is this a bug</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg<br />
+<br />
+The problem exists.<br />
+<br />
+I tested on the demo server (My Test)<br />
+<br />
+I created 5 tests with two questions each.<br />
+<br />
+I attached each of them to a separate piece of content which had the prerequisite set, so that preceding tests must be completed.<br />
+<br />
+Placed that content in a folder with the prerequisite set also so that all preceding tests must be completed.<br />
+<br />
+I created a user john john1234 and enrolled him in the course, then tested.<br />
+but did not answer any questions so there were no submissions.<br />
+<br />
+The prerequisites worked exactly as expected, selecting anything other than test 1 was greeted with a message that test 1 must be completed and showed you the start button for test 1.<br />
+<br />
+I then deleted test 1 and recreated it and reattached its questions and set the prerequisites in all content and folders again since test 1 prerequisite had been erased when I deleted the test.<br />
+<br />
+I then logged in as the student I created and just as I said in the OP. If I select test 1 there is no prerequisite, if I select test 2 it shows that I must complete test 1, If I select test 3 it shows that I must complete test 2, and so on for all the tests after test 2. <br />
+<br />
+All of them tell me I need to complete test 2. Rather than as happened before I deleted and recreated test 1. Where they all told me I needed to complete test 1.<br />
+<br />
+I have attached before and after backups but I fear there is no point in providing them as the id's probably get created in order when restoring. So the problem may not be evident.<br />
+<br />
+Best regards<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25231"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-19 18:50:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Is this a bug</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg<br />
+<br />
+I should have started the last post with the message that I understand what you meant.<br />
+<br />
+set up the tests and content and folders so that each item only has one prerequisite instead of multiple, like this:<br />
+<br />
+1 has none<br />
+2 has 1<br />
+3 has 2<br />
+4 has 3<br />
+5 has 4<br />
+6 has 5<br />
+<br />
+The problem is that if someone who has not started the course clicks on test six they will be shown the start button for 5 and be allowed to do the test but get no results, and so on down the line to 1.<br />
+<br />
+That or they would go to 5 then be told to go to 4 then to 3 then 2 and finally arrive at 1.<br />
+<br />
+I know people are curious and sometimes even blatantly ignore requests to follow the clearly labeled order of test.<br />
+<br />
+So I was trying (hoping really) that I could enforce a progression order without relying on peoples compliance.<br />
+<br />
+Cheers<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25237"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-20 09:29:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Is this a bug</h3></div>
+				
+			<div class="body">
+				<p>Have add this to the tracker for the next dev cycle:<br />
+http://atutor.ca/atutor/mantis/view.php?id=5568</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25654"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-12-30 12:42:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Is this a bug</h3></div>
+				
+			<div class="body">
+				<p>This should be fixed in ATutor 2.2.1. The problem was the prerequisites were not being deleted when a test was deleted. Here's the change:<br />
+<br />
+https://github.com/atutor/ATutor/commit/5572cad4aeacb7dbeb59132864c13148ae4f03c8<br />
+<br />
+Otherwise, pages take on the release date of the parent folder, so if a folder has a release date before the test's release date, the folders release date will replace the test's release date.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,61 @@
+---
+ title: Atutor on Win2k instatllatoin problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Atutor on Win2k instatllatoin problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="8372"></a>
+		<div class="forum-post-author">
+			<label class="title">weblight</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-07-09 13:53:16</p>
+            </div>
+            <div class="postheader"><h3>Atutor on Win2k instatllatoin problem</h3></div>
+				
+			<div class="body">
+				<p>I am installing Atutor on a Win2k Pro machine and just installed and configured Tomcat, php and mysql.  I also extracted Atutor, but the instruction says point the web browser to ATutor folder and follow instructions.  When I do that, it just lists the folder. What am I doing wrong?  <br />
+<br />
+This is the path in the instruction online, it points to a folder, so I am not sure how it can start installation<br />
+<br />
+http://your_server.com/path_to_Atutor/Atutor/<br />
+<br />
+Can you help please.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8373"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-07-09 17:00:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Atutor on Win2k, instatllatoin problem</h3></div>
+				
+			<div class="body">
+				<p>Did you modify your httpd.conf file to allow for index.php to be picked up?  It should look like the following:<br />
+<br />
+DirectoryIndex index.html index.php index.html.var<br />
+<br />
+You will need to restart Apache after you make this modification.<br />
+<br />
+If the incude/config.inc.php file does not contain the proper info, it will direct you to the install folder.<br />
+<br />
+You also need to chmod this file to 777 for the install</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

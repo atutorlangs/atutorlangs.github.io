@@ -1,0 +1,129 @@
+---
+ title: Unable to connect to database  not mistyping anything
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Unable to connect to database  not mistyping anything</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19786"></a>
+		<div class="forum-post-author">
+			<label class="title">jwitko</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-18 19:30:06</p>
+            </div>
+            <div class="postheader"><h3>Unable to connect to database  not mistyping anything</h3></div>
+				
+			<div class="body">
+				<p>Operating system ATutor is installed on -<br />
+ATutor version - 1.6.4<br />
+Patch #s applied - none<br />
+ATutor theme name - default<br />
+PHP version - php-5.3.2<br />
+MySQL version - mysql  Ver 14.12 Distrib 5.0.45, for redhat-linux-gnu (i686) using readline 5.0<br />
+Webserver & version - Apache/2.2.15 (Unix)<br />
+Copies of error messages - Unable to connect to database server.<br />
+Changes to default settings - None.<br />
+Web browser being used - Firefox.<br />
+<br />
+...and anything else relevant -  CentOS 2.6.18-92.1.18.el5<br />
+<br />
+My user and pass are definitely correct  (user1/user1).  server address is 'localhost', port is correct and open.  Proof is below:<br />
+<br />
+<br />
+[root@nocdev4-mii var]# mysql -u user1 -p<br />
+Enter password:<br />
+Welcome to the MySQL monitor.  Commands end with ; or \g.<br />
+Your MySQL connection id is 46<br />
+Server version: 5.0.51a MySQL Community Server (GPL)<br />
+<br />
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.<br />
+<br />
+mysql> show databases;<br />
++--------------------+<br />
+| Database           |<br />
++--------------------+<br />
+| information_schema |<br />
+| atutor             |<br />
++--------------------+<br />
+2 rows in set (0.00 sec)<br />
+<br />
+<br />
+mysql> show grants for 'user1'@'localhost';<br />
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+<br />
+| Grants for user1@localhost                                                                                                                                                |<br />
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+<br />
+| GRANT USAGE ON *.* TO 'user1'@'localhost' IDENTIFIED BY PASSWORD '5226b4b67c3db6de'                                                                                       |<br />
+| GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES ON `atutor`.* TO 'user1'@'localhost' WITH GRANT OPTION |<br />
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+<br />
+2 rows in set (0.00 sec)<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+[root@nocdev4-mii var]# telnet localhost 3306<br />
+Trying 127.0.0.1...<br />
+Connected to localhost.localdomain (127.0.0.1).<br />
+Escape character is '^]'.<br />
+5<br />
+5.0.51a,]-g>@ggQ,&lt;wet8W1,)(-H<br />
+<br />
+<br />
+[root@nocdev4-mii var]# netstat -a | grep mysql; netstat -ln | grep 3306;<br />
+tcp        0      0 *:mysql                     *:*                         LISTEN<br />
+tcp        0      0 localhost.localdomain:mysql localhost.localdomain:52865 TIME_WAIT<br />
+unix  2      [ ACC ]     STREAM     LISTENING     5063393 /var/lib/mysql/mysql.sock<br />
+tcp        0      0 0.0.0.0:3306                0.0.0.0:*                   LISTEN<br />
+<br />
+telnet from an outside machine:<br />
+<br />
+[jwitkowski@noc-sc1.sc1 ~]$ telnet nocdev4-mii 3306<br />
+Trying 192.168.40.24...<br />
+Connected to nocdev4-mii.liveops.com (192.168.40.24).<br />
+Escape character is '^]'.<br />
+5<br />
+5.0.51a-#}q@)Iw;,]BtC1jBI(,EV<br />
+<br />
+<br />
+[root@nocdev4-mii var]# ps -ef | grep mysql<br />
+mysql    13331     1  0 03:06 ?        00:00:00 ./mysqld<br />
+<br />
+<br />
+Apache is obviously running without issue as i can get to the installation screen to get the unable to connect to DB message.  <br />
+<br />
+Any help you guys could provide would be amazing.<br />
+<br />
+Thank you,<br />
+<br />
+-jwitko</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19787"></a>
+		<div class="forum-post-author">
+			<label class="title">jwitko</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-18 20:31:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Unable to connect to database  (not mistyping anything)</h3></div>
+				
+			<div class="body">
+				<p>replacing "localhost" in the installation step with "127.0.0.1" fixed this.  Apparently there is a mysql user flag i did not set to allow accessibility from external sources.  Even though they were on the same box this apparently affected the outcome.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

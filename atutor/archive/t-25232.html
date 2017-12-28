@@ -1,0 +1,92 @@
+---
+ title: Image not visable on contents pages
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Image not visable on contents pages</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25232"></a>
+		<div class="forum-post-author">
+			<label class="title">patmarshall</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-20 04:25:31</p>
+            </div>
+            <div class="postheader"><h3>Image not visable on contents pages</h3></div>
+				
+			<div class="body">
+				<p>Image not visable on contents pages<br />
+<br />
+When accessing file manager from the Edit Content page and I click on the filename text link of an image I get:-<br />
+<br />
+"Forbidden<br />
+<br />
+You don't have permission to access /ATutor/content/1/images/meat_pie.jpg on this server.<br />
+<br />
+Apache/2.4.9 (Unix) Server at www.patmarshall.co.uk Port 80"<br />
+<br />
+Clicking on insert just inserts a place-holder on the contents page.<br />
+Preview only shows a place-holder<br />
+<br />
+If I go to the photo gallery, display an image, copy the image URL and then edit the image on the contents page pasting the URL, I do see an image on the contents page.<br />
+<br />
+Windows Vista - Chrome - Firefox<br />
+Apache 2.4.9<br />
+PHP 5.3<br />
+MySql 5.5.35</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25234"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-20 09:22:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Image not visable on contents pages</h3></div>
+				
+			<div class="body">
+				<p>This sounds like the permissions on the content directory are not set to be writable by the Web server, generally set during installation. You can set the content/ directory to be writable.<br />
+<br />
+chmod -R 777 /ATutor/content<br />
+<br />
+You probably also want to change the owner of the file inside the content directory to be owned by the user that owns Apache for security reasons.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25239"></a>
+		<div class="forum-post-author">
+			<label class="title">patmarshall</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-20 12:15:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Image not visable on contents pages</h3></div>
+				
+			<div class="body">
+				<p>Fixed<br />
+Not only does the content folder need to be 777 but also the course (1 in this case) and any created folder "images" in this case. I did not have Execute enabled just read and write. CHMOD 777 for all the sub folders and it works.<br />
+<br />
+Did not understand the "owner" bit. I pay for hosting it is not mine.<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

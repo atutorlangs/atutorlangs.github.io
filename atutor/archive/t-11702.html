@@ -1,0 +1,168 @@
+---
+ title: Error in LanguageManagerclassphp
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error in LanguageManagerclassphp</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="11702"></a>
+		<div class="forum-post-author">
+			<label class="title">toni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-15 04:28:07</p>
+            </div>
+            <div class="postheader"><h3>Error in LanguageManagerclassphp</h3></div>
+				
+			<div class="body">
+				<p>Hello, I've a big problem with the ATutor of my school. <br />
+<br />
+I've updated ATutor 1.5.4 to 1.5.5 version. <br />
+<br />
+And now show the message:<br />
+<br />
+"Warning: Invalid argument supplied for foreach() in /web/htdocs/www.escolateide.com/home/ATutor/include/classes/Language/LanguageManager.class.php on line 155"<br />
+<br />
+You can see it in: http://www.escolateide.com/ATutor/<br />
+(ATutor version 1.5.5 installed)<br />
+<br />
+Things to describe: <br />
+ATutor Version:  1.5.5 (build r7026 - 2007-08-02 13:01:30)<br />
+Operating System: Linux 2.6.9-55.0.2.ELsmp #1 SMP Tue Jun 26 14:30:58 EDT 2007 i686<br />
+Web Server: Apache/2.0<br />
+PHP Version: 4.4.7<br />
+MySQL Version: 5.0.45-community-log<br />
+<br />
+Langs installed before in 1.5.4 version: Spanish (UTF8) and Catalan (UTF8)<br />
+<br />
+I think that the problem is that ATutor can't found any lang package, neither default language "english  iso-8859-1". I try to find in what folder ATutor save the lang package for install it manually the new english version, but I can't find the folder.<br />
+<br />
+I try to reinstall the old version 1.5.4 and backup my old SQL data, but ATutor show the same warning message.<br />
+<br />
+Please, can you help me?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11703"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-15 08:05:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in LanguageManager.class.php</h3></div>
+				
+			<div class="body">
+				<p>The language is is the database in the language_text table. English should have been installed by default. The old language is removed and replace with the language for the new version, so you will need to reinstall the Spanish, and the Catalan when its complete for 1.5.5.<br />
+<br />
+Look in the database to see if the language is there. If not you can take the english language pack from the language download page on atutor.ca, unzip it, then run the SQL file manually to install the language. If you have phpMyAdmin installed, it will make these steps easier.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11705"></a>
+		<div class="forum-post-author">
+			<label class="title">toni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-16 06:21:59</p>
+            </div>
+            <div class="postheader"><h3>Well! work fine1</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11706"></a>
+		<div class="forum-post-author">
+			<label class="title">toni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-16 06:37:50</p>
+            </div>
+            <div class="postheader"><h3>Well! work fine!</h3></div>
+				
+			<div class="body">
+				<p>I do the next steps for repair my ATutor (for somebody that have my same problem in futur).<br />
+<br />
+1).- I've donwload "english iso-8859-1" language pack for 1.5.5 ATutor version, and unzip it.<br />
+<br />
+2).-  I changed the file "language_text.sql":<br />
+<br />
+ *  I've replaced the string "INSERT INTO `languages`" by "INSERT INTO `AT_languages`" <br />
+<br />
+ * I've replaced too "INSERT INTO `AT_language_text`" by the new string "INSERT INTO `AT_language_text`"<br />
+<br />
+If I don't do this replace, the mySQL control panel show an error when do the import (error: the table "language" don't exist).<br />
+<br />
+3).- I opened mySQL control panel and imported the file ""language_text.sql".<br />
+<br />
+ Now my ATutor work in English, in the next step, I was entered in ATutor admin account and imported Spanish lang pack, and the program is now working perfect and in Spanish. :)<br />
+<br />
+   Thaks for your help Greg, you are "ATutor Angel"! :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11707"></a>
+		<div class="forum-post-author">
+			<label class="title">toni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-16 06:40:21</p>
+            </div>
+            <div class="postheader"><h3>opps</h3></div>
+				
+			<div class="body">
+				<p>In my before email has a error:<br />
+<br />
+the line:<br />
+<br />
+* I've replaced too "INSERT INTO `AT_language_text`" by the new string "INSERT INTO `AT_language_text`"<br />
+<br />
+is:<br />
+<br />
+<br />
+* I've replaced too "INSERT INTO `language_text`" by the new string "INSERT INTO `AT_language_text`"<br />
+<br />
+ sorry :P</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

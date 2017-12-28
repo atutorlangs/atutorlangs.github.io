@@ -1,0 +1,289 @@
+---
+ title: Test  Survey Manager Problems
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Test  Survey Manager Problems</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="4363"></a>
+		<div class="forum-post-author">
+			<label class="title">dasbooter</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-18 01:08:53</p>
+            </div>
+            <div class="postheader"><h3>Test  Survey Manager Problems</h3></div>
+				
+			<div class="body">
+				<p>operating system - Suse 9.2 KDE 3.4<br />
+ version of ATutor -1.43<br />
+ versions of php - Apache2 module php4<br />
+ perl-apache-session (I think?)<br />
+ version of mysql - 4.0.21-4.2<br />
+ webserver & version -apache 2.0.50 prefork<br />
+ web browser being used - Konqueror<br />
+ WebMin 1.180<br />
+<br />
+I'm experiencing a few problems while working to develop a database of questions.<br />
+<br />
+First I cannot when creating a test deselect "no" under randomize questions. Therefor when trying to develop a test that will pull random questions from the pool both "yes" and "no" seem to be selected? It does seem to work ,however, logging in as a student shows a test is randomly generated.Although the description in the test/survey manager is wrong.<br />
+<br />
+Secondly, although it is not a problem specifically if the test is generated at random from the question pool how are the questions weighted? I noticed that tests that are not randomly generated provide a warning if all the questions are not assigned a weighting.I cant find this info in the documentation.<br />
+<br />
+Lastly when trying to use the editor option while in the question database [example click on (Editor) under Question:] <br />
+a window opens up with an error. It states " An error occurred while loading #http://tools/filemanager/index.phpframed=1:#<br />
+Unknown host tools "<br />
+<br />
+I just put in the # above to stop it from being posted as a link. I have been able to work around the editor problem but it would be nice to get it working if it is fixable.<br />
+<br />
+Thanx again from anybody that can help :D</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4374"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-18 19:38:07</p>
+            </div>
+            <div class="postheader"><h3>Browser problems?</h3></div>
+				
+			<div class="body">
+				<p>The first two problems sound like they are browser related. What you've described seems to work properly in mozilla browsers, and in Konqueror 3.3. What version of Konqueror are you using<br />
+<br />
+The third issue may be a php.ini setting. <br />
+<br />
+arg_separator.input = ";&"<br />
+<br />
+There may also be problems because you are using Apache 2.  We only recommend using Apache 1.3, particularly for a production environment.  ATutor will work on Apache 2 most of the time, but you are likely to experience others problems, which we're not able to offer support for.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4394"></a>
+		<div class="forum-post-author">
+			<label class="title">dasbooter</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-20 13:51:36</p>
+            </div>
+            <div class="postheader"><h3>;)</h3></div>
+				
+			<div class="body">
+				<p>Well first of all thank you for answering my question again Greg. Are you the resident expert or one of the developers,as you seem quite busy answering quesions in the forum? I believe my Konqueror version is 3.4 having updated to KDE 3.4 right after my suse install, but I will check/try mozilla as an alternate.<br />
+<br />
+I will check that php.ini setting which I am hoping to locate easily.<br />
+<br />
+\"There may also be problems because you are using Apache 2. We only recommend using Apache 1.3, particularly for a production environment.\"<br />
+<br />
+Hmmmm yes, if I ever have to develop a production server I may have to grin and bear it. Using apache 1.3 and compatible versions of php rpms was too messy. Yast, suse\'s \"package installation manager\" wanted an older version of Perl with the php rpm which threatened to break many packages. I will probably  have to compile the php module myself. Compiling has been an adventure in computing for me so far ;)<br />
+<br />
+Thanks again</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4396"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-20 19:10:03</p>
+            </div>
+            <div class="postheader"><h3>Compile isn't tough</h3></div>
+				
+			<div class="body">
+				<p>...a developer.<br />
+<br />
+The php site has instructions for compiling. It's fairly straight forward. <br />
+<br />
+http://www.php.net/manual/en/install.unix.php<br />
+<br />
+Run your apache 2 and apache 1.3 on different ports, set in httpd.conf, so you can run them side-by-side.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4397"></a>
+		<div class="forum-post-author">
+			<label class="title">dasbooter</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-20 19:40:44</p>
+            </div>
+            <div class="postheader"><h3>ok here are my results</h3></div>
+				
+			<div class="body">
+				<p>I am using Konqueror version 4.3 so I tried Firefox.<br />
+Firefox displayed the selection of random yes and no properly that is to say that only one was shown to be selected (thanks).<br />
+<br />
+I still don't understand how questions on a randomly generated test can be assigned a weighting. If the a new randomly generated test is generated each time a student decides to take the test you can not always be there to assign a weight to the questions. Is there some way to assign a weighting in the question data base that I missed or am I missing the point entirely :) .<br />
+<br />
+I also tried using mozzilla and firefox to open the editor in the question data base and did not get the error that I mentioned previously in the thread. Instead a window opens up like here<br />
+&lt;img src="images/tm_file_manager.jpg" alt="file manager opend with the question editor" /> on this page http://www.atutor.ca/atutor/demo/?cid=107;g=3 except that the window is filled with the iTools web page ??? with firefox and it is empty with mozilla and I am also missing all the tools above the text window with both browsers<br />
+<br />
+I checked that entry in php.ini in my install it was located in /etc/. Here is what I have<br />
+<br />
+#; List of separator(s) used by PHP to parse input URLs into #variables.<br />
+#; Default is "&". <br />
+#; NOTE: Every character in this directive is considered as #separator!<br />
+#;arg_separator.input = ";&"<br />
+I commented (#) out the above for this post</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4402"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-21 09:54:55</p>
+            </div>
+            <div class="postheader"><h3>Weights set when you add questions to a test</h3></div>
+				
+			<div class="body">
+				<p>After you have added questions to a test, then you set the weights, the same way you set weights on nonrandom tests. All weights would need to be the same for each question, if you wanted the out of scroe the be the same each time the test is taken.<br />
+<br />
+I cannot reproduce the FM problem. You cannot link directly to a content page in ATutor, so I cannot follow the link you've included. Not sure what you mean by opens the iTools web page, unless someone has created the cid=107 page to do this, which is a possibility. I'm guessing again this may be a browser problem. The test question editor seems to work fine for me. Restart your browser and try again. Describe the steps to get to the page you mentioned above if we need to investigate further.<br />
+<br />
+The arg_separator line is correct.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4408"></a>
+		<div class="forum-post-author">
+			<label class="title">dasbooter</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-21 22:17:51</p>
+            </div>
+            <div class="postheader"><h3>:)</h3></div>
+				
+			<div class="body">
+				<p>Perhaps a little bit of visual learning is in order so I hope this works<br />
+<br />
+In your how-to for 1.43 you describe the question editor under instructor tools and a image of the editor in action is shown that looks like this :<br />
+<br />
+[URL=http://img252.echo.cx/my.php?image=tmfilemanager8xs.jpg][IMG]http://img252.echo.cx/img252/2561/tmfilemanager8xs.th.jpg[/IMG][/URL]<br />
+<br />
+When I click on the editor link this is what I get :<br />
+<br />
+[URL=http://img252.echo.cx/my.php?image=qdb5hj.jpg][IMG]http://img252.echo.cx/img252/3935/qdb5hj.th.jpg[/IMG][/URL]<br />
+<br />
+Today for some reason that specific web site seems to be down so I get the time out but yesterday a web page opened with an Itools heading which had links to such things as translations for languages etc.<br />
+<br />
+hopefully this is helpful</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4411"></a>
+		<div class="forum-post-author">
+			<label class="title">dasbooter</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-21 22:35:38</p>
+            </div>
+            <div class="postheader"><h3>:) sigh,</h3></div>
+				
+			<div class="body">
+				<p>oh well I guess the best I can a do is link to those images. Sorry this isnt my area of expertise (it worked in other forums when I tried it)<br />
+<br />
+http://img252.echo.cx/img252/2679/tmfilemanager4or.jpg<br />
+<br />
+&<br />
+<br />
+http://img252.echo.cx/img252/9206/qdb5kh.jpg</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4412"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-22 08:57:15</p>
+            </div>
+            <div class="postheader"><h3>unable to reproduce</h3></div>
+				
+			<div class="body">
+				<p>I can't say why your installation is looking for itools. HTMLArea, the html editor used in ATutor, was originally created by them, but I'm not seeing anything in the code that calls on the web site (which does not exist any more)<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+oh well I guess the best I can a do is link to those images. Sorry this isnt my area of expertise (it worked in other forums when I tried it)<br />
+<br />
+http://img252.echo.cx/img252/2679/tmfilemanager4or.jpg<br />...<br />
+[op]forums/view.php?fid=7;pid=4363;page=1#4411[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4420"></a>
+		<div class="forum-post-author">
+			<label class="title">dasbooter</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-22 23:36:04</p>
+            </div>
+            <div class="postheader"><h3>:-(</h3></div>
+				
+			<div class="body">
+				<p>Oh well after all that work on your part and my part it couldnt be resolved.<br />
+<br />
+<br />
+"I can't say why your installation is looking for itools. HTMLArea, the html editor used in ATutor, was originally created by them, but I'm not seeing anything in the code that calls on the web site (which does not exist any more)"<br />
+<br />
+Ok thats weird. I swear that the first time I used firefox the page actually appeared in that window. It was brown and beige and it had links for translation etc. Oh well perhaps I will have to begin drinking more products containing ETOH as apparently not drinking them is causing me to see things.<br />
+<br />
+For now I will work around the problem by using the content editor and html editor in open office.Thanks for all your time. If you have an epiphany please let me know. I have many questions to go :)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

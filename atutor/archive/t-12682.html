@@ -1,0 +1,154 @@
+---
+ title: You do not have permission to access this area
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>You do not have permission to access this area</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="12682"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 11:15:58</p>
+            </div>
+            <div class="postheader"><h3>You do not have permission to access this area</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I created an admin (not a super admin) and all is ok except it has a system preferences tab unnecessarily. When one clicks on it (or the System Preferences text link on this new admin's start page) one gets the message:<br />
+"The following errors occurred:<br />
+You do not have permission to access this area."<br />
+<br />
+Is it possible to somehow remove the tab and the links from within this new admin?  If not from with the main admin, maybe by some simple editing of the php files</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12683"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 11:34:40</p>
+            </div>
+            <div class="postheader"><h3>Re: You do not have permission to access this area</h3></div>
+				
+			<div class="body">
+				<p>You could probably "hack" the tab out. Something like <br />
+<br />
+if: not system tools permissions:<br />
+then: don't show system prefs tab<br />
+<br />
+in<br />
+<br />
+/include/lib/menu_pages.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12687"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 12:32:05</p>
+            </div>
+            <div class="postheader"><h3>Re: You do not have permission to access this area</h3></div>
+				
+			<div class="body">
+				<p>With apologies, what would the relevant lines look like.<br />
+For example,<br />
+[b]to check whether admin:[/b]<br />
+	if (admin_authenticate(AT_ADMIN_PRIV_ADMIN, TRUE))<br />
+<br />
+[b]to display the tab:[/b]<br />
+$_pages[AT_NAV_START]  = array_merge(array('users/index.php',  'users/profile.php', 'users/preferences.php'), (array) $_pages[AT_NAV_START]);<br />
+OR<br />
+$_pages['admin/config_edit.php']['guide']     = 'admin/?p=system_preferences.php';<br />
+<br />
+OR<br />
+$_pages['users/preferences.php']['title_var']  = 'preferences'; <br />
+OR<br />
+$_pages['users/preferences.php']['parent'] = AT_NAV_START;<br />
+OR<br />
+$_pages['users/preferences.php']['guide']  = 'general/?p=preferences.php';<br />
+<br />
+<br />
+Things to describe: <br />
+  operating system -linux<br />
+  version of ATutor -1.5.5<br />
+  versions of php -4+<br />
+  version of mysq l -4+<br />
+[b] [/b]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12688"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 12:53:30</p>
+            </div>
+            <div class="postheader"><h3>Re: You do not have permission to access this area</h3></div>
+				
+			<div class="body">
+				<p>Probably the lines below. <br />
+<br />
+Don't be afraid to experiment, or explore. Read the developer doc for details. Make use of the debug() function it describes, etc.<br />
+<br />
+<br />
+[php]<br />
+<br />
+$_pages['admin/config_edit.php']['title_var'] = 'system_preferences';<br />
+		$_pages['admin/config_edit.php']['parent']    = AT_NAV_ADMIN;<br />
+		$_pages['admin/config_edit.php']['guide']     = 'admin/?p=system_preferences.php';<br />
+		$_pages['admin/config_edit.php']['children']  = array_merge((array) $_pages['admin/config_edit.php']['children'], array('admin/error_logging.php'));<br />
+	<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12692"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 15:21:24</p>
+            </div>
+            <div class="postheader"><h3>Re: You do not have permission to access this area</h3></div>
+				
+			<div class="body">
+				<p>thanks, greg! Did it!<br />
+used if (admin_authenticate(AT_ADMIN_PRIV_ADMIN, TRUE)) at the head instead of if (admin_authenticate(AT_ADMIN_PRIV_USERS, AT_PRIV_RETURN)) which apparently checks for all admins<br />
+<br />
+I asked another question elsewhere which I haven't been able to figure out yet: do links to tests appear in the Content Navigation menu as well? or do they just appear on the My Courses page.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

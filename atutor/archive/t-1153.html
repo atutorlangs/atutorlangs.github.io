@@ -1,0 +1,256 @@
+---
+ title: Permission Prob
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Permission Prob</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="1153"></a>
+		<div class="forum-post-author">
+			<label class="title">wesdale</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 04:16:47</p>
+            </div>
+            <div class="postheader"><h3>Permission Prob</h3></div>
+				
+			<div class="body">
+				<p>Hi-Can anyone throw some light on this?<br />
+I re-installed ATutor 132 to try and overcome the safe_mode probs I was having.  All seemed to go well until I went in and tried to go into File Manager.<br />
+<br />
+Error message:<br />
+Warning: opendir(../content/5): failed to open dir: Permission denied in /usr/local/psa/home/vhosts/techknowledgey.co.uk/httpdocs/tools/file_manager.php on line 188<br />
+<br />
+Any ideas?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1160"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 09:35:17</p>
+            </div>
+            <div class="postheader"><h3>Does the dir exist?</h3></div>
+				
+			<div class="body">
+				<p>Do an "ls -l" on the content directory and see who the owner of the directory is, and the file permissions set. <br />
+<br />
+Is this a fresh install, and what details can you provide about this new system?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1162"></a>
+		<div class="forum-post-author">
+			<label class="title">wesdale</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 11:56:41</p>
+            </div>
+            <div class="postheader"><h3>Does the directory exist?</h3></div>
+				
+			<div class="body">
+				<p>Greg<br />
+Using a FTP program I looked at the file ../content/5 and this is what it said:<br />
+<br />
+drwxr-xr-x   2 apache   psacln        512 Feb 21 16:27 5<br />
+<br />
+Sorry but this doesn't mean anything to me.  I'm assuming that the first 4 chars denote the access/permission to the owner-etc, is that correct?<br />
+<br />
+I am using MySql 3.23.58 and it is a fresh install.<br />
+Everything else seems to be working well.  This is the only hickup I've had.<br />
+Hope you can help and thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1167"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 12:40:19</p>
+            </div>
+            <div class="postheader"><h3>Make the directory writable</h3></div>
+				
+			<div class="body">
+				<p>Looks like you are using Apache2, which might result in some other problems. Apache2 is still a little buggy. <br />
+<br />
+If you have root access, you can reset the permissions on the content directory with:<br />
+<br />
+chmod -R a+rwx content/<br />
+<br />
+(or what ever your ftp client used to recursively change permissions)<br />
+<br />
+You may be better off reinstalling on a version of Apache 1.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1175"></a>
+		<div class="forum-post-author">
+			<label class="title">wesdale</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-22 04:01:37</p>
+            </div>
+            <div class="postheader"><h3>re:Make the directory writable</h3></div>
+				
+			<div class="body">
+				<p>I spoke to the tech supp guy and he says that the server is using Apache 1.3.27 but the roblem he found was that Apache had created the folder for itself (which apparently its not suppose to) .<br />
+<br />
+Anyway the folder owner was re-labeled to me and it still will not allow me to cretae it with an error message saying "permission denied".<br />
+<br />
+Any ideas?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1176"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-22 08:07:33</p>
+            </div>
+            <div class="postheader"><h3>FTP Permission?</h3></div>
+				
+			<div class="body">
+				<p>Are you able to login to the command prompt on your server and run the "chmod" command? I suspect the problem is related to setting permission from your ftp client. If you run chmod as I mentioned in my previous message, everything  under the content directory should be writable, and this should remove the permission error. <br />
+<br />
+The chmod command essentially gives anyone permission to view and write to files under the content/ directory. The permissions line should look something like this<br />
+<br />
+drwxrwxrwx 2 apache psacln 512 Feb 21 16:27 content<br />
+<br />
+<br />
+Note the two extra "w"s</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1177"></a>
+		<div class="forum-post-author">
+			<label class="title">wesdale</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-22 09:39:33</p>
+            </div>
+            <div class="postheader"><h3>FTP permissions</h3></div>
+				
+			<div class="body">
+				<p>Greg<br />
+I think I have tried to do as you asked in the last email.  Below is a copy of the display.<br />
+<br />
+drwxrwxrwx   5 besdale  psacln        512 Feb 22 14:33 content<br />
+<br />
+The error message now reads:<br />
+Warning: opendir(): SAFE MODE Restriction in effect. The script whose uid is 10117 is not allowed to access ../content/5 owned by uid 2525 in /usr/local/psa/home/vhosts/techknowledgey.co.uk/httpdocs/tools/file_manager.php on line 188<br />
+<br />
+Warning: opendir(../content/5): failed to open dir: Undefined error: 0 in /usr/local/psa/home/vhosts/techknowledgey.co.uk/httpdocs/tools/file_manager.php on line 188<br />
+<br />
+At least it the file '5' has been created.  Does this help to throw any light on the problem?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1178"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-22 10:59:48</p>
+            </div>
+            <div class="postheader"><h3>Safemode</h3></div>
+				
+			<div class="body">
+				<p>You can't run ATutor with PHP in safemode.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1185"></a>
+		<div class="forum-post-author">
+			<label class="title">wesdale</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-22 14:43:37</p>
+            </div>
+            <div class="postheader"><h3>safemode</h3></div>
+				
+			<div class="body">
+				<p>Greg<br />
+If that's the case, and I am not qualified to disagree with you, but why didn't I experience the same problem with the 1.3.1 version I used before, as it was on the same server?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1196"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-23 10:49:57</p>
+            </div>
+            <div class="postheader"><h3>safemode</h3></div>
+				
+			<div class="body">
+				<p>Apache 2 is not buggy, just the PHP "support" for Apache 2 is "experimental", which is why we can't recommend using it.<br />
+<br />
+As for your problem:<br />
+ATutor can run in safe_mode, but it has to be set up correctly and slightly differently.<br />
+<br />
+The problem is that your PHP script is run as you, while the directories Apache creates are created as "apache", hence your error message.<br />
+You should change the owner of that directory to be the same owner as the script. (delete the course, then recreate it, and manually create the directory).<br />
+<br />
+Directories are numbered according to the course ID. You could create a series of content directories from 1 up to the max number of courses you plan on using. creating those directories in advance will solve the problem for now.<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

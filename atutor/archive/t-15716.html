@@ -1,0 +1,130 @@
+---
+ title: Paypal
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Paypal</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="15716"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-13 18:48:29</p>
+            </div>
+            <div class="postheader"><h3>Paypal</h3></div>
+				
+			<div class="body">
+				<p>I was successfully able to peay for the course (in Production) and i was charged the right amount but when i return back to website from paypal i see the message "The following errors occurred:<br />
+The payment was cancelled or failed. "<br />
+but status shows as course "PAID"<br />
+<br />
+Your help is appreciated.<br />
+<br />
+Regards,<br />
+  Sri</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15719"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-14 08:55:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal</h3></div>
+				
+			<div class="body">
+				<p>It's difficult to say what happened. <br />
+<br />
+Our local system works fine, and no others have report such a problem. The only thing that comes to mind is maybe the success redirect is pointing to the fail redirect, in the account setup.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15728"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-14 17:01:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+   I would appreciate if you can let me know where i can find the setup for the success / failure redirect mentioned by you so i can validate.<br />
+Thanks for your help,<br />
+  Sri</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15747"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 09:57:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal</h3></div>
+				
+			<div class="body">
+				<p>Looking closer, I'm guessing PayPal has changed its return data, again :-/ . The module looks in the returned GET data in the URL, and the value of the "st" valiable, successful if it returns Complete or Pending. <br />
+<br />
+We are in Release mode right now, so this is not something we can deal with for the time being. If you want to investigate yourself, look at the information returned in the URL when being redirected back to ATutor from PayPal, and look at the following file<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/mods/ecomm/response_paypal_user.php<br />
+<br />
+Please tell us what you find, and we'll incorporate it into the next version of the module.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15828"></a>
+		<div class="forum-post-author">
+			<label class="title">adamclark1982</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-27 14:47:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal</h3></div>
+				
+			<div class="body">
+				<p>Hi all,<br />
+<br />
+I am a new user but I am also receiving the same problem which is very confusing. <br />
+<br />
+I am not an expert at all with regard to these sorts of problems. Have you any idea if anyone has fixed this? Can anyone help me?<br />
+<br />
+Many thanks in advance.<br />
+<br />
+Adam.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

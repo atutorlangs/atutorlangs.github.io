@@ -1,0 +1,95 @@
+---
+ title: User Maximum and File increase
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>User Maximum and File increase</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22309"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-08-10 15:03:50</p>
+            </div>
+            <div class="postheader"><h3>User Maximum and File increase</h3></div>
+				
+			<div class="body">
+				<p>I have a very good web service provider, and I intend to log a lot of users into the atutor system. What is the maximum number of users that can log into the system<br />
+However, I want to know how I can increase the maximum file size (10mb) that can be uploaded into the atutor system. (upload_max_size in php.ini). Please note that I'm not that good in php programming.<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22310"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-08-10 15:21:27</p>
+            </div>
+            <div class="postheader"><h3>Re: User Maximum and File increase</h3></div>
+				
+			<div class="body">
+				<p>There's no limitation on the number of users that can log into ATutor.<br />
+<br />
+To increase the maximum uploaded file size, <br />
+<br />
+1. in php.ini, make sure these settings have values that exceed your maximum file size: post_max_size, upload_max_filesize<br />
+<br />
+2. login as ATutor admin -> "Courses" tab -> select the course that you want to increase the uploaded file size -> "Edit" button -> Scroll down to sections of "Course Quota" and "Max File Size" -> also make sure they have values that are greater than your desired maximum uploaded file size.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22312"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-08-10 16:24:00</p>
+            </div>
+            <div class="postheader"><h3>Re: User Maximum and File increase</h3></div>
+				
+			<div class="body">
+				<p>Regarding how many can login, as Cindy says, there is no set limit, but depending on the power of the server, there will be an upper limit. That limit is many thousand. A better measure is the number of requests that users can make simultaneously.  You may have 5000 users logged in at once, but likely less that 50 making requests at any given moment. ATutor has no trouble handling that number of requests on typical current server technology. Perhaps 200 simultaneous request is a good upper limit. <br />
+<br />
+You can always increase the power of the system to accommodate larger numbers if things become slow.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22315"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-08-10 22:10:11</p>
+            </div>
+            <div class="postheader"><h3>Re: User Maximum and File increase</h3></div>
+				
+			<div class="body">
+				<p>Thanks cindy and greg. Your posts are of immense value. Was just hoping it would work like logged users on facebook while thousands of them sends a requests at once. My web server is very powerful and has an unlimited disk space for me. I'm just skeptical that why i decided to delve into it. If reproducing it for limited users would be perfect; then its okay by me. Although, having a single atutor for many users will be the best bet.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

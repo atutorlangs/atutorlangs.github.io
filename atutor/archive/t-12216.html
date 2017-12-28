@@ -1,0 +1,310 @@
+---
+ title: Cookies issue after install of 155
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cookies issue after install of 155</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12216"></a>
+		<div class="forum-post-author">
+			<label class="title">bmaynes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 12:30:32</p>
+            </div>
+            <div class="postheader"><h3>Cookies issue after install of 155</h3></div>
+				
+			<div class="body">
+				<p>operating system - XP Pro<br />
+  version of ATutor - 1.5.5<br />
+  versions of php - 5.2.0<br />
+  version of mysql - 5.0.27<br />
+  webserver & version - Apache 2.2.6<br />
+  copies of error messages - "Session cookies must be enabled in your browser to login."<br />
+  web browser being used - IE 6.0<br />
+<br />
+I'm a new ATutor user struggling to get past the "Session cookies must be enabled in your browser to login" error during login. I have checked everything I can think of but I still can't get logged in. Can anyone help me out?<br />
+<br />
+I have installed all components (Apache, PHP, MySQL, ATutor) on my local computer (localhost) for evaluation purposes and am eager to check it out in more detail. Hoping that ATutor might be a btter fit in our organization than Moodle (due to its complexity).<br />
+<br />
+Regards,<br />
+Brian</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12217"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 12:46:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Have you tried this?<br />
+http://www.atutor.ca/view/7/9917/1.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12218"></a>
+		<div class="forum-post-author">
+			<label class="title">bmaynes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 12:55:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>harris,<br />
+<br />
+Thanks for your reply.<br />
+<br />
+I have tried those suggestions and EVERYTHING else I could find on this site...still no go. I'm sure it's a setting somewhere that isn;t set right, but for the life of me I can't isolate it. The installation went fine otherwise.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12219"></a>
+		<div class="forum-post-author">
+			<label class="title">bmaynes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 13:00:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>Here is a snippet of the [Session] section of my php.ini...<br />
+<br />
+[Session]<br />
+; Handler used to store/retrieve data.<br />
+session.save_handler = files<br />
+<br />
+; Argument passed to save_handler.  In the case of files, this is the path<br />
+; where data files are stored. Note: Windows users have to change this<br />
+; variable in order to use PHP's session functions.<br />
+;<br />
+; As of PHP 4.0.1, you can define the path as:<br />
+;<br />
+;     session.save_path = "N;/path"<br />
+;<br />
+; where N is an integer.  Instead of storing all the session files in<br />
+; /path, what this will do is use subdirectories N-levels deep, and<br />
+; store the session data in those directories.  This is useful if you<br />
+; or your OS have problems with lots of files in one directory, and is<br />
+; a more efficient layout for servers that handle lots of sessions.<br />
+;<br />
+; NOTE 1: PHP will not create this directory structure automatically.<br />
+;         You can use the script in the ext/session dir for that purpose.<br />
+; NOTE 2: See the section on garbage collection below if you choose to<br />
+;         use subdirectories for session storage<br />
+;<br />
+; The file storage module creates files using mode 600 by default.<br />
+; You can change that by using<br />
+;<br />
+;     session.save_path = "N;MODE;/path"<br />
+;<br />
+; where MODE is the octal representation of the mode. Note that this<br />
+; does not overwrite the process's umask.<br />
+;session.save_path = "/tmp"<br />
+<br />
+; Whether to use cookies.<br />
+session.use_cookies = 1<br />
+<br />
+;session.cookie_secure =<br />
+<br />
+; This option enables administrators to make their users invulnerable to<br />
+; attacks which involve passing session ids in URLs; defaults to 0.<br />
+; session.use_only_cookies = 1<br />
+<br />
+; Name of the session (used as cookie name).<br />
+session.name = PHPSESSID<br />
+<br />
+; Initialize session on request startup.<br />
+session.auto_start = 0<br />
+<br />
+; Lifetime in seconds of cookie or, if 0, until browser is restarted.<br />
+session.cookie_lifetime = 0<br />
+<br />
+; The path for which the cookie is valid.<br />
+session.cookie_path = /atutor<br />
+<br />
+; The domain for which the cookie is valid.<br />
+session.cookie_domain = localhost</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12221"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 14:21:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>Where is this php.ini? Inside apache or C:/php?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12222"></a>
+		<div class="forum-post-author">
+			<label class="title">bmaynes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 14:29:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>php.ini is in c:\program files\php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12223"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 14:31:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>Can you try changing the php.ini file under the apache server instead?<br />
+Like for instance, it would be <br />
+..\apache\bin\php.ini</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12224"></a>
+		<div class="forum-post-author">
+			<label class="title">bmaynes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 14:34:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>I'll try it...there isn't a php.ini file in \apache\bin right now, so should I just copy my \php\php.ini to the apache\bin directory?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12225"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 14:43:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>No, it depends where your apache reads the php.ini, I am suggesting that 'cause mine actually reads from xampp\apache\bin\php.ini.<br />
+<br />
+Try changing your ;<br />
+; session.save_path = "N;/path"<br />
+ <br />
+to a specific path, like for instance<br />
+"C:\temp"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12226"></a>
+		<div class="forum-post-author">
+			<label class="title">bmaynes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 14:58:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>Working!<br />
+<br />
+I think it was the path in the httpd.conf file that was incorrect.<br />
+<br />
+I had ATutor previously installed using XAMPP, but then wiped it and reinstalled Apache, PHP, and MySQL manually. I'm sure there was a disconnect somewhere in my manual process that the XAMPP install handled for me.<br />
+<br />
+Thanks for your help harris. I like what I see so far in ATutor...much easier to administrate/modify than Moodle IMO.<br />
+<br />
+Brian</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12227"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-12 15:00:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Cookies issue after install of 1.5.5...</h3></div>
+				
+			<div class="body">
+				<p>Not a problem! :)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

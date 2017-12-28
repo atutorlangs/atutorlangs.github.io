@@ -1,0 +1,550 @@
+---
+ title: cant create courses and other items
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>cant create courses and other items</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3579"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-12 13:25:31</p>
+            </div>
+            <div class="postheader"><h3>cant create courses and other items</h3></div>
+				
+			<div class="body">
+				<p>operating system - Red Hat Enterprise Linux<br />
+  version of ATutor - 1.4.3<br />
+  versions of php - 4.3.2<br />
+  version of mysql - 3.23.58<br />
+  webserver & version - Apache/2.0.46<br />
+  copies of error messages - something about mysql_fetch_assoc() and basedir <br />
+  changes to default settings - nope<br />
+  web browser being used - IE 6 and Mozilla FireFox 1.0<br />
+  and anything else relevant - I had to create the map "content" manually?<br />
+<br />
+Hello everybody<br />
+<br />
+My problem is as following:<br />
+Everytime i try creating a new course or other item i get an error about mysql_fetch_assoc() and a little lower an error about basedir something in effect.<br />
+The installation went perfectly no errors at all, only at the end I had to create the map "content" manually.<br />
+I can log in as user and as administrator but im unable to create new items.<br />
+I also tried uninstalling by deleting the entire content from my server but then I get the error: permission denied when I try deleting the map "content". The map content has owner "Apache" which disallows me to delete the map.<br />
+All the rest works superb - great job guys.<br />
+Now if someone can help me figure out how I can solve my irritant error.<br />
+<br />
+TIA, Fabio Tielen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3597"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-13 09:12:41</p>
+            </div>
+            <div class="postheader"><h3>Unable to reproduce</h3></div>
+				
+			<div class="body">
+				<p>Can you provide a copy of the exact error messages.<br />
+<br />
+What do you mean by :<br />
+		"I had to create the map "content" manually?"<br />
+<br />
+What do you mean by:<br />
+"I can log in as user and as administrator but im unable to create new items"<br />
+<br />
+Admins and users can not create new content. Only instructors can create content.<br />
+<br />
+Files own by the web server need to be deleted by the system's root user.<br />
+<br />
+Move the directory with the leftover Apache owned files using the "mv" command, then start with a fresh install. <br />
+<br />
+See the ATutorHowTo 1.4.3 documentation:<br />
+http://atutor.ca/atutor/docs/howto.php<br />
+<br />
+Make sure PHP safemode is turned off.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3616"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-13 17:00:14</p>
+            </div>
+            <div class="postheader"><h3>my error</h3></div>
+				
+			<div class="body">
+				<p>This is the error I get during installation step 5:<br />
+<br />
+Content Directory:<br />
+It has been detected that your server does not support the protected content directory feature. The content directory stores all the courses' files.<br />
+<br />
+Due to that restriction your content directory must exist within your ATutor installation directory and cannot be moved. Its path is specified below: <br />
+"/home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/content"<br />
+<br />
+So i manually create this map with my FTP software/file manager in Control Panel.<br />
+<br />
+Now I log in as instructor and try creating a course and this is the error i get:<br />
+<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/include/classes/ContentManager.class.php on line 147<br />
+<br />
+Warning: is_file(): open_basedir restriction in effect. File(/atutor_cache_db_test/phpCache.systemXcourses=systemXcourses) is not within the allowed path(s): (/home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs:/tmp) in /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/include/phpCache/phpCache.inc.php on line 165<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/include/classes/ContentManager.class.php:147) in /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/users/create_course.php on line 60<br />
+<br />
+Hope you can help me figure this one out.<br />
+<br />
+TIA Fabio Tielen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3617"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-13 17:43:03</p>
+            </div>
+            <div class="postheader"><h3>error still - double check</h3></div>
+				
+			<div class="body">
+				<p>Just double checked everything.<br />
+I get the error but it creates the course. Really weird.<br />
+<br />
+Also when I try deleting a course I get this error:<br />
+But it also deletes the course.<br />
+Also php safemode is OFF (www.exclustudio.be/info.php)<br />
+<br />
+Warning: is_file(): open_basedir restriction in effect. File(/atutor_cache_db_test/phpCache.systemXcourses=systemXcourses) is not within the allowed path(s): (/home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs:/tmp) in /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/include/phpCache/phpCache.inc.php on line 165<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/include/phpCache/phpCache.inc.php:165) in /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/users/delete_course.php on line 48<br />
+<br />
+Please help asap<br />
+<br />
+TIA Fabio Tielen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3626"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 10:27:27</p>
+            </div>
+            <div class="postheader"><h3>error still - double check</h3></div>
+				
+			<div class="body">
+				<p>try disabling cache by either removing that line in the include/config.inc.php file or by setting it to empty.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3627"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 10:30:38</p>
+            </div>
+            <div class="postheader"><h3>caching is disabled</h3></div>
+				
+			<div class="body">
+				<p>Caching is already disabled. During installation i left the field empty to disable caching. But I'll try removing that line.<br />
+<br />
+Any other helpfull information?<br />
+<br />
+TIA Fabio Tielen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3628"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 10:40:43</p>
+            </div>
+            <div class="postheader"><h3>removed line</h3></div>
+				
+			<div class="body">
+				<p>Ok I commented out the line that handles cacheing<br />
+AFter a few tests this is result:<br />
+I get no more error when deleting courses. So this part is solved.<br />
+When creating a course this is the error i get:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/include/classes/ContentManager.class.php on line 147<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/include/classes/ContentManager.class.php:147) in /home/httpd/vhosts/exclustudio.be/subdomains/test/httpdocs/users/create_course.php on line 60<br />
+<br />
+Any further assistance please<br />
+<br />
+THanks Fabio Tielen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3631"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 11:01:08</p>
+            </div>
+            <div class="postheader"><h3>half solved</h3></div>
+				
+			<div class="body">
+				<p>I only get the error above when i create a course with this selected below:<br />
+Create basic announcement, content, and forum.<br />
+<br />
+Then i get the error.<br />
+When I select empty, i don't get an error.<br />
+<br />
+help asap please<br />
+<br />
+Fabio Tielen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3634"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 11:46:46</p>
+            </div>
+            <div class="postheader"><h3>send a link</h3></div>
+				
+			<div class="body">
+				<p>Send us a link, and an instructor account  so we can have a look.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3635"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 11:57:51</p>
+            </div>
+            <div class="postheader"><h3>where can i send that link?</h3></div>
+				
+			<div class="body">
+				<p>Where can i send that link and login information?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3636"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 11:59:55</p>
+            </div>
+            <div class="postheader"><h3>nvm</h3></div>
+				
+			<div class="body">
+				<p>nevermind, I just found it in the about section.<br />
+Pretty weird place to place it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3640"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 13:48:33</p>
+            </div>
+            <div class="postheader"><h3>register globals</h3></div>
+				
+			<div class="body">
+				<p>to fix the admin problem you will have to turn register_globals off in your php.ini file or using an .htaccess <br />
+php_flag register_globals off<br />
+<br />
+that might also fix the other problems you're having.<br />
+<br />
+the next version of ATutor will have fixes for that problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3641"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 14:13:50</p>
+            </div>
+            <div class="postheader"><h3>admin problems?</h3></div>
+				
+			<div class="body">
+				<p>What admin problems are those?<br />
+I only experience problems when creating courses with a basic announcement/content/forum.<br />
+All the rest works perfect.<br />
+Also When i create a new course which is empty, then i don't get an error but when i start adding content i get the same error.<br />
+Adding announcements or forums works perfect.<br />
+I just get errors when adding content.<br />
+<br />
+TIA Fabio Tielen<br />
+http://test.exclustudio.be</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3645"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 15:45:39</p>
+            </div>
+            <div class="postheader"><h3>register globals</h3></div>
+				
+			<div class="body">
+				<p>please disable register globals to see if the problems you are experiencing are fixed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3646"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 15:57:56</p>
+            </div>
+            <div class="postheader"><h3>i turned it off</h3></div>
+				
+			<div class="body">
+				<p>I turned it off by using an .htaccess file with that line code in it but the error isnt gone<br />
+<br />
+Any other ideas?<br />
+<br />
+THanks Fabio Tielen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3647"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 16:22:33</p>
+            </div>
+            <div class="postheader"><h3>possible fix</h3></div>
+				
+			<div class="body">
+				<p>try replacing lines 145-148 in include/classes/ContentManager.class.php<br />
+<br />
+(which looks like this:<br />
+	$sql = "SELECT LAST_INSERT_ID() AS insert_id";<br />
+	$result = mysql_query($sql, $this->db);<br />
+	$row = mysql_fetch_assoc($result);<br />
+	$cid = $row['insert_id'];<br />
+)<br />
+<br />
+with this:<br />
+<br />
+$sql = "SELECT LAST_INSERT_ID()";<br />
+$result = mysql_query($sql, $this->db);<br />
+if (!($row = @mysql_fetch_array($result))) {<br />
+	echo mysql_error($this-db);<br />
+	exit;<br />
+}<br />
+$cid = $row[0];<br />
+<br />
+if this doesn't work, you'll have to give us access to your server to investigate further.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3653"></a>
+		<div class="forum-post-author">
+			<label class="title">exclustudio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 20:28:21</p>
+            </div>
+            <div class="postheader"><h3>IT WORKS!</h3></div>
+				
+			<div class="body">
+				<p>Thank you very much! It works by editing those few lines.<br />
+I will keep testing everything and when i run into an error I will drop a note here.<br />
+<br />
+Tyvm, Fabio Tielen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4999"></a>
+		<div class="forum-post-author">
+			<label class="title">xamount</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-04 11:55:37</p>
+            </div>
+            <div class="postheader"><h3>Same Problem</h3></div>
+				
+			<div class="body">
+				<p>I got this same exact error as described by exclustudio. <br />
+<br />
+The only difference is that my register_globlas was off by default, so that error is ruled out.<br />
+<br />
+My cache was also left blanked during install. I however commented out the cache line as described above but got the same errors. But when i added the lines of code above, everything now works.<br />
+<br />
+  operating system -  red hat<br />
+  version of ATutor - 1.4.3<br />
+  versions of php -  4.3.10<br />
+  version of mysql - 3.23.58<br />
+   webserver & version - Apache/2.0.51 (Fedora) Server<br />
+  web browser being used - Fire Fox 1.0.4</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5098"></a>
+		<div class="forum-post-author">
+			<label class="title">peera</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-14 03:44:25</p>
+            </div>
+            <div class="postheader"><h3>Same Problem, too</h3></div>
+				
+			<div class="body">
+				<p>I'm Thailand<br />
+<br />
+I had same problem.<br />
+After I use that joel's solve problem that work.<br />
+<br />
+Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5149"></a>
+		<div class="forum-post-author">
+			<label class="title">puschell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-19 15:13:53</p>
+            </div>
+            <div class="postheader"><h3>Subject: can't create courses and other items</h3></div>
+				
+			<div class="body">
+				<p>Was also having this issue when creating content with with basic announcement/content/forum.<br />
+<br />
+Applied Joels post for correction:<br />
+$sql = "SELECT LAST_INSERT_ID()";<br />
+$result = mysql_query($sql, $this->db);<br />
+if (!($row = @mysql_fetch_array($result))) {<br />
+echo mysql_error($this-db);<br />
+exit;<br />
+}<br />
+$cid = $row[0];<br />
+<br />
+Everything works great! Thanks!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

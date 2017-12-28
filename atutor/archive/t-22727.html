@@ -1,0 +1,269 @@
+---
+ title: Import Enrollment NOT working
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Import Enrollment NOT working</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22727"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-12-23 09:13:22</p>
+            </div>
+            <div class="postheader"><h3>Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>Attempting to import a csv file for enrollment in a course.  The file uploads and is read, I receive the review page and click on Add to Enrolled List, then on Done.  I receive a message that the action completed successfully but none of the imported names appear in the enrollment.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22728"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-12-23 09:46:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>I'm unable to reproduce the problem. I imported the following list into our demo site in a file called course_list.csv, without any problems<br />
+<br />
+"bidy", "boperooa", "bidy@boperoo.com" <br />
+"bidya", "boperoos", "bidy1@boperoo.com" <br />
+"bidyb", "boperood", "bidy2@boperoo.com" <br />
+<br />
+If there's anymore information you can provide to help use reproduce the problem, we'll investigate further.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22729"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-12-27 08:29:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>There are no errors generated as I said in my previous message.  The server is Red Hat Enterprise Linux Server release 5.6, PHP is 5.2.17, mySQL is 5.0.77 and the version of aTutor appears to be 1.5.5.  I am using Safari 5.1.2 browser.<br />
+<br />
+I am not the original developer that implemented aTutor so I am not familiar at all with how this system was setup.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22730"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-12-27 09:22:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>It is likely ATutor/PHP compatibility problem. You are using a fairly old version of ATutor with the new version of PHP. You will likely need to upgrade ATutor to fix the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22734"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-12-29 13:31:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>I was able to find that an error (well warning) is generating:<br />
+<br />
+[29-Dec-2011 13:16:59] PHP Warning:  mysql_query(): supplied argument is not a valid MySQL-Link resource in /webs/candelaSyneron/atutor/public/bounce.php on line 18<br />
+[29-Dec-2011 13:16:59] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /webs/candelaSyneron/atutor/public/bounce.php on line 19<br />
+<br />
+I've attached bounce.php to this post.  Please advise.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22738"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-12-30 18:46:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>I don't see anything in bounce.php that might suggest the problem. The only thing i might suggest is enclosing the variables in the $sql statement in single quotes '$_SESSION[member_id]' and '$course'.<br />
+<br />
+Are you logged in as instructor, or an admin?<br />
+<br />
+Are you able to confirm that enrollments did not occur by looking in the course_enrollment table?<br />
+<br />
+I assume your Webserver Apache.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22744"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-03 09:24:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>Yes logged in as instructor, and yes I checked the course_enrollment table (that's how I knew it didn't work initially).  Webserver is Apache.<br />
+<br />
+On the bounce.php file, the line of SQL at line 17 was something I added, because the error (on line 18) seems to indicate that there is a problem with the arguments in the $result = mysql_query($sql, $db); statement - that it wasn't happy with the $sql or $db.  So, I added the line on 17:<br />
+<br />
+$sql = "SELECT * FROM ".TABLE_PREFIX."course_enrollment WHERE member_id=$_SESSION[member_id] AND course_id=$course";<br />
+<br />
+The original file doesn't seem to defined $sql or $db - not sure if that is how it came from aTutor or if a previous developer here changed it.  Can you advise?  Also, I tried your suggestion of adding single quotes and got the same result/error.  <br />
+<br />
+Please advise on the $sql and $db values used in bounce.php.<br />
+<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22745"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-03 09:29:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>CORRECTION on my previous message - that SQL line WAS there already - my question is could it be a problem with the $db variable?  Not sure where that is defined.<br />
+<br />
+Sorry for any confusion.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22746"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-03 09:57:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>$db value comes from include/lib/mysql_connect.inc.php<br />
+<br />
+What you can try,<br />
+1. Check include/config.inc.php, make sure the supplied db credentials are correct, which affects $db. The chance that this part gets wrong is relatively slim as you won't be able to complete the installation process or start up ATutor if it's wrong.<br />
+2. More likely the problem would be with the variables that are used to compose $sql. Try printing out $sql value and run it from mysql command line which gives more error details.<br />
+<br />
+If you still had no luck with the above suggestions, additional information you'd like to provide for us to re-produce the error are,<br />
+1. The ATutor version that you are using, since line 17 in the recent bounce.php is not a sql any more;<br />
+2. The file that you try to import, with test data.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22749"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-03 13:50:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>Hi Cindy - thanks for your help.  I was able to (I think) narrow it down to the INSERT statement in the add_users function in enroll.inc.php.<br />
+<br />
+It seems like the sql is choking on the preferences variable which is: <br />
+<br />
+$_config[pref_defaults] <br />
+<br />
+and the value to be inserted is: <br />
+<br />
+'a:4:{s:10:"PREF";s:7:"default";s:14:"PREF_NUMBERING";i:1;s:18:"PREF_JUMP_REDIRECT";i:1;s:15:"PREF_FORM_FOCUS";i:1;}'</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22750"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-03 13:55:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Import Enrollment NOT working</h3></div>
+				
+			<div class="body">
+				<p>Cindy - disregard my last post - I've solved the problem and it was NOT the preferences value.  We had bad column/value counts (a past developer added a field/value to the enrollment table).<br />
+<br />
+I think we are all set.  Thank you for your help and please thank Greg!<br />
+<br />
+Betc</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

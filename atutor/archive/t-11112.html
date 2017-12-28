@@ -1,0 +1,447 @@
+---
+ title: BeginEnd Dates
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>BeginEnd Dates</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11112"></a>
+		<div class="forum-post-author">
+			<label class="title">dparnian</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-16 14:01:26</p>
+            </div>
+            <div class="postheader"><h3>BeginEnd Dates</h3></div>
+				
+			<div class="body">
+				<p>Is there a way to track a student's access points without going to My Tracker? I have independent study courses that are available for 30 days once a student first accesses them. I need to know when that is, so the student can be removed from the course after his/her 30 days are up. I'm not seeing this type of specific information in Statistics or Content Usage. Can anyone help?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11113"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-16 14:46:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Currently, there is no such feature unless and until I have missed it. I'm currently working on such a feature and waiting for greg to actually give me some pointers on a few doubts that I have... So once he replies to one of my other threads, I will be releasing this as a mod... Until then, greg will have to help you out I guess...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11116"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-16 16:49:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>All of our courses are also independent study, available to anyone, and I need to generate a report that shows the number of new enrollees per course each month. Since I could not find a way to do it within ATutor, I added a data field "enroll_date" to the AT_course_enrollments table and store the current date in the field when someone enrolls, which required a modification to enroll.php. I can then generate a monthly access report using mySQL. Using this extra field you could have a query against the database to remove users 30 days past the enroll_date.<br />
+<br />
+I do think it would be nice if enroll_date were added to ATutor's database along with the subsequent mod to enroll.php to store the value upon enrollment...<br />
+<br />
+Sandie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11117"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-16 16:51:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Well, I've done a little more than that... Not just 30 days but almost all the packages one can think of... 1 Week to 1 Year... I'm just waiting for greg's approval/denial....</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11118"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-16 18:36:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>legend, approval/denial doesn't really apply to modules. You can do whatever your want. We're a little more picky about code being added to the primary source code, less so with modules. <br />
+<br />
+I'll try to look at your module in the next few days, though time is short at the moment. I'd help if you could get it to a state where it would install, or set it up somewhere where we can try it out.<br />
+<br />
+A note on end/start dates, an end date course property has been added, and available in SVN. I'm not sure how this will affext your module, but you may want to try your module with a fresh checkout from the repository.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11122"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-17 03:45:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>No greg. I guess I wasn't clear about my point. I won't ask you to add anything to the Primary Code. I saw a recent discussion somewhere where you made your point clear of adding things to the base code.<br />
+<br />
+Could you please let me know if end_date is the only end_date is the only thing you've added or you've added others too? I mean, is there a log in the repository to which you can link me too? My mod inserts a table:<br />
+<br />
+//cc_course_enrollment_details --> holds the duration details and payment details<br />
+//	member_id 	<br />
+//	course_id 	<br />
+//	start_date 	<br />
+//	end_date 	<br />
+//	package_id 	<br />
+//	under_combo<br />
+// 	payment</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11123"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-17 04:00:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Hmm... I downloaded one of the nightly build and tested it out but couldn't find the end_date column. Maybe I'm looking at the wrong place and hope you'd guide me.<br />
+<br />
+As for the end_date, my mod is completely different, the student will be able to choose even a start date for the course so that his validity would start from that particular date... Hope I'm able to convey my point...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11129"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-17 11:16:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>It is there. Look for "end_date"<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/install/db/atutor_schema.sql</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11130"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-17 11:18:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Alright... I got it... Sorry for the trouble... Anyways, what I am doing is completely different... I'll come out with the complete documentation too in a few days... Can you kindly let me know if there is anybody whom I can approach to get this module integrate with PayPal?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11132"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-17 12:04:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>There is a list of service providers, some of whom do custom development. You try contact a few of those. <br />
+<br />
+Have you looked at the Payments module? It supports PayPal.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11133"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-17 12:06:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Yeah I've looked at it. I think I'll have a look at it again. I don't understand why the script used so many functions. Thats the only problem. Never mind, I'll have a look at it again...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11143"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 10:56:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>How can I get a module to execute a particular piece of code everytime the user logs in? I want to check for the validity of a course but then I am doing this by editing the index.tmpl.php file in the themes folder.<br />
+<br />
+I don't think this is such a good idea. Is there any other way I could actually do it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11145"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 11:21:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>You can't. There is no plan to make this possible any time soon.<br />
+<br />
+If you can write up a detailed description of what it is you're trying to achieve, we may be able to add it to the core. Provided the functionality would be useful to others.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11146"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 11:36:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Wow... another developer.. Pleased to see you Sir... I'm almost done with a module.. I'll release it soon and will take pointers from you as to what best can be done with that.....</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11147"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 11:47:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Anyways, here's what I need:<br />
+<br />
+In my module, I take the start date of a particular course and depending on some parameters, I calculate the end date and then store both in the database. Now i need to determine if the end date has been passed. If it has, then I need to remove the student from the course. What is the best way to achieve this? I mean, at what stage should I check all these?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11150"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 13:13:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Does the end date change from student to student?<br />
+<br />
+I think this feature makes the most sense for private courses, where you don't want to remove the student from the course, you just want to not allow access.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11151"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 13:16:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Yes this feature is for a private course where a student will be given a validity package. He will be asked the start date for the course and I will calculate the end date based on his package, say One month package or Two months package. So it varies from student to student... All the table creation tasks are over... I just need to check the expiry for each and every student and remove him from the course _enrollment table.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11153"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 14:38:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>In that case it's easy.<br />
+<br />
+Instead of removing the student from the course just sent the enrollment field to 'n' (for not enrolled).<br />
+<br />
+See the example modules for create a scheduled cron. The cron can run every day and un-enroll students who are to be expired.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11154"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 14:41:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Oh... I'll try that out... And if I want to display the remaining dates and things like that, there is no other way other than editing the theme files right? Just to confirm before I start writing the code...Thanks for your time...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11155"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 15:30:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>You could do it in a theme, but then it would be difficult to use the module elsewhere.<br />
+<br />
+But, for now there's no other way.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11156"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-18 15:31:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Begin/End Dates</h3></div>
+				
+			<div class="body">
+				<p>Thanks a lot... For my first release, I'll stick to that... In my later revisions, I'll think of a different logic :)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

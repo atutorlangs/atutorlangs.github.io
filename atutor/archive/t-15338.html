@@ -1,0 +1,177 @@
+---
+ title: Custom  Login
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Custom  Login</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15338"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-30 15:48:31</p>
+            </div>
+            <div class="postheader"><h3>Custom  Login</h3></div>
+				
+			<div class="body">
+				<p>I used the attached login screen code so users can directly logon to my Atutor training page from my main website. When i enter a valid id and pass word - It does not auto logon and does NOT show any error. Any help in debugging is appreciated</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15340"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-30 15:58:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom  Login</h3></div>
+				
+			<div class="body">
+				<p>http://www.atutor.ca/view/12/15337/1.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15341"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-30 15:58:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom  Login</h3></div>
+				
+			<div class="body">
+				<p>I''m guessing you need the encryption script. See the Theme Change Log<br />
+<br />
+http://wiki.atutor.ca/display/atutorwiki/Theme+Change+Log<br />
+<br />
+If you need more help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15354"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 13:26:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom  Login</h3></div>
+				
+			<div class="body">
+				<p>My installation has the following info and my code is attached. I am getting the invalif ID/password error when i try to logon. Any help is appreciated.<br />
+<br />
+<br />
+ATutor Version: 1.6.1. <br />
+PHP Version: 5.1.6 <br />
+MySQL Version: 5.0.45 <br />
+OS: Linux 2.6.26.5-snk</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15355"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 13:33:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom  Login</h3></div>
+				
+			<div class="body">
+				<p>Add the following line before the javascript block, pointing the src to the file in your ATutor installation.<br />
+<br />
+[php]<br />
+<br />
+<br />
+&lt;script language="JavaScript" src="sha-1factory.js" type="text/javascript">&lt;/script><br />
+<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15356"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 14:16:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom  Login</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+  It still does not work<br />
+  What is the form_course_id" of value="1"  ?<br />
+<br />
+Sri</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15357"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 14:29:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom  Login</h3></div>
+				
+			<div class="body">
+				<p>try copying sha-1factory.js into the local directory</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

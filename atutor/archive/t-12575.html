@@ -1,0 +1,140 @@
+---
+ title: eXe
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>eXe</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12575"></a>
+		<div class="forum-post-author">
+			<label class="title">d2leo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-16 18:03:25</p>
+            </div>
+            <div class="postheader"><h3>eXe</h3></div>
+				
+			<div class="body">
+				<p>Things to describe: <br />
+  operating system -OSX<br />
+  version of ATutor -1.5.5<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -safarai, firefox<br />
+  and anything else relevant -<br />
+<br />
+I am not sure if this is an eXe problem or ATutor.<br />
+When I create and save content in eXe (the latest version) and import it into ATutor. I get characters that are for spaces and quotation. Also the visual editor will not work on the imported content.<br />
+Please advise.<br />
+<br />
+Phil</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12584"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-17 09:42:58</p>
+            </div>
+            <div class="postheader"><h3>Re: eXe</h3></div>
+				
+			<div class="body">
+				<p>Can you send us the eXe file you're talking about, so we can take a look.<br />
+<br />
+Its possible the eXe content is not UTF-8, in which case characters may not be displayed right. There's a UTF-8 conversion utility module coming (soon I hope) that you'd be able to use to convert content to UTF-8.<br />
+<br />
+As for the visual editor not working, that usually means the content being open in it is not valid HTML. You might try running the content through an HTML validator to see if there are errors in it.<br />
+<br />
+Try<br />
+http://validator.w3.org</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12593"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-18 11:24:00</p>
+            </div>
+            <div class="postheader"><h3>Re: eXe</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+This seems to be a UTF-8 problem.  The files that you created from eXe are in UTF-8, but your 1.5.5 ATutor language pack is using the western english package (ISO-8859-1).  As a result, the UTF-8 quotes/spaces will be interpreted to weird symbols like these "/".  <br />
+<br />
+To avoid this language encoding problem, you can<br />
+1. try creating your eXe content under Western (ISO-8859-1) encoding.<br />
+<br />
+or<br />
+<br />
+2. Change your ATutor language over to UTF-8 by logging in as admin, go to languages, choose "English", export, save the exported language file; then convert the language pack from http://www.atutor.ca/atutor/translate/convert.php, upload your exported file and choose UTF-8, click convert and save this converted language pack; re-import it from admin/language/import.<br />
+A note here is that you will have to add a second language before removing your old Western English language pack, because you can't remove language if you have only 1 in the system.  Hope this helps.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12600"></a>
+		<div class="forum-post-author">
+			<label class="title">d2leo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-21 11:12:23</p>
+            </div>
+            <div class="postheader"><h3>Re: eXe</h3></div>
+				
+			<div class="body">
+				<p>When the first Stable 1.6 is ready will this fix the problem?<br />
+<br />
+Thank you for your help,<br />
+<br />
+Phil</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12602"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-21 13:18:47</p>
+            </div>
+            <div class="postheader"><h3>Re: eXe</h3></div>
+				
+			<div class="body">
+				<p>If your eXe are exporting contents in UTF-8, then yes, 1.6 will cure this problem</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

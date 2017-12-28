@@ -1,0 +1,125 @@
+---
+ title: javascript in import from webCT
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>javascript in import from webCT</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5506"></a>
+		<div class="forum-post-author">
+			<label class="title">mauricelast</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 11:47:38</p>
+            </div>
+            <div class="postheader"><h3>javascript in import from webCT</h3></div>
+				
+			<div class="body">
+				<p>There is some embedded javascript in some files that I am importing from a webCT IMS export that does not work in ATutor.  I have also manually set up a content page and uploaded the html files (and related resources) and have the same problem.  The code that does not work is the following:<br />
+&lt;code start><br />
+Read pages 1-11 in your &lt;a onclick="<br />
+function onclick(event) {<br />
+    MM_openBrWindow("course_files/text.htm", "test", "width=200,height=200");<br />
+}<br />
+" href="javascript:;">&lt;img align="middle" src="common_files/textbook.gif" />&lt;/a>.<br />
+&lt;code end><br />
+<br />
+The text image is there, but clicking on it does nothing.  <br />
+<br />
+Any ideas?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5512"></a>
+		<div class="forum-post-author">
+			<label class="title">mauricelast</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:37:50</p>
+            </div>
+            <div class="postheader"><h3>javascript in import from webCT update</h3></div>
+				
+			<div class="body">
+				<p>OK, I have found the issue and it is not with ATutor at all.  It seems that webCT cuts off the information in the &lt;head> of the html file before it exports it, and my non-IMS source for the same files also do not have the original &lt;head> .......&lt;/head> that the webCT files have, so the actual javascript function that is in the body does not exist anywhere.  I cut and pasted the function from the webCT source and it now works.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5516"></a>
+		<div class="forum-post-author">
+			<label class="title">mauricelast</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:57:11</p>
+            </div>
+            <div class="postheader"><h3>javascript in import from webCT update</h3></div>
+				
+			<div class="body">
+				<p>Correction on the above:  The issue is with ATutor in that when and import or upload is done, the &lt;head> info is stripped off, so the javascript functions are not included in the upload.  My files do have the javascript functions in the &lt;head> section of the file.<br />
+<br />
+Is there an easy way to fix this (other than editting every file and pasting in a &lt;head> section after doing the upload)? (There are only a couple of functions that are used)<br />
+<br />
+maurice</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5524"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-19 08:30:47</p>
+            </div>
+            <div class="postheader"><h3>Javascript removed</h3></div>
+				
+			<div class="body">
+				<p>Only content between the body elements are imported as ATutor content. We have a todo item to extract Javascript and stylesheets from the head of imported content and restore them when the content is displayed in ATutor.<br />
+<br />
+Pasting the Javascript into the body of a content page after its been imported into ATutor, is required for now.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5532"></a>
+		<div class="forum-post-author">
+			<label class="title">mauricelast</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-19 13:29:06</p>
+            </div>
+            <div class="postheader"><h3>Javascript removed</h3></div>
+				
+			<div class="body">
+				<p>thanks Greg.<br />
+<br />
+now to resolve the path problems with the javascript referenced resources. see thread Pictures, graphics do not import (http://atutor.ca/view/7/3945/1.html)<br />
+<br />
+maurice</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

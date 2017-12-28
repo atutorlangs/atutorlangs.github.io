@@ -1,0 +1,150 @@
+---
+ title: Resume Test Link
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Resume Test Link</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="17028"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-31 00:13:18</p>
+            </div>
+            <div class="postheader"><h3>Resume Test Link</h3></div>
+				
+			<div class="body">
+				<p>I am still new to ATutor but while using it i had anticipated that clicking the Resume link on a student's "My Start Page" would resume they last viewed page whether that be a content page or a test. As far as i can tell this is not the case. Is there a way to "hack" the code behind the Resume link to include resuming tests or perhaps add a "Resume Test" link?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17034"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-31 09:09:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Resume Test Link</h3></div>
+				
+			<div class="body">
+				<p>The Resume link does not include tests. It applies to content.<br />
+<br />
+It would probably be a little more than a hack to add it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17072"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-02 19:29:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Resume Test Link</h3></div>
+				
+			<div class="body">
+				<p>Thank you for the response Greg. Could i perhaps create a module which basically uses the same code for the existing "Resume" link and just modify it from there? would it be a matter of just changing database tables or is it a little more complicated then that?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17080"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-03 18:40:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Resume Test Link</h3></div>
+				
+			<div class="body">
+				<p>Not a module, but you could probably do it with a patch. See the Admin Handbook pages on the Patcher.  If its a good patch, we might add it to ATutor.<br />
+<br />
+No database change should be needed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17113"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-09 00:20:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Resume Test Link</h3></div>
+				
+			<div class="body">
+				<p>Greg, I have tried searching through the countless number of files to try and find the one with the code for the "resume" link but was unable to find it. Is there a logical method for locating the in which a particular piece of code is written or could you please give me a hint as to which file contains it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17114"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-09 00:40:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Resume Test Link</h3></div>
+				
+			<div class="body">
+				<p>Nevermind, after reading another post (http://www.atutor.ca/view/7/16147/1.html), i realised that all the html rendering was being handled by the files in the themes folder. Anyone else looking for the code for the resume link, it is located in ATutor/themes/default/users/index.tmpl.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17134"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-14 02:54:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Resume Test Link</h3></div>
+				
+			<div class="body">
+				<p>I have had a few attempts at getting some code to do this but am unable to find the variable of the last viewed table id ($tid). This is what i have used so far;<br />
+<br />
+&lt;a href="bounce.php?course=&lt;?php echo $row['course_id'].SEP.'p='.urlencode('tools/take_test_q.php?tid='.$tid); ?>">&lt;?php echo '(Resume Test)'; ?>&lt;/a><br />
+<br />
+I know that when you click "begin test" on the test_into.php page that it automatically resumes the test so i tried to use the code from that file but with no luck. I also looked into the "last_cid" variable but was unsuccessful as well. Does anyone have any suggestions?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

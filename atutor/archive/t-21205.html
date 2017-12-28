@@ -1,0 +1,128 @@
+---
+ title: Fatal Error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Fatal Error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="21205"></a>
+		<div class="forum-post-author">
+			<label class="title">denisepuckett</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-11 21:27:54</p>
+            </div>
+            <div class="postheader"><h3>Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>Suddenly I got this fatal error on my course page.  Can anyone help?<br />
+<br />
+Fatal error: Call to a member function printErrors() on a non-object in /webserver/content/courses.atutor.ca/docs/include/phpCache/phpCache.inc.php on line 527</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21208"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-12 17:15:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>Seems php script doesn't have permission to write into either the cache folder or the cache file. But it's a bug that the fatal error is encountered in this case. I will file it into bug tracker.<br />
+<br />
+In the meantime, turning off the cache would get rid of the error. To turn off the cache: login as admin -> system preference -> empty "cache directory"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21210"></a>
+		<div class="forum-post-author">
+			<label class="title">denisepuckett</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-12 19:09:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>Thank you but I can not even access the login page.  The address I use is http://courses.atutor.ca/login.php<br />
+From there I receive the same fatal area</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21223"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-15 15:06:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>Fixed. Please try again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21232"></a>
+		<div class="forum-post-author">
+			<label class="title">denisepuckett</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-15 20:40:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>Thank you! Do you know what the malfunction was? Is there something I can do to prevent this from happening again?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21233"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-11-15 20:48:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>Well, nothing to do with you or any user. Due to our recent server move, the course content directory becomes inaccessible by ATutor scripts. Re-granting the file/folder permissions fixes the issue.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

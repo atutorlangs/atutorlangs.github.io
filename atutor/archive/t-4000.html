@@ -1,0 +1,157 @@
+---
+ title: Menu
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Menu</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4000"></a>
+		<div class="forum-post-author">
+			<label class="title">dprice_2000</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-18 19:12:12</p>
+            </div>
+            <div class="postheader"><h3>Menu</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I'm am enjoying ATutor very much.<br />
+Again, it's an excellent product.<br />
+<br />
+Can you tell me where I would locate the file that contains the menu on the blue bar?<br />
+Is it possible to an a menu item to it?<br />
+<br />
+thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4003"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-19 07:51:45</p>
+            </div>
+            <div class="postheader"><h3>theme.cfg.php</h3></div>
+				
+			<div class="body">
+				<p>Add an entry to the theme.cfg.php file within a theme, in the public navigation section of the file<br />
+<br />
+http://atutorsvn.rcat.utoronto.ca/repos/atutor/tags/atutor_1_4_3/docs/themes/default/theme.cfg.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4015"></a>
+		<div class="forum-post-author">
+			<label class="title">dprice_2000</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-19 21:13:02</p>
+            </div>
+            <div class="postheader"><h3>Menu</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+When I create the menu item with it\'s link, how do I get it to appear in it\'s own window?<br />
+<br />
+Thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4019"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-20 07:55:25</p>
+            </div>
+            <div class="postheader"><h3>Add attibutes</h3></div>
+				
+			<div class="body">
+				<p>Add the following to the lines for new tool you have defined in theme.cfg.php, and replace the "new_tool" value with the name you have given the new tool.<br />
+<br />
+<br />
+$user_nav['new_tool']['attributes'] = 'target="new"';</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4036"></a>
+		<div class="forum-post-author">
+			<label class="title">dprice_2000</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-21 19:52:55</p>
+            </div>
+            <div class="postheader"><h3>Menu</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I've tried...<br />
+$user_nav[faq']['attributes'] = 'target="_new"';<br />
+$user_nav['faq']['attributes'] = 'target="_blank"';<br />
+<br />
+It doesn't display in it's own window.<br />
+Any other ideas?<br />
+<br />
+thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4039"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-21 20:40:48</p>
+            </div>
+            <div class="postheader"><h3>Try again</h3></div>
+				
+			<div class="body">
+				<p>Both examples you've listed work (adding the missing quote to the first one)<br />
+<br />
+$user_nav['faq']['name']    = _AT('faq');<br />
+$user_nav['faq']['url']     = $_base_path . 'users/faq.php';<br />
+$user_nav['faq']['attributes'] = 'target="_new"';<br />
+$user_nav['faq']['image']   = $theme_image_path .'user-star.gif';</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

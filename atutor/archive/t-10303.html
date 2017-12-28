@@ -1,0 +1,151 @@
+---
+ title: Is the cron page working
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Is the cron page working</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="10303"></a>
+		<div class="forum-post-author">
+			<label class="title">ssorden</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-05 13:28:24</p>
+            </div>
+            <div class="postheader"><h3>Is the cron page working</h3></div>
+				
+			<div class="body">
+				<p>I'm trying to set up cron to run at regular intervals. I'm using the key and URL provided in my installation of ATutor. I've searched through the documentation, including the cron setup page and can't find anything to show me what I should expect to see if cron is running correctly, or how to tell if it is not. When I call up the URL with the key in my browser, all I see is a blank page. <br />
+<br />
+How can I tell if it is running correctly and is there some more extensive documentation on cron that I have overlooked? I saw a reference in one of the postings to a cron handbook.<br />
+<br />
+Thanks!<br />
+<br />
+  operating system - Linux<br />
+  version of ATutor - 1.5.4 RC1<br />
+  versions of php - 4.4.4<br />
+  version of mysq l - 4.1.21-standard<br />
+  webserver & version - Apache 1.3.37 (Unix)<br />
+  copies of error messages - blank page<br />
+  changes to default settings -<br />
+  web browser being used - Firefox 1.5.0.11<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10306"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-05 14:55:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Is the cron page working?</h3></div>
+				
+			<div class="body">
+				<p>Cron works fine, assuming it is available on the server hosting ATutor, which if you are using Linux, it is available. See the "cron" entry in the ATutor Administrator's handbook, not the cron handbook.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10307"></a>
+		<div class="forum-post-author">
+			<label class="title">ssorden</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-05 18:19:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Is the cron page working?</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg,<br />
+<br />
+I have cron working for another LCMS, so cron works fine on my server. What is confusing me, is that when I launch the cron.php page from a URL in my browser for the OTHER non-ATutor LCMS, I get feedback on what has happened - backups for example. When I launch the cron.php page for ATutor (with the correct key), I only get a blank page and I can't tell if anything has happened. Unless I'm missing something, the documentation doesn't tell me what I should see after the cron.php page has been accessed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10313"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-06 12:25:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Is the cron page working?</h3></div>
+				
+			<div class="body">
+				<p>The URL generated for cron is added to the host system's crontab, rather than pasted into a browser.  <br />
+<br />
+I don't think notification would be a good idea, if for instance cron runs every 30 muinute (or less). Someone would get a notification each time cron runs. It would be easy enough to add by modifying the source code of the cron script, adding a reference to the mail function.<br />
+<br />
+There is nothing to see after cron runs.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10314"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-06 18:13:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Is the cron page working?</h3></div>
+				
+			<div class="body">
+				<p>I should add that module_cron.php is where this type of notification might be handled. You can program it to do just about anything.<br />
+<br />
+See the Module Development documentation for more about programming modules to run cron.<br />
+<br />
+http://www.atutor.ca/development/documentation/modules.html#cron<br />
+<br />
+or start with the module_cron.php file in the hello_world module</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10317"></a>
+		<div class="forum-post-author">
+			<label class="title">ssorden</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-07 10:19:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Is the cron page working?</h3></div>
+				
+			<div class="body">
+				<p>Sounds good. I'll play around with it.<br />
+<br />
+Thanks Greg!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

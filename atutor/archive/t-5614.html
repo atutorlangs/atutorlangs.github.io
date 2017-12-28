@@ -1,0 +1,179 @@
+---
+ title: Email notification
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Email notification</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5614"></a>
+		<div class="forum-post-author">
+			<label class="title">dprice_2000</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 11:10:07</p>
+            </div>
+            <div class="postheader"><h3>Email notification</h3></div>
+				
+			<div class="body">
+				<p>G'day,<br />
+<br />
+Currently we provide our students with an external registration facility.  After they pay for a course we register them in ATutor ourselves.<br />
+<br />
+When the student changes their information in ATutor, we would like to receive email notification so that we can update our records.<br />
+<br />
+Could you give me some guidance as to how I might approach this?  I am a programmer but not familiar with PHP or the structure of ATutor.<br />
+<br />
+BTW, from what I've seen, this is an excellent product!<br />
+It rivals anything I've found to date.<br />
+<br />
+thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5615"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 11:25:08</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>what kind of information are you looking to track?<br />
+<br />
+you can edit users/profile.php<br />
+<br />
+and add emailing/notification functionality before the redirect.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5616"></a>
+		<div class="forum-post-author">
+			<label class="title">dprice_2000</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 11:36:10</p>
+            </div>
+            <div class="postheader"><h3>Email notification</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+We are intersted in being notified of changes the student\'s profile information.<br />
+(rather than query the database periodically)<br />
+<br />
+thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5807"></a>
+		<div class="forum-post-author">
+			<label class="title">dprice_2000</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-13 11:53:32</p>
+            </div>
+            <div class="postheader"><h3>Email Notification</h3></div>
+				
+			<div class="body">
+				<p>G'day,<br />
+<br />
+I added the following code to /users/edit.php to email a profile change notice and it is not working and not giving me an error of any kind.<br />
+Can you tell me what may be wrong?<br />
+<br />
+//at the top of the page with other includes<br />
+<br />
+require(AT_INCLUDE_PATH . 'classes/phpmailer/atutormailer.class.php');<br />
+<br />
+//at line 132 after the update of the new information<br />
+<br />
+$email_from = "dprice@ngco.com";<br />
+$email_to = "dprice@ngco.com";<br />
+$subject = "Student Change of Information Notice"<br />
+$body = "Student Information (modified):\n\n\n\n";<br />
+$body .= "Last Name:  " .$_POST['last_name']. "\n\n";<br />
+$body .= "First Name:  " .$_POST['first_name']. "\n\n";<br />
+$body .= "Address:  " .$_POST['address']. "\n\n";<br />
+$body .= "Postal Code:  " .$_POST['postal']. "\n\n";<br />
+$body .= "City:  " .$_POST['city']. "\n\n";<br />
+$body .= "Province:  " .$_POST['province']. "\n\n";<br />
+$body .= "Country:  " .$_POST['country']. "\n\n";<br />
+$body .= "Phone No.:  " .$_POST['phone']. "\n\n";<br />
+$mail = new ATutorMailer;<br />
+$mail->From     = $email_from;<br />
+$mail->AddAddress= $email_to;<br />
+$mail->Subject = $subject;<br />
+$mail->Body    = $body;<br />
+$mail->Send();<br />
+<br />
+unset($mail);				<br />
+//<br />
+<br />
+<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5836"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-15 10:56:21</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>does it not generate an error?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5865"></a>
+		<div class="forum-post-author">
+			<label class="title">dprice_2000</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-19 08:26:18</p>
+            </div>
+            <div class="postheader"><h3>Email Notification</h3></div>
+				
+			<div class="body">
+				<p>I figured it out.<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

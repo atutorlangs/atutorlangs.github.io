@@ -1,0 +1,127 @@
+---
+ title: No Login after upgrade
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>No Login after upgrade</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="16074"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-18 09:33:32</p>
+            </div>
+            <div class="postheader"><h3>No Login after upgrade</h3></div>
+				
+			<div class="body">
+				<p>I just upgradet from 1.6 to 1.6.2.<br />
+Everything kooks fine except the login<br />
+I can Login as Administrator (No Problem)<br />
+<br />
+but all users can not login:<br />
+The following errors occurred:<br />
+Invalid login/password combination. <br />
+<br />
+Even if I create a new account with a new Password it is not possible.<br />
+<br />
+In my History of upgrade.<br />
+Because of our Proxy i hade executed the Install script more then one time. (It deverted to the old proxy cache)<br />
+<br />
+Thanks for your help<br />
+<br />
+I do not understand why a new account is unable to log in.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16075"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-18 09:59:41</p>
+            </div>
+            <div class="postheader"><h3>Re: No Login after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Hi, can you tell me if your AT_member table's password field is of size 40?<br />
+<br />
+If not, you have to have the "alter" privilege for your mysql account; and redo your upgrade.  Without the mysql alter privilege, several upgrade commands would fail.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16086"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-19 05:51:12</p>
+            </div>
+            <div class="postheader"><h3>Re: No Login after upgrade</h3></div>
+				
+			<div class="body">
+				<p>it loocks like the setting is to 40<br />
+password  	varchar(40)  	utf8_general_ci<br />
+<br />
+Still not able to create a account and login with these account informations</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16093"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-19 08:44:12</p>
+            </div>
+            <div class="postheader"><h3>Re: No Login after upgrade</h3></div>
+				
+			<div class="body">
+				<p>It is likely that running the install script more than once has encrypted passwords twice. <br />
+<br />
+You will need to restore your system to the backup, then run the upgrade again. Be sure not to reload pages while upgrading.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16100"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-19 09:48:32</p>
+            </div>
+            <div class="postheader"><h3>Re: No Login after upgrade</h3></div>
+				
+			<div class="body">
+				<p>I think I'll do it at home<br />
+No company proxy</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,120 @@
+---
+ title: Question re importing into ATutorSpaces from previous version of Atutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Question re importing into ATutorSpaces from previous version of Atutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25321"></a>
+		<div class="forum-post-author">
+			<label class="title">leonc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-04-04 13:22:56</p>
+            </div>
+            <div class="postheader"><h3>Question re importing into ATutorSpaces from previous version of Atutor</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+ATutor Version:<br />
+    2.1.1(unknown - 2015-04-04 12:51:54). Check Latest Version.<br />
+PHP Version:<br />
+    5.4.38<br />
+MySQL Version:<br />
+OS:<br />
+    Linux 2.6.32-431.29.2.el6.x86_64<br />
+<br />
+I built 8 courses in the above version.  Each has multiple lessons.  Each course's test bank has a category for each lesson and multiple test items per lesson all assigned to the appropriate category.  Test banks run from 20 to 40 items, depending on the course. I exported each course as a content package, and then imported each into ATutorSpaces.  <br />
+(As an aside, i like the functionality of the course management tools in this version.  Very nice improvement.)<br />
+<br />
+The import was mostly successful. About 20% of the images were not transferred in 3 of the courses and i had to manually import them. Some lessons were missing a few, and some lessons were missing all images, so no apparent connection. All images are png and are pretty close in filesize.<br />
+<br />
+Question.<br />
+<br />
+Is that a known issue for Content Package export/import?  Should i have used the Common Cartridge export?<br />
+<br />
+-----<br />
+<br />
+I then exported the test-banks from my original install and imported them into ATutorSpaces.  That worked fine, but categories were not transferred.<br />
+<br />
+Questions.<br />
+<br />
+Should categories have been transferred along with the test items?  Is there way to make that happen?<br />
+<br />
+-----<br />
+<br />
+I had to recreate the categories and reassign the test items to the categories.  I had to select each test item individually, scroll down to the bottom and click edit, reassign it to the category, scroll down again and save.  I've done this now for about 75 items on two courses, with 6 courses to go.  This is not a fun process.<br />
+<br />
+Questions.<br />
+<br />
+To make it faster to choose an action to apply to a selected test item, can the Edit, Preview, etc buttons at the bottom of the test item list be added to the top of the list as well?  that would save a lot on scrolling.<br />
+<br />
+The Category selector is shown above the test item list.  Its current function is to filter the list of items already assigned to it.  Can an additional function be added to assign a category to a selected list of test items? In practice you would select the desired test items from the list, select the category from its list, and click a (new) Assign button.  I could use that magic button right about now. <br />
+<br />
+-----<br />
+<br />
+thanks<br />
+<br />
+leon</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25322"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-04-05 10:28:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Question re importing into ATutorSpaces from previous version of Atutor.</h3></div>
+				
+			<div class="body">
+				<p>[green] Question.<br />
+<br />
+Is that a known issue for Content Package export/import? Should i have used the Common Cartridge export?[/green] <br />
+<br />
+I've not experienced missing images with Content Packages or Common Cartridges.  Look at the paths to images in the original content to see if there are any patterns there. <br />
+<br />
+Common Cartridges are more common now than Content Packages, though both work equally well for moving content. Common Cartridges also allow you to associated tests and forums with you content, so they get imported/exported with your cartidges.<br />
+<br />
+<br />
+[green]Questions.<br />
+<br />
+Should categories have been transferred along with the test items? Is there way to make that happen? [/green] <br />
+<br />
+If you were using the Export feature in the the Test Manager, it exports tests as QTI packages, a standard from the same people that created Common Cartridge and Content Package stardard. The QTI standard does not imclude question categoried.<br />
+<br />
+If you want to keep the categories, take a Backup of the orginal course using the Backups Manager. Upload a backup into the new course and restore just the tests. You can also creat a new course and choose the backup created above, as the initial content, selected near the bottom of the course properties set when creating a course.<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+[green] Questions.<br />
+<br />
+To make it faster to choose an action to apply to a selected test item, can the Edit, Preview, etc buttons at the bottom of the test item list be added to the top of the list as well? that would save a lot on scrolling.<br />
+<br />
+The Category selector is shown above the test item list. Its current function is to filter the list of items already assigned to it. Can an additional function be added to assign a category to a selected list of test items? In practice you would select the desired test items from the list, select the category from its list, and click a (new) Assign button. I could use that magic button right about now. [/green] <br />
+<br />
+<br />
+Sounds like a couple good suggestions. I've made a note in the issue tracker<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=5577</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

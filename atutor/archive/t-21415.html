@@ -1,0 +1,155 @@
+---
+ title: login blank page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>login blank page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="21415"></a>
+		<div class="forum-post-author">
+			<label class="title">jjones</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-11 07:04:31</p>
+            </div>
+            <div class="postheader"><h3>login blank page</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I moved Atutor installation to another domain and all I get now is a blank page when trying to access the login page. Checked out the file permissions and are all OK. Any idea?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21416"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-11 13:39:00</p>
+            </div>
+            <div class="postheader"><h3>Re: login blank page</h3></div>
+				
+			<div class="body">
+				<p>Check the include/config.inc.php file to be sure the mysql account info and the content directory path are correct. <br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21417"></a>
+		<div class="forum-post-author">
+			<label class="title">jjones</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-11 13:59:27</p>
+            </div>
+            <div class="postheader"><h3>Re: login blank page</h3></div>
+				
+			<div class="body">
+				<p>Errors showing on the screen:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/onlinecl/public_html/include/vitals.inc.php on line 141<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/onlinecl/public_html/mods/_core/languages/classes/LanguageManager.class.php on line 72<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/onlinecl/public_html/mods/_core/languages/classes/LanguageManager.class.php on line 159<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/onlinecl/public_html/mods/_core/languages/classes/LanguageManager.class.php on line 159<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/onlinecl/public_html/mods/_core/languages/classes/LanguageManager.class.php on line 173<br />
+<br />
+Warning: reset() [function.reset]: Passed variable is not an array or object in /home/onlinecl/public_html/mods/_core/languages/classes/LanguageManager.class.php on line 201<br />
+<br />
+Warning: current() [function.current]: Passed variable is not an array or object in /home/onlinecl/public_html/mods/_core/languages/classes/LanguageManager.class.php on line 203<br />
+There are no languages installed!<br />
+<br />
+<br />
+Things to describe:<br />
+Operating system ATutor is installed on - Linux<br />
+ATutor version - Last (downloaded 3 days ago)<br />
+Patch #s applied - No patch<br />
+ATutor theme name - Default<br />
+PHP version - 5.2.14<br />
+MySQL version - 5.0.91 - community<br />
+Webserver & version - Apache 2.2.17<br />
+Copies of error messages - No error message<br />
+Changes to default settings - No changes<br />
+Web browser being used - Firefox 3.6.10<br />
+...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21418"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-11 14:18:20</p>
+            </div>
+            <div class="postheader"><h3>Re: login blank page</h3></div>
+				
+			<div class="body">
+				<p>Its hard to say what's gone wrong with the move. Is there a reason why you moved the installation, rather than reinstalling then moving the content in course backups or cartridges?<br />
+<br />
+If you want to try manually adding language, you can download a language pack, unzip it, then run the language.sql file in an app like phpmyadmin, to install a language. Somehow though, I think there's something else going on. Reinstalling on the new host may be a better way to go.<br />
+<br />
+http://atutor.ca/atutor/translate/index.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21419"></a>
+		<div class="forum-post-author">
+			<label class="title">jjones</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-11 14:38:26</p>
+            </div>
+            <div class="postheader"><h3>Re: login blank page</h3></div>
+				
+			<div class="body">
+				<p>I have reinstalled the data base and now everything is working fine. Thanks a lot.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

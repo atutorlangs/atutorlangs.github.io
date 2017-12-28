@@ -1,0 +1,153 @@
+---
+ title: Theme based on urldomain code
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Theme based on urldomain code</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15425"></a>
+		<div class="forum-post-author">
+			<label class="title">mwarner</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-07 11:23:56</p>
+            </div>
+            <div class="postheader"><h3>Theme based on urldomain code</h3></div>
+				
+			<div class="body">
+				<p>So, I needed to have a theme based on the ulr, as we have different clients using different urls and they each want a different template...naturally.  The modifications are pretty simple and only require you have the ServerName set in your web server config file for each url and to change 3 ATutor files and create one new one:<br />
+<br />
+New file) include/set_theme_by_url.inc.php  Sample contents:<br />
+<br />
+session_start();<br />
+if(!$_SESSION['prefs']){<br />
+	$_SESSION['prefs']=array();<br />
+}<br />
+<br />
+switch($_SERVER['SERVER_NAME']){<br />
+	case "flintstones.mydomain.com":<br />
+		$_SESSION['prefs']['PREF_THEME']="flintstones";<br />
+		$_SESSION['prefs']['not_default_theme']=1;<br />
+		define('SITE_NAME',"Flintstones Training");<br />
+		break;<br />
+	default:<br />
+		$_SESSION['prefs']['PREF_THEME']="jetsons";<br />
+		$_SESSION['prefs']['not_default_theme']=1;<br />
+		define('SITE_NAME',"Jetsons Training");<br />
+		break;<br />
+}<br />
+<br />
+1) include/config.inc.php, at the very bottom, add:<br />
+include("set_theme_by_url.inc.php");<br />
+<br />
+2) include/vitals.inc.php, add the same as above right after the session_start() call on or about line 97<br />
+<br />
+3) include/header.inc.php, add the same as above on or about line 45 (after the three savant calls) and change <br />
+<br />
+$savant->assign('base_tmpl_path', $_SERVER['HTTP_HOST']); <br />
+<br />
+to:<br />
+<br />
+if($_SESSION['prefs']['not_default_theme']==1){<br />
+	$savant->assign('base_tmpl_path', $_base_path . '/themes/'. $_SESSION['prefs']['PREF_THEME']);<br />
+}else{<br />
+	$savant->assign('base_tmpl_path', $_SERVER['HTTP_HOST']);<br />
+}<br />
+<br />
+Then, at the bottom where it says:<br />
+<br />
+$savant->display('themes/'. $_SESSION['prefs']['PREF_THEME'] .'/include/header.tmpl.php');<br />
+<br />
+change that to:<br />
+<br />
+if(substr_count($_SERVER["REQUEST_URI"],"/")>1){//then it's a subdir<br />
+		$savant->display('include/header.tmpl.php');<br />
+	}else{<br />
+		$savant->display('themes/'. $_SESSION['prefs']['PREF_THEME'] .'/include/header.tmpl.php');<br />
+	}<br />
+<br />
+<br />
+I think that's it.  I call define('SITE_NAME') in the new include file, so it's invoked before the same call in vitals.inc.php and won't get reset.  Now the site theme will be constant, regardless of course theme, etc.<br />
+<br />
+Let me know if anyone has any questions or suggestions to make it better.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15426"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-07 12:10:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme based on url/domain code</h3></div>
+				
+			<div class="body">
+				<p>Hi there!<br />
+<br />
+A quick scan through your code:<br />
+1. You shouldn't need to include your custom file into three separate files; include/vitals.inc.php alone should suffice as every other file in ATutor loads it at the very beginning. It may be a corollary of the #3 issue below.<br />
+2. I'd probably be saving directly to $_SESSION['not_default_theme'] since the $_SESSION['prefs'] array is per-user settings.<br />
+3. The third chunk is doubtful: I don't see right on the spot what does it do. Looks like the second replacement is largely undoing what the first one has done. I would need to see the code to understand what you're doing there.<br />
+4. Purely programming style issue: set 'not_default_theme' to FALSE before that switch statement and if there's match, set it to TRUE. You're using it as a flag, so it should be a boolean type. And setting it to FALSE saves you from ever-growing number of "unset variable" warnings in a log.<br />
+<br />
+Again, that's a quick scan, I didn't see it in work or the code it's supposed to be implanted to.<br />
+<br />
+I'd suggest you to repost this change to the http://atutor.no blog -- there's a bunch of similar changes there which, due to the peculiar nature of the problems they solve, won't probably go into the ATutor trunk but are quite interesting by themselves.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15428"></a>
+		<div class="forum-post-author">
+			<label class="title">mwarner</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-07 12:39:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme based on url/domain code</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+thanks for the feedback.<br />
+<br />
+I didn't think I'd need to include the file in 3 places, either, but it seemed like I did have to.   Spent a bit more time looking at it, though, and found that I don't need the include in all three files if I change the two lines in vitals.inc.php that say:<br />
+<br />
+$_SESSION['prefs']['PREF_THEME'] = $default_theme['dir_name'];<br />
+<br />
+to:<br />
+<br />
+if(!$_SESSION['prefs']['PREF_THEME']){$_SESSION['prefs']['PREF_THEME'] = $default_theme['dir_name'];}<br />
+<br />
+With that change, I can take out the includes in the other files.<br />
+<br />
+Good catch on the boolean flag.  Setting it to false first...missed it in my haste to get it working before a client demo.<br />
+<br />
+Since we won't have user-set themes, I set the theme in the prefs array, as that was where I saw the theme set and referred to in the bulk of the code.<br />
+<br />
+The third chunk fixes include paths when in a subdir.  Didn't figure I'd need that, either.  When removed, the layout is broken.<br />
+<br />
+I'll look at the atutor.no blog.  Didn't know it existed.<br />
+<br />
+Thanks,<br />
+Mike</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

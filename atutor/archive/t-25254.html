@@ -1,0 +1,97 @@
+---
+ title: Lateral Menu on right
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Lateral Menu on right</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25254"></a>
+		<div class="forum-post-author">
+			<label class="title">es24tv</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-25 17:15:54</p>
+            </div>
+            <div class="postheader"><h3>Lateral Menu on right</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+After applying the patches 8, 9 and 10 (maybe it was a coincidence) the lateral menu is left. I for many years I have configured the lateral menu on "Blumin" to appear on the right.<br />
+<br />
+I do not remember and I find that we have changed. Please, can you guide me?<br />
+<br />
+Thank You<br />
+<br />
+Best Regards,<br />
+Mario<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 2.6.32-504.1.3.el6.x86_64<br />
+  ATutor version - 2.2<br />
+  Patch #s applied - 1 to 10<br />
+  ATutor theme name - Blumin<br />
+  PHP version - 5.3.3<br />
+  MySQL version - <br />
+  Webserver & version 5.1.73-<br />
+    Web browser being used - Chrome & Firefox</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25257"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-26 09:05:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Lateral Menu on right</h3></div>
+				
+			<div class="body">
+				<p>There's nothing in the patches that would affect the position of the menu.<br />
+<br />
+In ATutor 2.2, all the themes have the menu on the left. I can't say exactly what you'd need to do to moving it to the right, but start by finding the side-menu in the theme include/header.tmpl.php file, and moving it, probably into the start of the footer.tmpl.php file. You'll need to experiment a bit until you find the right place.<br />
+<br />
+https://github.com/atutor/ATutor/blob/master/themes/blumin/include/header.tmpl.php#L324-L331</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25270"></a>
+		<div class="forum-post-author">
+			<label class="title">es24tv</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-28 09:04:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Lateral Menu on right</h3></div>
+				
+			<div class="body">
+				<p>Thanks, Greg!<br />
+<br />
+yes!!! :)<br />
+<br />
+I modified on line 325 "&lt;div id =" leftcolumn "role =" complementary ">" with ... "id = rigthcolumn" and works well. If I notice an error in navigation or some function of ATutor I'll let you know by this means to guide other users Blumin who want to put the menu on the left.<br />
+<br />
+Best Regards,<br />
+<br />
+Mario</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

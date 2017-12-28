@@ -1,0 +1,126 @@
+---
+ title: Editor bug  reconstruction
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Editor bug  reconstruction</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="16521"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-03 19:21:17</p>
+            </div>
+            <div class="postheader"><h3>Editor bug  reconstruction</h3></div>
+				
+			<div class="body">
+				<p>Hope it is OK to start a new thread on this. I have new evidence....<br />
+<br />
+#1: Get the file http://www.rosetta.no/demofiler/Look_at_me_Im_a_course_-_No_YOU_Lorem_ipsum_ims.zip <br />
+<br />
+(It's a page exported from Vegards site)<br />
+<br />
+#2: Import this into the course at <br />
+http://rosetta.gotdns.com/atutor<br />
+user name: demo<br />
+password: demo2009<br />
+<br />
+#3: Notice how the text flows nicely to the right of the photo with the guys wearing sunglasses.<br />
+<br />
+#4: Click on "Edit this page", but DO NOT do any editing.<br />
+<br />
+#5: Click on "Save page", and the layout around the photo is ruined.<br />
+<br />
+Now, try the same with the Atutor demo site. The layout is not ruined.....<br />
+<br />
+I have this problem on two different installations, using Firefox and Opera. The Atutor demo site has no problems.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16528"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-04 08:54:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Editor bug (?) reconstruction</h3></div>
+				
+			<div class="body">
+				<p>I see moxiecode has tried. I think they'd be better to resolve the problem. <br />
+<br />
+It appears the problem is associated with the image dialog alignment feature. The align button in the editor interface does work okay. I'd suggest using it until moxie can fix the other problem.<br />
+<br />
+I tried the step above, but was not able to reprodcue the problem though.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16531"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-04 09:22:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Editor bug (?) reconstruction</h3></div>
+				
+			<div class="body">
+				<p>dunno why it works at first, but I'm pretty sure it's related to these additions (atleast when it comes to the example from atutor.no):<br />
+<br />
+http://atutor.no/2008/07/adding-styles-tinymce-styles-select-menu<br />
+<br />
+..where we added a tinystyles.css BOTH to tinyMCE itself, AND to the theme. the picture you are referring to used the style "float-left" in the dropdown menu I believe. <br />
+<br />
+it's also related to this bug report and patch: http://www.atutor.ca/view/3/16325/1.html - you can install the patch which will give you the CSS in TinyMCE, but it will not be referred to in the theme. for that to happen add the following to header.tmpl.php:<br />
+<br />
+[php]<br />
+<br />
+&lt;link rel="stylesheet" href="&lt;?php echo $this->base_path.'include/lib/';?>tinymce_styles.css" type="text/css" /><br />
+<br />
+[/php]<br />
+<br />
+(not including the php start / end tags)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16537"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-04 17:57:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Editor bug (?) reconstruction</h3></div>
+				
+			<div class="body">
+				<p>Greg, that was not moxicode, it was just me testing a code snippet from the tinymce web site.<br />
+<br />
+Vegard, at last i got it working! I had patch #10 installed, but it did not work as expected until I modified the theme like you describe above.<br />
+<br />
+Thanks a lot both of you!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

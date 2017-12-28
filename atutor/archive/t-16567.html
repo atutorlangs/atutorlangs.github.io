@@ -1,0 +1,142 @@
+---
+ title: Changing viewable area for pics in answers in Tests and Surveys
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Changing viewable area for pics in answers in Tests and Surveys</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16567"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-08 15:32:55</p>
+            </div>
+            <div class="postheader"><h3>Changing viewable area for pics in answers in Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>Hi everyone.  I'm using 1.6.2 and I'm making a quiz using "Tests and Suurveys".  I'm making a matching question and having statements match to a graph.  So, I've uploaded the pics and when I preview the question, the pic. is bigger than the viewable area set for it.  So, there's scroll bars that you have to use to see the whole thing.  <br />
+<br />
+How can I change the height and width of the area that these pics display in?<br />
+<br />
+Thanks a lot!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16577"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-09 09:16:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing viewable area for pics. in answers in Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>Try this file<br />
+<br />
+atutor/themes/default/test_questions/matching.tmpl.php<br />
+<br />
+Note, it will affect all matching questions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16585"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-09 10:09:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing viewable area for pics. in answers in Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>If you want to change the size of an image, just grab onto the corner of the image in the visual editor, and drag it until its the right size. Or, turn on HTML text editor and modify the height and width attributes for the image.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16601"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-09 22:02:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing viewable area for pics. in answers in Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>Greg: If I resize the image to the size required to eliminate the scroll bars, it would be unrecognizable.<br />
+<br />
+Harris: I tried looking at that file and others like it.  Nothing that I could see to change in any of them.<br />
+<br />
+<br />
+Is there a CSS file somewhere that dictates this?<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16604"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-10 09:35:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing viewable area for pics. in answers in Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>CSS or resizing via HTML attributes will give you the same degraded result. If you want to resize without loosing the clarity in the image, you'll probably need an image editor, like photoshop.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16607"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-10 11:04:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing viewable area for pics. in answers in Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>No, it's not that I want to change the size of the pic., it's that I want to change the size of the box (iframe?) that it displays in so there's no need to scroll left and right and up and down in order to see the full image.<br />
+<br />
+That's where I was asking if there's a CSS setting that will allow me to change the size of the box/iframe that it displays in.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

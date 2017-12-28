@@ -1,0 +1,122 @@
+---
+ title: Content directory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Content directory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4900"></a>
+		<div class="forum-post-author">
+			<label class="title">paolodag</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-22 02:38:56</p>
+            </div>
+            <div class="postheader"><h3>Content directory</h3></div>
+				
+			<div class="body">
+				<p>Installation program suggests, as security measure, that the content directory should be placed outside of Atutor installation.<br />
+I didn't (two month ago).<br />
+What kind of problems (or risks) can I expect from placing the directory inside my Atutor installation?<br />
+Is it possible to move it after the installation?<br />
+If yes, how can I do?<br />
+<br />
+operating system - Linux<br />
+version of ATutor - 1.4.3<br />
+versions of php - 4.3.10<br />
+version of mysq l - 4.0.22<br />
+webserver & version - apache 1.3.3<br />
+changes to default settings - no<br />
+web browser being used - explorer 6.0</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4906"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-22 09:01:05</p>
+            </div>
+            <div class="postheader"><h3>move it then edit config.inc.php</h3></div>
+				
+			<div class="body">
+				<p>Because the content directory is writable, others could potentially write or upload files to that directory, and get content from course content directories without having to log into the system.<br />
+<br />
+Move the directory then edit the include/config.inc.php file to point the path defined for AT_CONTENT_DIR to the new location.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4941"></a>
+		<div class="forum-post-author">
+			<label class="title">paolodag</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-27 08:26:49</p>
+            </div>
+            <div class="postheader"><h3>Moving conten directory</h3></div>
+				
+			<div class="body">
+				<p>How can I move files inside the content directory in the new directory?<br />
+It doesn't allow me via FTP<br />
+Thanks for helping me.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4945"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-27 11:30:29</p>
+            </div>
+            <div class="postheader"><h3>Moving conten directory</h3></div>
+				
+			<div class="body">
+				<p>you cannot move files usint FTP. you will have to download the files then upload them to the new location. you MUST set the correct permissions on that directory and on ALL the files you upload, otherwise you will not be able to use them.<br />
+<br />
+The best way is to login to your server using SSH and either move or copy the files.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5990"></a>
+		<div class="forum-post-author">
+			<label class="title">agiorni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-01 10:28:25</p>
+            </div>
+            <div class="postheader"><h3>How?</h3></div>
+				
+			<div class="body">
+				<p>How do I have to set the correct path to the /content directory when installing ATutor? I installed it on a server (windows) and am using explorer. I get the  page with the message to set the path, write in ftp.edocet.net/content but it doesnt work pls help me!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,132 @@
+---
+ title: realpath and freeBSD question
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>realpath and freeBSD question</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10609"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-09 09:24:15</p>
+            </div>
+            <div class="postheader"><h3>realpath and freeBSD question</h3></div>
+				
+			<div class="body">
+				<p>After an ugrade on my server from FreBSD FreeBSD 5.5 to 6.2 my ATutor installation suddenly couldn't fetch content (my content dir is outside web scope) with get.php. The problems seems to be related to freeBSD's handling of realpath() in PHP.<br />
+The following changes to get.php solved it and the solution maybe interesting for others?<br />
+I have tested the new code and it seems to work fine, but have any of you comments or idea why it may not work in certain situations or?<br />
+<br />
+Things to describe: <br />
+  operating system - FreeBSD 6.2<br />
+  version of ATutor - 1.5.3.2<br />
+  versions of php - 5.2.1<br />
+  version of mysq l - 5.0.37<br />
+  webserver & version - Apache 1.3.37<br />
+  copies of error messages - <br />
+  changes to default settings - in get.php the following changes (starting line 92) have been made:<br />
+[php]// NOTE!! for some reason realpath() is not returning FALSE when the file doesn't exist! NOTE!!<br />
+#$real = realpath('/usr'.$file);<br />
+$real = $file;<br />
+<br />
+//If (file_exists($real) && (substr($real, 0, strlen(AT_CONTENT_DIR)) == AT_CONTENT_DIR)) {<br />
+	if ($force_download) {<br />
+		header('Content-Type: application/force-download');<br />
+		header('Content-transfer-encoding: binary'); <br />
+		header('Content-Disposition: attachment; filename="'.$pathinfo['basename'].'"');<br />
+	} else {<br />
+		header('Content-Disposition: filename="'.$pathinfo['basename'].'"');<br />
+	}<br />
+	header('Content-Type: '.$ext);<br />
+	echo file_get_contents($file);<br />
+	exit;<br />
+//} else {<br />
+	//header('HTTP/1.1 404 Not Found', TRUE);<br />
+//	exit;<br />
+//}[/php] <br />
+<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10692"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-24 16:13:36</p>
+            </div>
+            <div class="postheader"><h3>Re: realpath() and freeBSD question</h3></div>
+				
+			<div class="body">
+				<p>The change you made isn't a good idea and can be a big security problem on your server.<br />
+<br />
+Which version of PHP are you using? You might want to upgrade and see if the problem goes away.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10707"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-28 16:12:01</p>
+            </div>
+            <div class="postheader"><h3>Re: realpath() and freeBSD question</h3></div>
+				
+			<div class="body">
+				<p>Sorry - been away from my PC :-(<br />
+I'm using PHP 5.2.1on FreeBSD.<br />
+I think I wil move my content dir into the dir where I installed ATutor. If I understand it right get.php is then no longer used to fetch the material and therefore there should be no broplems with freeBSD?<br />
+Greetings<br />
+Jens<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+The change you made isn't a good idea and can be a big security problem on your server.<br />
+<br />
+Which version of PHP are you using? You might want to upgrade and see if the problem goes away.<br />
+[op]forums/view.php?fid=7;pid=10609;page=1#10692[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10714"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-29 12:47:30</p>
+            </div>
+            <div class="postheader"><h3>Re: realpath() and freeBSD question</h3></div>
+				
+			<div class="body">
+				<p>That is correct. You will have to edit the config file as well.<br />
+<br />
+But, it'll make upgrading more difficult if you have lots of files.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

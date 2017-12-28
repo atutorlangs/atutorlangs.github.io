@@ -1,0 +1,104 @@
+---
+ title: Fatal error Call to undefined function obclean
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Fatal error Call to undefined function obclean</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2075"></a>
+		<div class="forum-post-author">
+			<label class="title">krumontree</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-19 11:46:03</p>
+            </div>
+            <div class="postheader"><h3>Fatal error Call to undefined function obclean</h3></div>
+				
+			<div class="body">
+				<p>When I install ATutor 1.4.1, in step 5 I have recieved error below.<br />
+<br />
+"Warning: stat failed for ../content/import/ (errno=13 - Permission denied) in /var/www/html/atutor/install/include/step5.php on line 23<br />
+<br />
+Warning: stat failed for ../content/import/ (errno=13 - Permission denied) in /var/www/html/atutor/install/include/step5.php on line 24<br />
+<br />
+Warning: stat failed for ../content/chat/ (errno=13 - Permission denied) in /var/www/html/atutor/install/include/step5.php on line 23<br />
+<br />
+Warning: stat failed for ../content/chat/ (errno=13 - Permission denied) in /var/www/html/atutor/install/include/step5.php on line 24"<br />
+<br />
+But It's passed to last step, when I click "Login" to ATutor, this massage appear <br />
+"Fatal error: Call to undefined function: ob_clean() in /var/www/html/atutor/include/session.inc.php on line 31".<br />
+<br />
+Please help me to correct this ploblem. Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2076"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-20 10:06:11</p>
+            </div>
+            <div class="postheader"><h3>ob_clean</h3></div>
+				
+			<div class="body">
+				<p>which version of PHP are you using?<br />
+<br />
+4.2.0 is the minimum requirement.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2115"></a>
+		<div class="forum-post-author">
+			<label class="title">krumontree</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-21 05:22:07</p>
+            </div>
+            <div class="postheader"><h3>New Error</h3></div>
+				
+			<div class="body">
+				<p>I have PHP version 4.3.4, now I have new error massage when import Thai Language [red] "Abort pclzip.lib.php : Missing zlib extensions".[/red] <br />
+<br />
+How to correct this ploblem?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2117"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-21 08:00:33</p>
+            </div>
+            <div class="postheader"><h3>PHP and zlib</h3></div>
+				
+			<div class="body">
+				<p>PHP must be compiled with zlib (--with-zlib). See the requirements page:	<br />
+<br />
+http://atutor.ca/atutor/docs/requirements.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

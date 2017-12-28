@@ -1,0 +1,389 @@
+---
+ title: Upgrading from 151 to 154
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Upgrading from 151 to 154</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="10982"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-03 05:45:07</p>
+            </div>
+            <div class="postheader"><h3>Upgrading from 151 to 154</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - UNIX<br />
+  version of ATutor - 1.5.1 to 1.5.4<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+<br />
+Error<br />
+Table AT_groups alteration failed.<br />
+Table AT_groups alteration failed.<br />
+Table AT_modules alteration failed.<br />
+Table AT_courses alteration failed.<br />
+Table AT_courses alteration failed.<br />
+Table AT_members alteration failed.<br />
+Table AT_members alteration failed.<br />
+Table AT_resource_categories alteration failed.<br />
+Table AT_links_categories alteration failed.<br />
+Table AT_links_categories alteration failed.<br />
+Table AT_resource_links alteration failed.<br />
+Table AT_links alteration failed.<br />
+Table AT_handbook_notes alteration failed.<br />
+Table AT_tests_questions alteration failed.<br />
+Table AT_tests alteration failed.<br />
+Table AT_members alteration failed.<br />
+Table AT_forums alteration failed.<br />
+Table AT_content alteration failed.<br />
+<br />
+<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -<br />
+<br />
+Hi<br />
+<br />
+I have serious problems with upgrading ATutor V 1.5.1 to V 1.5.4!<br />
+As i wantet to upgrade it stoped by messages about Permission proplems of source /content/several files and directories to include/lib/filemanager.inc.php at linr 36 ore 39 (sorry I can not say exatly because as I restartet the installation the database can not delete the taps above)<br />
+<br />
+So I have two problems:<br />
+1st the upgrade stops at the Erreors of the already deleted Database tabs and I can not go ahead!<br />
+2nd The permissions are not possible to change by FTP with chmode<br />
+<br />
+So I have a ATutor not running at all!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10986"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-03 08:40:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>You should restore the backups you took prior to upgrading. Make sure that mysql user has create tables permissions. Then try again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10988"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-03 09:28:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>What you mean with "mysql user has create tables permissions"?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10989"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-03 09:55:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Follow the permissions link on the System Requirements page.<br />
+http://www.atutor.ca/atutor/docs/requirements.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10990"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-03 09:56:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Make that the Privileges link.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10995"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-04 04:30:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>I think to have solved the problem py changing chmode to 777 in the content directory of the old ATutor.<br />
+Now it stops at Step 5<br />
+I have no continue button!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10997"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-04 08:37:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Try upgrading using a different browser.<br />
+<br />
+Have a look at the tail of the webserver error log after an error occurs to see if there is any information there about what the problem might be.<br />
+<br />
+Also, did you wait long enough at step 5. It can take a long time to update if you have many courses, or a lot of content in your courses.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11002"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-05 02:30:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+I can not find anything in the server log.<br />
+I have not much in the content<br />
+I did wait for more then one hour.<br />
+<br />
+I think the problem is in the non empty content folder of the new ATutor. but I can not delet it because it tells me permission denied. I can not change the chmode as well.<br />
+<br />
+How can I delete these directories and files without demanding to the Server admin to do it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11042"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-09 03:29:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>web browser being used - IE 6.0 I have no other in the company to try.<br />
+<br />
+I am still not able to upgrade from 1.5.1 to 1.5.4<br />
+When I make chmode 766 it commes with permission errors:<br />
+see attached file.<br />
+When I do chmode 777 then I have no next button.<br />
+The content is copyed in the new folders. At each try i can not remove the content by ftp because it tells me permission denied. So I have to cal my Webhosting to do it for me.<br />
+<br />
+How is it possible to upgrade from 1.5.1 to 1.5.4.<br />
+How can I delete the directories and files without calling my webhosting to do it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11043"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-09 08:31:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+I just tryed with Firefox 2.0.0.4 and it did'nt run as well.<br />
+Do you have a idea where is the problem?<br />
+In the atached textfile you find the linkt ot my install folder, so you can try at your own.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11044"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-09 09:14:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>I just tried a 1.5.1 to 1.5.4 and didn't experience any trouble in the installation. Though there was a problem creating the feeds directory, which was easily fixed by manually creating it.<br />
+<br />
+I'd suggest trying to upgrade in two or three steps. from 1.5.1 to 1.5.3, then to 1.5.4.<br />
+<br />
+As for copying and deleting directories, because the content directory is owned by the webserver, your shell account user can't perform these functions. Your shell account can move the content directory (mv)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11054"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-10 03:01:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg it works.<br />
+I first upgrade to 1.5.3.3 and then to 1.5.4<br />
+I am happy to have this version at my hard drive bevore.<br />
+<br />
+Now I have an error by logging in from the admin to a course:<br />
+admin/instructor_login.php<br />
+<br />
+Message:<br />
+Warning: mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/www/web16/html/ATutor/admin/instructor_login.php on line 51<br />
+(See attached File)<br />
+<br />
+<br />
+<br />
+And I am not able to log in.<br />
+<br />
+When I log out and log in as instructor it runs.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11056"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-10 07:58:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>I'd guess you're trying to use an old theme. You need to 1.5.4 themes.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11057"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-10 09:09:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Where can I find a 1.5.4 theme? In my downloaded File is a default 1.5.3 version. If that would be Ok. How do I activate it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11058"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-10 09:17:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrading from 1.5.1 to 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Sorry Greg <br />
+Now I can jump from Admin to Instructor and back.<br />
+I just was confused becaus when I do enable the default theme the following message apears:<br />
+<br />
+The theme, default - version: 1.5, may not be compatible with this version of Atutor.<br />
+<br />
+Else it runs fine now.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

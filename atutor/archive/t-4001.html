@@ -1,0 +1,268 @@
+---
+ title: not able to upload content package in Linux
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>not able to upload content package in Linux</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4001"></a>
+		<div class="forum-post-author">
+			<label class="title">ritesh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-19 06:09:07</p>
+            </div>
+            <div class="postheader"><h3>not able to upload content package in Linux</h3></div>
+				
+			<div class="body">
+				<p>when we are uploading scorm content package we are getting error page with message " import cancelled succesfully". But the same thing works in windows.<br />
+we have given all permission to the required directories as specified in Atutor Installation manual.  <br />
+<br />
+Things to describe: <br />
+  operating system -RedHat9.0<br />
+version of ATutor -ATutor-1.4.2.<br />
+versions of php -php-4.3.4-Win32<br />
+version of mysq l -mysql-3.23.58-win<br />
+webserver & version -<br />
+copies of error messages -<br />
+changes to default settings -<br />
+web browser being used - IE 5, mozilla</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4005"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-19 07:59:11</p>
+            </div>
+            <div class="postheader"><h3>check upload limit</h3></div>
+				
+			<div class="body">
+				<p>Make sure the upload_max_filesize and post_max_size values in php.ini are set sufficiently large.<br />
+<br />
+What versions of php/mysql are you using on Linux. You appear to be using windows versions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4026"></a>
+		<div class="forum-post-author">
+			<label class="title">ritesh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-20 22:59:35</p>
+            </div>
+            <div class="postheader"><h3>sorry the versions for linux are...</h3></div>
+				
+			<div class="body">
+				<p>versions of php -4.2.2-17<br />
+  version of mysq l -3.23.54a -11<br />
+ <br />
+upload_max_filesize and post_max_size values are 2M and 8M Respectively.....</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4033"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-21 17:25:48</p>
+            </div>
+            <div class="postheader"><h3>Increase values</h3></div>
+				
+			<div class="body">
+				<p>How large is the content package?<br />
+<br />
+Increase the upload limit if needed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4109"></a>
+		<div class="forum-post-author">
+			<label class="title">ritesh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-28 06:51:50</p>
+            </div>
+            <div class="postheader"><h3>size is ok...</h3></div>
+				
+			<div class="body">
+				<p>Sir ,,<br />
+ I am getting the error when I upload the content package (zip file) prepared in reload editor... in my windows machine the package is working fine with ATutor 1.3 but in linux the same content package is giving the following error when upload.. I have increase the uoload limit in php.ini file to 8M ...<br />
+<br />
+ERROR:::: "The page you are looking for is currently unavailable. The Web site might be experiencing technical difficulties, or you may need to adjust your browser settings." and the small upload window shows the file upload in progress "Unknown KB"...<br />
+<br />
+Please help me .<br />
+<br />
+thank you <br />
+<br />
+Ritesh</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4114"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-28 15:47:14</p>
+            </div>
+            <div class="postheader"><h3>Server setting</h3></div>
+				
+			<div class="body">
+				<p>This sounds more like a problem with the server settings, rather than with ATutor.<br />
+<br />
+Make sure you are not mistaking course backups for content packages.<br />
+<br />
+Make sure register_globals is set to off<br />
+<br />
+For help, search the atutor.ca site for "register_globals off".<br />
+	<br />
+Reinstall ATutor to see if that fixes the problem. Perhaps a file was corrupted.<br />
+	<br />
+Upgrade to ATutor 1.4.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4117"></a>
+		<div class="forum-post-author">
+			<label class="title">ritesh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-29 00:40:53</p>
+            </div>
+            <div class="postheader"><h3>still not working.....</h3></div>
+				
+			<div class="body">
+				<p>the error I am getting is<br />
+<br />
+"The page cannot be displayed <br />
+There is a problem with the page you are trying to reach and it cannot be displayed. " <br />
+<br />
+When I upload the content package through Home  Tools  Content Packaging >> browse and then import.... from my windows XP  to the Linux PC where I installed ATutor....  (ie I am accessing ATutor in my windows PC but ATutor is installed in Linux PC in the server room).<br />
+<br />
+Please help.<br />
+<br />
+Ritesh</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4155"></a>
+		<div class="forum-post-author">
+			<label class="title">ritesh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-31 22:30:53</p>
+            </div>
+            <div class="postheader"><h3>not able to upload content package more than 500kb...</h3></div>
+				
+			<div class="body">
+				<p>sir,<br />
+<br />
+ Earlier  I was  trying  to upload the content package made in reload editor having teh size larger than 500 kb.. but when I tried the content package less than that it is successfully uploading...<br />
+<br />
+ The other configuration is same as stated above entries.<br />
+<br />
+So sir where I have to increase the upload limit... I have already tried in  php.ini  and course properties in the admin login..<br />
+<br />
+Ritesh</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4156"></a>
+		<div class="forum-post-author">
+			<label class="title">ritesh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-31 22:31:15</p>
+            </div>
+            <div class="postheader"><h3>not able to upload content package more than 500kb...</h3></div>
+				
+			<div class="body">
+				<p>sir,<br />
+<br />
+ Earlier  I was  trying  to upload the content package made in reload editor having the size larger than 500 kb.. but when I tried the content package less than that it is successfully uploading...<br />
+<br />
+ The other configuration is same as stated above entries.<br />
+<br />
+So sir where I have to increase the upload limit... I have already tried in  php.ini  and course properties in the admin login..<br />
+<br />
+Ritesh</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4165"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-01 08:58:11</p>
+            </div>
+            <div class="postheader"><h3>Try again</h3></div>
+				
+			<div class="body">
+				<p>You should have no trouble uploading a 500kb file with the default settings. <br />
+<br />
+Review you settings in php.ini, <br />
+<br />
+upload_max_filesize<br />
+post_max_size <br />
+<br />
+And review the file size properties for the course in question through the admin Properties screen</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,90 @@
+---
+ title: last accessed test id
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>last accessed test id</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17141"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-14 21:11:15</p>
+            </div>
+            <div class="postheader"><h3>last accessed test id</h3></div>
+				
+			<div class="body">
+				<p>Is there currently a variable which stores the last accessed test id which is stored even if the user logs out, similar to last_cid ?<br />
+<br />
+If there isn't does anyone have any ideas on how i could capture and store this so it can be accessed when the user logs back in?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17142"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-15 02:24:26</p>
+            </div>
+            <div class="postheader"><h3>Re: last accessed test id</h3></div>
+				
+			<div class="body">
+				<p>Last test ID is not stored.<br />
+The best way would be to create a separate DB table, I think.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17152"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-15 18:37:59</p>
+            </div>
+            <div class="postheader"><h3>Re: last accessed test id</h3></div>
+				
+			<div class="body">
+				<p>I added a field called last_tid to the course_enrollment table where last_cid is stored but then realised that i don't know enough PHP to be able to store the variable. I guessed it would be a sql update statement perhaps at the time of accessing a test but i'm not sure which file to insert the code into, maybe test_intro.php or take_test.php or both?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17214"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-23 13:02:35</p>
+            </div>
+            <div class="postheader"><h3>Re: last accessed test id</h3></div>
+				
+			<div class="body">
+				<p>It depends on what you want to achieve. If you want to note which test introduction page a user saw, put it into test_intro; if you want to note the last test that a user actually [i]took[/i], put it into take_test and take_test_q.<br />
+<br />
+In general, storing custom data in a separate table, while being messy, helps avoiding conflicts with another chunks of code, including backup code and code of future versions. You'll need to make sure your change doesn't conflict in such a way, and then maintain the changes after each upgrade.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

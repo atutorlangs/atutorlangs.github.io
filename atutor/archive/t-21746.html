@@ -1,0 +1,120 @@
+---
+ title: Error in installation process
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error in installation process</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21746"></a>
+		<div class="forum-post-author">
+			<label class="title">Gino_Schwalbino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-02 11:55:20</p>
+            </div>
+            <div class="postheader"><h3>Error in installation process</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+While trying to install Atutor i get on "Step 2: Database" the following error:<br />
+[i]Table AT_language_text creation failed[/i]<br />
+<br />
+I don't know what to do now... <br />
+restarting mysql and apache don't resolve this problem...<br />
+Can somebody help me?<br />
+Thx,<br />
+Gino<br />
+<br />
+Things to describe: <br />
+operating system  - Windows XP 32-Bit<br />
+version of ATutor - 2.0.2<br />
+versions of php - 5.3.5<br />
+version of mysql - 5.5.8<br />
+webserver & version - Apache / 2.2.17<br />
+your ATutor location- http://localhost/ATutor/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21749"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-02 14:21:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in installation process</h3></div>
+				
+			<div class="body">
+				<p>Check if your mysql is in strict mode. Try turning off the strict mode.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21751"></a>
+		<div class="forum-post-author">
+			<label class="title">taylormcc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-04 09:20:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in installation process</h3></div>
+				
+			<div class="body">
+				<p>To do what Cindy said you need to edit your my.ini file<br />
+<br />
+Search for the sql-mode= statement<br />
+Remove strict_trans_tables from the quoted area<br />
+<br />
+After you do that you may need to restart the mysql service in services.msc<br />
+<br />
+if that still does not allow you to create the tables<br />
+<br />
+then you can try this http://atutor.ca/view/3/21541/1.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21752"></a>
+		<div class="forum-post-author">
+			<label class="title">Gino_Schwalbino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-04 10:42:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in installation process</h3></div>
+				
+			<div class="body">
+				<p>thx for the answers.<br />
+<br />
+The problem is, there is no sql-mode= statement in the my.ini (c:\xampp\mysql\bin\my.ini).<br />
+And there is no word "strict" in this file...<br />
+<br />
+But in this directory is a file named "mysql_config.pl" an there is a line "use strict;".<br />
+Should i delete this line?<br />
+<br />
+Anyway...i followed your link and changed the word "Type" into "Engine" in line 13 of the file "atutor_language_text.sql"<br />
+<br />
+And now it works... THX!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,128 @@
+---
+ title: Patches Partly Installed
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Patches Partly Installed</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24843"></a>
+		<div class="forum-post-author">
+			<label class="title">es24tv</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-18 22:33:34</p>
+            </div>
+            <div class="postheader"><h3>Patches Partly Installed</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+When applying patches 001 and 002 in Status says "Partly Installed", even though the message says "The patch has-been installed successfully." Patch 003 says "intalled".<br />
+<br />
+2) How can I make the Default Menu (Side) is on the left of the screen (I use Bluemin 2.2 as default theme)?<br />
+<br />
+Best Regards,<br />
+<br />
+Mario<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version 2.2<br />
+  Patch #s applied 001 (partly?), 002 (partly?), 003<br />
+  ATutor theme name Bluemin 2.2<br />
+  PHP version 5.3.3<br />
+  MySQL version 5.1.73<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used Firefox and Chrome<br />
+  ...and anything else relevant  updated from 2.1</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24846"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-19 09:33:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Patches</h3></div>
+				
+			<div class="body">
+				<p>The patch  message appears when a file has been modified by the patcher, but its permissions have not been reset to read only. Nothing serious to worry about, though it means the file(s) in question could be vulnerable to hacking.<br />
+<br />
+The side menu should be on the left in the Bluemin theme. Not sure how it appears to the right in your case. If you want to move it, you would need to modify the theme header and/or footer templates to move it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24850"></a>
+		<div class="forum-post-author">
+			<label class="title">es24tv</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-19 14:31:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Patches</h3></div>
+				
+			<div class="body">
+				<p>Thank yu, Greg,<br />
+<br />
+1) Please, can you remember me in which files should I reconfigure the permissions that I modified for patches 001 and 002? <br />
+<br />
+2) Please can you suggest me what lines should I change in the Theme menu Bluemin to stay on the right side? Son files within "bluemin" or "default"? <br />
+<br />
+2a) There are some thema come designed with the menu on the right? <br />
+<br />
+Thanks for your patience ... you know the update always involves a few hours of chaos and stress. The good news is that ATutor is always improving and consolidating itself as a high quality tool. Thank you! <br />
+<br />
+Regards, <br />
+<br />
+Mario</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24853"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-19 14:49:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Patches</h3></div>
+				
+			<div class="body">
+				<p>1) there should be a message I believe if you click on partially Installed link that lists the file that need set to read only. If not, you can examine the patch to figure the files that were changed. For example:<br />
+<br />
+http://update.atutor.ca/patch/2_2/2_2-1/patch.xml<br />
+<br />
+2) there isn't a theme any more with the menu on the right. It would take me some time and experimenting to figure out where the menu would need to go. I'll leave the experimenting to you. You can find the code the to move at:<br />
+<br />
+https://github.com/atutor/ATutor/blob/master/themes/blumin/include/header.tmpl.php#L327-L329<br />
+<br />
+It will probably need to be moved into the footer.tmpl.php file for that theme.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

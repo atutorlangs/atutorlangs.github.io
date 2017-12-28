@@ -1,0 +1,68 @@
+---
+ title: Symptoms of a problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Symptoms of a problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13048"></a>
+		<div class="forum-post-author">
+			<label class="title">hcameron</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-03-10 08:12:37</p>
+            </div>
+            <div class="postheader"><h3>Symptoms of a problem</h3></div>
+				
+			<div class="body">
+				<p>I have tracked down what I think is a problem. Here is what I have done.<br />
+1. New install of 1.6 on the Server.  No Problem<br />
+2. Another new install on same server. When the installation got to the database it indicated that it was not UTF-8 and needed to have be changed.  I switched over and changed the database characteristics and continued.  Then the problems showed up.  I started into the  "setup the administrator" screen.  I entered all the data and saved.  It came back with "You need to enter an email address". (I did already)  The password field was filled with text hex and did not have asterics or the correct password.  I reentered the email address and saved. The install continued.  When it got to "Login" I could not login as the adminstrator using the information I had just entered. <br />
+3. I got into a different Atutor site (on the same server) and logged in as administrator.  I then went to the problem site and continued as the administrator.  (another issue but helpful here).  Everything seemed to work on the web site. Except I could not save a test that I created.  <br />
+4. I got into the database to check and the admin info was in the database correct. (I could not loggin though)<br />
+5. I erased the site and started over.  The same thing happened.  I created the database and forgot to make it "UTF-8 general ...."  The same problem showed up with the the admin setup.  The build download date was 3/8/.<br />
+6. I erased the site and used the first download dated 2/10.  I also made sure the database file was correctly configured for the UTF-8.  The install went fine and I could get in as the admin. The tests also can be saved.<br />
+<br />
+Therefore...  I am not sure whether the build date differences are significant.  The configuration of the database file seemed to be a common factor in the problem. <br />
+<br />
+Sorry for the lenght of the email but i wanted to get in all my steps.  Hugh</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13054"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-03-10 14:02:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Symptoms of a problem.</h3></div>
+				
+			<div class="body">
+				<p>I've not heard of these problems before. I'm wondering if it is something specific to your system. Can you describe the system.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

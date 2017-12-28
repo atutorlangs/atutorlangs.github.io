@@ -1,0 +1,207 @@
+---
+ title: I need some clarification
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>I need some clarification</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10954"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 09:06:57</p>
+            </div>
+            <div class="postheader"><h3>I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>I am currently using the payments module. I wanted to know if there's a way I can configure the account validity of the user. For example, if the user pays $5, his account should be valid for 1 month in a particular course and the next month for another course. Is there any way I could do that?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10955"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 09:16:28</p>
+            </div>
+            <div class="postheader"><h3>Re: I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>I'll be more clear.<br />
+<br />
+I offer a solo package and a combined package:<br />
+<br />
+Both packages have to stay active for an indefinite time. The combined package contains two courses. From the day, the student starts accessing the first course, the login should work for 1 month and after that he should be automatically unenrolled out of the course. And when he starts using the second course, it should be activated and should stay for 1 more month. Hope I'm making some sense.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10959"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 11:55:54</p>
+            </div>
+            <div class="postheader"><h3>Re: I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>Payments through the module only apply to one course at a time. And, there is no auto-unenroll when the course ends, though you could program an auto-unenroll based on a course end date without too much trouble, if you know some php.<br />
+<br />
+As for access to the second course, the course start date could be used to make the course available after a certain date.<br />
+<br />
+If you want to set the month the course is available on a student by student basis, there's nothing currently that would allow you to do that.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10960"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 12:28:42</p>
+            </div>
+            <div class="postheader"><h3>Re: I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>Oh... Thank you greg for the reply. Could you tell me what tables I need to modify to achieve the same? Only if you have some time to spare ofcourse...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10961"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 12:32:21</p>
+            </div>
+            <div class="postheader"><h3>Re: I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>And one more thing if I may ask:<br />
+<br />
+The payment module asks me the following:<br />
+<br />
+Credit card processing location URL:<br />
+Vendor ID assigned by credit card payment service:<br />
+<br />
+I've established a Premiere Account in PayPal but where would I find them? I don't understand what those two mean. I tried using the Buy Now buttons, but that button is a method-post button that does not have a url associated directly. I would really appreciate an advice from your side.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10962"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 13:05:15</p>
+            </div>
+            <div class="postheader"><h3>Re: I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>You'd add an end_date field to the courses table, and modify  html/course_properties.inc.php and /include/lib/course.inc.php to add/retreive/display the value for end_date.<br />
+<br />
+See the readme file with the payments module for details about setting up PayPal /mods/ecomm/readme</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10963"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 13:20:13</p>
+            </div>
+            <div class="postheader"><h3>Re: I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>Thank you. I'll be on that work. <br />
+<br />
+PS: That readme unfortunately doesn't contains the solution to my answer. I'm new even to paypal and so am unable to find out. Please help me out if you can.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10964"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 13:55:01</p>
+            </div>
+            <div class="postheader"><h3>Re: I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>Your ID is probably an email address, and the URL is as described in the readme.<br />
+<br />
+https://www.paypal.com/cgi-bin/webscr<br />
+<br />
+You might want to setup a sandbox account and test the payment module before implementing it on your live site.<br />
+<br />
+https://www.sandbox.paypal.com/cgi-bin/webscr<br />
+<br />
+Refer to the PayPal documentation if you need more info https://www.paypal.com/cgi-bin/webscr?cmd=p/xcl/rec/singleitem-manual-outside</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10965"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 13:56:51</p>
+            </div>
+            <div class="postheader"><h3>Re: I need some clarification</h3></div>
+				
+			<div class="body">
+				<p>Oh Thank you so much greg. I was really confused with the Vendor ID. Thank you once again.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

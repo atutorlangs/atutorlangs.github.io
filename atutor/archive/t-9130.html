@@ -1,0 +1,65 @@
+---
+ title: BlogJournal Access for Admins
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>BlogJournal Access for Admins</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9130"></a>
+		<div class="forum-post-author">
+			<label class="title">malfunctions</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-28 07:43:08</p>
+            </div>
+            <div class="postheader"><h3>BlogJournal Access for Admins</h3></div>
+				
+			<div class="body">
+				<p>Not sure if i've missed something but i cant find a way to enable any administrator access to the blogs. Under the manage section of my site there is no link for blogs?<br />
+<br />
+With this in mind i've gone to try and find a way to make the blogs list out for the course admins so that they can read the students entries. My SQL abilities aren't that great i'm afraid - i was able to remove the restrictions of only showing it if the members id matches the session and make it so that my admin login can see all course blogs. But i was wondering if someone could help me rewrite or make another if/else option that would only display the blogs related to the course your logged into while an admin.<br />
+in blogs/index.php i changed line 19'ish to be the following to allow me as member 1 to see all blogs listed when i went to the blogs index page. <br />
+<br />
+<br />
+[php]if ($_SESSION[member_id] == 1) { <br />
+$sql = "SELECT G.group_id, G.title, G.modules FROM ".TABLE_PREFIX."groups G INNER JOIN ".TABLE_PREFIX."groups_members T USING (group_id) ORDER BY G.title";<br />
+} else {<br />
+$sql = "SELECT G.group_id, G.title, G.modules FROM ".TABLE_PREFIX."groups G INNER JOIN ".TABLE_PREFIX."groups_members T USING (group_id) WHERE T.member_id=$_SESSION[member_id] ORDER BY G.title";<br />
+}[/php] <br />
+<br />
+<br />
+I'm assuming the statement has to be rewritten to check the Group_types table to check which course it belongs to and then only display all if the member_id is a admin/teacher for that courses. <br />
+<br />
+I'm not sure why there hasn't been any admin access to the blogs previously - or if there is how you go about giving the teachers access to all the blogs, but any help would be greatly appreciated.<br />
+<br />
+Cheers,<br />
+David</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9132"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-30 08:19:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Blog/Journal Access for Admins</h3></div>
+				
+			<div class="body">
+				<p>Blogs are managed by Instructors, though an admin can access them by entering a course through the Courses list. Admins are generally not involved in courses beyond setup etc.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

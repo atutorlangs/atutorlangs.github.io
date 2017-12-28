@@ -1,0 +1,274 @@
+---
+ title: Error deleting an announcement
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error deleting an announcement</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="1387"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-22 09:19:07</p>
+            </div>
+            <div class="postheader"><h3>Error deleting an announcement</h3></div>
+				
+			<div class="body">
+				<p>Info:<br />
+<br />
+MySQL v 4.0.14<br />
+Apache v 1.2<br />
+PHP v 4<br />
+Atutor v 1.3.1<br />
+<br />
+I'm experiencing a problem:<br />
+<br />
+I created an announcement.<br />
+I went into the course a few days later to edit it and received an error message telling me that it couldn't be found.<br />
+<br />
+I tried to delete it and, of course, I received the same message. <br />
+<br />
+How do I proceed from here?<br />
+<br />
+thanks,</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1389"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-22 09:44:42</p>
+            </div>
+            <div class="postheader"><h3>Do some troubleshooting</h3></div>
+				
+			<div class="body">
+				<p>Apparently some other system issue here, if it was there one day, and not the next. <br />
+<br />
+php 4. what?<br />
+<br />
+apache 1.2 or apache 1.3?	<br />
+<br />
+On what operating system?<br />
+<br />
+Did you try restarting your browser?<br />
+<br />
+Did you try adding another announcement, then editing/deleting it...<br />
+<br />
+Does your MySQL user account have update/delete permission?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1395"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-22 11:02:23</p>
+            </div>
+            <div class="postheader"><h3>Additional Info</h3></div>
+				
+			<div class="body">
+				<p>Responses:<br />
+<br />
+- tried several times logging out, closing the browser, opening it again and logging in - no change<br />
+- tried creating another announcement - now I have two, one I cannot edit or delete, and one that I can.<br />
+- MySQL user account has full access<br />
+<br />
+Technical info:<br />
+<br />
+PHP 4.3.4<br />
+RedHat Lynux - not sure of version<br />
+Processor Name Pentium III (Coppermine) <br />
+Vendor ID GenuineIntel <br />
+Processor Speed (MHz) 996.876 <br />
+Total Memory 2064892 kB <br />
+Free Memory 22624 kB <br />
+Total Swap Memory 2096472 kB <br />
+Free Swap Memory 2096188 kB <br />
+System Uptime 6 Days, 15 Hours and 53 Minutes <br />
+Apache 1.3.28 Running <br />
+DirectAdmin 1.21.2  Running <br />
+Exim 4.24 Running <br />
+MySQL 4.0.14 Running <br />
+Named 9.2.1  Running <br />
+ProFTPd 1.2.8  Running <br />
+sshd  Running <br />
+vm-Pop3d 1.1.6  Running</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1397"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-22 11:44:08</p>
+            </div>
+            <div class="postheader"><h3>Additional Info</h3></div>
+				
+			<div class="body">
+				<p>An IE error appears when I select Edit for the announcement that has the problem:<br />
+<br />
+Line 15<br />
+Char 1<br />
+Error 'document.form.title' is null or not an object<br />
+Code 0<br />
+URL  http://mysite/atutor/editor/edit_news.php?aid=3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1398"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-22 11:59:54</p>
+            </div>
+            <div class="postheader"><h3>Additional Info</h3></div>
+				
+			<div class="body">
+				<p>Here is an extract of the AT_News table:<br />
+Which one is "aid" (from url)?<br />
+Can I delete the offending row?<br />
+<br />
+news_id  <br />
+course_id  <br />
+member_id  <br />
+date  <br />
+formatting  <br />
+title  <br />
+body <br />
+<br />
+<br />
+4 <br />
+4 <br />
+1 <br />
+2004-03-15 18:15:43 <br />
+1 <br />
+Welcome To ATutor <br />
+This is some default content. See the &lt;a href="hel... <br />
+<br />
+<br />
+2 <br />
+3 <br />
+2 <br />
+2004-03-15 11:46:05 <br />
+1 <br />
+Welcome To ATutor <br />
+This is some default content. See the &lt;a href="hel... <br />
+<br />
+<br />
+3<br />
+3 <br />
+2 <br />
+2004-03-15 11:46:49 <br />
+1 <br />
+Discovery <br />
+&lt;p align="center">&lt;img src="images/GMR/Discovery... <br />
+<br />
+<br />
+5 <br />
+4 <br />
+1 <br />
+2004-03-15 18:19:52 <br />
+1 <br />
+Introduction <br />
+&lt;p align="center">&lt;img src="images/GMR/Prayer_Sc... <br />
+<br />
+<br />
+6 <br />
+3 <br />
+1 <br />
+2004-03-21 16:00:16 <br />
+1 <br />
+Discovery <br />
+&lt;p align="center">&lt;img src="images/GMR/Discovery...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1402"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-22 13:20:19</p>
+            </div>
+            <div class="postheader"><h3>Delete Manually</h3></div>
+				
+			<div class="body">
+				<p>Still don't see anything that might be causing the problem. Something else seems to have happened that's outside the scope of ATutor. Perhaps data from your original announcement was corrupted. Difficult to say. If we could see the problem, and reproduce it, we might be able to offer some additional suggestions.<br />
+<br />
+Try deleting the the announcement directly from the database using a application like phpMyAdmin.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Responses:<br />
+<br />
+- tried several times logging out, closing the browser, opening it again and logging in - no change<br />
+- tried creating another announcement - now I have two, one I cannot edit or delete, ...<br />
+[op]forums/view.php?fid=7;pid=1387;page=1#1395[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1409"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-23 11:19:09</p>
+            </div>
+            <div class="postheader"><h3>Resolution</h3></div>
+				
+			<div class="body">
+				<p>I took a look at the AT_News table.<br />
+It appears that the original announcement was created with a different id.<br />
+I recall creating this id (instructor) and creating the first course and the first announcement with it.<br />
+Then I created another id and tried to switch instructors for the course to it.<br />
+Then I continued to create content for the course with the second id.<br />
+<br />
+I deleted the first announcement and everything appears to be fine.	<br />
+Should there be a problem when switching instructors for a course?<br />
+<br />
+thanks</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,155 @@
+---
+ title: XML error Undeclared entity error at line 13
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>XML error Undeclared entity error at line 13</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9823"></a>
+		<div class="forum-post-author">
+			<label class="title">jotace</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-01 20:39:18</p>
+            </div>
+            <div class="postheader"><h3>XML error Undeclared entity error at line 13</h3></div>
+				
+			<div class="body">
+				<p>operating system - FreeBSD 4.7<br />
+  version of ATutor - 1.5.3.3<br />
+  versions of php - 5.0.4<br />
+  version of mysql  - 4.1.11<br />
+  webserver & version - 1.3.37<br />
+  changes to default settings - no<br />
+  web browser being used - IE6,7 Firefox Netscape<br />
+<br />
+When I try to import from one course to another, in the same ATutor version, the platform reports this error: XML error: Undeclared entity error at line 13. There is no special characters in imsmanifest.xml.<br />
+<br />
+Any help? Thank you!<br />
+<br />
+Juan.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9825"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-02 08:45:40</p>
+            </div>
+            <div class="postheader"><h3>Re: XML error: Undeclared entity error at line 13</h3></div>
+				
+			<div class="body">
+				<p>What langauge is ATutor and the content being displayed?<br />
+<br />
+Can you attach the content package here so we can try it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9828"></a>
+		<div class="forum-post-author">
+			<label class="title">jotace</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-02 13:17:44</p>
+            </div>
+            <div class="postheader"><h3>Re: XML error: Undeclared entity error at line 13</h3></div>
+				
+			<div class="body">
+				<p>Spanish both, content exported and interface.<br />
+<br />
+Here you have the chapter exported that presented problems.<br />
+<br />
+Thank you greg.<br />
+<br />
+Juan.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9829"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-02 14:04:28</p>
+            </div>
+            <div class="postheader"><h3>Re: XML error: Undeclared entity error at line 13</h3></div>
+				
+			<div class="body">
+				<p>The issue is caused by the & character in the glossary.xml file. You could either delete that file then re-package.<br />
+<br />
+The issue is with the exporter (which does not escape the & correctly in the glossary term) and in the importer (which does not correctly link glossary terms).<br />
+<br />
+This issue has been added to our bug tracker and a fix will be available with the next release.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9831"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-02 14:18:30</p>
+            </div>
+            <div class="postheader"><h3>Re: XML error: Undeclared entity error at line 13</h3></div>
+				
+			<div class="body">
+				<p>This issue has been resolved.<br />
+<br />
+The affected files are:<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/tools/ims/ims_export.php<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/tools/ims/ims_import.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9832"></a>
+		<div class="forum-post-author">
+			<label class="title">jotace</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-02 15:48:15</p>
+            </div>
+            <div class="postheader"><h3>Re: XML error: Undeclared entity error at line 13</h3></div>
+				
+			<div class="body">
+				<p>Works OK! <br />
+<br />
+Thank you all.<br />
+<br />
+Juan.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

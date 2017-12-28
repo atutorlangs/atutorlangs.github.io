@@ -1,0 +1,110 @@
+---
+ title: Changing Usernames and sending emails
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Changing Usernames and sending emails</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="12455"></a>
+		<div class="forum-post-author">
+			<label class="title">remnorz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-04 17:00:50</p>
+            </div>
+            <div class="postheader"><h3>Changing Usernames and sending emails</h3></div>
+				
+			<div class="body">
+				<p>Subject: Redirecting the login.php	Quote this post in your reply<br />
+operating system - Server 2003<br />
+version of ATutor - 1.5.5<br />
+versions of php - 5.2.3<br />
+version of mysq l - 5.0<br />
+webserver & version - Apache 2.2.6<br />
+web browser being used - firefox and I.E.<br />
+<br />
+I'll use this thread to ask two separate questions. <br />
+<br />
+The first question is: <br />
+<br />
+After I register with a username, password etc. is there a way to modify the username (change it), I know I have the options to change first name / last name, e-mail, password and other personal info, but I don't see anyway I can change the usernames.  I'm guessing it has something to do with the dbase and the username being a key value... is this correct? <br />
+<br />
+The second question is: <br />
+<br />
+None of the "send email" options in my installation is working...  I've done everything I've seen in other threads but none seem to work... and most of them just ended without a resolution (or so it seems), either that or they found the solution to their problem and didn't post their progress.  Is there someone that can help me go through whatever steps I need to go through in order to make the mail functions work... <br />
+<br />
+I've gone through the php.ini and config files... I installed an smtp server on my machine ... gave it a domain etc... but nothing seems to work.  Any help will be appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12466"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-05 12:23:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing Usernames and sending e-mails</h3></div>
+				
+			<div class="body">
+				<p>Usernames can not be modified.<br />
+<br />
+<br />
+For windows, set the value of "SMTP" in the system's php.ini file to point to another external mail server, perhaps your own personal mail server for testing.<br />
+<br />
+SMTP could be set to your local server. You'll need to talk to the mail server developers for help with that.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12477"></a>
+		<div class="forum-post-author">
+			<label class="title">remnorz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-05 14:00:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing Usernames and sending e-mails</h3></div>
+				
+			<div class="body">
+				<p>I will try a new local install of atutor and see if I can get the mail functions to work.  Somehow even though I've set up the php.ini, and I know i'm using the smtp server the company gave me, it's still not working.  I must be doing something wrong.[<br />
+<br />
+Again thanks for the replies.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12729"></a>
+		<div class="forum-post-author">
+			<label class="title">remnorz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-04 11:56:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing Usernames and sending e-mails</h3></div>
+				
+			<div class="body">
+				<p>Yup, tested it locally and everything worked, the company was just blocking external e-mails so every test I tried got blocked. Everything is solved now.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

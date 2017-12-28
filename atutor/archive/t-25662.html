@@ -1,0 +1,336 @@
+---
+ title: cannotaccess database after installation
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>cannotaccess database after installation</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25662"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 11:00:29</p>
+            </div>
+            <div class="postheader"><h3>cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux, Centos 5<br />
+  ATutor version - 2.2.1<br />
+  Patch #s applied -<br />
+  ATutor theme name - Default<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - Firefox<br />
+  I installed successfull the latest stableversion of ATutor on my server and When I wanted to login I got the following error message:<br />
+Warning: Invalid argument supplied for foreach() in /home3/slobodan/public_html/atutor/include/lib/output.inc.php on line 288<br />
+<br />
+Please advise.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25663"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 11:24:17</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>I checked in admin details about installation and found teh following info<br />
+<br />
+Database:<br />
+    0.52 MB<br />
+Disk Usage:<br />
+    0.09 MB<br />
+Courses:<br />
+    0<br />
+Users:<br />
+    1<br />
+ATutor Version:<br />
+    2.2(unknown - 2016-01-21 10:22:01). Check Latest Version.<br />
+PHP Version:<br />
+    5.4.45<br />
+MySQL Version:<br />
+    5.5.42-37.1<br />
+OS:<br />
+    Linux 3.12.41-77.ELK6.x86_64 <br />
+<br />
+Well, databse is there. It is strange that I am constantkly prompted that there is no database although it exists and installation went successfully.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25664"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 11:36:05</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>Are there any special characters in the database name or the database password? If so, that may be the problem. Use only numbers, letters, underscores, and dashes.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25665"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 11:39:12</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>Also check the apache and php error logs.<br />
+<br />
+Which version are you working with. The lastest stable is 2.2, though I'm guessing you are working with the 2.2.1 release candidate.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25666"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 11:48:07</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>hello,<br />
+<br />
+Only characters and numbers are used. There are no any other symbols. I use the latest stable version 2.2<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25667"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 11:55:26</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>Please see attach. so you can see message that I receive. <br />
+the url of atutor installation is:<br />
+http/://slobodansoftverzaskole.org/atutor<br />
+<br />
+Thanks,<br />
+veki</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25668"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 12:08:30</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>The messages you see are likely caused by some other error that is occurring.<br />
+You'll probably need to look in the php error log for any db connection related messages.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25669"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 12:51:54</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>Hello,  I checked account and I found that there are no user defined apache handlers.<br />
+There is no any log file in public_html folder.  My hosting comnpany told me that log file would be created if tehre were errors. WHat next to xheck?<br />
+Thanks,<br />
+veki</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25670"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 12:59:56</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>I found in /atutor folder error.log and I found the following:<br />
+[21-Jan-2016 11:54:54 America/Chicago] Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8_unicode_ci,IMPLICIT) for operation '='<br />
+SQL: SELECT L.* FROM AT_language_text L, AT_language_pages P WHERE L.language_code="en" AND L.term=P.term AND P.page="/login.php" ORDER BY L.variable ASC<br />
+[21-Jan-2016 11:54:54 America/Chicago] PHP Warning: Invalid argument supplied for foreach() in /home3/slobodan/public_html/atutor/include/lib/output.inc.php on line 288<br />
+I guess clue is there/ please advise whT I have to fix.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25671"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 13:43:30</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>I have had chat with administrators from hosting company and they told me that connection with database is OK. They suggested that there must be something in coding. Please advise</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25672"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 13:54:43</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>I found solution. I changed the encoding for the AT_language_text table to utf8_unicode_ci directly in login.php file.<br />
+Maybe you can think on mechanism that will manage such issues.<br />
+Can I mark this thread as solved?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25673"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 14:07:31</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>Curious. The everything should be set to UTF8 during installation. <br />
+<br />
+What exactly did you change in the login.php file?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25674"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 15:07:45</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>Sorry, maybe I mistyped.  As you see two tables AT_language text and AT_language_pages have connection with login.php For some reason they have had different collations and they were conflicting with other collations. I changed that and there was no conflicting collations anymore. I do not have idea why that happenned.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25675"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-01-21 16:41:03</p>
+            </div>
+            <div class="postheader"><h3>Re: cannotaccess database after installation</h3></div>
+				
+			<div class="body">
+				<p>After issuing SQL command<br />
+ALTER TABLE AT_language_pages CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci<br />
+the table had identical collation with other tables and system works.<br />
+I do not know why the table has got different collation.<br />
+However, small glitch is solved.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

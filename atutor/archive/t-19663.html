@@ -1,0 +1,98 @@
+---
+ title: Fatal error when deleting users
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Fatal error when deleting users</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19663"></a>
+		<div class="forum-post-author">
+			<label class="title">asobrino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-03 13:28:11</p>
+            </div>
+            <div class="postheader"><h3>Fatal error when deleting users</h3></div>
+				
+			<div class="body">
+				<p>We're experiencing problems to delete users in ATutor. Everything works OK if you try to delete just one user, but if you select two or more users and try to delete them a page appears with the following message:<br />
+<br />
+Fatal error. Cannot redeclare fs_get_workspace()(previously declared in C:\AppServ\www\ATutor\include\lib\file_storage.inc.php:44) in C:\AppServ\www\ATutor\include\lib\file_storage.inc.php on line 66<br />
+<br />
+Here's the description of our ATutor installation:<br />
+  Operating system ATutor is installed on - <br />
+   Windows XP Professional SP3<br />
+  ATutor version - 1.6.2<br />
+<br />
+We used AppServ 2.5.10 for Windows (32 bits), so we have the following software versions installed:<br />
+  PHP version - 5.2.6<br />
+  MySQL version - 5.0.51b<br />
+  Webserver & version - Apache 2.2.8</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19664"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-03 14:09:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error when deleting users</h3></div>
+				
+			<div class="body">
+				<p>See if the following bug report helps:<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=3953</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19677"></a>
+		<div class="forum-post-author">
+			<label class="title">asobrino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-04 13:55:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error when deleting users</h3></div>
+				
+			<div class="body">
+				<p>Looks like the problem we're receiving but I'm not sure about what to do to solve it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19679"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-04 14:05:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error when deleting users</h3></div>
+				
+			<div class="body">
+				<p>Read the notes with the bug report. The solution is described there.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

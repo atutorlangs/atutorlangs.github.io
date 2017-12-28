@@ -1,0 +1,90 @@
+---
+ title: Cant backup or export
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cant backup or export</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="4770"></a>
+		<div class="forum-post-author">
+			<label class="title">otto</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-09 00:39:30</p>
+            </div>
+            <div class="postheader"><h3>Cant backup or export</h3></div>
+				
+			<div class="body">
+				<p>operating system - Linux<br />
+  version of ATutor - 1.4.3<br />
+  versions of php - 4.3.8<br />
+  version of mysq l - 3.23.56<br />
+  webserver & version - Apache 1.3<br />
+<br />
+I tried different LCMS and I decided to suggest to the organizatin I work for, the use of ATutor for a lot of reason we all, the followers of this project, know.<br />
+<br />
+So I installed an ATutor copy to test it with on real condition with the stress of several intructors, assitants and of course students. <br />
+<br />
+I created 2-3 courses with not much information and 1 with almost full use of the system (not test or quizzes).  I works fine except tha I can`t make a single backup of this particular last course I mentioned neither export the contents of it. Although I can make it with the others smaller content courses, so I figure is not a backup or export script issue.<br />
+<br />
+The whole DB is less than 5Mb, not much isn't it? But I always get blank page or browser quit answer for a long period of trying.<br />
+I even tried to manually backup the database through PhpMyAdmin ...and the browser also quits with a blank page.<br />
+<br />
+I even thought, could be a sigle quoute or double bad escaping bug on the content uploading scripts, have you eexperienced something similar?<br />
+Any suggestion?<br />
+<br />
+And last but not least, congratulations for such wonderful project and results.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4789"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-10 10:05:32</p>
+            </div>
+            <div class="postheader"><h3>Size limit settings</h3></div>
+				
+			<div class="body">
+				<p>Check your size limit settings both in php.ini (upload_max_filesize, post_max_size), and properties associated with a course. <br />
+<br />
+It might be special characters casuing the problem. There were early reports of such problems. These have been fixed in 1.5, if you want to try it instead.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4803"></a>
+		<div class="forum-post-author">
+			<label class="title">otto</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-11 16:44:31</p>
+            </div>
+            <div class="postheader"><h3>Thanks Greg!</h3></div>
+				
+			<div class="body">
+				<p>Actually the course quota is 10Mb and the course properties page reports just 8Mb for this particular course.<br />
+So I think it must be something with special characters, I will upgrade of course but not now, cause I don't want to deal with the risk of another mess in the middle of the course.<br />
+I could replicate the entire atutor system and do the upgrade there, but that's the long road for something that is already fixed.<br />
+So I'll follow the rule "if it works, don't touch it" until the course ends.<br />
+Anyway I apreciate very much your help, and I let you know later if everything goes right.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

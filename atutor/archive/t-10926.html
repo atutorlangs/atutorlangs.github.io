@@ -1,0 +1,97 @@
+---
+ title: GoDaddy Installation Problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>GoDaddy Installation Problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10926"></a>
+		<div class="forum-post-author">
+			<label class="title">jlazerus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-06-26 15:02:21</p>
+            </div>
+            <div class="postheader"><h3>GoDaddy Installation Problem</h3></div>
+				
+			<div class="body">
+				<p>I am trying for a second time to install a tutor on Godaddy.com. When I get to Step 4, it tells me to create the following directory:<br />
+<br />
+/home/content/p/j/v/pjvacadmin/html/training/content<br />
+<br />
+I created this directory in multiple places and I get the same error as below. I have chmod to 777.<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - Linux<br />
+  version of ATutor - 1.5.4<br />
+  versions of php - <br />
+  version of mysq l - 4<br />
+  webserver & version - <br />
+  copies of error messages - Content Directory entered does not exist.<br />
+  changes to default settings -<br />
+  web browser being used - Firefox<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10927"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-06-26 15:28:12</p>
+            </div>
+            <div class="postheader"><h3>Re: GoDaddy Installation Problem</h3></div>
+				
+			<div class="body">
+				<p>Create a file with the following php in it, place it in the ATutor directory, and open it with your browser. It will tell you the real path to you ATutor directory. Use that path when asked during installation. <br />
+<br />
+I'm guessing your ISP has setup the system using symbolic links.<br />
+<br />
+[php]<br />
+<br />
+getcwd();<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10944"></a>
+		<div class="forum-post-author">
+			<label class="title">jlazerus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-06-28 15:10:20</p>
+            </div>
+            <div class="postheader"><h3>Re: GoDaddy Installation Problem</h3></div>
+				
+			<div class="body">
+				<p>I took a wild guess at it and found the answer. The directory that atutor wants me to create is actually in the root folder of the installation, not starting from home like:<br />
+<br />
+/home/content/p/j/v/pjvacadmin/html/training/content<br />
+<br />
+When godaddy setup this folder, technically i was already in the training folder so the only folder I had to create was the 2nd content folder and it worked.<br />
+<br />
+Thanks though.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

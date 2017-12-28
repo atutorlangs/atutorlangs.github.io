@@ -1,0 +1,88 @@
+---
+ title: Sending html emails
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Sending html emails</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22323"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-08-12 22:18:20</p>
+            </div>
+            <div class="postheader"><h3>Sending html emails</h3></div>
+				
+			<div class="body">
+				<p>Hi.  I have version 2.0 installed and I'm trying to figure out how to send an html email.<br />
+<br />
+I'm working on a modification that uses the "ATutorMailer" function and I'm trying to send this email in html format.<br />
+<br />
+The code snippet is...<br />
+<br />
+[php]<br />
+					if ($parent_row = mysql_fetch_assoc($parent_result)) {<br />
+						$mail = new ATutorMailer();<br />
+<br />
+						$mail->From     = 'LIVE Online Math';<br />
+						$mail->AddAddress($parent_row['email']);<br />
+						if ($thr == 0) {<br />
+							// The enrollment has expired; send the enrollment notification<br />
+							$mail->Subject = SITE_NAME . ' - ' . _AT('vbc_email_unenrolled_subject');<br />
+						<br />
+								if ($row['status'] == VBC_ENROLLMENT_STATUS_TRIAL) {<br />
+									$mail->Body    = _AT('vbc_email_unenrolled_message_trial', SITE_NAME, get_display_name($row['member_id']), AT_print($system_courses[$row['course_id']]['title'], 'courses.title'));<br />
+								} else {<br />
+									$mail->Body    = _AT('vbc_email_unenrolled_message', SITE_NAME, get_display_name($row['member_id']), AT_print($system_courses[$row['course_id']]['title'], 'courses.title'));<br />
+								}<br />
+						} else {<br />
+							// It's a reminder<br />
+							$mail->Subject = SITE_NAME . ' - ' . _AT('vbc_email_reminder_subject');<br />
+							$mail->Body    = _AT($vbc_reminders[$thr], SITE_NAME, get_display_name($row['member_id']), AT_print($system_courses[$row['course_id']]['title'], 'courses.title'));<br />
+						}<br />
+<br />
+						$mail->Send();<br />
+					}<br />
+[/php]<br />
+<br />
+<br />
+<br />
+In viewing the email message sources that are coming currently, I see: Content-Type: text/plain; charset="utf-8"<br />
+<br />
+Thanks and please advise.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22324"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-08-15 09:48:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Sending html emails</h3></div>
+				
+			<div class="body">
+				<p>Seems your question is, in the email message that are sent out, how to set "Content-Type" to "text/html", rather than the current "text/plain". Let me know if you meant something else.<br />
+<br />
+The answer is to modify one line @ include/classes/phpmailer/atutormailer.class.php, Line 45, to,<br />
+<br />
+$this->IsHTML(true);<br />
+<br />
+Right now, the argument of this line is "false".</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

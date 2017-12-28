@@ -1,0 +1,84 @@
+---
+ title: Install problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Install problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="884"></a>
+		<div class="forum-post-author">
+			<label class="title">billT</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-23 12:13:08</p>
+            </div>
+            <div class="postheader"><h3>Install problem</h3></div>
+				
+			<div class="body">
+				<p>I have tried 3 clean installs  of 1.31 and keep getting the following, I made it completely thru the install process with no problems that I could see <br />
+<br />
+Warning: Cannot set time limit in safe mode in /home/www/bigislesouth/ATutor/include/session.inc.php on line 15<br />
+<br />
+Warning: Cannot send session cache limiter - headers already sent (output started at /home/www/bigislesouth/ATutor/include/session.inc.php:15) in /home/www/bigislesouth/ATutor/include/session.inc.php on line 20<br />
+<br />
+Warning: Cannot add header information - headers already sent by (output started at /home/www/bigislesouth/ATutor/include/session.inc.php:15) in /home/www/bigislesouth/ATutor/include/vitals.inc.php on line 83<br />
+<br />
+Warning: Cannot add header information - headers already sent by (output started at /home/www/bigislesouth/ATutor/include/session.inc.php:15) in /home/www/bigislesouth/ATutor/include/basic_html/header.php on line 15<br />
+<br />
+Any suggestions on where to look</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="885"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-23 13:54:43</p>
+            </div>
+            <div class="postheader"><h3>Safe mode problem</h3></div>
+				
+			<div class="body">
+				<p>This is probably happening because your server's php running in safe mode. There will be other problems as well. Have a look at the php manual coverage of Safe Mode:<br />
+<br />
+http://www.phpworld.com/manual2003/features.safe-mode.html<br />
+<br />
+Try adding an at sign (@) to the beginning of line 16 in include/session.inc.php<br />
+<br />
+@set_time_limit(0);</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="886"></a>
+		<div class="forum-post-author">
+			<label class="title">billT</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-24 12:54:09</p>
+            </div>
+            <div class="postheader"><h3>Did the trick</h3></div>
+				
+			<div class="body">
+				<p>@ seemed to do the trick so far everything else seems to be working fine.<br />
+<br />
+ Mahalo nui loa for your help and enjoy the holidays</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

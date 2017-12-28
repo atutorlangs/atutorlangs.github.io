@@ -1,0 +1,177 @@
+---
+ title: Test Link on My Start Page Problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Test Link on My Start Page Problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="21788"></a>
+		<div class="forum-post-author">
+			<label class="title">debearl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-14 11:54:37</p>
+            </div>
+            <div class="postheader"><h3>Test Link on My Start Page Problem</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+When I create a test, I do not want it linked to my courses page.  It's fine until I add questions to the test.  Once I add questions, the test link shows up under Things Current on My Courses Page even though the button for "NO" under "Link to My Course Page" is still checked on the edit test page. I don't want it linked anywhere except in the content page.  Please advise. <br />
+<br />
+Thank you.  <br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Windows 7<br />
+  ATutor version - ?  Just downloaded from web this month January 2011 - so I'm assuming the most recent. <br />
+  Patch #s applied - none<br />
+  ATutor theme name - ? <br />
+  PHP version - ?<br />
+  MySQL version - ?<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21789"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-14 12:03:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Test Link on My Start Page Problem</h3></div>
+				
+			<div class="body">
+				<p>There's a "link from My Courses" option in test properties. Choose "no".</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21790"></a>
+		<div class="forum-post-author">
+			<label class="title">debearl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-14 14:30:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Test Link on My Start Page Problem</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+It is already checked no and it still shows up. Is there anything else I can do? I've deleted it an started over a couple of times, always being careful to check no under that option and it still shows up.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21791"></a>
+		<div class="forum-post-author">
+			<label class="title">debearl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-14 15:44:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Test Link on My Start Page Problem</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+It is already checked no and it still shows up. Is there anything else I can do? I've deleted it an started over a...<br />
+[op]forums/view.php?fid=7&pid=21788&page=1#21790[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21792"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-14 15:51:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Test Link on My Start Page Problem</h3></div>
+				
+			<div class="body">
+				<p>The My Courses option just added tests to the course listing for quick access. There isn't a setting to remove it from Things Current. It would not take much to add it to things current though. You can adjust the following file:<br />
+<br />
+mods/_standard/tests/module_news.php<br />
+<br />
+change<br />
+[php]<br />
+<br />
+WHERE Q.test_id=T.test_id <br />
+<br />
+[/php] <br />
+<br />
+to<br />
+[php]<br />
+<br />
+WHERE T.format=1 AND Q.test_id=T.test_id <br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21793"></a>
+		<div class="forum-post-author">
+			<label class="title">debearl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-14 17:56:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Test Link on My Start Page Problem</h3></div>
+				
+			<div class="body">
+				<p>Thanks - I'll try it out.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

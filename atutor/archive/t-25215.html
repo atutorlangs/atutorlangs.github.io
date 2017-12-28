@@ -1,0 +1,159 @@
+---
+ title: This is a disaster
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>This is a disaster</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25215"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 20:43:40</p>
+            </div>
+            <div class="postheader"><h3>This is a disaster</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - unix<br />
+  ATutor version -2.2<br />
+  Patch #s applied - can't apply patches<br />
+  ATutor theme name - 2.0<br />
+  PHP version - 5.4.37<br />
+  MySQL version - 5.5.32<br />
+  Webserver & version - Apache 2.4.12<br />
+  Copies of error messages - Not contacting the database<br />
+  Changes to default settings - none<br />
+  Web browser being used - safari and chrome<br />
+  ...and anything else relevant -<br />
+<br />
+<br />
+Greg, do you remember a couple of year ago when I reported a problem that you said was not a problem you could reproduce, and I insisted it was still a problem and you realized the was a problem with R.E.10? <br />
+<br />
+I've been using aTutor for ten years and I'm telling you you have a problem again. I've experienced it on two quite different server systems at godaddy and locally on MAMP.  Not only cannot I not write test questions, I can't set the dates on them either, which means my students can't take them. I suppose I could reset them in phpmyadmin, but that still doesn't guarantee that the students will be able to take them. <br />
+<br />
+I have tried raising the permissions levels on every file connected with tests, and it changes nothing. I don't have the means to put everything on atutor spaces and it won't upload ims files anyway. I have already tried that with a question I created on spaces.<br />
+<br />
+It may work well on a private server, so why won't it work on MAMP? There is something in that download folder that is totally f***ed. Are you simply going commercial now and trying to get us poor, unbudgetted adjuncts to move to atutor spaces?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25218"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 21:25:08</p>
+            </div>
+            <div class="postheader"><h3>Re: This is a disaster.</h3></div>
+				
+			<div class="body">
+				<p>Okay, so I set the date for a quiz in phpmyadmin and was able to open the quiz file. But I got an error message, "Can't contact the database," which is going to be off-putting to the students. I was able to take the quiz and the grade book function worked.<br />
+<br />
+But that database contact problem remains hidden somewhere in the code.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25219"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 22:57:22</p>
+            </div>
+            <div class="postheader"><h3>Re: This is a disaster.</h3></div>
+				
+			<div class="body">
+				<p>That R.E.10 in line two, shoul read IE 10, as in the browser.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25222"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-19 06:46:36</p>
+            </div>
+            <div class="postheader"><h3>Re: This is a disaster.</h3></div>
+				
+			<div class="body">
+				<p>bit of an update that might help you isolate the problem.<br />
+<br />
+I found that I was able to remove test questions from the question bank. I just can't add them to the question bank. I also can't edit test dates, as I told you elsewhere. Most like I can't add questions to tests either, but I haven't gotten that far yet with my textbook update project. <br />
+<br />
+Please have a look at those files.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25224"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-19 09:35:04</p>
+            </div>
+            <div class="postheader"><h3>Re: This is a disaster.</h3></div>
+				
+			<div class="body">
+				<p>There are known issues when using IE. Unfortunately IE from version to version creates a variety of issues. IE is a bit of a headache for developers, since it does not follow standards like other browser developers do. Often we create one version for other browsers, and a separate version for each version of IE.<br />
+<br />
+If you run into troubles while using IE, the first step should be to try in other browsers. <br />
+<br />
+As much as we'd like to be able to resolve every issue for every browser and every version, all web servers, each version of PHP, and so on, we do not have the resources to attempt to accommodate every potential combo of technology. Keeping in mind we do not get paid for our effort.<br />
+<br />
+For issue like this, we could spend a great deal of time trying to resolve issues that we are not able to reproduce ourselves. The community has to take some responsibility to help resolve issues like this. We are happy to take bug fixes and apply them, if you or someone else experiencing the problem happens to find a fix.<br />
+<br />
+We'll continue trying to help, but when the tone becomes disrespectful, volunteers will likely stop helping.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25228"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-19 16:16:00</p>
+            </div>
+            <div class="postheader"><h3>Re: This is a disaster.</h3></div>
+				
+			<div class="body">
+				<p>I don't use IE but my students do. I7m having problems on webstandard browsers.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

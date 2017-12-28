@@ -1,0 +1,114 @@
+---
+ title: Avatares are missing after upgrade
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Avatares are missing after upgrade</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12902"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 07:47:16</p>
+            </div>
+            <div class="postheader"><h3>Avatares are missing after upgrade</h3></div>
+				
+			<div class="body">
+				<p>After upgrading from v. 1.5.5 to 1.6 all the avatares(pictures of the users) are missing.<br />
+What is the easiest way to restore them?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12907"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 17:45:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Avatares are missing after upgrade</h3></div>
+				
+			<div class="body">
+				<p>The avatars should be in the old content directory from your previous installation. You should be able to copy them over as root, or move them as a regular user.<br />
+<br />
+Sounds like a permission issues. See if something looks out of the ordinary with the content/profile_pictures directory</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12911"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-21 00:29:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Avatares are missing after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Sorry can not download from the old directory<br />
+"Permission denied"<br />
+Also chang Chmod is not possible</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12984"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-29 02:15:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Avatares are missing after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Greg can you pleas insert copy the avatares by upgrading to newer version, for the next release?<br />
+My students are disapointet to see they have to upload the avatares again.<br />
+Thanks<br />
+Thomas</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12987"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-29 08:38:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Avatares are missing after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Avatars are copied when upgrading. All of our systems seem to display avatars correctly after upgrading, so I suspect there is a problem specific to your server.<br />
+<br />
+For some reason, probably permissions related, they did not copy on your system. You can move the directory using the "mv" command on Unix systems. Or preferrably, as the [b]root[/b] user on the system, copy using "cp" on Unix, the directory over to the new installation. The contents of the content/ directory, and the profile_pictures/ directory, should be owned by the user "nobody", or the webserver's user.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

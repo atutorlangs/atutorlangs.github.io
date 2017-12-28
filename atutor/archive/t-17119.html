@@ -1,0 +1,125 @@
+---
+ title: Changing the path for image files emoticons
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Changing the path for image files emoticons</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17119"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-11 17:34:18</p>
+            </div>
+            <div class="postheader"><h3>Changing the path for image files emoticons</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 1.6.2 installed and I'm wanting to edit the path to display an emoticon.  For example, the current path could be....<br />
+<br />
+http://www.liveonlinemath.com/jscripts/tiny_mce/plugins/emotions/img/smiley-laughing.gif<br />
+<br />
+But I need to change it to <br />
+http://www.liveonlinemath.com/Atutor/jscripts/tiny_mce/plugins/emotions/img/smiley-laughing.gif <br />
+<br />
+because I have Atutor as a directory on my site.  It's not the whole site.<br />
+<br />
+Is there an easy way to do this?  Or would be be easier to set up Atutor as a subdomain?<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17121"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-12 09:10:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing the path for image files (emoticons)</h3></div>
+				
+			<div class="body">
+				<p>I'm not sure why you would need to change the path. Are you inserting emoticons somewhere, and they are not showing up?<br />
+<br />
+Tell us how we can reproduce the problem.<br />
+<br />
+ATutor can be in a subdirectory</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17124"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-12 10:29:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing the path for image files (emoticons)</h3></div>
+				
+			<div class="body">
+				<p>Yes, I'm putting an emoticon in an Announcement, and it doesn't show up.<br />
+<br />
+If you can, try having Atutor as a subdir., then put an emoticon in an Announcement.<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17125"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-12 10:54:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing the path for image files (emoticons)</h3></div>
+				
+			<div class="body">
+				<p>It looks like you found a bug. There is a extra "../" in the path to the emoticon images from TinyMCE. I've reported it to the bug tracker, and it will get fixed in due time.<br />
+<br />
+In the meantime, you can edit the announcements manually, with the TinyMCE editor turned off, and adjust the paths by removing one "../".</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17126"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-12 12:50:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Changing the path for image files (emoticons)</h3></div>
+				
+			<div class="body">
+				<p>Ok, thanks!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

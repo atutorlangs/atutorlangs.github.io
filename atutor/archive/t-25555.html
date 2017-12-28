@@ -1,0 +1,75 @@
+---
+ title: DateTimeset issues on v 22
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>DateTimeset issues on v 22</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25555"></a>
+		<div class="forum-post-author">
+			<label class="title">jaymax</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-09-13 16:43:01</p>
+            </div>
+            <div class="postheader"><h3>DateTimeset issues on v 22</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+On launching ATutor, after server move, DB transferred seemed OK, server replies with ==><br />
+<br />
+Warning: date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in PATH to ==>/include/lib/mysql_connect.inc.php on line 203<br />
+<br />
+Warning: getdate(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in PATH to ==>/include/classes/ErrorHandler/ErrorHandler.class.php on line 508<br />
+<br />
+Warning: getdate(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in PATH to ==>/include/classes/ErrorHandler/ErrorHandler.class.php on line 301<br />
+<br />
+where and how can I correct this?<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux ... x86_64 x86_64 x86_64 GNU/Linux<br />
+  ATutor version - 2.2<br />
+  Patch #s applied - all prior to move<br />
+  ATutor theme name - Whatever the default theme was!<br />
+  PHP version - 5.4.43<br />
+  MySQL version - 5.5.42<br />
+  Webserver & version - Apache 2.x<br />
+  Copies of error messages - see message body above<br />
+  Changes to default settings - none that I recalled, except for those prompted for!<br />
+  Web browser being used - Mozilla Firefox 40.0.3<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25556"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-09-13 16:49:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Date.Timeset issues on v 2.2</h3></div>
+				
+			<div class="body">
+				<p>You probably need to put the timezone in a configuration line in your php.ini file. You should have a block like this in your php.ini file:<br />
+<br />
+[Date]<br />
+; Defines the default timezone used by the date functions<br />
+; http://php.net/date.timezone<br />
+date.timezone = America/New_York</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

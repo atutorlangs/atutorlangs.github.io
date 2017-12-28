@@ -1,0 +1,96 @@
+---
+ title: Problem with randomized test
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem with randomized test</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="1833"></a>
+		<div class="forum-post-author">
+			<label class="title">cyberjisus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-14 06:28:55</p>
+            </div>
+            <div class="postheader"><h3>Problem with randomized test</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I've installed ATutor v1.4 on a Linux server, with Apache 1.3 and MySQL (I'm not sure wich version, I'm not the server administrator).<br />
+<br />
+I have no problems creating tests with a fixed number of questions, but when I make a randomized questions test, at the time of taking the test, some questions are from a different randomized test, and some times appear questions about ATutor like "ATutor is a Open Source project; True/False". This behaviour only appears on randomice questions. I've been looking for this problem in the support forum, but I have not find any references on this problem.<br />
+<br />
+Thank you for ypur time and help.<br />
+<br />
+Best regards<br />
+<br />
+Jess</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1837"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-14 10:54:56</p>
+            </div>
+            <div class="postheader"><h3>Randomized test patch</h3></div>
+				
+			<div class="body">
+				<p>There is a bug with randomized tests. <br />
+<br />
+On line 143 (+/-) of /tools/take_test.php<br />
+<br />
+replace the following:<br />
+<br />
+$sql	= "SELECT question_id FROM ".TABLE_PREFIX."tests_questions WHERE content_id=$content_id";<br />
+		<br />
+with:<br />
+<br />
+$sql	= "SELECT question_id FROM ".TABLE_PREFIX."tests_questions WHERE test_id=$tid";</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1858"></a>
+		<div class="forum-post-author">
+			<label class="title">cyberjisus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-17 04:59:34</p>
+            </div>
+            <div class="postheader"><h3>Thank you</h3></div>
+				
+			<div class="body">
+				<p>Thank you for your help.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+There is a bug with randomized tests. <br />
+<br />
+On line 143 (+/-) of /tools/take_test.php<br />
+<br />
+replace the following:<br />
+<br />
+$sql	= "SELECT question_id FROM ".TABLE_PREFIX."tests_questions WHERE content_id=$co...<br />
+[op]forums/view.php?fid=7;pid=1833;page=1#1837[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

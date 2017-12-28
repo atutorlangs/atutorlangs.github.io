@@ -1,0 +1,212 @@
+---
+ title: Installation problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installation problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="3623"></a>
+		<div class="forum-post-author">
+			<label class="title">arf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 09:02:47</p>
+            </div>
+            <div class="postheader"><h3>Installation problem</h3></div>
+				
+			<div class="body">
+				<p>Trying a fresh installation of ATutor 1.4.3<br />
+<br />
+Step 0 everything ok<br />
+Step 1 agreeing ...<br />
+Step 2 giving Dabase Username and Database password<br />
+           it tells me that database atutor was created successfully<br />
+           connected to database successfully<br />
+           created all tables successfully<br />
+<br />
+           but<br />
+<br />
+           there is no button to go on at end of page ... ?<br />
+<br />
+<br />
+This is the system:<br />
+<br />
+Debian "testing"<br />
+ATutor 1.4.3<br />
+PHP 4.3.10-2<br />
+Mysql 4.0.23<br />
+Apache 1.3.33<br />
+<br />
+Mozilla 1.7.5</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3624"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 09:55:39</p>
+            </div>
+            <div class="postheader"><h3>Try again</h3></div>
+				
+			<div class="body">
+				<p>I don't see anything that might cause the button not to appear. It is likely a browser problem. <br />
+<br />
+Try reinstalling with a fresh download of ATutor, and if that does not correct the problem, try using a different browser.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3632"></a>
+		<div class="forum-post-author">
+			<label class="title">arf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 11:02:11</p>
+            </div>
+            <div class="postheader"><h3>Done but ...</h3></div>
+				
+			<div class="body">
+				<p>Actually, I have done it with a new donload.<br />
+<br />
+Using other browsers of other machines in the same LAN:<br />
+<br />
+When using IE 6.0 from a Windows 2000 machine, Mozilla Firefox 5.0 from a Linux box, IE 5.2 from a Mac, Safari from the same Mac, <br />
+<br />
+we have the same behaviour: no button after the green feedback in step 2<br />
+<br />
+If I go to see in the mysql database, the correct database is created and the tables are there and seem to be ok. <br />
+<br />
+With some of the browsers, by trying again without erasing the created database, we obtain messages of the kind<br />
+<br />
+Safari 1.2.4 cant open the page http://lai.dfc.unifi.it/ATutor/install/install.php because it could not load any data from this location.<br />
+<br />
+I have been using ATutor on another server for 6 months with hundreds of students, many courses, upgrading ... but this is amazing ...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3633"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 11:42:27</p>
+            </div>
+            <div class="postheader"><h3>Reproduced, but...</h3></div>
+				
+			<div class="body">
+				<p>I was able to reproduce the problem once, when I tried to install ATutor 1.4.3 while register_globals was turned on (it should be off). <br />
+<br />
+But when I restarted my browser and tried again, register_globals on, then off, everything went fine. I can't say what the problem is. There does not seem to be anything in the code to explain this behaviour. It may be a php bug.<br />
+<br />
+I used Mozilla 1.4 on a gentoo linux system to do the install on to a gentoo linux system with Apache1.3.29/php4.3.4<br />
+<br />
+The only thing I can suggest is to make sure register_globals is turned off, and try again with a fresh browser session.<br />
+<br />
+We have installed ATutor 1.4.3 on dozens of systems, and this is the first time I've seen this problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3638"></a>
+		<div class="forum-post-author">
+			<label class="title">Ratnavi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 12:40:53</p>
+            </div>
+            <div class="postheader"><h3>Installation requirements</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3639"></a>
+		<div class="forum-post-author">
+			<label class="title">Ratnavi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-14 12:41:46</p>
+            </div>
+            <div class="postheader"><h3>Can I install ATutor on a Lenux server?</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3655"></a>
+		<div class="forum-post-author">
+			<label class="title">arf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-15 01:54:17</p>
+            </div>
+            <div class="postheader"><h3>later ...</h3></div>
+				
+			<div class="body">
+				<p>For now thanks greg<br />
+<br />
+I will be able to return to this problem in a couple of days. I'll tell yoy what's going on</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

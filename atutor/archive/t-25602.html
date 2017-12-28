@@ -1,0 +1,187 @@
+---
+ title: SMTP  ERROR Failed to connect to server Network is unreachable 101
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>SMTP  ERROR Failed to connect to server Network is unreachable 101</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25602"></a>
+		<div class="forum-post-author">
+			<label class="title">cahit</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-10-04 13:26:25</p>
+            </div>
+            <div class="postheader"><h3>SMTP  ERROR Failed to connect to server Network is unreachable 101</h3></div>
+				
+			<div class="body">
+				<p>Hi;<br />
+External SMTP server can not send the mail to the users those who forgot their passwords; <br />
+The settings we have and the information about the version is listed below.<br />
+Even though we read the forms, the problem was not solved. <br />
+We would be glad if you could help. Thenks.<br />
+Cahit Cengizhan<br />
+<br />
+1:<br />
+Forgot your password?<br />
+The following errors occurred:<br />
+There was an error sending the email message.<br />
+2:<br />
+SMTP -> ERROR: Failed to connect to server: Network is unreachable (101)<br />
+<br />
+-----------------------------<br />
+My settings of Atutor;<br />
+/include/config.inc.php <br />
+define('MAIL_USE_SMTP', TRUE);<br />
+--------------------------------------------<br />
+/include/classes/phpmailer/class.phpmailer.php<br />
+var $Mailer            = "smtp"; <br />
+// SMTP VARIABLES	<br />
+ var $Host        = "mail.Myhosting.com";	<br />
+ var $Port        = 587;<br />
+ var $SMTPAuth     = true;<br />
+ var $Username     = "mail@Myhosting.com";<br />
+ var $Password     = "**********";<br />
+ var $SMTPDebug    = true;<br />
+---------------------------------------- <br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux ???  I'm using Hosting Services<br />
+  ATutor version - 2.2(XXX - 2015-10-04 15:05:10).<br />
+  Patch #s applied - 001-0013 All installed.<br />
+  ATutor theme name - ATutor Default	2.2 default/<br />
+  PHP version - 5.4.41<br />
+  MySQL version - 5.5.42-cll<br />
+  Webserver & version - Apache Ver??<br />
+  Copies of error messages - SMTP -> ERROR: Failed to connect to server: Network is unreachable (101)<br />
+  Changes to default settings - NO<br />
+  Web browser being used - Firefox, Chrome, Yandex, <br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25603"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-10-05 17:48:44</p>
+            </div>
+            <div class="postheader"><h3>Re: SMTP -> ERROR: Failed to connect to server: Network is unreachable (101)</h3></div>
+				
+			<div class="body">
+				<p>Have you seen the FAQs?<br />
+http://www.atutor.ca/atutor/docs/faq.php#1</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25605"></a>
+		<div class="forum-post-author">
+			<label class="title">cahit</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-10-11 07:40:59</p>
+            </div>
+            <div class="postheader"><h3>Re: SMTP -> ERROR: Failed to connect to server: Network is unreachable (101)</h3></div>
+				
+			<div class="body">
+				<p>Hello there;<br />
+I read the description on the page. There are no details on the configuration of the SMTP mail service. Hosting services are bought on a Linux server.<br />
+Server: mail.myhosting.co port 587 as.<br />
+The information necessary for SMTP configuration where you can provide information about how to do?<br />
+SMTP information which we need to fix the file.<br />
+We made a few changes in the above example file. After that came the subject of the message screen. SMTP authentication message shows the security error. class.phpmailer.php file in the SSL / TLS setting to no.<br />
+Thank you for your help and support.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25606"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-10-11 09:25:58</p>
+            </div>
+            <div class="postheader"><h3>Re: SMTP -> ERROR: Failed to connect to server: Network is unreachable (101)</h3></div>
+				
+			<div class="body">
+				<p>Best to talk to your system administrator about this.<br />
+<br />
+If mail is working on the server, ATutor mail will work out of the box. Configuring mail servers is beyond the help we can provide.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25608"></a>
+		<div class="forum-post-author">
+			<label class="title">cahit</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-10-18 07:25:27</p>
+            </div>
+            <div class="postheader"><h3>Re: SMTP -> ERROR: Failed to connect to server: Network is unreachable (101)</h3></div>
+				
+			<div class="body">
+				<p>Mr. Greek<br />
+I asked questions about the sending SMTP mail.<br />
+I use my settings and I am sending solution.<br />
+I'm now working on my system, it can send SMTP mail.<br />
+It can help other users.<br />
+For the next major update; I implore you,<br />
+1. phpMail should be made to the current class file.<br />
+2. atutormailer.class.php or use e-mail settings from within another file.<br />
+3. In config.inc.php mail settings can also be added.<br />
+Thank you for your help and support.<br />
+****************************************************<br />
+My files ADDING and CHANGE SETTINGS<br />
+/include/classes/phpmailer/atutormailer.class.php<br />
+<br />
+function ATutorMailer() {<br />
+if (MAIL_USE_SMTP) {<br />
+	$this->SMTPDebug = 0;    // Enable verbose debug output<br />
+	$this->IsSMTP(); // set mailer to use SMTP<br />
+	$this->Host = 'mail.XYZDOMAIN.com';  // Specify main and backup SMTP servers<br />
+//      $this->Host = ini_get('SMTP');  // Atutor Default VALUES Read php.ini file<br />
+	$this->SMTPAuth = true;  // turn on SMTP authentication C&C TRUE Default False <br />
+	$this->Username = 'mailadress@XYZDOMAIN.com';                 // SMTP username<br />
+	$this->Password = 'MyPassword';                           // SMTP password<br />
+	$this->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted<br />
+	$this->Port = 587;                                    // TCP port to connect to<br />
+} else {<br />
+	$this->IsSendmail(); // use sendmail<br />
+	$this->Sendmail = ini_get('sendmail_path');<br />
+	$this->SMTPAuth = false;  // C&C Default false <br />
+}<br />
+	$this->IsHTML(false);<br />
+// send the email in the current encoding:<br />
+	global $myLang;<br />
+	$this->CharSet = $myLang->getCharacterSet();<br />
+}</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

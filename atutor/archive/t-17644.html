@@ -1,0 +1,108 @@
+---
+ title: Very strange situation
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Very strange situation</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17644"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-04 00:51:24</p>
+            </div>
+            <div class="postheader"><h3>Very strange situation</h3></div>
+				
+			<div class="body">
+				<p>Here's one for the advnaced users.....  :)<br />
+<br />
+I use FileZilla as my FTP tool and normally use Notepad to do editing with.  I made a couple edits to /ATutor/file_storage/index.php.  After uploading the file, I could no longer download files because they were corrupted.  However, I noticed that if I uploaded the same file (with edits) after working on it with Wordpad, then uploading with FileZilla, everything was fine.<br />
+<br />
+The contents of each file (the Wordpad one and the Notepad one) were identical.  However, when I looked at the Notepad one with a binary viewer, I noticed a UTF-8 "Byte Order Mark" (three weird characters that I can't write here (an "i" thing, a double arrow to the right, and an upside down question mark)) at the beginning of the file, whereas there was not one on the Wordpad file.  And it was this difference that was causing the corrupting of the files upon download.<br />
+<br />
+So here's kicker.  This only has happened with this file, not others that I've edited.<br />
+<br />
+I've attached the file with the Byte Order Mark so you can see it if you have a binary viewer.<br />
+<br />
+Below are the specs for my ATutor installation.  A gold star to whoever figures this one out. :D <br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux CentOS (is this what you're looking for?)<br />
+  Atutor version - 1.6.2<br />
+  Patch #s applied - Fully patched<br />
+  Atutor theme name - default<br />
+  PHP version - 5.2.2<br />
+  MySQL version - 5.1.30<br />
+  Webserver & version - Unsure.  Host Gator is the webhost.<br />
+  Copies of error messages - None<br />
+  Changes to default settings - I've made some.  Too much to list, but since it broke when my site was migrated, I don't think it's relevant.<br />
+  Web browser being used - IE7<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17649"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-04 09:21:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Very strange situation</h3></div>
+				
+			<div class="body">
+				<p>You should not be using Notepad to edit code. It inserts foreign characters that break php code. Wordpad does not insert these characters, but still I suggest you find yourself a proper programmers text editor. There's many out there.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17651"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-04 10:07:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Very strange situation</h3></div>
+				
+			<div class="body">
+				<p>Ok.  Any suggestions?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17663"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-04 11:55:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Very strange situation</h3></div>
+				
+			<div class="body">
+				<p>Anything but Notepad. We use Editplus on Windows, but you need to pay that.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

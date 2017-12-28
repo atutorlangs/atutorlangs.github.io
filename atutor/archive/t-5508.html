@@ -1,0 +1,175 @@
+---
+ title: MySQL password for version 41 and up
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>MySQL password for version 41 and up</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5508"></a>
+		<div class="forum-post-author">
+			<label class="title">Joka</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:04:46</p>
+            </div>
+            <div class="postheader"><h3>MySQL password for version 41 and up</h3></div>
+				
+			<div class="body">
+				<p>ATutor version: 1.5<br />
+<br />
+If you are trying to install ATutor 1.5 on a system using MySQL versions 4.1 and up, and you have created a specific account for your ATutor application to use when connecting to the db, you have probably discovered that ATutor will not connect to the db.<br />
+<br />
+MySQL 4.1 and up uses an authentication protocol based on a password hashing algorithm that is incompatible with that used by ATutor. To solve this problem, create (or modify) the account password by resetting the password to pre-4.1 style. This can be done using the SET PASSWORD statement and the OLD_PASSWORD() function:<br />
+<br />
+mysql> SET PASSWORD FOR -> 'some_user'@'some_host' = OLD_PASSWORD('newpwd');<br />
+<br />
+Alternatively, use UPDATE and FLUSH PRIVILEGES:<br />
+<br />
+mysql> UPDATE mysql.user SET Password = OLD_PASSWORD('newpwd') -> WHERE Host = 'some_host' AND User = 'some_user';<br />
+mysql> FLUSH PRIVILEGES;<br />
+<br />
+Substitute the password you want to use for newpwd in the preceding examples. MySQL cannot tell you what the original password was, so you'll need to pick a new one.<br />
+<br />
+Maybe in future versions of ATutor some code changes will ensure this is no longer a catch :-) .</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5510"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:17:43</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>I'm not sure what you are referring to. ATutor does not store the password in any MySQL specific way. It uses whatever password is supplied. It's up to the person installing ATutor to ensure that the username and password for MySQL are valid and allow ATutor to create the database (if it doesn't already exist).<br />
+<br />
+ATutor is not able to create such MySQL accounts for you, nor is it able to flush the privileges.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5515"></a>
+		<div class="forum-post-author">
+			<label class="title">Joka</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:50:56</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>I came across this problem after entering my password during the ATutor installation process.<br />
+<br />
+The connection of the client [ATutor] to the database could not be established until I updated the password in the 'mysql' db (I am speaking of the db in mysql called 'mysql'), using the OLD_PASSWORD() function that I mentioned.<br />
+<br />
+Authentication is managed by checking DB_USER and DB_PASSWORD (defined in the '/include/config.inc.php' file against information in the 'user' table of the 'mysql' db.<br />
+<br />
+<br />
+All that this means is that probably ATutor is using the 'old' password hashing method, not the new one now present in MySQL versions 4.1 and above.<br />
+<br />
+Hopefully this makes things a little clearer.<br />
+<br />
+Cheers.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5517"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 14:08:04</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>ATutor doesn't store the hashed password. It sends the password to the MySQL client as plain text. The client then hashes the password to match wathever scheme MySQL is using.<br />
+<br />
+If you are saying that you upgraded your MySQL installation to 4.1 and that ATutor would no longer connect using that account, then neither would any other application or client.<br />
+<br />
+4.1 requires you to run a password update script.<br />
+<br />
+So this isn't actually an ATutor problem, it's part of the MySQL upgrade.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5523"></a>
+		<div class="forum-post-author">
+			<label class="title">Joka</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-19 05:29:28</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>As a matter of fact the 'problem' connecting to MySQL &#8805; 4.1 lies with php.<br />
+Here are some quotes from http://fr3.php.net/mysql<br />
+-----------------------------------------------------------------------<br />
+Pat<br />
+23-Jan-2004 12:02<br />
+"The password hashing was updated in MySQL 4.1, you must use the MySQLi extension with MySQL 4.1+ (or use the following method to allow pre 4.1 clients to connect).<br />
+<br />
+MySQL 5.0 has a new password system, and PHP cannot connect to it because it cannot send a correct password.  You must use the MySQL command OLD_PASSWORD() when adding a user to the database, or PHP cannot connect as of the library that comes with PHP 5.0Beta3"<br />
+<br />
+chaoscontrol_hq at yahoo dot com<br />
+23-Aug-2004 11:10<br />
+"In MySQL4.1 and later, the default password hashing format has changed making it incompatible with 3.x clients.<br />
+I found out mysql_connect() works on server versions >= 4.1 when your MySQL user password is blank because password authentication isn't done in that case, otherwise you need to use another connection method (e.g. mysqli).<br />
+Also if you are using old MySQL tables on a new server (i.e. the passwords are stored in the old format), then the server will use the old auth method automatically and this function should work in all cases.<br />
+Hopefully this will help someone, it had me confused for a while because some of the users on my 4.1 server could connect and some couldn't."</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5526"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-19 10:22:15</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>ATutor does not make use of MySQL 4.1+ specific features and works fine using the existing MySQL library in PHP.<br />
+<br />
+ATutor does not make use of MySQLi, and is unlikely to do so for some time.<br />
+<br />
+Again, this is a MySQL client issue, and unrelated to ATutor.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

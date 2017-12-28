@@ -1,0 +1,98 @@
+---
+ title: Problem Loging in when IP is constantly changing
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem Loging in when IP is constantly changing</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="23063"></a>
+		<div class="forum-post-author">
+			<label class="title">AtutorPplcrt</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-05-17 03:40:29</p>
+            </div>
+            <div class="postheader"><h3>Problem Loging in when IP is constantly changing</h3></div>
+				
+			<div class="body">
+				<p>Dear All,<br />
+<br />
+We have an issue with a simple default install of the ATutor system. We are a large International Organization and we use Traffic Management and Load Balancing systems in order to reach the Internet. This means that if a user is requesting a page, in each submit or refresh, the IP is constantly changing. This makes it impossible to login to ATutor, as we have seen in the code that the validity of the session depends on the IP of the user (among other criteria). Do you have a solution? Many other organizations in our country may have the same problem. Our configuration is the following:<br />
+<br />
+operating system  - Fedora core 16<br />
+version of ATutor - 2.0.3<br />
+versions of php - 5.3.11<br />
+version of mysql - 5.5.22<br />
+webserver & version - Apache/2.2.22 (Fedora) <br />
+your ATutor location- http://accesspass.org<br />
+<br />
+Thanks in advance for your time.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23064"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-05-17 09:19:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem Loging in when IP is constantly changing</h3></div>
+				
+			<div class="body">
+				<p>Thanks for reporting this issue which I've filed a bug report: http://atutor.ca/atutor/mantis/view.php?id=4980<br />
+<br />
+The temporary work-around is to disable the IP address validation by commenting out that chunk of the code located at include/vitals.inc.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23065"></a>
+		<div class="forum-post-author">
+			<label class="title">AtutorPplcrt</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-05-17 09:37:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem Loging in when IP is constantly changing</h3></div>
+				
+			<div class="body">
+				<p>Thanks for your response. I will try that and get back to you with the results. As you may understand, we do not want to tamper with the source code, as future upgrades might revert changes we have made.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23066"></a>
+		<div class="forum-post-author">
+			<label class="title">AtutorPplcrt</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-05-17 09:48:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem Loging in when IP is constantly changing</h3></div>
+				
+			<div class="body">
+				<p>Hello again. The solution provided seems to be working for now. Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

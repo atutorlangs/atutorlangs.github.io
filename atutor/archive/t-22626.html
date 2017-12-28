@@ -1,0 +1,152 @@
+---
+ title: I cannot login to my AContent installation
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>I cannot login to my AContent installation</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22626"></a>
+		<div class="forum-post-author">
+			<label class="title">yingzhuo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-09 15:07:32</p>
+            </div>
+            <div class="postheader"><h3>I cannot login to my AContent installation</h3></div>
+				
+			<div class="body">
+				<p>Hi <br />
+<br />
+I have just set up both ATutor and AContent in my system (OS: linux debian latest, server: apache2, php5: latest, mysql: latest).<br />
+<br />
+It's an unmaneged VPS so I am in full control<br />
+<br />
+http://kampus.akademia.cl (ATutor)<br />
+http://labs.akademia.cl (AContent)<br />
+<br />
+I have managed OK to connect them and to produce and import a sample lesson from AContent to ATutor, which is visible there, so all that is fine. But after I log out of AContent, when I try to login again I get this error message:<br />
+<br />
+"The following errors have occured:<br />
+<br />
+This account has been deactivated"<br />
+<br />
+My solution was to register a new user but then after logout the same login error happens with that user too<br />
+<br />
+I am absolutely sure that I am using the right login details</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22633"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-10 09:57:27</p>
+            </div>
+            <div class="postheader"><h3>Re: I cannot login to my AContent installation</h3></div>
+				
+			<div class="body">
+				<p>Can you post the exact error message that was given at your AContent login so we could trace down when it's triggered? "This account has been deactivated" isn't found in our error messages stock.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22637"></a>
+		<div class="forum-post-author">
+			<label class="title">yingzhuo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-10 16:30:57</p>
+            </div>
+            <div class="postheader"><h3>Re: I cannot login to my AContent installation</h3></div>
+				
+			<div class="body">
+				<p>It's the spanish version of AContent. I am including a screen snapshot so you can see the exact wording. Or you could try registering a dummy user and then logging out, the error will be reproduced when you attempt to login  in again. (...maybe "desactivada" is the translation for "disabled"?)<br />
+<br />
+http://labs.akademia.cl/AContent/login.php <br />
+<br />
+(I have a feeling the issue might have to do with mysql collation, as the installation script asked me to change the collation but as a result the Spanish special chars are breaking down, as you can see at the bottom of the snapshot... but it is only a hunch)<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22641"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-11 09:57:08</p>
+            </div>
+            <div class="postheader"><h3>Re: I cannot login to my AContent installation</h3></div>
+				
+			<div class="body">
+				<p>I cannot reproduce the same issue at my localhost and the demo site: http://atutor.ca/acontent/demo/home/index.php<br />
+<br />
+One thing you'd like to check is the field definition of AC_users.status ("AC_users" is the table name and "status" is the field). This field should be defined as,<br />
+<br />
+NOT NULL default '1'<br />
+<br />
+"default '1'" is important which means enabling the registered user by default. The value "0" would throw "disabled" error.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22643"></a>
+		<div class="forum-post-author">
+			<label class="title">yingzhuo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-11 14:56:41</p>
+            </div>
+            <div class="postheader"><h3>Re: I cannot login to my AContent installation</h3></div>
+				
+			<div class="body">
+				<p>Thanks for taking time over this. I did a full fresh install and the problem seems to have been solved. This time I presented the install script with no pre-made database so it created its own and there were no warnings or other issues. One small side question though: under the profile tab al the personal info submitted during the install appears blank. Is this the expected behaviour? Last time I refilled the blanks, but this time I obviously did not dare touch it!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22644"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-11 15:18:13</p>
+            </div>
+            <div class="postheader"><h3>Re: I cannot login to my AContent installation</h3></div>
+				
+			<div class="body">
+				<p>Again, tried and cannot re-produced.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

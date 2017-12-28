@@ -1,0 +1,237 @@
+---
+ title: Uploaded content successfully but cannot view
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Uploaded content successfully but cannot view</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5164"></a>
+		<div class="forum-post-author">
+			<label class="title">xamount</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-20 12:33:28</p>
+            </div>
+            <div class="postheader"><h3>Uploaded content successfully but cannot view</h3></div>
+				
+			<div class="body">
+				<p>I successfully installed atutor, everything, works, i can creat courses etc.<br />
+<br />
+When i try to upload a file, it uploads successfully, but when i insert it as a link in the content HTML area and i click on the link i get a blank page.<br />
+<br />
+the link looks like the following:<br />
+<br />
+http://www.mydomain.org/atutordirectory/get.php/pricelist.xls<br />
+<br />
+any help here is appreciated.<br />
+<br />
+<br />
+<br />
+Things to describe: <br />
+  operating system - webserver on linux<br />
+  version of ATutor - 1.5<br />
+  versions of php - 4.3.11<br />
+  version of mysq l - 3.23.58<br />
+  webserver & version - Apache/2.0.51 (Fedora)<br />
+  web browser being used - Firefox 1.0.4</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5174"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-20 19:34:17</p>
+            </div>
+            <div class="postheader"><h3>Content package?</h3></div>
+				
+			<div class="body">
+				<p>Was the file part of a content package?<br />
+<br />
+I was able to reproduce the blank screen but only when the file was part of an imported con tent package? For regularly uploaded files there did not seem to be a problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5184"></a>
+		<div class="forum-post-author">
+			<label class="title">xamount</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-21 09:26:57</p>
+            </div>
+            <div class="postheader"><h3>No content package</h3></div>
+				
+			<div class="body">
+				<p>No, i was just trying to regularly upload a file.<br />
+<br />
+is get.php suppose to be part of my directory when i click on the file link?<br />
+<br />
+What can i do to solve this problem. <br />
+<br />
+In the meanwhile, i am going to re-install atutor and test again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5185"></a>
+		<div class="forum-post-author">
+			<label class="title">xamount</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-21 09:50:46</p>
+            </div>
+            <div class="postheader"><h3>php settings</h3></div>
+				
+			<div class="body">
+				<p>the following php settings are different from the recommended documentation:<br />
+<br />
+display_errors          = On<br />
+arg_separator.input     = &<br />
+magic_quotes_gpc        = On<br />
+register_argc_argv      = On<br />
+zlib.output_compression = Off<br />
+session.use_trans_sid   = Off<br />
+<br />
+Do you think this is what can be the cause of my problem? I am a bit hessitant to change any of these settings in the event that it can affect any of my other php applications.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5187"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-21 10:27:32</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>edit the ./include/config.inc.php file and set AT_FORCE_GET_FILE to FALSE.<br />
+<br />
+then move your content directory to /atutorydirectory/content/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5188"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-21 10:31:15</p>
+            </div>
+            <div class="postheader"><h3>get.php gets files</h3></div>
+				
+			<div class="body">
+				<p>Yes, get.php is supposed to be there. Since you should not be able to access files directly through a URL (assuming you have located you content directory outside your web document tree for security) get.php is used to retrieve files through the OSs file system.<br />
+<br />
+You could alternately locate the content directory within your ATutor installation and link to file directory with a full URL to the file in content directory. Though that means others could retrieve the file if the know the URL. If you're not concerned about that, then locating the content directory in your ATutor installation is not a problem. It would also make your course less portable if you decided to move or copy it.<br />
+<br />
+I was unable to reproduce the problem for regularly uploaded files. They download for me as they should through a relative link in a content page. <br />
+<br />
+See if you can reproduce the problem on our demo site:<br />
+http://atutor.ca/atutor/demo.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5191"></a>
+		<div class="forum-post-author">
+			<label class="title">buonocore</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-21 11:18:44</p>
+            </div>
+            <div class="postheader"><h3>No visualize my course</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5194"></a>
+		<div class="forum-post-author">
+			<label class="title">xamount</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-21 11:27:02</p>
+            </div>
+            <div class="postheader"><h3>Figured it out</h3></div>
+				
+			<div class="body">
+				<p>My content directory is in my default atutor directory. I dont really care about security of the uploaded files for now.<br />
+<br />
+But i re-installed atutor and now it works. The only difference is that i am using the default theme provided by atutor. Before i was using a user supplied theme that i got off the atutor website., so i think that is it. I believe the theme is Clean Blue by heidi.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5195"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-21 11:41:14</p>
+            </div>
+            <div class="postheader"><h3>ATutor 1.5 themes</h3></div>
+				
+			<div class="body">
+				<p>Clean Blue is an ATutor 1.4 theme. The old themes don't work with 1.5, so that could very well have been the problem.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

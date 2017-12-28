@@ -1,0 +1,151 @@
+---
+ title: Hosting Atutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Hosting Atutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19676"></a>
+		<div class="forum-post-author">
+			<label class="title">armyers</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-04 12:31:04</p>
+            </div>
+            <div class="postheader"><h3>Hosting Atutor</h3></div>
+				
+			<div class="body">
+				<p>Hey all,<br />
+<br />
+I was wondering if anyone has any experience with hosting ATutor for a relatively large amount of concurrent users (~5000).<br />
+Could someone give me some information about the system requirements needed for this many users?<br />
+<br />
+<br />
+Many thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19680"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-04 14:56:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Hosting Atutor</h3></div>
+				
+			<div class="body">
+				<p>That's a very large number of concurrent users. Even for a school with 50,000 students, there'd only be perhaps two or three hundred concurrent users maximum, with perhaps 4-500 during peak times. Your typical 2gig dual processor PC should do the job for 4-500 concurrent users.<br />
+<br />
+Concurrent users are all clicking at the exact same moment. You might have 10 times that logged in, and perhaps 10 times that not logged in.<br />
+<br />
+Nowadays with processing power as cheap as it is, a few thousand dollars US should handle just about any situation. Beef up the server a little with some extra RAM, and be connected to the Internet through a "fat" connection, and you'll be fine handing a 50,000 student school.<br />
+<br />
+You can also turn on the accelerator by defining a cache directory in the ATutor system preferences, which speeds things up dramatically, though most find they don't need it. All of the repetitive db queries get cached, greatly reducing the load on the server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19681"></a>
+		<div class="forum-post-author">
+			<label class="title">armyers</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-04 15:21:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Hosting Atutor</h3></div>
+				
+			<div class="body">
+				<p>Thank you very much for your reply!<br />
+<br />
+I'm mostly concerned about memory requirements. For example, Moodle claims (as a rule of thumb) that it needs 1GB RAM for every 50 concurrent users. <br />
+<br />
+   Reference:<br />
+   http://docs.moodle.org/en/Installing_Moodle<br />
+<br />
+I was suprised by this. Do you think ATutor's requirements are similar?<br />
+<br />
+Again, thank you for your time.<br />
+Albert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19683"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-04 16:33:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Hosting Atutor</h3></div>
+				
+			<div class="body">
+				<p>1GB for 50 concurrent users is a good rule. But you can bring that down considerably with caching turned, and perhaps a PHP accelerator like APC installed. With cache and APC, perhaps 1 GB per 100 concurrent users.<br />
+<br />
+How many users will be registered on the system? As opposed to the number of users logged in at one time.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19685"></a>
+		<div class="forum-post-author">
+			<label class="title">armyers</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-04 16:44:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Hosting Atutor</h3></div>
+				
+			<div class="body">
+				<p>around 25,500 accounts<br />
+<br />
+Thank you for your help!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19686"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-04 17:56:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Hosting Atutor</h3></div>
+				
+			<div class="body">
+				<p>You might count on 100 to 200 concurrent users, peaks around 3-400.<br />
+<br />
+What's more important is a fast connection to the Internet.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

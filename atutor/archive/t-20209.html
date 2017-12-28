@@ -1,0 +1,100 @@
+---
+ title: Time limit students access to open course
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Time limit students access to open course</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20209"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-21 07:57:32</p>
+            </div>
+            <div class="postheader"><h3>Time limit students access to open course</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+We are wanting to move one of our atutor courses to an 'always open' course.<br />
+eg. Course is available all the time<br />
+but students only have a limit time from signup to finish the course.<br />
+If this is posible, can we also set email reminders to go out at certain times? eg. 'You have 1 week left to complete your course' type thing?<br />
+<br />
+This would probably be done on a fresh install of atutor on a linux server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20210"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-21 09:37:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Time limit students access to open course</h3></div>
+				
+			<div class="body">
+				<p>Currently ATutor doesn't store enrollment start dates. You'll need to create a DB table with fields [i]{member_id, course_id, timestamp}[/i] and put the code to insert into it and delete from it on appropriate pages.<br />
+<br />
+Having that information, automatically unenrolling students and sending out reminders can be done by creating a simple module that uses ATutor's existing [i]cron[/i] capabilities.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22041"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-14 10:36:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Time limit students access to open course</h3></div>
+				
+			<div class="body">
+				<p>knowledgelab,<br />
+Did you ever get this working?  If so would you be prepared to share the code?<br />
+<br />
+Thanks<br />
+<br />
+Matt</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22042"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-14 12:58:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Time limit students access to open course</h3></div>
+				
+			<div class="body">
+				<p>Was this question addressed to me?<br />
+<br />
+We didn't need this kind of feature, so I never got to implementing it.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

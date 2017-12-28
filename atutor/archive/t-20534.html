@@ -1,0 +1,88 @@
+---
+ title: exportimport atutor users
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>exportimport atutor users</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20534"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-09 12:10:38</p>
+            </div>
+            <div class="postheader"><h3>exportimport atutor users</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+We are moving from Atutor 1.6.1 to 2.0 (and moving servers)<br />
+Is there a way to export the user database?<br />
+Or will it just have to be done manually?<br />
+If manually, is it just the 'AT_members' table that needs exporting?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20543"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-10 07:14:49</p>
+            </div>
+            <div class="postheader"><h3>Re: export/import atutor users</h3></div>
+				
+			<div class="body">
+				<p>Ok, Just in case anyone else searches for this.<br />
+<br />
+I exported the user list from AT_members table and imported it into my new AT install, all appears to be working ok.<br />
+<br />
+Couple of point for others :<br />
+<br />
+A direct MySQL export and import of the table data failed, so I had to export as CSV and import that.<br />
+This may have been down to using differant MySQL versions (althow both were 5 releases) or it could just have been the front end I used to export/import the data (export with phpmyadmin, import with webmin)<br />
+<br />
+The other problem was that the member_id numbers in AT_members clashed, this was becasue I had added a couple of users to the new install to test it. <br />
+And the imported data had users with the same ID number, I got around this by just deleteing the test users I had created before importing my old user data.<br />
+<br />
+One thing to watch for, is the course owner uses this ID number, so if you remove your test users, and import your old users, make sure you double check who owns the courses etc.<br />
+<br />
+Matt</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20545"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-10 08:23:18</p>
+            </div>
+            <div class="postheader"><h3>Re: export/import atutor users</h3></div>
+				
+			<div class="body">
+				<p>I think another option would be to upgrade to the new version, and then move the upgraded database to the new server. Of course, I don't know if that was possible/needed in this particular case.<br />
+<br />
+Also, when exporting via CSV there might be a problem with new users.<br />
+For each table MySQL internally keeps a counter that tells it the last ID that has been assigned. So, if you had e.g. 1000 users in the older DB and 5 in the newer one, and then just copied the table over via a CSV file, the counter in the new DB would remain at "5". And the next time you add a user to the new installation, MySQL will try to create a user with ID 6.<br />
+I think that MySQL's engine is intelligent enough to do something about that, but it's still best to copy an old table by generating a SQL file (which should contain a query to create a new table -- there is such an option in phpMyAdmin), then delete the target table and import the SQL file in its place.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

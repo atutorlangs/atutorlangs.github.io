@@ -1,0 +1,398 @@
+---
+ title: Unable to create import directory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Unable to create import directory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6446"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-27 23:57:18</p>
+            </div>
+            <div class="postheader"><h3>Unable to create import directory</h3></div>
+				
+			<div class="body">
+				<p>I have deployed our ATutor 1.5 onto a remote host (using LAMP). It is installed OK but unfortunately I am unable to import content. I have set the content folder (ATutor/content) permissions to "777" recursively and also the include/config.inc.php file but I still get the error. I am trying to import the How To 1.4.3 backup course zip file. When I try, a pop up window chugs away for a while repeatedly indicating sending data and "done" but eventually the import page shows the error above in red.<br />
+<br />
+Thanks for further insight.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6453"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-28 17:23:01</p>
+            </div>
+            <div class="postheader"><h3>reinstall</h3></div>
+				
+			<div class="body">
+				<p>Reinstall ATutor and use chmod a+rwx content/, instead of using 777.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6457"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-29 02:38:53</p>
+            </div>
+            <div class="postheader"><h3>reinstall</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg,<br />
+I didn't install - I just FTP'd the local installation and set up a MySQL database with the same name, and then restored a backup of the local database. Are you saying it would be best to scrub the entire remote installation?<br />
+<br />
+I'll try the hosting support with the chmod suggestion.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6459"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-29 09:48:56</p>
+            </div>
+            <div class="postheader"><h3>reinstall</h3></div>
+				
+			<div class="body">
+				<p>I suppose you could copy your local installation to your hosted site, though installing there from scratch would be recommended,<br />
+<br />
+Recursive chmod -R 777 is possible, but less secure than chmod a+rwx.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6532"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-10 01:09:54</p>
+            </div>
+            <div class="postheader"><h3>Still trying</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I still haven\'t solved this. I am yet to try and reinstall. The application reports the same error \"unable to create directory\". However, I have investigated further. I am now using FileZilla and I notice that I can change the folder permission in /ATutor/ for other folders such as /ATutor/Chat and I see the string change accordingly in the permissions column. If I go away and come back, the changes have \"stuck\". However, this is not the case with the /ATutor/content folder. If I right click on the folder and use \"file attributes\", it is set to 760. If I change it to 777 the permissions string doesn\'t change and the changes don\'t stick. It only seems to be that folder.<br />
+<br />
+Also, when trying the applications chat utility, I get the error:<br />
+<br />
+Warning: mkdir(): SAFE MODE Restriction in effect. The script whose uid/gid is 944/944 is not allowed to access /var/www/html owned by uid/gid 0/0 in /var/www/schoolnetnetsb/public_html/ATutor/chat/index.php on line 46<br />
+No transcripts found.<br />
+<br />
+The mkdir() reference is obviously about permissions to create folders.<br />
+<br />
+Do you have any more insights?<br />
+<br />
+David</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6538"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-10 09:32:36</p>
+            </div>
+            <div class="postheader"><h3>Safemode off</h3></div>
+				
+			<div class="body">
+				<p>ATutor requires that safemode be turned off. I'm guessing this is the source of your problem.<br />
+<br />
+Also, do not use 777. Instead use a+rwx on the content directroy to set its permissions during the installation.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Hello,<br />
+<br />
+I still haven\'t solved this. I am yet to try and reinstall. The application reports the same error \"unable to create directory\". However, I have investigated further. I am now using...<br />
+[op]forums/view.php?fid=7;pid=6446;page=1#6532[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6555"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-11 21:25:28</p>
+            </div>
+            <div class="postheader"><h3>safe mode</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+The hosting support say they don't allow Safe Mode off. The error below indicates that the application is trying to write to the /var/www/html area instead of the correct public content area<br />
+/var/www/html/schoolnetnetsb/public_html/ATutor/content <br />
+<br />
+Line 46 in .../chat/index.php refers to AT_CONTENT_DIR and in the config.inc.php file this is defiantely set to<br />
+<br />
+define('AT_CONTENT_DIR', '/var/www/html/schoolnetnetsb/public_html/ATutor/content/');<br />
+<br />
+When accessing chat, however, it still comes up with error<br />
+<br />
+Warning: mkdir(): SAFE MODE Restriction in effect. The script whose uid/gid is 48/944 is not allowed to access /var/www/html owned by uid/gid 0/0 in /var/www/schoolnetnetsb/public_html/ATutor/chat/index.php on line 46<br />
+No transcripts found.<br />
+<br />
+I havge also tried setting <br />
+define('AT_FORCE_GET_FILE', TRUE);<br />
+<br />
+but no difference.<br />
+<br />
+The site is at www.schoolnet.net.sb/ATutor if you are able to try (user instructor pwd instructor) By all means try importing a  small scorm to see the error that comes up.<br />
+<br />
+thanks for any help<br />
+David</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6561"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-12 17:27:51</p>
+            </div>
+            <div class="postheader"><h3>error found</h3></div>
+				
+			<div class="body">
+				<p>I have figured out the error - it was the AT_CONTENT_DIR setting in the config file. It is now correctly referencing the content directory. However, the application is still not able to create directories. I don't seem to be able to change the permissions and am communicating with the hosting support people.<br />
+David</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6562"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-13 08:13:48</p>
+            </div>
+            <div class="postheader"><h3>safe mode restrictions</h3></div>
+				
+			<div class="body">
+				<p>Since safemode is enabled, there are a variety of functions that will not work in ATutor, including creating directories. Have a look at this list of php functions affected when safe mode is turned on.<br />
+<br />
+http://ca.php.net/manual/en/features.safe-mode.functions.php<br />
+<br />
+If you plan on using ATutor in a production environment, you will have to move to a system where safemode is turned off.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6569"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-13 15:25:35</p>
+            </div>
+            <div class="postheader"><h3>Safe mode</h3></div>
+				
+			<div class="body">
+				<p>Thanks,<br />
+<br />
+However I now seem to have it working. It does create directories, import and the Chat system is working. Can you indicate some functions that should definately not work with safe mode on, so that I can test them?<br />
+<br />
+David</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6570"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-13 21:48:47</p>
+            </div>
+            <div class="postheader"><h3>Safe mode - comments from hosting support</h3></div>
+				
+			<div class="body">
+				<p>The hosting support commented as below:<br />
+<br />
+Most of the problems of safe mode and the errors that may be thrown by parts of the program can be fixed by appropriately setting directory permissions or changing the safe_mode_include_dir and open_basedir appropriately. Try to get a more definitive statement from the authors of the program as to which functions of their program requires safe mode off "in a production environment" <br />
+<br />
+Can you tell me which functions need to be enabled as they are offering to find workarounds.<br />
+<br />
+As in my previous comment, it seems to be working but I need to be sure it is 100%<br />
+<br />
+David</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6574"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-14 13:38:51</p>
+            </div>
+            <div class="postheader"><h3>safemode or no safemode</h3></div>
+				
+			<div class="body">
+				<p>I can't quite make out what's going on on your server. You actually should not have been able to install ATutor if safemode is turned on. Though the error message suggested it is turned on. If everything is working, then safemode would seem to be turned off.  :-/<br />
+<br />
+Things that should not work are the file manager, theme importing, language importing, chat transcripts, and other features that need to write to the server.<br />
+<br />
+Attach a phpinfo() page here (again I think) from the server ATutor is running on.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6575"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-14 15:13:22</p>
+            </div>
+            <div class="postheader"><h3>phpinfo</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+www.schoolnet.net.sb/phpinfo1986752342.php<br />
+<br />
+The hosting company have made specific adjustments to the permissions but I think not all. File Manager, importing SCOs seem OK. Haven't tried themes or language importing. Chat is intermittently working - I have it working on the successfully imported "How To..1.4.3"  course, with transcripts. However on the other example courses we have imported, all I get is a blank page when I try to enter chat or start a transcript. Which folders need permissions setting for the chat?<br />
+<br />
+thanks for the assistance,<br />
+David</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17823"></a>
+		<div class="forum-post-author">
+			<label class="title">apetty</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-23 07:20:08</p>
+            </div>
+            <div class="postheader"><h3>Re: phpinfo</h3></div>
+				
+			<div class="body">
+				<p>Things to describe: <br />
+  Operating system ATutor is installed on -Apache<br />
+  ATutor version - 1.5.2<br />
+  Patch #s applied -<br />
+   Web browser being used - firefox<br />
+  ...and anything else relevant -<br />
+<br />
+Hi am getting the following error and unable to use the file manager:<br />
+Unable to open content directory. You may try to create it now.<br />
+<br />
+I have set the permission to read write execute as specified.<br />
+<br />
+The other important thing is that I have moved this site from one host to another.  It took me a while to get the full path of the content directory correct on the new server but this is working now. Any ideas on the file manager?<br />
+<br />
+Also chat gives this error:<br />
+Warning: mkdir(): No such file or directory in /hsphere/local/home/pettyftp/caisstraining.com/tools/chat/index.php on line 56<br />
+<br />
+No transcripts found.<br />
+<br />
+Site is www.caisstraining.com<br />
+<br />
+regards<br />
+<br />
+Andrew</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17825"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-23 08:39:06</p>
+            </div>
+            <div class="postheader"><h3>Re: phpinfo</h3></div>
+				
+			<div class="body">
+				<p>This generally means there is a permissions problem. <br />
+<br />
+Make sure the content directory is in the same place it was when on the old server. <br />
+<br />
+You may need the system administrator to set the permissions on the content directory, and sub directories. they should be owned by the web server owner usually call "nobody" if you are using an Apache server. The directory need to be writable by this user. See the installation instructions for details about making directories writable.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,212 @@
+---
+ title: change admin password in phpMyAdmin
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>change admin password in phpMyAdmin</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="17078"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-03 18:00:52</p>
+            </div>
+            <div class="postheader"><h3>change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>How it is possible to change admin password byusing phpMyAdmin?<br />
+<br />
+THanks,<br />
+<br />
+<br />
+Vedran</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17079"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-03 18:28:29</p>
+            </div>
+            <div class="postheader"><h3>Re: change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>I have not tested it, but it should be possible, setting the type to SHA1</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17081"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-04 01:10:48</p>
+            </div>
+            <div class="postheader"><h3>Re: change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+in Which table I can find passwords of admin(s) and the user(s).<br />
+I am experimenting with it and I will write small how to afterwards. I have had that issue when the parents or people with disabilities themselves sometimes loose and forget admin password.<br />
+<br />
+Thanks,<br />
+<br />
+Vedran</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17082"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-04 08:10:02</p>
+            </div>
+            <div class="postheader"><h3>Re: change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>Those are tables AT_admins and AT_members. You can edit a record and put whichever password you want into a field named "password", but before saving be sure to select "SHA1" from the dropdown box in Function column.<br />
+Also, make sure that all fields of timestamp type have that dropdown box empty.<br />
+<br />
+See the attached screenshot.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17083"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-04 08:14:18</p>
+            </div>
+            <div class="postheader"><h3>Re: change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>One more thing: actually, you shouldn't need to use phpMyAdmin for that if you're an admin in that installation.<br />
+Admins/superadmins can reset users' and other admins' passwords from within ATutor (Users tab).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17084"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-04 12:01:03</p>
+            </div>
+            <div class="postheader"><h3>Re: change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I know that it is possible to do that through ATutor admin part. I am thinking about possible scenario when person with disability loose or forget password on her/his standalone desktop computer.<br />
+THus, there must be a way how to change it and do that through phpmyadmin part.<br />
+<br />
+Thanks,<br />
+<br />
+Vedran</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17085"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-04 16:39:07</p>
+            </div>
+            <div class="postheader"><h3>Re: change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>I see. Then have a look at the method suggested on the screenshot.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17088"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-05 03:56:35</p>
+            </div>
+            <div class="postheader"><h3>Re: change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I already wrote a short manual on Serbian language how to do that.  I will write it on English too.<br />
+<br />
+Vedran</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17091"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-05 04:17:58</p>
+            </div>
+            <div class="postheader"><h3>Re: change admin password in phpMyAdmin</h3></div>
+				
+			<div class="body">
+				<p>This is link for manual on Serbian language:<br />
+http://www.gnulinuxcentar.org/izmena-lozinke-za-administratora.pdf<br />
+<br />
+Best wishes,<br />
+<br />
+Vedran</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

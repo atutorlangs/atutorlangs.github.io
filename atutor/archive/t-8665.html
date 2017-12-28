@@ -1,0 +1,114 @@
+---
+ title: email not going
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>email not going</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8665"></a>
+		<div class="forum-post-author">
+			<label class="title">allbhatias2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-19 02:09:47</p>
+            </div>
+            <div class="postheader"><h3>email not going</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -win 2003 server<br />
+  version of ATutor - latest<br />
+  versions of php - http://www.doctoratyourdoorstep.com/phpinfo.php<br />
+  version of mysq l - compatible<br />
+  webserver & version -iis 6<br />
+  copies of error messages - <br />
+The following errors occurred:<br />
+<br />
+    * There was an error sending the email message.<br />
+<br />
+<br />
+  changes to default settings - none<br />
+  web browser being used - firefox latest<br />
+  and anything else relevant -<br />
+<br />
+almost everything is working fine except that i can't send any mail..........nor am i able to undersatnd from where do i change the e-mail settings. my config.inc.php says MAIL_USE_SMTP, true. i tried changing it to 1) false  2) TRUE (in caps)<br />
+but this did not work<br />
+<br />
+can anyone help???</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8670"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-21 09:01:15</p>
+            </div>
+            <div class="postheader"><h3>Re: email not going</h3></div>
+				
+			<div class="body">
+				<p>You'll need to setup a pointer to an SMTP server in the php.ini file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8692"></a>
+		<div class="forum-post-author">
+			<label class="title">allbhatias2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-26 11:45:43</p>
+            </div>
+            <div class="postheader"><h3>Re: email not going</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg<br />
+<br />
+The issue is my atutor is installed in a sub-folder on my website. How do make changes to php.ini................this is a conventional website on a conventional server. I don't even know where the server is located. Can you guide me a bit as to how to send mails.<br />
+If it's not possible, then can u tell me a method of enrolling students without involving e-mail in the enrollment process.<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8693"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-26 13:48:22</p>
+            </div>
+            <div class="postheader"><h3>Re: email not going</h3></div>
+				
+			<div class="body">
+				<p>If you are on a hosted system, the system administrator will need to set the SMTP server in php.ini. (if the system is a Win 2003 server). <br />
+<br />
+Or, you can register all your students through the enrollment manager, then manually send them their user names and password. When they are created they are based on the first initial, underscore, lastname (e.g. login j_smith; password j_smith)<br />
+<br />
+ATutor is not going to function to its full capability if your server is not configured to handle email. I would suggest you find a host that uses Linux and Apache. Win2003 and IIS are not the most reliable when working with PHP based applications.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

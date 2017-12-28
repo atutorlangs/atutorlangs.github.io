@@ -1,0 +1,105 @@
+---
+ title: Automated tasks without cron set up
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Automated tasks without cron set up</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24268"></a>
+		<div class="forum-post-author">
+			<label class="title">talser</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-08-09 13:48:42</p>
+            </div>
+            <div class="postheader"><h3>Automated tasks without cron set up</h3></div>
+				
+			<div class="body">
+				<p>I have been running atutor 1.6.3 for a while and noticed that i did not set up cron but some automated things have occurred. Are there mechanisms that run scheduled tasks even if cron is not set up?<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24269"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-08-09 14:04:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Automated tasks without cron set up?</h3></div>
+				
+			<div class="body">
+				<p>It depends on the modules you have installed, whether cron is used or not. I think the only standard module that uses cron is the forums module, for sending out messages as a daily digest for instance, instead of sending as they are posted. This might be used to reduce load on a mail server if you are on a busy system.<br />
+<br />
+Otherwise cron is not needed or used on most systems.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24270"></a>
+		<div class="forum-post-author">
+			<label class="title">talser</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-08-09 14:11:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Automated tasks without cron set up?</h3></div>
+				
+			<div class="body">
+				<p>The reason i am asking is because i am trying to write my own module and i was going to use the cron hook. I was just curious if i could write it so that the user did not need to install cron for it to work once a day.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24271"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-08-09 14:44:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Automated tasks without cron set up?</h3></div>
+				
+			<div class="body">
+				<p>Cron is the strategy we've been using for automated task.<br />
+<br />
+There are other ways to mimic such tasks. Not knowing what your module will do, you could set a particular action to trigger a task. If you wanted to do a daily mailing for instance, you could use the first login (or whatever) after midnight to trigger the mail.  If the cron hook is not setup, default to the login trigger, etc. Certainly not perfect, but perhaps good enough as a backup when cron is not available.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

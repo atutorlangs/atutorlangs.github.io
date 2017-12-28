@@ -1,0 +1,102 @@
+---
+ title: Downloading multiple images in a zip file truncates the last image
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Downloading multiple images in a zip file truncates the last image</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18845"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-07 19:08:49</p>
+            </div>
+            <div class="postheader"><h3>Downloading multiple images in a zip file truncates the last image</h3></div>
+				
+			<div class="body">
+				<p>Maybe this should be in the bug tracker, but.....<br />
+<br />
+<br />
+When you select multiple images from file storage and click download it compiles the files into a .zip file and downloads it.  On the last file/image, it truncates/corrupts the bottom part of the image.<br />
+<br />
+I've confirmed this on the demo course on the test server.  I uploaded three images (Tree, Waterfall, and Winter Leaves) into the Course Files workspace.  Try to download them as a group of 3 or 2 and you'll see what I mean.  When downloaded individually or viewed using the "Edit" button, they display fine.<br />
+<br />
+This might sound like a trivial issue, but I believe it's having effects in other places in the way I use ATutor.<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18847"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 11:31:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Downloading multiple images in a .zip file truncates the last image</h3></div>
+				
+			<div class="body">
+				<p>The problem may be PHP related. I've confirmed the problem on the demo site, which uses php 5.2.5. On my local development system there's no problem, using php 5.2.6. <br />
+<br />
+I've made a note in the bug tracker, though this is one of the bugs we may not be able to do anything about.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18850"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 12:55:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Downloading multiple images in a .zip file truncates the last image</h3></div>
+				
+			<div class="body">
+				<p>Ok.  FYI, the php version on my server is PHP Version 5.2.9<br />
+<br />
+Here's a link to the phpinfo.php file on my site if you want to see specifics (www.LIVEonlinemath.com/phpinfo.php)<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18854"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 13:05:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Downloading multiple images in a .zip file truncates the last image</h3></div>
+				
+			<div class="body">
+				<p>I suppose we'll monitor this. Any more info that might provide clues, can be added to the bug tracker at:<br />
+<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=3956</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

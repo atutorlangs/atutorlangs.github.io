@@ -1,0 +1,124 @@
+---
+ title: Scorm User Tracking
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Scorm User Tracking</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25534"></a>
+		<div class="forum-post-author">
+			<label class="title">rene_iti</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-08-18 09:05:40</p>
+            </div>
+            <div class="postheader"><h3>Scorm User Tracking</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 2.6.32-431.11.2.el6.x86_64<br />
+  ATutor version -2.1.1<br />
+  Patch #s applied - All <br />
+  ATutor theme name - 1.6 Basic<br />
+  PHP version - 5.4.24<br />
+  MySQL version - 5.2<br />
+  Webserver & version - Apache 2<br />
+  <br />
+<br />
+  Our elearning time has are using scorm modules now and would like to track users on scorm.   My understanding is that Atutor does track this in the database but last I could see the tools to report this have not been developed yet to present this data.  Is this still the case???   If it is is it possible to get a quote on how much to develop the needed tool?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25535"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-08-20 13:14:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Scorm User Tracking</h3></div>
+				
+			<div class="body">
+				<p>The SCORM module was originally a community contributed module, though there is no one maintaining it now. It did at one time collect data, though I seem to recall there were problems with the data collection so it was disabled.<br />
+<br />
+If you are interested, perhaps you can take ownership of the module and continue its development.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 2.6.32-431.11.2.el6.x86_64<br />
+  ATutor versio...<br />
+[op]forums/view.php?fid=7;pid=25534;page=1#25534[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25545"></a>
+		<div class="forum-post-author">
+			<label class="title">rene_iti</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-08-29 11:02:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Scorm User Tracking</h3></div>
+				
+			<div class="body">
+				<p>Is the tracking still just disabled or has it been removed?   If it is still there can you send me all the information about it.   I have a couple of developers that work for me and I will look into possibly taking it over.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25546"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-08-29 12:14:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Scorm User Tracking</h3></div>
+				
+			<div class="body">
+				<p>I did some digging through old versions of the module, and the code that was saving data no longer seems to be there (cmi.php), or perhaps was never there, though the table that stores the data is still in the module.sql file.  <br />
+<br />
+https://github.com/atutor/scorm_packages/blob/master/scorm-1.2/lib.inc.php#L84-L100<br />
+<br />
+https://github.com/atutor/scorm_packages/blob/master/module.sql#L67-L75<br />
+<br />
+I could find not references to the getCMILinks function that apparently saved data, so perhaps it was not implemented in the first place. <br />
+<br />
+<br />
+I did find this bug report, which suggests a fix. It also suggest cmi data is being processed through the .jar file.<br />
+<br />
+http://atutor.ca/atutor/mantis/view.php?id=4618&history=1<br />
+<br />
+https://github.com/atutor/scorm_packages/blob/master/scorm-1.2/view.inc.php#L178-L191<br />
+<br />
+https://github.com/atutor/scorm_packages/blob/master/scorm-1.2/java/ATutorApiAdapterApplet.java#L9<br />
+<br />
+Hopefully there's something useful there.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

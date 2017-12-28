@@ -1,0 +1,186 @@
+---
+ title: Upgrade instruction
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Upgrade instruction</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="14821"></a>
+		<div class="forum-post-author">
+			<label class="title">kreecha</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-13 23:36:39</p>
+            </div>
+            <div class="postheader"><h3>Upgrade instruction</h3></div>
+				
+			<div class="body">
+				<p>I used ATutor version 1.5.3.3 and want to upgrade to newest version 1.6.1. However, i want to be sure how to upgrade, so my users would be able to continue without frustration. <br />
+<br />
+What do i have to do? Can anyone guide me please, which tables do i have to back up or export data? A Step by step would be grateful. Thank you in advance for your help.<br />
+<br />
+Regrds,<br />
+Kai</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14822"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-14 03:14:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade instruction</h3></div>
+				
+			<div class="body">
+				<p>see: http://www.atutor.ca/atutor/docs/installation.php<br />
+<br />
+in short, here's how I do it:<br />
+<br />
+1. back up and download my entire database with phpmyadmin or similar tool. <br />
+<br />
+2. upload the new ATutor directory, normally I name it something like atutor-new<br />
+<br />
+3. when both the new and old install is on my server I rename my running (old) install to atutor-old or similar, and rename the new upload to reflect my atutor install dir (typically the previous name of the old version). <br />
+<br />
+4. go to the new dir in my browser, and follow the upgrade instructions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14823"></a>
+		<div class="forum-post-author">
+			<label class="title">kreecha</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-14 04:32:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade instruction</h3></div>
+				
+			<div class="body">
+				<p>Hi vegard<br />
+<br />
+thank you for your reply. you mean everything in the db (schema) is the same between the old and new versions?<br />
+<br />
+and your point number 4 "go to the new dir in my browser, and follow the upgrade instructions". how is this happened?<br />
+<br />
+Sorry, i just want to be sure.<br />
+<br />
+Regards,</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14824"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-14 04:56:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade instruction</h3></div>
+				
+			<div class="body">
+				<p>hia, <br />
+<br />
+no, the db is changed, probably quite a bit from such an old version. you take a backup of it all in case something happens and you need to revert to the old version. <br />
+<br />
+when you access the folder the new ATutor version resides in, like myserver.td/atutor, ATutor will automatically ask you to do a new install or upgrade, chose upgrade and follow the instructions. <br />
+<br />
+the db etc are updated by the upgrade program running, and you only need to follow instructions. if anything goes wrong you will still have the old version of the db, as you backed it up, and also the old ATutor files in a different directory.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14830"></a>
+		<div class="forum-post-author">
+			<label class="title">kreecha</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-14 10:37:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade instruction</h3></div>
+				
+			<div class="body">
+				<p>Hi vegard,<br />
+<br />
+Thank you for your reply. I am a bit nervous and my main concerns are tremendous, since i have not used Atutor much -but have to upgrade. <br />
+<br />
+What's about re-importing user id, password. course contents and etc? Which tables do i have to import into the new tables/database?<br />
+<br />
+Or are all these handled by the new update/installer of Atutor new version?<br />
+<br />
+I think this should be my last question, hopefully.<br />
+<br />
+Thank you very much Vegard<br />
+<br />
+Cheers,<br />
+Kai</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14836"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-15 02:55:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade instruction</h3></div>
+				
+			<div class="body">
+				<p>everything is taken care of with the installer / upgrader, you don't move or import anything manually. <br />
+<br />
+you *could* try this on localhost first, to make sure. I suggest XAMMP for Windown or Linux and MAMP for Mac to set this up..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14837"></a>
+		<div class="forum-post-author">
+			<label class="title">kreecha</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-15 04:48:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade instruction</h3></div>
+				
+			<div class="body">
+				<p>Thank you Vegard you are very kind.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

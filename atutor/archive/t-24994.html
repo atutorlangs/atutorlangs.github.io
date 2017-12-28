@@ -1,0 +1,148 @@
+---
+ title: Bullet and number list
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Bullet and number list</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24994"></a>
+		<div class="forum-post-author">
+			<label class="title">es24tv</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-15 05:12:25</p>
+            </div>
+            <div class="postheader"><h3>Bullet and number list</h3></div>
+				
+			<div class="body">
+				<p>Please help with a simple question but I do not know where I fix. It has never happened with previous versions of ATutor:<br />
+<br />
+I can not create bullet lists with:<br />
+[php]&lt;ul>&lt;li> ... &lt;/ul>[/php]<br />
+<br />
+or numbers<br />
+[php]&lt;ol>&lt;li> ... &lt;/ol>[/php]<br />
+<br />
+They look the identiciones, No carateres "*" or numbers (eg "1.")<br />
+<br />
+I've tried IE, Chrome and Firefox on 2 different PCs, both with and without the visual editor. In "visual editor" mode, when I edit the content see the lists, and keep close when neither the bullet nor the numbers are not visible.<br />
+<br />
+I have created a page on the demo site Atutor and there it works normally. Please could give me a guide to fix this?<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on Linux 2.6.32-431.20.3.el6.x86_64<br />
+  ATutor version 2.2<br />
+  Patch #s applied 1,2,3,4,5<br />
+  ATutor theme name Bluemin<br />
+  PHP version 5.3.3<br />
+  MySQL version 5.1.73</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24995"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-15 07:04:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Bullet and number list</h3></div>
+				
+			<div class="body">
+				<p>Change that at:<br />
+<br />
+https://github.com/atutor/ATutor/blob/master/themes/blumin/styles.css#L1175<br />
+<br />
+It is a feature of that theme.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24996"></a>
+		<div class="forum-post-author">
+			<label class="title">es24tv</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-15 07:29:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Bullet and number list</h3></div>
+				
+			<div class="body">
+				<p>Thank you, Greg! The change has worked very well.<br />
+<br />
+Best Regards,<br />
+<br />
+Mario</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25875"></a>
+		<div class="forum-post-author">
+			<label class="title">es24tv</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-07-02 11:59:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Bullet and number list</h3></div>
+				
+			<div class="body">
+				<p>The problem of not seeing the lists configured with &lt;ul>&lt;li> ... or &lt;ol>&lt;li> ... subsists in the Mobile theme; Please, in which *.css of the Mobile Theme I can apply a correction?<br />
+Things to describe: <br />
+  ATutor version - 2.2.2<br />
+  ATutor theme name - Mobile<br />
+  Web browser being used - Chrome on Samsung S6 Edge, Androide 6.0.1<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Thank you, Greg! The change has worked very well.<br />
+<br />
+Best Regards,<br />
+<br />
+Mario<br />
+[op]forums/view.php?fid=7&pid=24994&page=1#24996[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25877"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-07-02 15:22:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Bullet and number list</h3></div>
+				
+			<div class="body">
+				<p>It would be in:<br />
+<br />
+https://github.com/atutor/ATutor/blob/atutor_2_2_2/themes/mobile/mobile.css<br />
+<br />
+You will need to experiment to find the style to adjust. Like the blumin theme, list bullets are turned off on purpose. Turning them on may change the layout of the theme.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

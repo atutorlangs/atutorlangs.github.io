@@ -1,0 +1,82 @@
+---
+ title: Email Confirmation Question
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Email Confirmation Question</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8031"></a>
+		<div class="forum-post-author">
+			<label class="title">ahfund</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-15 08:12:13</p>
+            </div>
+            <div class="postheader"><h3>Email Confirmation Question</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - Unix<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - 4.3.9<br />
+  version of mysql - 4.0.25<br />
+  webserver & version - Unknown<br />
+  copies of error messages - No error<br />
+  changes to default settings - None<br />
+  web browser being used - Internet Explorer<br />
+  and anything else relevant -<br />
+<br />
+The e-mail confirmation is not working on my system. I get e-mail reminders of my password but if I subscribe I do not get an e-mail requesting confirmation.<br />
+<br />
+I had tried to upgrade my previous version but did a full new install and directed the wizard to my existing tables and courses.<br />
+<br />
+At this point I am willing to live with e-mail confirmation turned off. <br />
+<br />
+I only have two users I care to keep my admin user and a test student user. <br />
+<br />
+If I manually deleted these records and reentered them how do I:<br />
+<br />
+1. Set the admin user with the highest level of authority?<br />
+<br />
+2. Create a new user and verify their e-mail address manually in the MySQL table for users?<br />
+<br />
+Thanks,<br />
+<br />
+Mark</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8033"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-15 08:59:17</p>
+            </div>
+            <div class="postheader"><h3>Re: E-mail Confirmation Question</h3></div>
+				
+			<div class="body">
+				<p>You have to turn on email confirmation in the admin System Preferences. I have confirmed in our local test systems that all email functions are working properly. They all use the same mail function, so its a mystery why only confirmation does not work. I can only guess that it has not been turned on.<br />
+<br />
+If you are going to install a fresh version of ATutor, you should start with a fresh database. Writing over an existing db will likely create problems.<br />
+<br />
+1. Create a new admin in the admin table. Set "privileges" to 1.<br />
+<br />
+2. Set "status" to 2 in the members table.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

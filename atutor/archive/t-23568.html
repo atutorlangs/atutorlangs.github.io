@@ -1,0 +1,161 @@
+---
+ title: Installs fine but cant create course
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installs fine but cant create course</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="23568"></a>
+		<div class="forum-post-author">
+			<label class="title">bsagowitz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-02 16:49:29</p>
+            </div>
+            <div class="postheader"><h3>Installs fine but cant create course</h3></div>
+				
+			<div class="body">
+				<p>OS: Scientific Linux 6.3 32-Bit<br />
+ATutor version 2.1.rc2<br />
+XAMPP for linux 1.81<br />
+<br />
+Installed and had the $_FILES problem (5069) and fixed that.  Now I have this problem when logging in as an instructor:<br />
+<br />
+Strict Standards: Only variables should be assigned by reference in /opt/lampp/htdocs/ATutor/include/vitals.inc.php on line 191<br />
+<br />
+Fatal error: Cannot re-assign auto-global variable _POST in /opt/lampp/htdocs/ATutor/mods/_core/courses/lib/course.inc.php on line 48<br />
+<br />
+I also get this if I log in as super admin and then click on create course.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23573"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-03 09:06:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Installs fine but can't create course</h3></div>
+				
+			<div class="body">
+				<p>There is an old referecne in vitals that can be removed:<br />
+<br />
+at about line 191change <br />
+<br />
+[php]<br />
+<br />
+$myLang =& $languageManager->getMyLanguage();<br />
+<br />
+[/php] <br />
+<br />
+to <br />
+<br />
+[php]<br />
+<br />
+$myLang = $languageManager->getMyLanguage();<br />
+<br />
+[/php] <br />
+<br />
+We're looking into the other problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23575"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-03 10:53:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Installs fine but can't create course</h3></div>
+				
+			<div class="body">
+				<p>To resolve the second error, replace the course.inc.php file with a copy from the code repository.<br />
+<br />
+https://github.com/atutor/ATutor/blob/master/mods/_core/courses/lib/course.inc.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23576"></a>
+		<div class="forum-post-author">
+			<label class="title">bsagowitz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-03 15:53:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Installs fine but can't create course</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+both of your solutions worked great!<br />
+<br />
+Thanks Greg!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23584"></a>
+		<div class="forum-post-author">
+			<label class="title">bsagowitz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-04 10:51:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Installs fine but can't create course</h3></div>
+				
+			<div class="body">
+				<p>spoke to soon.  admin login works fine but when I log in as an instructor I get.<br />
+<br />
+Fatal error: Cannot re-assign auto-global variable _POST in /opt/lampp/htdocs/ATutor/mods/_standard/forums/lib/forums.inc.php on line 179</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23586"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-04 12:34:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Installs fine but can't create course</h3></div>
+				
+			<div class="body">
+				<p>I would guess you are working with PHP 5.4. You should revert back to 5.3* or earlier if you can. Or, you can replace the forums.inc.php file with a fresh copy from the repository. There are a variety of issues running ATutor with PHP 5.4.<br />
+<br />
+https://github.com/atutor/ATutor/blob/master/mods/_standard/forums/lib/forums.inc.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

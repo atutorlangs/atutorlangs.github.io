@@ -1,0 +1,141 @@
+---
+ title: Editing the title of a module
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Editing the title of a module</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17817"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-21 17:07:49</p>
+            </div>
+            <div class="postheader"><h3>Editing the title of a module</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 1.6.2 installed and I've installed the Elluminate module and I'd like to change the name on the main navigation tab, breadcrumb, etc.  The code that generates this seems to be in the module.php file at:<br />
+<br />
+$this->_pages['mods/elluminate/index.php']['title_var'] = 'elluminate';<br />
+<br />
+However, when I changed it to:<br />
+<br />
+$this->_pages['mods/elluminate/index.php']['title_var'] = 'Virtual Classroom';<br />
+<br />
+the text "Virtual Classroom" is always in brackets like:<br />
+<br />
+[Virtual Classroom]<br />
+<br />
+<br />
+How can I get rid of those brackets?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17818"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-22 04:09:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing the</h3></div>
+				
+			<div class="body">
+				<p>you're doing it wrong :) <br />
+<br />
+change the term back in module.php, then log in as admin -> system prefs -> languages -> editor. find the term there, and then change it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17827"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-23 10:58:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing the</h3></div>
+				
+			<div class="body">
+				<p>Vegard,<br />
+<br />
+Didn't I already edit the term to "Virtual Classroom"?<br />
+<br />
+Also, I tried searching for "Elluminate" in the languages editor already and it only returned two results which were both statements in admin.  <br />
+<br />
+Thoughts?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17829"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-23 15:20:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing the</h3></div>
+				
+			<div class="body">
+				<p>well, technically you removed a reference to the language term identified with "elluminate" and added a reference to a new term that doesn't exist in the database. <br />
+<br />
+you can keep the new term too, but then you will have to go in translation mode, open the translate interface and search for the new term, then set it to mean something. <br />
+<br />
+you should be able to find it with the translate -> editor, but you might have to change the name back first.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17830"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-23 16:17:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing the</h3></div>
+				
+			<div class="body">
+				<p>Vegard,<br />
+<br />
+Hmm...... When I change it back to "elluminate" I still only get the two statements in the language editor. Neither of which refer to what I want to change.<br />
+<br />
+I've looked everywhere for the place to manually change it and I just can't find it.  I would think it would be in the MySQL database "AT_language_text".  I see the various entries there, but for "text" it just says "[BLOB - 10 B]" just like all of the other ones.  I have no idea what "[BLOB - 10 B]" means or where I can go to change it.<br />
+<br />
+Any other thoughts?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

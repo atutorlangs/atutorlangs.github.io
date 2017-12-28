@@ -1,0 +1,80 @@
+---
+ title: ATutor 151 Security Patch
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor 151 Security Patch</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5843"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-15 17:28:33</p>
+            </div>
+            <div class="postheader"><h3>ATutor 151 Security Patch</h3></div>
+				
+			<div class="body">
+				<p>*ATutor 1.5.1 Users*<br />
+Users of ATutor 1.5.1 are advised to apply a patch to the password_reminder.php file to remove a critical vulnerability that could allow a non-authorized user to gain access to the administrative features of ATutor when magic_quotes is disabled in PHP. <br />
+<br />
+Replace the current password_reminder.php file with the new version (removing the .txt extension) found at:<br />
+<br />
+http://www.atutor.ca/atutor/files/patches/password_reminder.php.txt<br />
+<br />
+*ATutor 1.5 and earlier*<br />
+Users of earlier versions of ATutor are advised to upgrade to ATutor version 1.5.1.pl1 to correct the problem.<br />
+<br />
+ATutor 1.5.1.pl1 Download<br />
+http://www.atutor.ca/atutor/download.php<br />
+<br />
+Note:<br />
+If your system is running with magic_quotes turned on (the default) this vulnerability does not apply. It will likely be applicable for those running on hosted servers where older PHP settings are being maintained.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5861"></a>
+		<div class="forum-post-author">
+			<label class="title">tschee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-18 00:58:43</p>
+            </div>
+            <div class="postheader"><h3>1.5.1 patch</h3></div>
+				
+			<div class="body">
+				<p>While applying the patch as instructed, I noticed from my web log that my password_reminder.php file has been accessed 13 times.  Will this jeopardize my atutor system?  I am in the midst of preparing my courseware so it has not been uploaded yet.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5862"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-18 09:21:55</p>
+            </div>
+            <div class="postheader"><h3>Change your password</h3></div>
+				
+			<div class="body">
+				<p>It is highly unlikely your system has been compromised. To remove any possibility, you could change your administrator password.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

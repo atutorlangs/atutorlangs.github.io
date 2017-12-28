@@ -1,0 +1,198 @@
+---
+ title: Upgrade gone bad
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Upgrade gone bad</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19845"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-24 15:59:51</p>
+            </div>
+            <div class="postheader"><h3>Upgrade gone bad</h3></div>
+				
+			<div class="body">
+				<p>I just ran an upgrade from 1.6.2 to 1.6.4 and everything seemed to go fine (according to the upgrade script) - databse tables updated fine with all green check marks etc. <br />
+<br />
+Now when trying to log in I get this:<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /xxxxxxx/www/kurssenter/include/classes/Language/LanguageManager.class.php  on line 156<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /xxxxxxx/www/kurssenter/include/classes/Language/LanguageManager.class.php on line 170<br />
+<br />
+Warning: reset() [function.reset]: Passed variable is not an array or object in /xxxxxxxx/www/kurssenter/include/classes/Language/LanguageManager.class.php on line 198<br />
+<br />
+Warning: current() [function.current]: Passed variable is not an array or object in /xxxxxxxxx/www/kurssenter/include/classes/Language/LanguageManager.class.php on line 200<br />
+There are no languages installed!<br />
+<br />
+<br />
+Any tips would be greatly appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19847"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-24 16:03:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade gone bad..</h3></div>
+				
+			<div class="body">
+				<p>Sorry for doble posting. <br />
+<br />
+Problem is real though....</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19848"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-24 16:11:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade gone bad..</h3></div>
+				
+			<div class="body">
+				<p>Normally it defaults to English after an upgrade, then you reinstall other languages.<br />
+<br />
+Is there language in the language_text table? And. are language listed in the languages table?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19849"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-24 16:24:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade gone bad..</h3></div>
+				
+			<div class="body">
+				<p>There are ca 2200 rows in the language_text table. English, but not *all* terms seem translated.<br />
+<br />
+The languages table is empty. 0 rows.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19850"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-24 16:28:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade gone bad..</h3></div>
+				
+			<div class="body">
+				<p>strange<br />
+<br />
+You can manually add English to the table.<br />
+<br />
+INSERT INTO `AT_languages` (`language_code`, `char_set`, `direction`, `reg_exp`, `native_name`, `english_name`, `status`) VALUES<br />
+('en', 'utf-8', 'ltr', 'en([-_][[:alpha:]]{2})?|english', 'English', 'English', 3);</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19852"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-24 16:35:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade gone bad..</h3></div>
+				
+			<div class="body">
+				<p>Hmm. <br />
+<br />
+"You have error in your SQL syntax"<br />
+<br />
+"near )"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19853"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-24 17:22:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade gone bad..</h3></div>
+				
+			<div class="body">
+				<p>Try again. There was an extra parenthesis at the end, now fixed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19854"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-24 17:38:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade gone bad..</h3></div>
+				
+			<div class="body">
+				<p>Thanks, Greg! I can log in now. <br />
+<br />
+I think I know why this happened:<br />
+<br />
+In my old installation I had removed the english translation (I only use Norwegian). <br />
+<br />
+I probably should have reinstalled English befor doing the upgrade. <br />
+<br />
+Thx a lot.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

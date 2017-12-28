@@ -1,0 +1,163 @@
+---
+ title: How to limit registration of new students
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>How to limit registration of new students</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2562"></a>
+		<div class="forum-post-author">
+			<label class="title">oasis</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-26 12:34:21</p>
+            </div>
+            <div class="postheader"><h3>How to limit registration of new students</h3></div>
+				
+			<div class="body">
+				<p>I wanted to be able to limit new registrations to prevent just anyone from being able to register. Maybe this 'add-on' will help others in my situation in limiting registration. I already had a 'nuke' program where registration had to be pre-approved and membership is paid. (cpgnuke). I wanted only my cpgnuke members to be able to register on my ATutor program. This is what I did. (You can adjust it to fit your needs).<br />
+<br />
+If you are using a 'Nuke' program - <br />
+1. add a 'Content' page that can only be viewed by members. In cpgnuke this is a module called 'Content'. My 'Content' module is restricted to members only, so only members can view pages in my content module. It might be different in other nuke programs but just add a page or news article that can only be viewed by members.<br />
+2. Include the ATutor Registration 'Form' into your page.. Make sure to change the part in red to reflect where your ATutor program is located on your server. Here is the Registration Form:<br />
+<br />
+&lt;form method="post" action="http://[red]yourwebsite.com[/red]<br />
+/ATutor/registration.php" name="form"><br />
+&lt;h3>Registration&lt;/h3>&lt;br /><br />
+<br />
+<br />
+&lt;table cellspacing="1" cellpadding="0" border="0" align="center" summary=""><br />
+&lt;tr><br />
+	&lt;td class="public-row2" colspan="2">&lt;h4>Account Information (Required)&lt;/h4>&lt;/td><br />
+&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right" valign="top">&lt;label for="login">&lt;strong>Login Name:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="login" class="formfield" name="login" type="text" maxlength="20" size="15" value="" />&lt;br /><br />
+	&lt;small>&middot; May contain only letters, numbers, or underscores.&lt;br /><br />
+	&middot; 20 character maximum&lt;/small>&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right" valign="top">&lt;label for="password">&lt;strong>Password:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="password" class="formfield" name="password" type="password" size="15" maxlength="15" value="" />&lt;br /><br />
+	&lt;small>&middot; Use a combination of letters, numbers and symbols&lt;br /><br />
+	&middot; 15 characters maximum&lt;/small>&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;label for="password2">&lt;strong>Password Again:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="password2" class="formfield" name="password2" type="password" size="15" maxlength="15" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row"  colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right" valign="top">&lt;label for="email">&lt;strong>Email Address:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="email" class="formfield" name="email" type="text" size="30" maxlength="60" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right" valign="top">&lt;label for="langs">&lt;strong>Language:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;select name="lang" id="langs"><br />
+																								&lt;option value="en" selected="selected">English&lt;/option><br />
+																						&lt;/select>&lt;br />&lt;br />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row2" colspan="2">&lt;h4>Personal Information (Optional) &lt;/h4>&lt;/td><br />
+&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right" colspan="2">&lt;input type="checkbox" name="pref" value="access" id="access"  />&lt;label for="access">Enable Default Accessibility Preference Settings&lt;/label>&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;label for="first_name">&lt;strong>First Name:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="first_name" class="formfield" name="first_name" type="text" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;label for="last_name">&lt;strong>Last Name:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="last_name" class="formfield" name="last_name" type="text" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;strong>Date of birth:&lt;/strong>&lt;/td><br />
+	&lt;td class="public-row"">&lt;label for="year">Year: &lt;/label>&lt;input id="year" class="formfield" name="year" type="text" size="4" maxlength="4" value="" />  &lt;label for="month">Month: &lt;/label>&lt;input id="month" class="formfield" name="month" type="text" size="2" maxlength="2" value="" /> &lt;label for="day">Day: &lt;/label>&lt;input id="day" class="formfield" name="day" type="text" size="2" maxlength="2" value="" /> <br />
+	&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;strong>Sex:&lt;/strong>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input type="radio" name="gender" id="m" value="m"  />&lt;label for="m">Male&lt;/label> &lt;input type="radio" value="f" name="gender" id="f"  />&lt;label for="f">Female&lt;/label>  &lt;input type="radio" value="ns" name="gender" id="ns" checked="checked" />&lt;label for="ns">Not specified&lt;/label>&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;label for="address">&lt;strong>Street Address:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="address" class="formfield" name="address" size="40" type="text" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;label for="postal">&lt;strong>Postal/Zip Code:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="postal" class="formfield" name="postal" size="7" type="text" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;label for="city">&lt;strong>City:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="city" class="formfield" name="city" type="text" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;label for="province">&lt;strong>Province/State:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="province" class="formfield" name="province" type="text" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right">&lt;label for="country">&lt;strong>Country:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="country" class="formfield" name="country" type="text" value="" />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right" valign="top">&lt;label for="phone">&lt;strong>Area Code and Phone Number:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input class="formfield" size="11" name="phone" type="text" value="" id="phone" /> &lt;small>123-456-7890&lt;/small>&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" align="right" valign="top">&lt;label for="website">&lt;strong>Web Site:&lt;/strong>&lt;/label>&lt;/td><br />
+	&lt;td class="public-row" align="left">&lt;input id="website" class="formfield" name="website" size="40" type="text" value="http://" />&lt;br />&lt;br />&lt;/td><br />
+&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr>&lt;td height="1" class="public-row" colspan="2">&lt;/td>&lt;/tr><br />
+&lt;tr><br />
+	&lt;td class="public-row" colspan="2" align="center">&lt;input type="submit" class="button" value=" Submit" name="submit" /> - &lt;input type="submit" name="cancel" class="button" value=" Cancel " />&lt;/td><br />
+&lt;/tr><br />
+&lt;/table><br />
+&lt;/form><br />
+<br />
+3. Open the registration.tmlp found in ATutor/templates/<br />
+in a text editor like Notepad. Between the lines:<br />
+'&lt;?php require(AT_INCLUDE_PATH.'header.inc.php'); ?>' and '&lt;?php require(AT_INCLUDE_PATH.'footer.inc.php'); ?>' <br />
+delete all of the &lt;form> stuff. It should now just have the above 2 lines in it.  <br />
+<br />
+Between the two lines write something like "Only members of my website can register for our classes. If you are a member and wish to register for our classes &lt;a href=http://[red]yourwebsite.com/yourcontentpagewithform[/red]>Click Here&lt;/a>"<br />
+<br />
+Since the above link you provided for registration is only accessable to your members than only members will be allowed to see the registration page and sign-up.<br />
+<br />
+<br />
+IF YOU DO NOT HAVE A NUKE PROGRAM.<br />
+1. Create a password protected page with the above form as the content. Give only your members the password to the page with the form. Follow the last step of changing registration.tmpl and include the link to your password protected page.<br />
+<br />
+To see this in action you can visit my site. The ATutor program is here:<br />
+http://art-epiphany.com/ATutor/<br />
+<br />
+Click 'Register' and view what the end result of these changes are.<br />
+<br />
+Hope this helps!<br />
+Holly:)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

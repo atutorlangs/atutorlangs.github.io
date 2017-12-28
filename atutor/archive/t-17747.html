@@ -1,0 +1,206 @@
+---
+ title: Test results released prematurely
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Test results released prematurely</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17747"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 06:02:14</p>
+            </div>
+            <div class="postheader"><h3>Test results released prematurely</h3></div>
+				
+			<div class="body">
+				<p>I create a new test and add questions to it. Some questions are open ended, some are yes/no. <br />
+<br />
+Because of the open ended question I do not want the results to be released until the instructor has approved (marked) the answers. <br />
+<br />
+Therefore I select the option: <br />
+"Release results - Once quiz has been submitted and all questions have been marked"<br />
+<br />
+This does not work as I expect, though. The results are released once the test is submitted, and the open ended questions is assigned 0 points. <br />
+<br />
+Am I missing something here?<br />
+<br />
+Thanks for looking into this. <br />
+<br />
+Atutor 1.6.2 (my own server as well as the demo server)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17751"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 11:16:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Test results released prematurely</h3></div>
+				
+			<div class="body">
+				<p>Confirmed. On the way to fix it.<br />
+<br />
+For now, the work-around is to set the option to "Do not release results". mark all submissions and change the option to "Once quiz has been submitted".</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17755"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 13:42:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Test results released prematurely</h3></div>
+				
+			<div class="body">
+				<p>Thanks for confirming, Cindy, and for the work-around.<br />
+<br />
+The main use for the tests in my application is that different students that take the same tests over periods of time. <br />
+<br />
+In this scenario it would be best if tests could not have en expiry date either, but that is another topic...<br />
+<br />
+Thanks for the answer - looking forward to the fix:)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17757"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 14:50:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Test results released prematurely</h3></div>
+				
+			<div class="body">
+				<p>Fixed into development trunk. You will see it in the next release, which is coming in a couple of weeks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17758"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 14:57:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Test results released prematurely</h3></div>
+				
+			<div class="body">
+				<p>Great!<br />
+<br />
+Is this something which I could patch manually into 1.6.2? I have two installations both in production, and I guess it will be a while before upgrading ...<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17759"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 15:59:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Test results released prematurely</h3></div>
+				
+			<div class="body">
+				<p>Replace the listed 5 files with the ones in attached zip:<br />
+<br />
+tools/take_test.php<br />
+tools/take_test_q.php<br />
+tools/tests/view_results.php<br />
+include/classes/testQuestions.class.php<br />
+themes/default/test_questions/header.tmpl.php<br />
+<br />
+Please backup the old scripts before overwriting them in case anything goes wrong with the new ones.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17760"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 16:45:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Test results released prematurely</h3></div>
+				
+			<div class="body">
+				<p>Thanks a lot for releasing the files! It seems to be working - almost:<br />
+<br />
+If I have a quiz with both open ended & yes/no questions [i] the results are not released. [/i]<br />
+<br />
+If the quiz consist only of yes/no type questions [i]the results are released immediately [/i] even though I have set the quiz to "Release results - Once quiz has been submitted and all questions have been marked".<br />
+<br />
+( Now there may be that this is the intended operation, one could argue that yes/no questions are always marked automatically.)<br />
+<br />
+In my application it would be great, however, if the quiz would not be released until the instructor has touched it, even though all questions are of the yes/no type. <br />
+<br />
+Thanks again for your help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17776"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-16 08:44:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Test results released prematurely</h3></div>
+				
+			<div class="body">
+				<p>You are welcome.<br />
+<br />
+That's how it's supposed to work. All the questions that can be automatically marked are not considered as "unmarked".</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

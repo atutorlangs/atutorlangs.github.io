@@ -1,0 +1,149 @@
+---
+ title: Getting rid of the pencils logo
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Getting rid of the pencils logo</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15378"></a>
+		<div class="forum-post-author">
+			<label class="title">adesua</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-02 20:15:20</p>
+            </div>
+            <div class="postheader"><h3>Getting rid of the pencils logo</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version - 1.6 stable<br />
+  Patch #s applied -  <br />
+ ATutor theme name -default_classic<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+Is it legal to remove the pencil logo and put my institution's logo. How can I achieve this in order not to infringe the rights of the original designers<br />
+<br />
+<br />
+How can I remove the pencils they dont reflect the objectives of my organization</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15381"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-03 02:52:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Getting rid of the pencils logo</h3></div>
+				
+			<div class="body">
+				<p>you'll find it in themes/default/include/header.inc.php if I'm not woring. if not it's specified somewhere in the styles.css file in the theme directory</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15382"></a>
+		<div class="forum-post-author">
+			<label class="title">adesua</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-03 05:45:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Getting rid of the pencils logo</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -Linux<br />
+  ATutor version -1.6 stable<br />
+  Patch #s applied - All patches<br />
+  ATutor theme name -<br />
+  PHP version -5.2.6<br />
+  MySQL version -5.0.45-community-log<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -Internet explorer (vista)<br />
+  ...and anything else relevant<br />
+<br />
+Thanks for the quick response, it came quicker than I ever expected.<br />
+Sorry about the lack of adequate information. I am not very technical, I am trying to find my way through.<br />
+<br />
+I unzipped almost all the themes including redux and then it appeared in among the default themes. When I try preview or set as default, I dont get images. I only get links listed like the ones below<br />
+<br />
+ -Content ALT+c Go to Menu ALT+m <br />
+Adesua | Search | Log-out <br />
+Administration <br />
+Home <br />
+Modules <br />
+Enrollment <br />
+Users <br />
+Courses <br />
+Patcher <br />
+System Preferences <br />
+Home <br />
+My Account <br />
+Change Password <br />
+ Home</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15400"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-04 10:43:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Getting rid of the pencils logo</h3></div>
+				
+			<div class="body">
+				<p>you find it as a background picture in themes/default/styles.css, here's the relevant CSS:<br />
+<br />
+<br />
+#header{<br />
+	background-color: #1D2326;<br />
+	background-image: url(images/pencil_top.gif);<br />
+	background-position: right bottom;<br />
+	background-repeat: no-repeat;<br />
+	height : 6.85em;<br />
+}<br />
+<br />
+change the background-image URL to the picture you would like the use and you should be good to go. <br />
+<br />
+alternatively, rename the picture you want to pencil_top.gif and replace the one that's allready there.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

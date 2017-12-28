@@ -1,0 +1,164 @@
+---
+ title: strange variable xy displaying
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>strange variable xy displaying</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="1088"></a>
+		<div class="forum-post-author">
+			<label class="title">sbuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-16 13:37:41</p>
+            </div>
+            <div class="postheader"><h3>strange variable xy displaying</h3></div>
+				
+			<div class="body">
+				<p>Hi atutor team,<br />
+<br />
+please help... I installed atutor 1.3.1 on my server and now strange things are happening. I get a lot of <br />
+[variable xy] displayed at every field and output part of the screen. have a look at the running system please, to see whats going on. I posted the database access user and password to your email adress. the following i will state all information you need:<br />
+<br />
+Windows XP Pro <br />
+Apache 1.3.9<br />
+PHP 4.3.4<br />
+mysql 3.23.49<br />
+browser: internet explorer, latest version<br />
+own server, root access<br />
+<br />
+after the installation I immediately experienced the problem.<br />
+<br />
+Atutor access info:<br />
+User: admin, student, instructor<br />
+password for all: tennis<br />
+<br />
+phpinfo.php is on the server (root)<br />
+<br />
+installation: http://www.bigbuck.de/atutor/<br />
+<br />
+my email: stefan.buck@gmx.net<br />
+<br />
+THANX!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1089"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-16 14:01:08</p>
+            </div>
+            <div class="postheader"><h3>Start with English</h3></div>
+				
+			<div class="body">
+				<p>Start with English (en) as your DEFAULT_LANGUAGE during install (or modify this value in include/config.inc.php), install the language pack for the language you wish to use, then reset the DEFAULT_LANGUAGE to whatever language you wish you use as the default.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1090"></a>
+		<div class="forum-post-author">
+			<label class="title">sbuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-16 15:15:34</p>
+            </div>
+            <div class="postheader"><h3>'en' was set</h3></div>
+				
+			<div class="body">
+				<p>Hi again,<br />
+<br />
+thanx for the quick reply.<br />
+<br />
+english was never changed while installing, and it is still set in the config.inc.php file. I never tried to overwrite this before. What can I do now?<br />
+Should I install some other language package and then reset to en or is there some other thing wrong?<br />
+<br />
+cheers<br />
+<br />
+stefan<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Start with English (en) as your DEFAULT_LANGUAGE during install (or modify this value in include/config.inc.php), install the language pack for the language you wish to use, then reset the DEFAULT_LAN...<br />
+[op]forums/view.php?fid=7;pid=1088;page=1#1089[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1091"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-16 15:43:26</p>
+            </div>
+            <div class="postheader"><h3>DB is Empty</h3></div>
+				
+			<div class="body">
+				<p>All of your DB tables are empty. It appears your db will not let you "insert". Have your ISP adjust your mysql privileges to allow inserts.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Hi again,<br />
+<br />
+thanx for the quick reply.<br />
+<br />
+english was never changed while installing, and it is still set in the config.inc.php file. I never tried to overwrite this before. What can I do now?<br />
+Shoul...<br />
+[op]forums/view.php?fid=7;pid=1088;page=1#1090[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1114"></a>
+		<div class="forum-post-author">
+			<label class="title">sbuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-18 09:52:43</p>
+            </div>
+            <div class="postheader"><h3>that's it.</h3></div>
+				
+			<div class="body">
+				<p>Hi again,<br />
+<br />
+that was the problem. I had no rights to insert indeed.<br />
+Thanx!<br />
+<br />
+Stefan<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+All of your DB tables are empty. It appears your db will not let you "insert". Have your ISP adjust your mysql privileges to allow inserts.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Hi again,<br />
+<br />
+thanx for the ...[/reply]<br />
+[op]forums/view.php?fid=7;pid=1088;page=1#1091[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

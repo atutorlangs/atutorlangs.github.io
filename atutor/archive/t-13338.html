@@ -1,0 +1,142 @@
+---
+ title: Access to the website atutorca
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Access to the website atutorca</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="13338"></a>
+		<div class="forum-post-author">
+			<label class="title">lchavet</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-02 13:30:57</p>
+            </div>
+            <div class="postheader"><h3>Access to the website atutorca</h3></div>
+				
+			<div class="body">
+				<p>Hy,<br />
+<br />
+I can't access atutor.ca through my firewall due to an error in the header of the request. <br />
+See the attached file. <br />
+<br />
+The firewall doesn't accept it because of this error. It's the only website that I have a problem with (I confirmed it's not because of our firewall settings).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13348"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-03 08:48:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Access to the website atutor.ca</h3></div>
+				
+			<div class="body">
+				<p>We see the characters, and we're investigating. <br />
+<br />
+I'd be curious what the firewall is blocking. This problem has not been reported by anyone else.Which firewall, and which OS.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13456"></a>
+		<div class="forum-post-author">
+			<label class="title">lchavet</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-11 14:22:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Access to the website atutor.ca</h3></div>
+				
+			<div class="body">
+				<p>I have a hard time to get the information from my security team. I let you know as soon as I get it.<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13490"></a>
+		<div class="forum-post-author">
+			<label class="title">lchavet</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-15 08:06:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Access to the website atutor.ca</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+My security team is trying different configurations to access your site but they asked me if you could check on one particular parameter. Here it is:<br />
+The server header from the web server is sending some non-standard characters. The Apache web server is likely configured to send out full server information. The website administrator might be able to prevent this by setting "ServerTokens" to "OS" in his httpd.conf file.<br />
+Two things:<br />
+- Could you tell me what is your setting now.<br />
+- Could you change it to "OS" if it's not the case.<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13491"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-15 08:37:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Access to the website atutor.ca</h3></div>
+				
+			<div class="body">
+				<p>I've switched ServerToken from FULL to OS. Let us know ig that helps.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13493"></a>
+		<div class="forum-post-author">
+			<label class="title">lchavet</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-15 08:43:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Access to the website atutor.ca</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Perfect, it's working fine<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

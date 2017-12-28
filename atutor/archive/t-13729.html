@@ -1,0 +1,59 @@
+---
+ title: SCORM Package size limitations
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>SCORM Package size limitations</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="13729"></a>
+		<div class="forum-post-author">
+			<label class="title">ogagliardi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-15 15:19:13</p>
+            </div>
+            <div class="postheader"><h3>SCORM Package size limitations</h3></div>
+				
+			<div class="body">
+				<p>Is there a size limit for the SCORM packages that can be imported in aTutor?<br />
+<br />
+I am trying to import a 100MB SCORM Package. I have the course setup with a quota of 690.73 MB and the Max File Size is set to 690.73 MB. I get a 500 internal server error when I tried to import the file<br />
+<br />
+<br />
+ATutor Version: 1.6.  <br />
+PHP Version: 4.3.10 <br />
+MySQL Version: 4.1.20-standard <br />
+OS: Linux 2.4.29-1.2smp <br />
+<br />
+Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13730"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-15 15:54:37</p>
+            </div>
+            <div class="postheader"><h3>Re: SCORM Package size limitations</h3></div>
+				
+			<div class="body">
+				<p>PHP sets the upload limit at 2mb. You can change that setting in the system's php.ini file. Ajust upload_max_filesize and post_max_filesize.<br />
+<br />
+You will have problems with files that size, even with the file size limits reset, particularly for those with slower internet connections. You'd be better off with several smaller files, and one large one.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

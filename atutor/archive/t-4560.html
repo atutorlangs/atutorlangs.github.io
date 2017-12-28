@@ -1,0 +1,125 @@
+---
+ title: ATutor Enrollment Manager
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor Enrollment Manager</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4560"></a>
+		<div class="forum-post-author">
+			<label class="title">cwc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-19 10:43:07</p>
+            </div>
+            <div class="postheader"><h3>ATutor Enrollment Manager</h3></div>
+				
+			<div class="body">
+				<p>I am totally new to ATutor.<br />
+<br />
+I bought space on SiteGround to host ATutor 1.43.<br />
+<br />
+My question is:<br />
+How can I modify the enrollment manage so I can assign user names and passwords by exporting from my database.<br />
+I do not want ATutor to assign users name and passwords.<br />
+<br />
+Also, is there a way to modify the enrollment email sent to the student?<br />
+<br />
+Is there any documentation on these items?<br />
+<br />
+Thank you so much,<br />
+Chuck Cossin<br />
+<br />
+		[blue] [/blue]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4564"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-19 20:52:37</p>
+            </div>
+            <div class="postheader"><h3>re: ATutor Enrollment Manager</h3></div>
+				
+			<div class="body">
+				<p>You could export as SQL (or csv),  modify the SQL in a text editor to match the ATutor members table, then import into the  table using an application like phpMyAdmin.<br />
+<br />
+Modifying language is described in the Administrators section of ATutor HowTo.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4582"></a>
+		<div class="forum-post-author">
+			<label class="title">cwc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-23 16:20:41</p>
+            </div>
+            <div class="postheader"><h3>Member table location ?</h3></div>
+				
+			<div class="body">
+				<p>Where is the member table located?<br />
+<br />
+I want to add fields and import data to it from my csv database</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4583"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-23 16:30:55</p>
+            </div>
+            <div class="postheader"><h3>In MySQL</h3></div>
+				
+			<div class="body">
+				<p>It's in the MySQL database that gets created when you install ATutor. You will need to have some knowledge of database tables if you are planning to import student data. phpMyAdmin can help with importing data.<br />
+<br />
+The other possibility is to import a CSV file with firstname, lastname, and email address through the Enrolment Manager.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4584"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-23 16:33:49</p>
+            </div>
+            <div class="postheader"><h3>Do not add fields</h3></div>
+				
+			<div class="body">
+				<p>I would recommend against adding new fields to the members table unless you know what you're doing. It will break any queries on that table, so you'll need to make modification the the ATutor source code if you change table structures.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

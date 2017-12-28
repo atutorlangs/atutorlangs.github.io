@@ -1,0 +1,125 @@
+---
+ title: unable to complete registration
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>unable to complete registration</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="14645"></a>
+		<div class="forum-post-author">
+			<label class="title">AOTWCEO</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-28 18:23:26</p>
+            </div>
+            <div class="postheader"><h3>unable to complete registration</h3></div>
+				
+			<div class="body">
+				<p>I have an admin account that works perfectly. I was trying to register as a student to see what the site looks like, i keep getting "student ID and PIN combination you provided is either being used or is incorrect. There is no one registered at this time but me as an admin. I was using information that was different from the admin information. <br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14648"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-29 01:52:20</p>
+            </div>
+            <div class="postheader"><h3>Re: unable to complete registration</h3></div>
+				
+			<div class="body">
+				<p>I guess you have enabled Master Student List previously. By default, it's off and you shouldn't see ID and PIN fields during registration.<br />
+<br />
+Check that Admin -> System Preferences -> Authenticate Against A Master Student List is disabled.<br />
+If it is, and you're still getting that message, then please do fill in the "Things to describe:" list.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14661"></a>
+		<div class="forum-post-author">
+			<label class="title">AOTWCEO</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-29 15:17:30</p>
+            </div>
+            <div class="postheader"><h3>Re: unable to complete registration</h3></div>
+				
+			<div class="body">
+				<p>Thank. That worked. <br />
+<br />
+Is there a way to make all the fields on the registratin form mandatory?<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14666"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-30 07:33:01</p>
+            </div>
+            <div class="postheader"><h3>Re: unable to complete registration</h3></div>
+				
+			<div class="body">
+				<p>ATutor is OpenSource, so surely there must be one. :D<br />
+<br />
+Though it's not configurable and you'll need to make changes to the PHP code.<br />
+You'll have to edit four files: themes/default/registration.tmpl.php and themes/default/users/profile.tmpl.php to change appearance (make the red asterisk appear at those fields), and files registration.php and users/profile.php to add conditions checking that the fields are non-empty.<br />
+<br />
+If that sounds like too much of a work, just see those files -- you'll be mostly copying existing code fragments with some trivial changes.<br />
+<br />
+P.S. There's no need in "If you are asking for help,..." in each post.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

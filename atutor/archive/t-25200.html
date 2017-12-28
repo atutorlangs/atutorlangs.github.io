@@ -1,0 +1,143 @@
+---
+ title: Error with SetEnv
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error with SetEnv</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25200"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-17 08:12:21</p>
+            </div>
+            <div class="postheader"><h3>Error with SetEnv</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -Linux 2.6.32-531.29.2.lve1.3.11.1.el6.x86_64<br />
+  ATutor version - 2.1.1<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -5.4.36<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -FireFox<br />
+  ...and anything else relevant -<br />
+<br />
+Hi - our LMS has been hanging or very slow on occasion. On checking error logs, we have a lot similar to the below:<br />
+<br />
+/home/mycourse/public_html/ATutor/mods/_standard/flowplayer/.htaccess: Invalid command 'SetEnv', perhaps misspelled or defined by a module not included in the server configuration, referer: http://*********.co.uk/ATutor/mods/_core/editor/edit_content_folder.php?cid=421<br />
+<br />
+I checked with our host and they say 'SetEnv' is not available on the server. Is there a solution to this? <br />
+Would creating a cache folder help - if so, is it just a matter of creating a folder on the server and naming it in preferences? and what about the Apache mod_rewrite setting? Is that relevant?<br />
+<br />
+Thanks for any suggestions<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25201"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-17 09:05:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Error with 'SetEnv'</h3></div>
+				
+			<div class="body">
+				<p>Try this:<br />
+http://stackoverflow.com/questions/5764469/zend-setenv-in-htaccess-not-working</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25203"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-17 11:33:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Error with 'SetEnv'</h3></div>
+				
+			<div class="body">
+				<p>Thanks for responding Greg...but now I realise how little I know. It might just as well be written in Chinese. I'm a point and click person with a 'bit' of knowledge. Is there a way to make this simple?<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25204"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-17 11:43:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Error with 'SetEnv'</h3></div>
+				
+			<div class="body">
+				<p>Unfortunately it is a server setting, that would probably need your sysadmin to adjust.<br />
+<br />
+I'm not sure what the consequence might be, but you could try commenting  out the offending line in the .htaccess file and see if that helps (adding # to the start of the line). Once you do that, check any embedded videos to see if they still play properly.<br />
+<br />
+It's a Flowplayer issue, so if it continues to be a problem, you could try the Flowplayer community, and see if they have suggestions.<br />
+<br />
+https://flowplayer.org/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25205"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-17 12:01:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Error with 'SetEnv'</h3></div>
+				
+			<div class="body">
+				<p>Hi greg<br />
+Sorted !<br />
+<br />
+Did as you suggested, logged into LMS, opened a course and then checked the logs - no further errors. We don't have any videos in the courses, so hopefully, shouldn't be an issue.<br />
+<br />
+Thanks for your excellent help once again.:) <br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

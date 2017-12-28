@@ -1,0 +1,162 @@
+---
+ title: IPNResponse How do I put it
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>IPNResponse How do I put it</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="11051"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-09 12:35:58</p>
+            </div>
+            <div class="postheader"><h3>IPNResponse How do I put it</h3></div>
+				
+			<div class="body">
+				<p>In the payments module, there is a sentence in the readme:<br />
+<br />
+For security purpose Instant Payment Notification (IPN) must be setup with your PayPal merchant account. You will be asked to <br />
+provide a URL to the IPN notification verification script, included with the EComm module. While logged into your PayPal <br />
+account, slect the Profile tab, then choose "Instant Payment Notification Preferences". Turn "ON" the service, and provide <br />
+the URL. The URL should also include the password you entered when setting up the module Settings in ATutor. <br />
+The URL would look something like this:<br />
+<br />
+<br />
+http://www.mysite.com/ATutor/mods/ecomm/response_ipn.php?secret=payment01<br />
+<br />
+How do I put the password here? Should I change the URL to this?<br />
+http://www.mysite.com/ATutor/mods/ecomm/response_ipn.php?secret=mypassword<br />
+<br />
+But when I did that, the payments module is unable to update the database even after I made a test payment for a course... Any advice on this?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11087"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-13 09:32:51</p>
+            </div>
+            <div class="postheader"><h3>Re: IPN_Response... How do I put it?</h3></div>
+				
+			<div class="body">
+				<p>Make sure your firewall is not blocking access from PayPal. Or add it to the firewall configuration as a trusted URL.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11088"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-13 14:05:34</p>
+            </div>
+            <div class="postheader"><h3>Re: IPN_Response... How do I put it?</h3></div>
+				
+			<div class="body">
+				<p>IPN is working fine. I suggest you double check you password. And reread the readme file with the ecomm module to be sure you have not missed any steps.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11094"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-13 16:26:02</p>
+            </div>
+            <div class="postheader"><h3>Re: IPN_Response... How do I put it?</h3></div>
+				
+			<div class="body">
+				<p>I did read it... :( Can you be kind enough to give me an example?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11095"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-13 19:05:11</p>
+            </div>
+            <div class="postheader"><h3>Re: IPN_Response... How do I put it?</h3></div>
+				
+			<div class="body">
+				<p>An example<br />
+<br />
+www.mysite.com/ATutor/mods/ecomm/response_ipn.php?secret=mypassword<br />
+<br />
+...where you change mypassword to the password paypal has assigned you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11097"></a>
+		<div class="forum-post-author">
+			<label class="title">purifier</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-14 03:42:51</p>
+            </div>
+            <div class="postheader"><h3>Re: IPN_Response... How do I put it?</h3></div>
+				
+			<div class="body">
+				<p>:( I've tried that but it doesn't update the database as it is supposed to update. The payment is successful. I mean, the buyer is able to pay the money to the seller. Could it be because I've been trying it out in my localserver (127.0.0.1) ?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11098"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-14 08:00:59</p>
+            </div>
+            <div class="postheader"><h3>Re: IPN_Response... How do I put it?</h3></div>
+				
+			<div class="body">
+				<p>Yes, that would be an obvious problem  :-\<br />
+<br />
+The PayPal server needs to be able to contact the ATutor server to update the database. If you can determine the IP address assigned to your machine by your ISP, use it in the URL entered for IPN setup</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

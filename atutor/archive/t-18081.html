@@ -1,0 +1,189 @@
+---
+ title: Ala carte installation of 163
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Ala carte installation of 163</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18081"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-23 10:41:18</p>
+            </div>
+            <div class="postheader"><h3>Ala carte installation of 163</h3></div>
+				
+			<div class="body">
+				<p>Hello.  Is there any way to install certain components of 1.6.3 (like LaTeX support or Social Networking) w/o installing the full version?  I have a modified 1.6.2 version installed and I would like to avoid redoing all of the modifications, but I would like to be relatively current with my ATutor version.<br />
+<br />
+Basically is there a way to ala carte install parts of 1.6.3?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18082"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-23 10:53:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Ala carte installation of 1.6.3?</h3></div>
+				
+			<div class="body">
+				<p>Remove the following code in the include/lib/output.inc.php file in 1.6.2. <br />
+<br />
+[php]<br />
+<br />
+	if (isset($_config_defaults['latex_server']) && $_config_defaults['latex_server']) {<br />
+		// see: http://www.forkosh.com/mimetex.html<br />
+		$input = preg_replace('/\[tex\](.*?)\[\/tex\]/sie', "'&lt;img src=\"'.\$_config_defaults['latex_server'].rawurlencode('$1').'\" align=\"middle\">'", $input);<br />
+	}<br />
+<br />
+<br />
+[/php]<br />
+<br />
+and add this code near the end of AT_print() function in the same file<br />
+<br />
+[php]<br />
+		if (isset($_config['latex_server']) && $_config['latex_server']) {<br />
+		<br />
+			$input = preg_replace('/\[tex\](.*?)\[\/tex\]/sie', "'&lt;img src=\"'.\$_config['latex_server'].rawurlencode('$1').'\" align=\"middle\">'", $input);<br />
+		}<br />
+[/php]<br />
+<br />
+Then add a new item to the config table, column 1 "latex_server" and column 2 "http://www.atutor.ca/cgi/mimetex.cgi?"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18083"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-23 10:55:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Ala carte installation of 1.6.3?</h3></div>
+				
+			<div class="body">
+				<p>Otherwise no ala carte, apart from installing the 1.6.2 social networking module, now integrated with 1.6.3.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18148"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 10:37:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Ala carte installation of 1.6.3?</h3></div>
+				
+			<div class="body">
+				<p>Greg, <br />
+<br />
+I think there's something wrong with the syntax above.  There seems to be a quotation that's unclosed, but I can't find it in the code you gave.  I use Notepad ++ and everything after <br />
+<br />
+'", $input);<br />
+}<br />
+<br />
+is grayed out which means php is treating it like html.<br />
+<br />
+BTW, I placed your code as the last "if statement" within the AT_print function before return $input;<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18149"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 10:53:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Ala carte installation of 1.6.3?</h3></div>
+				
+			<div class="body">
+				<p>For some reason the escape quote for second quote in align="middle" is not appearing in the forum message. It is there in the source of the message though. <br />
+<br />
+Try grabbing a copy of the code from the repository. <br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/include/lib/output.inc.php<br />
+<br />
+Or adding in a slash before the quote after the value "middle"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18151"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 11:27:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Ala carte installation of 1.6.3?</h3></div>
+				
+			<div class="body">
+				<p>Still failing......<br />
+<br />
+I've attached the output.inc file I'm working with.<br />
+<br />
+In the config table, I added "latex_server" for "name" and "http://www.atutor.ca/cgi/mimetex.cgi?" for "value".</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18153"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 11:36:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Ala carte installation of 1.6.3?</h3></div>
+				
+			<div class="body">
+				<p>It missing the escape on the quote before "align".<br />
+<br />
+Try just copying the whole file from the repository.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

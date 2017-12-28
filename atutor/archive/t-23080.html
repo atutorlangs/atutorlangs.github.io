@@ -1,0 +1,116 @@
+---
+ title: documentation  Help access
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>documentation  Help access</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="23080"></a>
+		<div class="forum-post-author">
+			<label class="title">CDLLT09</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-05-20 15:24:04</p>
+            </div>
+            <div class="postheader"><h3>documentation  Help access</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+I would like to stop Guest access the documentation and Help, is there any script or code available to modify?<br />
+<br />
+Thanks<br />
+<br />
+-----------------------------------------<br />
+ If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version - 2.03<br />
+  Patch #s applied -<br />
+  ATutor theme name - Default<br />
+  PHP version - 5.5.22<br />
+  MySQL version - 5.5.22<br />
+  Webserver & version - <br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - fireFox, IE<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23083"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-05-21 09:59:56</p>
+            </div>
+            <div class="postheader"><h3>Re: documentation & Help access</h3></div>
+				
+			<div class="body">
+				<p>You could do something like this, wrapping this if statement around the links to the help. <br />
+<br />
+[php]<br />
+if($_SESSION['valid_user']){<br />
+  // display help link<br />
+}<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23141"></a>
+		<div class="forum-post-author">
+			<label class="title">CDLLT09</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-05-24 20:52:45</p>
+            </div>
+            <div class="postheader"><h3>Re: documentation & Help access</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg,<br />
+Thank you so much for your reply, I will try it and update you.<br />
+Just don't want to open another thread, could you please tell me how can I disable "Active Admin" to see "Installation" Documentation? <br />
+<br />
+Thank you in advanced</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23142"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-05-25 09:26:21</p>
+            </div>
+            <div class="postheader"><h3>Re: documentation & Help access</h3></div>
+				
+			<div class="body">
+				<p>No, there isn't currently a way to automatically remove access to the installation instructions, though you could manually remove it from<br />
+<br />
+documentation / admin / pages.inc.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

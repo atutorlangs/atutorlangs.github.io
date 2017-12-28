@@ -1,0 +1,97 @@
+---
+ title: ATutor cant decide whether its installed
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor cant decide whether its installed</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="1903"></a>
+		<div class="forum-post-author">
+			<label class="title">DrQuincy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-23 07:05:25</p>
+            </div>
+            <div class="postheader"><h3>ATutor cant decide whether its installed</h3></div>
+				
+			<div class="body">
+				<p>Hi, here\'s some info about my setup:<br />
+<br />
+1. Version of ATutor - 1.4<br />
+<br />
+2. OS: Windows XP<br />
+<br />
+3. Web server: Apache/2.0.46 (Win32) Server at 127.0.0.1 Port 80<br />
+<br />
+4. PHP and MYSQL: PHP 4.2.0, MySQL 3.23.54<br />
+<br />
+5. Web browser: IE 6<br />
+<br />
+I\'m trying to install it on the above platform.  First I get the following errors from the install/index.php page.<br />
+<br />
+Warning: main(include/classes/sqlutility.php) [function.main]: failed to create stream: No such file or directory in C:\\Program Files\\Apache Group\\Apache2\\htdocs\\ATutor\\install\\include\\common.inc.php on line 27<br />
+<br />
+Fatal error: main() [function.main]: Failed opening required \'include/classes/sqlutility.php\' (include_path=\'C:/Program Files/Apache Group/Apache2/htdocs\') in C:\\Program Files\\Apache Group\\Apache2\\htdocs\\ATutor\\install\\include\\common.inc.php on line 27<br />
+<br />
+If I change around some of the include paths I can make it to the final stages of the install procedure.  However when I go to the root index.php page to log in it says that ATutor is not installed and then when I back to the index.php page in the Install directory it says ATutor has already been installed.<br />
+<br />
+Any suggestnios?<br />
+<br />
+Many, many thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1908"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-23 12:30:09</p>
+            </div>
+            <div class="postheader"><h3>System Adjustments</h3></div>
+				
+			<div class="body">
+				<p>I'd first suggest upgrading PHP, and downgrading Apache. You are likely to experience a variety of problems using Apache 2 with PHP. Also PHP 4.2 is listed as the minimum, but 4.3 is recommended. <br />
+<br />
+Also be sure the following directories, and file, are writable<br />
+<br />
+content/<br />
+content/import/<br />
+content/chat/<br />
+include/config.inc.php<br />
+<br />
+Though with the above system modification adjusting write permissions should not be necessary on Windows systems.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1910"></a>
+		<div class="forum-post-author">
+			<label class="title">DrQuincy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-23 13:09:02</p>
+            </div>
+            <div class="postheader"><h3>Thanks</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg, I\'ll try that.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,97 @@
+---
+ title: Error in SQL syntax
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error in SQL syntax</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="16869"></a>
+		<div class="forum-post-author">
+			<label class="title">pwsoe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 10:33:38</p>
+            </div>
+            <div class="postheader"><h3>Error in SQL syntax</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I am getting this error message on the first page after log in for administrator:<br />
+<br />
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and status like '%Installed'' at line 1<br />
+<br />
+Apart from this (which causes the system not to display the ATutor version and patches installed), everything seems to be fine. I don't see the error message when I log in as an instructor or a student.<br />
+<br />
+I have seen some people asking similar questions here but I couldn't find any answer. I don't even know where to go look for that %Installed. I will really appreciate if someone could advise me.<br />
+<br />
+Thanks.<br />
+<br />
+Operating system ATutor is installed on - Kubuntu 8.10<br />
+ATutor version - 1.6.2<br />
+Patch #s applied - 13<br />
+ATutor theme name - Default<br />
+PHP version - 5.2.4<br />
+MySQL version - 5.0.51a<br />
+Webserver & version - Apache 2.2.8<br />
+Changes to default settings - none<br />
+<br />
+Web browser being used - FireFox 3 and InternetExplorer 7</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16886"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 12:19:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in SQL syntax</h3></div>
+				
+			<div class="body">
+				<p>We're unable to reproduce this error.<br />
+<br />
+There's been no references to SQL errors by others that I recall. Connection to the patch server issues yes, but not SQL. <br />
+<br />
+Maybe the file was broken. Try replacing it with a fresh copy from the repository.<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/mods/_standard/patcher/index_admin.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16902"></a>
+		<div class="forum-post-author">
+			<label class="title">pwsoe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-10 09:35:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in SQL syntax [SOLVED]</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+Thanks so much for the reply. Strangely, the error message went away and everything seems normal now, without me doing anything. Yesterday, I couldn't see patches and system's information. I think I even rebooted the PC.<br />
+<br />
+I compared the original index_admin file and the one on the server and didn't see any difference. Then, I tried logging in as an ATutor admin and the error message is gone. It must have been a glitch.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

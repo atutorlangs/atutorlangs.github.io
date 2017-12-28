@@ -1,0 +1,66 @@
+---
+ title: Upgrade errors
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Upgrade errors</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13787"></a>
+		<div class="forum-post-author">
+			<label class="title">tsmerk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-21 18:09:00</p>
+            </div>
+            <div class="postheader"><h3>Upgrade errors</h3></div>
+				
+			<div class="body">
+				<p>I am upgrading ATutor version 1.5.4 to version 1.6. I have renemed the original installation folder to /ATutor_old. I'm installing to an Apache web server, mysql ver. 5.0.27, php admin ver. 2.9.2. I'm using IE 6 browser. The install begins with a successful statement:<br />
+<br />
+Feedback:<br />
+Connected to database academy_atutor successfully<br />
+<br />
+Then the bad news:<br />
+<br />
+Error:<br />
+Table AT_forums_threads alteration failed<br />
+Table AT_tests_questions_assoc alteration failed<br />
+Table AT_tests_results alteration failed<br />
+Table AT_courses alteration failed<br />
+Table AT_tests alteration failed<br />
+Table AT_admins alteration failed<br />
+Table AT_language_text alteration failed<br />
+<br />
+I have tried this about 6 times, and cannot get past this step. What should I do?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13800"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 08:04:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade errors</h3></div>
+				
+			<div class="body">
+				<p>This sounds like mysql users does not have table alter permissions. <br />
+<br />
+see<br />
+http://dev.mysql.com/doc/refman/5.0/en/privileges.html</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

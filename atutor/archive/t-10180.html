@@ -1,0 +1,203 @@
+---
+ title: LaTeX  Math Symbols
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>LaTeX  Math Symbols</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10180"></a>
+		<div class="forum-post-author">
+			<label class="title">rfant</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-27 08:29:05</p>
+            </div>
+            <div class="postheader"><h3>LaTeX  Math Symbols</h3></div>
+				
+			<div class="body">
+				<p>Can someone help with issuing LaTeX commands in the test question editing block.<br />
+<br />
+According to my ISP, LaTeX is enabled.  I'm sure this is correct because I'm able to use it in Moodle and WordPress.<br />
+<br />
+The below code(s) have not worked.<br />
+<br />
++++++++++++++++<br />
+[tex]<br />
+\begin{displaymath}<br />
+\frac{a^2 - b^2}{a + b} = a - b<br />
+\end{displaymath}<br />
+[/tex]<br />
++++++++++++++++<br />
+[tex]<br />
+\frac{a^2 - b^2}{a + b} = a - b<br />
+[/tex]<br />
++++++++++++++++<br />
+[code][tex]<br />
+\begin{displaymath}<br />
+\frac{a^2 - b^2}{a + b} = a - b<br />
+\end{displaymath}<br />
+[/tex][/code]<br />
+<br />
++++++++++++++++++<br />
+<br />
+Thanks,<br />
+<br />
+Robert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10184"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-27 13:02:59</p>
+            </div>
+            <div class="postheader"><h3>Re: LaTeX / Math Symbols</h3></div>
+				
+			<div class="body">
+				<p>ATutor does not support LaTeX.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10185"></a>
+		<div class="forum-post-author">
+			<label class="title">rfant</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-27 13:40:48</p>
+            </div>
+            <div class="postheader"><h3>Re: LaTeX / Math Symbols</h3></div>
+				
+			<div class="body">
+				<p>Is there a specific reason why not (yet)?<br />
+<br />
+This excludes a lot of folks.<br />
+<br />
+If I can't write with math symbols, I must keep using / go back to Moodle.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10186"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-27 14:07:40</p>
+            </div>
+            <div class="postheader"><h3>Re: LaTeX / Math Symbols</h3></div>
+				
+			<div class="body">
+				<p>You are the first to ask for it. It's not really a high demand item.<br />
+<br />
+We could probably add it without a lot of trouble, but this is a project we would expect a community group to fund. We generally fund features ourselves that others are unlikely to, or features that are in high demand. <br />
+<br />
+Latex support might cost a few thousand dollars CAD to add, if this something your group might like to raise fund for.  As you may be aware, ATutor is all about accessibility, so there will be a little more to it than simple Latex support. Latex math output is not at all accessible.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10645"></a>
+		<div class="forum-post-author">
+			<label class="title">ctshieh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-16 01:18:42</p>
+            </div>
+            <div class="postheader"><h3>Re: LaTeX / Math Symbols</h3></div>
+				
+			<div class="body">
+				<p>I use the wp-latexrender.zip to  implement the Math Symbols on <br />
+atutor<br />
+try<br />
+<br />
+ http:/atutor.math.tku.edu.tw/<br />
+or see the scrre shot<br />
+<br />
+Since I am not a professional programmer, no security is guaranteed .<br />
+<br />
+ 1, Download wp-latexrender.zip , extract to /latexender/<br />
+ 2. modified the path in latex.php<br />
+ 3. add the following code to /include/lib/output.inc.php<br />
+<br />
+&lt;?php<br />
+/*<br />
+Plugin Name: LatexRender<br />
+Plugin URI: http://sixthform.info/steve/wordpress/index.php<br />
+Description: Add LaTeX support<br />
+Version: 1.0<br />
+Author: Steve Mayer<br />
+Author URI: http://www.mayer.dial.pipex.com/tex.htm<br />
+*/<br />
+<br />
+function addlatex($latextext) {<br />
+        include_once('/usr/local/www/data/latexrender/latex.php');<br />
+//The path depends on your setting<br />
+        return latex_content($latextext);<br />
+}<br />
+<br />
+<br />
+<br />
+?><br />
+4. add <br />
+$text = addlatex($text);<br />
+after <br />
+function image_replace($text) {<br />
+        /* image urls do not require http:// */<br />
+        $text = addlatex($text); <br />
+in  /include/lib/output.inc.php or anywhere suitable.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10715"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-29 13:33:03</p>
+            </div>
+            <div class="postheader"><h3>Re: LaTeX / Math Symbols</h3></div>
+				
+			<div class="body">
+				<p>If you want to add LaTeX support quick and easily to atutor you can edit /include/lib/output.inc.php<br />
+<br />
+and at line:707 add the lines:<br />
+<br />
+// see: http://www.forkosh.com/mimetex.html<br />
+$input = preg_replace('/\[tex\](.*?)\[\/tex\]/ie', "'&lt;img src=\"http://www.forkosh.dreamhost.com/mimetex.cgi?'.rawurlencode('$1').'\" align=\"middle\">'", $input);<br />
+<br />
+this will convert all [tex] .. [/tex] to LaTeX using that external host, but i suggest you follow the instructions on that page to install the script locally.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

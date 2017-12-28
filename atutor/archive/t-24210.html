@@ -1,0 +1,63 @@
+---
+ title: ATtestsresults finalscore field
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATtestsresults finalscore field</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24210"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-15 09:13:55</p>
+            </div>
+            <div class="postheader"><h3>ATtestsresults finalscore field</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+I am trying to build a custom report that pulls the student's highest score for a test.  with the following data<br />
+<br />
+19262	60	4803	2013-07-10 06:48:47	50	1	2013-07-10 06:51:49<br />
+19268	60	4803	2013-07-10 07:07:58	100	1	2013-07-10 07:14:52<br />
+19263	60	4803	2013-07-10 06:53:47	0	1	2013-07-10 06:55:09<br />
+19267	60	4803	2013-07-10 07:04:16	0	1	2013-07-10 07:07:38<br />
+<br />
+this query pulls 50 as the highest - I looked at the structure and it appears the final_score field is of type CHAR... what is the reason that field is not INT?<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux <br />
+ ATutor Version: 1.5.5.<br />
+PHP Version: 5.2.17<br />
+MySQL Version: 5.0.77<br />
+OS: Linux 2.6.18-308.20.1.el5PAE</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24212"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-15 09:41:01</p>
+            </div>
+            <div class="postheader"><h3>Re: AT_tests_results final_score field</h3></div>
+				
+			<div class="body">
+				<p>I do not recall the reason for the char(5) value type. It may be left over from the early days. You could try changing it to an int. Backup the table before your do.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

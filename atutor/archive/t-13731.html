@@ -1,0 +1,193 @@
+---
+ title: Database  Default character set
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Database  Default character set</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13731"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-15 21:30:23</p>
+            </div>
+            <div class="postheader"><h3>Database  Default character set</h3></div>
+				
+			<div class="body">
+				<p>PHP 4.3.9  <br />
+zlib Enabled  <br />
+mbstring Enabled  <br />
+mysql Enabled  <br />
+safe_mode Off  <br />
+file_uploads On  <br />
+upload_max_filesize 10M  <br />
+post_max_size >= 8 MB 8M  <br />
+sessions Enabled  <br />
+session.auto_start =  0  <br />
+session.save_path Directory Writeable  <br />
+. in include_path Enabled  <br />
+MySQL 4.1.12<br />
+<br />
+Hi!<br />
+<br />
+I'm traing to install the new version of Atutor (1.6 pl1)	 in a new hosting and I get this error:<br />
+<br />
+Database xxxxxxxxxx_net_-_atutor is not in UTF8. Please set the database character set to UTF8 before continuing by using the following query: ALTER DATABASE `xxxxxxxxxx_-_atutor` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci<br />
+<br />
+I've run this command at the DB and check that the character set is utf8 but the error continues.<br />
+<br />
+Any sugesstion?<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13737"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-17 17:26:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Database - Default character set</h3></div>
+				
+			<div class="body">
+				<p>Hello, do you have permission to perform the alter statement?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13738"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-17 20:13:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Database - Default character set</h3></div>
+				
+			<div class="body">
+				<p>hello harris:<br />
+<br />
+yes, I log as DB administrator.<br />
+<br />
+I'v run the ALTER command and set the character set.<br />
+<br />
+I also test the original version 1.6 and the problem persists.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13742"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-18 12:31:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Database - Default character set</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+Was there any sql error when you ran that statement?  Can you please confirm with me that the DB char set was actually changed after the statement was executed?<br />
+<br />
+Thanks!<br />
+<br />
+<br />
+harris</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13746"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-18 20:43:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Database - Default character set</h3></div>
+				
+			<div class="body">
+				<p>Hello againg!<br />
+<br />
+The sql ran successful, I attach the screen with the set up of the DB.<br />
+<br />
+I'm not sure about the meaning of "No privileges" (in the screen), I believe that I can't create new database.<br />
+<br />
+Thanks harris for your help.<br />
+<br />
+Miguel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13750"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-20 09:40:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Database - Default character set</h3></div>
+				
+			<div class="body">
+				<p>Hi, <br />
+Did you successfully created a database (xxxxxxxxxx_net_-_atutor) for ATutor itself?  If the database hasn't been created, then the statement wouldn't work.<br />
+<br />
+You may want to ask your database administrator to grant you the create/alter database/table permissions, or have the database administrator create the database for you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13759"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-20 17:58:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Database - Default character set</h3></div>
+				
+			<div class="body">
+				<p>After several tests I believe that the problem is with the length of the name of the database. <br />
+<br />
+In the same server I get the error whit the DB "trainxxxxxx_net_-_atutor", but using the DB named "test" all works fine.<br />
+<br />
+Thanks again</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

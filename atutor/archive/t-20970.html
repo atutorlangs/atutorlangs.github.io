@@ -1,0 +1,153 @@
+---
+ title: Multiple Answer partial marks
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Multiple Answer partial marks</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20970"></a>
+		<div class="forum-post-author">
+			<label class="title">IvanPerezM</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-19 13:21:29</p>
+            </div>
+            <div class="postheader"><h3>Multiple Answer partial marks</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux<br />
+  ATutor version - 1.6.3<br />
+  Patch #s applied - 01 - 11<br />
+  ATutor theme name - Corporate Blue<br />
+  PHP version - 5.2<br />
+  MySQL version - not sure<br />
+  Webserver & version - Apache, not sure<br />
+  Copies of error messages - <br />
+  Changes to default settings -<br />
+  Web browser being used - FF, IE8<br />
+  ...and anything else relevant -<br />
+<br />
+I've been searching the forum for a way to assign partial marks on a multiple answer question, but I didn't find what I was looking for.<br />
+<br />
+Basically what I need is to override the mark given if all choices are checked and unchecked correctly with a partial mark. <br />
+<br />
+For instance, if I have:<br />
+Question Type: Multiple answer<br />
+Correct answers: 1,2,3<br />
+Incorrect answers: 4,5<br />
+Points available to the question: 1<br />
+<br />
+How can I get the system to compute a partial mark if he/she answers correctly, say 3 of the 5 answers (checked and unchecked), giving a mark of 0.6 instead of 0 for that question?<br />
+<br />
+I would be very grateful if someone could shed some light into this. :P <br />
+<br />
+Thanks in advance,<br />
+IVAN</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20972"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-19 13:30:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Multiple Answer partial marks</h3></div>
+				
+			<div class="body">
+				<p>Partial marks are not currently possible. You might look at atutor.no. They've done some work on this.<br />
+<br />
+http://www.atutor.no/2009/06/changing-algorithm-multiple-answer-questions</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20973"></a>
+		<div class="forum-post-author">
+			<label class="title">IvanPerezM</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-19 14:00:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Multiple Answer partial marks</h3></div>
+				
+			<div class="body">
+				<p>Thank you Greg. I thought the issue was more complicated than changing the js on the client side...<br />
+<br />
+I already started trying to figure out how the script operates, but seeing your reference above, it seems a server side modification on the php files would need to be implemented.<br />
+<br />
+If it's not too much to ask for, could this be considered for a new version. I think it will reflect a more accurate results computation that the current default.<br />
+<br />
+Thank you Greg, I much appreciate the hint.<br />
+<br />
+Ivan</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20974"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-19 14:38:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Multiple Answer partial marks</h3></div>
+				
+			<div class="body">
+				<p>Partial marks is one of those things that needs a funder, or a coder to code the changes and submit them to be included as part of the core.<br />
+<br />
+Unfortunately there isn't a project on the go right now that we might charge this work to.<br />
+<br />
+We were hoping the .no guys would get their changes into a state we could use, and merge into the core. Perhaps hearing from you might prompt them to do a little more work on the feature.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20976"></a>
+		<div class="forum-post-author">
+			<label class="title">IvanPerezM</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-19 14:49:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Multiple Answer partial marks</h3></div>
+				
+			<div class="body">
+				<p>I notice their work was for version 1.6.2, which probably means that unless they get sufficient requests they will not do an update. <br />
+<br />
+I will submit a polite request and hope they can develop a solution. <br />
+<br />
+Cheers.<br />
+Ivan</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

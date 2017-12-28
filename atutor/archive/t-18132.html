@@ -1,0 +1,239 @@
+---
+ title: New course creation not working I think
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>New course creation not working I think</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="18132"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 15:13:24</p>
+            </div>
+            <div class="postheader"><h3>New course creation not working I think</h3></div>
+				
+			<div class="body">
+				<p>I am creating a new course. After filling out all of the fields on the first page, including creating a banner, I click Save. Nothing happens, at least as far as I can tell. If I check in the courses list, the new course does not appear. There are asterisks next to the instructor and title fields, but I get no error messages. Not sure what is happening.<br />
+<br />
+Thanks for your help,<br />
+<br />
+Robert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18133"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 15:19:39</p>
+            </div>
+            <div class="postheader"><h3>more</h3></div>
+				
+			<div class="body">
+				<p>I think I got past that one. I had to log out as the admin and relog as an instructor. But after filling out the forms on the first page, I get this error:<br />
+<br />
+Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /homepages/17/d129260592/htdocs/E7Thunders/mods/_standard/social/lib/classes/Application.class.php on line 144<br />
+<br />
+Robert<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I am creating a new course. After filling out all of the fields on the first page, including creating a banner, I click Save. Nothing happens, at least as far as I can tell. If I check in the courses ...<br />
+[op]forums/view.php?fid=7;pid=18132;page=1#18132[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18134"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 15:43:28</p>
+            </div>
+            <div class="postheader"><h3>Re: more</h3></div>
+				
+			<div class="body">
+				<p>I was able to confirm the first problem as a bug. There will be a patch posted to fix this sometime soon.<br />
+<br />
+I can't reproduce the second problem though. My guess is the Application.class.php file was corrupted. Try replacing it with a fresh copy from the repository<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/mods/social/lib/classes/Application.class.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18135"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 16:15:53</p>
+            </div>
+            <div class="postheader"><h3>Re: more</h3></div>
+				
+			<div class="body">
+				<p>I uploaded the one you listed, and it was different in size than the existing one. I still get the error message whenever I try to view the course.<br />
+<br />
+Robert<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I was able to confirm the first problem as a bug. There will be a patch posted to fix this sometime soon.<br />
+<br />
+I can't reproduce the second problem though. My guess is the Application.class.php file wa...<br />
+[op]forums/view.php?fid=7;pid=18132;page=1#18134[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18136"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 16:29:26</p>
+            </div>
+            <div class="postheader"><h3>Re: more</h3></div>
+				
+			<div class="body">
+				<p>There something else going on with this installation. We've installed dozens ATutor installations without any problems.<br />
+<br />
+<br />
+Try downloading a fresh copy of ATutor and installing again. Maybe the whole ATutor bundle was corrupted when you downloaded or unzipped.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18137"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 16:59:55</p>
+            </div>
+            <div class="postheader"><h3>Re: more</h3></div>
+				
+			<div class="body">
+				<p>Maybe it is the way I am installing. I am using an unzip program to first unzip all the files to a place on my hard drive, with all the folders. Then I am copying these files to host with my FTP program. Is this an okay method? I can't find any way to unzip them on the server itself.<br />
+<br />
+Robert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18138"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 17:37:54</p>
+            </div>
+            <div class="postheader"><h3>Re: more</h3></div>
+				
+			<div class="body">
+				<p>Unzipping,  then uploading file by file could be the problem, though it is possible in most case to do it that way. <br />
+<br />
+If you are able to login to the shell (command prompt) for your Web space account, unpack the file there after uploading it using:<br />
+<br />
+tar xzvf ATutor-x.x.x.tar.gz<br />
+<br />
+If you don't have shell access, some ftp clients have an unzip/tar utility, allowing you to unzip on the server by selecting a command from the FTP client.<br />
+<br />
+<br />
+See the install instruction for more detials:<br />
+http://www.atutor.ca/atutor/docs/installation.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18157"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 11:50:55</p>
+            </div>
+            <div class="postheader"><h3>Re: more</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+I don't mind installing again but I don't get the feeling this is going to fix the problem since I have the latest stable build installed. I wanted to point out that the file you told me to download and install (Application.class.php) is not the same size as the one in the installation build. The one in the installation build is 14,805 bytes and the one you had me download is 13,001 bytes. I am not sure if this is important but I wanted to mention it to you.<br />
+<br />
+I use an unzip program and I get no errors. All the files appear to be there. And I am uploading them carefully. After uploading, the installation goes all the way through with no hitches. But trying to view one of my courses that I just created gives the error message above consistently, whether I use the original file or the one that you told me to use. I wonder if there is something in the way I am creating the course that is associated with the error.<br />
+<br />
+I will install it all again. I am using this file:  ATutor-1.6.3.tar.gz, by the way. <br />
+<br />
+I just have my doubts.<br />
+<br />
+Thanks,<br />
+<br />
+Robert<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Unzipping,  then uploading file by file could be the problem, though it is possible in most case to do it that way. <br />
+<br />
+If you are able to login to the shell (command prompt) for your Web space accoun...<br />
+[op]forums/view.php?fid=7;pid=18132;page=1#18138[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18161"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 12:11:41</p>
+            </div>
+            <div class="postheader"><h3>Re: more</h3></div>
+				
+			<div class="body">
+				<p>We have confirmed that the current ATutor bundle is fine. We've installed it many times without any problems. <br />
+<br />
+Careful as you may have been, FTPing file-by-file is not the recommended way to install ATutor. The chances of something going wrong with such an upload is very high. Talk to your provider and find out from them how to do an install as described in the installation instructions.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

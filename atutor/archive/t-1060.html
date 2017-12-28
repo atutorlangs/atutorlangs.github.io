@@ -1,0 +1,311 @@
+---
+ title: cache problems
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>cache problems</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="1060"></a>
+		<div class="forum-post-author">
+			<label class="title">liftcrew</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-10 11:03:26</p>
+            </div>
+            <div class="postheader"><h3>cache problems</h3></div>
+				
+			<div class="body">
+				<p>Need help<br />
+<br />
+Cobalt RAQ3<br />
+linux 5.0 pacifica<br />
+Apache 1.3.6<br />
+SQL 3.23.54<br />
+PHP 4.2.2<br />
+ATutor 1.3.1<br />
+<br />
+Install went fine.<br />
+This is what I get when I tried to log in as admin<br />
+<br />
+/home/sites/home/web/ATutor/include/phpCache/phpCache.inc.php on line 352<br />
+[ Variable: error]" />[ Variable: error]<br />
+<br />
+--------------------------------------------------------------------------------<br />
+<br />
+<br />
+Warning: lstat failed for /tmp/cache//atutor_cache_atutor/phpCache.msgs= (errno=2 - No such file or directory) in /home/sites/home/web/ATutor/include/phpCache/phpCache.inc.php on line 227<br />
+<br />
+Warning: SAFE MODE Restriction in effect. The script whose uid is 99 is not allowed to access /home/tmp/cache/atutor_cache_atutor owned by uid 0 in /home/sites/home/web/ATutor/include/phpCache/phpCache.inc.php on line 352<br />
+<br />
+Warning: fopen("/tmp/cache//atutor_cache_atutor/phpCache.msgs=", "wb+") - No such file or directory in /home/sites/home/web/ATutor/include/phpCache/phpCache.inc.php on line 352<br />
+<br />
+[AT_ERROR_CACHE_DIR_BAD] <br />
+<br />
+Any, and I mean any help will be appreciated <br />
+<br />
+Dave <br />
+<br />
+david@liftcrew.ca</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1061"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-10 11:15:18</p>
+            </div>
+            <div class="postheader"><h3>cache dir</h3></div>
+				
+			<div class="body">
+				<p>a) either specify a cache directory that you own (not /tmp) or b) disable cacheing, or c) disable safe_mode.<br />
+<br />
+b) would be the easiest.<br />
+simply comment out the CACHE_DIR statement in your config.inc.php file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1063"></a>
+		<div class="forum-post-author">
+			<label class="title">liftcrew</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-10 13:55:42</p>
+            </div>
+            <div class="postheader"><h3>NICE</h3></div>
+				
+			<div class="body">
+				<p>Thanks Joel<br />
+b] worked<br />
+<br />
+If I want cahcing I should create a dir as the admin and enter that path in the set up?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1064"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-10 15:00:04</p>
+            </div>
+            <div class="postheader"><h3>cache dir</h3></div>
+				
+			<div class="body">
+				<p>it isn't recommended that you enable cache'ing unless you really need it.<br />
+<br />
+it's only really needed if your database is being saturated..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1074"></a>
+		<div class="forum-post-author">
+			<label class="title">liftcrew</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-12 14:17:29</p>
+            </div>
+            <div class="postheader"><h3>One more problem</h3></div>
+				
+			<div class="body">
+				<p>when I go to access tools and discussions it takes me to their directory listings. If I click the index.php I then get the browser page I am looking for.<br />
+You got me throught me first crisis.<br />
+Any idfeas<br />
+<br />
+dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1076"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-12 15:14:54</p>
+            </div>
+            <div class="postheader"><h3>Web server setting</h3></div>
+				
+			<div class="body">
+				<p>Your Web server is probably not set to recognize index.php as an index file. <br />
+<br />
+in httpd.conf add index.php to DirectoryIndex<br />
+eg<br />
+<br />
+DirectoryIndex index.php index.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1084"></a>
+		<div class="forum-post-author">
+			<label class="title">liftcrew</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-13 21:12:55</p>
+            </div>
+            <div class="postheader"><h3>Unable to open content directory</h3></div>
+				
+			<div class="body">
+				<p>one more and I think we've got it. when I open file manager i get the error. Unable to open content directory. You may try to create it now does not change anything.?????</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1085"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-14 07:44:13</p>
+            </div>
+            <div class="postheader"><h3>Permissions?</h3></div>
+				
+			<div class="body">
+				<p>This shouldn't be happening if the installer finished without errors.  <br />
+<br />
+Try resetting the permissions on the content directory<br />
+<br />
+chmod -R a+rwx content/<br />
+<br />
+or if you have root access use<br />
+<br />
+chown -R nobody:nobody content/<br />
+<br />
+(where nobody is the webserver user)<br />
+<br />
+<br />
+Before you do that, see if you can use the chat, import a language pack or a content package. See if you can after you've reset the permissions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1086"></a>
+		<div class="forum-post-author">
+			<label class="title">liftcrew</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-16 09:27:52</p>
+            </div>
+            <div class="postheader"><h3>content dir</h3></div>
+				
+			<div class="body">
+				<p>No Go<br />
+<br />
+When I try to open file manager it says unable to open content directory. Create now.<br />
+ And then I get unable to create content directory<br />
+<br />
+Permissions of the content directory look like this:<br />
+<br />
+drwxrwxrwx    6 501      501          1024 Feb 16 05:28 content <br />
+<br />
+Permissions in the content directory look like this<br />
+<br />
+drwxrwxrwx    2 httpd    501          1024 Feb 16 05:25 1<br />
+drwxrwxrwx    2 httpd    501          1024 Feb 16 05:28 2<br />
+drwxrwxrwx    2 501      501          1024 Dec 16 13:04 chat<br />
+drwxrwxrwx    2 501      501          1024 Dec 16 13:04 import<br />
+-rwxrwxrwx    1 501      501             0 Dec 16 13:04 index.html<br />
+<br />
+Chat works. content packages does not. Can not do a backup of a course.<br />
+<br />
+Signed confused</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1093"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-16 15:56:08</p>
+            </div>
+            <div class="postheader"><h3>Try a fresh install</h3></div>
+				
+			<div class="body">
+				<p>Your webserver owner is httpd rather than nobody so use<br />
+<br />
+chown -R httpd:501 content/<br />
+<br />
+If that doesn't, try a fresh install, and use chmod a+rwx on the directories listed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18532"></a>
+		<div class="forum-post-author">
+			<label class="title">venkateshb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-01 02:59:31</p>
+            </div>
+            <div class="postheader"><h3>Re: cache dir</h3></div>
+				
+			<div class="body">
+				<p>Hi goel,<br />
+<br />
+Can you tell me what is database saturation?<br />
+<br />
+and when do you say database is being saturated?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+it isn't recommended that you enable cache'ing unless you really need it.<br />
+<br />
+it's only really needed if your database is being saturated..<br />
+[op]forums/view.php?fid=7;pid=1060;page=1#1064[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

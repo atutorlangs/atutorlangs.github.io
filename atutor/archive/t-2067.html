@@ -1,0 +1,122 @@
+---
+ title: SCORM content import  Microsoft producer for powerpoint
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>SCORM content import  Microsoft producer for powerpoint</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2067"></a>
+		<div class="forum-post-author">
+			<label class="title">mattiaq</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-18 13:31:42</p>
+            </div>
+            <div class="postheader"><h3>SCORM content import  Microsoft producer for powerpoint</h3></div>
+				
+			<div class="body">
+				<p>Has anyone successfully imported a SCORM package created with Microsoft Producer for Powerpoint?<br />
+<br />
+I've tried several times but all I get is an empty page. See: http://www.atutor.ca/atutor/demo/?cid=5024<br />
+<br />
+Do you believe that there's an incompatibility between atutor and producer, or am I doing something wrong?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2069"></a>
+		<div class="forum-post-author">
+			<label class="title">mattiaq</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-19 07:09:38</p>
+            </div>
+            <div class="postheader"><h3>update</h3></div>
+				
+			<div class="body">
+				<p>I think it depends from the script that MS Producer puts in the intro page for starting the player.<br />
+<br />
+I've found a workaround creating -manually- a direct link to the start page.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2074"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-19 09:19:41</p>
+            </div>
+            <div class="postheader"><h3>SCORM JS</h3></div>
+				
+			<div class="body">
+				<p>I'm not familiar with MS Producer, but I'd guess you are expecting a SCORM runtime environment in ATutor that the Javascript is supposed to interact with. ATutor does not run SCORM Sharable Content Objects (SCOs). We are still trying to deal with the embedded javascript in such packages that causes this content to fail accessibility requirements (we believe this is a flaw in the standard itself). <br />
+<br />
+ATutor will import and export Content Packages only, for now. Not the interactive components of a SCO.<br />
+<br />
+It would be helpful for us if you could send us a package created with producer.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2100"></a>
+		<div class="forum-post-author">
+			<label class="title">mattiaq</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-20 14:54:07</p>
+            </div>
+            <div class="postheader"><h3>You've got mail</h3></div>
+				
+			<div class="body">
+				<p>As requested, I've sent a sample package made with Producer.<br />
+<br />
+If you want to make other tests, you can download Producer for free from microsoft website (that's why our instructors are using it).<br />
+<br />
+The starting page of the package has no content except for a script. The script is used to detect the browser version and to redirect the user to the correct page for the browser/version used. Of course the import routine of atutor strips the script from the starting page thus leaving an empty page.<br />
+<br />
+As I wrote, a simple workaround is editing the page and manually adding the links to the correct page.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2120"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-21 08:38:14</p>
+            </div>
+            <div class="postheader"><h3>Producer uses IMS CP 1.1.2</h3></div>
+				
+			<div class="body">
+				<p>ATutor only supports the current content packaging specification (IMS CP 1.1.3). The package you sent me uses the older IMS CP 1.1.2. Unfortunately the two specifications are not compatible. <br />
+<br />
+As I'd mentioned ATutor does not support SCOs for accessibility reasons, so you will not be able to use them in ATutor. The Javascript is part of a SCO, rather than part of the content package. We do have plans for an addon SCO player, though its its a ways down the todo list so it may be a while before it gets added.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

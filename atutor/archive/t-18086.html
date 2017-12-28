@@ -1,0 +1,294 @@
+---
+ title: Mail emergency
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Mail emergency</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="18086"></a>
+		<div class="forum-post-author">
+			<label class="title">lovercraft</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-25 16:57:29</p>
+            </div>
+            <div class="postheader"><h3>Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version - <br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18087"></a>
+		<div class="forum-post-author">
+			<label class="title">lovercraft</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-25 17:05:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>Sorry for the blank first post and language errors<br />
+<br />
+I have read the thread about mail problems and bought place on dedicated server <br />
+<br />
+now it says that mail has been sent but my mailbox is empty<br />
+<br />
+somebody told to set php.ini unfortunatelly I don't know how<br />
+<br />
+lines about mail config in php ini look like this <br />
+<br />
+[mail function]<br />
+; For Win32 only.<br />
+SMTP = localhost<br />
+smtp_port = 25<br />
+<br />
+; For Win32 only.<br />
+;sendmail_from = me@example.com<br />
+<br />
+; For Unix only. You may supply arguments as well (default: "sendmail -t -i").<br />
+;sendmail_path =<br />
+<br />
+; Force the addition of the specified parameters to be passed as extra parameters<br />
+; to the sendmail binary. These parameters will always replace the value of<br />
+; the 5th parameter to mail(), even in safe mode.<br />
+;mail.force_extra_parameters = <br />
+<br />
+I have gentoo with webmin and all neccesery servers<br />
+<br />
+my possibilities:<br />
+<br />
+- E-mail: qmail / vpopmail* / courier-imap / qmailadmin<br />
+            spamassassin / clamAV<br />
+<br />
+plus open-smtp<br />
+<br />
+installed<br />
+<br />
+ -> ftp (port: 21)<br />
+     -> ssh (port: 22)<br />
+     -> smtp (port: 25)<br />
+     -> named (port: 53)<br />
+     -> web (port: 80)<br />
+     -> pop3 (port: 110)<br />
+     -> imap (port: 143)<br />
+     -> webmin (port: 10000)<br />
+<br />
+will very appreciate any suggestions what to do</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18088"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-25 17:16:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>Set SMTP= to an external SMTP server. Your personal one may work for the time being until you get something permanent setup for your course.<br />
+<br />
+On most windows servers you need to use an external SMTP server. On Linux you can use the local Sendmail to send mail. Check with your provider though. Maybe they have  mail running on localhost, but its not working properly.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18092"></a>
+		<div class="forum-post-author">
+			<label class="title">lovercraft</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-26 06:24:45</p>
+            </div>
+            <div class="postheader"><h3>Re: Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>first of all thank you for fast response @Greg<br />
+<br />
+I believe it is my poor knowledge of server configuration that cause the problem <br />
+<br />
+my provider is OVH and I asked for help on their board, let's hope that somebody from small local community we have, post solution there<br />
+<br />
+until then I'd like to set SMTP as You told, do I have to change something in Atutor files or in php.ini?<br />
+<br />
+if php.ini which line to mofify, should it look like this:<br />
+<br />
+<br />
+[mail function]<br />
+; For Win32 only.<br />
+SMTP = mail.atutor.pl<br />
+smtp_port = 25<br />
+<br />
+; For Win32 only.<br />
+;sendmail_from = me@example.com<br />
+<br />
+; For Unix only. You may supply arguments as well (default: "sendmail -t -i").<br />
+;sendmail_path =<br />
+<br />
+; Force the addition of the specified parameters to be passed as extra parameters<br />
+; to the sendmail binary. These parameters will always replace the value of<br />
+; the 5th parameter to mail(), even in safe mode.<br />
+;mail.force_extra_parameters = <br />
+<br />
+BTW what do You mean by external SMTP server, can it be server own by google like mail.gmail.com?????<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Set SMTP= to an external SMTP server. Your personal one may work for the time being until you get something permanent setup for your course.<br />
+<br />
+On most windows servers you need to use an external SMTP...<br />
+[op]forums/view.php?fid=7;pid=18086;page=1#18088[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18095"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-26 09:55:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>If you use a desktop email client, look at its STMP setting. I don't know if mail.gmail.com will work. Try it. See what happens.<br />
+<br />
+Restart the Web server for this change to take effect.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18145"></a>
+		<div class="forum-post-author">
+			<label class="title">lovercraft</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 06:32:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>I have gentoo linux I tried sendmail doesn't seem to work<br />
+although I don't install fixes and testing mail by clicking forgot your password and entering mail address <br />
+<br />
+I would like to know what Atutor use for sending emails<br />
+is it phpmailer or something else?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+If you use a desktop email client, look at its STMP setting. I don't know if mail.gmail.com will work. Try it. See what happens.<br />
+<br />
+Restart the Web server for this change to take effect.<br />
+[op]forums/view.php?fid=7;pid=18086;page=1#18095[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18146"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 10:00:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>Yes, phpMailer. Which uses Sendmail.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18181"></a>
+		<div class="forum-post-author">
+			<label class="title">lovercraft</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-31 11:08:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>I have asked funny questions, now I see, phpmailer files like class.phpmailer and class.smtp are indeed in "include" folder<br />
+<br />
+all I need is to have sendmail running properly and to set path to sendmail in php.ini<br />
+<br />
+one more question... do I have to configure PHPMailer files or is it already done?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Yes, phpMailer. Which uses Sendmail.<br />
+[op]forums/view.php?fid=7;pid=18086;page=1#18146[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18182"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-31 11:10:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Mail emergency</h3></div>
+				
+			<div class="body">
+				<p>Its already done. You just need to get Sendmail working</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

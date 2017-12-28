@@ -1,0 +1,94 @@
+---
+ title: ATutor installer fails to recognize MYSQL 41 and 51
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor installer fails to recognize MYSQL 41 and 51</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="7015"></a>
+		<div class="forum-post-author">
+			<label class="title">samiksc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-02 01:45:03</p>
+            </div>
+            <div class="postheader"><h3>ATutor installer fails to recognize MYSQL 41 and 51</h3></div>
+				
+			<div class="body">
+				<p>ATutor installer says 'mysql not found' when it is installed both as a windows service and as a binary in system path. Please help out resolve the issue. The configuration details follow:<br />
+<br />
+  operating system - Windows XP SP2<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - 5.1.2<br />
+  version of mysq l - tried 5.1.x as well as 4.1.16<br />
+  webserver & version - apache 2.0<br />
+  web browser being used - IE 5.1<br />
+<br />
+Thanks,<br />
+Sameeksha</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7017"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-02 08:22:45</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor installer fails to recognize MYSQL 4.1 and 5.1</h3></div>
+				
+			<div class="body">
+				<p>Are you able to access mysql otherwise?<br />
+<br />
+Have you initialized the database as decribed in the mysql install instructions.<br />
+<br />
+ATutor looks for the default port 3306, so if you have changed that you will need to make the adjustment in the ATutor include/config.inc.php file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7026"></a>
+		<div class="forum-post-author">
+			<label class="title">samiksc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-02 23:44:00</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor installer fails to recognize MYSQL 4.1 and 5.1</h3></div>
+				
+			<div class="body">
+				<p>Yes, MySQL is running as a service and also from command prompt. The command 'mysqlshow' shows two databases, mysql and test, which means that the initialization is done properly. I am able to use 'mysqlshow mysql' to see the tables in the mysql database.<br />
+I opened include/config.inc.php file, it shows only one one comment, 'please dont delete this file. Use automated installer'.<br />
+MySQL is running on port 3306. Apache 2.0 is listening to port 9090 (since port 80 is used by IIS 5.1 and 8080 is used by another program).<br />
+<br />
+Could the problem be related to php and mysql integration? Should php be installed AFTER mysql? Coz I have done the other way, installed apache followed by PHP followed by MySQL 4.1.16 / 5.1.0<br />
+<br />
+Things to describe: <br />
+  operating system - Windows XP SP2<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - 5.1.2<br />
+  version of mysq l - 4.1.16 / 5.1.0<br />
+  webserver & version - Apache 2.0<br />
+  copies of error messages - mysql is disabled -- not found<br />
+  changes to default settings - Apache listens to port 9090<br />
+  web browser being used - IE 5.1</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

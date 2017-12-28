@@ -1,0 +1,101 @@
+---
+ title: AContent IMS Content and Moodle
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>AContent IMS Content and Moodle</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22246"></a>
+		<div class="forum-post-author">
+			<label class="title">bjfisseler</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-28 07:56:56</p>
+            </div>
+            <div class="postheader"><h3>AContent IMS Content and Moodle</h3></div>
+				
+			<div class="body">
+				<p>Sorry for cross-posting (http://moodle.org/mod/forum/discuss.php?d=178334), but I think it is also an issue of AContent/ATutor.<br />
+<br />
+We are using Moodle and AContent for a project where we create content using AContent and use it within Moodle. AContent supports both IMS Content Package and IMS Common Cartridge. Now I tried to import the content to Moodle:<br />
+<br />
+- The content module "IMS Content" only supports the Common Cartridge.<br />
+- The activity "SCORM" interestingly supports both the IMS Common Cartridge and the IMS Content Package.<br />
+<br />
+But neither format supports the test include within the content formats. Maybe I'm doing something wrong? Does AContent correctly export the quizzes?<br />
+<br />
+I'm thankful for any hints I can get!<br />
+<br />
+Regards<br />
+<br />
+Bjrn</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22247"></a>
+		<div class="forum-post-author">
+			<label class="title">bjfisseler</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-28 08:04:22</p>
+            </div>
+            <div class="postheader"><h3>Re: AContent: IMS Content and Moodle</h3></div>
+				
+			<div class="body">
+				<p>Okay, I just validated the CC created with AContent (including a quiz) using the IMS CC Validator (http://validator.imsglobal.org/index.jsp?validate=cartridge). Here are the results:<br />
+<br />
+----------------<br />
+List of all Files Validated:<br />
+<br />
+    imsmanifest.xml<br />
+    QTI/tests_1.xml<br />
+<br />
+<br />
+Resource Validation Results: The document is valid.<br />
+<br />
+Schema Location Results: Schema locations are valid.<br />
+<br />
+Schema Validation Results: The document is valid.<br />
+<br />
+Schematron Validation Results: The document contains errors.<br />
+Errors (1)<br />
+imsmanifest.xml : Assertion failed for pattern_10. For Assessment or Question Bank Resources the Resource object must contain a single File object which references the QTI XML file. This file must conform to the IMS CC profile of QTI 1.2.1. The profile is contained in the package of this profile as imscc_q*.xdm. The derived schema of this QTI profile is in the package of this profile with the name ims_qtiasiv1p2_localised.xsd. The resource must not have an href attribute(#S11) (not ((./@type='imsqti_xmlv1p2/imscc_xmlv1p0/assessment') or (./@type='imsqti_xmlv1p2/imscc_xmlv1p0/question-bank')) or (count(./imscc:file)=1 and count(./@href)=0)); Line#: 355; Column#: 15<br />
+--------------<br />
+<br />
+If it helps, I can provide the CC file. Just answer to my posting. Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22248"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-28 09:05:59</p>
+            </div>
+            <div class="postheader"><h3>Re: AContent: IMS Content and Moodle</h3></div>
+				
+			<div class="body">
+				<p>It could be a bug. Recently IMS updated the schemas for validating common cartridges, which ended up breaking CC's exported from AContent. We'll update AContent with the new schemas in the next while. ATutor will have the them in a couple weeks in the next release. It authors and package CCs just as AContent does.  <br />
+<br />
+In the meantime, you could export content packages and QTI tests separately. I believe moodle will import these.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

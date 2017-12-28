@@ -1,0 +1,102 @@
+---
+ title: Problems upgrading to 161
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problems upgrading to 161</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="15926"></a>
+		<div class="forum-post-author">
+			<label class="title">sglc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-09 08:30:06</p>
+            </div>
+            <div class="postheader"><h3>Problems upgrading to 161</h3></div>
+				
+			<div class="body">
+				<p>I requested web host (SiteGround) to update aTutor from 1.5 to 1.6.1.  I am now not able to use aTutor due to multiple problems.  I reported the following:<br />
+" logged in to using my email address and password - other than the Administrator login and password - which I have done in the past. There is is a lot of Warning information at the top to the screen that opens - I have tried to capture a screen shot of it. Also, when I get in and click on the courses - it opens to "Page not found". I was not able to paste the screen shot - but below is the info at the top of the screen after logging in: <br />
+<br />
+Warning: opendir(/home/elearni8/public_html/atutor/content//feeds) [function.opendir]: failed to open dir: No such file or directory in /home/elearni8/public_html/atutor/mods/_standard/rss_feeds/module.php on line 42 <br />
+<br />
+Warning: readdir(): supplied argument is not a valid Directory resource in /home/elearni8/public_html/atutor/mods/_standard/rss_feeds/module.php on line 44 <br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/elearni8/public_html/atutor/mods/_standard/rss_feeds/module.php:42) in /home/elearni8/public_html/atutor/include/header.inc.php on line 17 <br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/elearni8/public_html/atutor/mods/_standard/rss_feeds/module.php:42) in /home/elearni8/public_html/atutor/include/classes/Language/Language.class.php on line 123 <br />
+<br />
+ <br />
+ 2008-12-08 09:34pm by elearni8 -  Another observation is that I do not see the new features that should be available with the upgrade to aTutor 1.6.1. Example is the feature "Gradebook". <br />
+<br />
+Prior to the upgrade the modules SCORM packages and Hello World were installed. Now they are not available. <br />
+ <br />
+They advise:I believe that I have managed to fix the issue with the warnings. Please check your application carefully and update this ticket with more information on whether you keep receiving those. <br />
+<br />
+As to the modules, I am afraid that you will have to re-install any modules that are not present. The versions you have been using are not compliant with the new version of the application which causes the issue. <br />
+<br />
+Current:<br />
+I tried to re-install the modules since the upgrade and not able to do so.  After clicking Install for both SCORM Packages and Hello World, I got the following screen:Warning: opendir(/home/elearni8/public_html/atutor/content//feeds) [function.opendir]: failed to open dir: No such file or directory in /home/elearni8/public_html/atutor/mods/_standard/rss_feeds/module.php on line 42<br />
+<br />
+Warning: readdir(): supplied argument is not a valid Directory resource in /home/elearni8/public_html/atutor/mods/_standard/rss_feeds/module.php on line 44<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/elearni8/public_html/atutor/mods/_standard/rss_feeds/module.php:42) in /home/elearni8/public_html/atutor/admin/modules/add_new.php on line 24<br />
+<br />
+Your help is appreciated.<br />
+sglc<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -   1.5<br />
+  Patch #s applied -  1.6.1<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -  (SiteGround)<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - Internet Explorer <br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15949"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-12 07:22:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems upgrading to 1.6.1</h3></div>
+				
+			<div class="body">
+				<p>First read the upgrade instructions. It explains about modules. Also read the requirements.<br />
+<br />
+http://www.atutor.ca/atutor/docs/installation.php<br />
+<br />
+Tell your provider about the problem. This is more likely a server issue.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

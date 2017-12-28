@@ -1,0 +1,274 @@
+---
+ title: Problem installing
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem installing</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24505"></a>
+		<div class="forum-post-author">
+			<label class="title">johnfoliot</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-12-10 21:23:14</p>
+            </div>
+            <div class="postheader"><h3>Problem installing</h3></div>
+				
+			<div class="body">
+				<p>I have successfully uploaded and extracted the Atutor files (Ver. 2.1.1), but when I attempt to access Atutor/install/install.php I get an error (File not found). <br />
+<br />
+If I click the link to /ATutor/install/upgrade.php it successfully resolves. This is a basic install, with all files in public_html/Atutor.<br />
+<br />
+Any thoughts?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24507"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-12-11 09:31:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem installing</h3></div>
+				
+			<div class="body">
+				<p>Hi John<br />
+Sounds like you may have unzipped the ATutor bundle locally and upload file by file. <br />
+<br />
+See:<br />
+http://atutor.ca/atutor/docs/faq.php#2<br />
+<br />
+If that's not the issue, provide a little more detail<br />
+<br />
+---<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24508"></a>
+		<div class="forum-post-author">
+			<label class="title">johnfoliot</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-12-12 01:29:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem installing</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+No I uploaded the tar.gz file to the root directory (public_html) and then unzipped it to the default directory (public_html/Atutor. I can see /install/install.php in the directory (along with install/update.php). If I "click" the Install button, I get a file not found (??), yet if I click the Upgrade button, then it resolves to install/update.php.  I'm stumped: how can one php file in a directory render, but not another?<br />
+<br />
+PHP 4.3.0+ 	5.2.17 	<br />
+zlib 	Enabled	<br />
+mbstring 	Enabled	<br />
+mysql 	Enabled	<br />
+safe_mode = Off 	Off	<br />
+file_uploads = On 	On	<br />
+GD 	On	<br />
+JPEG Support 	On	<br />
+upload_max_filesize >= 2 MB 	2M 	<br />
+post_max_size >= 8 MB 	8M 	<br />
+sessions 	Enabled	<br />
+session.auto_start = 0 	0	<br />
+session.save_path 	Directory Writeable	<br />
+curl 	Enabled	Good<br />
+. in include_path 	Enabled	<br />
+Mail configuration 	Enabled	<br />
+<br />
+MySQL Options 	<br />
+MySQL 4.1.10+ 	Found Version 5.1.68	<br />
+<br />
+(http://biodynamicalternatives.com/ATutor/install/not_installed.php)<br />
+<br />
+Thanks!<br />
+<br />
+JF</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24510"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-12-12 09:34:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem installing</h3></div>
+				
+			<div class="body">
+				<p>Not sure what to tell you. This is not something we've come across before, and the test install I just did locally worked as it should. The code for the upgrade and install are pretty much the same.<br />
+<br />
+My guess is there is something in the Web server config that is causing this. I do notice that the site does not display file endings, so perhaps there's a .htaccess file or perhaps Apache mod_rewrite running that is redirecting or rewriting urls. <br />
+<br />
+Are you able to confirm that the install.php file is actually there? If not, where did you download the bundle from? <br />
+<br />
+You might try installing somewhere else and see if you get the same problem. Try downloading a fresh bundle from atutor.ca/atutor/download.php. <br />
+<br />
+If none of that works, create a php file with the phpinfo() function in it and open it in a browser. We can take a look at the server config if you send a url in an email to info AT atutor dot ca.<br />
+<br />
+<br />
+<br />
+[php]<br />
+<br />
+phpinfo();<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24511"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-12-12 11:11:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem installing</h3></div>
+				
+			<div class="body">
+				<p>Nothing in the php config stands out. <br />
+<br />
+I think just describing to your provider what  you've described here should be enough info to investigate. <br />
+<br />
+If you do discover the problem, pls post here what you find.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24515"></a>
+		<div class="forum-post-author">
+			<label class="title">johnfoliot</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-12-17 10:20:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem installing</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+Working with the host provider, we got to the root of the problem. I also have a WordPress installation (at the root (public_html), which had added the following to .htaccess:<br />
+<br />
+&lt;files install.php><br />
+Order allow,deny<br />
+Deny from all<br />
+&lt;/files><br />
+<br />
+<br />
+This blocked all install.php files from being accessed.<br />
+<br />
+They added to the /public_html/ATutor/.htaccess the following :<br />
+<br />
+&lt;files install.php><br />
+Order allow,deny<br />
+Allow from all<br />
+&lt;/files><br />
+<br />
+and this allowed access to the install.php file under the ATutor folder.<br />
+<br />
+Might consider shipping .htaccess with that explicit command (??)<br />
+<br />
+Cheers!<br />
+JF</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24609"></a>
+		<div class="forum-post-author">
+			<label class="title">tob55</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-02-02 22:27:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem installing</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linus Centos<br />
+  ATutor version - 2.1.1<br />
+  Patch #s applied - <br />
+  ATutor theme name - <br />
+  PHP version - 5.5.33-31.1<br />
+  MySQL version - 5.0.96<br />
+  Webserver & version - <br />
+  Copies of error messages - The following errors occurred:<br />
+ATutor was unable to access the database. Please report this to an Administrator with this date reference (02/02/2014 09:10:49 pm)<br />
+  Changes to default settings - none<br />
+  Web browser being used - Chrome<br />
+  ...and anything else relevant - I was ableto successfully install the program, but I get this message when attempting to log in. I just need to figure out the right DB folder to point to and it should work. I have full access to My PHP Admin to edit, and I can code edit the pages necessary, but I am having a hard time figuring out where the DB is and how to resolve this problem.<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24612"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-02-03 09:24:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem installing</h3></div>
+				
+			<div class="body">
+				<p>The DB you defined when you installed ATutor. You don't really need to know where the folder is, though its typically in /var/lib/mysql/</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

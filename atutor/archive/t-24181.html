@@ -1,0 +1,110 @@
+---
+ title: Files and Courses
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Files and Courses</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24181"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-05 15:16:54</p>
+            </div>
+            <div class="postheader"><h3>Files and Courses</h3></div>
+				
+			<div class="body">
+				<p>Hi.  I have 2.0 installed and I'm trying to find the connection between files and courses.  How does File Storage know to list the files that are associated with that course, and not some other course?<br />
+<br />
+Ultimately, I'm trying to develop a script for resetting a course and I want to identify which files go with a particular course.<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24184"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-05 16:08:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Files and Courses</h3></div>
+				
+			<div class="body">
+				<p>File associations are kept in the "file" table, and the files themselves are kept in content/file_storage/ in a bunch of numbered directories, with numbered file names. Match the folder and filenames in the table, with the numbered files.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24185"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-05 16:23:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Files and Courses</h3></div>
+				
+			<div class="body">
+				<p>Right.  I understand the file system of ATutor.  I don't see where a particular file is linked with a particular course though.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24186"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-05 16:38:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Files and Courses</h3></div>
+				
+			<div class="body">
+				<p>As I recall, when the the owner_type is "1" the file belongs to a course workspace, and the owner_id will be the course_id it belongs to.<br />
+<br />
+The WORKSPACE type constants are listed in include/lib/constants.inc.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24187"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-05 17:48:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Files and Courses</h3></div>
+				
+			<div class="body">
+				<p>That works.  Thanks!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

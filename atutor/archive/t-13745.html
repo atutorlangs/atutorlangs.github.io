@@ -1,0 +1,131 @@
+---
+ title: File download stops at 2000000 bytes
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>File download stops at 2000000 bytes</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13745"></a>
+		<div class="forum-post-author">
+			<label class="title">jotace</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-18 19:12:46</p>
+            </div>
+            <div class="postheader"><h3>File download stops at 2000000 bytes</h3></div>
+				
+			<div class="body">
+				<p>Hi all... I have problems downloading files from my ATutor instalation. There is no problem to upload files, any size, but when I try to download these files the download stops exactly when the download reaches 2000000 bytes.<br />
+<br />
+There is no problem with files &lt; 2Mb.<br />
+<br />
+PHP settings:<br />
+  file_uploads = on<br />
+  upload_max_filesize = 350M<br />
+  post_max_size = 300M<br />
+<br />
+ATutor System Settings:<br />
+<br />
+Maximum File Size (Default: 50048576)<br />
+Maximum Course Size (Default: 500485760)<br />
+Maximum Course Float (Default: 50097152)<br />
+<br />
+Couse Quota & Max File Size = Default.<br />
+<br />
+Any help?<br />
+Thank you.<br />
+<br />
+Greetings,<br />
+Juan.<br />
+ <br />
+Things to describe: <br />
+  operating system - FreeBSD 4.7-RELEASE<br />
+  version of ATutor - 1.6<br />
+  versions of php - 5.0.4<br />
+  version of mysq l - 4.1.11<br />
+  webserver & version - Apache 1.3.41<br />
+  web browser being used - Firefox, IExplorer, Safari</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13781"></a>
+		<div class="forum-post-author">
+			<label class="title">jotace</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-21 14:44:30</p>
+            </div>
+            <div class="postheader"><h3>Re: File download stops at 2000000 bytes</h3></div>
+				
+			<div class="body">
+				<p>Please, some help in this topic?<br />
+I'll be very thankful<br />
+<br />
+Greetings,<br />
+Juan.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13785"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-21 16:52:18</p>
+            </div>
+            <div class="postheader"><h3>Re: File download stops at 2000000 bytes</h3></div>
+				
+			<div class="body">
+				<p>It looks like you've covered just about everything we might suggest. The only thing I see that might be  a problem is post_max being smaller than upload_max. Try making post_max larger, or upload_max smaller.<br />
+<br />
+http://ca.php.net/manual/en/ini.core.php#ini.post-max-size</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13862"></a>
+		<div class="forum-post-author">
+			<label class="title">jotace</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-27 12:23:59</p>
+            </div>
+            <div class="postheader"><h3>Re: File download stops at 2000000 bytes</h3></div>
+				
+			<div class="body">
+				<p>The problem is in PHP 5.0.4<br />
+<br />
+http://bugs.php.net/bug.php?id=32553)<br />
+<br />
+and here is the patch<br />
+<br />
+https://bugzilla.redhat.com/bugzilla....cgi?id=155916<br />
+https://bugzilla.redhat.com/bugzilla....cgi?id=113644<br />
+<br />
+Thank you for your help.<br />
+<br />
+Juan.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

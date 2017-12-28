@@ -1,0 +1,145 @@
+---
+ title: Error trying to previewenabledisabledelete Themes
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error trying to previewenabledisabledelete Themes</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9054"></a>
+		<div class="forum-post-author">
+			<label class="title">robguy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-20 14:14:46</p>
+            </div>
+            <div class="postheader"><h3>Error trying to previewenabledisabledelete Themes</h3></div>
+				
+			<div class="body">
+				<p>Hi everyone,<br />
+<br />
+I'm getting an error whenever I try to preview / enable / disable / set as default or delete a theme, any theme including the defaults installed with ATutor (as follows):<br />
+<br />
+Not Acceptable<br />
+An appropriate representation of the requested resource /atutor/admin/themes/index.php could not be found on this server.<br />
+<br />
+Apache/1.3.37 Server at www.workready.ca Port 80<br />
+<br />
+Atutor has been reinstalled and it still yields this result off of this server, any ideas?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9056"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-20 15:22:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Error trying to preview/enable/disable/delete Themes</h3></div>
+				
+			<div class="body">
+				<p>This seems to be a problem with your server host. They're probably using mod_security or have some other rules.<br />
+<br />
+It may also be an issue with that combination of PHP + Apache. <br />
+<br />
+The problem is unrelated to ATutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9071"></a>
+		<div class="forum-post-author">
+			<label class="title">aaldaya</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-23 14:45:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Error trying to preview/enable/disable/delete Themes</h3></div>
+				
+			<div class="body">
+				<p>In addition to the question posed earlier regarding: <br />
+<br />
+Not Acceptable<br />
+An appropriate representation of the requested resource /atutor/admin/themes/index.php could not be found on this server.<br />
+<br />
+What are the specific changes needed to mod_security?  <br />
+Is there a standard rules for mod_security, that needs to followed?  <br />
+<br />
+There are a number of script that are being hosted and the hosting company wants to keep track of clientele requirements.  For active security purposes. <br />
+<br />
+As it stands I've allowed the 'atutor/admin/themes/index.php' to be rewritable.<br />
+<br />
+Any insight would be appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9072"></a>
+		<div class="forum-post-author">
+			<label class="title">aaldaya</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-23 14:51:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Error trying to preview/enable/disable/delete Themes</h3></div>
+				
+			<div class="body">
+				<p>Sorry... and in amendment to the previous mess....<br />
+<br />
+Operating System: Lunix <br />
+KernelVers: 2.6.9-34.0.2.ELsmp<br />
+Apache: 1.3.37 (Unix)<br />
+PHP: 4.4.2<br />
+MySQL: 4.1.21-standard</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9095"></a>
+		<div class="forum-post-author">
+			<label class="title">aaldaya</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-24 17:11:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Error trying to preview/enable/disable/delete Themes</h3></div>
+				
+			<div class="body">
+				<p>Update:<br />
+<br />
+Talked with the hosting company and have them modify the mod_security to allow the url <br />
+<br />
+atutor/admin/themes/index.php<br />
+<br />
+To be not filter and to be accepted <br />
+<br />
+Solved problem.<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,119 @@
+---
+ title: Table ATmessagessent creation failed
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Table ATmessagessent creation failed</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11815"></a>
+		<div class="forum-post-author">
+			<label class="title">aslani606</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-03 02:37:12</p>
+            </div>
+            <div class="postheader"><h3>Table ATmessagessent creation failed</h3></div>
+				
+			<div class="body">
+				<p>hello<br />
+<br />
+When i install ATutor 1.5.5 Installation(localhost) in Step 2: Database<br />
+this error<br />
+<br />
+<br />
+Feedback<br />
+Connected to database atutor successfully. <br />
+Table AT_admins created successfully. <br />
+Table AT_admin_log created successfully. <br />
+Table AT_assignments created successfully. .<br />
+.................<br />
+Table AT_language_text created successfully.<br />
+<br />
+Error<br />
+Table AT_messages_sent creation failed.<br />
+what is problem?<br />
+<br />
+easyphp1-7<br />
+phpMyAdmin 2.5.3<br />
+MySQL 4.0.15-max-debug <br />
+:</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11818"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-03 09:07:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Table AT_messages_sent creation failed</h3></div>
+				
+			<div class="body">
+				<p>You may want to give a quick visit to this: http://www.atutor.ca/view/7/11622/1.html<br />
+<br />
+And may I know what your operation system is?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11822"></a>
+		<div class="forum-post-author">
+			<label class="title">aslani606</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-03 10:48:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Table AT_messages_sent creation failed</h3></div>
+				
+			<div class="body">
+				<p>window xp   sp2<br />
+  IE6<br />
+Mozilla/5.0</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11823"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-03 10:51:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Table AT_messages_sent creation failed</h3></div>
+				
+			<div class="body">
+				<p>The problem is mysql uses a different syntax before 4.0.18<br />
+<br />
+Can you try the following:<br />
+<br />
+Open atutor/install/db/atutor_schema.sql<br />
+<br />
+Go to line 595, change<br />
+") ENGINE = MYISAM;"<br />
+to<br />
+) TYPE = MYISAM;</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

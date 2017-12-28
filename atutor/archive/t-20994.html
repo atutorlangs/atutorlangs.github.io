@@ -1,0 +1,136 @@
+---
+ title: Problems with configincphp
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problems with configincphp</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20994"></a>
+		<div class="forum-post-author">
+			<label class="title">ftonioli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-21 15:53:28</p>
+            </div>
+            <div class="postheader"><h3>Problems with configincphp</h3></div>
+				
+			<div class="body">
+				<p>Hey All,<br />
+<br />
+Im trying to install Atutor and stuck in Save Configuration.<br />
+<br />
+Below, the error:<br />
+<br />
+Save Configuration<br />
+<br />
+Feedback<br />
+<br />
+* ../include/config.inc.php is writeable.<br />
+<br />
+Error<br />
+<br />
+* include/config.inc.php cannot be written! Please verify that the file exists and is writeable. On Unix issue the command chmod a+rw include/config.inc.php to make the file writeable. On Windows edit the file's properties ensuring that the Read-only attribute is not checked and that Everyone access permissions are given to that file.<br />
+<br />
+Note: To change permissions on Unix use chmod a+rw then the file name.<br />
+<br />
+File is writeable, I cant figure out the problem.<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Windows<br />
+  ATutor version - 2.0.1<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20995"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-21 16:32:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems with config.inc.php</h3></div>
+				
+			<div class="body">
+				<p>Just two thoughts:<br />
+1. make sure you are looking at the right file: ATUTOR_INSTALL_FOLDER/include/config.inc.php<br />
+2. can you open up the file and type in a few letters, save, re-open and make sure the letters are in.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21007"></a>
+		<div class="forum-post-author">
+			<label class="title">ftonioli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-22 15:53:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems with config.inc.php</h3></div>
+				
+			<div class="body">
+				<p>1. Yes<br />
+2. Yes<br />
+<br />
+Installation says its writeable :/<br />
+<br />
+Save Configuration<br />
+<br />
+Feedback<br />
+<br />
+* ../include/config.inc.php is writeable.<br />
+<br />
+But cant write :/<br />
+<br />
+Giving Up :(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21008"></a>
+		<div class="forum-post-author">
+			<label class="title">ftonioli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-22 15:59:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems with config.inc.php</h3></div>
+				
+			<div class="body">
+				<p>Ok, Solved.<br />
+<br />
+Had to give permittion in control panel in host site</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

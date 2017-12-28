@@ -1,0 +1,94 @@
+---
+ title: Fatal error on undefined function
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Fatal error on undefined function</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="224"></a>
+		<div class="forum-post-author">
+			<label class="title">guyran</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-07-10 13:06:37</p>
+            </div>
+            <div class="postheader"><h3>Fatal error on undefined function</h3></div>
+				
+			<div class="body">
+				<p>I am a complete newbie when it comes to installing mysql and php support<br />
+but I think I have got everything running on a Libranet 2.8 installation of<br />
+Debian (small plug for a Canadian accomplishment: try Libranet if you want<br />
+the joys of Debian without the pain ;-)<br />
+I haven't put this server online yet so have just left the Apache home address as localhost, but it works and after modifying httpd.conf to get it<br />
+to accept php pages, I end up with this fatal error message:<br />
+<br />
+Fatal error: Call to undefined function: cache() in /var/www/ATutor/include/vitals.inc.php on line 428<br />
+<br />
+What have I done wrong? I followed the installation instructions for ATutor<br />
+to the letter - except for modifying config.inc.php<br />
+In other words I haven't defined the database user passwrds; could this<br />
+explain such a fatal thing as this error?<br />
+Thanks for any help.<br />
+Guy :\</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="225"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-07-10 13:17:52</p>
+            </div>
+            <div class="postheader"><h3>Mysql must be set up first</h3></div>
+				
+			<div class="body">
+				<p>Yes that is the problem. ATutor will not run without access to the database. <br />
+<br />
+If you have trouble with cache errors after the database is setup comment out the last line of config.inc.php (see the instructions in the config file)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="548"></a>
+		<div class="forum-post-author">
+			<label class="title">thebert</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-25 17:33:25</p>
+            </div>
+            <div class="postheader"><h3>Hosted accounts can sometimes seem tricky</h3></div>
+				
+			<div class="body">
+				<p>As an example, using phpMyAdmin you'll typhically create a Mysql database (such as 'atutor'), then create a user (such as 'thomas') and finally a password (such as '4325')<br />
+<br />
+The thing to keep in mind is that often your hoster will config phpMyAdmin to actually create something like this:<br />
+<br />
+'yourhosteraccountname_atutor'  as the database<br />
+and <br />
+'yourhosteraccountname_thomas'  as the user<br />
+<br />
+It is *these* strings that need to be inserted into the config.inc.php file. Inexplicably, (from my perspective at least) the password you've defined ('4325') does not get put in with the prefix, just '4325'.<br />
+<br />
+btw, many thanks to these board contributors. TEH<br />
+<br />
+;)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

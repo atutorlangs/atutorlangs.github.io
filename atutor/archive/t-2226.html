@@ -1,0 +1,371 @@
+---
+ title: converting from WebCT to ATutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>converting from WebCT to ATutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2226"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 11:44:51</p>
+            </div>
+            <div class="postheader"><h3>converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+Our group has been using WebCT Campus Edition Version 4.1, and we are trying to convert to ATutor.<br />
+<br />
+What I am doing is a two-step process: 1. export a course from WebCT(gives me a .zip file); and 2.import it to ATutor. <br />
+<br />
+This is an easy process and works just fine for some of the courses - but  not for all of them.<br />
+<br />
+For several courses I get the following problem:<br />
+<br />
+ After importing the .zip file to ATutor, I am opening the course page. It looks as expected - on the right there is a global menu, and on the left there are links to the corresponding chapters. <br />
+BUT when I follow a link to any chapter, INSTEAD OF A CONTENT PAGE, I GET AN INDEX OF THE CORRESPONDING DIRECTORY.<br />
+<br />
+As I said above, it works fine for some courses, but does not work for some other courses. I am exporting/importing them using the exact same process...<br />
+<br />
+Did anyone else experience the same problem?<br />
+<br />
+What can I do to fix this?<br />
+<br />
+Thank you,<br />
+<br />
+Inna</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2229"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 12:40:24</p>
+            </div>
+            <div class="postheader"><h3>Check DirectoryIndex</h3></div>
+				
+			<div class="body">
+				<p>I'm assuming you are using Apache as your webserver. Check to make sure the DirectoryIndex setting in httpd.conf has index.php set as a value. Like so:	<br />
+<br />
+DirectoryIndex index.php index.html<br />
+<br />
+BTW<br />
+We would be very interested in about your experiences migrating from WebCT to ATutor if you'd care to describe them here. I'm sure there are many others that would like to hear about your experiences as well.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2231"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 13:18:39</p>
+            </div>
+            <div class="postheader"><h3>converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>it actually sounds like the links you are using are links in the content themselves and not the Global Menu or the Local Menu links. is that correct?<br />
+<br />
+in which case the links you are using are trying to access the content package directory and the file that should be in it, but the file gets deleted when it is inserted into the ATutor database.<br />
+<br />
+ATutor does not yet handle links within content to other content pages. we are still thinking about possible solutions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2233"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 15:57:35</p>
+            </div>
+            <div class="postheader"><h3>converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+Thanks for your reply! Yes, I am using Apache as my webserver. And yes, the DirectoryIndex has index.php and index.html, as you describe.<br />
+<br />
+So far it has been a pretty straightforward process to convert courses from WebCT to ATutor. In WebCT I go into ManageCourse, and then ExportCourse. This creates a .zip file.<br />
+Then I create a new course in ATutor, and go to Tools -> Content Packaging, where I can import a content package. <br />
+<br />
+As I said in my earlier post, it works just fine for some of my courses. But for the other courses a content page contains just one link that takes me to the directory index... And I still do not know what's causing this...<br />
+<br />
+Inna<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I'm assuming you are using Apache as your webserver. Check to make sure the DirectoryIndex setting in httpd.conf has index.php set as a value. Like so:	<br />
+<br />
+DirectoryIndex index.php index.html<br />
+<br />
+BTW<br />...<br />
+[op]forums/view.php?fid=7;pid=2226;page=1#2229[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2234"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 16:06:58</p>
+            </div>
+            <div class="postheader"><h3>converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>the only reason for a link to content is if the content package includes a reference to something that isn't a physical HTML document (possibly to a directory, which is not IMS compliant).<br />
+<br />
+you could send us the content package you're trying to import and we'll take a look at it. or give us access to the webCT installation where we can try exporting one of your courses.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2235"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 16:07:08</p>
+            </div>
+            <div class="postheader"><h3>converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Joel,<br />
+<br />
+Thanks for your reply!<br />
+<br />
+I AM NOT using links in the content itself. <br />
+I AM using links in the Global Menu and the Local Menu. 	<br />
+<br />
+For some of the courses this works just fine - when I follow a link (within a Global Menu or a Local Menu), I get a page with the corresponding content.<br />
+<br />
+But for some other courses this does not work - i.e. when I follow a link (within a Global Menu or a Local Menu), I get a page with just one link in it. This link has the name of the content page again, and ... it takes me to the Directory index.... <br />
+<br />
+Any idea why this would be happening?<br />
+<br />
+Thanks,<br />
+<br />
+Inna<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+it actually sounds like the links you are using are links in the content themselves and not the Global Menu or the Local Menu links. is that correct?<br />
+<br />
+in which case the links you are using are tryin...<br />
+[op]forums/view.php?fid=7;pid=2226;page=1#2231[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2236"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 16:10:47</p>
+            </div>
+            <div class="postheader"><h3>converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Joel,<br />
+<br />
+I can send you a .zip file. What email address should I use?	(I do not think I can attach it here, can I?)<br />
+<br />
+Thanks,<br />
+<br />
+Inna<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+the only reason for a link to content is if the content package includes a reference to something that isn't a physical HTML document (possibly to a directory, which is not IMS compliant).<br />
+<br />
+you cou...<br />
+[op]forums/view.php?fid=7;pid=2226;page=1#2234[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2237"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 17:17:06</p>
+            </div>
+            <div class="postheader"><h3>Mail a package</h3></div>
+				
+			<div class="body">
+				<p>send a package to info/AT/atutor.ca (decifer with the AT sign)<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Joel,<br />
+<br />
+I can send you a .zip file. What email address should I use?	(I do not think I can attach it here, can I?)<br />
+<br />
+Thanks,<br />
+<br />
+Inna<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+the only reason for a link to cont...[/reply]<br />
+[op]forums/view.php?fid=7;pid=2226;page=1#2236[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2238"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 17:20:02</p>
+            </div>
+            <div class="postheader"><h3>rename the file</h3></div>
+				
+			<div class="body">
+				<p>Oh! And rename the file by replacing the zip extension with something else before you send it. Our institutional spam filter will not let zip files through otherwise.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2240"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 17:55:47</p>
+            </div>
+            <div class="postheader"><h3>converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I have sent you an email a few minutes ago.<br />
+<br />
+Inna<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Oh! And rename the file by replacing the zip extension with something else before you send it. Our institutional spam filter will not let zip files through otherwise.<br />
+[op]forums/view.php?fid=7;pid=2226;page=1#2238[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2241"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-04 18:01:39</p>
+            </div>
+            <div class="postheader"><h3>got it</h3></div>
+				
+			<div class="body">
+				<p>We'll take a look tomorrow.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2245"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-05 12:18:04</p>
+            </div>
+            <div class="postheader"><h3>converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>This has been fixed in the code repository and will be part of the 1.4.2 release scheduled for the end of the month.<br />
+<br />
+Until then you can try a nightly build or replace the ./tools/ims/ims_import.php file from the repository:<br />
+<br />
+http://atutorsvn.rcat.utoronto.ca/repos/atutor/trunk/docs/tools/ims/ims_import.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4226"></a>
+		<div class="forum-post-author">
+			<label class="title">owais</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-05 22:37:59</p>
+            </div>
+            <div class="postheader"><h3>Converting from WebCT to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Inna, <br />
+<br />
+Could you identify major problems you have encountered in migrating from WebCT to Atutor?<br />
+<br />
+The guidelines you provide may be useful for others to follow.<br />
+<br />
+Thanks,<br />
+<br />
+Owais</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

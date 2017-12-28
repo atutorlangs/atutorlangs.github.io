@@ -1,0 +1,64 @@
+---
+ title: Is a dedicated server mandatory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Is a dedicated server mandatory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4932"></a>
+		<div class="forum-post-author">
+			<label class="title">alanbe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-25 21:40:41</p>
+            </div>
+            <div class="postheader"><h3>Is a dedicated server mandatory</h3></div>
+				
+			<div class="body">
+				<p>Greetings. I successfully (I think) set up ATutor on my home computer (XP, Apache1.3, PHP4)<br />
+<br />
+Elated with my success, I tried in on my web site (Linux Shared hosting).  Appears to work, though slowly. My hosting company has the following guidelines for CGI programs:<br />
+<br />
+>>"Please optimize your scripts relative to memory usage and CPU time. Our system automatically stops scripts that use too many system resources."<br />
+<br />
+>>Programming Limits:<br />
+>>CPU : 6 seconds @ 100%<br />
+>>Memory : 10240KB (10MB)<br />
+>>Numerical Processes : 12"<br />
+<br />
+Are there any php scripts which might exceed the 6 second limit? <br />
+<br />
+I had problems connecting with mysql on my XP box:  one script timed out at 30 seconds. No problem on the linux share host however.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4947"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-27 11:37:27</p>
+            </div>
+            <div class="postheader"><h3>Is a dedicated server mandatory?</h3></div>
+				
+			<div class="body">
+				<p>Your host specifies CPU : 6 seconds @ 100%, which is different from actually taking up that much time. A script could take 30 seconds while only actually using half that time with the CPU.<br />
+<br />
+Some scripts require considerably longer than 30seconds to complete (such as uploading files or sending out email).<br />
+<br />
+Your host has set those limitations to make it impossible from a single client from hogging all the resources. Although ATutor can function in a shared hosting environment, these restrictions would probably not allow it to use enough resources needed to conduct real courses online.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

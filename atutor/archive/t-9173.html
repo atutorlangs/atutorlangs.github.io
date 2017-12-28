@@ -1,0 +1,120 @@
+---
+ title: Only portions of pasted HTML are visible when saved
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Only portions of pasted HTML are visible when saved</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="9173"></a>
+		<div class="forum-post-author">
+			<label class="title">eharper</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-06 11:17:01</p>
+            </div>
+            <div class="postheader"><h3>Only portions of pasted HTML are visible when saved</h3></div>
+				
+			<div class="body">
+				<p>I'm having trouble getting one content slide from showing all of my pasted content.  I'm trying to paste a rather lengthy file of HTML into one single content file but it stops at a certain point and doesn't show the rest after I save it.  I maxed out the file size and course size quotas as well thinking the system might have been balking at the pasted HTML and cutting the file down to decrease the size.<br />
+<br />
+Does anyone know of a workaround for this?<br />
+<br />
+Erik</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9174"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-06 11:50:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Only portions of pasted HTML are visible when saved!</h3></div>
+				
+			<div class="body">
+				<p>It might be the result of broken HTML in the page. Try validating the page before you import it.<br />
+<br />
+http://validator.w3.org<br />
+<br />
+Or, ask your ATutor system administrator to increase the course file quota if you have run out of space..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9175"></a>
+		<div class="forum-post-author">
+			<label class="title">eharper</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-06 12:40:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Only portions of pasted HTML are visible when saved!</h3></div>
+				
+			<div class="body">
+				<p>It's definitely not a validation issue.  It happens on other pages as well.<br />
+<br />
+I pasted a long list of glossary terms into one document and on the last line it leaves out some of it.  its like there is a line number limit or something.<br />
+<br />
+like i said before, i maxed out the file quota too.  i am the administrator of the system as well.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9176"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-06 13:13:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Only portions of pasted HTML are visible when saved!</h3></div>
+				
+			<div class="body">
+				<p>A content page is limited to the maximum value for a mysql text field (65000 bytes).  <br />
+<br />
+You could change the data type for the "text" field from TEXT to MEDIUMTEXT.<br />
+<br />
+Or shorten your pages. In Internet terms, 65K worth of text is probably too long for a single page.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9177"></a>
+		<div class="forum-post-author">
+			<label class="title">eharper</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-06 13:50:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Only portions of pasted HTML are visible when saved!</h3></div>
+				
+			<div class="body">
+				<p>great! that's the solution.  Figured it had something to do with mysql Thanks! Erik</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

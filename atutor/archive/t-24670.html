@@ -1,0 +1,281 @@
+---
+ title: Error at top of all pages
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error at top of all pages</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24670"></a>
+		<div class="forum-post-author">
+			<label class="title">dburniston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-13 12:37:04</p>
+            </div>
+            <div class="postheader"><h3>Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - CentOS 6.5<br />
+  ATutor version - 2.1<br />
+  Patch #s applied - all patches<br />
+  ATutor theme name - ATutor 1.5 default<br />
+  PHP version - 5.4.28<br />
+  MySQL version - 5.5.33<br />
+  Webserver & version - Apache 2.2.26<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+<br />
+  Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home2/fka66/public_html/lmsa/include/lib/output.inc.php on line 300<br />
+   <br />
+   This error is at the top of all pages. Has just recently appeared. No changes other than Hostgator upgraded to php 5.4.28 recently. Is this the cause?<br />
+<br />
+How can it be fixed?<br />
+<br />
+Thanks.<br />
+<br />
+...Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24671"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-13 12:54:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>The upgrade to PHP 5.4 could be the problem. Support for this version of PHP was added in ATutor 2.1.1. You might upgrade ATutor, or revert back to a version of PHP 5.3 if you have that option.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24672"></a>
+		<div class="forum-post-author">
+			<label class="title">dburniston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-13 15:24:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>I uploaded a zip file of the 2.11 version and unzipped it on hostgator, copied over my config file and logged in as admin.<br />
+<br />
+I get the following error on the admin pages: [ AT_ERROR_DB_QUERY ]<br />
+<br />
+I can see all my defaults and courses so it appears to be talking to the database.<br />
+<br />
+Any thoughts on the cause of this... have I missed doing something?<br />
+<br />
+Thanks,<br />
+<br />
+...Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24674"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-13 17:56:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>Normally you would not copy over the config file. That's done automatically by the upgrade script.<br />
+<br />
+Follow the upgrade instructions:<br />
+http://www.atutor.ca/atutor/docs/installation.php#upgrade<br />
+<br />
+There will have been database changes that the upgrader need to add to your db.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24675"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-13 17:58:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>Message from: dburniston<br />
+Subject: Re: Error at top of all pages<br />
+Message: It was pointed out that I didn't need to copy the config file... I was sure I read to do that!<br />
+<br />
+Put back the original file and got the upgrade. Everything went through fine... no flags.<br />
+<br />
+Went to login page and got error Atutor was unable to access the database, but I can login and see the data from the database in the admin area (site name is ok, courses are there).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24678"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-13 18:14:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>[Sorry for the last few SPAMs]<br />
+<br />
+Are you able to access your system's php error log to see if there's anything there.  It will generally show a failed foreach() that follows where the database failed to connect. <br />
+<br />
+You can also enable writing to log any queries run when a page loads. In include/lib/mysql_connect.inc.php, remove the slashes from the following line to uncomment it<br />
+<br />
+[php]<br />
+//error_log(print_r($sql, true), 0); <br />
+[/php]<br />
+<br />
+Make sure you comment those lines out again once you're done debugging, or your error log will grow very quickly.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24679"></a>
+		<div class="forum-post-author">
+			<label class="title">dburniston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-14 13:57:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>I did notice this error in the admin/error_log<br />
+<br />
+[14-May-2014 18:53:49] Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8_unicode_ci,IMPLICIT) for operation '='<br />
+<br />
+I'm waiting to hear back from Hostgator about php errors.<br />
+<br />
+If I uncomment as above, does it go to the admin/error_log?<br />
+<br />
+...Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24687"></a>
+		<div class="forum-post-author">
+			<label class="title">dburniston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-20 11:29:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>Hostgator is only seeing the utf8 errors. They tried to change the database to fix it but the problem still happens so they put the database back the way it was.<br />
+<br />
+Is there some way I can clean this up and see if it is causing the problem?<br />
+<br />
+...Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24689"></a>
+		<div class="forum-post-author">
+			<label class="title">dburniston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-20 14:33:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>phpmyadmin shows that all tables are utf8_unicode_ci except for AT_language_text which is showing as utf8_general_ci<br />
+<br />
+I can't see where it is coming from. If I export the data and view it, the create table for AT_language_text looks like:<br />
+<br />
+[php]CREATE TABLE IF NOT EXISTS `AT_languages` (<br />
+  `language_code` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',<br />
+  `char_set` varchar(80) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',<br />
+  `direction` varchar(16) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',<br />
+  `reg_exp` varchar(124) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',<br />
+  `native_name` varchar(80) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',<br />
+  `english_name` varchar(80) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',<br />
+  `status` tinyint(3) unsigned NOT NULL DEFAULT '0',<br />
+  PRIMARY KEY (`language_code`,`char_set`)<br />
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24690"></a>
+		<div class="forum-post-author">
+			<label class="title">dburniston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-05-20 14:58:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at top of all pages</h3></div>
+				
+			<div class="body">
+				<p>I tried a complete fresh install and ended up with teh same problem.<br />
+<br />
+Using phpMyAdmin, I was able to reset the table to use utf8_unicode_ci and the error has gone away. So far things appear to be working again.<br />
+<br />
+...Dave</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

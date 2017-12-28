@@ -1,0 +1,157 @@
+---
+ title: Cannot remain logged in upgrade questions
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cannot remain logged in upgrade questions</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="23658"></a>
+		<div class="forum-post-author">
+			<label class="title">mobe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-17 16:16:43</p>
+            </div>
+            <div class="postheader"><h3>Cannot remain logged in upgrade questions</h3></div>
+				
+			<div class="body">
+				<p>++++++++++++++++++++++++++++++++++++++++++++++<br />
+  OS - Linux (I believe)<br />
+  ATutor version - **Not sure, installed in Nov 2010**<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version - PHP Version 5.2.17<br />
+  MySQL version - MS SQL server 2005<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - Safari, Chrome, Firefox<br />
+  ...and anything else relevant -<br />
+++++++++++++++++++++++++++++++++++++++++++++++<br />
+<br />
+I'm having difficulty staying logged in on ATutor. As you can see above, the version running is outdated (I want to upgrade but I'm afraid I'll risk losing my courses if I do it myself), but I've concluded that the version may not be the issue (although an upgrade might help).<br />
+<br />
+While logged in and navigating my ATutor courses, I will be forced back to a login page at random. I'll click "Jump" to a course (which may or may not kick me off right then), and usually after clicking a lesson under "Course Navigation" I'm greeted with the login page. I was trying to figure this problem out on a Windows 7 PC using Firefox and Chrome, then moved to my Macbook and cleared the caches on Chrome+Firefox+Safari but the problem remained.<br />
+<br />
+I just changed my main ISP from a mobile 3G hotspot to a Hughes satellite system last Thursday, but I hadn't experienced any problems until last evening. As it turns out, if I tether my smartphone to a different Windows 7 laptop, then everything works fine with no navigation issues and I can stay logged in without worry.<br />
+<br />
+From what I can muster, this problem is specific to using my new ISP. That's confusing, however, because it *will* allow me to log in and browse to some degree before logging me out. For example, new account registration works, but enrolling in a course and trying to navigate that as a student will bring me back to a login page. <br />
+<br />
+I contacted my hosting provider, they had no problems logging in. What would be happening to abruptly force me back to the login page, however, if every other website I browse to with login options work fine? I'm hoping a new installation would eliminate this problem, but should I be worried about doing an upgrade on my own?<br />
+<br />
+Any help is greatly appreciated!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23659"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-17 16:33:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot remain logged in, upgrade questions</h3></div>
+				
+			<div class="body">
+				<p>If you've deleted the ATutor related cookies from your browser and that did not help, open the include/lib/constants.inc.php file and find the value for VERSION about half way down the file.<br />
+<br />
+It does sound like a cookie problem if your provider was able to login. Try yourself logging into ATutor with a system or browser you've never used to login to it before. If it works, then the problem is very likely cookies.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23660"></a>
+		<div class="forum-post-author">
+			<label class="title">mobe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-17 18:00:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot remain logged in, upgrade questions</h3></div>
+				
+			<div class="body">
+				<p>Greg, thank you for your reply. I did some looking on that file and I'm running version 2.0.1.<br />
+<br />
+It's definitely something relating to which internet I'm using. I just used my smartphone on both this and another computer and it loads through fine there as well.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23662"></a>
+		<div class="forum-post-author">
+			<label class="title">mobe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-18 14:56:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot remain logged in, upgrade questions</h3></div>
+				
+			<div class="body">
+				<p>Today I'm getting the same results, although last evening I was actually able to log in and browse course content. Is it possible for cookie problems to be server side?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23663"></a>
+		<div class="forum-post-author">
+			<label class="title">mobe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-18 14:56:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot remain logged in, upgrade questions</h3></div>
+				
+			<div class="body">
+				<p>Today I'm getting the same results, although last evening I was actually able to log in and browse course content. Is it possible for cookie problems to be server side?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23664"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-19 10:13:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot remain logged in, upgrade questions</h3></div>
+				
+			<div class="body">
+				<p>A couple of steps that may help:<br />
+<br />
+1. Login ATutor as admin, go to "Patcher" tab, install all the patches;<br />
+<br />
+2. Not only just clean up the browser cache, removing all the browser cookies is essential. The cookie issue is unlikely at the server side;<br />
+<br />
+3. Restart browser.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

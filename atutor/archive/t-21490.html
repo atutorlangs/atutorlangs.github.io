@@ -1,0 +1,92 @@
+---
+ title: Security of gadgets
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Security of gadgets</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21490"></a>
+		<div class="forum-post-author">
+			<label class="title">fazli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-27 23:03:27</p>
+            </div>
+            <div class="postheader"><h3>Security of gadgets</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+Hi<br />
+I've added a facebook gadget (by Ginga) into my Atutor, www.dershanen.com using Atutor search.<br />
+But I am anxious about the security of my facebook and ofcurse Atutor. How can I make myself sure and relaxed about the security<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 2.6.32-25.8.BHsmp<br />
+  ATutor version - 2.0.2<br />
+  Patch #s applied -<br />
+  ATutor theme name - Deafult 2.0.2<br />
+  PHP version - 5.2.14<br />
+  MySQL version - 5.1.47-community-log<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21553"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-05 13:50:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Security of gadgets</h3></div>
+				
+			<div class="body">
+				<p>From harris "Regarding to the OpenSocial gadgets, if the gadget itself is not secured, then there isn't much we can do about it.  We can tell the developer about it and warn users to use on their own risks.  Shindig renders Javascript (which is the gadget XML file) and i don't think it can stop XSS, because it allows you to write any javascript. "</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21568"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-06 15:38:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Security of gadgets</h3></div>
+				
+			<div class="body">
+				<p>In addition, ATutor itself serves as the container by using Shindig (an open source project developed by Apache http://shindig.apache.org/).  <br />
+<br />
+This allows any ATutor installation to import gadgets provided by gadgets providers.  When you add a gadget, ATutor will store a couple of gadget details such as its URL, author, title, height, etc.  At times, ATutor stores some gadget settings which is requested by the gadget itself.  To clarify on privacy concerns, we do not keep privacy data ourselves unless the gadget tells us to do so. <br />
+<br />
+For instance, ATutor will host the facebook gadget as a container. When you log into facebook via the gadget, ATutor knows nothing about your login name and password, the gadget SHOULD open up facebook remote login page to forward you in, then the gadget should use the facebook SPI (service provider interface) to gather your details and sends it to the Shindig server within ATutor.  Shindig will receive these data and display it onto ATutor.  If the facebook gadget is not secured, then we cannot do anything about it because we don't have control over it.  It's the same idea of installing application onto your computer, or installing addons onto your browsers.  You should only install it when you trust the provider.  <br />
+<br />
+I hope this clears your concern a bit.<br />
+<br />
+<br />
+regards,<br />
+Harris</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

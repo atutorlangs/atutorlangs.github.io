@@ -1,0 +1,137 @@
+---
+ title: Is there a global way to change the time
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Is there a global way to change the time</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13459"></a>
+		<div class="forum-post-author">
+			<label class="title">bielo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-11 17:07:45</p>
+            </div>
+            <div class="postheader"><h3>Is there a global way to change the time</h3></div>
+				
+			<div class="body">
+				<p>Hi everyone, this is the thing. My server runs MySQL 4.1.22, it's a shared hosting server in Canada. While a part of the year I have the same time as they do, EST, now they are 1 hour ahead because of Daylight Savings Time.<br />
+<br />
+I cannot use the TimeZone features in Atutor because MySQL is 4.1.22 but I would like to substract an hour from the time Atutor shows because all the times show up as one hour ahead which is especially annoying for test start and end dates.<br />
+<br />
+I hope I have made myself clear, and any help would be really appreciated.<br />
+<br />
+Thanks in advance.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13461"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-11 17:41:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Is there a global way to change the time?</h3></div>
+				
+			<div class="body">
+				<p>I think that solution for your situation and many otehr situations where there are differences in time zones different from teh server time and access to administration of server itself, is to create small utility that will be able to show defined time offset from the servers time.<br />
+Some PHPBased systems do have that and I think that it is not too hard to implement it.<br />
+<br />
+Thanks,<br />
+<br />
+Vedran</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13465"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-11 18:13:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Is there a global way to change the time?</h3></div>
+				
+			<div class="body">
+				<p>You could hack the include/vitals.inc.php file. Look for <br />
+<br />
+[php]<br />
+<br />
+if ($_config['time_zone']) {<br />
+<br />
+[/php] <br />
+<br />
+Sounds like the date on your server is incorrect, ATutor's date is based on it, so you could have your ISP reset the date, an hour ahead.<br />
+<br />
+We are looking into ways to improve with timezone support.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13466"></a>
+		<div class="forum-post-author">
+			<label class="title">bielo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-11 18:26:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Is there a global way to change the time?</h3></div>
+				
+			<div class="body">
+				<p>You are right of course, the server time is one hour ahead of mine and that's why I have the difference.<br />
+<br />
+I've contacted my ISP and I hope they can change the time but I doubt because it is a shared server and they've told me they cannot change the time for me. So, in my other websites where I know the php code I'm using a file to set the time and refer to it from anywhere else.<br />
+<br />
+From what you suggest I think I can accomplish the same thing in the vitals.inc.php. Would it be enough to susbstract 3600 from $_config['time_zone']?<br />
+<br />
+Sorry to bother so much, I'll try to solve it with my ISP first.<br />
+<br />
+Thanks again for your time.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13467"></a>
+		<div class="forum-post-author">
+			<label class="title">vvucic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-11 18:29:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Is there a global way to change the time?</h3></div>
+				
+			<div class="body">
+				<p>It may be good to see solution if you can make it so we can put it in vitals.inc.php<br />
+<br />
+thanks,<br />
+<br />
+vedran</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

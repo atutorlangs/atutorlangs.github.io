@@ -1,0 +1,122 @@
+---
+ title: Unable to create import directory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Unable to create import directory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3085"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-18 14:26:43</p>
+            </div>
+            <div class="postheader"><h3>Unable to create import directory</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I am using:<br />
+<br />
+ATutor 1.4.2<br />
+php4.3.9<br />
+Apache1.3.33<br />
+Internet Explorer 6.0<br />
+WindowsXP<br />
+<br />
+I have created a new course on our server - this worked fine. Now I am trying to import a content package into my new course - and I am getting an error message:<br />
+"Unable to create import directory"<br />
+<br />
+The content package that I am trying to add is fine - I have used it with the localhost installation of ATutor and everything worked well.<br />
+<br />
+What could be the problem here?<br />
+<br />
+I have contacted my sysadmin, and he tells me that the permissons are 777. 		<br />
+<br />
+Any ideas?<br />
+<br />
+Thanks,<br />
+<br />
+Inna</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3086"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-18 15:53:15</p>
+            </div>
+            <div class="postheader"><h3>Unable to create import directory - RESOLVED</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+First of all I did find an answer to my question in FAQs. But it did not help. I have opened both content and content/import directories, but still was getting the same error message.<br />
+<br />
+So I noticed that on my local system another directory was getting created: in tools/ims directory, the system created a new directory called  "AT_CONTENT_DIRimport".<br />
+<br />
+Once the sysadmin changed permissions on the server for the tools and tools/ims directories, I was able to import content files without any problems.<br />
+<br />
+Hope this helps someone else. :-)<br />
+<br />
+Inna</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3148"></a>
+		<div class="forum-post-author">
+			<label class="title">Trevor</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-03 13:36:47</p>
+            </div>
+            <div class="postheader"><h3>content/import worked</h3></div>
+				
+			<div class="body">
+				<p>Of course I had this problem as well.  I found changing the permissions on the content/import directory to match the content directory did work for importing content packages.  Is it ok to leave as read/write for others though?<br />
+<br />
+Trevor D</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3149"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-03 14:08:44</p>
+            </div>
+            <div class="postheader"><h3>Recursively writable</h3></div>
+				
+			<div class="body">
+				<p>The Content directory, should have been set to be recursively writable (including all subdirecties) during the install process, so you should not need to separately set the import directory to be writable. It needs to remain writable. Perhaps XP handles subdirectory permission differently. <br />
+<br />
+Positioning the content directory outside your Webserver's document directory is a good idea, so there is no chance of an outsider taking advantage of the writable directory. Though the chance is small, a web accessible writable directory could be compromised.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

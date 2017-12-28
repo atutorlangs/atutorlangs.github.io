@@ -1,0 +1,105 @@
+---
+ title: CAPS in image files in file storage issue
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>CAPS in image files in file storage issue</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22797"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-23 17:57:19</p>
+            </div>
+            <div class="postheader"><h3>CAPS in image files in file storage issue</h3></div>
+				
+			<div class="body">
+				<p>Hi.  I have ATutor 2.0 installed and I've noticed that when a valid image file type is uploaded, you can view the image by clicking "Edit".  However, if the file extension is in CAPS, it fails.  <br />
+<br />
+Pic.JPG --> Not visible with edit<br />
+Pic.jpg --> Is visible with edit<br />
+<br />
+You can even rename a file from .JPG to .jpg and it will work after it's been renamed.  Same for other image file types, BTW.<br />
+<br />
+Any ideas on this one?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22801"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-24 09:48:07</p>
+            </div>
+            <div class="postheader"><h3>Re: CAPS in image files in file storage issue</h3></div>
+				
+			<div class="body">
+				<p>I'm not able to reproduce the problem on the current version, and I'm not seeing anything in the bug reports for past versions that would suggest the problem.<br />
+<br />
+Try your test on our demo server, and see if you can reproduce it there.<br />
+<br />
+You could also try installing a current version on your server and see if the problem persists. If not, then perhaps upgrade you current ATutor installation.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22809"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-25 21:24:46</p>
+            </div>
+            <div class="postheader"><h3>Re: CAPS in image files in file storage issue</h3></div>
+				
+			<div class="body">
+				<p>I just reproduced the error in the ATutor demo.  In file storage there is a file titled "88888.JPG".  When you click "Edit", the image is not displayed.  <br />
+<br />
+Renaming it to "88888.jpg", the image is displayed when clicking "Edit".<br />
+<br />
+<br />
+On a side note, I don't seem to get email notifications of a thread I've subscribed to on first reply.  It does work on subsequent replies though.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22814"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-26 11:42:13</p>
+            </div>
+            <div class="postheader"><h3>Re: CAPS in image files in file storage issue</h3></div>
+				
+			<div class="body">
+				<p>I see now.<br />
+<br />
+I've posted a bug report. Will fix it when the next release cycle comes around, probably later March.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

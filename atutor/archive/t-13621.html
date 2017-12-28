@@ -1,0 +1,203 @@
+---
+ title: Error in glossary
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error in glossary</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13621"></a>
+		<div class="forum-post-author">
+			<label class="title">savior2008</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-29 23:04:27</p>
+            </div>
+            <div class="postheader"><h3>Error in glossary</h3></div>
+				
+			<div class="body">
+				<p>Dear my friends,<br />
+There is error in glossary page and this error appear:<br />
+Fatal error: Call to undefined function utf8_stringtoupper() in /home/virtuale/public_html/glossary/index.php on line 76<br />
+<br />
+Thanks for your help,<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13709"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-13 12:09:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in glossary</h3></div>
+				
+			<div class="body">
+				<p>hello,<br />
+<br />
+This has been reported, http://www.atutor.ca/view/3/13422/1.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13749"></a>
+		<div class="forum-post-author">
+			<label class="title">dthoai</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-19 21:47:14</p>
+            </div>
+            <div class="postheader"><h3>Fix this bug</h3></div>
+				
+			<div class="body">
+				<p>I have found the way to fix this bug as following:<br />
+<br />
++ Open /include/vitals.inc.php<br />
++ Find: extension_loaded('mbstring')<br />
++ Replace 'utf8_stringtolower' with 'utf8_strtolower'<br />
++ Replace 'utf8_stringtoupper' with 'utf8_strtoupper'</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13783"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-21 16:05:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Fix this bug</h3></div>
+				
+			<div class="body">
+				<p>Yes that will fix the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14417"></a>
+		<div class="forum-post-author">
+			<label class="title">ScottJ</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-07 23:46:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Fix this bug</h3></div>
+				
+			<div class="body">
+				<p>Same problem here.  Running OS X 10.4.11 with MAMP 1.7.1 installed with the following programs:<br />
+Apache 2.0.59<br />
+MySQL 5.0.41<br />
+PHP 4.4.7 & 5.2.5<br />
+APC 3.0.14<br />
+eAccelerator 0.9.5.1<br />
+XCache 1.2.0<br />
+phpMyAdmin 2.10.2<br />
+Zend Optimizer 3.2.2<br />
+SQLiteManager 1.2.0<br />
+Freetype 2.3.4<br />
+t1lib 5.1.1<br />
+curl 7.16.2<br />
+jpeg 6b<br />
+libpng-1.2.18<br />
+gd 2.0.28<br />
+libxml 2.6.29<br />
+libxslt 1.1.21<br />
+gettext 0.16.1<br />
+libidn 0.6.14<br />
+iconv 1.11<br />
+mcrypt 2.5.8<br />
+YAZ 3.0.6 & PHP/YAZ 1.0.12<br />
+<br />
+Harris, I downloaded the latest Atutor version and the code you suggested to change has already been corrected.  I am still receiving the mbstring error.  Do I need to enable mbstring by a command of some sort in PHP.  Sorry if this is a beginner's questions but I haven't been able to complete the install.  Many thanks, Scott</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14419"></a>
+		<div class="forum-post-author">
+			<label class="title">ScottJ</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-08 00:14:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Fix this bug</h3></div>
+				
+			<div class="body">
+				<p>'mbstring' library is missing from the PHP<br />
+<br />
+This is the error message I receive from the Atutor index.php page as I try to install.  I am also unable to click continue without installing.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14423"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-08 09:44:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Fix this bug</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+After you clicked continue, the 'Install' button will show up again.<br />
+<br />
+Or you can enable mbstring in your installation; open xampp\apache\bin\php.ini, and change <br />
+<br />
+;extension=php_mbstring.dll<br />
+<br />
+to <br />
+<br />
+extension=php_mbstring.dll<br />
+<br />
+<br />
+harris</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

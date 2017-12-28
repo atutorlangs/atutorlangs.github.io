@@ -1,0 +1,253 @@
+---
+ title: Visual editor corrupts html code
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Visual editor corrupts html code</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11680"></a>
+		<div class="forum-post-author">
+			<label class="title">rim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-13 07:32:18</p>
+            </div>
+            <div class="postheader"><h3>Visual editor corrupts html code</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - Scientific Linux CentOS 4<br />
+  version of ATutor - 1.5.5<br />
+  versions of php - 5.1.6 <br />
+  version of mysq l - 5.0.27 standard<br />
+  webserver & version - Apache 2.2<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used - IE6<br />
+  and anything else relevant -<br />
+<br />
+I have a problem with Visual editor. When I tried to edit content page and switched to the Visual editor the following thing happened: a lot of simbols '/&quote' and '\'   were added to the picture's links.  I did not make any changes, just switched to the Visual editor and switched back to the HTML text editor. After saving such code all pictures are dissapeared from the web page.<br />
+The examples of code are attached.<br />
+The previous Atutor 1.5.2 version is still working on the same server without any problems.<br />
+Please help me.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11681"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-13 08:26:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Visual editor corrupts html code</h3></div>
+				
+			<div class="body">
+				<p>Replace the following files in your installation, with these ones.<br />
+<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/editor/edit_content.php<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/include/html/editor_tabs/edit.inc.php<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/include/html/editor_tabs/preview.inc.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11682"></a>
+		<div class="forum-post-author">
+			<label class="title">rim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-13 08:48:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Visual editor corrupts html code</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Replace the following files in your installation, with these ones.<br />
+<br />
+Thank you very much.<br />
+Now everything is OK!!!<br />
+[op]forums/view.php?fid=7;pid=11680;page=1#11681[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11996"></a>
+		<div class="forum-post-author">
+			<label class="title">sunee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-11-11 03:36:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Visual editor corrupts html code</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -CentOS : Linux 2.6.9-55.0.2.ELsmp<br />
+  version of ATutor -1.5.5<br />
+  versions of php -4.3.9<br />
+  version of mysq l -4.1.20<br />
+  webserver & version - Apache/2.0.52 (CentOS)<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -IE6<br />
+  and anything else relevant -the system has ATutor 1.5.4 running also.<br />
+<br />
+We had the same problem above and we tried to do the following: set magic_quotes_runtime = Off  (it was on before when problem occured) on line 401 of file php.ini.<br />
+<br />
+We are not sure whether it will have any side effects to other parts? Please advise.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12190"></a>
+		<div class="forum-post-author">
+			<label class="title">sw0rdfish</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-10 12:55:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Visual editor corrupts html code</h3></div>
+				
+			<div class="body">
+				<p>operating system - Linux<br />
+  version of ATutor - 1.5.5<br />
+  versions of php - 5.x.x<br />
+  version of mysq l - <br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -<br />
+<br />
+Thanks.. my issue resolved. i am enjoying atutor as always :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15940"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-11 09:59:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Visual editor corrupts html code</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -linux<br />
+  ATutor version -ATutor 1.5.5<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -5<br />
+  MySQL version -5<br />
+ <br />
+Hello,<br />
+I had this problem too. and I replaced this files. After that, When i click on 'set to visual editor' button a new visual editor is appear.<br />
+and a new button is appear with this text around it: customized_head ]<br />
+* [ customized_head_note ]<br />
+]<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+operating system - Linux<br />
+  version of ATutor - 1.5.5<br />
+  versions of php - 5.x.x<br />
+  version of mysq l - <br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web ...<br />
+[op]forums/view.php?fid=7;pid=11680;page=1#12190[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15941"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-11 10:13:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Visual editor corrupts html code</h3></div>
+				
+			<div class="body">
+				<p>You should probably upgrade. The files you replaced from the trunk are now for 1.6.2, and may not be compatible with your version of ATutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15942"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-11 10:49:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Visual editor corrupts html code</h3></div>
+				
+			<div class="body">
+				<p>That's right. But I have done some change in all atutor.<br />
+can you help me to upgrade just Content section in atutor.<br />
+I almost can find witch file should i upgrade. but i want to help me to do it exact.<br />
+thank you.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

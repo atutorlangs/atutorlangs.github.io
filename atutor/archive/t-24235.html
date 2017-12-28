@@ -1,0 +1,204 @@
+---
+ title: Manage Section
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Manage Section</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24235"></a>
+		<div class="forum-post-author">
+			<label class="title">sal399</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-24 12:32:59</p>
+            </div>
+            <div class="postheader"><h3>Manage Section</h3></div>
+				
+			<div class="body">
+				<p>Database:<br />
+23.68 MB<br />
+Disk Usage:<br />
+0.09 MB<br />
+Courses:<br />
+20<br />
+Users:<br />
+2080<br />
+ATutor Version:<br />
+1.6.2. Check Latest Version.<br />
+PHP Version:<br />
+5.3.25<br />
+MySQL Version:<br />
+5.5.30-cll<br />
+OS:<br />
+Linux 2.6.32-042stab076.8<br />
+<br />
+I switched our Atutor from one host to another and have everything running pretty smooth. The only problem that I currently have is that when I click on the tab to 'manage' the course, there is nothing on the page. It's blank. I've changed the permission settings to 755 and have no solution. Any help would be great.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24236"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-24 12:52:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Manage Section</h3></div>
+				
+			<div class="body">
+				<p>You should probably start by reviewing the php_error.log file on your system (wherever it may be located), to see if it reveals any clues. Load the manage page and see if any errors are generated<br />
+<br />
+It may also be an issue of compatibility. You are using a very old version of ATutor, and a newer version of PHP. Newer PHP versions do not always work well with older software.<br />
+<br />
+The disk usage amount also seems low for the number of courses and users you have on the system. Are you able to confirm that all the content from your old host was copied over?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24237"></a>
+		<div class="forum-post-author">
+			<label class="title">sal399</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-24 14:26:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Manage Section</h3></div>
+				
+			<div class="body">
+				<p>I think you're right Greg ... I check out the settings on the old the server which is still up an running:<br />
+<br />
+Statistics & Information<br />
+Database:<br />
+25.69 <br />
+MBDisk Usage:<br />
+514.29 <br />
+MBCourses:<br />
+19<br />
+Users:2063<br />
+ATutor Version:<br />
+1.6.2. Check Latest Version.<br />
+PHP Version:<br />
+5.2.14<br />
+MySQL Version:<br />
+5.0.77<br />
+OS:Linux 2.6.18-348.4.1.el5PAE</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24238"></a>
+		<div class="forum-post-author">
+			<label class="title">sal399</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-24 15:06:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Manage Section</h3></div>
+				
+			<div class="body">
+				<p>php logging is enabled but there aren't any errors. Everything is running good except that one thing.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24239"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-24 15:14:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Manage Section</h3></div>
+				
+			<div class="body">
+				<p>Strange, there should be an error if you're getting a blank screen. Try creating an error, like adding an extra quote somewhere in the include/header.inc.php file to if it writes to the log.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24240"></a>
+		<div class="forum-post-author">
+			<label class="title">sal399</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-24 16:26:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Manage Section</h3></div>
+				
+			<div class="body">
+				<p>Ok... so I added an extra quote on the ATutor/tools/index.php and received: Parse error: syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/teache29/public_html/ATutor/tools/index.php on line 23.<br />
+<br />
+I added an extra quote on the include/header.inc.php and received a blank page.<br />
+<br />
+I attached what I see under the manage section.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24241"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-24 17:25:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Manage Section</h3></div>
+				
+			<div class="body">
+				<p>The error log would appear to be working.<br />
+<br />
+Given the age of your ATutor installation, version 1.6.2 unsupported for a couple years now, an upgrade is all I can really suggest.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24242"></a>
+		<div class="forum-post-author">
+			<label class="title">sal399</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-07-24 17:28:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Manage Section</h3></div>
+				
+			<div class="body">
+				<p>Ok ,,, let me give that a try. Thanks for looking into this Greg.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

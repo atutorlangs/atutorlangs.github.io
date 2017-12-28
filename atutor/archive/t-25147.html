@@ -1,0 +1,314 @@
+---
+ title: An issue inserting multichoice questions into the question bank
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>An issue inserting multichoice questions into the question bank</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25147"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-01 14:57:47</p>
+            </div>
+            <div class="postheader"><h3>An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>Operating system ATutor is installed on - Linux<br />
+ATutor version - 2.2<br />
+Patch #s applied - none<br />
+ATutor theme name - Atutor Classic<br />
+PHP version - 5.3<br />
+MySQL version - 5.5<br />
+Webserver & version - Apache latest<br />
+Copies of error messages -<br />
+Changes to default settings - none<br />
+Web browser being used - Firefox 36<br />
+<br />
+Hi Greg<br />
+<br />
+I have a weird problem thats related to creating questions in the question bank.<br />
+<br />
+Remember I couldnt see more than three questions. Well I manually edited the database using phpMyadmin and successfully created the next question. Then I could see four questions. ATutor then let me create more questions so long as they were type 2 true/false, but as soon as I tried to create a multiple choice it would give me an error saying it could not access the database. So I created the multichoice questions using phpMyadmin and then tried to modify the questions in ATutor. It does this with no problem so obviously it can access the database to update just not insert and only for multiple choice questions.<br />
+<br />
+I did notice that when I use phpMyadmin to insert a record into the test_questions table it creates two rows with the second one marked to ignore.<br />
+<br />
+I dont know if this is to assist in record creation in phpMyAdmin.<br />
+<br />
+Also the table is set to dynamic not fixed.<br />
+<br />
+So have you had any experiences like this as some advice would be appreciated.<br />
+<br />
+Best Regards<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25148"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-01 15:21:30</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>I meant to add this error message<br />
+<br />
+ATutor was unable to access the database. If the problem persists, please report this to an Administrator with this date reference<br />
+<br />
+and that all patches have been applied<br />
+<br />
+cheers<br />
+<br />
+jim barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25149"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-01 15:30:03</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>And just to clarify: ATutor will let me enter a T/F question and then a Multichoice straight after but then it wont let me add either a T/F or Multichoice and gives me the error. <br />
+<br />
+Until I go and enter a question using phpMyAdmin and then I can add as many T/F questions as I like until I follow them with a multichoice which it will let me enter. <br />
+<br />
+But after that I get errors. If I enter with phpMyAdmin and then try a multichoice in ATutor it gives me the error <br />
+<br />
+Weierd Huh?<br />
+<br />
+cheers</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25150"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 10:20:39</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>Unfortunately I can't reproduce this problem. I followed your steps, and had no trouble continuing to create t/f or m/c questions.<br />
+<br />
+Again I would say this is browser related. Restart your browser, try a different browser, perhaps on a different system.<br />
+<br />
+Try yourself on our demo site.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25158"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 20:20:39</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg <br />
+<br />
+I tried with IE 11 and Opera and Chrome<br />
+<br />
+but still got the same errors<br />
+<br />
+is their a debug function in the software?<br />
+<br />
+I checked with the host and they wont give me the connection logs for the DB so I am kinda stuck.<br />
+<br />
+cheers<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25159"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 20:28:18</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>Set AT_DEVEL to "1" at the top of include/vitals.inc.php to enable debugging. After which use debug() to output values.<br />
+<br />
+http://help.atutor.ca/developer/guidelines.html#fn-debug</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25214"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 20:41:22</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg<br />
+<br />
+I did some more work on why the system wouldn't let me save multiple choice questions. It just so happens that in the T/F questions we weren't using punctuation!<br />
+<br />
+I discovered that when punctuation is used in the optional feedback or remedial content when creating a question the database doesn't like it and gives the unable to connect to server message.<br />
+<br />
+I have tested this on the demo server and it is the same.<br />
+<br />
+Try putting this string into those areas when creating then saving a question and you will see what i mean.<br />
+<br />
+>&lt;.,:";'?/}{][)(*&^%$#@!<br />
+<br />
+I don't know specifically which character it is that creates the problem.<br />
+<br />
+But I do remember there was some issue with mysql and magic quotes that was used and has since been deprecated in favour of regex.<br />
+<br />
+Anyway let me know.<br />
+<br />
+Thanks<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25223"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-19 09:19:48</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>I was able to reprodcue this on the demo site, though not on a local MAMP install.<br />
+<br />
+<br />
+http://atutor.ca/atutor/mantis/view.php?id=5567 <br />
+<br />
+Will try to take a look at this soon.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25226"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-19 10:04:05</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>The problem is the percent sign (%)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25233"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-20 06:59:02</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg<br />
+<br />
+I did some more testing (in the demo system)and its not just the percent sign. Its also the single quote or apostrophe as is used in tomato's that causes the problem.<br />
+<br />
+At least, when trying to add multiple choice questions and having either of those characters in the remedial and feedback areas. The system gives you the cannot connect to database error message. <br />
+<br />
+When you use them in T/F questions it gives no error message and just takes you back to the create question screen. <br />
+<br />
+Cheers<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25235"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-20 09:23:19</p>
+            </div>
+            <div class="postheader"><h3>Re: An issue inserting multichoice questions into the question bank</h3></div>
+				
+			<div class="body">
+				<p>We'll get this into the queue to be fixed in the next little while.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

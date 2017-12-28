@@ -1,0 +1,519 @@
+---
+ title: Blank Patcher page after patch 0006
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Blank Patcher page after patch 0006</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17419"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-14 08:59:29</p>
+            </div>
+            <div class="postheader"><h3>Blank Patcher page after patch 0006</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux - probably a variant of RHEL 4.  Kernel 2.6.9-42.0.3.ELsmp<br />
+  ATutor version - 1.6.2 (build r8281 - 2008-12-11 12:40:18)<br />
+  Patch #s applied - 0001 - 0006<br />
+  ATutor theme name - ATutor<br />
+  PHP version - 5.2.9<br />
+  MySQL version - 5.0.67<br />
+  Webserver & version - Apache/2.0.52 (Red Hat)<br />
+  Copies of error messages - No error messages (that I know of)<br />
+  Changes to default settings - None<br />
+  Web browser being used - Chrome 2, FF 3.x, IE7<br />
+<br />
+Hello there.  I'm new to ATutor - I've searched forums and google, but I've not been able to find a cause or answer to the problem I am seeing.  After a fresh install, I go straight to Patcher.  I install the patches either in the order it suggests or in numeric order.  By suggested, I mean that after installing patch 0001 and 0002, patches 0003 and 0004 change places.<br />
+After installing patch 6, it returns fine, but after attempting to install patch 7, the screen returns blank.  Subsequent reinstalls reveal that if after installing each of the first 5 patches you click on the Patcher tab or navigate away from Patcher and back, everything is fine.  However, install #6, navigate away and then return to Patcher and the screen is blank.  This is reproducible 100% on my VPS from a hosting co., but I cannot reproduce the problem on my Linux server at home, however, they are quite different environments.<br />
+<br />
+Hosting specs are posted above.  My home server is Centos 4, php 4.3.9, mysql 4.1.22.  Very different, but its the only other box I can test on.<br />
+<br />
+I've tried reverting the patch 6 files to previous versions and continuing, but then start to see inconsistent behavior after patch 0008 and don't feel comfortable with this as a long term solution.<br />
+<br />
+Any advice?  More information available if needed.<br />
+<br />
+Thanks for your help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17423"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-14 10:04:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Thank you for providing such a detail report.<br />
+<br />
+As I cannot reproduce the same problem, just a guess. Patch 6 & 8 are modifying patcher itself. The blank page might because the web server has conflict in between loading cached old scripts and modified scripts.<br />
+<br />
+Try reloading the page or logout then login back to see whether the blank page still persists.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17428"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-14 12:44:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Thank you for the reply Cindy.  I've tried logging out and logging back in, logging in from another computer and different browser.  No errors show in the apache logs.  Does ATutor do any logging on its own?  Is there a debug flag I can enable?<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17429"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-14 12:51:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Turning on debugger in include/vitals.inc.php, change line<br />
+<br />
+define('AT_DEVEL', 0);<br />
+<br />
+to <br />
+<br />
+define('AT_DEVEL', 1);<br />
+<br />
+Once done, use function debug() to print out whatever you want to trace, for example debug($variable)<br />
+<br />
+You may like to trace down from mods/_standard/patcher/index_admin.php<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17430"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-14 12:57:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Many thanks.  I'll give this a try and tonight or tomorrow morning and report.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17455"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-17 20:41:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Its taken me a few days to get back to this.  I started looking closer and I noticed a few things along the way that seemed odd.<br />
+Since I'm not familiar with ATutor, I missed an obvious error on patch 2 (repeatable).  Patch 1 seems to install correctly.  Patch 2 reports that it has been installed correctly, but it contains the error "Warning: One or more code chunks to be deleted or replaced are not found".  I thought this was an erroneous error message addressed by a later patch, but after reinstalling multiple times and trying to debug, I noticed other peculiarities (to me).<br />
+The first is that the order of patches in the Patcher screen is 0001, 0002, 0004, 0003, 0005, etc.  3 and 4 are reversed in the list.  When I go to http://update.atutor.ca and navigate down and open the  xml files for patches 3 and 4, I can see that the descriptions on the Patcher page have not been reversed in the list, only the patch id.<br />
+Next, thing I notice is when installing patch 2, I'm informed that the listed files are modified locally and that they will be modified.  It lists install_modules.php twice.  Continuing here produces the warning message above.  After this, patches 3, 4 and 5 give the same warning upon patching.  After installing patch 3, I check and the backed up version is the same as the new version (length, diff, checksum).<br />
+Being unfamiliar with the structure of ATutor, I'm a little unsure of where this problem is beginning.<br />
+Does the ordering of patches as I describe sound suspicious?<br />
+<br />
+Thanks - Attached screen shots.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17477"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-19 08:59:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>The problem definitely starts on patch 0002.  I ran out of time to work on the problem this morning, but it seems to occur in the strReplace function of Patch.class.php<br />
+<br />
+On my test server, install_modules.php is modified after installing 0002, but on my hosting provider's server, it is not.<br />
+<br />
+-rw-r--r--  1 apache apache 10965 May 19 08:02 install_modules.php<br />
+-rw-r--r--  1 apache apache 10943 May 19 08:02 install_modules.php.0002.old<br />
+<br />
+-rw-r--r--  1 apache apache 10943 May 19 06:02 install_modules.php<br />
+-rw-r--r--  1 apache apache 10943 May 19 06:02 install_modules.php.0002.old<br />
+<br />
+I'll keep digging, but hopefully someone has seen this before.  Are there php settings that could cause this?<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17482"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-19 11:54:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the investigation.<br />
+<br />
+The "install_modules.php is not modified after installing 0002 on ur hosting provider's server" is a bug to be fixed by patch #3 and #6.<br />
+<br />
+The notification of "the listed files are modified locally" is a bug that is fixed by patch #8.<br />
+<br />
+Can you try applying the patches in this sequence, before applying other patches: #3, #6, #8.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17486"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-19 13:21:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Thank you Cindy.  I installed patch #3 and then #6.  After installing #6, it returns ok, but clicking on either the patcher tab or selecting #8 and clicking install, the page returns blank.<br />
+<br />
+Can you comment on how patches #3 and #4 appear reversed in the list of patches?  I see this on my test server as well.  The description for #3 on the patcher page is actually found in the xml file for patch #4 and vice-versa.  I did out of curiosity try applying #3 then #4, then #6, but the result was the same.<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17488"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-19 13:46:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>If none of the patches have been installed, the patches should be displayed on "patcher" page in order of patch ids. The only reason makes #4 displayed before #3 is that the #4 has been installed. All the installed patches displayed on the top of the list followed by not-yet-installed ones.<br />
+<br />
+I cannot tell what causes the blank page without debugging. Since you are the only one reporting this problem, very likely it's environment related.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17489"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-19 14:05:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Unfortunately this is not the case.  In one of my previous posts I attached a zip file with screenshots. The file nopatches.png shows the Patcher screen before any patches have been installed.  This is the case on both of my servers.<br />
+<br />
+On the update servers, it looks like the directory for patch #3 links to patch #4?<br />
+http://update.atutor.ca/patch/1_6_2/1_6_2-3/patch.xml  shows &lt;atutor_patch_id>0004&lt;/atutor_patch_id>.  Other directories/xml files seem to be in agreement, but this one is not.  Maybe that is why patches #3 and #4 appear out of order?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17490"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-19 14:12:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Forgot to address the 2nd paragraph of your reply (for which I am grateful).<br />
+<br />
+Yes, I believe it is environment related as well, but I'd like to figure out what that problem is.  I've never been able to replicate the problem on my home server.  The box from my hosting provider seems to meet all of the system requirements listed in the documentation and passes the tests during installation as well.<br />
+Hopefully I can identify what this is with a little guidance from those more familiar with ATutor.<br />
+<br />
+Am I off base on the patch #3 directory containing patch #4?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17491"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-19 14:19:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>It's alrite that you are curious of the patch order. We appreciate every curiosity which may lead to new findings. <br />
+<br />
+Sorry that my words come out too fast before having a look at patch_list.xml. Yes, #4 comes before #3 because that's the order in the patch_list.xml. This would not affect patch result.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17498"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-20 07:46:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Ok, thanks for the clarification.<br />
+<br />
+I found something that is failing in patch #6 on this system, but still don't know why.<br />
+<br />
+In patch #6, there is a section of code to replace (changed spacing for readability here)<br />
+<br />
+&lt;action_detail><br />
+ &lt;type>replace&lt;/type><br />
+ &lt;code_from><br />
+	// check if the dependent patches are installed<br />
+&lt;/code_from><br />
+&lt;code_to><br />
+	$dependent_patches = "";<br />
+<br />
+	// check if the dependent patches are installed<br />
+&lt;/code_to><br />
+&lt;/action_detail><br />
+<br />
+However, after patch 6 installs, I have <br />
+$dependent_patches = ;<br />
+<br />
+- the quotes are missing.  Ideas on how this happens?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17500"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-20 08:57:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Cannot re-produce.<br />
+<br />
+The same patch also alter mods/_standard/patcher/classes/Patch.class.php with quote(") in replace-to code. Are the quotes also missing?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17512"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-20 15:08:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>There are 3 Patch.class.php files present.<br />
+<br />
+Patch.class.php.0006.old<br />
+Patch.class.php.0003.old<br />
+Patch.class.php<br />
+<br />
+All three files are identical (diff and md5sum).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17513"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-20 15:24:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Thanks.<br />
+<br />
+Patch #3 and #6 are to fix a bug that would happen when patcher replaces multiple lines that have different new line characters in the replace-from subject. This might be the reason that Patch.class.php was not updated since #3.<br />
+<br />
+Please replace mods/_standard/patcher/index_admin.php and mods/_standard/patcher/classes/Patch.class.php with attached ones, skip patch #6 and try other patches.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17516"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-21 23:04:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Thank you Cindy.  All patches from #7 on have #6 as a prerequisite.  I guess I could change the db to show it as installed...., but testQuestions.class.php didn't get patched either...<br />
+<br />
+Installing #6 results in the missing quotes.<br />
+<br />
+An interesting development which I hope might mean something - I noticed my hosting provider offers 2 different versions of php.  I uninstalled 5.2.9 and installed 4.4.9 and patches #3 and #6 install correctly.  I can't stay with 4.4.9 though because it broke other parts of the site.<br />
+<br />
+I reinstalled 5.2.9 again and as expected, no success.  I tried 5.2.9 with the php.ini file from the 4.4.9 install, but the results were the same - patch 3 didn't modify 2 of the 3 files.<br />
+<br />
+Are there any known bugs in this version of 5.2.9 that you know of that would affect Patcher?<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17517"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-21 23:41:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Ok, I think I found the problem.  Found a similar problem posted at http://www.sugarcrm.com/forums/showthread.php?t=47007 , which lead me to what I think is the real problem.  Looks like there is a bug in libxml2 that is causing this: http://bugs.php.net/bug.php?id=45996<br />
+<br />
+I verified that my hosting provider is using libxml2 version 2.7.2</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17531"></a>
+		<div class="forum-post-author">
+			<label class="title">mikerjohnson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-23 10:05:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Blank Patcher page after patch #0006</h3></div>
+				
+			<div class="body">
+				<p>Cindy, thank you for you time and help.  The Patcher module is fantastic.  I wish Drupal had something like this to make patching less of a chore.<br />
+<br />
+mike</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

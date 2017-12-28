@@ -1,0 +1,245 @@
+---
+ title: Can I use streaming files 
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Can I use streaming files </h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="3045"></a>
+		<div class="forum-post-author">
+			<label class="title">shen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-11 00:52:58</p>
+            </div>
+            <div class="postheader"><h3>Can I use streaming files </h3></div>
+				
+			<div class="body">
+				<p>I uploaded a wmv file to my directory. and edited a link "&lt;a href="chap1/a1.wmv">display&lt;/a> . But it cannot display the video content. How to solve this problem ?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3048"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-11 06:06:10</p>
+            </div>
+            <div class="postheader"><h3>Should be similar to streaming Quicktime</h3></div>
+				
+			<div class="body">
+				<p>Here's how I stream Quicktime files.  I assume using the proper embed command for .wmv will also work.<br />
+<br />
+ &lt;P>&lt;EMBED SRC="media/mymovie.mov" PLUGINSPAGE="http://quicktime.apple.com" WIDTH=325 HEIGHT=260 LOOP=false AUTOPLAY=false>&lt;/embed>&lt;/P><br />
+<br />
+I keep my movie files in a folder called media in my course folder.<br />
+====<br />
+<br />
+An adaption of this code might work for you:<br />
+<br />
+&lt;object id="MediaPlayer" classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95"><br />
+&lt;param name="Filename" value="[red] http://yourserver.com/ATutor/courses/yourCourseFolder/media/yourmovie.wmv[/red].asx"><br />
+&lt;param name="TransparentAtStart" value="false"><br />
+&lt;param name="ShowControls" value="true"><br />
+&lt;param name="AutoStart" value="False"><br />
+&lt;embed width=160 height=165 autostart=0 src="[red] http://yourserver.com/ATutor/courses/yourCourseFolder/media/yourmovie.wmv[/red].asx"><br />
+&lt;/object><br />
+<br />
+<br />
+The URL in red is the location of your clip (you might not need the absolute reference)<br />
+<br />
+The width and height settings are the dimensions of your clip (add 45 to the height of your clip) for the toolbar<br />
+<br />
+By changing the autostart parameters to true and 1, respectively, the clip will begin playing automatically.<br />
+<br />
+Include the paramter tag:  &lt;PARAM NAME="ShowDisplay" VALUE="true"> to include the clip details information below the controls<br />
+======<br />
+<br />
+See also http://www.webmasterworld.com/forum36/1663.htm<br />
+<br />
+good luck<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3049"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-11 06:22:51</p>
+            </div>
+            <div class="postheader"><h3>Posting of code above</h3></div>
+				
+			<div class="body">
+				<p>See the last link (or http://webmonkey.wired.com/webmonkey/01/49/index2a_page5.html?tw=multimedia") to see how the inclusion of http is required in the first two underlined urls that start with "yourserver"<br />
+<br />
+This forum cut that part (quote http colon slash slash) out of my posting in both of these lines. Also, what I thought wuld be red is actually underlined in these two lines as well.<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3070"></a>
+		<div class="forum-post-author">
+			<label class="title">shen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-15 22:21:03</p>
+            </div>
+            <div class="postheader"><h3>Thanks lelchuck,but ...</h3></div>
+				
+			<div class="body">
+				<p>I save the streaming file called test.asx outside atutor server and edit content like below<br />
+&lt;P>&lt;EMBED SRC="http://other_server/test.asx"  WIDTH=325 HEIGHT=260 LOOP=false AUTOPLAY=false>&lt;/embed>&lt;/P><br />
+ it work fine.<br />
+If I save it on the atutor server ,it fail .<br />
+&lt;P>&lt;EMBED SRC="http://atutor_server/ATutor/get.php/chap1/test.asx"  WIDTH=325 HEIGHT=260 LOOP=false AUTOPLAY=false>&lt;/embed>&lt;/P></p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3072"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-16 04:23:08</p>
+            </div>
+            <div class="postheader"><h3>This worked for me</h3></div>
+				
+			<div class="body">
+				<p>&lt;P>&lt;EMBED SRC="http://myserver/ATutor/content/1/media/test.wmv" WIDTH=325 HEIGHT=260 LOOP=false AUTOPLAY=false>&lt;/embed>&lt;/P><br />
+<br />
+where 1 is the course folder number assigned by ATutor. Create the media folder and place your .wmv file in it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3080"></a>
+		<div class="forum-post-author">
+			<label class="title">shen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-16 19:56:04</p>
+            </div>
+            <div class="postheader"><h3>still not understand</h3></div>
+				
+			<div class="body">
+				<p>you said<br />
+&lt;P>&lt;EMBED SRC="http://myserver/ATutor/content/1/media/test.wmv" WIDTH=325 HEIGHT=260 LOOP=false AUTOPLAY=false>&lt;/embed>&lt;/P><br />
+----------------------------------------------------------------------------<br />
+But how you know the  url (.../content/......) of the file(test.wmv) ?<br />
+ if I make a upload course folder called "1" and upload the test.wmv. The url show me "http://atutor_server/ATutor/get.php/1/test.wmv" ?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3081"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-16 20:08:30</p>
+            </div>
+            <div class="postheader"><h3>How I know the url</h3></div>
+				
+			<div class="body">
+				<p>When I created the course, ATutor assigned a course number to it for use in the mySQL tables. It also created a folder in the ATutor/content folder that has that same number.  (the welcome course is 1; your first new course is 2; etc.)<br />
+<br />
+This is the folder that I created the media and images folders that allow me to point to these media in the html code as cited above<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3082"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-17 08:12:47</p>
+            </div>
+            <div class="postheader"><h3>Using get php</h3></div>
+				
+			<div class="body">
+				<p>One addition to Larry's comment, if you have located your content directory outside your server's web documents directory, you would use the get.php script to retrieve files from the content directory.<br />
+<br />
+<br />
+something like:<br />
+<br />
+&lt;P>&lt;EMBED SRC="http://myserver/ATutor/get.php/media/test.wmv" WIDTH=325 HEIGHT=260 LOOP=false AUTOPLAY=false>&lt;/embed>&lt;/P>	<br />
+<br />
+One easy way to figure out the path to your content files is to copy the URL from the filemanger. On Windows you'd right click on the file name in the file manager, then click "copy link location", or whatever your browser calls this function, the paste the location into the EMBED tag.<br />
+<br />
+Incidentally the OBJECT tag has replaced EMBED, so it should be used instead on EMBED.<br />
+<br />
+see:<br />
+http://www.w3schools.com/tags/tag_object.asp</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3083"></a>
+		<div class="forum-post-author">
+			<label class="title">shen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-17 20:44:38</p>
+            </div>
+            <div class="postheader"><h3>thanks reply but ...</h3></div>
+				
+			<div class="body">
+				<p>thanks larry, I know your way.<br />
+But I setup my content directory outside web documents directory as greg said. And I know greg`s way to get the url path from filemanger(in fact I just use this method ), so my code is <br />
+&lt;P>&lt;EMBED SRC="http://atutor_server/ATutor/get.php/chap1/test.wmv" WIDTH=325 HEIGHT=260 LOOP=false AUTOPLAY=false>&lt;/embed>&lt;/P><br />
+but it cannot start the media player.<br />
+Are you sure it can work to use get.php for wmv or asx streaming file ?<br />
+Appreciated.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

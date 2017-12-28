@@ -1,0 +1,109 @@
+---
+ title: identify popup file manager
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>identify popup file manager</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6831"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-10 05:05:56</p>
+            </div>
+            <div class="postheader"><h3>identify popup file manager</h3></div>
+				
+			<div class="body">
+				<p>hi, <br />
+<br />
+I changed some things in the default theme CSS, as setting left and right margin on body (10%), and a background picture on html, see attached screendump for results. <br />
+<br />
+this looks nice in Atutor (I think), but creates some problems for the pop-up file manager and for the chat. the chat is easy to fix as one can identidy the html and body element as class="chat" in the code and control it via the CSS, but I cannot find a way to do this with the file manager. <br />
+<br />
+the problem is really the margin on the body element which renders the pop-up window too small, if this could be identifies as body class="filemanager" I could solve the problem easily. another solution would be to fix the pop-up link and make the pop-up wider, but I would rather do it the other way.. <br />
+<br />
+so, any idea how I could get the file manager pop-up to identify its body element with class "filemanager"?<br />
+<br />
+different question: I can see that the possibility to upload files from the pop up file manager is gone in 1.5.2...? I think our users kind of liked this, so is there any easy way to get it back? and why was it removed? :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6835"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-10 08:43:07</p>
+            </div>
+            <div class="postheader"><h3>Re: identify pop-up file manager</h3></div>
+				
+			<div class="body">
+				<p>The file manager uses different header and footer templates, in themes/default/include, than the rest of ATutor does, so in the other templates you could wrap the entire display in another div and define the margin for it in the stylesheet.<br />
+<br />
+add the opening new div to<br />
+header.tmpl.php<br />
+<br />
+and the closing new div to<br />
+footer.tmpl.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6882"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-16 09:17:43</p>
+            </div>
+            <div class="postheader"><h3>Re: identify pop-up file manager</h3></div>
+				
+			<div class="body">
+				<p>thanks, I was not aware of that. I just added the class filemanager to HTML and BODY here, and styled that. <br />
+<br />
+I would still like the pop up window to be a bit wider, and need to find the following pop-up link:<br />
+<br />
+[php]document.write(" &lt;a onclick=\"window.open('http://www2.helsekompetanse.no/atutor/tools/filemanager/index.php?framed=1&popup=1','newWin1','toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1,copyhistory=0,width=640,height=490')\" style=\"cursor: pointer; text-decoration:underline;\" >pne filutforsker &lt;/a>");[/php]<br />
+<br />
+I can't find it in any of the template files...(?)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6892"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-17 13:32:45</p>
+            </div>
+            <div class="postheader"><h3>Re: identify pop-up file manager</h3></div>
+				
+			<div class="body">
+				<p>The popup for the file manager is in:<br />
+<br />
+include/html/editor_tabs/edit.inc.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

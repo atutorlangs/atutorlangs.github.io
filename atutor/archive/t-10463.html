@@ -1,0 +1,137 @@
+---
+ title: 154 change in course drop down menu
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>154 change in course drop down menu</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="10463"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-20 08:22:18</p>
+            </div>
+            <div class="postheader"><h3>154 change in course drop down menu</h3></div>
+				
+			<div class="body">
+				<p>hi, I've noticed a change in how the course drop down menu behaves from 1.5.3 to 1.5.4 - in 1.5.3 the name of courses were "cropped" after a certain number of letters, while the course name is spelled out in full in 1.5.4 <br />
+<br />
+..or maybe the change is that the menu was a fixed width and is now a relative one? in any case it can cause a very wide menu, and I would like to change it back.. any idea how I would do this? <br />
+<br />
+I've added a screenshot showing the difference..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10469"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-20 10:00:40</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: change in course drop down menu</h3></div>
+				
+			<div class="body">
+				<p>That is no bug. It was done to fix some utf8 issues.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10487"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-23 06:32:16</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: change in course drop down menu</h3></div>
+				
+			<div class="body">
+				<p>no, but it's a change that creates some potential issues. I fixed it by adding the following to the CSS:<br />
+<br />
+select#jumpmenu {<br />
+width: 250px;<br />
+}</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10491"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-23 13:58:52</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: change in course drop down menu</h3></div>
+				
+			<div class="body">
+				<p>You could edit the theme to add the substring() back in, but do not use it if your content is Unicode.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10494"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-24 06:34:18</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: change in course drop down menu</h3></div>
+				
+			<div class="body">
+				<p>I prefer the CSS solution, as it has no issues as far as I can see. Changed it now to: <br />
+<br />
+select#jumpmenu {<br />
+width: 20em;<br />
+} <br />
+<br />
+..as specifying it in em is more accessible than px. works fine in IE7, FF2 and Opera 9. have not tested in IE6</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10629"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-11 07:31:22</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: change in course drop down menu</h3></div>
+				
+			<div class="body">
+				<p>(have tested now, works fine in IE6 too)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

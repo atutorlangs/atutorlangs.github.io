@@ -1,0 +1,92 @@
+---
+ title: configincphp edit
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>configincphp edit</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2203"></a>
+		<div class="forum-post-author">
+			<label class="title">Shanforest</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-01 20:46:03</p>
+            </div>
+            <div class="postheader"><h3>configincphp edit</h3></div>
+				
+			<div class="body">
+				<p>I edited config.inc.php	to change the course name and re uploaded it. But I did it in Wordpad which added \par and \tab tags mostly to ends of lines. Atutor asked me to install ... I didnt.<br />
+<br />
+I recopied config.inc.php into a proper editor, deleted the tags and also stuff in the first lines about being an rtf file! so it had the standard php start line.<br />
+<br />
+However now I get<br />
+<br />
+} <br />
+<br />
+An error occurred. Output sent before it should have. Please correct the above error(s).<br />
+<br />
+--------------------------------------------------------------------------------<br />
+<br />
+<br />
+Error initializing session. Please varify that session.save_path is correctly set in your php.ini file and the directory exists.<br />
+<br />
+--------------------------------------------------------------------------------</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2206"></a>
+		<div class="forum-post-author">
+			<label class="title">Shanforest</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-02 04:59:56</p>
+            </div>
+            <div class="postheader"><h3>FIXED!</h3></div>
+				
+			<div class="body">
+				<p>Had another go this morning after hours at it last night.<br />
+Assumed the odd } bracket in the error message was in the config file somewhere it shouldn't be and of course it was. It had got stuck on the bottom line. I carefully checked other php files to see if they had { brackets on the bottom as I thought they didn't, and yes they didn't. So deleted it.<br />
+<br />
+That then put me back to being told it wasn't installed!<br />
+<br />
+Double checked again nothing!	<br />
+My direct onsite editing still not working so I'd uploaded by ftp renamed file & done permissions.<br />
+Found I'd named the poor thing config,inc,php ... so the comma before the php ending was the culprit.<br />
+<br />
+Thought I'd write this in so new folk even less novice than I am with php can see how this can happen.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2212"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-02 10:23:04</p>
+            </div>
+            <div class="postheader"><h3>plain text only</h3></div>
+				
+			<div class="body">
+				<p>ATutor files need to be edited in a plain text editor. Other editors have a high probability of breaking scripts because they often add their own non text characters. The most common problem is editors that add an invisible character at the end of a file, which inevitably breaks the script, and is often difficult to discover unless you know what you're looking for. <br />
+<br />
+Always delete any spaces that may get inserted by an editor follow the closing ?> of a modified php script.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

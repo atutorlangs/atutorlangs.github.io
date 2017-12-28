@@ -1,0 +1,190 @@
+---
+ title: Error at uploading a photo
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error at uploading a photo</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="18509"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-30 23:18:40</p>
+            </div>
+            <div class="postheader"><h3>Error at uploading a photo</h3></div>
+				
+			<div class="body">
+				<p>When I try to add a picture to some user's profile I get this:<br />
+<br />
+Warning: move_uploaded_file(/home/emprenau/public_html/aula/content/profile_pictures/originals/7.jpg) [function.move-uploaded-file]: failed to open stream: Permission denied in /home/emprenau/public_html/aula/include/html/profile_picture.inc.php on line 121<br />
+<br />
+Warning: move_uploaded_file() [function.move-uploaded-file]: Unable to move '/tmp/phpMw36ki' to '/home/emprenau/public_html/aula/content/profile_pictures/originals/7.jpg' in /home/emprenau/public_html/aula/include/html/profile_picture.inc.php on line 121<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/emprenau/public_html/aula/include/html/profile_picture.inc.php:121) in /home/emprenau/public_html/aula/include/html/profile_picture.inc.php on line 123<br />
+<br />
+Thanks.<br />
+<br />
+ATutor Version: 1.6.2. Check Latest Version. <br />
+PHP Version:  5.2.9 <br />
+MySQL Version: 5.0.81-community-log <br />
+OS:  Linux 2.6.18-128.1.16.el5</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18514"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-31 08:45:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at uploading a photo.</h3></div>
+				
+			<div class="body">
+				<p>Are you able to upload other files, through the file manager for instance.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18527"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-31 18:01:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at uploading a photo.</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg, I'dont have problem uploading files through the file manager. <br />
+<br />
+What are the permissions for profile_pictures at content directory(read, write, owner, etc.)?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18528"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-31 18:15:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at uploading a photo.</h3></div>
+				
+			<div class="body">
+				<p>Not uploading, instead, creating files.<br />
+<br />
+Click on Create New File in the submenu when the file manager is open.<br />
+<br />
+<br />
+Folders under the content/ directory, including profile_pictures, should be set at 755 and owned by the Web server user (nobody, apache etc.). These directories are usually setup during installation, or the first time they are used, and you should not need to touch them after that.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18529"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-31 18:26:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at uploading a photo.</h3></div>
+				
+			<div class="body">
+				<p>Thanks greg, <br />
+I've created a file without problems.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18530"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-31 18:33:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at uploading a photo.</h3></div>
+				
+			<div class="body">
+				<p>New information<br />
+<br />
+When I try to load a file in the File Storage I get this error:<br />
+<br />
+Warning: move_uploaded_file(xxxxx/content/file_storage/1/1) [function.move-uploaded-file]: failed to open stream: No such file or directory in xxxxxx/file_storage/index.php on line 370</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18534"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-01 08:32:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at uploading a photo.</h3></div>
+				
+			<div class="body">
+				<p>It sounds like the permissions on the content directory are not set properly. The content directory should be 777, and owned by your user account, and everything under the content directory should be 755, and owned by the Webserver user.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18551"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 10:59:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Error at uploading a photo.</h3></div>
+				
+			<div class="body">
+				<p>Aparently There was a problem with the instalation, I made a fresh instalation and all its working good.<br />
+<br />
+Thanks for your help</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

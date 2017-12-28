@@ -1,0 +1,123 @@
+---
+ title: Error after attempt to change screenshotgif
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error after attempt to change screenshotgif</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6871"></a>
+		<div class="forum-post-author">
+			<label class="title">wyd2005</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-13 06:21:41</p>
+            </div>
+            <div class="postheader"><h3>Error after attempt to change screenshotgif</h3></div>
+				
+			<div class="body">
+				<p>Need your help. Can't login to ATutor. I think I enabled one theme before I tried to use another gif renamed as screenshot.gif to change the picture of the current theme.<br />
+<br />
+Warning: main(include/../themes//theme.cfg.php) [function.main]: failed to open stream: No such file or directory in C:\Apache2\htdocs\ATutor\include\vitals.inc.php on line 227<br />
+<br />
+Fatal error: main() [function.require]: Failed opening required 'include/../themes//theme.cfg.php' (include_path='.;C:\php5\pear') in C:\Apache2\htdocs\ATutor\include\vitals.inc.php on line 227<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - Windows 2000<br />
+  version of ATutor -1.5.2<br />
+  versions of php -4<br />
+  version of mysq l - ???<br />
+  webserver & version - Apache2<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -IE something<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6874"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-13 08:30:17</p>
+            </div>
+            <div class="postheader"><h3>disbaled the theme in the database</h3></div>
+				
+			<div class="body">
+				<p>You will need to go into the modules tables in the database and turn off/desiable the theme by setting the value of the status field for that heme to 1 or 0.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6875"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-13 08:30:51</p>
+            </div>
+            <div class="postheader"><h3>Re: disbaled the theme in the database</h3></div>
+				
+			<div class="body">
+				<p>Make that the themes table, not the modules table.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6983"></a>
+		<div class="forum-post-author">
+			<label class="title">wyd2005</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-30 23:31:08</p>
+            </div>
+            <div class="postheader"><h3>Re: disbaled the theme in the database</h3></div>
+				
+			<div class="body">
+				<p>Oh, it's only now I checked this (I thought I'd receive an email alert). I did as told but it didn't work. So I deleted the ATutor db, and made a "fresh" installation again. It's running again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6984"></a>
+		<div class="forum-post-author">
+			<label class="title">wyd2005</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-31 00:14:26</p>
+            </div>
+            <div class="postheader"><h3>Re: disbaled the theme in the database</h3></div>
+				
+			<div class="body">
+				<p>I went to the themes webpage and should have followed this from the description of Atutor default theme ".....do not alter this theme directly as it would complicate upgrading. Instead, create a new theme derived from this one."<br />
+:P</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

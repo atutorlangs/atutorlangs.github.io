@@ -1,0 +1,112 @@
+---
+ title: Create Category link for questions
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Create Category link for questions</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10509"></a>
+		<div class="forum-post-author">
+			<label class="title">ss2003</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-25 11:10:11</p>
+            </div>
+            <div class="postheader"><h3>Create Category link for questions</h3></div>
+				
+			<div class="body">
+				<p>Stupid question perhaps but I cannot find the Create Category link mentioned in the manual for creating question categories. How exactly do I get to it?<br />
+<br />
+Also is there a way to require students to take a test before they proceed to the next lesson? <br />
+<br />
+Can I also require them to provide their address and contact info when they register?<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10510"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-25 11:38:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Create Category link for questions</h3></div>
+				
+			<div class="body">
+				<p>In the Tests & Surveys manager submenu <br />
+<br />
+No, test results are not currently use as a prerequisite.<br />
+<br />
+No on required registration field, though if you know a little php, it would not be difficult to add the checks. <br />
+<br />
+There is a plan to add a custom registration page creator, which will handle custom required fields, but that's a version or two away.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10511"></a>
+		<div class="forum-post-author">
+			<label class="title">ss2003</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-25 12:02:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Create Category link for questions</h3></div>
+				
+			<div class="body">
+				<p>Thanks for your help.<br />
+<br />
+I just didn't see it for some reason. <br />
+<br />
+Can I make a course a prerequisite for another course? I want the students to agree to our code of ethics before they start the course. Maybe I can do this on the registration screen instead.<br />
+<br />
+I do know php. Can you point me to the file that creates the registration page?<br />
+<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10512"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-25 12:31:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Create Category link for questions</h3></div>
+				
+			<div class="body">
+				<p>No, on course the prerequisite.<br />
+<br />
+You will want to edit registration.php in the ATutor root directory to add required fields.<br />
+<br />
+You could add a code of ethics field as a required field in the registration form. The form itself is part of a theme, so fields can be customized there. <br />
+<br />
+Also keep in mind that custom changes such as these will be lost at upgrade time, so you may want to document what you have done. Another option might be to create your own registration module to replace the current one. The module could then be reinstalled on an upgraded system</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,80 @@
+---
+ title: MySQL errors when viewing install modules page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>MySQL errors when viewing install modules page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25123"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-28 07:49:20</p>
+            </div>
+            <div class="postheader"><h3>MySQL errors when viewing install modules page</h3></div>
+				
+			<div class="body">
+				<p>Hello <br />
+<br />
+I was looking at the various modules that can be installed and I found errors at the top of the page<br />
+<br />
+Warning: array_keys() expects parameter 1 to be array, null given in /home/davidche/public_html/courses/mods/_core/modules/classes/Module.class.php on line 116<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/davidche/public_html/courses/mods/_core/modules/classes/Module.class.php on line 117<br />
+<br />
+<br />
+then below the install modules boxes there was this error repeated about 30 times<br />
+<br />
+Warning: in_array() expects parameter 2 to be array, string given in /home/davidche/public_html/courses/themes/default/admin/modules/install_modules.tmpl.php on line 134<br />
+<br />
+changing the theme to ATutor Classic did not remove the errors<br />
+<br />
+I believe this is a php version error because I have installed the same download on two different hosts, bluehost and siteground.<br />
+<br />
+These errors do not appear in the bluehost install but do appear in the siteground install.<br />
+<br />
+Yet both installs gave all green arrows when installing them.<br />
+<br />
+The default php version for siteground is 5.3.29 and can go to 5.5.17<br />
+<br />
+while the default php version for bluehost is 5.4<br />
+<br />
+I thank you in advance for your response</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25125"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-28 08:27:03</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL errors when viewing install modules page</h3></div>
+				
+			<div class="body">
+				<p>*Resolved<br />
+<br />
+I had to patch the files the last 007 was to remove a number of errors that had plagued ATutor 2.2<br />
+<br />
+No More MySQL error messages.<br />
+<br />
+Thank You<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

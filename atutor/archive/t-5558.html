@@ -1,0 +1,150 @@
+---
+ title: hange theme manually
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>hange theme manually</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5558"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-22 07:24:50</p>
+            </div>
+            <div class="postheader"><h3>hange theme manually</h3></div>
+				
+			<div class="body">
+				<p>Experienced an intresting problem when uploading and changing to a new theme. <br />
+<br />
+What I did was to export the default theme (which I had altered) from my 1.5 installation, upgraded to 1.5.1 and importet this theme again. When I chose that theme as the default theme in 1.5.1 everything crashed (php failes to include, fails to open streams etc).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5559"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-22 07:31:46</p>
+            </div>
+            <div class="postheader"><h3>continued...</h3></div>
+				
+			<div class="body">
+				<p>err, clumsy fingers...<br />
+<br />
+..so I figure this is a permission problem and change the ownership to me, but that doesn't help. And, probably not smart, I chose to delete the theme. <br />
+<br />
+So now I get error messages everywhere, and cannot switch back to the default theme because of that. I've tried looking in the include/config.inc.php but can't find anything there... So how can I force Atutor to switch the default theme back? or do I need to reinstall atutor...?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5564"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-22 10:30:36</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>if you want to force ATutor to use a specific theme see the `themes` table and edit the status.<br />
+0 = disabled<br />
+1 = enabled<br />
+2 = default</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5565"></a>
+		<div class="forum-post-author">
+			<label class="title">rforsberg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-22 12:16:30</p>
+            </div>
+            <div class="postheader"><h3>1.5 and 1.5.1 theme compatability</h3></div>
+				
+			<div class="body">
+				<p>I also created a theme in 1.5 and attempted to use this theme in a 1.5.1 installation.  When the 1.5 theme installed - you get a warning about possible incompatabilties.  I noticed that my login page was acting strange so I inspected the theme code and found that the default theme code had changed slightly.<br />
+<br />
+In the end, I made a calculated decision to remodify the latest default theme with my previous customizations.  I suggest fully commenting your changes in your new theme code in case future ATutor releases are not fully compatible with older version themes.  After all, we can't expect the themes to be compatible with newer versions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5603"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 03:41:23</p>
+            </div>
+            <div class="postheader"><h3>still not</h3></div>
+				
+			<div class="body">
+				<p>thanks Joel, but I still can't get it to work. I've altered the status on the table via phpmyadmin, but get the same error messages:<br />
+<br />
+Warning: main(include/../themes/Atutordefault-theme-/theme.cfg.php): failed to open stream: No such file or directory in /home/apache/www2.helseutdanning.no/atutor/include/vitals.inc.php on line 209<br />
+<br />
+Fatal error: main(): Failed opening required 'include/../themes/Atutordefault-theme-/theme.cfg.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/apache/www2.helseutdanning.no/atutor/include/vitals.inc.php on line 209<br />
+<br />
+(this goes for all status settings...)<br />
+<br />
+Things to describe: <br />
+  version of ATutor - 1.5.1<br />
+  versions of php - recommended<br />
+  version of mysq l - recommended<br />
+  webserver & version - apache 2.0</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5604"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 04:39:38</p>
+            </div>
+            <div class="postheader"><h3>fixed it</h3></div>
+				
+			<div class="body">
+				<p>I uploaded this theme again manually so the server would find the files, and got it to work. I think part of the original problem may be the theme name, as I named it "Atutordefault-theme-15", but in the error message it looks for "Atutordefault-theme-" ...so it has stripped some characters. <br />
+<br />
+I also experienced the same as rforsberg with the login page acting strange, and as I only have made small alterations I think it will be easier to alter the default theme again, and have a good system for documenting my changes. For larger themes, or alterations it will probably be better to update the whole theme. <br />
+<br />
+Thanks anyway!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,213 @@
+---
+ title: Italian language problem with displaying
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Italian language problem with displaying</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="1164"></a>
+		<div class="forum-post-author">
+			<label class="title">sustia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 12:18:50</p>
+            </div>
+            <div class="postheader"><h3>Italian language problem with displaying</h3></div>
+				
+			<div class="body">
+				<p>Hi, I have installed ATutor-1.3.2 on Windows 2000 with:<br />
+<br />
+Web Server: Apache/2.0.48 (Win32) PHP/4.3.4 <br />
+PHP Version: 4.3.4 <br />
+MySQL Version: 4.0.16-nt <br />
+<br />
+When I import the file for the Italian language seems all ok, but after I import it I can't see the italian language in the language page, I see this:<br />
+<br />
+The following languages are available on this ATutor system: <br />
+English - iso-8859-1<br />
+<br />
+Any suggestions? Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1166"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 12:32:06</p>
+            </div>
+            <div class="postheader"><h3>Apache2</h3></div>
+				
+			<div class="body">
+				<p>You are likely to experience a variety problems using Apache 2. It is not quite stable yet. We recommend using the latest version of Apache 1.3.<br />
+<br />
+Have a look in the ATutor database table lang2 to see if the language was actually imported. If it's not there you might try to unzip the language pack and import the language.csv file into the table using the CSV import tools in a application like phpMyAdmin.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1168"></a>
+		<div class="forum-post-author">
+			<label class="title">sustia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 12:47:53</p>
+            </div>
+            <div class="postheader"><h3>Apache 2</h3></div>
+				
+			<div class="body">
+				<p>Yes, in the table lang 2 the language was imported:<br />
+<br />
+at_lang2              Record  1.524   MyISAM <br />
+<br />
+but anyway I can't see the translation in te language page.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1170"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 14:22:32</p>
+            </div>
+            <div class="postheader"><h3>Try debugging</h3></div>
+				
+			<div class="body">
+				<p>Turn on debugging by setting AT_DEVEL to 1 near the top of include/vitals.inc.php. <br />
+<br />
+define('AT_DEVEL', 1);<br />
+<br />
+Then debug the available languages variable by inserting the following line just after the header is inserted into admin/languages.php at line 33.<br />
+<br />
+debug($available_languages);<br />
+<br />
+This should list  English and Italian as available. <br />
+<br />
+If you have caching enabled, try disabling it in the line near the end of include/config.inc.php, by commenting out the line.<br />
+<br />
+We can't spend time trying to fix problems associated with Apache2.  Some you may not be able to overcome. You're on your own if you wish to continue using Apache2.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1173"></a>
+		<div class="forum-post-author">
+			<label class="title">sustia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 15:44:54</p>
+            </div>
+            <div class="postheader"><h3>Debugging</h3></div>
+				
+			<div class="body">
+				<p>Thanks a lot greg, I will follow your suggestions.<br />
+<br />
+I use apache2 only in local, trying the scripts and learn to manage it before to upload on the webserver, that is Apache 1.3, so I think that there are no problems when I do this.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1190"></a>
+		<div class="forum-post-author">
+			<label class="title">netxiong</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-23 02:49:12</p>
+            </div>
+            <div class="postheader"><h3>Apache 1.3</h3></div>
+				
+			<div class="body">
+				<p>I have the same question with sustia.<br />
+Now I reinstalled  the apache ,now the version is 1.3.23<br />
+but the question exist still.<br />
+<br />
+and debug as your said above,the message is :<br />
+Array<br />
+(<br />
+    [en] => Array<br />
+        (<br />
+            [0] => en([-_][[:alpha:]]{2})?|english<br />
+            [1] => iso-8859-1<br />
+            [2] => en<br />
+            [3] => English<br />
+        )<br />
+<br />
+)<br />
+<br />
+my info:<br />
+php:4.3.4<br />
+SYSTEM:winxp<br />
+mysql:3.23.49 <br />
+what should I do?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1197"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-23 10:52:09</p>
+            </div>
+            <div class="postheader"><h3>cache'ing</h3></div>
+				
+			<div class="body">
+				<p>disable the CACHE option in include/config.inc.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1199"></a>
+		<div class="forum-post-author">
+			<label class="title">netxiong</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-23 20:33:55</p>
+            </div>
+            <div class="postheader"><h3>thanks a lot.</h3></div>
+				
+			<div class="body">
+				<p>...</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

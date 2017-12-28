@@ -1,0 +1,167 @@
+---
+ title: Admin login problems
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Admin login problems</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="7196"></a>
+		<div class="forum-post-author">
+			<label class="title">hcameron</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-24 11:02:09</p>
+            </div>
+            <div class="postheader"><h3>Admin login problems</h3></div>
+				
+			<div class="body">
+				<p>I have just installed - a couple of times- 1.5.2  The instal went fine.  There were no error messages except the ones regarding the content file.  I set up an adminstrator and personal account with no problem.  The instal completed and indicated it was saved.  Unfortuneately, I can log in under my personal account but not the admin.  The ID/password error appears.  I contacted my hosting services and all the required support such as mySQL and php are supported and match the system requirements criteria<br />
+<br />
+Any suggestions?  www.projecttools.com/ATutor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7197"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-24 11:27:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Admin login problems</h3></div>
+				
+			<div class="body">
+				<p>There should be no reason for a user account to work and an admin account not to work. Check the admins table in the database to make sure the account exists, and that you are typing the correct password.<br />
+<br />
+If it continues to be a problem, list the system information asked for when you post a message so we can troubleshoot.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7240"></a>
+		<div class="forum-post-author">
+			<label class="title">hcameron</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-08 08:31:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Admin login problems</h3></div>
+				
+			<div class="body">
+				<p>I have found that my hosting company is using 4.0.13 version of MySQL on their system.  That attached word file defines all the information available during the install proceedure.<br />
+<br />
+Can ATutor be used with this version?  What do I have to do to make it compatible?  I can look at the MySQL database and the admin info is there but it isn't being accessed by ATutor.<br />
+<br />
+Thanks for the help!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7257"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-10 09:45:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Admin login problems</h3></div>
+				
+			<div class="body">
+				<p>See the system requirement to answer your question about mysql.<br />
+<br />
+It may be that that register_globals needs to be turned of in the php.ini file.<br />
+<br />
+Provide the rest of system information asked for. There was no attachement.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7277"></a>
+		<div class="forum-post-author">
+			<label class="title">hcameron</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-11 08:28:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Admin login problems</h3></div>
+				
+			<div class="body">
+				<p>I have tried to attach this information in a Word file but it doesn't seem to work.  The following is the information gained at installation.  (I can't get the information any other way because I can not log in as an administrator).  The MySQL version is "unknown" the hosting service identifies it as 4.0.13.  <br />
+<br />
+post_max_size >= 8 MB	8M<br />
+sessions	Enabled<br />
+session.save_path	Directory Writeable<br />
+. in include_path	Enabled	 <br />
+MySQL Options	Detected	Status<br />
+MySQL 3.23.0+ or 4.0.16+	Found Unknown Version	<br />
+ ATutor Version:	1.5.2 (build r5867 - 2005-12-15 11:57:53)<br />
+Operating System:	SunOS 5.8 VDE sun4u <br />
+Web Server:	ConcentricHost-Ashurbanipal/1.8 (XO(TM) Web Site Hosting) <br />
+PHP Version:	4.4.2 <br />
+MySQL Version:	<br />
+<br />
+And a whole series of the following errors.<br />
+<br />
+Warning: mysql_query(): supplied argument is not a valid MySQL-Link resource in /web/ATutor/install/include/step3.php on line 87<br />
+<br />
+Warning: mysql_query(): supplied argument is not a valid MySQL-Link resource in /web/ATutor/install/include/step3.php on line 90<br />
+<br />
+Warning: mysql_query(): supplied argument is not a valid MySQL-Link resource in /web/ATutor/install/include/step3.php on line 94<br />
+<br />
+Warning: mysql_query(): supplied argument is not a valid MySQL-Link resource in /web/ATutor/install/include/step3.php on line 98</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7278"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-11 08:56:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Admin login problems</h3></div>
+				
+			<div class="body">
+				<p>Your mysql version is fine, and displaying "unknown" is normal, and we know about the problem with attachments. We're looking into it.<br />
+<br />
+Generate a phpinfo page:<br />
+see:<br />
+http://ca.php.net/manual/en/function.phpinfo.php<br />
+<br />
+Make sure register_globals and safe_mode are set to off.<br />
+<br />
+If they are turned on, do a search of the atutor.ca site for "php_flag" and create a .htaccess file as described in the search results.<br />
+<br />
+If that does not work, the only other choice is to move onto a server where the settings are turned off.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

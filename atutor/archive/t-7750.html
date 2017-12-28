@@ -1,0 +1,176 @@
+---
+ title: SCROM object from AFLF does not render
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>SCROM object from AFLF does not render</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="7750"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-19 00:32:56</p>
+            </div>
+            <div class="postheader"><h3>SCROM object from AFLF does not render</h3></div>
+				
+			<div class="body">
+				<p>I have been testing SCORMs downloaded from the learning object repository of the Australian Flexible Learning Framework. I attach a small example called "Carrying Concrete" which includes some "Flash" media. I created a course in our deployed ATutor (1.5)and also our fully tested local version (1.4) and it does not render the flash images. I tried with Moodle and it works fine. Can you let me know what the problem is? Object is attached. It is from the excellent open repository at http://toolboxrepository.flexiblelearning.net.au/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7751"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-19 08:56:28</p>
+            </div>
+            <div class="postheader"><h3>Re: SCROM object from AFLF does not render</h3></div>
+				
+			<div class="body">
+				<p>We don't have a version of 1.5 running locallyany more, but your content imports and displays fine in 1.5.2 (and 1.5.3 not yet released). As I recall there was a bug in 1.5 with the path defined for imported content packages. I suggest upgrading ATutor to 1.5.2.<br />
+<br />
+You can try importing a package into our demo site, if you want to see one of the packages displayed.<br />
+<br />
+(BTW, thanks for the link, toolboxrepository looks like a great resource)<br />
+<br />
+Moodle handles content packages differently than ATutor. ATutor integrates content packages into the rest of the content in a course, so once imported, it can be manipulated, and then later exported as a new content package. Moodle stores content packages as self-contained units, with no means of reworking the content and exporting it as a new package.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7775"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-19 23:04:48</p>
+            </div>
+            <div class="postheader"><h3>Re: SCROM object from AFLF does not render</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg! <br />
+I upgraded our local version from 1.5.1 to 1.5.2 succefully and tried again. I used the attached SCORM. I used import content and got the error below. After logging in again, I find the content is "succesfully imported" but the flash doesn't render - just get a blank spot. Flash is working on the browser. I am using Firefox 1.0.7 and ATutor is deployed on Windows 2003 with Apache 1.3/PHP 4.3.11/MySQL<br />
+<br />
+<br />
+Warning: rename(c:\program files\apache group\apache\htdocs\atutor\content\import/36/,c:\program files\apache group\apache\htdocs\atutor\content\36/708pa082720): No such file or directory in c:\program files\apache group\apache\htdocs\atutor\tools\ims\ims_import.php on line 525<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at c:\program files\apache group\apache\htdocs\atutor\tools\ims\ims_import.php:525) in c:\program files\apache group\apache\htdocs\atutor\tools\ims\ims_import.php on line 542</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7794"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-23 09:53:26</p>
+            </div>
+            <div class="postheader"><h3>Re: SCROM object from AFLF does not render</h3></div>
+				
+			<div class="body">
+				<p>Sorry, your post got lost in the crowd.<br />
+<br />
+The package seems to work fine on the systems I've tested on(linux/winxp). It may be something specific to your win 2003 installation. <br />
+<br />
+Can you send us copy of a phpinfo page for the server. And, instructor access to this particular ATutor iunstallation.<br />
+<br />
+For now you could try modifying the  file<br />
+<br />
+tools/ims/ims_import.php<br />
+<br />
+in the "rename" line, switch the slashes "/" to "\".<br />
+<br />
+The slashes should work either way, but perhaps 2003 does not like the backslashes.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7796"></a>
+		<div class="forum-post-author">
+			<label class="title">leeming</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-23 18:34:33</p>
+            </div>
+            <div class="postheader"><h3>Re: SCORM object from AFLF does not render</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Thanks Greg. I tried changing the slashes but got a "parse error" from line 525 (presumably the rename line) of that file, and the import window popup just kept chugging away indefinately. I changed it back and it is as before - error as above, with only the text imported.<br />
+<br />
+PHP INFo file attached!<br />
+<br />
+David</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7835"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-26 08:24:48</p>
+            </div>
+            <div class="postheader"><h3>Re: SCORM object from AFLF does not render</h3></div>
+				
+			<div class="body">
+				<p>If it generates a parse error after changing the slashes, then you've either edited the file in a windows editor, and saved it using windows end of line characters. You'll need to set you editor to save using Unix end of line characters. Or, you've made an error editing. Make sure all the quotes are present.<br />
+<br />
+There is nothing in the phpinfo output to suggest what the problem might be.<br />
+<br />
+Unfortunately we do not have a win2003 system available to investigate this further. I can only suggest you move it onto another system. Linux is most reliable, though winxp also works well.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7867"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-28 11:21:35</p>
+            </div>
+            <div class="postheader"><h3>Re: SCORM object from AFLF does not render</h3></div>
+				
+			<div class="body">
+				<p>We've tried to reproduce this on a half dozen systems with no luck. It has to be something specific to the system you are running. We'll need shell access to the system ATutor is running on to investigate further. And Instructor access to the ATutor installation.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

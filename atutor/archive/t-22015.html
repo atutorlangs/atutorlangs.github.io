@@ -1,0 +1,217 @@
+---
+ title: Translating 202 into Russian Language
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Translating 202 into Russian Language</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22015"></a>
+		<div class="forum-post-author">
+			<label class="title">r1sh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-07 09:01:00</p>
+            </div>
+            <div class="postheader"><h3>Translating 202 into Russian Language</h3></div>
+				
+			<div class="body">
+				<p>Good day, respect specialists!<br />
+<br />
+We,ve got two servers for ATutor: One is Windows XP with XAMMP and other is Debian 6.0 with LAMP. <br />
+<br />
+Version of installed ATutor is 2.0.2 on both servers.<br />
+<br />
+When we try to install Russian Translation on ATutor on Windows, everything works fine, it displays russian language.<br />
+<br />
+But when we try to install this translation on Debian, it's written that:<br />
+<br />
+[code]<br />
+The following errors occurred:<br />
+<br />
+    The language pack you are trying to import is not compatible with this version of ATutor. If you still want to import this language pack you must enable translating following the instructions at the bottom of this page.<br />
+    The language pack you are trying to import has not been marked as complete and published. To use incomplete language packs you must enable translating using the instructions at the bottom of this page.<br />
+[/code]<br />
+<br />
+Neither importing from file nor installing from atutor.ca<br />
+<br />
+Versions are similar, builds are also similar. The only difference is operation system and version of Mysql 5.1.3 and 5.5.8.<br />
+<br />
+Can you please suggest how can I solve this problem?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22016"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-07 12:28:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Translating 2.0.2 into Russian Language</h3></div>
+				
+			<div class="body">
+				<p>This generally means you are trying to import an older language pack into a newer ATutor. Not sure why you're getting the error if you are using 2.0.2.<br />
+<br />
+You can either unzip the package and check the version number and adjust it if necessary, then zip it back together and import it. Or, turn on translation, at the top of the include/vitals.inc.php file, and import it as a partial language pack.<br />
+<br />
+I just tried installing the Russian pack on our demo site, using the Language Manager import it, and it worked fine.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22021"></a>
+		<div class="forum-post-author">
+			<label class="title">r1sh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-08 01:47:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Translating 2.0.2 into Russian Language</h3></div>
+				
+			<div class="body">
+				<p>I also don't understand why it isn't working. We installed same versions of ATutor on two servers. Can it be because of the difference of Mysql \ PHP \ Apache versions?<br />
+<br />
+Can you please explain more clearly about turning on translations?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22022"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-08 09:11:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Translating 2.0.2 into Russian Language</h3></div>
+				
+			<div class="body">
+				<p>Is the database collation set to utf-8 on the server where the problem is occurring?<br />
+<br />
+If you go to the translation tool, the instruction for turning it on are there. Login as admin. Click Languages>Translate<br />
+<br />
+It is possible it may be the MySQL version. We have not tested with 5.5.8 yet</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22024"></a>
+		<div class="forum-post-author">
+			<label class="title">r1sh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-11 01:39:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Translating 2.0.2 into Russian Language</h3></div>
+				
+			<div class="body">
+				<p>the point is that Russian ATutor works on Mysql 5.5.8 somehow, but on Mysql 5.1.56-0 it occurs with message I wrote...<br />
+<br />
+The database collation is set to "utf8_general_ci" is it ok?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22025"></a>
+		<div class="forum-post-author">
+			<label class="title">r1sh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-11 01:52:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Translating 2.0.2 into Russian Language</h3></div>
+				
+			<div class="body">
+				<p>where from does translation module take information about version of ATutor?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22026"></a>
+		<div class="forum-post-author">
+			<label class="title">r1sh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-11 02:32:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Translating 2.0.2 into Russian Language</h3></div>
+				
+			<div class="body">
+				<p>when I tried to Import language_text.sql from phpMyAdmin into ATutor database, I recieved a error:<br />
+<br />
+<br />
+<br />
+SQL-:<br />
+<br />
+INSERT INTO `languages`<br />
+VALUES (<br />
+'ru', 'utf-8', 'ltr', 'ru|russian', '', 'Russian', 3<br />
+);<br />
+<br />
+ MySQL: <br />
+#1146 - Table 'atutor.languages' doesn't exist</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22027"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-11 10:06:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Translating 2.0.2 into Russian Language</h3></div>
+				
+			<div class="body">
+				<p>Try these.<br />
+<br />
+<br />
+http://svn.atutor.ca/repos/atutor/tags/atutor_2_0_2/mods/_core/languages/classes/LanguageManager.class.php<br />
+LANG_WRONG_VERSION<br />
+<br />
+http://svn.atutor.ca/repos/atutor/tags/atutor_2_0_2/mods/_core/languages/classes/Language.class.php<br />
+$this->atutor_version<br />
+<br />
+If the languages table is not there, it would seem the installation was was not complete.<br />
+<br />
+You might also try changing "TYPE=MyISAM;" to "ENGINE=MyISAM;" in the install/db/atutor_language_text.sql file where the language_text table is created, before installation.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

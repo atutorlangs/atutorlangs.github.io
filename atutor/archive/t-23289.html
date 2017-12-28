@@ -1,0 +1,264 @@
+---
+ title: MySQL error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>MySQL error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="23289"></a>
+		<div class="forum-post-author">
+			<label class="title">sdruid</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 09:22:01</p>
+            </div>
+            <div class="postheader"><h3>MySQL error</h3></div>
+				
+			<div class="body">
+				<p>New install, everything appears to be working fine but when I log in as a student or instructor I am getting the following error:<br />
+<br />
+Warning: mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/llygedyn/public_html/lk/mods/_standard/reading_list/module_news.php on line 25<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+Linux 2.6.32-220.17.1.el6.x86_64<br />
+  ATutor version -<br />
+2.0.3(r11495 - 2011-09-13 13:27:29)<br />
+  Patch #s applied - Patch ID 1-5 installed<br />
+  ATutor theme name - Tried them all no difference<br />
+  PHP version -  5.3.13<br />
+  MySQL version -  5.1.63-dl<br />
+<br />
+Screen shot of error<br />
+http://screencast.com/t/5l8GC3bj</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23290"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 10:06:08</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>This sounds like it might be the result of a corrupted file. Did you unpack ATutor locally, then upload via FTP to the server file-by-file, or did you upload ATutor to the server then unpack it there? The former inevitably breaks files.<br />
+<br />
+I've looked at the reading list module_new.php file, and tried it. All is in order. Your system specs seem fine, so nothing there that would suggest a problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23291"></a>
+		<div class="forum-post-author">
+			<label class="title">sdruid</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 11:29:25</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>It was installed by Softaculous  a feature my host provides through Cpanel.  So it sounds like maybe I simply need to remove it and then reinstall it again.<br />
+<br />
+Will let you know</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23293"></a>
+		<div class="forum-post-author">
+			<label class="title">sdruid</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 12:03:44</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>Ok I have narrowed down the issue to when Path ID 04 is installed.  <br />
+<br />
+It says it "Fixes the issue that the Things Current displays the activities from the courses that the login user is not enrolled in."<br />
+<br />
+And it changes these:<br />
+/home/llygedyn/public_html/lore/mods/_standard/forums/module_news.php.04.old<br />
+/home/llygedyn/public_html/lore/mods/_standard/reading_list/module_news.php.04.old<br />
+<br />
+The SQL error occurs after this patch is installed,  I installed each patch in order and tested after install and the error occurs after patch ID 04 is installed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23294"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 12:27:34</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>That's not creating the problem for me either. The patch seems fine. <br />
+<br />
+Do your have Pretty URL turned on in your ATutor System Preferences? If its on, turn it off and see if that make a difference.<br />
+<br />
+As a last resort you can try copying the module_news.new contents into your module.news.php file manually.<br />
+<br />
+http://update.atutor.ca/patch/2_0_3/2_0_3-4/module_news.new</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23295"></a>
+		<div class="forum-post-author">
+			<label class="title">sdruid</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 12:56:06</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>The module.new.php you show is exactly the same as the updated one in the patch. <br />
+<br />
+Everything is default at this point including default theme. Only difference is I created a new user and made them an instructor.<br />
+<br />
+I made no other changes except to start installing patches</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23296"></a>
+		<div class="forum-post-author">
+			<label class="title">sdruid</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 13:07:00</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>I reverted the one file<br />
+<br />
+/home/llygedyn/public_html/lore/mods/_standard/reading_list/module_news.php<br />
+<br />
+Back to previous version and error goes away<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+The module.new.php you show is exactly the same as the updated one in the patch. <br />
+<br />
+Everything is default at this point including default theme. Only difference is I created a new user and made them ...<br />
+[op]forums/view.php?fid=7&pid=23289&page=1#23295[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23297"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 13:30:25</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>I can't say why that patch won't work. It's not causing problems elsewhere that we are aware of. We've applied the patch many times ourselves with no trouble.<br />
+<br />
+I guess if it works with the original file, go with that.<br />
+<br />
+It would be good to know if Softaculous use the file-by-file ftp method. Are you able to confirm one way or the other?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23298"></a>
+		<div class="forum-post-author">
+			<label class="title">sdruid</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-12 13:43:05</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>I am not. Sorry.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23557"></a>
+		<div class="forum-post-author">
+			<label class="title">Webster</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-09-15 02:04:54</p>
+            </div>
+            <div class="postheader"><h3>Re: MySQL error</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -2.0.3<br />
+  Patch #s applied -1 to 5<br />
+  ATutor theme name -aTutor<br />
+  PHP version -5.3.15<br />
+  MySQL version - 5.1.63-cll<br />
+  Webserver & version - Apache 2.2.22<br />
+  Copies of error messages -same as above<br />
+  Changes to default settings - just added a test student<br />
+  Web browser being used - IE 9<br />
+  ...and anything else relevant -<br />
+I reverted back to the old 4 files before the patch and all is well...must be a glitch in #4 patch?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

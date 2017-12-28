@@ -1,0 +1,82 @@
+---
+ title: Cannot edit course content in atutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Cannot edit course content in atutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="463"></a>
+		<div class="forum-post-author">
+			<label class="title">nthomas</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-30 14:34:42</p>
+            </div>
+            <div class="postheader"><h3>Cannot edit course content in atutor</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I have some questions regarding the use of atutor. I have created a course using "Add Top Level Page". <br />
+<br />
+It is possible for me to edit the course content right after i create it(since you are      taken to a page with editing tool bar , right after creation of a page). But once i  exit out of the page containing the editing tool bar, it is  not possible for me to go back and edit the contents of a particular page<br />
+<br />
+1. The version of ATutor you are referring to : ATutor-1.2.2<br />
+<br />
+2. The operating system ATutor is installed on : Microsoft Windows NT 4.00.1381<br />
+<br />
+3. The Web server you are using and its version : IIS Version 4 Service pack 6<br />
+<br />
+4. The version of PHP and MySQL being used : PHP 4 and WinMySQLAdmin 1.4<br />
+<br />
+5. The Web browser you are using to view ATutor, it's version number, and any default settings you may have changed : IE 5.5<br />
+<br />
+6. Do you have root access to your server : yes<br />
+<br />
+7. List the steps you took prior to experiencing the problem.<br />
+	1.Created a new course Trial(protected)<br />
+	2.Used Add top level page to create content (Trial1) - plain text format, to the end of section.Clicked on &#8220;Add Content&#8221;<br />
+	3.Taken to page with the edit navigation bar (Edit This Content Page | Delete This Content Page | Add Sub Content to This Page)<br />
+	4.Want to create some more content(not subcontent) .So clicked on &#8220;Trial&#8221; in the menu on the right hand side<br />
+	5. Used Add top level page to create content (Trial2) - plain text format, to the end of section.Clicked on &#8220;Add Content&#8221;<br />
+	6.Now to see Trial1 contents or edit it &#8211; what should I do?<br />
+<br />
+ 	<br />
+<br />
+Thanks,<br />
+Nisha</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="464"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-01 09:04:11</p>
+            </div>
+            <div class="postheader"><h3>Need index.php default in IIS configure</h3></div>
+				
+			<div class="body">
+				<p>It appears IIS is not configured the default to index.php when no file name is provided in the url. You can either adjust your configuration to include index.php as a default, or add "index.php to the start of the path on (or about) line 109 in /include/lib/content_functions.inc.php<br />
+<br />
+from<br />
+$link .= ' &lt;a href="./?cid='.$content['content_id'].SEP.'g='.$g.'" title="'.$content['title'].'">';<br />
+				<br />
+to<br />
+$link .= ' &lt;a href="index.php?cid='.$content['content_id'].SEP.'g='.$g.'" title="'.$content['title'].'">';</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

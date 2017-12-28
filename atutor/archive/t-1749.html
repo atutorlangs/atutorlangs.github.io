@@ -1,0 +1,98 @@
+---
+ title: Cant See contect created
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cant See contect created</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="1749"></a>
+		<div class="forum-post-author">
+			<label class="title">llarrea</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-02 17:36:47</p>
+            </div>
+            <div class="postheader"><h3>Cant See contect created</h3></div>
+				
+			<div class="body">
+				<p>I have just installed Atutor 1.4 with Apache 1.3 and MySQL on a Windows XP machine.<br />
+Apparently all works well, but after I type some text on the Editor and Save the content with the "Save" button I am not able to see the page.  The title of the Page appears on the Course Index, but when I click on it it takes me to the Directory listing of the Atutor folder.  The same thing happens with the How to Course, I can see all the tittles but when I click on a page it takes me to the same directory listing.<br />
+<br />
+What am I doind wrong?  Where do the text that is typed on the editor supposed to get saved?   I have not found any files with my text on them.<br />
+<br />
+LA</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1750"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-02 18:08:39</p>
+            </div>
+            <div class="postheader"><h3>Edit the Apache conf file</h3></div>
+				
+			<div class="body">
+				<p>This sounds like the directory index setting in the Apache httpd.conf file is not configured to recognize index.php as the default when no filename is present.<br />
+<br />
+It should look like this:<br />
+<br />
+DirectoryIndex index.php index.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1774"></a>
+		<div class="forum-post-author">
+			<label class="title">llarrea</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-03 12:09:03</p>
+            </div>
+            <div class="postheader"><h3>Solved</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+Yes, that was the problem. It works fine now.  Thank you.		:)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1810"></a>
+		<div class="forum-post-author">
+			<label class="title">andyd</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-09 11:29:30</p>
+            </div>
+            <div class="postheader"><h3>IIS</h3></div>
+				
+			<div class="body">
+				<p>I appriciate IIS is not supported but i was wondering if anyone could help me rectify a very similar sounding issue whilst runing version 1.4 on IIS5?<br />
+<br />
+Andy</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

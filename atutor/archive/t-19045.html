@@ -1,0 +1,167 @@
+---
+ title: HTML displaying errors
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>HTML displaying errors</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19045"></a>
+		<div class="forum-post-author">
+			<label class="title">daniender</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-11 04:29:07</p>
+            </div>
+            <div class="postheader"><h3>HTML displaying errors</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Windows Xp SP2<br />
+  ATutor version - 1.6.3<br />
+  Patch #s applied - 01 to 11 (the ones that come default with atutor)<br />
+  ATutor theme name - IceBlue<br />
+  PHP version - 5.3<br />
+  MySQL version - 5.1<br />
+  Webserver & version - WampServer 2.0<br />
+  Copies of error messages - <br />
+  Changes to default settings -<br />
+  Web browser being used - FF3.5,IE8.0,Chrome, Opera 10<br />
+  ...and anything else relevant -<br />
+<br />
+<br />
+Its actually a minor problem, but in the "home" administer page, one of the links, "error logging", is displayed in the source code in this way:<br />
+<br />
+&lt;a href="admin/error_logging.php">&lt;a href="admin/error_logging.php">Error Logging&lt;/a>&lt;/a><br />
+<br />
+so visually, the page displays two "boxes" (made with de theme css properties) around de link (one for the first link or "a" and another for second link inside the first), and when i click on the link, in the result page, the title (for the breadcrumb, etc.) is not "error logging" but "&lt;a href="....>"...<br />
+<br />
+this thing only happens when i translate the atutor to spanish...<br />
+<br />
+do you know which .php archive manages this?? or any way to "fix" this programming error?<br />
+<br />
+thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19046"></a>
+		<div class="forum-post-author">
+			<label class="title">daniender</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-11 04:31:10</p>
+            </div>
+            <div class="postheader"><h3>Re: HTML displaying errors</h3></div>
+				
+			<div class="body">
+				<p>maybe its an error in the spanish language database??</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19047"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-11 11:14:44</p>
+            </div>
+            <div class="postheader"><h3>Re: HTML displaying errors</h3></div>
+				
+			<div class="body">
+				<p>Yes, it is a problem with the translation. I've update our database and republished the language pack. thank you<br />
+<br />
+You can use the translation tools in ATutor to fix your version, removing the HTML around the translated words. Or just reinstall the Spanish language pack.<br />
+<br />
+Is the Spanish translation the same as English. The words "error logging" do not appear to be translated in the database?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19069"></a>
+		<div class="forum-post-author">
+			<label class="title">daniender</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-16 03:59:24</p>
+            </div>
+            <div class="postheader"><h3>Re: HTML displaying errors</h3></div>
+				
+			<div class="body">
+				<p>sorry not answering earlier....i solved the problem just after posting here...hehe<br />
+<br />
+it was a problem with the translation of some modules...i am translating them, and wondering how can i share my translation (if i have a little free time) with other users...<br />
+<br />
+is there any way to upload the translation of my database to share the translated modules i am using??</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19077"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-16 16:16:24</p>
+            </div>
+            <div class="postheader"><h3>Re: HTML displaying errors</h3></div>
+				
+			<div class="body">
+				<p>You can export out the language using the ATutor language manager, then attache the file here.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+it was a problem with the translation of some modules...i am translating them, and wondering how can i share my translation (if i have a little free time) with other users...<br />
+<br />
+is there any way to up...<br />
+[op]forums/view.php?fid=7;pid=19045;page=1#19069[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19086"></a>
+		<div class="forum-post-author">
+			<label class="title">daniender</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-18 03:15:21</p>
+            </div>
+            <div class="postheader"><h3>Re: HTML displaying errors</h3></div>
+				
+			<div class="body">
+				<p>ok<br />
+<br />
+thanks<br />
+<br />
+i'll do it when i finnish my atutor courses...</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

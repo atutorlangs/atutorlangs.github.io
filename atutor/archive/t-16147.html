@@ -1,0 +1,336 @@
+---
+ title: Tests and Surveys question
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Tests and Surveys question</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16147"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-26 13:22:06</p>
+            </div>
+            <div class="postheader"><h3>Tests and Surveys question</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have Atutor 1.6.2 installed and I have a question about "Tests and Surveys"<br />
+<br />
+I did a mock quiz and on the "View Results" page, if I got one wrong, it displayed the red "x" for wrong answer next to the correct answer.  So, I had a red "x" next to my incorrect answer as well as a red "x" next to the correct answer.  <br />
+<br />
+Shouldn't there be a green checkmark next to the correct answer instead of the red "x"?  Can I adjust this somehow?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16152"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-27 11:05:02</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>It should be.  If not, it is likely to be a bug.  <br />
+<br />
+Can you tell me which question type this is?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16153"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-27 12:01:05</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>It was a multiple choice question.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16187"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-02 12:31:24</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>A red X for incorrectly not selecting the correct answer, and a red X for incorrectly selecting the wrong answer.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16188"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-02 12:50:07</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>OK.  I get that.<br />
+<br />
+Is there a way to make it so the green check mark is displayed next to the correct answer?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16193"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-02 15:18:47</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>There isn't a setting, if that's what you mean. You could change the code yourself, to replace the X with a check. <br />
+<br />
+You'll probably want to create a patch if you want to keep the change for future upgrades. See the handbook for details about patches.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16194"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-02 19:29:42</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I found the file where the commands are given to display the checkmark or red "x": Atutor/tools/view_results.php<br />
+<br />
+Specifically at this spot in the file...<br />
+<br />
+$mark_right = ' &lt;img src="'.$_base_path.'images/checkmark.gif" alt="'._AT('correct_answer').'" title="'._AT('correct_answer').'" />';<br />
+$mark_wrong = ' &lt;img src="'.$_base_path.'images/x.gif" alt="'._AT('wrong_answer').'" title="'._AT('wrong_answer').'" />';<br />
+<br />
+<br />
+Do you see an easy adjustment to make here or would it be something more complicated?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16201"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-05 09:07:05</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Now look for places $mark_right gets used, and experiment  by removing the variable.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16221"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-08 13:11:39</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I found the file that's causing the display of the checkmarks and red "x's".....<br />
+<br />
+It's: ATutor/themes/default/test_questions/multichoice_result.tmpl.php<br />
+<br />
+I've been messing with a section of the code and I'm very close to figuring it out.  I changed the original section from....<br />
+<br />
+&lt;?php if (($this->row['answer_'.$i] == 1) && in_array($i, $this->answers)): ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/checkmark.gif" alt="&lt;?php echo _AT('correct_answer'); ?>" title="&lt;?php echo _AT('correct_answer'); ?>" height="16" width="16" style="vertical-align: middle" /><br />
+				&lt;?php elseif (($this->row['answer_'.$i] == 1) || in_array($i, $this->answers)): ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/x.gif" alt="&lt;?php echo _AT('wrong_answer'); ?>" title="&lt;?php echo _AT('wrong_answer'); ?>" height="16" width="16" style="vertical-align: middle" /><br />
+				&lt;?php else: ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/clr.gif" alt="" title="" height="16" width="16" style="vertical-align: middle" /><br />
+				&lt;?php endif; ?><br />
+<br />
+<br />
+to....<br />
+<br />
+&lt;?php if (($this->row['answer_'.$i] == 1) && in_array($i, $this->answers)): ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/checkmark.gif" alt="&lt;?php echo _AT('correct_answer'); ?>" title="&lt;?php echo _AT('correct_answer'); ?>" height="16" width="16" style="vertical-align: middle" /><br />
+				&lt;?php elseif (!($this->row['answer_'.$i] == 1) && in_array($i, $this->answers)): ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/x.gif" alt="&lt;?php echo _AT('wrong_answer'); ?>" title="&lt;?php echo _AT('wrong_answer'); ?>" height="16" width="16" style="vertical-align: middle" /><br />
+				&lt;?php else: ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/clr.gif" alt="" title="" height="16" width="16" style="vertical-align: middle" /><br />
+				&lt;?php endif; ?><br />
+<br />
+<br />
+Making this change made it so that there would be a red "x" next to the selected wrong answer only.  Now I just need a statement that will put a checkmark next to the correct answer that wasn't chosen.<br />
+<br />
+Can you help me with this?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16223"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-08 13:25:58</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Don't really have the time to spend this right now. <br />
+<br />
+Instead of removing the x, did you try replacing the x with the check image?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16224"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-08 15:16:37</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Ok.  Whenever you get around to it would be great.<br />
+<br />
+I did try changing the image to the checkmark, but that didn't work.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16225"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-09 01:46:25</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I ended up figuring it out.  Below is the code for the ATutor/themes/default/test_questions/multichoice_result.tmpl.php file if it would be useful to others.....<br />
+<br />
+<br />
+&lt;p>&lt;?php echo AT_print($this->row['question'], 'tests_questions.question'); ?>&lt;/p><br />
+<br />
+&lt;ul style="padding: 0px; margin: 0px; list-style-type: none"><br />
+	&lt;?php for ($i=0; $i &lt; 10; $i++): ?><br />
+		&lt;?php if ($this->row['choice_'.$i] != ''): ?><br />
+			&lt;li style="padding: 4px"><br />
+				&lt;?php if (($this->row['answer_'.$i] == 1) && in_array($i, $this->answers)): ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/checkmark.gif" alt="&lt;?php echo _AT('correct_answer'); ?>" title="&lt;?php echo _AT('correct_answer'); ?>" height="16" width="16" style="vertical-align: middle" /><br />
+			<br />
+				&lt;?php elseif (!($this->row['answer_'.$i] == 1) && in_array($i, $this->answers)): ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/x.gif" alt="&lt;?php echo _AT('wrong_answer'); ?>" title="&lt;?php echo _AT('wrong_answer'); ?>" height="16" width="16" style="vertical-align: middle" /><br />
+<br />
+				&lt;?php elseif (($this->row['answer_'.$i] == 1) || in_array($i, $this->answers)): ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/checkmark.gif" alt="&lt;?php echo _AT('correct_answer'); ?>" title="&lt;?php echo _AT('correct_answer'); ?>" height="16" width="16" style="vertical-align: middle" /><br />
+<br />
+				&lt;?php else: ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/clr.gif" alt="" title="" height="16" width="16" style="vertical-align: middle" /><br />
+				&lt;?php endif; ?><br />
+<br />
+<br />
+				&lt;?php if (in_array($i, $this->answers)): ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/checkbox_check.gif" alt="&lt;?php echo _AT('checked'); ?>" title="&lt;?php echo _AT('checked'); ?>" height="13" width="13" style="vertical-align: middle" /><br />
+				&lt;?php else: ?><br />
+					&lt;img src="&lt;?php echo $this->base_path; ?>images/checkbox_empty.gif" alt="&lt;?php echo _AT('unchecked'); ?>" title="&lt;?php echo _AT('unchecked'); ?>" height="13" width="13" style="vertical-align: middle" /><br />
+				&lt;?php endif; ?><br />
+				&lt;?php echo AT_print($this->row['choice_'.$i], 'tests_questions.choice_'.$i); ?><br />
+		&lt;?php endif; ?><br />
+	&lt;?php endfor; ?><br />
+&lt;/ul></p>
+			</div>
+		</div>
+	</li>
+</ul></div>

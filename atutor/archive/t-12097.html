@@ -1,0 +1,127 @@
+---
+ title: User login information not correct
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>User login information not correct</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12097"></a>
+		<div class="forum-post-author">
+			<label class="title">sunee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-11-30 04:33:12</p>
+            </div>
+            <div class="postheader"><h3>User login information not correct</h3></div>
+				
+			<div class="body">
+				<p>User menu of Sytem Administration of ATutor 1.5.5 doesn't appear to display correct information (I login never every day but the system reported that I "Never" login).<br />
+The user login information is very useful in monitoring our users. Please help.<br />
+ <br />
+operating system -CentOS : Linux 2.6.9-55.0.2.ELsmp<br />
+version of ATutor -1.5.5<br />
+versions of php -4.3.9<br />
+version of mysq l -4.1.20<br />
+webserver & version - Apache/2.0.52 (CentOS)<br />
+copies of error messages -<br />
+changes to default settings -<br />
+web browser being used -IE6<br />
+and anything else relevant -the system has ATutor 1.5.4 running also.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12098"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-11-30 08:44:24</p>
+            </div>
+            <div class="postheader"><h3>Re: User login information not correct</h3></div>
+				
+			<div class="body">
+				<p>I see the problem, but can not reprodcue it on our local systems. Its been added to the bug tracker for investigation. thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12099"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-11-30 08:46:51</p>
+            </div>
+            <div class="postheader"><h3>Re: User login information not correct</h3></div>
+				
+			<div class="body">
+				<p>Actually, after taking a second look, all the users listed in the image are instructors. Instructors are not tracked. Last login only works for students.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12103"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-11-30 10:15:58</p>
+            </div>
+            <div class="postheader"><h3>Re: User login information not correct</h3></div>
+				
+			<div class="body">
+				<p>Why, it works for instructors as well. At the admin's demo server it functions too.<br />
+<br />
+<br />
+[b]sunee[/b], I know you have people with a good knowledge in PHP/MySQL (or maybe you know that too). And I see you have changed the login page substantially. So it's logical you should suspect a bug there: some wrong condition, unset variable, or a reassigned one.<br />
+<br />
+Check the field `last_login` in table `AT_members` -- it should contain some info. If it is empty, than the reason must be in file /login.php.<br />
+<br />
+In that file, a line responsible for the feature reads:<br />
+<br />
+$sql = "UPDATE ".TABLE_PREFIX."members SET creation_date=creation_date, last_login=NOW() WHERE member_id=$_SESSION[member_id]";<br />
+<br />
+Something may prevent the execution to reach this point.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12140"></a>
+		<div class="forum-post-author">
+			<label class="title">sunee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-04 00:11:55</p>
+            </div>
+            <div class="postheader"><h3>Re: User login information not correct</h3></div>
+				
+			<div class="body">
+				<p>Thank you for your response.<br />
+IndieRect was right, I just found out myself yesterday that we have changed the login code to be able to use our University login and password by authentication with LDAP (database for our e-mail system) so that users can have only single signed on for all our SWU Inofrmation System including ATutor (we have been using this feature over 2 years but I didn't realize the problem becuase only recently that I have to take care the system as the "adminsitrator" and play around with many features -- it is great)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

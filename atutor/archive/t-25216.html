@@ -1,0 +1,284 @@
+---
+ title: A problem with modifying and saving questions
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>A problem with modifying and saving questions</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25216"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 21:02:28</p>
+            </div>
+            <div class="postheader"><h3>A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg<br />
+<br />
+I now have an issue with the questions.<br />
+<br />
+It seems that if you modify a previously saved question (multiple choice) it removes the correct answer even if you have it selected when saving.<br />
+<br />
+The result is that the question which is marked as correct before being modified. After being modified, even if the correct answer was selected, at the time of saving it back into the question bank the answer is deleted.<br />
+<br />
+So that when the question is next accessed, even if the correct answer is selected, the submission results in being told that the answer is wrong.<br />
+<br />
+I have verified this by looking into my installations database.<br />
+<br />
+I can create a question (even multiple choice, so long as I don't use punctuation in the remedial content or feedback areas) then save it and it will show in the database as having a 1 in the correct answer.<br />
+<br />
+If I then modify the question and save it the correct answer is changed to a 0.<br />
+<br />
+I couldn't check this on the demo site because I don't have access to your database but I have checked it on two different hosts, same software, same setup.<br />
+<br />
+So could you test this and see what the results are.<br />
+<br />
+Thank You<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25217"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-18 21:12:15</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Jim, <br />
+<br />
+Keep hammering at it. I have similar problems. I have to do everything quiz related in phpmyadmin, because the quiz function can't contact the server.<br />
+<br />
+amboycharliejavascript:smilie(':)')<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+:) :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25240"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-20 17:58:52</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Cheers Amboy<br />
+<br />
+Slowly working through these issues is giving me a better insight into how the system works.<br />
+<br />
+Greg is a great help because he keeps suggesting things I hadn't thought about.<br />
+<br />
+So far we have resolved two of the three issues I have with creating questions and prerequisite order.<br />
+<br />
+Just need to solve the saving of modified questions now.<br />
+<br />
+regards<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25243"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-22 15:52:16</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Patch 0008 has now been posted to fix the problem with creating questions with percent or single quotes in them. Install it using the admin's Patcher.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25244"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-22 16:14:27</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg<br />
+<br />
+This will go a long way to making the system easier to use for those (like my client) who have no knowledge of how these systems work and panic at the slightest problem.<br />
+<br />
+Cheers<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25245"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-22 16:22:45</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Sorry Greg<br />
+<br />
+I thought this was the post about problems creating multiple choice questions which patch 8 has now fixed.<br />
+<br />
+The OP is still an issue I cannot modify and save questions without the system changing the correct answer  from a 1 to a 0 when the question is saved.<br />
+<br />
+As I indicated I tested this on two different hosting systems and the problem is consistent.<br />
+<br />
+Have you had a chance to check the demo database to see if it happens there.<br />
+<br />
+Cheers<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25246"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-22 17:20:33</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Yes, patch 0010 has been posted to fix the deleted correct answer bug when editing MC questions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25248"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-22 17:46:02</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Thank You Greg<br />
+<br />
+Really excellent work, that you and / or the Dev Team do.<br />
+<br />
+Two patches in one day :) :) :) :D <br />
+<br />
+Please pass along my thanks or keep them for your self depending on who made the fix :) :) :) <br />
+<br />
+Thank You<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25299"></a>
+		<div class="forum-post-author">
+			<label class="title">LangJo5</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-03-22 14:26:04</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>I have exactly the same problem as it is solved here. Thanks.<br />
+My only problem now: I can not find the path to patcher 0008 or 0010. Can you please give me the correct path to download the patches. Thanks.<br />
+Josef</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25300"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-03-22 15:43:33</p>
+            </div>
+            <div class="postheader"><h3>Re: A problem with modifying and saving questions</h3></div>
+				
+			<div class="body">
+				<p>Please read the reply to your previous post:<br />
+http://www.atutor.ca/view/17/25297/1.html</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

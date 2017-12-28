@@ -1,0 +1,144 @@
+---
+ title: Can videos be uploaded through FTP to ATutor folder
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Can videos be uploaded through FTP to ATutor folder</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="18726"></a>
+		<div class="forum-post-author">
+			<label class="title">susumw</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-24 01:46:09</p>
+            </div>
+            <div class="postheader"><h3>Can videos be uploaded through FTP to ATutor folder</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -Linux 2.6.27.10-grsecKrakosia<br />
+  ATutor version -1.5.5.<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -5.2.10<br />
+  MySQL version -4.1.14-log<br />
+  Webserver & version-(dont know)<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -Internet Explorer<br />
+  ...and anything else relevant -<br />
+<br />
+www.welcome5thyear.com.ar/ATutor<br />
+<br />
+Could somebody please tell me if there is any possibility to upload videos into ATutor via FTP. As I use ATUtor to teach 10 year old children, I have created several courses where I have uploaded videos but it would be much quicker and easier if I can do it via FTP. If it is possible into which folder should I upload it.<br />
+Sorry if my question sounds rather silly but I am bit lost with this.<br />
+<br />
+Thank you very much for your time<br />
+<br />
+susumw;)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18727"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-24 04:36:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Can videos be uploaded through FTP to ATutor folder?</h3></div>
+				
+			<div class="body">
+				<p>ATutor keeps the cource content in a separate folder which it seems to organize all by it self. So I would not recommend trying to FTP directly into that.<br />
+<br />
+If you don't need to be certain that other people (non students) can view your videoes you could simply create a new folder on your web server and put your videos there. <br />
+<br />
+For example you could call it "video". To insert a movie into your cource use something like this:<br />
+<br />
+[media]www.welcome5thyear.com.ar/video/movie3.swf[/media]<br />
+<br />
+The only downside is that other people will be able to download your movie if they know the url. The content uploaded via ATutor itself is protected from this.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18769"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-25 17:44:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Can videos be uploaded through FTP to ATutor folder?</h3></div>
+				
+			<div class="body">
+				<p>Eviking,<br />
+<br />
+So what would [media]www.welcome5thyear.com.ar/video/movie3.swf[/media] produce?  Just a link in a content page?  Or does it embed the .swf into the page?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18771"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-25 18:15:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Can videos be uploaded through FTP to ATutor folder?</h3></div>
+				
+			<div class="body">
+				<p>It would embed the swf file into the content page. <br />
+<br />
+Try to use the [media]url[/media] tag with a youtube movie to see how it works.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18772"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-25 18:26:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Can videos be uploaded through FTP to ATutor folder?</h3></div>
+				
+			<div class="body">
+				<p>Ok.  I see that now.<br />
+<br />
+Any way to do this w/ MP4 files?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

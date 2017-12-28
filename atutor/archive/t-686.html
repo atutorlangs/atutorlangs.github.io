@@ -1,0 +1,61 @@
+---
+ title: When I imported the Spanish Lan I get this
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>When I imported the Spanish Lan I get this</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="686"></a>
+		<div class="forum-post-author">
+			<label class="title">proservic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-21 10:37:57</p>
+            </div>
+            <div class="postheader"><h3>When I imported the Spanish Lan I get this</h3></div>
+				
+			<div class="body">
+				<p>as administrator When I try to import the spanish Languaje. It show the following message:<br />
+<br />
+Warning: dir(Error : PCLZIP_ERR_BAD_FORMAT (-10) : Unable to find End of Central Dir Record signature): failed to open dir: No such file or directory in /home/cualpe/public_html/cursos/users/admin/import_lang.php on line 64<br />
+<br />
+Warning: fopen(../../content/import/lang/language.csv): failed to open stream: No such file or directory in /home/cualpe/public_html/cursos/users/admin/import_lang.php on line 82<br />
+<br />
+Warning: fgetcsv(): supplied argument is not a valid stream resource in /home/cualpe/public_html/cursos/users/admin/import_lang.php on line 84<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/cualpe/public_html/cursos/users/admin/import_lang.php:64) in /home/cualpe/public_html/cursos/users/admin/import_lang.php on line 114</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="687"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-21 16:15:32</p>
+            </div>
+            <div class="postheader"><h3>Do other uploads work?</h3></div>
+				
+			<div class="body">
+				<p>Can you upload files in the file manager.<br />
+<br />
+Were the permisions on the content directory set properly before you attempted to import a language?<br />
+<br />
+chown -R nobody:nobody content<br />
+or<br />
+chmod -R a+rwx content</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,91 @@
+---
+ title: invalid mysql syntax
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>invalid mysql syntax</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="20531"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-09 11:45:30</p>
+            </div>
+            <div class="postheader"><h3>invalid mysql syntax</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I am trying to import a course backed up from 1.6.1 import into 2.0.<br />
+I am getting the following error :<br />
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's sticking points and resistance to get to the turning point', 0, 0, 1)' at line 1<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/lab/public_html/mods/_core/modules/classes/Module.class.php:829) in /home/lab/public_html/mods/_core/backups/restore.php on line 39<br />
+<br />
+As far as i can tell this is relating to the first line of one of the tables being imported.<br />
+(first line of table is attached as a text file)<br />
+Could this be casued by the fact that the data appears to be double quited CSV format, and the contents of my fields have both singe and double quotes?<br />
+<br />
+Thanks<br />
+<br />
+Matt</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20546"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-10 08:44:35</p>
+            </div>
+            <div class="postheader"><h3>Re: invalid mysql syntax</h3></div>
+				
+			<div class="body">
+				<p>Just spotted this as I was going through the old AT install :<br />
+Patch 0002 :<br />
+ 	Fix these bugs:<br />
+1. Patcher reports error "already installed" when installing a patch that have been installed before ATutor upgrade;<br />
+2. When running on php4, content export feature gives a blank page;<br />
+3. Content backup/restore does not perform correctly when characters " and , both presented;<br />
+4. Course email page reports error when send-to member is not in a group;<br />
+5. When importing scorm package, accept url encoded characters defined in href tag;<br />
+6. Fix the bug that banner with special char is not restored correctly from backup;<br />
+7. URL rewrite includes HTTP_HOST at parsing URL.<br />
+<br />
+Point 3, could this be the cause of my MySQL error?<br />
+Is there a way to see what would be changed for this bit of the patch?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20574"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-13 05:33:06</p>
+            </div>
+            <div class="postheader"><h3>Re: invalid mysql syntax</h3></div>
+				
+			<div class="body">
+				<p>Ok,<br />
+Solved this by copying old install to new server along with database, and then upgrading it.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

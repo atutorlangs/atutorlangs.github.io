@@ -1,0 +1,284 @@
+---
+ title: Atutor on IIS
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Atutor on IIS</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="147"></a>
+		<div class="forum-post-author">
+			<label class="title">sb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-02 17:49:17</p>
+            </div>
+            <div class="postheader"><h3>Atutor on IIS</h3></div>
+				
+			<div class="body">
+				<p>Has anyone had success installing Atutor on IIS? (I know it recommends Apache - but we need IIS for other services.)<br />
+<br />
+We get error on line 85 of constant.inc.php when trying to get to login page for first time. (undefined index) More details available if required.<br />
+(PHP, MySQL seem ok, & PHPMYadmin)<br />
+<br />
+TIA</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="148"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-02 19:10:16</p>
+            </div>
+            <div class="postheader"><h3>PHP Version?</h3></div>
+				
+			<div class="body">
+				<p>Possibly a PHP version problem. V4.2.0+ is required. Send me a url to a phpinfo page if a PHP upgrade doesn't help. If it does help, we'd like to hear that it works with IIS (we haven't tried it ourselves).<br />
+<br />
+You might also check the php.ini file to see if register_globals is turned on (it won't need to be in the next version, 1.2)<br />
+<br />
+g</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="151"></a>
+		<div class="forum-post-author">
+			<label class="title">sb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-03 12:31:58</p>
+            </div>
+            <div class="postheader"><h3>IIS</h3></div>
+				
+			<div class="body">
+				<p>Have switched register_globals on. <br />
+PHP is version 4.3.1<br />
+Cannot send url as I am trying this out on a WinXP laptop for evaluation purposes, using localhost.<br />
+<br />
+Info required from other posting:<br />
+1. The version of ATutor you are referring to. - 1.1<br />
+<br />
+2. The operating system ATutor is installed on  and its version - WinXP Prof +SP1<br />
+<br />
+3. The Web server you are using and its version . - IIS 5.1<br />
+<br />
+4. The version of PHP and MySQL being used (php 4.2.0+ and MySql 3.23+ are required) . PHP 4.3.1, MySQL 4.0.12<br />
+<br />
+5. The Web browser you are using to view ATutor, it's version number, and any default settings you may have changed. - Mozilla 1.4, IE6 +SP1<br />
+<br />
+6. Do you have root access to your server, or are you a hosted user on someone else's server, etc? Yes - localhost<br />
+<br />
+7. List the steps you took prior to experiencing the problem. Installed PHP, MySQL, and PHPMyAdmin to test both. All OK. Installed Atutor to folder below inetpub\wwwroot<br />
+Setup MySQL user atutor and added to config.inc.php<br />
+Set up atutor in MySQL using PHPMyAdmin and gave full access rights to atutor database to atutor user (see next)<br />
+Set DB HOST to localhost (also tried 127.0.0.1)<br />
+DB NAME to atutor<br />
+No other changes to config.inc.php<br />
+<br />
+ACCESS INFORMATION<br />
+Testing on local PC.<br />
+<br />
+I can get dump of php config page and send if it would help (can I use attachments on this forum?)<br />
+<br />
+Hope this helps. TIA</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="152"></a>
+		<div class="forum-post-author">
+			<label class="title">sb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-03 12:33:50</p>
+            </div>
+            <div class="postheader"><h3>IIS</h3></div>
+				
+			<div class="body">
+				<p>Addendum:<br />
+<br />
+[Testing system is XP Prof, production will be W2K server +SP3]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="156"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-04 14:45:17</p>
+            </div>
+            <div class="postheader"><h3>fix in v1.2</h3></div>
+				
+			<div class="body">
+				<p>The problem is that IIS 5 does not have the REQUEST_URI environment variable (as well as others).<br />
+<br />
+The fix for this has been made to version 1.2 which is not yet available.<br />
+<br />
+If you want to fix version 1.1 you should replace the line:<br />
+$REQUEST_URI    = $_SERVER['REQUEST_URI'];<br />
+<br />
+with these:<br />
+$REQUEST_URI = $_SERVER['SCRIPT_NAME'];<br />
+if ($_SERVER['QUERY_STRING'] != '') {<br />
+	$REQUEST_URI .= '?'.$_SERVER['QUERY_STRING'];<br />
+}<br />
+$_SERVER['REQUEST_URI'] = $REQUEST_URI;<br />
+<br />
+in the ./include/lib/constants.inc.php<br />
+<br />
+cheers,<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="157"></a>
+		<div class="forum-post-author">
+			<label class="title">sb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-06 15:54:30</p>
+            </div>
+            <div class="postheader"><h3>proposed fix</h3></div>
+				
+			<div class="body">
+				<p>Thanks Joel but it did not work.<br />
+<br />
+Now get error on next line referring to 'Query String'<br />
+<br />
+sb</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="161"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-09 12:15:45</p>
+            </div>
+            <div class="postheader"><h3>line?</h3></div>
+				
+			<div class="body">
+				<p>Do you have the line number(s) ?<br />
+<br />
+What is the exact error?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="176"></a>
+		<div class="forum-post-author">
+			<label class="title"></label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-22 05:35:59</p>
+            </div>
+            <div class="postheader"><h3>iis</h3></div>
+				
+			<div class="body">
+				<p>Joel,<br />
+<br />
+this is the rror reported due to undefined querystring<br />
+<br />
+Notice: Undefined index: QUERY_STRING in C:\Inetpub\wwwroot\ATutor\include\lib\constants.inc.php on line 87<br />
+<br />
+I commented all the old and the above and works.<br />
+<br />
+Newby</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="177"></a>
+		<div class="forum-post-author">
+			<label class="title"></label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-22 05:59:57</p>
+            </div>
+            <div class="postheader"><h3>iis</h3></div>
+				
+			<div class="body">
+				<p>from newby<br />
+<br />
+But then returns a all lot of other errors.<br />
+<br />
+Any other suggestions??<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="178"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-06-23 16:15:26</p>
+            </div>
+            <div class="postheader"><h3>error_reporting(E_ALL ^ E_NOTICE);</h3></div>
+				
+			<div class="body">
+				<p>seems like you have notices enabled.<br />
+<br />
+add the line:<br />
+<br />
+error_reporting(E_ALL ^ E_NOTICE);<br />
+<br />
+to the very top of the vitals.inc.php file in the include directory.<br />
+<br />
+that should fix that.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

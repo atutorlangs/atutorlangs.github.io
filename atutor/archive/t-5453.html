@@ -1,0 +1,105 @@
+---
+ title: Upgrading to ATutor 15 from 14
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Upgrading to ATutor 15 from 14</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5453"></a>
+		<div class="forum-post-author">
+			<label class="title">fathianf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-16 04:53:57</p>
+            </div>
+            <div class="postheader"><h3>Upgrading to ATutor 15 from 14</h3></div>
+				
+			<div class="body">
+				<p>I have atutor 1.4 up and running and I tried to upgrade it to 1.5 with farsi language. At the first I could upgrade to 1.5 for default language which is english, but when i tried to import farsi language pack, it failed. would you please let me know what is wrong and what should i do to solve the problem.<br />
+<br />
+Things to describe: <br />
+  operating system - Mandrake 9.1<br />
+  version of ATutor - 1.4<br />
+  versions of php - 4.3<br />
+  version of mysq l -4.0.11<br />
+  webserver & version -apache2-2.0.44<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -mozilla<br />
+  and anything else relevant -<br />
+Also I tried to clean install atutor 1.5 on fc4 with mysql 4.1.11 and apache 2.0.54 and php 5.0.4, I could install it and import farsi language patch of 1.5 but I can't insert my mysql.dump of atutor 1.4 in 1.5 because of changes in course and member tables and so on, would you please let me know about this matter as well. <br />
+Thanks in advance for your quick reply.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5462"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-16 16:38:30</p>
+            </div>
+            <div class="postheader"><h3>Can not reproduce</h3></div>
+				
+			<div class="body">
+				<p>We've tried importing the farsi language on a number of upgraded systems without any trouble. Have you tried to import another language besides Farsi? Does that work?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5463"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-16 16:50:36</p>
+            </div>
+            <div class="postheader"><h3>Customizations</h3></div>
+				
+			<div class="body">
+				<p>It is unlikely you will be able to import your customized ATutor database into the new 1.5, at least not without some effort. You would need to study each of the upgrade SQL files to see what has changed since 1.4 (and lots has changed).There's not much help we can offer for upgrades to customized versions of ATutor. <br />
+<br />
+Depending on the customizations you made, we may be able to include them with the public source code so you don't have this problem the next time you wish to upgrade, if you want to share your features. Ideally in the future, where you do customize features, separate them from the main ATutor installation, in their won directory and database tables, then when you upgrade it will be easier to copy over the customisations as modular units.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5486"></a>
+		<div class="forum-post-author">
+			<label class="title">xerxes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-17 11:32:05</p>
+            </div>
+            <div class="postheader"><h3>i need to get familior with you...</h3></div>
+				
+			<div class="body">
+				<p>i am webmaster of a virtual university in Islamic studies in iran, and i wanna Set up Atutor for it. and i need to get familior with an iranian who worked with Atutor. may we know each other more?<br />
+thanks.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I have atutor 1.4 up and running and I tried to upgrade it to 1.5 with farsi language. At the first I could upgrade to 1.5 for default language which is english, but when i tried to import farsi langu...<br />
+[op]forums/view.php?fid=7;pid=5453;page=1#5453[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

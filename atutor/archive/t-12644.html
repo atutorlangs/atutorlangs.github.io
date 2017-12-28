@@ -1,0 +1,198 @@
+---
+ title: timed tests and quizzes
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>timed tests and quizzes</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12644"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 02:39:16</p>
+            </div>
+            <div class="postheader"><h3>timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>I am using ver 1.5.5<br />
+While it is nice to be able to setup scheduled tests, what I really needed was the ability to setup unscheduled (asyncronous, in a manner of peaking) tests, which each student can take at his or her convenience.<br />
+On the other hand, each test would need to have a a max time limit, example, test must be completed one hour after starting.<br />
+Is there a workaround for this?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12648"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 03:50:48</p>
+            </div>
+            <div class="postheader"><h3>Re: timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>1. unscheduled tests: just set a end date way ahead, and you have a test that is available all the time. <br />
+<br />
+2. max time limit: intresting thought, I believe we could have used that as well. however, this is not in place now, but we are recording the time used on a test. <br />
+<br />
+you probably have more chance of getting this developed if you <br />
+<br />
+a) can do it youself and provide a well documented and tested patch <br />
+b) describe it / specify how it would work in detail. example: what happens if a student uses more than the allowed time? is the data lost? can he / she retry? what kinds of additions to code and DB would have to be done etc..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12657"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 08:50:23</p>
+            </div>
+            <div class="postheader"><h3>Re: timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>Timed test would be a good feature, though its not as straight forward to implement as one might think. <br />
+<br />
+A primary issue is being able to allow students different time limits on tests. For accessibility reasons there needs to be a way to assign time and a half, or double time, for instance, to give disadvantaged students, perhaps a person with a reading disability, or a blind person, time enough to complete the test given their disability.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12679"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 10:52:26</p>
+            </div>
+            <div class="postheader"><h3>Re: timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>vygard: wish I could do it myself. I figure that initially the method should imitate old-fashioned tests. That means there is a fixed time after which you are not allowed to work and data is definitely not lost. If later on capability was added to make things more flexible, like allowing more time but logging the time and giving a warning, so much the better .<br />
+<br />
+greg: while I have  special reason to respect the way Atutor is extra sensitive to the disabled, I think it is possible to start with the general and upgrade the feature to be available for those with accessibility issues. Initially, there could just be a way to note that someone is disabled</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12680"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 11:06:17</p>
+            </div>
+            <div class="postheader"><h3>Re: timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>We can't introduce features that are not accessible into ATutor. The A in ATutor is synonymous with Accesssibility. Its a philosopical thing for us, given who we are (ATRC)<br />
+<br />
+That said, it may be possible to use groups to provide added time for some students. Though not optimal, it would be acceptable to create a copy of a test, increase the time limit, assign it to a group, then add the students who need extra time to that group.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12681"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 11:10:39</p>
+            </div>
+            <div class="postheader"><h3>Re: timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>sounds like a pretty  good solution to me. Sure you have a lot on your hands but hope this thing also finds itself in the Q</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12684"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 11:38:24</p>
+            </div>
+            <div class="postheader"><h3>Re: timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>This probably isn't something we'd take on without funds. We try to keep our focus on developing infrastructure type things the community is less likely to want to pay for.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12686"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 12:16:33</p>
+            </div>
+            <div class="postheader"><h3>Re: timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>how much would the funing for something like this be?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12689"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 12:58:54</p>
+            </div>
+            <div class="postheader"><h3>Re: timed tests and quizzes</h3></div>
+				
+			<div class="body">
+				<p>Maybe a few thousand dollars, but I really can't say until we have determined what needs to be done. <br />
+<br />
+A functional specification would need to be created that provides details how timed test might function, taking into consider as many scenarios as possible, such as accommodating a blind person, what happens if the network cuts out, if a page is reloaded, if time runs out, etc. etc..</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

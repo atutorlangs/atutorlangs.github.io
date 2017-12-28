@@ -1,0 +1,109 @@
+---
+ title: Logging issue
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Logging issue</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24556"></a>
+		<div class="forum-post-author">
+			<label class="title">eegcare</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-01-07 10:02:55</p>
+            </div>
+            <div class="postheader"><h3>Logging issue</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I migrated Atutor from 1.6 to 2.1<br />
+Also, move my application from a Windows Server to a Linux server.<br />
+But the version in the linux server doesnt login.<br />
+I always get this message:<br />
+The following errors occurred:<br />
+Invalid login/password combination.<br />
+<br />
+I even modified the password through the database copied from my windows installation, but.. doesnt work.<br />
+<br />
+I usually use Chrome, but also tried with IE and have the same problem.<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+System	Linux serv01.siteground253.com 2.6.32.59-sg3 #9 SMP Wed Sep 26 03:29:25 CDT 2012 x86_64<br />
+<br />
+  ATutor version - 2.1.1 <br />
+<br />
+  Patch #s applied - no patches<br />
+  ATutor theme name - default_classic<br />
+  PHP version - 	5.3.28<br />
+  MySQL version - 5.5.32.31.0<br />
+  Webserver & version - Apache<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - Chrome & IE<br />
+<br />
+Please, help me with this issue, because I need to change my server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24557"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-01-07 10:11:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Logging issue</h3></div>
+				
+			<div class="body">
+				<p>There was a password encryption step added in ATutor 1.6.1, which converts all text passwords to a 40 character SHA1 encrypted string. Check the passwords in the DB to be sure they have been converted. <br />
+<br />
+You can manually reset passwords in the db by saving them in SHA1 format.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24698"></a>
+		<div class="forum-post-author">
+			<label class="title">LarryPage</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-06-05 12:00:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Logging issue</h3></div>
+				
+			<div class="body">
+				<p>I am able to log into the program from the machine I have installed it on, but can't log in from any other machine through the web.<br />
+Am I missing a setting in the setup, and what type of protocol should I us on the firewall to allow the encryption through to the database other than http?<br />
+ <br />
+  Operating system ATutor is installed on -windows server 2008r2<br />
+  ATutor version -2.1.1<br />
+  Patch #s applied -7<br />
+  ATutor theme name -default<br />
+  PHP version -5.5.11<br />
+  MySQL version -5.1<br />
+  Webserver & version -IIS 7<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -Both IE11 and Chrome<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

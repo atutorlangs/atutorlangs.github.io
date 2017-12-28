@@ -1,0 +1,84 @@
+---
+ title: Remove Register Tab from Login
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Remove Register Tab from Login</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="8627"></a>
+		<div class="forum-post-author">
+			<label class="title">Meldog</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-13 20:55:08</p>
+            </div>
+            <div class="postheader"><h3>Remove Register Tab from Login</h3></div>
+				
+			<div class="body">
+				<p>I am making it so the only way people can register for my site is by a form I have made and then I will create them as a user myself.  I have removed all of the register options but I can not seem  to figure out how to remove the register tab from the login screen.  What file do I have to alter and where to have this button removed.  Here is a link to my site:  <br />
+<br />
+http://www.thejedireligion.org/university/atutor/ATutor/login.php<br />
+<br />
+You will see the three tabs in the upper left hand corner and I would like to remove the register tab.  I am using ATutor 1.5.3.1 with the theme GINAqua. <br />
+<br />
+Thank you in advance for any and all help and advice!!<br />
+<br />
+Adam</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8633"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-14 08:32:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove Register Tab from Login</h3></div>
+				
+			<div class="body">
+				<p>include/lib/menu_pages.php<br />
+<br />
+about line 24, remove the reference to registration.php<br />
+[php]<br />
+<br />
+<br />
+$_pages[AT_NAV_PUBLIC] = array_merge(array('login.php', 'registration.php', 'browse.php'), (array) $_pages[AT_NAV_PUBLIC]);<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8641"></a>
+		<div class="forum-post-author">
+			<label class="title">Meldog</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-14 11:13:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove Register Tab from Login</h3></div>
+				
+			<div class="body">
+				<p>IGreat, thank you so much!!<br />
+<br />
+Adam</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

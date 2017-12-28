@@ -1,0 +1,297 @@
+---
+ title: Cannot Login
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cannot Login</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="12900"></a>
+		<div class="forum-post-author">
+			<label class="title">Samot</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 05:46:42</p>
+            </div>
+            <div class="postheader"><h3>Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>Hi, I'm am using the latest version off the website and clean installing onto a clean host.<br />
+The install works perfectly but when I go to login afterwards no user/pass combinations work. I can register for a new account but logging in with that new account doesn't work.<br />
+<br />
+Here is link<br />
+http://blinghunter.com/lms/ATutor/login.php<br />
+and link to phpinfo()<br />
+http://blinghunter.com/lms/ATutor/test.php<br />
+<br />
+Thanks in advanced</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12901"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 07:43:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>A similar probem is written in the following tread:<br />
+http://www.atutor.ca/view/7/12888/1.html<br />
+<br />
+Did you try to use the "Forgot your password?" tool?<br />
+<br />
+Else try to upload the themes new by ftp ore reinstall the whole thing new</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12903"></a>
+		<div class="forum-post-author">
+			<label class="title">ErisDS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 15:55:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>I have this evening, downloaded and installed ATutor "Latest Stable Version<br />
+ Download ATutor ATutor 1.6 Download! (2.7 MB TGZ)". <br />
+<br />
+After a little while setting it up and changing the theme to default1.5 I logged out of my admin account to login as a standard user.<br />
+<br />
+I couldn't login with either account anymore.<br />
+<br />
+I've tried using the lost password tool for both accounts. It didn't work. I tried using the redux fix, didn't work. Changed the theme back to the original via the DB. Now I can log in as standard user although my password is stored as plain text in the database, but I cannot log in as admin and to make matters worse, the lost password tool says no user with my email address exists.<br />
+<br />
+I tried changing my pass in the data base to plain text, or sha1. I tried changing my email address. No luck.<br />
+<br />
+I don't know what's going on with this system but it obviously has some fundamental flaws if the encryption is supposed to be written into the theme and keeps getting missed.<br />
+<br />
+Whatever the problem is please don't tell me to reinstall.<br />
+<br />
+I'm running PHP 4.4.8 and MySQL version: 4.1.22 with phpMyAdmin - 2.11.4<br />
+    <br />
+- Eris</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12904"></a>
+		<div class="forum-post-author">
+			<label class="title">ErisDS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 15:58:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>Changing the theme back again allowed me to login as admin.<br />
+<br />
+But my passwords are still stored as plain text in the database.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12905"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 17:34:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>It is a problem with encrytion, and a bug in the theme. You should replace the two default themes with fresh copies downloaded from atutor.ca<br />
+<br />
+http://www.atutor.ca/atutor/themes/index.php<br />
+<br />
+You'll need to change he password back to sha1 after replacing the themes.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12915"></a>
+		<div class="forum-post-author">
+			<label class="title">ErisDS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-21 05:56:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>I have downloaded default and default15, deleted the originals completed and uploaded the new ones to my server.<br />
+<br />
+With default I can login as admin, but not with my user account (even if I create a new one).<br />
+<br />
+With default15 I can't login as either admin or a user.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12916"></a>
+		<div class="forum-post-author">
+			<label class="title">ErisDS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-21 06:05:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>Why can't i post?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12917"></a>
+		<div class="forum-post-author">
+			<label class="title">ErisDS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-21 06:07:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>Strange... I posted twice and lost it ^ that was a test.<br />
+<br />
+Right I need to explain what is going on better:<br />
+<br />
+1. Created a new user through admin panel<br />
+ > password appears as plain text in DB<br />
+ > can't login<br />
+ > change to SHA1<br />
+ > can't login still<br />
+<br />
+2. Registered new user<br />
+ > password appears as plain text in DB<br />
+ > can login!<br />
+<br />
+ > Changed 1's password back to plain text<br />
+ > Can login!!!<br />
+<br />
+What on earth is going on???<br />
+<br />
+All using the new version of default theme!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12937"></a>
+		<div class="forum-post-author">
+			<label class="title">Samot</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-24 02:06:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>After a clean fresh install I have no changed anything(though i tryed uploading new themes didn't work before).  In installation setup i make username and passwords<br />
+u:admin<br />
+p:admin <br />
+and for personal<br />
+u:student<br />
+p:student<br />
+http://blinghunter.com/lcms/ATutor/login.php<br />
+still cannot login even if make new user through form. please help</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12938"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-24 08:42:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>I did not have any trouble logging in.<br />
+<br />
+Did you replace teh default and deault15 themes, described above?<br />
+<br />
+Did you alter the admin password in the database?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+After a clean fresh install I have no changed anything(though i tryed uploading new themes didn't work before).  In installation setup i make username and passwords<br />
+u:admin<br />
+p:admin <br />
+and for person...<br />
+[op]forums/view.php?fid=7;pid=12900;page=1#12937[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14480"></a>
+		<div class="forum-post-author">
+			<label class="title">toni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-11 11:59:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot Login</h3></div>
+				
+			<div class="body">
+				<p>I have the same problem, but better will write in this other topic (for the people with the same problem):<br />
+<br />
+http://www.atutor.ca/view/7/13789/1.html</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

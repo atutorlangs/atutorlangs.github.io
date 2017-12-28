@@ -1,0 +1,113 @@
+---
+ title: Installation errors
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installation errors</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8626"></a>
+		<div class="forum-post-author">
+			<label class="title">joa1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-13 11:58:04</p>
+            </div>
+            <div class="postheader"><h3>Installation errors</h3></div>
+				
+			<div class="body">
+				<p>Greetings,<br />
+<br />
+Installation went OK, login as admin went OK, but when i click the Browse Courses tab (without loggin in), I am getting this at the head of the page (if logged in as admin, then this error does not show and i click same tab):<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/www/aTutor/include/vitals.inc.php on line 416<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/www/aTutor/include/vitals.inc.php on line 416<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/www/mammolina/0_php-bin/aTutor/include/vitals.inc.php:416) in /home/www/aTutor/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/www/mammolina/0_php-bin/aTutor/include/vitals.inc.php:416) in /home/www/aTutor/include/classes/Language/Language.class.php on line 123<br />
+<br />
+if i login as admin, and go to USERS tab, i get this:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/www/aTutor/admin/users.php on line 248<br />
+<br />
+If i try creating a user from admin, i get this:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/www/aTutor/admin/create_user.php on line 95<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/www/aTutor/admin/create_user.php:95) in /home/www/aTutor/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/www/aTutor/admin/create_user.php:95) in /home/www/aTutor/include/classes/Language/Language.class.php on line 123<br />
+<br />
+And in a box below, an exclamation mark, with:<br />
+<br />
+The following errors occurred:<br />
+Information could not be added to the database. <br />
+<br />
+any ideas what is going on and how to fix this?<br />
+<br />
+TIA for any help.<br />
+<br />
+Joao<br />
+<br />
+Things to describe: <br />
+  operating system - UNIX server<br />
+  version of ATutor - 1.5.3.1<br />
+  versions of php - 4.3.11<br />
+  version of mysq l - 5.0.22<br />
+  webserver & version - ?<br />
+  copies of error messages - the above<br />
+  changes to default settings - none other than hidding the /install folder, and CHMODing config.inc.php to read only (644)<br />
+  web browser being used - IE <br />
+  and anything else relevant - the personal account created during setup does not work, returns error that combination or user name and password are not valid</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8638"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-14 10:43:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation errors</h3></div>
+				
+			<div class="body">
+				<p>Please try installing ATutor 1.5.3.2.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8717"></a>
+		<div class="forum-post-author">
+			<label class="title">spidershop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-31 07:27:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation errors</h3></div>
+				
+			<div class="body">
+				<p>Wrong forum - sorry but is there any support available for Aform? I have posted a few messages but just wondered whether anyone can help with a small problem?<br />
+<br />
+Many thanks<br />
+Phil</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,158 @@
+---
+ title: Error when trying to run ATutor the first time
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Error when trying to run ATutor the first time</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="549"></a>
+		<div class="forum-post-author">
+			<label class="title">labko</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-26 22:36:52</p>
+            </div>
+            <div class="postheader"><h3>Error when trying to run ATutor the first time</h3></div>
+				
+			<div class="body">
+				<p>When trying to run ATutor for teh first time I get the error below.  I have checked and double checked teh config file and have commnted out the cache lines.<br />
+I have coopied the config file below as well...<br />
+<br />
+<br />
+&lt;img src="http://www.webschoolcentral.com/ATutor/images/error_x.gif" align="top" alt="<br />
+Fatal error: Call to undefined function: cache() in /htdocs/ATutor/include/vitals.inc.php on line 430<br />
+ <br />
+<br />
+<br />
+<br />
+&lt;?php<br />
+/****************************************************************/<br />
+/* ATutor														*/<br />
+/****************************************************************/<br />
+/* Copyright (c) 2002-2003 by Greg Gay & Joel Kronenberg        */<br />
+/* http://atutor.ca												*/<br />
+/*                                                              */<br />
+/* This program is free software. You can redistribute it and/or*/<br />
+/* modify it under the terms of the GNU General Public License  */<br />
+/* as published by the Free Software Foundation.				*/<br />
+/****************************************************************/<br />
+<br />
+/* the database user name										*/<br />
+define('DB_USER','dkopitsky');<br />
+<br />
+/* the database password										*/<br />
+define('DB_PASSWORD','5181951');	<br />
+<br />
+/* the database host											*/<br />
+define('DB_HOST','localhost');<br />
+<br />
+/* the database tcp/ip port										*/<br />
+define('DB_PORT','3306'); <br />
+<br />
+<br />
+/* the database name											*/<br />
+define('DB_NAME','atutor');<br />
+<br />
+/* your (ATutor system admin) password to let you add			*/<br />
+/* new instructors												*/<br />
+define('ADMIN_PASSWORD','letmein');<br />
+<br />
+/* your (admin) email address									*/<br />
+define('ADMIN_EMAIL','webmaster@webschoolcentral.com');<br />
+<br />
+/* do you want to receive emails when new instructor accounts	*/<br />
+/* require approval												*/<br />
+define('EMAIL_NOTIFY',TRUE);<br />
+<br />
+/* allow regular account users to request their account to be	*/<br />
+/* upgraded to instructor accounts.								*/<br />
+define('ALLOW_INSTRUCTOR_REQUESTS',TRUE);<br />
+<br />
+/* If ALLOW_INSTRUCTOR_REQUESTS is true then you can have the	*/<br />
+/* requests approved instantly, otherwise each request will		*/<br />
+/* have to be approved manually by the admin.					*/<br />
+define('AUTO_APPROVE_INSTRUCTORS', FALSE);<br />
+<br />
+<br />
+/****************************************************************/<br />
+/* File manager options:										*/<br />
+<br />
+/* Maximum allowable file size in Bytes to upload:				*/<br />
+/* Will not override the upload_max_filesize in php.ini			*/<br />
+$MaxFileSize   =  512000;/* 500 KB */<br />
+<br />
+/* Total maximum allowable course size in Bytes:				*/<br />
+$MaxCourseSize = 5242880;/* 5 MB   */<br />
+<br />
+/* Illegal file types, by extension. Include any extensions		*/<br />
+/* you do not want to allow for uploading. (Just the extention	*/<br />
+/* without the leading dot.)									*/<br />
+$IllegalExtentions	= array('exe', 'asp', 'php', 'bat', 'cgi', 'pl');<br />
+<br />
+/* Allow instructors to import the course content directory		*/<br />
+/* from the tar.gz exported file. This option to disable the importing */<br />
+/* of the content directory was added as a security	concern.	*/<br />
+/* As of version 1.0 the file manager is a much more secure way */<br />
+/* of uploading course content.									*/<br />
+define('ALLOW_IMPORT_CONTENT', TRUE);<br />
+ <br />
+<br />
+/* The name of your course website.								*/<br />
+/* Example: Acme University's Course Server						*/<br />
+/* Double quotes will have to be escaped with a slash: \".		*/<br />
+define('SITE_NAME',"Web School Central");<br />
+<br />
+/* Default language to use, if not browser-defined or			*/<br />
+/* user-defined. 'en' is always available. Any other language	*/<br />
+/* specified must already exist in the database.				*/<br />
+/* Default language: en											*/<br />
+define('DEFAULT_LANGUAGE','en');<br />
+<br />
+/* Where the cache directory should be created. On a Windows	*/<br />
+/* machine the path should look like C:\Windows\temp\. Path		*/<br />
+/* must end in a slash. The directory must already exist.		*/<br />
+/* Make empty or comment out to disable cacheing.				*/<br />
+/*define('CACHE_DIR', '/dev/shm/'); */<br />
+<br />
+/*define('CACHE_DIR', '/temp');*/<br />
+<br />
+<br />
+?><br />
+:(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="550"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-27 09:04:21</p>
+            </div>
+            <div class="postheader"><h3>What OS</h3></div>
+				
+			<div class="body">
+				<p>I little more info would be helpful<br />
+OS<br />
+php version<br />
+webserver<br />
+<br />
+<br />
+Have you tried setting up a cache directory.<br />
+<br />
+Check the end of the vitals file for a trailing space. If you find one, delete it then try again.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

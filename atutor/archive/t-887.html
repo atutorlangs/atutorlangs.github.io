@@ -1,0 +1,115 @@
+---
+ title: sessioncacheexpire
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>sessioncacheexpire</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="887"></a>
+		<div class="forum-post-author">
+			<label class="title">horsedog</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-28 21:20:11</p>
+            </div>
+            <div class="postheader"><h3>sessioncacheexpire</h3></div>
+				
+			<div class="body">
+				<p>Just after installation, the following error occurs:<br />
+<br />
+<br />
+Fatal error: Call to undefined function: session_cache_expire() in /home/sites/site3/web/atutor/include/session.inc.php on line 19<br />
+<br />
+My machine is a cobalt raq4, with:<br />
+Apache/1.3.20 Sun Cobalt (Unix) mod_gzip/1.3.26.1a mod_ssl/2.8.4 OpenSSL/0.9.6b PHP/4.1.2 mod_auth_pam_external/0.1 FrontPage/4.0.4.3 mod_perl/1.25<br />
+<br />
+any thoughts?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="888"></a>
+		<div class="forum-post-author">
+			<label class="title">horsedog</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-28 21:21:23</p>
+            </div>
+            <div class="postheader"><h3>php4.1.2?</h3></div>
+				
+			<div class="body">
+				<p>Could this be because of the php 4.1.2 vs the required 4.2????</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="889"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-29 09:23:10</p>
+            </div>
+            <div class="postheader"><h3>Update php</h3></div>
+				
+			<div class="body">
+				<p>Good possibility php needs to be upgraded. Though 4.2 is minimum recommended, 4.3 is better.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="921"></a>
+		<div class="forum-post-author">
+			<label class="title">Kronik</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-11 23:24:03</p>
+            </div>
+            <div class="postheader"><h3>session_cache_expire</h3></div>
+				
+			<div class="body">
+				<p>I have the same error in a php 4.12 instalation<br />
+which version can be runnned on php 4.12?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="924"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-12 10:04:41</p>
+            </div>
+            <div class="postheader"><h3>session_cache_expire</h3></div>
+				
+			<div class="body">
+				<p>you will not be able to run ATutor on php versions older than 1.2<br />
+<br />
+the function session_cache_expire() does not exist in php prior to 1.2!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,136 @@
+---
+ title: Content Dir is insecurity
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Content Dir is insecurity</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="19866"></a>
+		<div class="forum-post-author">
+			<label class="title">leobee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-30 04:11:53</p>
+            </div>
+            <div class="postheader"><h3>Content Dir is insecurity</h3></div>
+				
+			<div class="body">
+				<p>When I installed  atutor 1.6.4 on my host.it noticed the message.And I can't set the atutor content dir to anther dir.And that is insecurity,right?<br />
+If I need host to support the proteced content directory,what I need to do?<br />
+"<br />
+It has been detected that your webserver does not support the protected content directory feature. The content directory stores all of the courses' files.<br />
+<br />
+Due to that restriction your content directory must exist within your ATutor installation directory and cannot be moved. Its path is specified below. Please create it if it does not already exist.<br />
+<br />
+/home/vol2/byethost3.com/b3_5333799/study.abcroad.com/htdocs/content  "</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19867"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-30 10:47:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Dir is insecurity?</h3></div>
+				
+			<div class="body">
+				<p>There may be a symbolic link in the path to your content directory. Use getcwd() in a php file to get the actual path you should be using if you want to locate your content directory outside the web document root.<br />
+<br />
+http://php.net/manual/en/function.getcwd.php<br />
+<br />
+Are you using SSL?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19870"></a>
+		<div class="forum-post-author">
+			<label class="title">leobee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-01 08:24:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Dir is insecurity?</h3></div>
+				
+			<div class="body">
+				<p>Thanks.<br />
+NO,I am not using ssl.<br />
+which php file in atutor I should use the getcwd()?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19871"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-01 08:32:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Dir is insecurity?</h3></div>
+				
+			<div class="body">
+				<p>create a php file with getcwd()</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19874"></a>
+		<div class="forum-post-author">
+			<label class="title">leobee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-02 23:22:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Dir is insecurity?</h3></div>
+				
+			<div class="body">
+				<p>Can I set Content Dir in anoter host? That is,I install atutor in one host,and store the content in anther host.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19875"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-03 09:21:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Dir is insecurity?</h3></div>
+				
+			<div class="body">
+				<p>Though some external content can be linked into ATutor, the content directory must exist on the same server.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

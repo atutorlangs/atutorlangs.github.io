@@ -1,0 +1,180 @@
+---
+ title: File Storage Upload Problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>File Storage Upload Problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13412"></a>
+		<div class="forum-post-author">
+			<label class="title">wattscj</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-09 15:34:26</p>
+            </div>
+            <div class="postheader"><h3>File Storage Upload Problem</h3></div>
+				
+			<div class="body">
+				<p>[blue] I keep getting this error when I try to upload something using the File Storage system.[/blue]<br />
+[red]<br />
+Warning: move_uploaded_file(*/content/file_storage/2/22) [function.move-uploaded-file]: failed to open stream: No such file or directory in */file_storage/index.php on line 361<br />
+<br />
+Warning: move_uploaded_file() [function.move-uploaded-file]: Unable to move '/tmp/phpR94Vac' to '*/content/file_storage/2/22' in */file_storage/index.php on line 361<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at */file_storage/index.php:361) in */file_storage/index.php on line 383[/red]<br />
+<br />
+[blue]I replaced my root directory infromation with *. I don't think that information is necessary for this problem. <br />
+<br />
+  operating system - Vista<br />
+  version of ATutor - 1.6<br />
+  versions of php - 4.4.8<br />
+  version of mysq l - 4.0<br />
+  web browser being used - Firefox & IE<br />
+[/blue]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13417"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-10 10:25:40</p>
+            </div>
+            <div class="postheader"><h3>Re: File Storage Upload Problem</h3></div>
+				
+			<div class="body">
+				<p>Seems like the server doesn't have permission to upload file to php's tmp folder.<br />
+<br />
+In Vista, can you try setting the write permission for the /tmp/?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13418"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-10 10:32:56</p>
+            </div>
+            <div class="postheader"><h3>Re: File Storage Upload Problem</h3></div>
+				
+			<div class="body">
+				<p>If the problem persists, can you try uploading files via the File Manager, or export Contents.  If none of those works, it's something wrong with the /tmp folder.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13428"></a>
+		<div class="forum-post-author">
+			<label class="title">wattscj</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-10 17:46:50</p>
+            </div>
+            <div class="postheader"><h3>Re: File Storage Upload Problem</h3></div>
+				
+			<div class="body">
+				<p>I don't have access to the /tmp/ folder. It's a shared server from a hosting site. is there a way to change the place where the temporary file is stored?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13446"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-11 11:28:19</p>
+            </div>
+            <div class="postheader"><h3>Re: File Storage Upload Problem</h3></div>
+				
+			<div class="body">
+				<p>So, what happened when you tried uploading the files via the file manager?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13481"></a>
+		<div class="forum-post-author">
+			<label class="title">wattscj</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-14 11:18:37</p>
+            </div>
+            <div class="postheader"><h3>Re: File Storage Upload Problem</h3></div>
+				
+			<div class="body">
+				<p>The file doesn't get uploaded but the link to it does get created in the database (Broken link) it tries to find a file that never got uploaded.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13482"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-14 11:23:45</p>
+            </div>
+            <div class="postheader"><h3>Re: File Storage Upload Problem</h3></div>
+				
+			<div class="body">
+				<p>You are not putting ATutor inside Vista, right?  You are installing ATutor on some other server but you are connecting to it via your machine (which is Vista)?<br />
+<br />
+If so, you will have to ask your host to allow permission for you to upload files.  Regarding to your previous question of changing the place where temporary file is stored, you can modify this through the php.ini file which is under Apache/bin/ on the server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13483"></a>
+		<div class="forum-post-author">
+			<label class="title">wattscj</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-14 11:27:25</p>
+            </div>
+            <div class="postheader"><h3>Re: File Storage Upload Problem</h3></div>
+				
+			<div class="body">
+				<p>Thanks I think I may be able to do that I do have access to the php.ini file on the server. and yes Sorry for the confusion over the machine thing. I know it is a linux based system not a windows based system but that is pretty much all I remember about it.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

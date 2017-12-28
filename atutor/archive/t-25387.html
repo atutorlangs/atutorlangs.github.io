@@ -1,0 +1,166 @@
+---
+ title: Error in going to forum from My Courses
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error in going to forum from My Courses</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25387"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-22 07:54:36</p>
+            </div>
+            <div class="postheader"><h3>Error in going to forum from My Courses</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+In my atutor system, in 'My Cources' page, there is a link in 'Current Activity' column that supposed to go to the course' forum. when you click on this link instead of directing to forum there is blank page with a message of "No input file specified." <br />
+Actually I think the error come from the mistake in generating the url because the url showing the message is "http://MY DOMAIN NAME/go.phpmods/_standard/forums/forum/index.php?fid=1&ib=1"<br />
+It seems it should'nt be like go.phpmods/_...<br />
+And If you change the url manually and remove "go.php" from it, it will work correctly.<br />
+But I could'nt find out where to fix the url.<br />
+Could you please tell me which file generate that url.<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25388"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-22 08:02:21</p>
+            </div>
+            <div class="postheader"><h3>Error in going to forum from 'My Courses'</h3></div>
+				
+			<div class="body">
+				<p>The version of my atutor system is 2.2.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25389"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-22 09:16:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in going to forum from 'My Courses'</h3></div>
+				
+			<div class="body">
+				<p>Yes, there is a problem there. Its been reported in the issue tracker. You can follow progress at.<br />
+<br />
+http://www.atutor.ca/view/7/25387/1.html<br />
+<br />
+We'll take a closer look when we have a moment.<br />
+<br />
+For now you can either disabled PrettyURL alltogether in the admin's System Preference, or enable both PrettyURL and mod_rewrite together in System Preferences. Using PrettyURL on its own is what's causing the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25391"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-23 03:04:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in going to forum from 'My Courses'</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+But, I checked my admin's system preferences. Both PretttURL and Apache mod_rewrite are disabled!<br />
+And the link you posted is the link of current thread. Did you mean I should check here for following this issue?<br />
+<br />
+Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25392"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-23 09:36:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in going to forum from 'My Courses'</h3></div>
+				
+			<div class="body">
+				<p>That link should have been:<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=5584<br />
+<br />
+Did you try enabling both PrettyURL and mod_rewrite?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25393"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-23 12:33:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in going to forum from 'My Courses'</h3></div>
+				
+			<div class="body">
+				<p>Issue has been resolved. <br />
+<br />
+You can apply patch 0013 using the Patcher in the ATutor admin area.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25394"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-24 02:01:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in going to forum from 'My Courses'</h3></div>
+				
+			<div class="body">
+				<p>Thank you, this patcher did fix the problem.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

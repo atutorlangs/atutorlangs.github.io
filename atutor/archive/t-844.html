@@ -1,0 +1,226 @@
+---
+ title: Wrong links and paths within the ATutor system
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Wrong links and paths within the ATutor system</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="844"></a>
+		<div class="forum-post-author">
+			<label class="title">sbuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-16 06:13:55</p>
+            </div>
+            <div class="postheader"><h3>Wrong links and paths within the ATutor system</h3></div>
+				
+			<div class="body">
+				<p>Hi there,<br />
+<br />
+I'm experiencing the following problem(s):<br />
+(note: I sent the configuration files to the atutor email adress provided in the help us to help you file<br />
+<br />
+I installed Atutor locally on my machine for a student elearning platform evaluation, using apache, mysql locallly. There was no problem with the installation process itself. Now, when I log into Atutor and the system loads the demo course I created, some URL (links) to pages within the system are not build in the right syntax (url parts contain " and \ ) and some links contain no index.php url part. <br />
+<br />
+examples:<br />
+http://localhost/atutor/help/?g=18 <br />
+(no index.php before the ?)<br />
+<br />
+http://localhost/"/atutor/index.php?enable=PREF_EDIT\"<br />
+(??? which leads to apache error message:<br />
+Forbidden: You don't have permission to access /"/atutor/index.php on this server.)<br />
+<br />
+http://localhost/"help/about_help.php/"<br />
+(same problem)<br />
+<br />
+http://localhost/atutor/?cid=2&g=7<br />
+(no index.php)<br />
+<br />
+I added the entry "index.php" in the httpd.conf file of apache in the rule: <br />
+<br />
+DirectoryIndex index.html index.html.var index.php<br />
+<br />
+just to test the system at all. before that there was no way to access nearly all of the systems pages because index.php was not part of the url (not with all links but with most of them). Adding this rule into the server conf. can't be the answer to that problem, can it?<br />
+<br />
+What can I do?<br />
+I am stuck! ;-)<br />
+<br />
+HELP!<br />
+<br />
+Our installation:<br />
+1. The version of ATutor you are referring to<br />
+<br />
+We are using Atutor 1.3 (downloaded in december 2003):<br />
+<br />
+2. The operating system ATutor is installed on (Windows, Unix etc., Mac ...), and its version<br />
+<br />
+Windows XP 5.1.2600 sp2<br />
+<br />
+3. The Web server you are using and its version (Apache, Netscape, IIS...).<br />
+<br />
+I tried: Apache 1.3.9 and Apache 2.0 and I attached the apache httpd.conf to this mail.<br />
+<br />
+4. The version of PHP and MySQL being used (php 4.2.0+ and MySql 3.23+ are required) .<br />
+<br />
+PHP version 4.3.4. and mysql 4.0.16. I attached the files to this mail.<br />
+<br />
+5. The Web browser you are using to view ATutor, it's version number, and any default settings you may have changed.<br />
+<br />
+Internet Explorer version: 6.0.2800.1106 xpsp2 030422-1633<br />
+<br />
+6. Do you have root access to your server, or are you a hosted user on someone else's server, etc?<br />
+<br />
+installed locally on localhost<br />
+<br />
+7. List the steps you took prior to experiencing the problem.<br />
+<br />
+- installed the application<br />
+- logged in in instructor mode<br />
+- problem came up instantly<br />
+<br />
+ACCESS INFORMATION<br />
+8. Provide access information to your ATutor installation with appropriate admin/instructor accounts. <br />
+<br />
+installed local<br />
+<br />
+9. Provide a URL to a phpinfo page so we can see how php has been installed on your system. <br />
+<br />
+attached to this mail.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="845"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-16 08:51:01</p>
+            </div>
+            <div class="postheader"><h3>DirectoryIndex must include index.php</h3></div>
+				
+			<div class="body">
+				<p>Yes. Index.php must be defined for DirectoryIndex. This is a standard  option for configuring php with apache.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="847"></a>
+		<div class="forum-post-author">
+			<label class="title">sbuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-16 09:13:50</p>
+            </div>
+            <div class="postheader"><h3>And... what is the matter with the other URL Parts?</h3></div>
+				
+			<div class="body">
+				<p>Thank you Greg, that helps for this problem. But I assume not everybody has big inluenco on that apache parameter cause some providers just dont let people customize the apache parameters... Thats the case with one of our providers for example...<br />
+<br />
+<br />
+But what can I do or what is the problem with the<br />
+other URL (linking) problems?<br />
+<br />
+like<br />
+<br />
+localhost/"/atutor/index.php?enable=PREF_EDIT\"<br />
+(??? which leads to apache error message:<br />
+Forbidden: You don't have permission to access /"/atutor/index.php on this server.)<br />
+<br />
+localhost/"help/about_help.php/"<br />
+(same problem)<br />
+<br />
+I am incredibly thankful for your help.<br />
+;-)<br />
+<br />
+Stefan</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="850"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-12-16 18:35:32</p>
+            </div>
+            <div class="postheader"><h3>Try a fresh install</h3></div>
+				
+			<div class="body">
+				<p>Try a fresh install to see if that fixes the problem.<br />
+...<br />
+and if it persists, send us a link so we can have a look (something other than localhost).<br />
+<br />
+and to a phpinfo page so we can see how your system is configured.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Thank you Greg, that helps for this problem. But I assume not everybody has big inluenco on that apache parameter cause some providers just dont let people customize the apache parameters... Thats the...<br />
+[op]forums/view.php?fid=7;pid=844;page=1#847[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5308"></a>
+		<div class="forum-post-author">
+			<label class="title">Georges</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-01 07:28:35</p>
+            </div>
+            <div class="postheader"><h3>403 FORBIDDEN</h3></div>
+				
+			<div class="body">
+				<p>HI AM SETTING UP ATUTOR BUT I AM GETTING THE FOLLOWING ERROR AS ON THE BROWSER Forbidden<br />
+<br />
+You don't have permission to access /ATutor on this server.<br />
+<br />
+Additionally, a 403 Forbidden error was encountered while trying to use an ErrorDocument to handle the request.<br />
+Apache/2.0.52 (Fedora) Server at localhost Port 80.<br />
+AM HAVING apache_1.3.31 ,  mysql-4.0.18<br />
+and ATUTOR_1_4_3..What is my problem</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5314"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-02 09:42:09</p>
+            </div>
+            <div class="postheader"><h3>DirectoryIndex?</h3></div>
+				
+			<div class="body">
+				<p>Have you checked DirectoryIndex as mentioned above?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

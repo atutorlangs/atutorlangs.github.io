@@ -1,0 +1,69 @@
+---
+ title: textarea limit to 64KB any workaround
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>textarea limit to 64KB any workaround</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="1400"></a>
+		<div class="forum-post-author">
+			<label class="title">qwerty73</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-22 12:32:49</p>
+            </div>
+            <div class="postheader"><h3>textarea limit to 64KB any workaround</h3></div>
+				
+			<div class="body">
+				<p>HI all,<br />
+I'm using ATutor on:<br />
+<br />
+- SERVER: IIS 6.0, Windows 2003, PHP 4.3.4, MySQL 4.0.18-nt<br />
+- CLIENT: Windows XP, IE 6.0<br />
+<br />
+I' have a problem with "textarea" limit.<br />
+<br />
+When I upload a file for inserting its content as new article, ATutor works fine and load the file in the "textarea" for edit it, but when I press "Save changes" button, the text is cutted approximately at 64KB.<br />
+<br />
+I tried many browsers, like IE 6.0, Mozilla 1.6, Firefox 0.8 and Opera 7.11, but the problem still occur.<br />
+<br />
+I read many newsgroups, in some threads I found that IE 5.0 or greater is without textarea limit, but I experienced that it is false.<br />
+<br />
+Hence, I'm unable to upload files grater than 64KB!!!<br />
+<br />
+Any solution or workaround?<br />
+<br />
+Thanks in advance, Andrea.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1401"></a>
+		<div class="forum-post-author">
+			<label class="title">qwerty73</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-22 13:00:30</p>
+            </div>
+            <div class="postheader"><h3>RE: textarea limit to 64KB, any workaround?</h3></div>
+				
+			<div class="body">
+				<p>I found the solution, it isn't a browser limit but an ATutor limit.<br />
+<br />
+To solve the problem is necessary to change in the table "{prefix}_content", the column type of "text" column, from TEXT to MEDIUMTEXT or LONGTEXT.<br />
+<br />
+Bye, Andrea.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,107 @@
+---
+ title: Menu Navigation Rename
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Menu Navigation Rename</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21399"></a>
+		<div class="forum-post-author">
+			<label class="title">adzzz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-08 20:25:42</p>
+            </div>
+            <div class="postheader"><h3>Menu Navigation Rename</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - FreeBSD 7.1<br />
+  ATutor version - latest<br />
+  Patch #s applied - All<br />
+  ATutor theme name - Custom<br />
+ <br />
+Hello,<br />
+<br />
+This seems like a really simple thing, but I cannot for the life of me rename the navigation menu.<br />
+<br />
+I created a module based on the hello world module. But I cannot change the navigation text from 'hello world' to 'my module'.<br />
+<br />
+Any thoughts?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21401"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-08 20:45:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Menu Navigation Rename</h3></div>
+				
+			<div class="body">
+				<p>You'll need to create language tokens (e.g. _AT('my_module') ), then translate them by inserting the language into the module.sql file.<br />
+<br />
+See the internationalisation section of the module developer doc.<br />
+<br />
+http://help.atutor.ca/developer/modules.html#localisation<br />
+<br />
+Once the module is installed, you can change the language through the admin's language manager.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21402"></a>
+		<div class="forum-post-author">
+			<label class="title">adzzz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-08 21:00:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Menu Navigation Rename</h3></div>
+				
+			<div class="body">
+				<p>I see under AT_language_text in the database that the module text is in there, but when i go into the language editor in the admin section, I don't see a way to edit it. Am I doing something wrong?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21404"></a>
+		<div class="forum-post-author">
+			<label class="title">adzzz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-08 21:19:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Menu Navigation Rename</h3></div>
+				
+			<div class="body">
+				<p>Scratch that! I did the _c_module query in phpmyadmin. I'm all good now!<br />
+<br />
+Thanks Greg.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

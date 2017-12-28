@@ -1,0 +1,126 @@
+---
+ title: New install with old content
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>New install with old content</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21654"></a>
+		<div class="forum-post-author">
+			<label class="title">starlingweb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-18 17:39:44</p>
+            </div>
+            <div class="postheader"><h3>New install with old content</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+  Operating system ATutor is installed on -<br />
+  ATutor version - 2.0.2<br />
+  Patch #s applied - none<br />
+  ATutor theme name - default<br />
+  PHP version - 5.2.9<br />
+  MySQL version - 5.0.67<br />
+  Webserver & version - <br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+ <br />
+The installation guide offers steps for a new install or an upgrade over an old install.   Our old install (v1.6.3) is in directory ATutor - it must remain active.  I've got the new install (v 2.0.2) in directory ATutor2.<br />
+<br />
+Is there an easy way, during (or after) the installation process, to get the course content from our old install into the new install?<br />
+<br />
+Is there a help file I haven't found?<br />
+<br />
+Regards,<br />
+Starlingweb</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21655"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-18 17:46:50</p>
+            </div>
+            <div class="postheader"><h3>Re: New install with old content?</h3></div>
+				
+			<div class="body">
+				<p>Backups are probably your best bet for copying courses to a new install. Generate and download them from the old install (Manage>Backups), then create a course in the new install and upload and restore them there using the same tool.<br />
+<br />
+Search for "backup" or "import" or "export" in the instructor handbook for more details.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21732"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-28 12:52:52</p>
+            </div>
+            <div class="postheader"><h3>Re: New install with old content?</h3></div>
+				
+			<div class="body">
+				<p>When I recently upgraded from 1.5.4 to 2.0.2. I wanted a clean install so this is what I did to point to my old data:<br />
+<br />
+1. Copy the live version (database, content directory, source code)<br />
+2. Change config.php.inc in the copy to point to the copied database and content directory<br />
+3. Upgrade the copy <br />
+4. Test the upgraded version to make sure the upgrade worked<br />
+5. Install a new version of ATutor in a separate directory<br />
+6. Change config.php.inc in the new install to point to the copied/upgraded database and content directory<br />
+7. Once again, test to make sure it all works<br />
+8. Switch directory names so the new/upgraded version is the live version<br />
+<br />
+I didn't take my live system down and didn't want to lose any logins created during the upgrade process so I exported the AT_members data where the creation_date >= (the date/time I had copied the database) and then imported it into the upgraded database. I knew I didn't have any instructors modifying courses during that time so I wasn't concerned about losing anything else. <br />
+<br />
+If you do a practice run ahead of time, this process can go fairly quickly.  I had to do source code customizations so it took me a couple of hours. Otherwise it would have probably taken less than a half hour.<br />
+<br />
+For me, this was easier than backing up and restoring each course  but that would depend on your specific setup and skill set.<br />
+<br />
+Sandie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22446"></a>
+		<div class="forum-post-author">
+			<label class="title">tbwallace</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-16 16:17:57</p>
+            </div>
+            <div class="postheader"><h3>Re: New install with old content?</h3></div>
+				
+			<div class="body">
+				<p>I hope that something similar will work for me.  I have a 1.64 that's been running since 2008 doing articulation testing pre-tests for High School students coming to try to test for credit at our college.  We now have a need for a box to allow self-registration for submissions for literary works to be judged for inclusions in a campus publication.  When I went to look at the box I find that the RAID controller is in cardiac arrest and probably needs to be replaced but the box is not worth the cost so I need to move everything to a new box BUT I can get to the directories and files but I cannot log into the Atutor to do a backup of anything.  I need to create a new set of directories on a new box and then install a new version of Atutor and somehow get the old data into the new version.  I am not concerned with logins, just content data.  Should your method work here????<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

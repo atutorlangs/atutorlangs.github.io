@@ -1,0 +1,102 @@
+---
+ title: Database Error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Database Error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25539"></a>
+		<div class="forum-post-author">
+			<label class="title">blynnsikes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-08-26 13:31:30</p>
+            </div>
+            <div class="postheader"><h3>Database Error</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  <br />
+<br />
+The messages are:<br />
+<br />
+1:<br />
+Warning: Invalid argument supplied for foreach() in /home2/blynnsik/public_html/ATutor/include/lib/output.inc.php on line 288<br />
+<br />
+2: Close<br />
+The following errors occurred:<br />
+<br />
+     ATutor was unable to access the database<br />
+<br />
+ATutor Version:<br />
+     2.2(unknown - 2015-08-26 11:47:49). Check Latest Version.<br />
+PHP Version:<br />
+     5.4.43<br />
+MySQL Version:<br />
+     5.5.42-37.1<br />
+OS:<br />
+     Linux 3.12.35.1418868451<br />
+<br />
+<br />
+have two messages coming up after installing version 2.2.  I have looked at the forum and I cannot fix the issue.  I cannot add classes and many of the functions do not work.  I also made sure the collation of the tables were as utf8_general_ci</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25540"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-08-26 14:57:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Database Error</h3></div>
+				
+			<div class="body">
+				<p>The first error is a result of the second, which indicates that ATutor was unable to connect to the database. <br />
+<br />
+This usually occurs when the login details for the database have been entered incorrectly. Double check those details in the include/config.inc.php file. Try accessing the database with those login details with some other method, like a mysql client such as phpMyAdmin, or from the command line if you have shell access to your server.<br />
+<br />
+Did you create the database manually, or did it get created by ATutor during the installation? It should be ATutor that creates the database, and it should automatically setup the collation for you.<br />
+<br />
+Also be sure your system has all the prerequisites:<br />
+http://www.atutor.ca/atutor/docs/requirements.php<br />
+http://help.atutor.ca/admin/requirements_recommendations.php<br />
+<br />
+Also review the FAQs, particularly question #3<br />
+http://atutor.ca/atutor/docs/faq.php#2</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25541"></a>
+		<div class="forum-post-author">
+			<label class="title">blynnsikes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-08-26 15:26:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Database Error</h3></div>
+				
+			<div class="body">
+				<p>Disregard...  I fixed this by manually changing the collation on the tables and database to utf8_general_ci.  Then, I reinstalled the software to the server.  Works now.  Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

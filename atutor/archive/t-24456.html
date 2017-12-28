@@ -1,0 +1,438 @@
+---
+ title: Change password does not work
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Change password does not work</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24456"></a>
+		<div class="forum-post-author">
+			<label class="title">phoenixkm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-16 12:03:28</p>
+            </div>
+            <div class="postheader"><h3>Change password does not work</h3></div>
+				
+			<div class="body">
+				<p>When going in the back-end and selecting a user and change his password, the next message appears after clicking on "submit":<br />
+The following errors occurred:<br />
+There was an error sending the email message.<br />
+<br />
+I have checked all relevant threads, however none solves the issue. This issue appears on almost all our installations.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 3.10.7-20130820-0900-de18969<br />
+  ATutor version - 2.1.1<br />
+  Patch #s applied - 03, 04<br />
+  ATutor theme name - ATutor<br />
+  PHP version - 5.3.27<br />
+  MySQL version - N/A<br />
+  Changes to default settings - NONE<br />
+  Web browser being used - Chrome Version 31.0.1650.57 m</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24457"></a>
+		<div class="forum-post-author">
+			<label class="title">phoenixkm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-16 12:26:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Change password does not work</h3></div>
+				
+			<div class="body">
+				<p>Some more info:<br />
+<br />
+I have set in config.inc:<br />
+define('MAIL_USE_SMTP', TRUE);<br />
+<br />
+SMTP settings at ISP are:<br />
+SMTP: mailout.one.com<br />
+Port: 25<br />
+Authentication / SSL: None<br />
+username: a domain email address<br />
+Password : domain email address password<br />
+<br />
+They stated to use SMTP mailer method in using mailer using scripts for PHP files. What should I adjust now as I am confused in this.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24458"></a>
+		<div class="forum-post-author">
+			<label class="title">phoenixkm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-16 13:40:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Change password does not work</h3></div>
+				
+			<div class="body">
+				<p>Settings in class.phpmailer.php are now:<br />
+    /////////////////////////////////////////////////<br />
+    // SMTP VARIABLES<br />
+    /////////////////////////////////////////////////<br />
+<br />
+    /**<br />
+     *  Sets the SMTP hosts.  All hosts must be separated by a<br />
+     *  semicolon.  You can also specify a different port<br />
+     *  for each host by using this format: [hostname:port]<br />
+     *  (e.g. "smtp1.example.com:25;smtp2.example.com").<br />
+     *  Hosts will be tried in order.<br />
+     *  @var string<br />
+     */<br />
+    var $Host        = "mailout.one.com";<br />
+<br />
+    /**<br />
+     *  Sets the default SMTP server port.<br />
+     *  @var int<br />
+     */<br />
+    var $Port        = 25;<br />
+<br />
+    /**<br />
+     *  Sets the SMTP HELO of the message (Default is $Hostname).<br />
+     *  @var string<br />
+     */<br />
+    var $Helo        = "";<br />
+<br />
+    /**<br />
+     *  Sets SMTP authentication. Utilizes the Username and Password variables.<br />
+     *  @var bool<br />
+     */<br />
+    var $SMTPAuth     = false;<br />
+<br />
+    /**<br />
+     *  Sets SMTP username.<br />
+     *  @var string<br />
+     */<br />
+    var $Username     = "A VALID EMAIL ADDRESS FILLED IN BY ME ON THE DOMAIN";<br />
+<br />
+    /**<br />
+     *  Sets SMTP password.<br />
+     *  @var string<br />
+     */<br />
+    var $Password     = "";<br />
+<br />
+    /**<br />
+     *  Sets the SMTP server timeout in seconds. This function will not <br />
+     *  work with the win32 version.<br />
+     *  @var int<br />
+     */<br />
+    var $Timeout      = 10;<br />
+<br />
+    /**<br />
+     *  Sets SMTP class debugging on or off.<br />
+     *  @var bool<br />
+     */<br />
+    var $SMTPDebug    = false;<br />
+<br />
+    /**<br />
+     * Prevents the SMTP connection from being closed after each mail <br />
+     * sending.  If this is set to true then to close the connection <br />
+     * requires an explicit call to SmtpClose(). <br />
+     * @var bool<br />
+     */<br />
+    var $SMTPKeepAlive = false;<br />
+<br />
+    /**#@+<br />
+     * @access private<br />
+     */<br />
+    var $smtp            = NULL;<br />
+    var $to              = array();<br />
+    var $cc              = array();<br />
+    var $bcc             = array();<br />
+    var $ReplyTo         = array();<br />
+    var $attachment      = array();<br />
+    var $CustomHeader    = array();<br />
+    var $message_type    = "";<br />
+    var $boundary        = array();<br />
+    var $language        = array();<br />
+    var $error_count     = 0;<br />
+    var $LE              = "\n";<br />
+    /**#@-*/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24459"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-16 13:50:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Change password does not work</h3></div>
+				
+			<div class="body">
+				<p>I do not have an answer for you unfortunately. Sendmail is expected on Linux systems. Normally during installation, a warning message appears if your system's mail is not configured.<br />
+<br />
+http://atutor.ca/atutor/docs/faq.php#1<br />
+<br />
+If you do figure it out, you may be able to help others by posting your results here.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24462"></a>
+		<div class="forum-post-author">
+			<label class="title">phoenixkm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-18 03:08:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Change password does not work</h3></div>
+				
+			<div class="body">
+				<p>Dear Greg,<br />
+<br />
+It took me quite some time, but with help of the ISP I found the solution to this problem, I hope it will work out for others that face the same issue:<br />
+<br />
+STEP 1:<br />
+There was a a missing varible set on the SMTP setting in the intranet/include/classes/phpmailer/class.smtp.php file. <br />
+<br />
+The $host is missing thus it cannot connect to the server SMTP_SERVER_AS_DEFINED_BY_ISP_IN_PHP.INI at all. YOu need to edit the line:<br />
+$this->smtp_conn = @fsockopen($host,<br />
+<br />
+and change it to $this->smtp_conn = @fsockopen('SMTP_SERVER_AS_DEFINED_BY_ISP_IN_PHP.INI',<br />
+<br />
+This should fix the issue in using SMTP method to send out emails from the Atutor website. <br />
+<br />
+STEP 2:<br />
+Enable the SMTP method in the intranet/include/config.inc.php<br />
+define('MAIL_USE_SMTP', TRUE);<br />
+<br />
+STEP 3:<br />
+Settings in intranet/include/classes/phpmailer/class.phpmailer.php to be adjusted to reflect SMTP<br />
+<br />
+   /////////////////////////////////////////////////<br />
+    // PUBLIC VARIABLES<br />
+    /////////////////////////////////////////////////<br />
+<br />
+    /**<br />
+     * Email priority (1 = High, 3 = Normal, 5 = low).<br />
+     * @var int<br />
+     */<br />
+    var $Priority          = 3;<br />
+<br />
+    /**<br />
+     * Sets the CharSet of the message.<br />
+     * @var string<br />
+     */<br />
+    var $CharSet           = "iso-8859-1";<br />
+<br />
+    /**<br />
+     * Sets the Content-type of the message.<br />
+     * @var string<br />
+     */<br />
+    var $ContentType        = "text/plain";<br />
+<br />
+    /**<br />
+     * Sets the Encoding of the message. Options for this are "8bit",<br />
+     * "7bit", "binary", "base64", and "quoted-printable".<br />
+     * @var string<br />
+     */<br />
+    var $Encoding          = "8bit";<br />
+<br />
+    /**<br />
+     * Holds the most recent mailer error message.<br />
+     * @var string<br />
+     */<br />
+    var $ErrorInfo         = "";<br />
+<br />
+    /**<br />
+     * Sets the From email address for the message.<br />
+     * @var string<br />
+     */<br />
+    var $From               = "EMAIL_YOU_HAVE_ON_THAT_ISP_SERVER";<br />
+<br />
+    /**<br />
+     * Sets the From name of the message.<br />
+     * @var string<br />
+     */<br />
+    var $FromName           = "EMAIL_YOU_HAVE_ON_THAT_ISP_SERVER";<br />
+<br />
+    /**<br />
+     * Sets the Sender email (Return-Path) of the message.  If not empty,<br />
+     * will be sent via -f to sendmail or as 'MAIL FROM' in smtp mode.<br />
+     * @var string<br />
+     */<br />
+    var $Sender            = "EMAIL_YOU_HAVE_ON_THAT_ISP_SERVER";<br />
+<br />
+    /**<br />
+     * Sets the Subject of the message.<br />
+     * @var string<br />
+     */<br />
+    var $Subject           = "";<br />
+<br />
+    /**<br />
+     * Sets the Body of the message.  This can be either an HTML or text body.<br />
+     * If HTML then run IsHTML(true).<br />
+     * @var string<br />
+     */<br />
+    var $Body               = "";<br />
+<br />
+    /**<br />
+     * Sets the text-only body of the message.  This automatically sets the<br />
+     * email to multipart/alternative.  This body can be read by mail<br />
+     * clients that do not have HTML email capability such as mutt. Clients<br />
+     * that can read HTML will view the normal Body.<br />
+     * @var string<br />
+     */<br />
+    var $AltBody           = "";<br />
+<br />
+    /**<br />
+     * Sets word wrapping on the body of the message to a given number of <br />
+     * characters.<br />
+     * @var int<br />
+     */<br />
+    var $WordWrap          = 0;<br />
+<br />
+    /**<br />
+     * Method to send mail: ("mail", "sendmail", or "smtp").<br />
+     * @var string<br />
+     */<br />
+    var $Mailer            = "mail";<br />
+<br />
+    /**<br />
+     * Sets the path of the sendmail program.<br />
+     * @var string<br />
+     */<br />
+    var $Sendmail          = "/usr/sbin/b1sendmail -t -i";<br />
+    <br />
+    /**<br />
+     * Path to PHPMailer plugins.  This is now only useful if the SMTP class <br />
+     * is in a different directory than the PHP include path.  <br />
+     * @var string<br />
+     */<br />
+    var $PluginDir         = "";<br />
+<br />
+    /**<br />
+     *  Holds PHPMailer version.<br />
+     *  @var string<br />
+     */<br />
+    var $Version           = "1.73";<br />
+<br />
+    /**<br />
+     * Sets the email address that a reading confirmation will be sent.<br />
+     * @var string<br />
+     */<br />
+    var $ConfirmReadingTo  = "";<br />
+<br />
+    /**<br />
+     *  Sets the hostname to use in Message-Id and Received headers<br />
+     *  and as default HELO string. If empty, the value returned<br />
+     *  by SERVER_NAME is used or 'localhost.localdomain'.<br />
+     *  @var string<br />
+     */<br />
+    var $Hostname          = '';<br />
+<br />
+    /////////////////////////////////////////////////<br />
+    // SMTP VARIABLES<br />
+    /////////////////////////////////////////////////<br />
+<br />
+    /**<br />
+     *  Sets the SMTP hosts.  All hosts must be separated by a<br />
+     *  semicolon.  You can also specify a different port<br />
+     *  for each host by using this format: [hostname:port]<br />
+     *  (e.g. "smtp1.example.com:25;smtp2.example.com").<br />
+     *  Hosts will be tried in order.<br />
+     *  @var string<br />
+     */<br />
+    var $Host        = "SMTP_SERVER_AS_DEFINED_BY_ISP_IN_PHP.INI";<br />
+<br />
+    /**<br />
+     *  Sets the default SMTP server port.<br />
+     *  @var int<br />
+     */<br />
+    var $Port        = 25;<br />
+<br />
+    /**<br />
+     *  Sets the SMTP HELO of the message (Default is $Hostname).<br />
+     *  @var string<br />
+     */<br />
+    var $Helo        = "";<br />
+<br />
+    /**<br />
+     *  Sets SMTP authentication. Utilizes the Username and Password variables.<br />
+     *  @var bool<br />
+     */<br />
+    //var $SMTPAuth     = false;<br />
+<br />
+    /**<br />
+     *  Sets SMTP username.<br />
+     *  @var string<br />
+     */<br />
+    var $Username     = "EMAIL_YOU_HAVE_ON_THAT_ISP_SERVER";<br />
+<br />
+    /**<br />
+     *  Sets SMTP password.<br />
+     *  @var string<br />
+     */<br />
+    var $Password     = "PASSWORD_EMAIL_YOU_HAVE_ON_THAT_ISP_SERVER";<br />
+<br />
+    /**<br />
+     *  Sets the SMTP server timeout in seconds. This function will not <br />
+     *  work with the win32 version.<br />
+     *  @var int<br />
+     */<br />
+    var $Timeout      = 10;<br />
+<br />
+    /**<br />
+     *  Sets SMTP class debugging on or off.<br />
+     *  @var bool<br />
+     */<br />
+    var $SMTPDebug    = true;<br />
+<br />
+    /**<br />
+     * Prevents the SMTP connection from being closed after each mail <br />
+     * sending.  If this is set to true then to close the connection <br />
+     * requires an explicit call to SmtpClose(). <br />
+     * @var bool<br />
+     */<br />
+    var $SMTPKeepAlive = false;<br />
+<br />
+    /**#@+<br />
+     * @access private<br />
+     */<br />
+    var $smtp            = NULL;<br />
+    var $to              = array();<br />
+    var $cc              = array();<br />
+    var $bcc             = array();<br />
+    var $ReplyTo         = array();<br />
+    var $attachment      = array();<br />
+    var $CustomHeader    = array();<br />
+    var $message_type    = "";<br />
+    var $boundary        = array();<br />
+    var $language        = array();<br />
+    var $error_count     = 0;<br />
+    var $LE              = "\n";<br />
+    /**#@-*/</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

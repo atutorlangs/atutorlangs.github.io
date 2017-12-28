@@ -1,0 +1,118 @@
+---
+ title: Header stuff
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Header stuff</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9760"></a>
+		<div class="forum-post-author">
+			<label class="title">mp30</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-25 05:36:00</p>
+            </div>
+            <div class="postheader"><h3>Header stuff</h3></div>
+				
+			<div class="body">
+				<p>I can remove the tabs that show [b] Browse Courses[/b]  but the header still shows ... <br />
+<br />
+[b]<br />
+Sia Huat Learning System  Login   Browse Courses | Login | Search | Help  [/b] <br />
+<br />
+So how can I remove it?<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9761"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-25 10:30:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Header stuff</h3></div>
+				
+			<div class="body">
+				<p>look in include/lib/menu_pages.php<br />
+<br />
+[php]<br />
+<br />
+$_pages[AT_NAV_PUBLIC] = array_merge(array('login.php', 'registration.php', 'browse.php'), (array) $_pages[AT_NAV_PUBLIC]);<br />
+<br />
+[/php] <br />
+<br />
+and also:<br />
+<br />
+[php]<br />
+<br />
+$_pages['browse.php']['title_var'] = 'browse_courses';<br />
+$_pages['browse.php']['parent']    = AT_NAV_PUBLIC;<br />
+$_pages['browse.php']['children']  = $_pages['browse.php']['children'];<br />
+<br />
+[/php]<br />
+<br />
+remove the references to browse.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9766"></a>
+		<div class="forum-post-author">
+			<label class="title">mp30</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-25 21:51:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Header stuff</h3></div>
+				
+			<div class="body">
+				<p>Even when I reference out using // those that you have mentioned. It still appears?<br />
+<br />
+Why does that happen?<br />
+<br />
+I tried removing those that allow students to create courses.<br />
+<br />
+It removes the Create Course but [u] [][/u].<br />
+Where am I going wrong?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9770"></a>
+		<div class="forum-post-author">
+			<label class="title">mp30</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-26 05:18:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Header stuff</h3></div>
+				
+			<div class="body">
+				<p>Unless I switch themes to atutor class, the browse courses doesnt not show.<br />
+<br />
+Also, under the tests and survey, when you review the test, the Availability text does not appear, it appears as " [ availability ]. I tried reloading the language text table and that also resulted in sql fetch and output.inc.php errors.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,102 @@
+---
+ title: LCMS selection various questions
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>LCMS selection various questions</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="9738"></a>
+		<div class="forum-post-author">
+			<label class="title">basanvlijmen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-22 08:00:50</p>
+            </div>
+            <div class="postheader"><h3>LCMS selection various questions</h3></div>
+				
+			<div class="body">
+				<p>Dear collegues,<br />
+<br />
+I read through most of the documentation and carefully checked the online fora. I answered many questions I had myself in this way, the questions that remain form a somewhat inconsistent bunch as a result. Hopefully you can help me here.<br />
+ <br />
+1. Scalability and Performance.<br />
+I read some notes on this in the fora, there I understand scaling-up means faster hardware. What would it take to support 25.000 students and 10.000 staff members (We're Unix based)? What's the experience here? What tooling is available to ATutor system administrators to handle that number of users? <br />
+<br />
+2. What API's are available? (Apart from SCORM) This is important, for instance, for integration of ATutor with the local repository. <br />
+<br />
+3. Important for swift cooperation between multiple parties is delegated user management. Is this supported? E.g., are regular instructors allowed to give access to external people? <br />
+<br />
+4. It appears not to be possible for instructors and course attendants to upload a set of files. It's one by one. Correct?<br />
+<br />
+5. Is there a Review/feedback-mechanism of content available?<br />
+<br />
+6. Is gathering, managing and sharing of Bookmarks available?<br />
+<br />
+Kind regards and thank you for your help,<br />
+<br />
+Bas van Vlijmen<br />
+University of Amsterdam</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9744"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-23 08:37:12</p>
+            </div>
+            <div class="postheader"><h3>Re: LCMS selection: various questions</h3></div>
+				
+			<div class="body">
+				<p>1. Scalability and Performance.<br />
+I read some notes on this in the fora, there I understand scaling-up means faster hardware. What would it take to support 25.000 students and 10.000 staff members (We're Unix based)? What's the experience here? What tooling is available to ATutor system administrators to handle that number of users? <br />
+<br />
+[green]ATutor is easily the most resource efficient LMS available. It will have<br />
+no trouble handling 35,000 users on moderate hardware. There are modules<br />
+available for LDAP, and custom modules would be fairly easy to create to<br />
+link into other directory authentication systems if necessary. It is<br />
+also possible to import a confirmation list that only allows eligible<br />
+students to register. [/green] <br />
+<br />
+2. What API's are available? (Apart from SCORM) This is important, for instance, for integration of ATutor with the local repository. <br />
+<br />
+[green]Modules API. ATutor is easily extended with modules. See the module<br />
+development documentation.<br />
+http://www.atutor.ca/development/documentation/modules.html<br />
+http://www.atutor.ca/development/documentation/guidelines.html [/green] <br />
+<br />
+3. Important for swift cooperation between multiple parties is delegated user management. Is this supported? E.g., are regular instructors allowed to give access to external people? <br />
+<br />
+[green]Multple administrators are possible, with the ability to assign user<br />
+management privileges one or several. Instructors can also add users to<br />
+their own courses. [/green] <br />
+<br />
+4. It appears not to be possible for instructors and course attendants to upload a set of files. It's one by one. Correct?<br />
+<br />
+[green]Correct, though one could zip together a collection of files and unzip<br />
+them on the server [/green] <br />
+<br />
+5. Is there a Review/feedback-mechanism of content available?<br />
+<br />
+[green] Not specifically associated with content. But, the forums would work for<br />
+this purpose. The File Storage Utility does provide commenting on draft<br />
+documents[/green] <br />
+6. Is gathering, managing and sharing of Bookmarks available?<br />
+<br />
+[green]Yes. The Links tool [/green]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,151 @@
+---
+ title: Multiple choice questions do not put answers in database
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Multiple choice questions do not put answers in database</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25109"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-27 17:47:36</p>
+            </div>
+            <div class="postheader"><h3>Multiple choice questions do not put answers in database</h3></div>
+				
+			<div class="body">
+				<p>Hello<br />
+<br />
+I created several questions of both true:false and multiple choice.<br />
+<br />
+I added the questions to a course.<br />
+<br />
+I then took the course and the true:false questions were okay but the multiple choice questions said all answers were wrong in feedback.<br />
+<br />
+I checked the database table tests_questions and the true:false questions had answers as either 1 or 2 under answer 0. <br />
+<br />
+However the multiple choice questions had no answers in any of the columns.<br />
+<br />
+I then went back to edit the multiple question and again selected the correct answer and saved the question.<br />
+<br />
+But upon returning to the database discovered that there were still no answers for the multiple choice questions.<br />
+<br />
+Should question 0 be set to the number of the correct answer?<br />
+<br />
+Also why when I insert a new row into the database does it think there are two rows?<br />
+<br />
+Thank You in advance for your reply.<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25130"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-28 09:04:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Multiple choice questions do not put answers in database</h3></div>
+				
+			<div class="body">
+				<p>Did changing browsers resolve this issue?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25137"></a>
+		<div class="forum-post-author">
+			<label class="title">jimbarnes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-28 21:55:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Multiple choice questions do not put answers in database</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+<br />
+What I did was manually enter a 1 in the correct answer position for the questions that did not have them (only two).<br />
+<br />
+Now the system is content to allow me to add more questions of all forms and there data is added correctly to the database.<br />
+<br />
+I am not sure what happened but it seems to have fixed it self.<br />
+<br />
+This also fixed the see more than three questions issue.<br />
+<br />
+How do I make a shrug emoticon LOL<br />
+<br />
+regards<br />
+<br />
+Jim Barnes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25142"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-29 12:28:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Multiple choice questions do not put answers in database</h3></div>
+				
+			<div class="body">
+				<p>These things happen. <br />
+<br />
+Typically restart your browser, or try another if something does not seem to be working right.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25621"></a>
+		<div class="forum-post-author">
+			<label class="title">cahit</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-11-03 16:42:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Multiple choice questions do not put answers in database</h3></div>
+				
+			<div class="body">
+				<p>Hello there,<br />
+ATutor question bank has a problem.<br />
+Multiple choice questions correct answer prepared questions in type not checked. The correct answer might not be stored in the database.<br />
+After the summer we press the question mark button, keep the right answer.<br />
+Opened the Edit button, the correct answer does not come as a marked radio button.<br />
+You can look at the pictures in the message attachment. When the exam is selected, showing all the questions marked wrong.<br />
+Thank you for your help and support.<br />
+LMS Version: 2.2<br />
+PHP Version: 4.5.41<br />
+MySQL Version: 5.5.45-CLL</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,163 @@
+---
+ title: Warning mysqlfetchassoc
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Warning mysqlfetchassoc</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5541"></a>
+		<div class="forum-post-author">
+			<label class="title">rforsberg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-21 10:30:46</p>
+            </div>
+            <div class="postheader"><h3>Warning mysqlfetchassoc</h3></div>
+				
+			<div class="body">
+				<p>When I try to add a new content page - get the following warnings: Any advice would be nice. thanks.<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /export/home/WebPages/Development/ATutor/include/classes/ContentManager.class.php on line 147<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /export/home/WebPages/Development/ATutor/include/classes/ContentManager.class.php:147) in /export/home/WebPages/Development/ATutor/include/lib/editor_tab_functions.inc.php on line 161</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5566"></a>
+		<div class="forum-post-author">
+			<label class="title">rforsberg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-22 12:33:24</p>
+            </div>
+            <div class="postheader"><h3>More info</h3></div>
+				
+			<div class="body">
+				<p>To be more specific about the problem:<br />
+<br />
+When I add a content page by keying in a title and some content into the html applet - I submit and I get the above listed warnings which force me to use my back buttom to return to the ATutor interface.<br />
+<br />
+I should note - that the content page does get created as it shows in the course outline.  I can edit and submit changes to these pages with out any warnings.  Just the initial creation throws warnings.<br />
+<br />
+This warning appears to be an avoidable programming issue. <br />
+<br />
+Any thoughts?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5568"></a>
+		<div class="forum-post-author">
+			<label class="title">rforsberg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-22 14:55:37</p>
+            </div>
+            <div class="postheader"><h3>the offending code</h3></div>
+				
+			<div class="body">
+				<p>$sql = "SELECT LAST_INSERT_ID() AS insert_id";<br />
+$result = mysql_query($sql, $this->db);<br />
+$row = mysql_fetch_assoc($result);<br />
+$cid = $row['insert_id'];</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5569"></a>
+		<div class="forum-post-author">
+			<label class="title">rforsberg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-22 15:06:18</p>
+            </div>
+            <div class="postheader"><h3>possible solution</h3></div>
+				
+			<div class="body">
+				<p>$sql = 'SELECT max(content_id) as insert_id from at_content'; <br />
+<br />
+$result = mysql_query($sql, $this->db)<br />
+<br />
+if($result && mysql_num_rows($result)==1){<br />
+$row = mysql_fetch_assoc($result);<br />
+$cid = $row['insert_id'];<br />
+}<br />
+else<br />
+{//some code }</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5592"></a>
+		<div class="forum-post-author">
+			<label class="title">rforsberg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-23 12:11:35</p>
+            </div>
+            <div class="postheader"><h3>platform specs</h3></div>
+				
+			<div class="body">
+				<p>OS - Solaris 2.8<br />
+PHP 4.3.8<br />
+Apache 2.0.49<br />
+MySQL 3.23.49<br />
+<br />
+Any advice would be muchly appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5596"></a>
+		<div class="forum-post-author">
+			<label class="title">rforsberg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-23 16:28:19</p>
+            </div>
+            <div class="postheader"><h3>solution</h3></div>
+				
+			<div class="body">
+				<p>I substituted code at line 147 of ContentMangerClass...<br />
+<br />
+$sql = "SELECT LAST_INSERT_ID() AS insert_id";<br />
+$result = mysql_query($sql, $this->db);<br />
+$row = mysql_fetch_assoc($result);<br />
+$cid = $row['insert_id']; <br />
+<br />
+for .....<br />
+<br />
+$cid = mysql_insert_id();<br />
+<br />
+No warnings  - seems to work for now.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,486 @@
+---
+ title: Trouble with Submitting Questions for Test
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Trouble with Submitting Questions for Test</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5409"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-10 08:12:30</p>
+            </div>
+            <div class="postheader"><h3>Trouble with Submitting Questions for Test</h3></div>
+				
+			<div class="body">
+				<p>I receive the following error when trying to submit a test question in order to create a test:<br />
+<br />
+Submissions<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/webadmin/campus.cytopathnet.org/html/ATutor/tools/tests/results.php on line 96<br />
+<br />
+Warning: mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/webadmin/campus.cytopathnet.org/html/ATutor/tools/tests/results.php on line 99<br />
+<br />
+Any ideas how to troubleshoot?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5429"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-11 09:26:03</p>
+            </div>
+            <div class="postheader"><h3>Fixed</h3></div>
+				
+			<div class="body">
+				<p>I found a related area in the forums which provided the fix for this. Please disregard.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5447"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-14 12:07:09</p>
+            </div>
+            <div class="postheader"><h3>Fixed...well maybe not</h3></div>
+				
+			<div class="body">
+				<p>Well, I thought I had this issue resolved. However, when I went in to review submitted exam results, I received the same errors:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/webadmin/campus.cytopathnet.org/html/ATutor/tools/tests/results.php on line 96<br />
+<br />
+Warning: mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/webadmin/campus.cytopathnet.org/html/ATutor/tools/tests/results.php on line 99<br />
+<br />
+<br />
+Safemode is off as are registered globals.<br />
+<br />
+Really need help on this. I haven't found anything about this yet in the forums.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5449"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-14 12:36:49</p>
+            </div>
+            <div class="postheader"><h3>Settings</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -Linux, Redhat Enterprise AS v.3<br />
+  version of ATutor -1.5<br />
+  versions of php -4.3.2<br />
+  version of mysq l -3.23.58<br />
+  webserver & version -Apache, 2.0.46<br />
+  copies of error messages -Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/webadmin/campus.cytopathnet.org/html/ATutor/tools/tests/results.php on line 96<br />
+<br />
+Warning: mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/webadmin/campus.cytopathnet.org/html/ATutor/tools/tests/results.php on line 99<br />
+  changes to default settings -<br />
+  web browser being used -Firefox, 1.0.6<br />
+  and anything else relevant -safemode OFF, register_globals OFF</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5451"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-15 21:44:30</p>
+            </div>
+            <div class="postheader"><h3>Trouble continues</h3></div>
+				
+			<div class="body">
+				<p>I tried upgrading to the RC 1.5.1, but am still getting this error when as an instructor, am selecting "submissions" from the Manage test/surveys page.. I get this error:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/webadmin/campus.cytopathnet.org/html/ATutor/tools/tests/results.php on line 96<br />
+<br />
+Warning: mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/webadmin/campus.cytopathnet.org/html/ATutor/tools/tests/results.php on line 99<br />
+<br />
+See my previous post for my settings.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5487"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-17 12:23:53</p>
+            </div>
+            <div class="postheader"><h3>Lack of response usual?</h3></div>
+				
+			<div class="body">
+				<p>Well...I have not seen any response to my questions, and I continue to have problems. Now I have additional problems with course import. Does anyone monitor these forums for support???</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5488"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-17 12:30:38</p>
+            </div>
+            <div class="postheader"><h3>Lack of response usual?</h3></div>
+				
+			<div class="body">
+				<p>This is the error message I get on trying to import a chapter that I exported from another course:<br />
+<br />
+XML error: not well-formed (invalid token) at line 14</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5490"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-17 13:19:17</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>Try changing the test type to Anonymous and see if the problem still happens.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5491"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-17 14:32:13</p>
+            </div>
+            <div class="postheader"><h3>Help needed sooN!</h3></div>
+				
+			<div class="body">
+				<p>That got rid of that message. Any ideas about the import problems?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Try changing the test type to Anonymous and see if the problem still happens.<br />
+[op]forums/view.php?fid=7;pid=5409;page=1#5490[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5493"></a>
+		<div class="forum-post-author">
+			<label class="title">jpm61</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-17 20:51:32</p>
+            </div>
+            <div class="postheader"><h3>Trouble with Submitting Questions for Test</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so I would also like to know. I'm using the exact system that jsullinger is, and when I go to view test submissions, I get the same errors. If I change to anonymous, no errors. Problem is, I have no idea whose test I'm grading.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5494"></a>
+		<div class="forum-post-author">
+			<label class="title">jpm61</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-17 20:53:27</p>
+            </div>
+            <div class="postheader"><h3>Trouble with Submitting Questions for Test</h3></div>
+				
+			<div class="body">
+				<p>Disregard the "If you are asking for help, provide lots of detail so" part as the idiot (me) who typed this respose failed to erase that part. It's been a long day.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5499"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 08:26:28</p>
+            </div>
+            <div class="postheader"><h3>MySQL 4.02</h3></div>
+				
+			<div class="body">
+				<p>The problem with the test results seems to be some newer SQL language was introduced into that particular sql statement (CAST) that was not available until mysql 4.02. We'll see what we can do about creating a work-around, and post the fix here soon.<br />
+<br />
+You could also upgrade your mysql to fix the test results problem<br />
+<br />
+Re: the XML problem, we'd need to see the package you were trying to import. Attach it to this thread.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5504"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 10:05:32</p>
+            </div>
+            <div class="postheader"><h3>Attached package</h3></div>
+				
+			<div class="body">
+				<p>I am attaching the "culprit" package. <br />
+<br />
+I received an error when trying to import as a package, and then also when trying to import as "content", I received the XML error.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+The problem with the test results seems to be some newer SQL language was introduced into that particular sql statement (CAST) that was not available until mysql 4.02. We'll see what we can do about ...<br />
+[op]forums/view.php?fid=7;pid=5409;page=1#5499[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5505"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 10:07:09</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>replace the CAST() part on line 92 in ./tools/test/results.php<br />
+<br />
+with R.final_score+0.0<br />
+<br />
+such that you end up with R.final_score+0.0 AS fs</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5513"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:40:13</p>
+            </div>
+            <div class="postheader"><h3>Attached package</h3></div>
+				
+			<div class="body">
+				<p>regarding the content package attached. the problem appears to be the ampersand in the glossary definition.<br />
+<br />
+ampersands should be represented as & amp; (w/o the space).<br />
+<br />
+We will try and get a fix out for the next version.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5518"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 14:25:15</p>
+            </div>
+            <div class="postheader"><h3>Package stuff</h3></div>
+				
+			<div class="body">
+				<p>So put R.final_score in the () part so it reads <br />
+<br />
+(R.final_score)+0.0 AS fs ??<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+sreplace the CAST() part on line 92 in ./tools/test/results.php<br />
+<br />
+with R.final_score+0.0<br />
+<br />
+such that you end up with R.final_score+0.0 AS fs<br />
+[op]forums/view.php?fid=7;pid=5409;page=1#5505[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5519"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 14:34:59</p>
+            </div>
+            <div class="postheader"><h3>Package imports</h3></div>
+				
+			<div class="body">
+				<p>Did this....still getting error: "problem with package directory". I changed to full write permissions, but same thing happened...so guess not a permissions thing.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+So put R.final_score in the () part so it reads <br />
+<br />
+(R.final_score)+0.0 AS fs ??<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+sreplace the CAST() part on line 92 in ./tools/test/results.php<br />
+<br />
+with R.final_score+0....[/reply]<br />
+[op]forums/view.php?fid=7;pid=5409;page=2#5518[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5525"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-19 10:16:24</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>[b]jsullinger you're confusing everyone by including your support post within another thread.[/b]<br />
+<br />
+next time start a new thread instead of posting unrelated bugs in an existing thread.<br />
+<br />
+read my last post for a possible cause of your problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5529"></a>
+		<div class="forum-post-author">
+			<label class="title">jsullinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-19 12:09:26</p>
+            </div>
+            <div class="postheader"><h3>Trouble with Submitting Questions for Test</h3></div>
+				
+			<div class="body">
+				<p>I apologize for that....but the reply to thread is confusing, in that it doesn't repeat the subject heading.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5913"></a>
+		<div class="forum-post-author">
+			<label class="title">roarz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-22 11:28:46</p>
+            </div>
+            <div class="postheader"><h3>Similar "old" MySQL Syntax Issue</h3></div>
+				
+			<div class="body">
+				<p>Also perhaps caused by the older version of MySQL (per the original bug in this thread), my test instance was returning the following error:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/httpd/vhosts/roarz.com/subdomains/atutor/httpdocs/tools/enrollment/privileges.php on line 86<br />
+<br />
+This error was produced by navigating to Manage -> Enroll -> Select Student -> Privileges<br />
+<br />
+The cause was the \"ON\" syntax in the SQL on line 82 of \"tools/enrollment/privileges.php\":<br />
+$sql = \"SELECT cm.privileges, m.login FROM \".TABLE_PREFIX.\"course_enrollment cm JOIN \".TABLE_PREFIX.\"members m ON cm.member_id = m.member_id WHERE m.member_id=($mem_id) AND cm.course_id = $_SESSION[course_id]\";<br />
+<br />
+Changing this line to:<br />
+	$sql = \"SELECT cm.privileges, m.login FROM \".TABLE_PREFIX.\"course_enrollment cm JOIN \".TABLE_PREFIX.\"members m WHERE cm.member_id = m.member_id AND m.member_id=($mem_id) AND cm.course_id = $_SESSION[course_id]\";<br />
+<br />
+Solved the issue in my environment.  I\'m guessing that the \"ON\" syntax is a MySQL 4.x thing.  Just like \"CAST()\".</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

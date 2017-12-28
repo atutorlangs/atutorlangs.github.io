@@ -1,0 +1,75 @@
+---
+ title: Cannot connect to mysql
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cannot connect to mysql</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25689"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-02-02 06:17:47</p>
+            </div>
+            <div class="postheader"><h3>Cannot connect to mysql</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - line<br />
+  ATutor version - 2.2.1<br />
+  Patch #s applied - none<br />
+  ATutor theme name - <br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+<br />
+I'm at Siteground on cpanel. I don't know the software versions but they are up to date.<br />
+<br />
+I tried installing 2.2.1 first as an upgrade, then as a new installation. This is the screen I see on the first pass at the installation.<br />
+<br />
+Warning: mysqli::mysqli(): (28000/1045): Access denied for user 'isensei7_isensei'@'localhost' (using password: YES) in /home/isensei7/public_html/include/lib/mysql_connect.inc.php on line 18<br />
+<br />
+Warning: mysqli::set_charset(): Couldn't fetch mysqli in /home/isensei7/public_html/include/lib/mysql_connect.inc.php on line 20<br />
+<br />
+Warning: mysqli::query(): Couldn't fetch mysqli in /home/isensei7/public_html/include/lib/mysql_connect.inc.php on line 305<br />
+<br />
+Fatal error: Call to a member function fetch_assoc() on a non-object in /home/isensei7/public_html/include/lib/mysql_connect.inc.php on line 306<br />
+<br />
+I cannot get any farther. I have never had this problem before, but I have gone the whole school year without database access to my quizzes. That has been a major pain in the buttress.<br />
+<br />
+I know you can't reproduce it on your server, but you might try it on a commercial cpanel server. I am sure you will find it does not work.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25690"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-02-02 06:41:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot connect to mysql</h3></div>
+				
+			<div class="body">
+				<p>Make sure there isn't a backslash (i.e. an escape character) in the mysql username or password.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

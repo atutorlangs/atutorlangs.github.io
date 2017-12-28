@@ -1,0 +1,99 @@
+---
+ title: Customizing login page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Customizing login page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="14600"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-22 12:28:08</p>
+            </div>
+            <div class="postheader"><h3>Customizing login page</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+I'm looking to customise the page that users input their username/password to log in - login.php. I have searched the forums but can't find anything to help. I know the content here is called from another page but can't track it down. Can someone point me to the file I need to alter?<br />
+Many thanks<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14601"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-22 13:00:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Customizing login page</h3></div>
+				
+			<div class="body">
+				<p>Edit the login.tmpl.php file in the theme you are using. <br />
+<br />
+/themes/[theme_name]/<br />
+<br />
+If you are using one of the defaults, you may want to take a copy of the theme and create a new version of it, so you can reuse the theme and its login screen when you upgrade. See the wiki for theme details.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14609"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-23 13:22:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Customizing login page</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+What I was wanting to do was to alter the content of the page - not the coding. For example the two boxes in the table for 'Login' and 'New User' I want to alter the instructions text, to suit the way our clients login. In the right-hand cell I also want to remove the 'Register' button and change the text there to suit our purposes. I've done this in a previous version - just can't remember how !<br />
+Many thanks <br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14610"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-23 14:28:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Customizing login page</h3></div>
+				
+			<div class="body">
+				<p>Language can be edited using the administrator's language manager. <br />
+<br />
+Removing the register button on the login screen requires editing the code.<br />
+<br />
+Removing it from the Tabs of the login screen needs to be done in the include/lib/menu_pages.inc.php file, by removing "registration.php" from the $_pages[AT_NAV_PUBLIC] variable defined near the top of the file.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,175 @@
+---
+ title: Language Import Failed
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Language Import Failed</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2014"></a>
+		<div class="forum-post-author">
+			<label class="title">carlocerulli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-10 08:56:18</p>
+            </div>
+            <div class="postheader"><h3>Language Import Failed</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+i have made a fresh installation of ATutor 1.4 on win2000AS+easyphp 1.7<br />
+<br />
+i try to import italian language (or others), select file, click import, pop-up starts (but with "[i] unknown KB [/i] ").<br />
+<br />
+after a while ATutor say "failed to import language"<br />
+<br />
+tried many times... <br />
+<br />
+wich settings should i check?<br />
+<br />
+thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2015"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-10 09:21:50</p>
+            </div>
+            <div class="postheader"><h3>Other uploads</h3></div>
+				
+			<div class="body">
+				<p>Are you able to upload other files, say through the filemanager?<br />
+<br />
+Has something changed on your system? I gather from your earlier post that you were able to import languages at one time.<br />
+<br />
+make sure the content/import directory is writable.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2019"></a>
+		<div class="forum-post-author">
+			<label class="title">carlocerulli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-12 08:08:11</p>
+            </div>
+            <div class="postheader"><h3>check</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+- other uploads via filemanager works ok.<br />
+- content/import directory is writable.<br />
+<br />
+i've reinstalled everything and i have re-imported languages; now atutor say "import successfully", but at the nex login the laguages list does not appear at the bottom of the home page (or others).<br />
+<br />
+I've seen in the DB via phpmyadmin and in the table "...lang2" i see the languages i've uploaded before.<br />
+<br />
+the only thing is that they do not appear at the bottom of the pages....<br />
+<br />
+Installed on win2000+easyphp1.7.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2025"></a>
+		<div class="forum-post-author">
+			<label class="title">mgrassi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-13 12:24:09</p>
+            </div>
+            <div class="postheader"><h3>import language</h3></div>
+				
+			<div class="body">
+				<p>Have you unzipped the file?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Hi,<br />
+<br />
+i have made a fresh installation of ATutor 1.4 on win2000AS+easyphp 1.7<br />
+<br />
+i try to import italian language (or others), select file, click import, pop-up starts (but with "[i] unknown KB [/i]...<br />
+[op]forums/view.php?fid=7;pid=2014;page=1#2014[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2026"></a>
+		<div class="forum-post-author">
+			<label class="title">carlocerulli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-13 12:45:02</p>
+            </div>
+            <div class="postheader"><h3>FOUND! - It seems a cache problem</h3></div>
+				
+			<div class="body">
+				<p>Hi all,<br />
+ seems like i have found a solution,<br />
+<br />
+i have made the same installation procedure on another identical machine. <br />
+<br />
+the only difference is that i have disabled tha cache settings... and now everything works fine!<br />
+<br />
+so i came back to the first machine and i've disabled the cache and... even on this installattion the uploaded language (remeber that i can see it in the lang2 table) magically appears on  the bottom of the page and works perfectly.<br />
+<br />
+is this a cache dir bug?<br />
+i've check the dir and it is writable and full of phpCache* files.<br />
+<br />
+should i disable cache forever?<br />
+<br />
+thanks in advance,<br />
+carlo</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2029"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-13 13:35:41</p>
+            </div>
+            <div class="postheader"><h3>Cache Path</h3></div>
+				
+			<div class="body">
+				<p>Caching is really only necessary for high traffic systems so you can safely leave it disabled.<br />
+<br />
+It should work though. Make sure the path to the directory is correct.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

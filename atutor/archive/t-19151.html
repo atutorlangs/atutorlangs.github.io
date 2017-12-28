@@ -1,0 +1,116 @@
+---
+ title: Cant generate new content
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cant generate new content</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19151"></a>
+		<div class="forum-post-author">
+			<label class="title">PaddyTighe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-26 19:27:37</p>
+            </div>
+            <div class="postheader"><h3>Cant generate new content</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -MAc OS x server 10.6<br />
+  ATutor version -1.5.5<br />
+  Patch #s applied -none<br />
+  ATutor theme name -default<br />
+  PHP version -5.2.11<br />
+  MySQL version -5.0.5<br />
+  Webserver & version -Apache 2.2<br />
+  Copies of error messages -none<br />
+  Changes to default settings -none<br />
+  Web browser being used -multiple<br />
+  ...and anything else relevant -<br />
+<br />
+Hi, I had to roll back ATutor  from 1.6.3 to 1.5.5 (1.6.3 was giving multiple user login problems from users of a particular site that we could not resolve.  1.5.5 on the same server doesn't have the problem, but in rolling back the one thing we now have is an inability to add new content pages?  I believe this is due to something happening (or rather not happening ) when saving a newly created page  - the url of the returned saved page has a cid of "0" , and no content when it would be expected to have got a new cid - and no new entry in the mysql content  table is seen.  Any ideas?  forum posts and chat work fine etc as does everything else - I just can't place the reason for this failure to make content.  I guess the edit_content.php is involved in checking if the cid exists or not, but an not sure where to start looking<br />
+<br />
+regards<br />
+<br />
+Paddy</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19161"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-27 16:20:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't generate new content</h3></div>
+				
+			<div class="body">
+				<p>Have a look at the system's php error log and see if you can see anything there.  <br />
+<br />
+Did you revert to a backup of the database you created before upgrading. You won't be able to create content with 1.5.5 into a 1.6.3 database.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19170"></a>
+		<div class="forum-post-author">
+			<label class="title">PaddyTighe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-29 16:15:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't generate new content</h3></div>
+				
+			<div class="body">
+				<p>Hi greg, Ah- that will be it - I used the 1.6.3 Db - is there a quick way back?  we went from 1.5.5 to 1.6.3  a while ago, added quite a bit of content content using 1.6.3, but then found we had a problem with people accessing from a particular organisation (due to their firewall we now think) - so we would really need to take from the 1.6.3 Db into 1.5.5<br />
+<br />
+any suggestions, or can I reconfigure the 1.6.3 Db in some way. - Interesting that everything else works, and editing existing content is fine - so is only generation of new content.<br />
+<br />
+Any suggestions?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19175"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-30 09:12:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't generate new content</h3></div>
+				
+			<div class="body">
+				<p>You could restore the backup you created before upgrading, though you'd loose anything new added since then.<br />
+<br />
+I should ask, are you using a custom theme, or what theme from the themes include with ATutor are you using?<br />
+<br />
+The other possibility, though it would be a lot of work, is to examine the upgrade scripts in install/db/ since 1.5.5, and particularly the changes to the content table, and perhaps just adjust that table. Problem is though there would no longer be an upgrade path if you continue using a tweaked 1.6.3 db for 1.5.5. <br />
+<br />
+Another option might be to install a fresh copy of ATutor, then take backups from the old version and move them over to the new version and use it as your production system.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

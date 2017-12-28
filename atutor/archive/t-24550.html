@@ -1,0 +1,148 @@
+---
+ title: Course Properties Cant Save
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Course Properties Cant Save</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24550"></a>
+		<div class="forum-post-author">
+			<label class="title">DeneB</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-01-06 13:07:13</p>
+            </div>
+            <div class="postheader"><h3>Course Properties Cant Save</h3></div>
+				
+			<div class="body">
+				<p>After upgrading to php 5.5.7, I have lost the ability to save course properties.  The save button in the bottom right corner seems to have vanished.  The condition is the same if I try to create a course or modify an existing course properties.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24551"></a>
+		<div class="forum-post-author">
+			<label class="title">DeneB</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-01-06 14:39:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Course Properties Can't Save</h3></div>
+				
+			<div class="body">
+				<p>I have also noticed that if I browse the courses all of the course icons have disappeared and in the area where the icon image should be is text repeating the course title.<br />
+<br />
+Right now we are dead in the water because we can not modify and course properties or create any new courses because the save button in course properties has vanished.  The same condition with the save button exists whether it is the administrator that is to create a course or the course instructor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24552"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-01-06 15:06:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Course Properties Can't Save</h3></div>
+				
+			<div class="body">
+				<p>PHP 5.5.7 will be bleeding edge. ATutor 2.1.1 back before 5.5 was available so it could very well be changes have occurred in PHP that are not compatible.<br />
+<br />
+If you have the opportunity to revert back to a current version of 5.4 (5.4.23), that would be your best bet. ATutor 2.1.1 was built around PHP 5.4.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24553"></a>
+		<div class="forum-post-author">
+			<label class="title">DeneB</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-01-06 16:42:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Course Properties Can't Save</h3></div>
+				
+			<div class="body">
+				<p>I removed php 5.5.7 and installed php 5.4.23, did not fix the problem.  I still have no save button in course properties and the image icons for each course still do not show.<br />
+<br />
+Should I try replacing any specific php files?  If so which ones?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24554"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-01-06 17:19:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Course Properties Can't Save</h3></div>
+				
+			<div class="body">
+				<p>That particular file can be found at:<br />
+<br />
+https://github.com/atutor/ATutor/blob/atutor_2_1_1/themes/default/admin/courses/edit_course.tmpl.php<br />
+<br />
+You can try removing the following line:<br />
+[php]<br />
+<br />
+require_once(AT_INCLUDE_PATH.'../mods/_core/courses/html/course_icon.inc.php');<br />
+<br />
+[/php] <br />
+<br />
+If that brings back the Save button, it might mean the image processing libraries are not included with your PHP (--with-gd, --with-jpeg-dir). See the requirements section for a list of libraries that should be installed:<br />
+<br />
+http://atutor.ca/atutor/docs/requirements.php<br />
+<br />
+Or, by any chance when you installed ATutor, did you upload the bundle and unpack it on the server, or unpack it on a local computer and upload file-by-file. The later can cause these seemingly random problems.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24555"></a>
+		<div class="forum-post-author">
+			<label class="title">DeneB</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-01-06 18:26:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Course Properties Can't Save</h3></div>
+				
+			<div class="body">
+				<p>Found the problem!  Some of the libraries had to be changed to match the version of php (for example php54-gd)and then I had to double check that the permissions group and user was correct.  Now all is working!<br />
+<br />
+BTW on the original install I downloaded the bundle and unpacked it on the server....but since I have nginx running ahead of apache as a reverse proxy server things can get a little tricky!  :)<br />
+<br />
+Thanks again!  I highly recommend ATutor for it's user simplicity, power and versatility!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

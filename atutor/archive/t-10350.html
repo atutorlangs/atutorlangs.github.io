@@ -1,0 +1,100 @@
+---
+ title: Content directory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Content directory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="10350"></a>
+		<div class="forum-post-author">
+			<label class="title">tsmerk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-10 19:11:40</p>
+            </div>
+            <div class="postheader"><h3>Content directory</h3></div>
+				
+			<div class="body">
+				<p>I am installing 1.5.4 rc1 and cannot get past Step 4 - Content directory. No matter what I put down for a content directory, it says "Content Directory entered does not exist," even though I verified the existance of the directory and also turned on full rwx permissions. I am using a content directory on the same web server. I remember that I had a problem with this when I installed 1.5.3, but I forget how I got around it. Am I missing some important step?<br />
+For the record, the server is running PHP 5.2.1 and MySQL 5.0.37</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10358"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-11 08:36:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Content directory</h3></div>
+				
+			<div class="body">
+				<p>My guess is your content directory has a symbolic link in it. Write a small php file with the following lines, then place it in the ATutor directory and open it in your browser to get the actual path to you content directory<br />
+<br />
+<br />
+<br />
+[php]<br />
+<br />
+getcwd();<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10367"></a>
+		<div class="forum-post-author">
+			<label class="title">tsmerk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-12 01:47:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Content directory</h3></div>
+				
+			<div class="body">
+				<p>I tried what you said and pasted the path into the Atutor install window, but got the same "does not exist" message. The company that is hosting the web site wrote me the following information, which I also tried with no success, but maybe you can make omething out of this to explain to me what to enter at this point:<br />
+<br />
+The directory is /www <br />
+&lt;http://cp.s441.sureserver.com/fileman/fileman.php?goto=%2Fwww>/www <br />
+&lt;http://cp.s441.sureserver.com/fileman/fileman.php?goto=%2Fwww%2Fwww>/content <br />
+&lt;http://cp.s441.sureserver.com/fileman/fileman.php?goto=%2Fwww%2Fwww%2Fcontent> <br />
+<br />
+Any ideas?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10370"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-12 08:30:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Content directory</h3></div>
+				
+			<div class="body">
+				<p>If there are no symbolic links in the path, then I'm not sure what to suggest, other than to start over with the installation, and carefully follow the instructions again.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

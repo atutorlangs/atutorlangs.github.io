@@ -1,0 +1,212 @@
+---
+ title: Setting Atutor behind a Reverse Proxy
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Setting Atutor behind a Reverse Proxy</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="20279"></a>
+		<div class="forum-post-author">
+			<label class="title">nahi_sudhrenge</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-02 10:21:26</p>
+            </div>
+            <div class="postheader"><h3>Setting Atutor behind a Reverse Proxy</h3></div>
+				
+			<div class="body">
+				<p>People from internet are not able to login to my Atutor <br />
+while from LAN any one can login and it works fine.<br />
+<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Ubuntu 10.04<br />
+  ATutor version - 1.6.4<br />
+  Patch #s applied - none<br />
+  ATutor theme name - no idea what that means<br />
+  PHP version - 5<br />
+  MySQL version -  Ver 14.14 Distrib 5.1.41, for debian-linux-gnu (x86_64) using readline 6.1<br />
+<br />
+  Webserver & version - Apache 2<br />
+  Copies of error messages - None<br />
+  Changes to default settings - Nome<br />
+  Web browser being used - Chrome,Firefox 3<br />
+  ...and anything else relevant -<br />
+<br />
+I am testing ATutor on our LAN it installed and worked fine.We now want it to be publicly accessible we have some websites running on our webserver in a Reverse Proxy environment.<br />
+<br />
+I configured the same for ATutor but the page being served to client browser on internet was not able to login to the Atutor interface we have.<br />
+<br />
+I want to know how does ATutor handles X-Forwarded-For header when a request comes to it forwarded via Reverse Proxy where can I give it the IP of my Reverse Proxy Server so that it can maintain the session or the user can login the <br />
+Settings of Reverse Proxy on Apache2 for Atutor are<br />
+&lt;VirtualHost *:80><br />
+<br />
+        ServerAdmin webmaster@localhost<br />
+        ServerName mydomain.com<br />
+        ProxyRequests off<br />
+<br />
+<br />
+ ProxyRequests off<br />
+        &lt;Proxy *><br />
+        Order deny,allow<br />
+        Allow from all<br />
+        &lt;/Proxy><br />
+<br />
+ProxyPass /atutor http://192.168.1.5/atutor<br />
+ProxyPassReverse /atutor http://192.168.1.5/atutor<br />
+&lt;/VirtualHost</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20280"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-02 14:59:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Setting Atutor behind a Reverse Proxy</h3></div>
+				
+			<div class="body">
+				<p>Have a look at the setting "ProxyPreserveHost On" first. If that doesn't<br />
+work, ProxyPassReverseCookieDomain and ProxyPassReverseCookiePath are<br />
+two more directives to try.<br />
+<br />
+http://httpd.apache.org/docs/2.2/mod/mod_proxy.html#proxypassreverse<br />
+shows an example with the latter two options.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20296"></a>
+		<div class="forum-post-author">
+			<label class="title">nahi_sudhrenge</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-05 02:19:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Setting Atutor behind a Reverse Proxy</h3></div>
+				
+			<div class="body">
+				<p>I have 7-8 websites<br />
+running on the said server <br />
+<br />
+&lt;VirtualHost *:80><br />
+<br />
+        ServerAdmin webmaster@localhost<br />
+        ServerName mydomain.com<br />
+        ProxyRequests off<br />
+        &lt;Proxy *><br />
+        Order deny,allow<br />
+        Allow from all<br />
+        &lt;/Proxy><br />
+<br />
+        ProxyPreserveHost On<br />
+<br />
+        ProxyPass /something1 http://192.168.1.5/something1<br />
+        ProxyPassReverse /something1 http://192.168.1.5/something1<br />
+<br />
+        ProxyPass /something2 http://192.168.1.5/something2/www/<br />
+        ProxyPassReverse /something2 http://192.168.1.5/something2/www/<br />
+<br />
+        ProxyPass /something3 http://192.168.1.5/something3/<br />
+        ProxyPassReverse /something3 http://192.168.1.5/something3/<br />
+<br />
+        ProxyPass /something4 http://192.168.1.5/something4/<br />
+        ProxyPassReverse /something4 http://192.168.1.5/something4/<br />
+<br />
+        ProxyPass /something5 http://192.168.1.5/something5<br />
+        ProxyPassReverse /something5 http://192.168.1.5/something5<br />
+         <br />
+       ProxyPass /something6 http://192.168.1.5:8080/something6<br />
+       ProxyPassReverse /something6 http://192.168.1.5:8080/something6<br />
+<br />
+        ProxyPass /something7 http://192.168.1.5:6060/portal<br />
+        ProxyPassReverse /something7 http://192.168.1.5:6060/something7<br />
+<br />
+ProxyPass /atutor http://192.168.1.5atutor<br />
+        ProxyPassReverse /atutor http://192.168.1.5atutor<br />
+        ProxyPassReverseCookieDomain internal.domain.com external.domain.com<br />
+        ProxyPassReverseCookiePath / /atutor<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+        ProxyPass / http://192.168.1.5/<br />
+        ProxyPassReverse / http://192.168.1.5/<br />
+<br />
+        ErrorLog /var/log/apache2/mydomain_error.log<br />
+<br />
+        # Possible values include: debug, info, notice, warn, error, crit,<br />
+        # alert, emerg.<br />
+        LogLevel debug<br />
+<br />
+        CustomLog /var/log/apache2/mydomain_access.log combined<br />
+<br />
+        CustomLog /var/log/apache2/mydomain-resp_log resp<br />
+        LogFormat "%D %{X-Forwarded-For}i %t" resp<br />
+<br />
+&lt;/VirtualHost><br />
+<br />
+It did not worked can you point what is the mistake above</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20297"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-05 09:47:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Setting Atutor behind a Reverse Proxy</h3></div>
+				
+			<div class="body">
+				<p>You might be better off talking to someone from Apache. This is a little outside the scope of the kind of support we can offer.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20308"></a>
+		<div class="forum-post-author">
+			<label class="title">nahi_sudhrenge</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-07 05:15:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Setting Atutor behind a Reverse Proxy</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the update but when using an application behind a reverse proxy X-Forwarded-For is the header used for which I started the question originally as how is this header handled in Atutor.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

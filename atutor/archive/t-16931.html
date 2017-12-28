@@ -1,0 +1,74 @@
+---
+ title: error in chat logging
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>error in chat logging</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16931"></a>
+		<div class="forum-post-author">
+			<label class="title">savior2008</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-15 09:56:50</p>
+            </div>
+            <div class="postheader"><h3>error in chat logging</h3></div>
+				
+			<div class="body">
+				<p>Dear Sir<br />
+I have a problem in chat logging.ther are some errors in chat page:<br />
+<br />
+Warning: require(include/html/chat_footer.inc.php) [function.require]: failed to open stream: No such file or directory in /home/www/forensic.virtualeducation.co.cc/chat/display.php on line 129<br />
+<br />
+Fatal error: require() [function.require]: Failed opening required 'include/html/chat_footer.inc.php' (include_path='.:/usr/local/php5/share/pear') in /home/www/forensic.virtualeducation.co.cc/chat/display.php on line 129<br />
+Warning: require(include/html/chat_footer.inc.php) [function.require]: failed to open stream: No such file or directory in /home/www/forensic.virtualeducation.co.cc/chat/poster.php on line 46  <br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -1.6<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -5.2.5<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16938"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-16 08:41:16</p>
+            </div>
+            <div class="postheader"><h3>Re: error in chat logging</h3></div>
+				
+			<div class="body">
+				<p>Can you confirm that the missing file actually exists in: <br />
+<br />
+/ATutor/chat/include/html/chat_footer.inc.php<br />
+<br />
+<br />
+If not add a copy from here:<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/chat/include/html/chat_footer.inc.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

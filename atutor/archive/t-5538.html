@@ -1,0 +1,96 @@
+---
+ title: installing atutor 14 on fc3
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>installing atutor 14 on fc3</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5538"></a>
+		<div class="forum-post-author">
+			<label class="title">fathianf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-20 00:24:26</p>
+            </div>
+            <div class="postheader"><h3>installing atutor 14 on fc3</h3></div>
+				
+			<div class="body">
+				<p>I am trying to install atutor1.4 on fc3 with mysql 3.23, php 4.3 and httpd-2.0.52, the error I get is:<br />
+Directories<br />
+Error<br />
+    * content/ is not writeable.<br />
+    * content/import/ is not writeable.<br />
+    * content/chat/ is not writeable.<br />
+    * include/config.inc.php is not writeable.<br />
+But ls of my directories are as follows:<br />
+ls -l content/<br />
+total 20<br />
+drwxrwxrwx  2 apache apache 4096 May 28  2004 chat<br />
+drwxrwxrwx  2 apache apache 4096 May 28  2004 import<br />
+-rwxrwxrwx  1 apache apache    0 May 28  2004 index.html<br />
+ls -l content/import/<br />
+total 4<br />
+-rwxrwxrwx  1 apache apache 0 May 28  2004 index.html<br />
+ ls -l content/chat<br />
+total 4<br />
+-rwxrwxrwx  1 apache apache 0 May 28  2004 index.html<br />
+ls -l include/config.inc.php<br />
+-rwxrwxrwx  1 apache apache 86 May 28  2004 include/config.inc.php<br />
+which it means all directories are writeable. Would you please let me know what the problem is?<br />
+By the way, i changed ownership of these directories to apache to see if I can get rid of this error, but nothing happend.<br />
+Thanks for your forum and quick reply.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5543"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-21 11:01:46</p>
+            </div>
+            <div class="postheader"><h3>follow the instructions</h3></div>
+				
+			<div class="body">
+				<p>please follow the instructions displayed with the error message carefully during installation. They explain what needs to be done to make the content directory and the config,inc,php file writable.<br />
+<br />
+use<br />
+chmod -R a+rwx content/  (make sure to use the -R switch)<br />
+chmod a+rwx include/config.inc.php<br />
+<br />
+You may want to use ATutor 1.5.1.  It is much improved over 1.4</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5582"></a>
+		<div class="forum-post-author">
+			<label class="title">fathianf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-23 03:45:45</p>
+            </div>
+            <div class="postheader"><h3>I followed the instruction</h3></div>
+				
+			<div class="body">
+				<p>Thanks greg, I followed the instruction you wrote but no change. Also I chmod ATutor directory and again no change, please help me to install ATutor 1.4 as I already have ATutor 1.4 up and running on mandrake 9.1 and I can't upgrade it for Farsi language. That's why I need to install 1.4 and then put mysql dump of Atutor database on it and then upgrade to 1.5 or 1.5.1. I have lots of courses on up and running server which I can't bring them in 1.5 easily as i mentioned in my previous topic on this forum.<br />
+Thanks again for your support.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

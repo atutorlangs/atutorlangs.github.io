@@ -1,0 +1,63 @@
+---
+ title: AContent FlowPlayer and Subtitles
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>AContent FlowPlayer and Subtitles</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22879"></a>
+		<div class="forum-post-author">
+			<label class="title">bjfisseler</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-09 09:09:01</p>
+            </div>
+            <div class="postheader"><h3>AContent FlowPlayer and Subtitles</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I've got a general question regarding the media tag, FlowPlayer and subtitles. Is it possible to integrate subtitles, as FlowPlayer supports this? I examined the code within "home\classes\ContentUtility.class.php" and wonder if it is possible to automatically load a separate subtitle file for each MP4 or FLV video. My idea is to modify the code and to load the subtitle. E.g. if the video looks something like [media]../../myvideo.flv[/media], this gets replaced with FlowPlayer during runtime. Now you could simply include a syntax that loads a subtitle file called "myvideo.srt" for usage with FlowPlayer.<br />
+<br />
+Is that a proper approach to solve this issue or does anybody have a different idea?<br />
+<br />
+Kind regards<br />
+<br />
+   Bjrn</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22881"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-09 09:48:32</p>
+            </div>
+            <div class="postheader"><h3>Re: AContent, FlowPlayer and Subtitles</h3></div>
+				
+			<div class="body">
+				<p>extending the [media] to take a caption file as a parameter sounds like it might work. something like [media captions="../../myvideo.srt"]<br />
+<br />
+Take a look at the Flowplayer captions plugin. <br />
+http://flowplayer.org/plugins/flash/captions.html<br />
+http://flowplayer.org/demos/plugins/flash/captions.html<br />
+<br />
+You can potentially add it to the flowplayer module.<br />
+<br />
+Are you planning on submitting your work to GitHub?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

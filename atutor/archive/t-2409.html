@@ -1,0 +1,235 @@
+---
+ title: Problem with Export Content to SCORM in v14x
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem with Export Content to SCORM in v14x</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2409"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-04 13:16:03</p>
+            </div>
+            <div class="postheader"><h3>Problem with Export Content to SCORM in v14x</h3></div>
+				
+			<div class="body">
+				<p>Dear friends,<br />
+I would like to ask you a question. <br />
+<br />
+I have installed ATutor v1.4 in:<br />
+- Windows XP<br />
+- Apache 1.3.27<br />
+- PHP 4.3.3<br />
+- MySQL 4.0.15<br />
+<br />
+Before installing this version I had version 1.3.3 of ATutor, where everything worked OK. With version 1.4 and the versions after that (1.4.1 and 1.4.2) I have the following problem. When I export content to the SCORM format, the PIF (zip file) which is created, cannot then opened. To be more specific, when I download the .zip file and then try to open it, I receive the message: "Cannot open file: it does not appear to be a valid archive. If you downloaded this file try downloading the file again".<br />
+<br />
+That is not happened when I create a course backup. In this case the created zip file can be opened normally.<br />
+<br />
+Thank you in advance for your help and congratulations for your very good work.<br />
+<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2419"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-06 10:58:45</p>
+            </div>
+            <div class="postheader"><h3>Remove zip file</h3></div>
+				
+			<div class="body">
+				<p>I could not reproduce the problem myself. SCORM packages export from 1.4.1 and 1.4.2 as they should, and open properly in my archiving application (Linux File Roller).<br />
+<br />
+If you have zip files in your file manager, try removing them before you package content. <br />
+<br />
+Are you able to import the content package back into ATutor, even though you are unable to open it in your archive application?<br />
+<br />
+What archive application are you using?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2420"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-06 12:15:33</p>
+            </div>
+            <div class="postheader"><h3>maybe it is something else</h3></div>
+				
+			<div class="body">
+				<p>Dear greg,<br />
+Thank you for your response.<br />
+<br />
+[i]If you have zip files in your file manager, try removing them before you package content.[/i] <br />
+I don't have .zip files in the file manager. The only files are .jpg files. <br />
+<br />
+[i]Are you able to import the content package back into ATutor, even though you are unable to open it in your archive application? [/i] <br />
+No. I am not able to import the content package back into ATutor. When I try to do this I receive the following message:<br />
+<br />
+Error : PCLZIP_ERR_BAD_FORMAT (-10) : Unable to find End of Central Dir Record signature<br />
+<br />
+I don't have the same problem in ATutor v1.3.3. There, the SCORM package is successfully created and the .zip file can be opened. I imported the package generated from v1.3.3 to the v1.4 and I don't have a problem too. <br />
+<br />
+[i]What archive application are you using? [/i] <br />
+I am using WinZip, but I don't think that this is the problem, because as I already said the package cannot be imported back to ATutor. <br />
+<br />
+Very strange! ;)<br />
+<br />
+Thank you again for your help.<br />
+<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2421"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-06 13:23:32</p>
+            </div>
+            <div class="postheader"><h3>I just found the problem</h3></div>
+				
+			<div class="body">
+				<p>Dear greg,<br />
+I just found the problem. The problem occured because of the value of the zlib.output_compression variable which resides in the php.ini file. This variable must be set to "On". Instead of this, the variable had no value. <br />
+<br />
+But, something else is now occured. Although the SCORM package is generated normally and can be also opened, when I try to import it as is to ATutor I receive the message:<br />
+Error : PCLZIP_ERR_BAD_FORMAT (-10) : Invalid archive structure<br />
+<br />
+So, I opened the generated zip file and I re-compressed it using WinZip. Then I tried to import it again to ATutor and the package has been successfully imported.<br />
+<br />
+Maybe this problem occures because of the values of other variables (e.g. output_handler, zlib.output_handler) which also reside in php.ini.<br />
+<br />
+Could you please tell me which are the correct values of these variables? If something else must be also configured please inform me.<br />
+<br />
+Thank you very much.<br />
+<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2422"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-06 13:29:21</p>
+            </div>
+            <div class="postheader"><h3>Set to off</h3></div>
+				
+			<div class="body">
+				<p>Set the zlib.output_compresion to "off", and comment out zlib.output_handler</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2423"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-06 14:06:17</p>
+            </div>
+            <div class="postheader"><h3>Problem remains</h3></div>
+				
+			<div class="body">
+				<p>I set the zlib.output_compression to "off" and I comment out zlib.output_handler but the previous problem remains. <br />
+<br />
+zlib.output_handler must be empty or should take a value?<br />
+<br />
+Thank you<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2424"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-06 14:25:35</p>
+            </div>
+            <div class="postheader"><h3>See php docs</h3></div>
+				
+			<div class="body">
+				<p>See the php documentation for the default settings on Window (et al) systems<br />
+<br />
+http://www.php.net/manual/en/ref.zlib.php<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I set the zlib.output_compression to "off" and I comment out zlib.output_handler but the previous problem remains. <br />
+<br />
+zlib.output_handler must be empty or should take a value?<br />
+<br />
+Thank you<br />
+Polyxen...<br />
+[op]forums/view.php?fid=7;pid=2409;page=1#2423[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2427"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-07 09:06:55</p>
+            </div>
+            <div class="postheader"><h3>Thanks</h3></div>
+				
+			<div class="body">
+				<p>Dear greg,<br />
+Thank you for your help. I installed ATutor on Unix and the above problem doesn't occur on it. For the configuration of the php.ini on Windows I will read the documentation on the link provided by you and if the problem remains, I'll ask you again. Hope that after that I'll fix the problem. ;)<br />
+<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

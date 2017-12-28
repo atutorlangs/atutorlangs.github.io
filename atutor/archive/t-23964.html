@@ -1,0 +1,213 @@
+---
+ title: Error updating course properties
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error updating course properties</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="23964"></a>
+		<div class="forum-post-author">
+			<label class="title">trtoles</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 12:09:38</p>
+            </div>
+            <div class="postheader"><h3>Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>Things to describe: <br />
+  Operating system - Windows 2008 r2<br />
+  ATutor version - 2.1<br />
+  Patch #s applied - 01- "Security patch for Tool  Manager vulnerability"<br />
+  PHP version - 5.4.12<br />
+  MySQL version - 5.6<br />
+  Webserver & version - IIS 7<br />
+  Changes to default settings - none<br />
+  Web browser being used - IE8<br />
+<br />
+New installation of ATutor. <br />
+I am able to log in as an instructor and create a course, add content, etc.  When I attempt to save any changes on the course properties page, I get an HTTP 500 error on: <br />
+http://127.0.0.1/mods/_core/properties/course_properties.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23965"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 14:05:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>It could be your PHP version. <br />
+http://atutor.ca/atutor/docs/requirements.php<br />
+<br />
+While there have been a few reports of ATutor working well with IIS, typically people have trouble. We recommend using another Webserver like Apache or nginx etc.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23966"></a>
+		<div class="forum-post-author">
+			<label class="title">trtoles</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 14:14:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>Looks more like a bug in the patch.  PHP error log indicates:<br />
+<br />
+Cannot re-assign auto-global variable _POST in C:\inetpub\wwwroot\mods\_core\properties\lib\course.inc.php on line 48</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23967"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 14:30:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>That's a PHP 5.4 issue. It will go away if you revert back to PHP 5.3 or earlier. <br />
+<br />
+Or, wait a little while until ATutor 2.1.1 comes out, which has been adapted to accommodate this change.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23968"></a>
+		<div class="forum-post-author">
+			<label class="title">trtoles</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 14:40:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>Thanks for that, sorry for not including the error in the original post.  I didn't have logging enabled at the time.<br />
+<br />
+Can you advise how long "a little while" is, or is that like asking "how long is a piece of string"?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23969"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 14:56:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>There is an release candidate available now that you can test. We will probably put out another update today, with a few more adjustments.<br />
+<br />
+http://atutor.ca/atutor/download.php<br />
+<br />
+We're hoping to have the final release out by the end of March.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23970"></a>
+		<div class="forum-post-author">
+			<label class="title">trtoles</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 15:03:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>Thanks for that.  Since I am just doing a "proof of concept" implementation for a client right now, I think I'll just downgrade PHP for now.<br />
+<br />
+Cheers,<br />
+Tim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23971"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 15:15:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>If there's the opportunity, I might suggest using Apache over IIS, as you Web server</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23972"></a>
+		<div class="forum-post-author">
+			<label class="title">trtoles</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-03-01 16:23:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Error updating course properties</h3></div>
+				
+			<div class="body">
+				<p>Thank you for that advice, but the client's mandated platform is Windows/IIS.<br />
+<br />
+On the subject of IIS vs. Apache; In my experience, the biggest problem that people face with implementing web applications is their lack of familiarity with administering web servers in the first place.  A person that is uncomfortable or unfamiliar with managing IIS is as likely to have as much trouble managing Apache (except for the likelihood that they may not be faced with an intitial reply of "why are you using IIS" in support forums). In other words, it is generally not the platform that is the problem as much as it is the person in front of the console.  That doesn't make Apache better than IIS or vice versa, in fact, it doesn't mean anything.  If/when someone shows me a reasonable argument on why Apache should be used instead if IIS on a Windows server, I will gladly take it into consideration.  However, in my years of managing Windows servers, I haven't seen a technically compelling argument, just individual opinions. <br />
+<br />
+Thanks again,<br />
+Tim</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

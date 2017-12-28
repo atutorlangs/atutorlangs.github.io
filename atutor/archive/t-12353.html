@@ -1,0 +1,163 @@
+---
+ title: Cannot install ATutor 16
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cannot install ATutor 16</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="12353"></a>
+		<div class="forum-post-author">
+			<label class="title">sunee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-21 05:06:49</p>
+            </div>
+            <div class="postheader"><h3>Cannot install ATutor 16</h3></div>
+				
+			<div class="body">
+				<p>We cannot install ATutor 1.6 for testing because the "mbstring" is Disabled.<br />
+We tried to config "mbstring" in the php.ini (see attachment) but it still doesn't work.<br />
+Please help.<br />
+Thank you.<br />
+<br />
+Things to describe: <br />
+operating system -CentOS : Linux 2.6.9-55.0.2.ELsmp<br />
+version of ATutor -1.5.5<br />
+versions of php -4.3.9<br />
+version of mysq l -4.1.20<br />
+webserver & version - Apache/2.0.52 (CentOS)<br />
+copies of error messages -<br />
+changes to default settings -<br />
+web browser being used -IE6<br />
+and anything else relevant -the system has ATutor 1.5.4 running also.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12354"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-21 05:35:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install ATutor 1.6</h3></div>
+				
+			<div class="body">
+				<p>Does your server have mbstring installed?<br />
+<br />
+You can search for "mbstring" in the phpinfo() output, or type "rpm -q php-mbstring" in the console (I assume the command will go for CentOS). In the latter case, you'll see either a version or a "not installed" message.<br />
+<br />
+If it isn't, you should be able to find an appropriate RPM on the installation DVD/CD or download.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12358"></a>
+		<div class="forum-post-author">
+			<label class="title">basile</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-21 08:17:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install ATutor 1.6</h3></div>
+				
+			<div class="body">
+				<p>I have italian server: Tophost and in this server I cannot install ATutor 1.6 for testing because the "mbstring" is not there. For My Host is impossible enable mbstring for the next future. <br />
+It's possible install atutor without mbstring?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12362"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-21 10:29:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install ATutor 1.6</h3></div>
+				
+			<div class="body">
+				<p>Most servers nowadays have mbstring capabilities, so your ISP really should upgrade their system to include it. It only takes a few minutes to install.<br />
+<br />
+With Italian you might get away with just using the ATutor builtin utf-8 library (but maybe not). You can disable the mbstring check in the install/index.php file by commenting out the mbstring related lines. This may get you up and running, but it is not a solution if you plan to use the system as a production environment. That system must include mbstring support.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12364"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-21 10:35:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install ATutor 1.6</h3></div>
+				
+			<div class="body">
+				<p>If you are not using RPMs, you would need to recompiling PHP with the --enable-mbstring flag added.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12384"></a>
+		<div class="forum-post-author">
+			<label class="title">sunee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-25 23:47:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install ATutor 1.6</h3></div>
+				
+			<div class="body">
+				<p>Thank you very much; we have installed "mbstring" and it works ok.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12385"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-26 07:40:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install ATutor 1.6</h3></div>
+				
+			<div class="body">
+				<p>You're welcome. It was a pleasure.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

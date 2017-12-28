@@ -1,0 +1,182 @@
+---
+ title: i dont delete a group
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>i dont delete a group</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="7757"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-19 15:43:51</p>
+            </div>
+            <div class="postheader"><h3>i dont delete a group</h3></div>
+				
+			<div class="body">
+				<p>estoy tratando de borrar un grupo creado por un instructor y no se puede, se abre una pagina en blanco y no se efectua ninguna operacion<br />
+<br />
+<br />
+i dont delete a group such a instructor in the Enrollment module<br />
+<br />
+this is a bug??????</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7760"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-19 16:48:35</p>
+            </div>
+            <div class="postheader"><h3>Re: i dont delete a group</h3></div>
+				
+			<div class="body">
+				<p>Es s un bug.  Ha estado fijado para el lanzamiento siguiente.<br />
+<br />
+Yes it is a bug. It has been fixed for the next release.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7762"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-19 16:51:20</p>
+            </div>
+            <div class="postheader"><h3>Re: i dont delete a group</h3></div>
+				
+			<div class="body">
+				<p>existe alguna manera de repararlo ahora???</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7765"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-19 17:09:28</p>
+            </div>
+            <div class="postheader"><h3>Re: i dont delete a group</h3></div>
+				
+			<div class="body">
+				<p>Pedir Joel para tomar una mirada.  Maana. <br />
+<br />
+I will ask Joel to take a look. Tomorrow.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7766"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-19 17:11:56</p>
+            </div>
+            <div class="postheader"><h3>Re: i dont delete a group</h3></div>
+				
+			<div class="body">
+				<p>muchas gracias<br />
+<br />
+saludos<br />
+<br />
+<br />
+....desde Chile ; )</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7828"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-25 17:17:09</p>
+            </div>
+            <div class="postheader"><h3>Re: i dont delete a group</h3></div>
+				
+			<div class="body">
+				<p>Finalmente hay alguna forma de solucionar este problema?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7851"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-26 12:29:25</p>
+            </div>
+            <div class="postheader"><h3>Re: i dont delete a group</h3></div>
+				
+			<div class="body">
+				<p>Agregue la lnea siguiente a <br />
+ mods/_core/enrolment/module.php<br />
+<br />
+$this->_pages['tools/enrollment/groups_delete.php']['title_var']  = 'groups';</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7853"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-26 12:38:39</p>
+            </div>
+            <div class="postheader"><h3>Re: i dont delete a group</h3></div>
+				
+			<div class="body">
+				<p>thank u very much greg, now i can delete a groups<br />
+<br />
+<br />
+<br />
+saludos</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

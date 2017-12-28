@@ -1,0 +1,127 @@
+---
+ title: upgradeing to 20 and moveing to new server advice needed
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>upgradeing to 20 and moveing to new server advice needed</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="20386"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-14 12:16:16</p>
+            </div>
+            <div class="postheader"><h3>upgradeing to 20 and moveing to new server advice needed</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+We curetnly run ATutor 1.6.1 and would like some advise on upgrading.<br />
+We currently have the following custom modules :- <br />
+ <br />
+ A module enabling Flash to be used with Atutor<br />
+ A module that sends an email to the course tutor when a new thread is started in a course forum <br />
+ Articulate module<br />
+ <br />
+At the same time as doing this upgrade, we want to move to a new server (as the current hosting company has restrictions on php and upload size etc. that cant be bypassed).<br />
+ <br />
+Option 1 :- copy current ATutor install to new server, test, and then upgrade this to 2.0<br />
+Option 2 :- Install clean 2.0 on new server, and import user data from old server and install<br />
+ <br />
+Any suggestions or ideas on the best method would be appreciated.<br />
+ <br />
+We only need to transfer user data (usernames/passwords) to the new server as we will be re-building all our courses again anyway.<br />
+<br />
+<br />
+  Operating system ATutor is installed on -<br />
+Linux Debian etch (new server)<br />
+  ATutor version -<br />
+1.6.1 (old version)<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+PHP 5.2.0-8+etch16 <br />
+  MySQL version -<br />
+mysql  Ver 14.12 Distrib 5.0.32<br />
+  Webserver & version -<br />
+Apache/2.2.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20392"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-15 09:09:49</p>
+            </div>
+            <div class="postheader"><h3>Re: upgradeing to 2.0 and moveing to new server advice needed.</h3></div>
+				
+			<div class="body">
+				<p>Option 2 may be a better bet if its just user account info that needs to be transferred. You'll probably want to manually export the members table from the old site, and importing directly into MySQL using something like phpMyAdmin.<br />
+<br />
+If you are using a custom theme, it will need to be recreated.<br />
+<br />
+Modules should work fine in 2.0, though these are third party modules. We have not tested them.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20397"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-15 11:08:43</p>
+            </div>
+            <div class="postheader"><h3>Re: upgradeing to 2.0 and moveing to new server advice needed.</h3></div>
+				
+			<div class="body">
+				<p>Ok,<br />
+Have now been asked how easy it would be to import the course matterial as well, as bosses are thinking of saving some time and only rewriting a couple of the courses! BOSSES who needs em???<br />
+<br />
+When we move over to the new server, it is going to be on a sub domain rather than a folder on our main domain.  Could this cause problems with the course data as well?<br />
+<br />
+Thanks<br />
+<br />
+Matt</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20398"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-15 13:21:20</p>
+            </div>
+            <div class="postheader"><h3>Re: upgradeing to 2.0 and moveing to new server advice needed.</h3></div>
+				
+			<div class="body">
+				<p>Create backups of courses on the old site (Manage>Backups) then restore them on the new server, to move them.<br />
+<br />
+no problem as a sub-domain.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,233 @@
+---
+ title: 154 Cannot override file
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>154 Cannot override file</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="10439"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 05:30:06</p>
+            </div>
+            <div class="postheader"><h3>154 Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>hi,<br />
+<br />
+just successfully installed Atutor 1.5.4, but when I tried to upload a profile pictiure I got the following error:<br />
+<br />
+"The following errors occurred:<br />
+    * Cannot override file."<br />
+<br />
+..any ideas? permission problems? <br />
+<br />
+<br />
+best, vjo</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10440"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 08:11:54</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>Did you upload it a second time? The first must be deleted before the second with the same name can be uploaded.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10443"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 08:53:11</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>no, this was the first time I tried to do it after the install. I get the same error both as user and as administrator, and renaming the picture doesn't help either. <br />
+<br />
+this did work on the beta version on the same server, which was a fresh install, not an upgrade.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10444"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 09:13:27</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>I am unable to reproduce this.<br />
+<br />
+What are the details of the machine ATutor is running on? <br />
+<br />
+Permissions maybe, but they adopt the persmissions from the content directory when it gets its permissions set. Look in the content/profile_pictures directory and see what it contains. <br />
+<br />
+Is php compiled with GD, and what type of image are you uploading?<br />
+<br />
+Is the system's /tmp directory writable (it should be by default).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10446"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 09:23:07</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>the server is our production server, and has the recommended settings. <br />
+<br />
+tried some more. I am able to upload and change pictures on 1.5.4 RC1 and 1.5.4 beta on the same server, which both were fresh installs. <br />
+<br />
+php is compiled with GD, and it was a jpg. <br />
+<br />
+the content directory is not in the atutor directory, but in a different directory at root level on the server (same level as the atutor dir), and is called atutor-innhold/ <br />
+<br />
+within that directory there was no folder called profile_pictures, but I created it and chmodded it to 755 (and 777) - still no luck though. <br />
+<br />
+the tmp/ directory is most probably fine, as all other uploads work.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10447"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 09:29:03</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>oh, and for the RC1 install the content directory is within the atutor directory, and correctly contains the profile_pictures folder with subfolders.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10449"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 09:52:48</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>It still seems to be working ok for me when the content dir gets created outside. And the profile_picture, and other directories are all created.<br />
+<br />
+Can you send me a phpinfo dump.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10451"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 10:02:03</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>I'm pretty sure you are, but I'll ask anyway, did you download a fresh copy of 1.5.4 with the installer fix? The installer was not creating the content subdirectories.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10453"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-19 10:10:01</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>sure, downloaded a fresh one today, which would be about 7 hours ago. <br />
+<br />
+see mail for phpinfo</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10461"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-20 03:35:38</p>
+            </div>
+            <div class="postheader"><h3>Re: 154: Cannot override file</h3></div>
+				
+			<div class="body">
+				<p>fixed this by manually adding the directories "originals" and "thumbs" in the (manually added) "profile_pictures" dir, and chmodding them all to 755</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

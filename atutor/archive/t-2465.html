@@ -1,0 +1,110 @@
+---
+ title: Undefined index
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Undefined index</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2465"></a>
+		<div class="forum-post-author">
+			<label class="title">sabino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-16 12:30:58</p>
+            </div>
+            <div class="postheader"><h3>Undefined index</h3></div>
+				
+			<div class="body">
+				<p>trying to contact thecourse instructor as a student, by means of the instructor contact form, I get this error<br />
+<br />
+Notice: Undefined index: from_browse in D:\elearning\atutor\users\contact_instructor.php on line 14<br />
+<br />
+An error occurred. Output sent before it should have. Please correct the above error(s).<br />
+<br />
+--------------------------------------------------------------------------------<br />
+Error initializing session. Please varify that session.save_path is correctly set in your php.ini <br />
+<br />
+file and the directory exists.<br />
+<br />
+<br />
+any suggestion is welcome<br />
+<br />
+http://150.217.101.11:8080/atutor/info.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2757"></a>
+		<div class="forum-post-author">
+			<label class="title">engelhk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-14 16:28:01</p>
+            </div>
+            <div class="postheader"><h3>Undefined index</h3></div>
+				
+			<div class="body">
+				<p>I am getting the same error. Bug maybe? :( <br />
+<br />
+Thanks in advance for any fix.<br />
+<br />
+Keith E.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2768"></a>
+		<div class="forum-post-author">
+			<label class="title">engelhk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-15 10:01:39</p>
+            </div>
+            <div class="postheader"><h3>Undefined index</h3></div>
+				
+			<div class="body">
+				<p>Figured it out. Line 254 in .../ATutor/users/index.php needs to be;<br />
+<br />
+echo '&middot; &lt;a href="users/contact_instructor.php?course='.$row['course_id'].SEP.'from_browse=1">'._AT('contact_instructor').'&lt;/a>&lt;br />&lt;br />';<br />
+<br />
+It was missing "].SEP.'from_browse=1' at the end of the URL creation.<br />
+<br />
+Keith E.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2839"></a>
+		<div class="forum-post-author">
+			<label class="title">sabino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-20 14:52:33</p>
+            </div>
+            <div class="postheader"><h3>very good</h3></div>
+				
+			<div class="body">
+				<p>it works now<br />
+thanks</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

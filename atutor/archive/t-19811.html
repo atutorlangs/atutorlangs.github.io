@@ -1,0 +1,188 @@
+---
+ title: error on upgrading  164
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>error on upgrading  164</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19811"></a>
+		<div class="forum-post-author">
+			<label class="title">markmason7</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 09:43:20</p>
+            </div>
+            <div class="postheader"><h3>error on upgrading  164</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - UNIX<br />
+  ATutor version - 1.6.4 from 1.6.2<br />
+  Patch #s applied - none<br />
+  ATutor theme name - default<br />
+  PHP version - 4.4.9<br />
+  MySQL version - 5<br />
+  Webserver & version - apache managed by 1 and 1<br />
+  Copies of error messages - see error message below<br />
+  Changes to default settings - none<br />
+  Web browser being used - firefox<br />
+  ...and anything else relevant -<br />
+<br />
+<br />
+hi, I'm folloinwg upgrade instructions.<br />
+Step 0-3 is successful but when it gets to Step 4: New 1.6.4 Configuration Options I get the following error message:<br />
+<br />
+"Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /path_to_atutor_new_files/include/classes/Module/Module.class.php  on line 664"<br />
+<br />
+CURL is enabled<br />
+Tried re uploading all files and get same error<br />
+<br />
+thanks<br />
+Mark</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19813"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 11:21:26</p>
+            </div>
+            <div class="postheader"><h3>Re: error on upgrading  1.6.4</h3></div>
+				
+			<div class="body">
+				<p>If you uploaded the files one-by-one instead of uploading the bundle as a single zip file, then unzipping it on the server, that is likely the problem. Upload the bundle, then unzip it and upgrade.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19815"></a>
+		<div class="forum-post-author">
+			<label class="title">markmason7</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 12:59:45</p>
+            </div>
+            <div class="postheader"><h3>Re: error on upgrading  1.6.4</h3></div>
+				
+			<div class="body">
+				<p>Have just tried that and the same error has appeared:<br />
+<br />
+"Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /homepages/43/d150980211/htdocs/etrain/at/include/classes/Module/Module.class.php  on line 664"<br />
+<br />
+sorry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19819"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 14:11:05</p>
+            </div>
+            <div class="postheader"><h3>Re: error on upgrading  1.6.4</h3></div>
+				
+			<div class="body">
+				<p>Note the PHP requirement. Should be 5.02 or later.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19820"></a>
+		<div class="forum-post-author">
+			<label class="title">markmason7</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 14:34:29</p>
+            </div>
+            <div class="postheader"><h3>Re: error on upgrading  1.6.4</h3></div>
+				
+			<div class="body">
+				<p>thanks.<br />
+<br />
+Mark</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19821"></a>
+		<div class="forum-post-author">
+			<label class="title">markmason7</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 16:56:16</p>
+            </div>
+            <div class="postheader"><h3>Re: error on upgrading  1.6.4</h3></div>
+				
+			<div class="body">
+				<p>I checked with my host company about upgrading PHP. turns out to be a simple solution in my case:<br />
+<br />
+1. Create a .htaccess file or just edit if you already have this file.<br />
+2. Paste this code to the .htaccess file:<br />
+<br />
+"AddType x-mapp-php5 .php 3." (without the quotes) <br />
+<br />
+3. Upload this file into into the root of your domain.<br />
+<br />
+worked a treat and my upgrade worked perfectly<br />
+<br />
+thanks<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Note the PHP requirement. Should be 5.02 or later.<br />
+[op]forums/view.php?fid=7;pid=19811;page=1#19819[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19822"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 17:16:23</p>
+            </div>
+            <div class="postheader"><h3>Re: error on upgrading  1.6.4</h3></div>
+				
+			<div class="body">
+				<p>Good bit of info. thx</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

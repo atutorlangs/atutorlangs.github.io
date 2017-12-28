@@ -1,0 +1,98 @@
+---
+ title: Session variables in php script
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Session variables in php script</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="23391"></a>
+		<div class="forum-post-author">
+			<label class="title">VGA</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-01 12:40:30</p>
+            </div>
+            <div class="postheader"><h3>Session variables in php script</h3></div>
+				
+			<div class="body">
+				<p>Hello, I'm using jquery calls (from my own custom module) to my own external php scripts for actions on a database, but how can I access session variables from the php script itself ? I don't want to pass them from javascript for security concerns.<br />
+<br />
+I did a quick attempt by including vitals.inc but my script got much slower and instead of returning just one of my custom string, it returns a whole html page ... :D  <br />
+<br />
+I just need the member_id and of course to be sure that the client is logged in.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23392"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-01 13:01:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Session variables in php script</h3></div>
+				
+			<div class="body">
+				<p>You will need to include vitals.inc.php to maintain an ongoing session. At the top of the vitals file set AT_DEVEL to 1 to turn on debugging. You'll then get the session displayed below when you reload an ATutor page, and you can use the debug() function to output values of just about any variable.<br />
+<br />
+The the debug() details in the developer documentation.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23395"></a>
+		<div class="forum-post-author">
+			<label class="title">VGA</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-03 11:21:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Session variables in php script</h3></div>
+				
+			<div class="body">
+				<p>I'm using a php file to write to the database and I want it to use read the member_id from the session info so I'm sure the user is logged in. It also returns a single string for success or failure. (I call it  with jquery's post function)<br />
+<br />
+If I include vitals.inc at the top of that php, a whole html page is returned to my jquery post command, it's 10 times slower and my mysql code isn't even run it seems.  :( <br />
+<br />
+Is there a stripped down include file that only maintains the session ? (Which will be AJAX-called from javascript and not loaded with a browser.)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23398"></a>
+		<div class="forum-post-author">
+			<label class="title">VGA</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-03 20:20:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Session variables in php script</h3></div>
+				
+			<div class="body">
+				<p>Putting the command :<br />
+$_user_location	= 'users';<br />
+<br />
+on top of my script fixed my problem it seems. :D</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

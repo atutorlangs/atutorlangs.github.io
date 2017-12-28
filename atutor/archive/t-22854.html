@@ -1,0 +1,92 @@
+---
+ title: Double quotation mark
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Double quotation mark</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22854"></a>
+		<div class="forum-post-author">
+			<label class="title">DonLimo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-04 05:48:14</p>
+            </div>
+            <div class="postheader"><h3>Double quotation mark</h3></div>
+				
+			<div class="body">
+				<p>I'm searching help for another problem found yesterday.<br />
+A teacher created a Test in his course and told me that can not view images.<br />
+The question he wrote have this html code inside:<br />
+<br />
+&lt;p>&lt;img src="aANDb.gif" border="0" alt="Alternate Text" />&lt;/p><br />
+&lt;p>Quale operazione booleana rappresenta questa immagine?&lt;/p><br />
+<br />
+The code is fine but the browser receives this code from the server (as you can see from the attached image):<br />
+<br />
+&lt;p>&lt;img border="&quot;0&quot;" text&quot;="" alt="&quot;Alternate" src="&quot;aANDb.gif&quot;">&lt;/p><br />
+&lt;p>Quale operazione booleana rappresenta questa immagine?&lt;/p><br />
+<br />
+I "solved" the problem by removing the quotation mark and the image show itself:<br />
+<br />
+&lt;p>&lt;img src=aANDb.gif border=0 alt=Alternate Text />&lt;/p><br />
+&lt;p>Quale operazione booleana rappresenta questa immagine?&lt;/p><br />
+<br />
+but is not a solution! Is this a bug too?<br />
+<br />
+Operating system - Linux 2.6.32-5-686<br />
+ATutor version - 2.0.3(r11495)<br />
+PHP Version - 5.3.3-7+squeeze3<br />
+MySQL version - 5.1.49-3<br />
+Webserver & version - Apache/2.2.16<br />
+Web browser being used - Tested on IE9, FF, Chrome</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22855"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-04 08:42:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Double quotation mark</h3></div>
+				
+			<div class="body">
+				<p>Yes, this does seem to be a bug. I've posted a bug report. We'll try to get a patch out soon.<br />
+<br />
+http://atutor.ca/atutor/mantis/view.php?id=4949</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22902"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-14 16:28:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Double quotation mark</h3></div>
+				
+			<div class="body">
+				<p>This problem is fixed with Patch 05 for ATutor 2.0.3</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

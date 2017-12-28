@@ -1,0 +1,89 @@
+---
+ title: access without previous validation
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>access without previous validation</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="1701"></a>
+		<div class="forum-post-author">
+			<label class="title">flopezg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-05-28 02:56:19</p>
+            </div>
+            <div class="postheader"><h3>access without previous validation</h3></div>
+				
+			<div class="body">
+				<p>I have installed Atutor version 1.3.2 on a server running Linux SME (Mitel).  It has been working properly, however I have found a problem that would like you to help me find the solution.<br />
+ <br />
+The problem is the following:<br />
+ <br />
+I have found that any content that has been imported into ATutor and that I have configured with restricted access, can be accessed without previous validation only by entering the complete URL of the content in a web browser. <br />
+ <br />
+e.g. By simply entering  http://ATutor.com/content/3/marketingdemo/index.php  on a web browser anybody can access the content.  In this example, "marketingdemo" is the name of the course.  It  has created a directory strucutre inside the folder "3" and inside the folder "Content".   Index.php is the initial file in the root of the main directory "marketingdemo".<br />
+ <br />
+Considering that these are contents with restricted access (not public), if a user enters this route using the browser, the content of the course is shown, without mandatory validation of user and password.<br />
+ <br />
+Mi question is how do I control this situation?  I understand that there are session variables that for some reason are not being considered when accessing the imported contents.  What should I do in order to protect these imported contents from not validated access?<br />
+ <br />
+Thank you for your answer, I look forward to hearing from you soon.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1721"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-05-29 20:40:41</p>
+            </div>
+            <div class="postheader"><h3>Content dir is always readable</h3></div>
+				
+			<div class="body">
+				<p>The content directory is primarily used for supporting files, rather than actual content, though you could  store content their as I'm guessing your have. Content is normally store in the database, restricted from access.<br />
+<br />
+There is no way, as a function of ATutor, to restrict access to files in the content directory. You could apply server based authentication (like htaccess with Apache) to make a content directory private (troublesome I'm sure). Students would have to know the names of file in your content directory to access them.<br />
+<br />
+We'll try to deal with private content directories better in a future version.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1725"></a>
+		<div class="forum-post-author">
+			<label class="title">flopezg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-05-30 18:38:11</p>
+            </div>
+            <div class="postheader"><h3>reply to greg</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg<br />
+Thanks for your reply.  However I have another question.  I have noticed that this problem doesn't occur with your demo application. I mean, if I try to open any content of the demo just by entering the URL address in a web browser it will as for my validation.  How did you do that? Why does it work with your demo application?<br />
+<br />
+By the way, you say that "students would have to know the names of files in your content directory to acces them"... I tell you that it is very easy for them if smart enough as they are.... to try to log on after their period of validation is over.  This is a main concern for me as I intend to charge for the use of my content, so I don't want anybody to access them without a validation.<br />
+<br />
+Please, tell me how did you make that for your demo the validation works?<br />
+<br />
+thank you.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

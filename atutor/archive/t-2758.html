@@ -1,0 +1,123 @@
+---
+ title: SCORM compliance
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>SCORM compliance</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2758"></a>
+		<div class="forum-post-author">
+			<label class="title">Rafaeldff</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-14 16:42:22</p>
+            </div>
+            <div class="postheader"><h3>SCORM compliance</h3></div>
+				
+			<div class="body">
+				<p>I'm not shure if this should be posted to the support or to the community forums. <br />
+<br />
+I want to know what SCORM version does ATutor conform to and to what level it conforms.<br />
+<br />
+thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2759"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-14 18:14:33</p>
+            </div>
+            <div class="postheader"><h3>SCORM CAM 1.2</h3></div>
+				
+			<div class="body">
+				<p>It conforms with  SCORM Content Aggregation1.2, and IMS Content Packaging 1.1.2. This information can be found in the imsmanifest.xml found in a content package.<br />
+<br />
+There is some talk about extending ATutor conformance when then next SCORM specification is released. There are some issues with the current spec that prevent us from adopting the full specification.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2776"></a>
+		<div class="forum-post-author">
+			<label class="title">Rafaeldff</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-15 14:30:07</p>
+            </div>
+            <div class="postheader"><h3>Thanks</h3></div>
+				
+			<div class="body">
+				<p>Thanks for answering so quickly. I'm actually evaluating ATutor because I'm  involved in a project to build an (other) open source LMS. We'll try not to reinvent the weel and inovate - the project is still on it's early days.<br />
+Anyway, I'm very curious about the problems you faced implementing SCORM 1.2 compliance, why the choice not to implement RTE and what are the difficulties with the 2004 spec. If you could point me to documents, forum or mailing list discussions it would be excelent. Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2777"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-15 18:22:42</p>
+            </div>
+            <div class="postheader"><h3>Three Problems with SCORM</h3></div>
+				
+			<div class="body">
+				<p>First, everything we develop at our centre is required to conform with accessibility specifications (WCAG), so people with disabilities are able to participate equally in all learning activities. One of the accessibility rules is that if client side scripting is used (namely Javascript), it must also function effectively without scripting. Because SCORM SCOs rely on scripting and will not function otherwise, they fail this rule.<br />
+<br />
+Second, from  both accessibility and engineering perspectives, content, presentation, and controls need to be separated. In SCO's the javascript navigation controls are not separable from the content in which they are embedded, thus limiting how an LMS might choose to display navigation elements.<br />
+<br />
+Third, because I am required to use Javascript to present SCO controls, I am limited as a developer in how I can choose to implement the SCORM specification. The SCORM specification has become technology dependent. This should not be. <br />
+<br />
+We have a better way to implement SCORM to meet our accessibility requirements, but we can not implement it and be   compatible with current SCOs. We can make current SCO's work, but they would not be fully accessible. We're suggesting moving all the sequencing rules, currently contained in the embedded scripting, into an xml file and letting the LMS decide how to present to navigation elements, whether through Javascript or through some other means.<br />
+<br />
+What we would like to propose is the eventual removal of the embedded javascript buttons in favour of an XML based strategy for defining sequencing rules in SCOs.  There is much resistance to this from SCORM folk. It would be a major shift in the specification that would effectively make all current SCOs obsolete. They would be right to say that such a proposal would unlikely be adopted. Over the long term however, shifting from a specification that requires client side scripting, to one that can support client side and server side methods simultaneously, would make the specification more robust, and more compatible with accessibility specifications. <br />
+<br />
+It's a longer story than that, but you get the idea...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2780"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-15 18:50:15</p>
+            </div>
+            <div class="postheader"><h3>followup on Community Discussions</h3></div>
+				
+			<div class="body">
+				<p>Continue this discussion in the Community Dicussions forum:<br />
+<br />
+http://www.atutor.ca/view/16/2779/1.html</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

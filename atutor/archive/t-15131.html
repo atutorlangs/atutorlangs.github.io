@@ -1,0 +1,122 @@
+---
+ title: pretty URL after server changes
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>pretty URL after server changes</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="15131"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-11 03:31:19</p>
+            </div>
+            <div class="postheader"><h3>pretty URL after server changes</h3></div>
+				
+			<div class="body">
+				<p>hia, my ISP for atutor.no changed some internal structures for the server, so I had to change the path to the content directory in include/config.inc.php - however, after this the pretty URLs does not work anymore. if I go to:<br />
+<br />
+http://atutor.no/atutor/democourse<br />
+<br />
+I get a white page with the error: "no input file specified". <br />
+<br />
+soo, which input file is it looking for, and do I have to make any changes to make ATutor find it again, and if so: where? :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15134"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-11 08:48:53</p>
+            </div>
+            <div class="postheader"><h3>Re: pretty URL after server changes</h3></div>
+				
+			<div class="body">
+				<p>Make sure there were not any symbolic links in the new path to the content dir. <br />
+<br />
+create a file with "getcwd()" in it can compare the output from it, with the path in the config file.<br />
+<br />
+The message appears to be coming from the server. Something strange in Web server settings perhaps. The message  displays instead of a 404 message.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15135"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-11 10:43:27</p>
+            </div>
+            <div class="postheader"><h3>Re: pretty URL after server changes</h3></div>
+				
+			<div class="body">
+				<p>I don't think this message is from ATutor.  Could be related to .htaccess?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I get a white page with the error: "no input file specified".<br />
+[op]forums/view.php?fid=7;pid=15131;page=1#15131[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15142"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 04:26:46</p>
+            </div>
+            <div class="postheader"><h3>Re: pretty URL after server changes</h3></div>
+				
+			<div class="body">
+				<p>the content directory is working, as ATutor gets content (images for instance) in courses from that directory, and getcwd() shows that the path must be ok. <br />
+<br />
+I had some other trouble with .htaccess files when this happened, so I believe it can be related to that.. where's ATutors .htaccess file(s) supposed to be located?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15152"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 09:44:05</p>
+            </div>
+            <div class="postheader"><h3>Re: pretty URL after server changes</h3></div>
+				
+			<div class="body">
+				<p>.htaccess is located under ATutor/<br />
+<br />
+It could also be the restriction that are being set upon .htaccess file in the apache server, within the httpd.conf</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,115 @@
+---
+ title: SCORM grades
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>SCORM grades</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="19417"></a>
+		<div class="forum-post-author">
+			<label class="title">theanti9</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-13 18:28:05</p>
+            </div>
+            <div class="postheader"><h3>SCORM grades</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Ubuntu 9.10<br />
+  ATutor version - 1.6.4<br />
+  PHP version - 5.3.0<br />
+  MySQL version - 5.1.37<br />
+  Webserver & version - Apache 2.2.12<br />
+<br />
+I'm looking to find out where in the database the grades are stored for scorm packages. I can't find them. I'm trying to make a report page for an outside party to come in and view the progress of their students in their group. I need to see what courses the students have passed and what they haven't done yet. If someone could point me in the direction of this information, or maybe another way to get the right information, that would be great.<br />
+<br />
+Thanks,<br />
+Ryan</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19421"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-14 10:19:06</p>
+            </div>
+            <div class="postheader"><h3>Re: SCORM grades</h3></div>
+				
+			<div class="body">
+				<p>SCORM grades are not saved. <br />
+<br />
+Create your tests with ATutor if you need data. Or create them with an IMS QTI compliant test authoring tool, and import the QTI tests into ATutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19474"></a>
+		<div class="forum-post-author">
+			<label class="title">matthai</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-23 04:50:48</p>
+            </div>
+            <div class="postheader"><h3>Re: SCORM grades</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+the scorm-1.2 rte stores all CMI data in the cmi table.<br />
+<br />
+Regards,<br />
+Matthai<br />
+<br />
+<br />
+mysql> select * from AT_cmi;<br />
++--------+---------+-----------+----------------------------+-------------------------------------------------------------------------------------+<br />
+| cmi_id | item_id | member_id | lvalue                     | rvalue                                                                              |<br />
++--------+---------+-----------+----------------------------+-------------------------------------------------------------------------------------+<br />
+|      1 |       2 |         1 | cmi.core.total_time        | 0000:00:00.00                                                                       | <br />
+|      2 |       2 |         1 | cmi.core.lesson_status     | not attempted                                                                       | <br />
+|      3 |       2 |         1 | cmi.core.entry             |                                                                                     | <br />
+|      4 |       4 |         1 | cmi.core.total_time        | 0000:00:00.00                                                                       | <br />
+|      5 |       4 |         1 | cmi.core.lesson_status     | not attempted                                                                       | <br />
+|      6 |       4 |         1 | cmi.core.entry             |                                                                                     | <br />
+|      7 |       4 |         1 | cmi.objectives._count      | 3                                                                                   | <br />
+|      8 |       4 |         1 | cmi.suspend_data           | !fmxclp|MC_QTI_Optimaal_01#0#|QUE_1004#0#|QUE_1003#0#Essay_QTI_Optimaal_01_RS#dfd~# | <br />
+|      9 |       4 |         1 | cmi.objectives.0.score.raw | 0                                                                                   | <br />
+|     10 |       4 |         1 | cmi.objectives.2.id        | QUE_1004                                                                            | <br />
+|     11 |       4 |         1 | cmi.objectives.1.id        | MC_QTI_Optimaal_01                                                                  | <br />
+|     12 |       4 |         1 | cmi.objectives.0.id        | QUE_1003                                                                            | <br />
+|     13 |       4 |         1 | cmi.objectives.2.score.raw | 0                                                                                   | <br />
+|     14 |       4 |         1 | cmi.objectives.1.score.raw | 0                                                                                   | <br />
+|     15 |       4 |         1 | cmi.core.score.raw         | 0                                                                                   | <br />
+|     16 |       2 |         1 | cmi.core.score.raw         | 0                                                                                   | <br />
+|     17 |       2 |         1 | cmi.suspend_data           | !fmxclp|QTI_MC_101b##|QTI_MC_101##MC_101_Q01#D~#                                    | <br />
+|     18 |       2 |         1 | cmi.objectives.0.score.raw | 0                                                                                   | <br />
+|     19 |       2 |         1 | cmi.objectives.1.score.raw | 0                                                                                   | <br />
+|     20 |       2 |         1 | cmi.objectives._count      | 2                                                                                   | <br />
+|     21 |       2 |         1 | cmi.objectives.1.id        | QTI_MC_101b                                                                         | <br />
+|     22 |       2 |         1 | cmi.objectives.0.id        | QTI_MC_101                                                                          | <br />
++--------+---------+-----------+----------------------------+-------------------------------------------------------------------------------------+<br />
+22 rows in set (0.00 sec)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

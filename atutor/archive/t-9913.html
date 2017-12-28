@@ -1,0 +1,171 @@
+---
+ title: unable to make a course back
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>unable to make a course back</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9913"></a>
+		<div class="forum-post-author">
+			<label class="title">mar150403</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-21 17:55:53</p>
+            </div>
+            <div class="postheader"><h3>unable to make a course back</h3></div>
+				
+			<div class="body">
+				<p>I am trying to make a backup of several courses. For some, it works perfectly, but for some others I get this error:<br />
+<br />
+Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 910518 bytes) in /usr/local/apache/htdocs/cbs/ATutor/include/classes/zipfile.class.php on line 233<br />
+<br />
+Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 133 bytes) in Unknown on line 0<br />
+<br />
+And for one which is very important, after giving "save" it does nothing, it just goes to a blank page. Why is this? <br />
+<br />
+Could you help me to work this out?<br />
+<br />
+Thanks a lot!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9920"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-25 13:22:27</p>
+            </div>
+            <div class="postheader"><h3>Re: unable to make a course back</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9921"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-25 13:25:24</p>
+            </div>
+            <div class="postheader"><h3>Re: unable to make a course back</h3></div>
+				
+			<div class="body">
+				<p>Make sure the following are sufficeintly large in php.ini <br />
+<br />
+post_max_size<br />
+upload_max_filesize</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9970"></a>
+		<div class="forum-post-author">
+			<label class="title">mar150403</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-05 17:33:43</p>
+            </div>
+            <div class="postheader"><h3>Re: unable to make a course back</h3></div>
+				
+			<div class="body">
+				<p>I already made post_max_size and upload_max_filesize quite larger, but still getting the same error. What else can it be?<br />
+<br />
+  version of ATutor -  1.5.2 <br />
+  versions of php - 4.3.4<br />
+  version of mysq l - 4.0<br />
+  webserver & version - apache 2.0.40</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9973"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-06 06:11:54</p>
+            </div>
+            <div class="postheader"><h3>Re: unable to make a course back</h3></div>
+				
+			<div class="body">
+				<p>You'd better be more precise when describing the changes to those vars.<br />
+You also might have to increase the [b]memory_limit[/b] variable in php.ini. http://atutor.ca/view/3/7888/1.html might also help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9980"></a>
+		<div class="forum-post-author">
+			<label class="title">mar150403</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-06 14:32:21</p>
+            </div>
+            <div class="postheader"><h3>Re: unable to make a course backup</h3></div>
+				
+			<div class="body">
+				<p>Hello again,<br />
+<br />
+Thanks for your help. But still the same problem.<br />
+<br />
+Here what I have:<br />
+<br />
+post_max_size = 32M<br />
+upload_max_filesize = 16M<br />
+memory_limit = 32M<br />
+<br />
+I also did what you recommend in http://atutor.ca/view/3/7888/1.html<br />
+<br />
+For some courses I success to create the backup without a problem, in some other cases I get no system feedbacks or errors and for some others this error:<br />
+<br />
+Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 910518 bytes) in /usr/local/apache/htdocs/cbs/ATutor/include/classes/zipfile.class.php on line 233<br />
+<br />
+Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 133 bytes) in Unknown on line 0<br />
+<br />
+Any suggestion?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

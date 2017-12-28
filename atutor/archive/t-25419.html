@@ -1,0 +1,251 @@
+---
+ title: Mystery ltps in Test Questions
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Mystery ltps in Test Questions</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25419"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-08 20:17:51</p>
+            </div>
+            <div class="postheader"><h3>Mystery ltps in Test Questions</h3></div>
+				
+			<div class="body">
+				<p>I have a modified version of 2.0 installed and I noticed an odd thing today in the way test questions are being displayed.<br />
+<br />
+My question text is [b]What would the whole number part of &lt;div class="fraction_display">&lt;span class="numer_display">9&lt;/span>&lt;span class="bar_display">/&lt;/span>&lt;span class="denom_display">4&lt;/div> be if you converted it into a mixed number?[/b].  The &lt;div class="fraction_display"> part is a way to display fractions as nice looking fractions that's unique to my site.<br />
+<br />
+The problem is that the question text above outputs to [b]&lt;p>What would the whole number part of &lt;/p>&lt;div class="fraction_display">&lt;span class="numer_display">9&lt;/span>&lt;span class="bar_display">/&lt;/span>&lt;span class="denom_display">4&lt;/span>&lt;/div> be if you converted it into a mixed number?[/b].<br />
+<br />
+Notice the mystery &lt;p> that shows up.  Where does that come from and how can I turn it off?  It creates an issue with the proper displaying of fractions on my end (see attached screenshot).<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25421"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 07:12:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>A div inside a paragraph would be invalid HTML. The editor is likely trying to fix it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25422"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 10:08:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>In the DB, the text of the "question" field is [b]What would the whole number part of &lt;div class="fraction_display">&lt;span class="numer_display">9&lt;/span>&lt;span class="bar_display">/&lt;/span>&lt;span class="denom_display">4&lt;/div> be if you converted it into a mixed number?[/b]<br />
+<br />
+There are no &lt;p> tags present.  So, it seems that the script that displays the questions is automatically putting the question text in a &lt;p>.  Do you know where I could go to turn that off?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25423"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 10:16:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>Actually, I think I just found it.  The &lt;p> tags seem to be added from each question type's /path/to/your/ATutor/installation/themes/default/test_questions/[question_type].tmpl.php file.<br />
+<br />
+Greg: Can you see any reason why taking out the &lt;p> tags from those files would cause something to break or not display correctly?<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25424"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 10:17:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>The text does need to be in some sort of container. TinyMCE automatically uses P tags if nothing else is specified. <br />
+<br />
+Turning that off would be question for the TinyMCE people. My guess is it would be a change in the code.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25425"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 10:27:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>As an experiment, in the "multichoice.tmpl.php" file, I changed this...<br />
+<br />
+[quote]&lt;p>&lt;?php echo AT_print($this->row['question'], 'tests_questions.question'); ?>&lt;/p>[/quote] <br />
+<br />
+to this...<br />
+<br />
+[quote]&lt;?php echo AT_print($this->row['question'], 'tests_questions.question'); ?>[/quote] <br />
+<br />
+<br />
+Then when I previewed the question it rendered this HTML...<br />
+<br />
+[quote]<br />
+<br />
+&lt;div style="padding-bottom: 20px" class="row">What would the whole number part of &lt;div class="fraction_display">&lt;span class="numer_display">9&lt;/span>&lt;span class="bar_display">/&lt;/span>&lt;span class="denom_display">4&lt;/span>&lt;/div> be if you converted it into a mixed number? <br />
+<br />
+...[MULTIPLE CHOICE ANSWERS AS A &lt;ul>]...<br />
+<br />
+&lt;/div><br />
+[/quote] <br />
+<br />
+<br />
+So, it appears that you're going to get the question placed in a &lt;div> automatically, this meeting the "container requirement" you mentioned above.<br />
+<br />
+Thoughts about this?<br />
+<br />
+<br />
+BTW, this isn't a TinyMCE thing.  I was using the plain text editor when I created this question.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25426"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 11:00:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>I see. The P tags are added by the question templates in the themes/default/test_questions/ directory.<br />
+<br />
+I would strongly recommend against changing the default templates. If you must, copy them into a custom theme, reproducing the same directory structure, and edit them there.<br />
+<br />
+Myself, I'd probably look for a different strategy, maybe try replacing the fraction_display divs with spans.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25427"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 11:23:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>Is there a programmatic reason for not changing the templates, or just a preference for the &lt;p> tags?  It seems that displaying content in a &lt;p> tag or not has negligible consequences, but let me know if I'm missing something.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25428"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 11:37:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>No programmatic reason, though you'd need to keep track of the changes to the default theme, so they can be reapplied during an upgrade.<br />
+<br />
+If you recreate the templates as part of a theme, when you re-enable the theme after an upgrade, your modifications will be maintained.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25429"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-11 11:37:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Mystery &lt;p>'s in Test Questions?</h3></div>
+				
+			<div class="body">
+				<p>Great.  Thanks!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

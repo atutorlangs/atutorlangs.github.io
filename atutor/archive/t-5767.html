@@ -1,0 +1,740 @@
+---
+ title: How do I contribute TECHNICALLY
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>How do I contribute TECHNICALLY</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5767"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-09 08:18:28</p>
+            </div>
+            <div class="postheader"><h3>How do I contribute TECHNICALLY</h3></div>
+				
+			<div class="body">
+				<p>I've finished work on adding MD5 encryption to ATutor 1.5.1.<br />
+<br />
+The changes are quite extensive: 17 files got modified and 4 were created.<br />
+<br />
+I have zero experience in team development and using SVN mentioned in your developer guidelines. On the other hand, I presume that every new week ATutor goes farther and farther from v1.5.1 so these changes might require more work in order to merge them into current version in the nearest future. This makes me hurry a bit.<br />
+<br />
+Now I have these changes and documentation ready. Please tell me whether I should post them here or commit via SVN. If using SVN is obligatory, won't it happen that I'll have to re-merge the changes again into the future revisions? I'm concerned because their verification will take time since they are not compatible with existing non-hashed `password` fiels in AT_members & AT_admins.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5771"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-09 09:13:17</p>
+            </div>
+            <div class="postheader"><h3>Subversion is required</h3></div>
+				
+			<div class="body">
+				<p>To have your features added into the core ATutor source code, your changes must be managed in an SVN (subversion) development environment. There is no effective way for us to get your changes into ATutor otherwise. We do not have the resource to add them manually.<br />
+<br />
+You are right about ATutor moving further from 1.5.1 every day. What you have developed for 1.5.1 may no longer be compatible with the evolving 1.5.2 code.<br />
+<br />
+Once you have your SVN development version of ATutor working and your changes applied, you will need to setup a location where we can see what you have created, and test it. Assuming everything is good, we will create a branch in the repository where you can commit your changes. When the changes are all finalized we will merge them into the main (trunk) source code, where  they will become a permanent part of ATutor. You can continue to develop in your banch if you want to upgrade your features in the future, updating your branch regulary to make sure the code stays current. When your second batch of modifications are ready, we will merge those into the trunk. And so on into the future.<br />
+<br />
+Changes to the trunk database scheme we will need to make manually. Send us the details when you get to the branch commit stage.<br />
+<br />
+Other issues that will need to be dealt with are upgrading. When a person upgrades from 1.5.1 (or earlier) to 1.5.2 with MD5 enabled, a script will need to extend the upgrade script and rewrite all the fields that are not encrypted.<br />
+<br />
+There is also the issue of password recovery. It will no longer work with MD5 encrypted user information, unless it too it redesigned. <br />
+<br />
+There may be other places as well, where encrypted user information breaks the current tools. I have not investigated fully.<br />
+<br />
+A note on MD5, there have been reports over the past year or so of potential vulnerabilities. We have not comfirmed the problems ourselves, but if you have concerns about strict security, you may want to use sha1 encryption instead. It should be a relatively easy switch over, making a few adjustment to the MD5 code you have already created. Not required. Just a suggestion. <br />
+<br />
+Also note that I can make no garauntees that we will accept your changes.  Make sure you read our develop documentation, and follow the guidelines provided. It will increase the chances your code is accepted.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5772"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-09 09:51:21</p>
+            </div>
+            <div class="postheader"><h3>OK, I'll use SVN</h3></div>
+				
+			<div class="body">
+				<p>Thanks for your quick response.<br />
+<br />
+I've studied your documentation/developer/guidelines.html carefully, so no problems should arise from this viewpoint. Now I'm getting familiar with Subversion and it looks like I'll check out your next week's current revision.<br />
+<br />
+I am consious about the potential problems you highlighted, and they've been already dealt with. The following is a checklist from my documentation.<br />
+<br />
+------------<br />
+1. Hashing on login, registration, student list creation/import in SQL queries.<br />
+2. Hashing passwords in installer (during upgrade - also existing ones), changing `password` fields in DB.<br />
+3. Generating a random password on Password Reminder page.<br />
+4. Separate pages Change Password in profile settings.<br />
+------------<br />
+BTW, the last step contains the biggest changes and involves 12 files out of the total 21.<br />
+<br />
+<br />
+Current edition of the patch (as I've said, it's a modified 1.5.1) works 100% and shows no bugs. Though, it's my own testing.<br />
+<br />
+About using SHA1 instead of MD5.<br />
+I have not heard yet about the vulnerabilities you've mentioned, but I will investigate. I any case, switching will be extremely easy and effectively will require only replacing the appropriate strings in SQL queries (provided, of course, that the passwords have not been already hashed using MD5).<br />
+<br />
+I have a hope for our cooperation to be effective. Read you!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5832"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-15 07:15:16</p>
+            </div>
+            <div class="postheader"><h3>Which hashing algorithm to use?</h3></div>
+				
+			<div class="body">
+				<p>Meanwhile, Ive also found a paper Finding Collisions in the Full SHA-1 Collision Search Attacks on SHA1 by Xiaoyun Wang, <br />
+http://www.infosec.sdu.edu.cn/paper/sha1-crypto-auth-new-2-yao.pdf<br />
+discussed at e.g.<br />
+http://www.schneier.com/blog/archives/2005/08/new_cryptanalyt.html <br />
+I believe you are aware of this newly-baked vulnerability.<br />
+<br />
+<br />
+It forced me to look for a possible better alternative to SHA-1.<br />
+And I found nothing except for a MySQL function AES_ENCRYPT(). Using it would boost the ATutor requirements to MySQL 4.0.2 (besides a problem of storing/generating a key). Ive not tested it yet since our own server is on MySQL 3.23.58.<br />
+<br />
+At this point, the question seems to be obvious:<br />
+[b]Do you consider using SHA-1 in ATutor secure in long enough perspective? [/b]<br />
+If yes, its not gonna be a problem, as said in the above post.<br />
+If no, a discussion could be necessary to solve all the related problems.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5833"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-15 07:55:12</p>
+            </div>
+            <div class="postheader"><h3>Continued: Which hashing algorithm to use?</h3></div>
+				
+			<div class="body">
+				<p>Sorry, the first paragraph of my post has fallen to a black hole during cutting/pasting.<br />
+<br />
+Its salt is:<br />
+After some search I performed no doubt left that MD5 is not to be used; but, some doubts do exist in using SHA-1.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5839"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-15 11:04:18</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>MD5 should be fine. you're not blindly checking the hash anyway. so even if someone manages to get the hash right the value used to generate it may not even be valid.<br />
+<br />
+ie. generating an MD5 using Password + Login will ensure that you can't (not practically atleast) supply a hash that will match a different password yet the same Login.<br />
+<br />
+SHA-1 is only available in MySQL 4.0.2+.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5841"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-15 17:02:03</p>
+            </div>
+            <div class="postheader"><h3>Still doubtful</h3></div>
+				
+			<div class="body">
+				<p>[green]MD5 should be fine. you're not blindly checking the hash anyway. so even if someone manages to get the hash right the value used to generate it may not even be valid.[/green]<br />
+<br />
+But the thing is that we [i]do[/i] just check a hash. A password is not stored on server side, only hash, so we even haven't one to compare the input to. Therefore a situation you describe, when a different password is found which gives the same hash (a collision), [i]is[/i] a security threat since the PHP script doesn't and couldn't care about the initial password string.<br />
+<br />
+Here's an example of a typical query handling a hashed password in login.php (1.5.1, line 69):<br />
+<br />
+$sql = "SELECT member_id, login, preferences, password AS pass, language, status FROM ".TABLE_PREFIX."members WHERE login='$this_login' AND password=MD5('$this_password')";<br />
+<br />
+<br />
+[green]ie. generating an MD5 using Password + Login will ensure that you can't (not practically atleast) supply a hash that will match a different password yet the same Login.[/green]<br />
+<br />
+Your idea is not clear enough to me. Do you mean that password and login should be somehow combined and than hashed? In a case an attacker knows a particular login, it wouldn't be a complication anyway, from the viewpoint of iterations (processor time) required to break it.<br />
+<br />
+<br />
+[green]SHA-1 is only available in MySQL 4.0.2+.[/green]<br />
+<br />
+Yeah, I didn't notice this. But I consider using MD5 not to be secure enough. Besides, I see a little limitation in the fact that SHA-1 is 4.0.2+. A function sha1() exists in PHP since version 4.3.0 which is just a little higher than the minimum requirement you've set for PHP.<br />
+<br />
+<br />
+P.S. Please move this thread to a Development forum - that is the right place for it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5849"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-16 10:26:28</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>Think of it this way: it is theoretically possible (though not easy) to find two different strings that have the same md5 hash. it is much harder to find two strings where one is a subset of the other that have the same hashes.<br />
+<br />
+Example:<br />
+string A = "pass"<br />
+it is easy to find another string (of any length) such that<br />
+md5(string B) = md5(string A)<br />
+<br />
+but, if your has includes a known value then it's much more difficult. such that.<br />
+string A = "pass"<br />
+string B = "hiddenkey"<br />
+<br />
+md5(string C + string B) = md5(string A + string B) is a bit more difficult because it puts restrictions on what your string C can be (when before there were no restrictions).<br />
+<br />
+string B should be an installation specific secret key, such that the same two passwords do not result in the same hash in different installations.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5852"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-16 11:58:49</p>
+            </div>
+            <div class="postheader"><h3>Disagreed</h3></div>
+				
+			<div class="body">
+				<p>Now I understand what you meant, but dont take your arguments.<br />
+<br />
+The flaws of MD5 are immanent to its algorithm, not depending of the passwords used.<br />
+<br />
+Storing the secret key may be harder then it appears now. Its lost will cause ruining the user database and cost too much time/money to an institution that have adopted such a system.<br />
+<br />
+As a result, we get a system quite complicated in maintaining, I say.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5857"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-16 14:53:21</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>a secret key that's different for each installation can be used as the salt to encode other things as well (such as forms).<br />
+<br />
+if the key is changed or lost then you'll have to run some kind of batch password resetting script. though having the key change is probably not the worst thing that can happen.<br />
+<br />
+the key can be generated as simply as storing a random string in the config file and using it in combination when ever a unique hash is needed.<br />
+<br />
+that way, even is your db is exposed, someone will not be able to un-hash to decode the passwords.<br />
+<br />
+all of this is just theoretical, as if your db does become exposed then i'm sure you have MUCH worse problems than a few exposed passwords!<br />
+<br />
+the best approach would be to encourage users to generate unique and strong passwords and encourage safe behaviour, rather than simply blindly encoding a password and assuming that all is good.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5859"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-16 16:37:22</p>
+            </div>
+            <div class="postheader"><h3>Let's sum up the things which have been said</h3></div>
+				
+			<div class="body">
+				<p>Thank you Joel for making the conversation this active.<br />
+<br />
+If you allow, now I will sum up all said by you here and at http://atutor.ca/view/12/5736/1.html to a list of what is to be done for introducing hashing into ATutor. I'll write this list, comment it, then present my own vision of the problems, and comment it too.<br />
+Sorry for not quoting you directly - all of this is only for clarification.<br />
+<br />
+<br />
+So, here's the to-do list based on your opinion.<br />
+<br />
+---------------------<br />
+<br />
+1. Make an installation option whether to hash passwords; if yes, the script should let an admin decide which algorithm to use.<br />
+<br />
+This is a good option for an admin who knows well what enviroment his server will be running in and what's the threat level.<br />
+On the other hand, it is not obvious that every admin will be able to make an informed, argumented and experience-based decision. It may be a complete surprise for him to see a vast list of algorithms and possibly approximate estimations of their strengths. As a result, it may appear that after some time of using he would want to switch to a stronger and more secure or, contrary, a relaxed and less resource-consuming algorithm (including none).<br />
+<br />
+<br />
+2. Hash all the passwords using a unique key generated during the installation as a salt.<br />
+<br />
+This unique key (I'll name it a master key) is to be stored very carefully. Its loss or compromising would cause a master key regeneration, system-wide password reset and re-entering password for all the users.<br />
+<br />
+<br />
+3. Give an admin a tool to reset all the passwords in a system at once.<br />
+<br />
+A new random password is generated and an email notification is send for each user.<br />
+This means:<br />
+* inusability of a server for some time (until all the users re-register);<br />
+* users complaining about admin's incompetence;<br />
+* need for explaining the management the reasons of this redical step;<br />
+* technical support for those who forgot/misspelled/not checking their mail, regarding password invalidity.<br />
+<br />
+---------------------<br />
+<br />
+<br />
+Now here are my alternatives. They may apply or may not: not sure all of this is required/good.<br />
+<br />
+.....................<br />
+<br />
+1. Always use a sufficiently secure algorithm without an option of turning it off.<br />
+<br />
+This makes impossible decreasing the security and execution time. The increasing security is still possible using external techniques e.g. SSL.<br />
+<br />
+<br />
+2. Encrypt passwords with a symmetric algorithm using a master key generated during the installation.<br />
+<br />
+This eliminates a need for resetting a database if a master key gets compromised. In that case decrypting all the keys and their re-encrypting with a new master key is trivial.<br />
+Possibly, hash all the passwords before symmetric encryption in order not to let anybody see them. Such double-encypting would, however, impact server's performance.<br />
+<br />
+.....................<br />
+<br />
+<br />
+In both cases using a number of different algorithms will increase system requirements regarding MySQL and PHP and, possibly, hardware.<br />
+<br />
+<br />
+Having this said, I assume that other members of ATutor community should join the discussion, cause we are likely to drive to a dead end soon. Also hope that some fresh ideas will bear in our heads during the weekend.<br />
+<br />
+Have a good rest. See you!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5866"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-19 11:03:43</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>#1. the option to hash the passwords would only be available during installation and cannot be changed by an admin. the options will be based on the current version of mysql/php and a recommended option will be marked as "recommended" only those in the know will feel like changing it, but making it available is a good feature.<br />
+<br />
+#2-#3. i think you have to agree that if the master key has been compromised then you're going to have a bigger problem anyway. that means someone has been able to read the config file and has access to the database (possibly other tables as well). in which case resetting passwords is the best alternative regardless of whether they have been hashed or not.<br />
+<br />
+some installations force users to change passwords after a specified number of months, so on secure systems users should be asked to change their passwords. personally, if i was asked to change my password on some systems i use more often then i'd feel more comfortable using it, not less.<br />
+<br />
+(1) SSL is a different issue. hashing passwords in the DB doesn't safe guard you when not using SSL. for that you have to use javascript to hash the password before it is sent to the server.<br />
+<br />
+(2) i'm not keen on the symmetric approach. i dont like un-encrypting then re-encrypting happening behind the scenes. there is a lot of room for error with no way of ensuring that the crypting is correct.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5880"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-20 10:02:58</p>
+            </div>
+            <div class="postheader"><h3>##</h3></div>
+				
+			<div class="body">
+				<p>#1. Agreed. It will be fine I believe.<br />
+But the question remains which algorithm to use, since PHP as of 4.2.0 includes only relatively weak ones with MD5 being one of them.<br />
+Remember you can't change it in every new version, so you'll have to use older, less secure methods for installations being upgraded - just in order to provide compatibility. It will soon cause that older installations will be less protected than new ones.<br />
+Or will you recommend administrators to reset thousands of passwords on upgrade? In every new version?<br />
+<br />
+#2. Symmentric encryption is only a kind of a mindstorm idea. My opinion is that it's the only right case when using a master key scheme instead of hashing with more advanced algorithms could be argumented strongly enough to take this point of view.<br />
+<br />
+I know what is SSL and don't mean it can somehow replace encryption of stored data. Rather you should think of that as of a supplementing technique of providing some virtual grade of security, the same that using other encryption algorithms would, - that's what I meant. So let's discuss it no more.<br />
+<br />
+About encrypt(decrypt($data, $oldkey), $newkey). Why do you think it can fail?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5885"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-20 14:09:30</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>#1. having to support old encryptions could be a problem, but it may still be enough to keep a curious admin out of there. in that case you could try finding the stronggest method currently available, but eventually it will have to be changed as well. SHA256 or AES/AE-2.<br />
+<br />
+encrypt(decrypt($data, $oldkey), $newkey) should theoretically work, but there's no way to double check. it's encoded and decoded blindly, so you're trusting that it's 100% with no way to varify. if it's a lengthy process and something changes in the middle then it could cause data curruption, with no real way of ensuring that the password is the same. and it still gives an admin/hacker a way of decrypting the passwords with a simple one line php script.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5890"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-21 03:07:55</p>
+            </div>
+            <div class="postheader"><h3>Review of the ciphers available, and more</h3></div>
+				
+			<div class="body">
+				<p>1.<br />
+As it appears from http://dev.mysql.com/doc/mysql/en/encryption-functions.html, currently MySQL lacks SHA-(256...512) support. One-way ciphers implemented in MySQL are MD5 and SHA-1.<br />
+Thus, SHA-1 is the most secure [i]hashing[/i] algorithm currently available.<br />
+On that same page, a cipher explicitly stated to be the most secure available is AES with a 128-bit key. An other option is DES.<br />
+<br />
+So, for now we have a pair of SHA-1 (one-way) and AES (two-way) algorithms. Each would increase requirements to MySQL 4.0.2.<br />
+<br />
+An alternative is: MCrypt which supports several ciphers up to AES-256 + MHash with up to SHA-512.<br />
+<br />
+<br />
+2.<br />
+In the example, writing $data instead of $password was intended. Using symmetric encryption is only good for user data, not passwords. Or, for passwords as a second crypting pass.<br />
+Presuming you have much larger PHP coding experience than me, I won't argue about error likeliness during that "blind" re-encryption. Still, I believe that for recovering production servers from such situations a backup system must be established. In the worst case (when all the fields have been corrupted) an admin would just roll back the database to a saved state. Good chances are that in a majority of failure cases only re-entering one or few values would be needed.<br />
+<br />
+<br />
+3.<br />
+In the ATutor SVN repository I saw some work regarding SHA-1 encryption with JavaScript. Why wasn't it finished?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5908"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-22 09:56:59</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>1. i'm thinking doing all the encryption in php is the only real way to keep the mysql requirements the way they are.<br />
+<br />
+2. agreed, but it sounds like a lot of work to implement.<br />
+<br />
+3. it required a change to the database which we weren't ready to tackle.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5920"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-23 05:23:23</p>
+            </div>
+            <div class="postheader"><h3>Requirements again!</h3></div>
+				
+			<div class="body">
+				<p>1. No doubt it is. But the price is increasing requirements of PHP version and (maybe) extending them to MCrypt and Mhash.<br />
+<br />
+2. Yes, a work is needed, and it's difficulty depends on the implementation method. I consider encryption of sensitive information to be pretty independent on password hashing. Therefore, they may be done separately.<br />
+<br />
+Whichever way we'll go, the boundaries would be common -- ATutor requirements.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5922"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-23 10:05:09</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>1. if the function isn't supported in php then you'd have to make it available by including a php code/library that implement the given function. the code will have to be GPL, of course.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5953"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-28 08:38:33</p>
+            </div>
+            <div class="postheader"><h3>I'm suspending the work</h3></div>
+				
+			<div class="body">
+				<p>Well, I'm a bit discouraged for now. It appears to be a larger piece of work (and discussion!) than it seemed at first.<br />
+Additionally, we're busy with promoting ATutor in our place now. So I'll be able to resume working on this problem not earlier than in mid-October.<br />
+<br />
+However I still remain in the list for this feature. Should any ideas appear anytime, I would come back here.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7949"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-05 14:23:36</p>
+            </div>
+            <div class="postheader"><h3>Round 2: encryption</h3></div>
+				
+			<div class="body">
+				<p>I'd suggest you focus on dealing with just the password reminder utility for now. We have a script to encrypt the login process using sha1 (as you saw in SVN). We could be put in place in a few minutes.<br />
+<br />
+We do not want the passwords to exist in the db encrypted.  Will still want to be able to support 3.23 MySQL for the time being. Encrypt only when passed between browser and server.<br />
+<br />
+The gist of the password functionality goes something like this:<br />
+<br />
+After entering an email address in the reminder, a user receives a link to a password change page with new password and password again fields. After 7 days (or less) the change password message expires, so the link becomes invalid.<br />
+<br />
+If you have other ideas, expand on them here.<br />
+<br />
+Other bits will need to be done as well, like the edit profile, registration, admin users editor etc. but it does not all have to be done all at once. Getting the login encrypted, and removing passwords from emails will be a good short project, that can be easily done before the code freeze. As you say, we don't want to be rushed with this as the deadline approaches.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7954"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-06 03:56:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Round 2: encryption</h3></div>
+				
+			<div class="body">
+				<p>OK, your suggestions are reasonable. I'm going to check out the current revision today and see what's got changed and so on. We've got days off till Tuesday, so I believe some results should appear during the next week.<br />
+<br />
+PS. Could you move this thread to the Development forum and give it a name that better correlates with its content?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7974"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-08 08:46:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Review of the ciphers available, and more</h3></div>
+				
+			<div class="body">
+				<p>There isn't a move feature. You can continue in the Development forum if you like, and create a link from that thread to this one.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7984"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-09 16:38:35</p>
+            </div>
+            <div class="postheader"><h3>Re: forgotten password</h3></div>
+				
+			<div class="body">
+				<p>uh oh! i've already programmed the new password reminder. i'll commit it tomorrow morning so you can take a look. sorry indie, i didn't realise you were working on it too.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7993"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-10 04:39:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Round 2: encryption</h3></div>
+				
+			<div class="body">
+				<p>Oh, nice to hear. I've programmed it too, on Monday, and I bet I would already have won the race in committing speed under equal circumstances. Instead I'll be your critic now :) :(<br />
+<br />
+Anyway, it's not the means of stimulating external contribution. In no way I want to teach you guys anything, but, as it appears, a programmer willing to code minor features is to double- and triplecheck that he and you all speak about the same things and nobody has missed anything. It's really unpleasant.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7994"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-10 09:39:01</p>
+            </div>
+            <div class="postheader"><h3>Re: forgotten password</h3></div>
+				
+			<div class="body">
+				<p>apologies again indie. i had a list of things to program and as i don't check the forums all the time, wasn't aware that you were going to do it. just bad timing. please don't let this dissuade you from doing any more programming for us because it's most appreciated. really!<br />
+<br />
+alright, i've committed my code, so feel free to take a peek and let me know if you see anything i could improve. thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8040"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-16 08:38:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Round 2: encryption</h3></div>
+				
+			<div class="body">
+				<p>I don't blame you for doing the work you have to do, heidi. Besides, I saw it and it's a good job.<br />
+<br />
+That was addressed to Greg as your team leader. I'm concerned about the policy regarding external programmers. I don't know the reasons of miscommunication inside your team, and don't want to investigate them either, but the [i]result[/i] is that any feature requiring a bit serious changes in engine is likely to be talked to death since you don't wish to [i]really[/i] discuss alternatives with someone out there over the ocean.<br />
+<br />
+But once you get insterested yourselves in finishing that feature, and finally understand that those changes are obligatory, the problem is magically solved right away.<br />
+Like in this case, with pushing requirements to PHP 4.3.0 and MySQL 4.0.2. That was what I suggested, and your denial has stopped my work last fall. And now YOU pushed requirements. You score one more good feature, users get higher security, and everybody's happy. Yeah.<br />
+<br />
+Sorry if what I wrote is untrue, that was my personal opinion.<br />
+As a matter of fact, I wanted to make you understand what one should feel in such a situation, and I said everything I wanted. I hope this experience would be worthwhile. Anyway, we'll still use ATutor since it is a really good product, but I personally would try to contribute only when (and if) a feature would be heavily required by my university.<br />
+<br />
+Still see you.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,140 @@
+---
+ title: ATutor not displaying certaing images properly
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor not displaying certaing images properly</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18139"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 17:47:55</p>
+            </div>
+            <div class="postheader"><h3>ATutor not displaying certaing images properly</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 1.6.2 installed and a developer has created a modification which allows images to be sent to a site (pixlr.com) for editing, then they are saved back to the server.  After much testing, everything is working except for the following scenario......<br />
+<br />
+When I use images that are edited with Microsoft Paint, then edited with Pixlr, the images are not displayed fully in ATutor.  Part of the image is not being shown.<br />
+<br />
+You can see this for yourself by logging in at http://liveonlinemathnet.easycgi.com/ATutor/<br />
+<br />
+Login: teststudent<br />
+PW: test1234<br />
+<br />
+Enter "Test Course" then go to File Storage.  There are several files there, but if you look at Workshops.jpg, then Workshops1.jpg, you'll see what I mean.  Feel free to try out the image editing by clicking "open" next to one of the files.<br />
+<br />
+Also, if I download the file via FTP and rename it, the file is all there.  It's just the display in ATutor that's failing.<br />
+<br />
+Does anyone have any ideas about this?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18140"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 18:04:57</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor not displaying certaing images properly</h3></div>
+				
+			<div class="body">
+				<p>Its unlikely to be an ATutor issue. More likely a browser or pixlr problem.<br />
+<br />
+Try it in a different browser, and outside ATutor, and see if there is still a problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18141"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 18:15:01</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor not displaying certaing images properly</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I've tried this with IE and FF.  Same result there.<br />
+<br />
+I'm also sure that it's not Pixlr.  If I find the file edited with Pixlr in content/file_storage, rename it using a .jpg extension (or whatever file type it is), then browse to it directly or download it via FTP, it displays fine.  The error occurs when viewing it in ATutor via "edit" in File Storage, or downloading it through File Storage.<br />
+<br />
+Any thoughts?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18142"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-28 18:42:51</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor not displaying certaing images properly</h3></div>
+				
+			<div class="body">
+				<p>I do see there is the problem, but I don't have an answer. It could be related to the PHP version being used. If you can modularize your additions, or build them into a patch, we could try on a different system.<br />
+<br />
+Very nice addition. If you can get it into a patch, working with the current ATutor version (1.6.3), we'd consider adding it. You probably want to do this anyway, toherwise it is going to be more difficult to upgrade ATutor. We could not limit images uploads to jpg. The pixlr link might only appear with jpgs, and not for other images<br />
+<br />
+I've made a note of this in the bug tracker, but we may not get to it for sometime. If you can do the research, that might speed things along.<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=3903<br />
+<br />
+Where is your content directory located? Inside or outside ATutor?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18155"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-29 11:39:03</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor not displaying certaing images properly</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+My content dir. is at /public_html/ATutor/content.  So, inside ATutor.<br />
+<br />
+As for a patch/module..... sorry, but I'm not sure how to do that and I'm not a developer.  To get this functionality, I hired a freelance developer.  I'll email you the file that he created for this if you would like to use it in 1.6.3.<br />
+<br />
+BTW, Pixlr can do gifs as well as jpgs.  I haven't had good success with pngs though.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

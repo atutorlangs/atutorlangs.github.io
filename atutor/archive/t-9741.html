@@ -1,0 +1,177 @@
+---
+ title: Editing Registration
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Editing Registration</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9741"></a>
+		<div class="forum-post-author">
+			<label class="title">mp30</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-23 00:44:02</p>
+            </div>
+            <div class="postheader"><h3>Editing Registration</h3></div>
+				
+			<div class="body">
+				<p>I need to add and remove fields in the registration page.<br />
+I know there's registration.php and registration.tmpl.php involved which I need to edit.<br />
+<br />
+When I do remove those fields from both pages,<br />
+and edit my db, it doesn't work at all. Some error about login.php and header.<br />
+<br />
+I need to know the list of files I need to edit in order<br />
+to make it work. Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9743"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-23 08:31:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing Registration</h3></div>
+				
+			<div class="body">
+				<p>You've got the right files, and it should work. <br />
+<br />
+<br />
+Can you give us any more detail about what you are trying to do.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9747"></a>
+		<div class="forum-post-author">
+			<label class="title">mp30</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-24 03:42:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing Registration</h3></div>
+				
+			<div class="body">
+				<p>Dear Greg,<br />
+<br />
+Please read the attached file which has my problem and the files that I have attempted to edit. Maybe you will understand what I mean. <br />
+<br />
+Thank you very much.<br />
+And I hope you can help me out. =)<br />
+I don't have much time.:(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9748"></a>
+		<div class="forum-post-author">
+			<label class="title">mp30</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-24 03:57:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing Registration</h3></div>
+				
+			<div class="body">
+				<p>Another lot of errors I got when I signed in as a default instructor.<br />
+<br />
+[b]<br />
+Warning: vsprintf(): Too few arguments in /home/mp30/public_html/ATutor/include/lib/output.inc.php on line 305<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/mp30/public_html/ATutor/include/lib/output.inc.php:305) in /home/mp30/public_html/ATutor/include/header.inc.php on line 17<br />
+<br />
+Warning: vsprintf(): Too few arguments in /home/mp30/public_html/ATutor/include/lib/output.inc.php on line 283<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/mp30/public_html/ATutor/include/lib/output.inc.php:305) in /home/mp30/public_html/ATutor/include/classes/Language/Language.class.php on line 123<br />
+   <br />
+Warning: vsprintf(): Too few arguments in /home/mp30/public_html/ATutor/include/lib/output.inc.php on line 283<br />
+ [/b]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9753"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-24 08:44:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing Registration</h3></div>
+				
+			<div class="body">
+				<p>We don't really have the manpower at the moment to investigate this fully. The error message, and the associated lines in output.inc.php, suggest the the language rendering function is being used incorrectly. (i.e.  _AT() ).<br />
+<br />
+See the section in the developer documentation that describes this function, and the section on localization.<br />
+<br />
+http://www.atutor.ca/development/documentation/guidelines.html#localisation<br />
+http://www.atutor.ca/development/documentation/guidelines.html#fn-at</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9754"></a>
+		<div class="forum-post-author">
+			<label class="title">mp30</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-24 10:10:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing Registration</h3></div>
+				
+			<div class="body">
+				<p>Well, I hope you can help me figure out. Meanwhile, I shall read and attempt on my own. Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9759"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-24 18:37:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Editing Registration</h3></div>
+				
+			<div class="body">
+				<p>Unfortunately we do have to look after the paying clients first. When time permits we do the free stuff.<br />
+<br />
+We can be hired if you can't figure it out. Be aware though that customizations of this sort can break the ability to upgrade, particularly if the database changes. Theme customizations aren't so critical, since you can backup those up and restore them into an upgraded system. When we take on work such as this, we generally work it into something that is adaptable to everyone. In your case it might be creating a general registration configuration tool that allows an admin to define the which registration fields to use. So, it would be more than just a simple hack of the registration page.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

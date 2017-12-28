@@ -1,0 +1,90 @@
+---
+ title: not installing with established PHP7
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>not installing with established PHP7</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="26168"></a>
+		<div class="forum-post-author">
+			<label class="title">kipim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-02-17 06:55:03</p>
+            </div>
+            <div class="postheader"><h3>not installing with established PHP7</h3></div>
+				
+			<div class="body">
+				<p>PHP7 don`t use mysql librery, error  install (don`t view mysql)<br />
+Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; Message has a deprecated constructor in J:\OpenServer\domains\atutor1\include\classes\Message\Message.class.php on line 20<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at J:\OpenServer\domains\atutor1\include\classes\Message\Message.class.php:20) in J:\OpenServer\domains\atutor1\install\index.php on line 22<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at J:\OpenServer\domains\atutor1\include\classes\Message\Message.class.php:20) in J:\OpenServer\domains\atutor1\install\index.php on line 23<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - win 7<br />
+  ATutor version - 2.2.2 (night build )<br />
+  Patch #s applied - no<br />
+  ATutor theme name -<br />
+  PHP version - 7.0.8<br />
+  MySQL version - 5.0.12<br />
+  Webserver & version - apache 2 with PHP7x64 x64<br />
+  Copies of error messages -<br />
+  Changes to default settings - no<br />
+  Web browser being used - FF, Chrome</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26169"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-02-17 10:40:45</p>
+            </div>
+            <div class="postheader"><h3>Re: not installing with established PHP7</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the report. Its been added to the tracker<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=5759<br />
+<br />
+For now add ~E_DEPRECATED to line 18 of include/vitals.inc.php<br />
+<br />
+define('AT_ERROR_REPORTING &amp; ~E_DEPRECATED', E_ERROR | E_WARNING | E_PARSE);</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26358"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-10-02 19:15:40</p>
+            </div>
+            <div class="postheader"><h3>Re: not installing with established PHP7</h3></div>
+				
+			<div class="body">
+				<p>There's a version available now that works with PHP7. <br />
+http://www.atutor.ca/atutor/download.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

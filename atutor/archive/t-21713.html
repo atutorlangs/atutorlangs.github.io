@@ -1,0 +1,142 @@
+---
+ title: how to change text and html content editor width
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>how to change text and html content editor width</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21713"></a>
+		<div class="forum-post-author">
+			<label class="title">taylormcc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-25 12:49:03</p>
+            </div>
+            <div class="postheader"><h3>how to change text and html content editor width</h3></div>
+				
+			<div class="body">
+				<p>I would like to change the width of the text and html editors in ATutor. The instructors feel that the narrow window is too restrictive.<br />
+I have dug around in the edit.js and some of the php files in the editor module but can't find it. I tried changing the cols= for the textareas and that did not work.<br />
+<br />
+Where is the width set for that area?<br />
+<br />
+(Sorry I am not sure if I should have posted this here or in the Development forum)<br />
+<br />
+Thank you<br />
+atutor version: 2.0.2</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21714"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-25 13:04:05</p>
+            </div>
+            <div class="postheader"><h3>Re: how to change text and html content editor width</h3></div>
+				
+			<div class="body">
+				<p>You should not need to change anything. The editor adjusts to the available space, and you can click and drag the bottom right corner to increase the size. <br />
+<br />
+Not sure how you would manually increase the size, to extend past the edge of the window for instance. It might be something to look up in the TinyMCE developer docs. Keeping in mind that if you hack ATutor trunk code, you'll probably loose your changes when you upgrade. Try to keep you changes to modules, themes, or perhaps create patches to apply trunk changes.<br />
+<br />
+The browser used might also affect whether than editor adapts size or not.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21715"></a>
+		<div class="forum-post-author">
+			<label class="title">taylormcc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-25 13:30:06</p>
+            </div>
+            <div class="postheader"><h3>Re: how to change text and html content editor width</h3></div>
+				
+			<div class="body">
+				<p>Aha! You are correct. It seems to be a browser issue.<br />
+<br />
+When I posted that, I had only tried with Internet Explorer 8. With IE8, the width of editors do not change when you resize the window. <br />
+<br />
+I just tried this with Firefox and it behaves as you describe.<br />
+<br />
+I did edit the tinymce.inc.php, adding a line width : "100%" . With that change, the HTML visual editor does resize in IE8, however the Plain Text and HTML (non-visual) editors do not.<br />
+<br />
+So this seems to be an IE8 issue. googling textarea and IE8 pulls up a lot of discussion on this topic. I hope I can get it working because my agency is standard<br />
+<br />
+Thanks, I think I will have to create patches for some of the other changes that I have made</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21716"></a>
+		<div class="forum-post-author">
+			<label class="title">taylormcc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-25 13:35:47</p>
+            </div>
+            <div class="postheader"><h3>Re: how to change text and html content editor width</h3></div>
+				
+			<div class="body">
+				<p>Sorry, that sentence should have read "my agency is standardized on using Internet Explorer"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21719"></a>
+		<div class="forum-post-author">
+			<label class="title">taylormcc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-25 16:46:42</p>
+            </div>
+            <div class="postheader"><h3>Re: how to change text and html content editor width</h3></div>
+				
+			<div class="body">
+				<p>OK I edited the ie_styles.css file in each theme<br />
+it said <br />
+textarea#body_text{<br />
+*width:600px;<br />
+}<br />
+<br />
+changed it to<br />
+textarea#bodytext{<br />
+width:99%;<br />
+}<br />
+<br />
+and now the Plain Text and HTML editors resize in IE8<br />
+I have not tested it on IE7<br />
+Of course Firefox ignores that style sheet.<br />
+<br />
+This did not fix the Visual HTML Editor not resizing.<br />
+For that I still had to use the tinymce.inc.php change</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

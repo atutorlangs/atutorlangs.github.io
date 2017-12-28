@@ -1,0 +1,195 @@
+---
+ title: How to stop the enter key from submitting a testsurvey
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>How to stop the enter key from submitting a testsurvey</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="18968"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-29 13:01:35</p>
+            </div>
+            <div class="postheader"><h3>How to stop the enter key from submitting a testsurvey</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I've been noticing that when students are entering an answer to a text box and they press "Enter", it submits the test.  Of course, they don't need to do that, but when they do it submits and incomplete test.  Would there be a way to....<br />
+<br />
+1.) Disassociate the enter button and the submit action, or, <br />
+2.) Have a pop-up appear that says, "Would you like to submit this test?" with a Yes/No option.<br />
+<br />
+<br />
+Thank you!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18969"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-29 14:13:50</p>
+            </div>
+            <div class="postheader"><h3>Re: How to stop the</h3></div>
+				
+			<div class="body">
+				<p>Are all questions on the same page?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18970"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-29 14:20:05</p>
+            </div>
+            <div class="postheader"><h3>Re: How to stop the</h3></div>
+				
+			<div class="body">
+				<p>Yes.  They are.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18971"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-30 13:57:32</p>
+            </div>
+            <div class="postheader"><h3>Re: How to stop the</h3></div>
+				
+			<div class="body">
+				<p>There's not a confirmation currently when submitting a test, but that would be a good feature. I've added it to the tracker:<br />
+<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=3980</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18972"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-30 14:09:02</p>
+            </div>
+            <div class="postheader"><h3>Re: How to stop the</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+Ok.  In the meantime, is there any way to turn off the "enter button = sumbit" behavior by code?<br />
+<br />
+Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18973"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-30 14:20:29</p>
+            </div>
+            <div class="postheader"><h3>Re: How to stop the</h3></div>
+				
+			<div class="body">
+				<p>You'd need to replace it with a javascripted button. <br />
+<br />
+Google it. There'll be examples you can copy from.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18976"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-30 17:56:25</p>
+            </div>
+            <div class="postheader"><h3>Re: How to stop the</h3></div>
+				
+			<div class="body">
+				<p>Solved.<br />
+<br />
+For those that are interested, here's what I did.  Following the instructions at http://www.arraystudio.com/as-workshop/disable-form-submit-on-enter-keypress.html...<br />
+<br />
+1. Insert the following into ATutor/themes/your_theme/include/header.tmpl.php<br />
+<br />
+[php]<br />
+&lt;script language="JavaScript"><br />
+function disableEnterKey(e)<br />
+{<br />
+     var key;<br />
+<br />
+     if(window.event)<br />
+          key = window.event.keyCode;     //IE<br />
+     else<br />
+          key = e.which;     //firefox<br />
+<br />
+     if(key == 13)<br />
+          return false;<br />
+     else<br />
+          return true;<br />
+}<br />
+&lt;/script><br />
+[/php] <br />
+<br />
+2. Any question types with an input field in ATutor/your_theme/default/test_questions/question_type_with_text_input_area put:<br />
+<br />
+[php]<br />
+"onKeyPress="return disableEnterKey(event)"<br />
+[/php]<br />
+<br />
+into the &lt;input> tag.<br />
+<br />
+Like this: <br />
+<br />
+&lt;input type="text" [b]onKeyPress="return disableEnterKey(event)" [/b] name="answers[&lt;?php echo $this->row['question_id']; ?>]" class="formfield" size="15" value="&lt;?php echo htmlspecialchars($this->response); ?>" /><br />
+<br />
+<br />
+<br />
+Enjoy!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

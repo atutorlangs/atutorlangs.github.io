@@ -1,0 +1,150 @@
+---
+ title: Course title
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Course title</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="7945"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-05 09:29:07</p>
+            </div>
+            <div class="postheader"><h3>Course title</h3></div>
+				
+			<div class="body">
+				<p>how can i limit the number of characters in the title of the course when i create this one?<br />
+<br />
+because if i put 100 characters the header is too long</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7946"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-05 10:20:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Course title</h3></div>
+				
+			<div class="body">
+				<p>Have you tried to figure this out yourself?<br />
+<br />
+This should be something you can do without our help. You should try to solve problems on your own first, and if you can not find a solution, then post your questions here describing what you have already tried. <br />
+<br />
+Remember you are getting free support here, support that requires time from the person helping. <br />
+<br />
+A hint. Most display related changes are made to template files, in the theme/default/ directory.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7948"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-05 12:22:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Course title</h3></div>
+				
+			<div class="body">
+				<p>ok sorry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7968"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-07 14:34:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Course title</h3></div>
+				
+			<div class="body">
+				<p>no pude ver donde habia que hacer los cambios... no se mucho de lenguaje php<br />
+<br />
+<br />
+please help me...how can i fix this?<br />
+<br />
+<br />
+<br />
+<br />
+disculpa por las molestias</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7971"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-08 08:30:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Course title</h3></div>
+				
+			<div class="body">
+				<p>The easiest way to deal with this is to limit the length of the course title when it is created.<br />
+<br />
+Add the HTML maxlength attribute to the title field in the course properties form (include/html/course_properties.inc.php line 134). set the value of maxlength to the number of characters you want to limit the course title to.<br />
+<br />
+<br />
+[php]<br />
+<br />
+&lt;input type="text" id="title" name="title" size="40" value="&lt;?php echo htmlspecialchars($row['title']); ?>"  maxlength="50"/><br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7975"></a>
+		<div class="forum-post-author">
+			<label class="title">sianoremece</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-08 09:08:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Course title</h3></div>
+				
+			<div class="body">
+				<p>thanks greg por your support. thank you very much<br />
+<br />
+Orlando</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

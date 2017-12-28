@@ -1,0 +1,264 @@
+---
+ title: UPloading pdfs into content
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>UPloading pdfs into content</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="14234"></a>
+		<div class="forum-post-author">
+			<label class="title">connect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-06-30 21:22:53</p>
+            </div>
+            <div class="postheader"><h3>UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>Having problems uploading pdf documents into the course content page.  I have the pdf's in the ftp ready to go however i can not get them to display.  can you please provide a review of the html code that is needed so i can check i am doing everything correctly...thanks.....<br />
+Things to describe: <br />
+  operating system - linux 2.6.18<br />
+  version of ATutor - 1.6<br />
+  versions of php -   5.2.3<br />
+  version of mysq l -5.0.41<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14236"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-06-30 21:47:01</p>
+            </div>
+            <div class="postheader"><h3>Re: UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>Open the File Manager from the content editor screen, find the file you want to make downloadble, then click the Insert button next to it. It should create a link to the file, which you adjust with your own link text.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14237"></a>
+		<div class="forum-post-author">
+			<label class="title">connect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-01 01:35:07</p>
+            </div>
+            <div class="postheader"><h3>Re: UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg....there appears to be a problem with the File Mangager...I cannot create a directory or file....now sure what i am doing wrong...i have taken a screen dump for you...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14238"></a>
+		<div class="forum-post-author">
+			<label class="title">connect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-01 01:35:15</p>
+            </div>
+            <div class="postheader"><h3>Re: UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg....there appears to be a problem with the File Mangager...I cannot create a directory or file....not sure what i am doing wrong...i have taken a screen dump for you...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14268"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-02 09:12:47</p>
+            </div>
+            <div class="postheader"><h3>Re: UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>The errors generally indicate a permission problem on the content/ directory. On linux when you install ATutor, you set the permissions on the directory with:<br />
+<br />
+chmod a+rwx content.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14270"></a>
+		<div class="forum-post-author">
+			<label class="title">connect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-02 10:14:22</p>
+            </div>
+            <div class="postheader"><h3>Re: UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg, so is it possible to set the permissions with the code you described after install? or will we have to reinstall? thanks again:)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14271"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-02 10:35:32</p>
+            </div>
+            <div class="postheader"><h3>Re: UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>Yes, but you'll need root access.<br />
+<br />
+<br />
+use:<br />
+<br />
+chmod -R a+rwx content <br />
+<br />
+then<br />
+<br />
+chown -R nobody:nobody content<br />
+<br />
+<br />
+(where "nobody" is the webserver user)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14330"></a>
+		<div class="forum-post-author">
+			<label class="title">connect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-04 12:53:20</p>
+            </div>
+            <div class="postheader"><h3>Re: UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>Sorry Greg..our IT person has gone walk about...can you please give me a little bit more info of where i need to insert the code you have given above? Thanks...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14332"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-04 13:13:14</p>
+            </div>
+            <div class="postheader"><h3>Re: UPloading pdfs into content</h3></div>
+				
+			<div class="body">
+				<p>Then you probably don't have root access so, you'll need to have your IT person make the change.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14515"></a>
+		<div class="forum-post-author">
+			<label class="title">connect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-16 08:12:59</p>
+            </div>
+            <div class="postheader"><h3>Re: File Directory problem</h3></div>
+				
+			<div class="body">
+				<p>HI Greg,<br />
+our new IT guy has tried to upgrade to 1.6.1 to eleviate the problems described earlier re the directory as well as password problem and he has advised the following:<br />
+<br />
+uploaded version 1.6.1<br />
+followed the instruction on how to update from here: http://www.atutor.ca/atutor/docs/installation.php#upgrade<br />
+got stuck at step 5. when asked to create the 'content' folder. - folder was created in correct place on the server with chmod to 777. but the instillation couldn't find the folder?<br />
+and i couldn't continue from there.<br />
+removed the 1.6.1 instilation and re installed the backup of the database.<br />
+<br />
+Can you please advise what he will now need to do?<br />
+<br />
+cheers</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14516"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-16 08:39:43</p>
+            </div>
+            <div class="postheader"><h3>Re: File Directory problem</h3></div>
+				
+			<div class="body">
+				<p>Be sure there are no symbolic links in the path to your content directory. You can create a file and place it in the root directory of ATutor, then open it in your web browser to get the actual path to the directory. The file should contain:<br />
+<br />
+<br />
+[php]<br />
+<br />
+<br />
+getcwd();<br />
+<br />
+<br />
+[/php] <br />
+<br />
+http://ca.php.net/manual/en/function.getcwd.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

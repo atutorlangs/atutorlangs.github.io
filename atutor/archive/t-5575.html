@@ -1,0 +1,160 @@
+---
+ title: Cant detect mysql installation
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cant detect mysql installation</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5575"></a>
+		<div class="forum-post-author">
+			<label class="title">rberzunza</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-22 20:27:09</p>
+            </div>
+            <div class="postheader"><h3>Cant detect mysql installation</h3></div>
+				
+			<div class="body">
+				<p>Im trying to install Atutor 1.5.1 on a windows 2003 server, running IIS 6.0; i've already installed php 5.0.4, as well as mysql 4.1.1<br />
+<br />
+while running the insatallation process with atutor, it doesn't  recognize my mysql installation, so it won't let me go through the installation process since the requirements are not met. Any ideas on how to make it work??<br />
+<br />
+or why it doesnt recognize my mysql installation? my mysql is already registered as a system service and also is running, my mysql files are lacated on a different hard drive than my atutor files; also i guess i'll have to tell you that my mysql data fikles are located on another hard drive.<br />
+<br />
+Please urgent help needed!<br />
+<br />
+Thanx</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5594"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-23 12:35:06</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>generate a phpinfo() file for us to check or send us a URL.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5600"></a>
+		<div class="forum-post-author">
+			<label class="title">rberzunza</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-23 22:15:34</p>
+            </div>
+            <div class="postheader"><h3>thisd is my phpinfo file</h3></div>
+				
+			<div class="body">
+				<p>phpinfo file attached, thanx for the help</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5611"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 09:17:52</p>
+            </div>
+            <div class="postheader"><h3>Compile with mysql</h3></div>
+				
+			<div class="body">
+				<p>PHP has not been compiled with mysql support. <br />
+<br />
+--with-mysql  <br />
+<br />
+should appear in the Configure Command area</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5612"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 10:25:34</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>there is no need to compile php. simply enable the mysql extension in your php.ini file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5619"></a>
+		<div class="forum-post-author">
+			<label class="title">rberzunza</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 15:02:50</p>
+            </div>
+            <div class="postheader"><h3>Added Extensions, still not working</h3></div>
+				
+			<div class="body">
+				<p>i enabled the extensions on my php.ini file and nothing happened, i might make a stupid question greg, but how do i compile php  with mysql support in windows 2003 as you suggested, im brand new with php, mysql, etc so your suggestion sounds good, but how do i get to do it?<br />
+<br />
+thanx for the help</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5620"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-24 16:06:07</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>you do not have to compile php.<br />
+<br />
+stop then start apache again.<br />
+<br />
+make sure that you edited the correct php.ini file.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

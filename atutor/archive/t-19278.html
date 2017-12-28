@@ -1,0 +1,143 @@
+---
+ title: Gradebook  Cannot import external marks
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Gradebook  Cannot import external marks</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="19278"></a>
+		<div class="forum-post-author">
+			<label class="title">monfalcone</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-20 09:36:49</p>
+            </div>
+            <div class="postheader"><h3>Gradebook  Cannot import external marks</h3></div>
+				
+			<div class="body">
+				<p>Operating system ATutor is installed on - Linux 2.6.26-2-xen-amd64<br />
+  ATutor version - 1.6.4. Check Latest Version.<br />
+  Patch #s applied - 1<br />
+  ATutor theme name - Blumin [also tested with default ATutor theme]<br />
+  PHP version - 5.2.11<br />
+  MySQL version - 5.0.32-Debian_7etch11-log<br />
+  Webserver & version - Apache2<br />
+  Copies of error messages - You don't have permission to access /mods/_standard/gradebook/verify_list.php on this server<br />
+  Changes to default settings - <br />
+(1) Time zone offset: 6<br />
+(2) Display name: Login Name (First Name Second Name Last Name) [also tested with default: First Name Second Name Last Name]<br />
+(3) Confirmation of email registration required<br />
+(4) Course directory name enabled<br />
+(5) Sent messages kept 365 days<br />
+  Web browser being used - Firefox 3.5<br />
+  <br />
+(1) Followed: Manage > Gradebook > External marks<br />
+(2) Exported of course list (works fine).<br />
+(3) Entered grades (raw scores in the form: 87%)<br />
+(4) Uploaded external mark list: Page reloads and shows list with editable marks, two buttons: Resubmit & Update (as expected)<br />
+(5) Clicking either of the buttons produces the error message: You don't have permission to access /mods/_standard/gradebook/verify_list.php on this server.<br />
+Permissions on verify_list.php are 644 (= read for owner, group, others; write for owner only). Temporarily giving full permissions to all user groups does not solve the problem.<br />
+<br />
+Any help would be greatly appreciated.<br />
+<br />
+M.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19289"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-20 21:09:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook -- Cannot import external marks</h3></div>
+				
+			<div class="body">
+				<p>You'd like to check:<br />
+1. you are not running on PHP safe mode;<br />
+2. the owner of the file is correct.<br />
+<br />
+Another possibility is, your server may have mod_security turned on. This module does not like certain strings in the script and return the forbidden error. If this is the case, contact your hosting provider to find the solution.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19290"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-20 21:13:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook -- Cannot import external marks</h3></div>
+				
+			<div class="body">
+				<p>BTW, apache error log is a good resource to find out the forbidden message is caused by file system permission or apache configuration.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19513"></a>
+		<div class="forum-post-author">
+			<label class="title">monfalcone</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-29 09:35:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook -- Cannot import external marks</h3></div>
+				
+			<div class="body">
+				<p>Dear Cindy,<br />
+<br />
+Thank you so much for your help and my apologies for answering so late.  (I was convinced that I had subscribed to the thread, but ...)<br />
+<br />
+I had already checked PHP was not in safe mode and that the file privileges were okay; but your suggestion to look into mod_security was right on target.<br />
+<br />
+After I disabled mod_security on the atutordata directory, the upload worked as expected.<br />
+<br />
+Thank you very much again.<br />
+<br />
+M.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19515"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-29 09:38:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook -- Cannot import external marks</h3></div>
+				
+			<div class="body">
+				<p>That's great! Enjoy!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

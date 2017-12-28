@@ -1,0 +1,139 @@
+---
+ title: Creating Course Content Malfunction
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Creating Course Content Malfunction</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2719"></a>
+		<div class="forum-post-author">
+			<label class="title">engelhk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-11 14:21:14</p>
+            </div>
+            <div class="postheader"><h3>Creating Course Content Malfunction</h3></div>
+				
+			<div class="body">
+				<p>Just installed Atutor 1.4.2 with what seemed like a clean install. <br />
+<br />
+However, when I create a new course, "Add Add Announcement" seems to work, but "Add Content"  malfunctions. When content is placed in the "Title" (i.e Introduction) and "Body" fields of "edit_content.php" an the "Save Changes" button is clicked, the Page URL changes to "/edit_content.php?cid=0" and produces a "The page cannot be displayed" error. <br />
+<br />
+If I navigate back to the "index.php", there are 55 instances of the title "Introduction" in the "Global Menu"<br />
+<br />
+If I click one of these links (i.e. the first one) get "Directory Listing Denied<br />
+This Virtual Directory does not allow contents to be listed." for the for URL "....ATutor/?cid=139&g=3"<br />
+<br />
+Any insite or assitance as to what's wrong or misconfigured would be appreciated.<br />
+<br />
+Thanks in advance.<br />
+<br />
+Keith E.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2720"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-11 17:17:56</p>
+            </div>
+            <div class="postheader"><h3>System description</h3></div>
+				
+			<div class="body">
+				<p>Can you tell us anymore about the system ATutor is installed on?<br />
+see:<br />
+http://www.atutor.ca/view/7/149/1.html	<br />
+<br />
+Have you tried relogging into ATutor, or restarting your browser?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2721"></a>
+		<div class="forum-post-author">
+			<label class="title">engelhk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-11 17:33:34</p>
+            </div>
+            <div class="postheader"><h3>Creating Course Content Malfunction</h3></div>
+				
+			<div class="body">
+				<p>I am on a Win2K server, MySQL 4.0.18 nt, PHP version: 4.3.0, IE 6.0<br />
+<br />
+I figured it out. If you do not have the  "Close after saving" Check box checked when one is adding or editing content, if fowls up. Bug maybe???<br />
+<br />
+Now my delema is, I get "Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in c:\inetpub\wwwroot\Intranet2\LearningForum\ATutor\include\html\dropdowns\users_online.inc.php on line 36" in the "Users on Line" section of all user's pages: Admin, Student, or Instructor.<br />
+<br />
+What's with that?<br />
+<br />
+Keith E.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2723"></a>
+		<div class="forum-post-author">
+			<label class="title">engelhk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-12 09:59:29</p>
+            </div>
+            <div class="postheader"><h3>RE: Warning: mysql_fetch_assoc():</h3></div>
+				
+			<div class="body">
+				<p>For whatever reason, the "users_online" table was missing and that's the reason for the "Warning: mysql_fetch_assoc(): " message. As soon as I created the table, all is well.<br />
+<br />
+Keith E.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6230"></a>
+		<div class="forum-post-author">
+			<label class="title">toddvancesmith</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-04 12:34:09</p>
+            </div>
+            <div class="postheader"><h3>Course Content Creating bug -</h3></div>
+				
+			<div class="body">
+				<p>I am also experiencing this bug - when creating course content - if the "Close after saving" checkbox is UN-checked - about 25 topics are created. <br />
+<br />
+I am using ATutor 1.5.1 Windows 2000 Server, MySQL 4.1.15, and PHP 4.3.4.<br />
+<br />
+Is there a fix to this issue?<br />
+<br />
+Thanks,<br />
+<br />
+Todd</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

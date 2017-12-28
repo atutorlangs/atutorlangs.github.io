@@ -1,0 +1,139 @@
+---
+ title: problem playing wmv files
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>problem playing wmv files</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6807"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-06 07:01:43</p>
+            </div>
+            <div class="postheader"><h3>problem playing wmv files</h3></div>
+				
+			<div class="body">
+				<p>hi, we just upgraded to 1.5.2 as well as moved our installation to a new and improved server, but we experience a strange problem:<br />
+<br />
+when trying to view a .wmv file in internet explorer we are only presented with the "raw code" of the film within the browser window. in Firefox Windows Media Player opens, but the film does not start. In Opera the same. In all browsers you can download the film and start it locally.. a .mov file works fine in all browsers. <br />
+<br />
+now, the strange thing is that we have the same .wmv file on the same server but *outside* Atutor, and it works just fine: http://www.eksemskolen.no/?page_id=25 <br />
+<br />
+also, same files worked like a charm on our old server, with Atutor 1.5.1..<br />
+<br />
+...anyone? <br />
+<br />
+Things to describe: <br />
+  operating system - redhat<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - recommended<br />
+  version of mysq l - recommended<br />
+  webserver & version - apache 2.0</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6808"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-06 07:14:26</p>
+            </div>
+            <div class="postheader"><h3>Re: problem playing .wmv files</h3></div>
+				
+			<div class="body">
+				<p>additional information:<br />
+<br />
+when uploading the file in the Atutor filemanager, it does not work as described above. <br />
+<br />
+when uploading the file via ftp to the server, and linking to it, as well as linking to it at the URL presentet above, it works fine!  so it can not be the server settings I guess?<br />
+<br />
+the only difference we can see in the source code from version 1.5.1 to 1.5.2 is that <br />
+<br />
+http://[new-version-server]/atutor/get.php/film/modul1/kasuistikk1_2/4MM0.wmv<br />
+<br />
+http://[old-version-server]/atutor/content/21/film/modul1/kasuistikk1_2/4MM0.wmv<br />
+<br />
+...which remind me that the content directory was within the atutor folder on the old installation where it worked, but outside it in the new installation. <br />
+<br />
+...?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6809"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-06 08:34:49</p>
+            </div>
+            <div class="postheader"><h3>missing wmv mime type</h3></div>
+				
+			<div class="body">
+				<p>Add the following line the the get.php file<br />
+<br />
+$mime['wmv']    = 'video/x-ms-wmv';</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6810"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-06 08:41:32</p>
+            </div>
+            <div class="postheader"><h3>Re: missing wmv mime type</h3></div>
+				
+			<div class="body">
+				<p>thanks, works like a charm!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8657"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-17 04:37:59</p>
+            </div>
+            <div class="postheader"><h3>Re: missing wmv mime type</h3></div>
+				
+			<div class="body">
+				<p>experiencing the same problem on 1.5.3.2, to fix it add the following line to include/lib/mime.inc.php:<br />
+<br />
+$mime['wmv']   = array('video/x-ms-wmv',    'video');<br />
+<br />
+(would you include this in future versions?)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

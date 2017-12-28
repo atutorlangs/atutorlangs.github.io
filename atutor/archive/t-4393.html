@@ -1,0 +1,126 @@
+---
+ title: Statistics compute errors
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Statistics compute errors</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="4393"></a>
+		<div class="forum-post-author">
+			<label class="title">mgrassi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-20 09:06:32</p>
+            </div>
+            <div class="postheader"><h3>Statistics compute errors</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+something strange happens with data of statistics of the course navigation.<br />
+<br />
+A content viewed<br />
+<br />
+1 time for 19 seconds (first user)<br />
+4 times for 118 seconds (second user)<br />
+<br />
+On the statistics page I read for that content<br />
+<br />
+Counter 5 - Avarage duration 5.5 secs<br />
+<br />
+19 secs + 118 secs = 137 secs.<br />
+137 secs / 5 = 27.4 secs (avarage duration)<br />
+<br />
+What is incredible is that 27.4 / 5 = 5,48 ~ 5.5 that is what I can read in the statistics page.<br />
+<br />
+That is really strange!<br />
+<br />
+What is wrong?<br />
+<br />
+Thank you<br />
+Marco Grassi<br />
+<br />
+  operating system - Windows 2000<br />
+  version of ATutor - 1.4.3<br />
+  version of mysq l - 4.0.24<br />
+  webserver & version - Apache 1.3<br />
+  web browser being used - Firefox</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4398"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-20 19:47:09</p>
+            </div>
+            <div class="postheader"><h3>The first record breaks</h3></div>
+				
+			<div class="body">
+				<p>It looks like the first record read in the tracking data for a course is not handled properly. <br />
+<br />
+The tracking system has been rebuilt for the 1.5 release.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4399"></a>
+		<div class="forum-post-author">
+			<label class="title">mgrassi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-21 05:01:50</p>
+            </div>
+            <div class="postheader"><h3>re</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+thank you for yuor reply.<br />
+<br />
+Do you think I could fix the problem editing the correct table?<br />
+<br />
+Thank you for your help<br />
+<br />
+Marco</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4400"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-21 09:11:23</p>
+            </div>
+            <div class="postheader"><h3>fixable</h3></div>
+				
+			<div class="body">
+				<p>I'm sure it is fixable. It would be a matter of going through the tracker scripts and finding instances where these calculation are made, and perhaps eliminating the first record as the script loops through the tracker table, or using the first record as a base line for calculating durations that follow.<br />
+<br />
+It looks like the problem is that the first calculation does not have a base time to subtract from the timestamp listed in the record to come up with a duration.<br />
+<br />
+The other possibility is to set the first record yourself, logging in as a student, clicking on a content page, then quickly logging out. The calculation made after that will not be exact, but they will be very close.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

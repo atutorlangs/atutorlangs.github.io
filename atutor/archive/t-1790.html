@@ -1,0 +1,167 @@
+---
+ title: Importing Users  3 Questions
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Importing Users  3 Questions</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="1790"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-04 17:00:33</p>
+            </div>
+            <div class="postheader"><h3>Importing Users  3 Questions</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+<br />
+1.  I want my users to be named with a . between their first and last names.  ie ... joe cools username will be joe.cool and his email will be joe.cool@mymailserver.com	<br />
+<br />
+Are there any issues with doing this in ATutor?<br />
+<br />
+I've located and changed the following code in the username check part of importcourselist.php<br />
+<br />
+stripslashes(strtolower($record['fname'].'.'.$record['lname']));<br />
+ instead of stripslashes(strtolower($record['fname'].'_'.$record['lname'])); <br />
+<br />
+AND	<br />
+<br />
+if (!(eregi("^[a-zA-Z0-9_.]([a-zA-Z0-9_.])*$", $record['uname']))) {<br />
+		$record['err_uname'] = <br />
+instead of<br />
+if (!(eregi("^[a-zA-Z0-9_]([a-zA-Z0-9_])*$", $record['uname']))) {<br />
+		$record['err_uname'] = <br />
+<br />
+====<br />
+2 Should a similar thing be done in the email check piece?<br />
+<br />
+I am thinking specifically of changing:<br />
+else if (!eregi("^[a-z0-9\._-]+@+[a-z0-9\._-]+\.+[a-z]{2,4}$" <br />
+to<br />
+else if (!eregi("^[a-z0-9\._.+@+[a-z0-9\._.]+\.+[a-z]{2,4}$"<br />
+<br />
+=====<br />
+3. I can import one user fine by accessing the .txt file but no luck with two or more users.  I'm thinking that perhaps the Mac is not providing the proper carrage return between rows (new users in the text file)<br />
+<br />
+Sample text file: <br />
+hector, campbell, hector.campbell@mail.ednet.ns.ca<br />
+gail, coldwell, gail.coldwell@mail.ednet.ns.ca<br />
+<br />
+I get the following error :<br />
+Incorrect file format on line 1.<br />
+<br />
+thanks<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1792"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-04 18:57:50</p>
+            </div>
+            <div class="postheader"><h3>Q3 answered</h3></div>
+				
+			<div class="body">
+				<p>My suspicion on #3 was correct.  I was able to change from Macintosh to Unix for the line breaks and it worked.<br />
+<br />
+Still hoping for your expertise on Q1 and Q2<br />
+<br />
+L<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Re:<br />
+3. I can import one user fine by accessing the .txt file but no luck with two or more users.  I'm thinking that perhaps the Mac is not providing the proper carrage return between rows (new users...<br />
+[op]forums/view.php?fid=7;pid=1790;page=1#1790[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1806"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-08 12:46:34</p>
+            </div>
+            <div class="postheader"><h3>Importing Users - 3 Questions</h3></div>
+				
+			<div class="body">
+				<p>the changes in #1 seem okay..<br />
+<br />
+i do not think the changes in #2 are correct.<br />
+<br />
+we'll look into the problem at #3 in a bit more detail later on.<br />
+<br />
+joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1816"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-09 18:26:49</p>
+            </div>
+            <div class="postheader"><h3>Subject: Importing Users - 3 Questions</h3></div>
+				
+			<div class="body">
+				<p>I solved #3 ok, as per above<br />
+<br />
+L</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1830"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-06-12 12:46:26</p>
+            </div>
+            <div class="postheader"><h3>Re: 3 questions</h3></div>
+				
+			<div class="body">
+				<p>Be sure to provide enough information about your system, and the circumstances of any problems you are experiencing. Support requests lacking complete information may not get a reply. [DELETE THIS NOTICE BEFORE SENDING YOUR SUPPORT REQUEST]		Joel<br />
+<br />
+It appears to work ok.  What do you think might be wrong with #2?<br />
+<br />
+I\'m not a programmer, just a problem-solver and a bit of a hacker!<br />
+<br />
+Your expertise is appreciated.<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

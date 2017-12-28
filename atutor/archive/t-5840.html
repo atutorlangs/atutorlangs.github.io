@@ -1,0 +1,103 @@
+---
+ title: Tests with images  Is it possible
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Tests with images  Is it possible</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5840"></a>
+		<div class="forum-post-author">
+			<label class="title">madhorse</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-15 14:11:45</p>
+            </div>
+            <div class="postheader"><h3>Tests with images  Is it possible</h3></div>
+				
+			<div class="body">
+				<p>operating system - windows XP<br />
+  version of ATutor - 1.5.1 pl1<br />
+  versions of php - EasyPHP 1.8.0.0<br />
+ <br />
+Dear colleges!<br />
+Is it possible to include image into the question of the test.<br />
+After inserting a picture in the editor mode, I see just a HTML text - something like &lt;IMG src="http://127.0.0.1/ATutor/get.php/test2/activity.gif"> but not the image.<br />
+Thank you for any comments.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5882"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-20 13:43:11</p>
+            </div>
+            <div class="postheader"><h3>Possible but broken</h3></div>
+				
+			<div class="body">
+				<p>Something seems to have broken, but yes it is (should be) possible to insert images. We will post the patch here as soon as possible.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5886"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-20 14:11:18</p>
+            </div>
+            <div class="postheader"><h3>MC images</h3></div>
+				
+			<div class="body">
+				<p>FIX for images not showing up for multiple-choice question choices as follows:<br />
+--------<br />
+inc/lib/constants.inc.php, after line 284, add<br />
+$_field_formatting['tests_questions.*'] = AT_FORMAT_ALL;<br />
+<br />
+---------<br />
+tests/preview.php, line 135<br />
+tests/preview_question.php, line 59<br />
+tools/take_test, line 224<br />
+<br />
+all of these, replace<br />
+AT_print($row['choice_'.$i], 'tests_answers.answer')<br />
+with<br />
+AT_print($row['choice_'.$i], 'tests_questions.choice_'.$i)<br />
+<br />
+-------------<br />
+tools/view_results.php and tools/tests/view_results.php<br />
+add these lines before the require(AT_INCLUDE_PATH.'header.inc.php'); line<br />
+<br />
+if (defined('AT_FORCE_GET_FILE') && AT_FORCE_GET_FILE) {<br />
+   $content_base_href = 'get.php/';<br />
+} else {<br />
+   $course_base_href = 'content/' . $_SESSION['course_id'] . '/';<br />
+}<br />
+<br />
+AND edit these two vars so that $_base_path is now in there, like so:<br />
+$mark_right = '&lt;img src="'.$_base_path.'images/checkmark.gif" alt="'._AT('correct_answer').'" />';<br />
+$mark_wrong = '&lt;img src="'.$_base_path.'images/x.gif" alt="'._AT('wrong_answer').'" />';<br />
+<br />
+<br />
+i think that's all.  let us know how it works out.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

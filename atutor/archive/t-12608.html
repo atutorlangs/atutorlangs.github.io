@@ -1,0 +1,118 @@
+---
+ title: Cant create new course
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cant create new course</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12608"></a>
+		<div class="forum-post-author">
+			<label class="title">BIBLOS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-22 05:31:42</p>
+            </div>
+            <div class="postheader"><h3>Cant create new course</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+operating system  - win xp<br />
+version of ATutor - 1.5.5<br />
+versions of php - 4.7, 5.x<br />
+version of mysql - 5.0x<br />
+webserver & version - 1.3, 2.4x<br />
+your ATutor location- http:// -<br />
+  copies of error messages - feild 'preferences' dosent have a default value DB Error<br />
+  changes to default settings -?<br />
+  web browser being used - IE and clone,FOX, Opera<br />
+  and anything else relevant - I tray to make new kourse? and get this Error message<br />
+ [orange]- :( -[/orange]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12611"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-22 08:34:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't create new course</h3></div>
+				
+			<div class="body">
+				<p>Have you tried on all of these different versions of Apache, php, mysql (some of which don't exist). Which system specifically is causing trouble?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12613"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-22 08:37:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't create new course</h3></div>
+				
+			<div class="body">
+				<p>By default this field should have the system default preferecnes set. Perhaps there was an interuption during the installation, Try pasting the following line into the preferences field of the members table in the database for the user you were logged in as when the problem occured. Use something like phpMyAdmin to di it.<br />
+<br />
+<br />
+[php]<br />
+<br />
+a:4:{s:10:"PREF";s:7:"default";s:14:"PREF_NUMBERING";i:1;s:18:"PREF_JUMP_REDIRECT";i:1;s:15:"PREF_FORM_FOCUS";i:1;}<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12615"></a>
+		<div class="forum-post-author">
+			<label class="title">BIBLOS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-22 09:04:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't create new course</h3></div>
+				
+			<div class="body">
+				<p>Have installed too Atutor:<br />
+1st setup in<br />
+operating system - win xp<br />
+version of ATutor - 1.5.5<br />
+versions of php - 4.7.7<br />
+version of mysql - 5.0.1<br />
+webserver & version - apache 1.33<br />
+your ATutor location- http:// -<br />
+copies of error messages - feild 'preferences' dosent have a default value DB Error<br />
+changes to default settings -?<br />
+I nothing change; installation was ended successfully,<br />
+ created 1 person. Only I create 2 categories for courses.<br />
+<br />
+[green] In any heaps - Thanks, I tray do this[/green]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

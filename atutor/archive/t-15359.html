@@ -1,0 +1,235 @@
+---
+ title: mysql errors on courses
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>mysql errors on courses</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15359"></a>
+		<div class="forum-post-author">
+			<label class="title">bizbuddy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 15:30:15</p>
+            </div>
+            <div class="postheader"><h3>mysql errors on courses</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+<br />
+[ statistics_information ]<br />
+<br />
+[ database ]:<br />
+    0.35 [ mb ]<br />
+[ disk_usage ]:<br />
+    0.07 [ mb ]<br />
+Courses:<br />
+    1<br />
+Users:<br />
+    3<br />
+ATutor Version:<br />
+    You are currently using ATutor version 1.5.5. To check if a newer version is available use the button below. View the Change Log for this version.<br />
+[ php_version ]:<br />
+    5.2.5<br />
+[ mysql_version ]:<br />
+    4.1.22-standard<br />
+[ os ]:<br />
+    Linux 2.6.9-67.0.22.ELsmp<br />
+<br />
+-----------------<br />
+URL: http://www.7toolsworkshop.com/tutor<br />
+<br />
+-------------<br />
+Theme: Corporate_Blue2 - with header modifications.<br />
+<br />
+---------<br />
+viewing on firefox<br />
+----------<br />
+<br />
+Created 1 test course and getting the following message when I go to the Course Section in the admin login:<br />
+<br />
+Warning: mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mw300063/public_html/7toolsworkshop.com/tutor/admin/courses.php on line 105<br />
+<br />
+And "1" course appears, but I cannot access it in anyway?<br />
+<br />
+I'm getting other mysql errors on the user side as well, as soon as they login.<br />
+<br />
+----------<br />
+<br />
+We did a cpanel installation of atutor from mewebhost.<br />
+<br />
+Any guidance/suggestions of what we may be doing wrong, or can do to resolve these db errors would be greatly appreciated! <br />
+<br />
+Thanks,<br />
+Katie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15360"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 15:53:21</p>
+            </div>
+            <div class="postheader"><h3>Re: mysql errors on courses</h3></div>
+				
+			<div class="body">
+				<p>Do you get the same problem with the default theme. Corporate blue is for 1.6+.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15361"></a>
+		<div class="forum-post-author">
+			<label class="title">bizbuddy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 15:59:12</p>
+            </div>
+            <div class="postheader"><h3>Re: mysql errors on courses</h3></div>
+				
+			<div class="body">
+				<p>Yes, I just changed the theme to Blumin, as default, and I get the same error message.<br />
+<br />
+Katie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15364"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 16:50:17</p>
+            </div>
+            <div class="postheader"><h3>Re: mysql errors on courses</h3></div>
+				
+			<div class="body">
+				<p>Try the theme called "default"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15365"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 16:56:10</p>
+            </div>
+            <div class="postheader"><h3>Re: mysql errors on courses</h3></div>
+				
+			<div class="body">
+				<p>have you created any courses yet?<br />
+<br />
+it seesm like it can not access the courses or course_cats tables. <br />
+<br />
+Have you modified anything?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15366"></a>
+		<div class="forum-post-author">
+			<label class="title">bizbuddy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 17:27:14</p>
+            </div>
+            <div class="postheader"><h3>Re: mysql errors on courses</h3></div>
+				
+			<div class="body">
+				<p>Thanks.<br />
+<br />
+I switched to the "default" theme, went to "Browse Courses" and now I have even more errors, as follows:<br />
+<br />
+Warning: mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mw300063/public_html/7toolsworkshop.com/tutor/include/html/browse.inc.php on line 21<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/mw300063/public_html/7toolsworkshop.com/tutor/include/html/browse.inc.php:21) in /home/mw300063/public_html/7toolsworkshop.com/tutor/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/mw300063/public_html/7toolsworkshop.com/tutor/include/html/browse.inc.php:21) in /home/mw300063/public_html/7toolsworkshop.com/tutor/include/classes/Language/Language.class.php on line 123<br />
+<br />
+I have not changed anything, or touched anything in the db, if that's what you mean.  The only thing I changed was the header image in that Corporate_Blue theme I originally had.<br />
+<br />
+Katie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15367"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 19:00:18</p>
+            </div>
+            <div class="postheader"><h3>Re: mysql errors on courses</h3></div>
+				
+			<div class="body">
+				<p>Seems to be a general problem connecting to the database. Check the include/config.inc.php file to be sure the mysql login/pass and location are still correct.<br />
+<br />
+If you changed you site password recently, your mysql password may have also changed. <br />
+<br />
+In any case, I'd suggest getting upgraded to a more current version of ATutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15368"></a>
+		<div class="forum-post-author">
+			<label class="title">bizbuddy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-01 19:35:34</p>
+            </div>
+            <div class="postheader"><h3>Re: mysql errors on courses</h3></div>
+				
+			<div class="body">
+				<p>ok Greg,<br />
+<br />
+Thanks, I'll try to download/install a newer version and then see what happens.  This one was autoloaded by our hosting company....so, I may be back! ;)<br />
+<br />
+Thanks so much.<br />
+K</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,355 @@
+---
+ title: Unpossible to create tests in course
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Unpossible to create tests in course</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15120"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-10 08:47:00</p>
+            </div>
+            <div class="postheader"><h3>Unpossible to create tests in course</h3></div>
+				
+			<div class="body">
+				<p>I am unable to create any tests in the courses any more.<br />
+Bevore it was running fine<br />
+See in attached file printscreen of the message after trying to creat Test<br />
+<br />
+<br />
+Changes since last time<br />
+php version has been upgrded<br />
+The following patches has been installed:<br />
+00002, 00003, 00004, 00007, 00008, 00009, 00010, 0012, 00013, 00014<br />
+<br />
+<br />
+Things to describe: <br />
+ATutor Version: 1.6. Check Latest Version. <br />
+PHP Version: 5.2.6 <br />
+MySQL Version: 4.1.22-standard <br />
+OS: Linux 2.6.11.4-21.17-default</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15124"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-10 09:25:33</p>
+            </div>
+            <div class="postheader"><h3>Update:</h3></div>
+				
+			<div class="body">
+				<p>I roled back the create_test.php file from the 00002 patch.<br />
+Now I am able to create courses again, but there are new fields witch are not in the language:<br />
+[ test_description ]<br />
+[ pass_score ]<br />
+[ pass_feedback ]<br />
+[ fail_feedback ]<br />
+Are they active now?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15125"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-10 10:21:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Seems the SQL statements as a part of patch 0002 didn't run successfully. It needs a detail trace to find out why it's failed in your system. For now, if you could run the SQL below manually and revert back the create_test.php after installing patch 0002, you problem should be fixed.<br />
+<br />
+INSERT INTO `AT_language_text` VALUES<br />
+('en', '_template', 'pass_score', 'Pass Score', now(), ''),<br />
+('en', '_template', 'pass_feedback', 'Pass Feedback', now(), ''),<br />
+('en', '_template', 'fail_feedback', 'Fail Feedback', now(), ''),<br />
+('en', '_template', 'test_description', 'Test Description', now(), ''),<br />
+('en', '_template', 'no_pass_score', 'No pass score', now(), ''),<br />
+('en', '_template', 'percentage_score', 'percentage score', now(), ''),<br />
+('en', '_template', 'points_score', 'points score', now(), ''),<br />
+('en', '_template', 'all_passed_students', 'All Passed Students', now(), ''),<br />
+('en', '_template', 'all_failed_students', 'All Failed Students', now(), '');<br />
+<br />
+ALTER TABLE `AT_tests`<br />
+ADD `description` TEXT NOT NULL,<br />
+ADD `passscore` MEDIUMINT NOT NULL ,<br />
+ADD `passpercent` MEDIUMINT NOT NULL,<br />
+ADD `passfeedback` TEXT NOT NULL,<br />
+ADD `failfeedback` TEXT NOT NULL;<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15128"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-11 01:40:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>If you mean to add the tables directly into the database, it will be verry difficult to make it, because I have no accses to do it.<br />
+<br />
+Is there a other way to do it, ore will it be fixed by the upgrade from Version 1.6 to 1.6.1?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15145"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 05:11:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Hi ipool<br />
+When jou dont have acces to your database <br />
+check if you have root-acces (linux) and check as well you shut down the server, because when running it's about security you do not have acces.<br />
+for Kubuntu/Ubuntu go to "Konsole Terminal programm"<br />
+and enter<br />
+for lampp ; sudo/opt/lampp ****<br />
+for xampp ; sudo/opt/xampp ****<br />
+<br />
+**** = <br />
+stop (to stop)<br />
+start (to start)<br />
+restart (to restart)   <br />
+dont forget to start server again after you did your change as mentioned above <br />
+<br />
+good luck</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15150"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 09:38:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>I have an external hosting.<br />
+So no acces to the OS</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15151"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 09:42:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Generally hosts provide access to the database through a control panel. If not, it should be possible to install phpMyAdmin yourself, perhaps in a directory beside ATutor. You can then use the ATutor phpMyAdmin module to integrate it into ATutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15168"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-13 10:46:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Sorry Greg but the Histing accses is made by our Company IT Support. Even if I Install phpMyAdmin I'll get not the Acces Information.<br />
+So my Question is just to know if the Upgrade to 1.6.1 will set the database ore i do realy have to call our administrators to do it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15174"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-15 03:15:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>ipool, is that English language that's missing those terms?<br />
+If so, then you can try to run the SQL as the custom patch I've made based on cindy's suggestion. See the attachment.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15176"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-15 08:40:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Hi IndieRect<br />
+I just dryed to unzip your file but i've found it empty.<br />
+Can you try to upload again?<br />
+When I switch to english it looks fine<br />
+Just when I switch to german ore french it comes up<br />
+See attached Printscreen.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15177"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-15 08:47:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the reply and the patch, Indie. The patch is not fully correct, "AT_" in front of the table names should be removed. ATutor sql utility class generates the table name with prefix specified at ATutor installation.<br />
+<br />
+ipool, the upgrade to 1.6.1 would solve your problem. These SQL statements have been integrated into 1.6.1. Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15178"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-15 08:53:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Thanks indieRect and Cindy<br />
+Have a nice day</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15180"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-15 08:57:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Umm.. I could download Indie's patch without problem.<br />
+<br />
+The missing of frensh/german terms is because these language packs in 1.6 are not updated. If your terms in english are fine, the SQL should have run successfully. I understand you don't have access to mysql, but in any chance you can see your table structure? Can you see if you have listed fields in table AT_tests:<br />
+<br />
+description<br />
+passscore<br />
+passpercent<br />
+passfeedback<br />
+failfeedback<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15209"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-18 07:50:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Update:</h3></div>
+				
+			<div class="body">
+				<p>Right, I've forgotten about the prefix.<br />
+<br />
+ipool, have you managed to peep into the DB somehow?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

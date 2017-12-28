@@ -1,0 +1,147 @@
+---
+ title: cannot create course 16 3b Cannot modify header information
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>cannot create course 16 3b Cannot modify header information</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="12397"></a>
+		<div class="forum-post-author">
+			<label class="title">tmanolat</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-02 04:54:39</p>
+            </div>
+            <div class="postheader"><h3>cannot create course 16 3b Cannot modify header information</h3></div>
+				
+			<div class="body">
+				<p>Hello <br />
+I wish you a happy 2008!<br />
+We are trying to work with 1.6.3b. Installation went ok (no warnings, no errors) but we are unable to create a new course.<br />
+More specifically when facing http://myip/ATutor/users/create_course.php, the form is  interrupted at the point of custom icon selection. The Apache error.log tells:<br />
+<br />
+[Wed Jan 02 12:04:08 2008] [error] [client 10.20.0.188] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/ATutor/include/classes/Savant2/Savant2.php:1358) in /var/www/html/ATutor/include/header.inc.php on line 17, referer: http://10.20.0.23/ATutor/users/browse.php<br />
+[Wed Jan 02 12:04:08 2008] [error] [client 10.20.0.188] PHP Fatal error:  Cannot redeclare get_num_new_messages() (previously declared in /var/www/html/ATutor/include/lib/menu_pages.php:258) in /var/www/html/ATutor/include/lib/menu_pages.php on line 270, referer: http://10.20.0.23/ATutor/users/browse.php<br />
+<br />
+<br />
+Can you please help us?<br />
+<br />
+My Enviroment is:<br />
+  operating system - CentOS 5.1<br />
+  version of ATutor - 1.6-beta3<br />
+  versions of php - php-5.1.6-15.el5<br />
+  version of mysq l - mysql-5.0.22-2.2.el5_1.1<br />
+  webserver & version - httpd-2.2.3-11.el5.centos<br />
+  copies of error messages - see above<br />
+  changes to default settings - atutor content directory is /opt/ATutor/content<br />
+  web browser being used - firefox 2.0</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12398"></a>
+		<div class="forum-post-author">
+			<label class="title">tmanolat</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-02 04:57:01</p>
+            </div>
+            <div class="postheader"><h3>Re: cannot create course, 1.6 3b, Cannot modify header information</h3></div>
+				
+			<div class="body">
+				<p>Also, please see the attached screenshot of the resulting form (note the "pending" or)<br />
+<br />
+Thanks in advance for your input</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12406"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-02 10:50:24</p>
+            </div>
+            <div class="postheader"><h3>Re: cannot create course, 1.6 3b, Cannot modify header information</h3></div>
+				
+			<div class="body">
+				<p>Try creating a course without the icon. You can add it later through the course properties screen. <br />
+<br />
+thx for pointing out the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12409"></a>
+		<div class="forum-post-author">
+			<label class="title">tmanolat</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-02 11:50:34</p>
+            </div>
+            <div class="postheader"><h3>Rather clumsy way to solve this problem</h3></div>
+				
+			<div class="body">
+				<p>Dear Greg,<br />
+I managed to bypass the problem by commenting out most code of include/html/course_icon.inc.php:<br />
+<br />
+&lt;?php<br />
+// check if GD is installed<br />
+/*<br />
+if (!extension_loaded('gd')) {<br />
+	require(AT_INCLUDE_PATH.'header.inc.php');<br />
+	$msg->printInfos('FEATURE_NOT_AVAILABLE');<br />
+	require(AT_INCLUDE_PATH.'footer.inc.php');<br />
+	exit;<br />
+}<br />
+<br />
+$gd_info = gd_info();<br />
+$supported_images = array();<br />
+if ($gd_info['GIF Create Support']) {<br />
+	$supported_images[] = 'gif';<br />
+}<br />
+if ($gd_info['JPG Support']) {<br />
+	$supported_images[] = 'jpg';<br />
+}<br />
+if ($gd_info['PNG Support']) {<br />
+	$supported_images[] = 'png';<br />
+}<br />
+<br />
+if (!$supported_images) {<br />
+	require(AT_INCLUDE_PATH.'header.inc.php');<br />
+	$msg->printInfos('FEATURE_NOT_AVAILABLE');<br />
+	require(AT_INCLUDE_PATH.'footer.inc.php');<br />
+	exit;<br />
+}<br />
+*/<br />
+?><br />
+<br />
+<br />
+Then, I managed to get the page working ok and insert my courses.<br />
+<br />
+Hope this will get resolved in 1.6 (non-beta)<br />
+<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

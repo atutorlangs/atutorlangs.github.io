@@ -1,0 +1,51 @@
+---
+ title: there was an error sending the email message atutor 1533
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>there was an error sending the email message atutor 1533</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10014"></a>
+		<div class="forum-post-author">
+			<label class="title">jotalink</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-08 16:39:26</p>
+            </div>
+            <div class="postheader"><h3>there was an error sending the email message atutor 1533</h3></div>
+				
+			<div class="body">
+				<p>Ok, atutor is running properly but the only thing I have to configure to start using the service is the email notification for the students who enroll a course. I keep receiving the "there was an error sending the email" message. The Technical support area of our webhosting suggested me to use phpmailer, based on what they told me all what I have to do is to locate the file that has the following code and make modifications where necesary:<br />
+<br />
+require("class.phpmailer.php");<br />
+$mail = new PHPMailer();<br />
+$mail->IsSMTP();<br />
+$mail->Host = "MAIL.DOMAIN.COM";<br />
+$mail->SMTPAuth = true;<br />
+$mail->Username = "POP3ACCOUNT.NAME";<br />
+$mail->Password = "POP3.PASSWORD";<br />
+$mail->From = "POP3ACCOUNT.NAME ";<br />
+//$mail->FromName = "Mailer";//optional from name<br />
+$mail->AddAddress("RECIPIENT", "RECIPIENT'S NAME");<br />
+//$mail->AddReplyTo(" sender@example.com", "Information");<br />
+$mail->IsHTML(false); // set email format to HTML<br />
+$mail->Subject = "SUBJECT";<br />
+$mail->Body = "BODY";<br />
+if(!$mail->Send()) {<br />
+echo "&lt;p>Message could not be sent. &lt;/p>";<br />
+echo "&lt;p>Mailer Error: " . $mail->ErrorInfo . "&lt;/p>";<br />
+}<br />
+<br />
+The thing is that I've been searching in every file of the atutor instalation for a code like this but there is none of the files have this kind of code for me to make the required modifications. Is this the correct procedure or Im I doing it all wrong.<br />
+<br />
+Thanks for your help, this atutor installation is a gift I want to donate for a non-profit organization in Colombia www.colombopereira.com . I appreciate your collaboration. John J Villa</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

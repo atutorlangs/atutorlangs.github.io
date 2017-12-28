@@ -1,0 +1,68 @@
+---
+ title: Unable to create import directory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Unable to create import directory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24465"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-20 09:36:26</p>
+            </div>
+            <div class="postheader"><h3>Unable to create import directory</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+Am trying to import a content package and receive the message - 'Unable to create import directory'<br />
+<br />
+I take it this will be a permissions issue. Which folder do I need to alter permissions on ?<br />
+<br />
+Many thanks <br />
+Jim<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux<br />
+  ATutor version - 2.1.1<br />
+  Patch #s applied -<br />
+  ATutor theme name - default 1.6 theme<br />
+  PHP version - 5.2.17<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24467"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-20 10:09:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Unable to create import directory</h3></div>
+				
+			<div class="body">
+				<p>It will be the content/ directory that needs to be writable (chmod a+rwx content/). The specific directory for imports is content/import/. <br />
+<br />
+However, this should have been set during the install, so the problem may be due changes by your service provide. We see this occur when providers move sites around during hardware upgrades etc. If that's the case you may also experience problems uploading files to the file manage, file storage and with other tools that use the content directory. You can do a recursive change of permissions if that's the case (chmod -R 777 content). You likely need root permission to do that.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

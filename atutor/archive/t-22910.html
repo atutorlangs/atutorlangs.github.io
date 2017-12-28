@@ -1,0 +1,205 @@
+---
+ title: Subnav Tabs
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Subnav Tabs</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22910"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-19 12:25:18</p>
+            </div>
+            <div class="postheader"><h3>Subnav Tabs</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 2.0 installed and I'm wanting to add a subnav tab.  I can't figure out for the life of me where these are located so I can add a new one.  <br />
+<br />
+I've boxed the area I'm talking about in the attached screenshot.<br />
+<br />
+Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22911"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-19 12:39:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Subnav Tabs</h3></div>
+				
+			<div class="body">
+				<p>Subnav tabs are typically defined in the [children] array of the module.php file for any given module. Here's the on for the tests sub menu.<br />
+<br />
+[php]<br />
+$this->_pages['mods/_standard/tests/index.php']['children'] = array('mods/_standard/tests/create_test.php', 'mods/_standard/tests/question_db.php', 'mods/_standard/tests/question_cats.php');<br />
+<br />
+]<br />
+<br />
+[/php]<br />
+<br />
+see:<br />
+https://github.com/atutor/ATutor/blob/master/mods/_standard/tests/module.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22912"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-19 14:19:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Subnav Tabs</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the Sun. reply.<br />
+<br />
+I've been looking for the correct file that would have this info. for the My Start Page and I can't find it because I don't think My Start Page is a module... is it?<br />
+<br />
+I looked under /_core/users but that was just admin stuff.  Basically, I'd like to be able to add a "sub-tab" to the ones that I boxed in the screenshot of my original post.<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22913"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-19 16:01:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Subnav Tabs</h3></div>
+				
+			<div class="body">
+				<p>You'd usually add the line to the module.php file for a module you're linking into the UI. <br />
+<br />
+To add a link to the My Start page, it would look something like:<br />
+<br />
+[php]<br />
+<br />
+$this->_pages['users/index.php']['children'] = array_merge(array('path/to/yourscript.php'), isset($_pages['users/index.php']['children']) ? $_pages['users/index.php']['children'] : array());<br />
+<br />
+[/php]<br />
+<br />
+It can be added to any module.php file.<br />
+<br />
+You could also add your link via the include/lib/menu_pages.php to the $_pages array. Look for:<br />
+[php]<br />
+<br />
+$_pages['users/index.php']['children']<br />
+<br />
+[/php]<br />
+<br />
+We generally recommend the former method. With the latter you'll loose your changes when you upgrade.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22914"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-19 17:14:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Subnav Tabs</h3></div>
+				
+			<div class="body">
+				<p>OK.  I've got the link/tab in place now using the 2nd method you mentioned.  I'm not too concerned about upgrading because I've got so many other edits to make when that happens, it's no biggie.<br />
+<br />
+The only issue now is that I can't seem to name the tab (see attached screenshot).  I'm guessing something needs to happen with the language editor (BLOB file in MySQL?), but I'm not sure.<br />
+<br />
+Any guidance there?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22917"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-21 09:34:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Subnav Tabs</h3></div>
+				
+			<div class="body">
+				<p>Define a title_var in the $_pages array for the page you want language for, then using the translator tool in ATutor, add the title_var you used as a new template language item.<br />
+<br />
+[php]<br />
+<br />
+$_pages['path/to/yourscript.php']['title_var'] = 'your_tool_titlename';<br />
+<br />
+[/php]<br />
+<br />
+You'll need to turn on the translator tool by enabling it in the ATutor include/vitals.inc.php file near the top.  Take a look at the language manager documentation in the ATutor Handbook if you need more details.<br />
+<br />
+I'd still suggest you build your features into a module. Things like language, and links into the UI will be much easier to manage in the long run.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22918"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-21 17:56:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Subnav Tabs</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the help Greg.  I've worked it out.  As an alternative to the translator tool route, I found it easier to just run the following in MySQL.<br />
+<br />
+[php]<br />
+REPLACE INTO `AT_language_text` VALUES ('en', '_template', 'book_exchange', 'Book Exchange', NOW(), '');<br />
+[/php]<br />
+<br />
+Even though it's not in a module, and it's probably fairly crude, it seems to be working.  <br />
+<br />
+Feel free to nix this post if it's bad form to do it this way and you're not good with leaving that info. on the forums.<br />
+<br />
+Thanks again!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,120 @@
+---
+ title: pop up window  with relative link problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>pop up window  with relative link problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="7702"></a>
+		<div class="forum-post-author">
+			<label class="title">hatfaludi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-13 00:16:08</p>
+            </div>
+            <div class="postheader"><h3>pop up window  with relative link problem</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I am having problems with pop up windows that should show html files uploaded to the system.  I am using javascript to open the file, which is relatively linked (onclick="window.open('windows/pB.htm','pB','width=400,height=300')" ). <br />
+Interestingly it works perfectly with Firefox, however with IE I receive an error message (The page cannot be found).<br />
+<br />
+I am curious if anybody encountered with the similar problem and if by chance knows a workaround.<br />
+<br />
+Ps. giving absolute link is not an option since we want to put the course content later on CD too.<br />
+I also attach the exported course page for review.<br />
+<br />
+Thanks in advance,<br />
+<br />
+Tamas<br />
+<br />
+<br />
+Things to describe: <br />
+  operating system - XP pro<br />
+  version of ATutor - 1.5.2<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version - <br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used - ie 6 Firefox 1.5<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7722"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-16 09:14:08</p>
+            </div>
+            <div class="postheader"><h3>Re: pop up window  with relative link problem</h3></div>
+				
+			<div class="body">
+				<p>What is in the attachment? Don't attach exe files. We won't open them.<br />
+<br />
+Use the path variables mentioned in the developer documentation to create absolute paths. You probably need to use the $_base_href variable in front of your relative paths, though within content you should always use a relative path on its own.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14663"></a>
+		<div class="forum-post-author">
+			<label class="title">Ofimatica</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-30 00:23:22</p>
+            </div>
+            <div class="postheader"><h3>Re: pop up window  with relative link problem</h3></div>
+				
+			<div class="body">
+				<p>Hi hatfalludi, how do you fix that?<br />
+I have same problem</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14669"></a>
+		<div class="forum-post-author">
+			<label class="title">Ofimatica</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-30 14:33:26</p>
+            </div>
+            <div class="postheader"><h3>Re: pop up window  with relative link problem</h3></div>
+				
+			<div class="body">
+				<p>Hi, check this link http://www.nosolousabilidad.com/articulos/popups_javascript.htm<br />
+in this page I found solution to my problem, works fine whith IE and Firefox. I put only 'scrollbars=yes,resizable=yes' in adition..<br />
+<br />
+En espaol.<br />
+Seores le paso el link a la pagina en la cual pueden hallar la solucin a su problema. funciona bien en IE y Firefox... <br />
+<br />
+nota: el artculo est en espaol<br />
+<br />
+saludos a todos.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

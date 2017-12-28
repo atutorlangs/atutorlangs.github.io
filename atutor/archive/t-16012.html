@@ -1,0 +1,229 @@
+---
+ title: Help installing patches in 162
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Help installing patches in 162</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16012"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-16 14:02:23</p>
+            </div>
+            <div class="postheader"><h3>Help installing patches in 162</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I've tried to install the patches for the newly released 1.6.2 version and I keep getting this error AFTER I chmodded the appropriate files and directories....<br />
+<br />
+"   Unknown column 'author' in 'field list'  "<br />
+<br />
+Any idea how I deal with this?<br />
+<br />
+Thanks.<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16013"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-16 14:56:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Help installing patches in 1.6.2</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Is your 1.6.2 fresh installed or upgrade from older version? if upgrade, which version do u upgrade from?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16015"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-16 15:02:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Help installing patches in 1.6.2</h3></div>
+				
+			<div class="body">
+				<p>I had 1.6.1 installed about a month ago.  I tested some features on 1.6.1 like gradebook and making up some assignments and user groups, etc.  Just to test things out.  <br />
+<br />
+But then a couple days ago, I deleted it on my webhost account in order to do a fresh install of 1.6.2.  My webhost helped me install 1.6.2, which should have been a fresh install. However, strangely enough, the demo stuff from 1.6.1 was still there after 1.6.2 was installed.<br />
+<br />
+Any ideas?<br />
+<br />
+Thanks.<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16019"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-16 15:31:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Help installing patches in 1.6.2</h3></div>
+				
+			<div class="body">
+				<p>This error is caused the by the missing field "author" in table "patches". <br />
+<br />
+From what you specified, the reasons might be: 1.6.2 could be using the database created by 1.6.1. They should be using the different databases though. While 1.6.1 exists and installing another fresh 1.6.2, pls specify a different database name at installation.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16021"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-16 15:41:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Help installing patches in 1.6.2</h3></div>
+				
+			<div class="body">
+				<p>So, do I have to do a completely fresh install of everything?<br />
+<br />
+Or is there a way to keep some of the stuff I had in 1.6.1?<br />
+<br />
+Thanks for the help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16023"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-16 15:49:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Help installing patches in 1.6.2</h3></div>
+				
+			<div class="body">
+				<p>In order to keep things in 1.6.1, upgrade it to 1.6.2 instead of another fresh install.<br />
+<br />
+how to upgrade: http://help.atutor.ca/admin/upgrading.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16025"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-16 15:53:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Help installing patches in 1.6.2</h3></div>
+				
+			<div class="body">
+				<p>Well, at this point I have 1.6.2 installed already, but it seems to still have some stuff from 1.6.1 as well.  <br />
+<br />
+Would it be cleaner at this point to just do a fresh install of 1.6.2?  Or is there a way to specifically delete the things from 1.6.1 that are causing the error, but keep my classes info. that I set up previously?<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16026"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-16 16:00:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Help installing patches in 1.6.2</h3></div>
+				
+			<div class="body">
+				<p>It seems you've installed where should have upgraded. This will break things in your database.<br />
+<br />
+I'd say you're better off to start over with a fresh 1.6.2</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

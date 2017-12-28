@@ -1,0 +1,602 @@
+---
+ title: htaccess deeplink protection
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>htaccess deeplink protection</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="15881"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-04 11:11:17</p>
+            </div>
+            <div class="postheader"><h3>htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I've been using flashfiles in a separate directory:<br />
+eg:  www.mydomaine.nl/atutor/flash/flashexample.swf<br />
+I use them in the lesson-html<br />
+<br />
+How do I protect this flashexample.swf against deeplinking.<br />
+I fount this code:<br />
+&lt;!-- quoting:<br />
+<br />
+Options +SymLinksIfOwnerMatch<br />
+RewriteEngine on<br />
+RewriteCond %{HTTP_REFERER} !^601br> RewriteCond %{HTTP_REFERER} !^http://(.*.)mydomain.nl(/)?.*0NC]<br />
+RewriteRule .*.(wmv|asx|jpg|gif|jpeg|swf)://localhost/ [R,NC]<br />
+<br />
+unquote --><br />
+<br />
+I have to upload it  with the name .htaccess into the atutor directory, but here is already a file by that name?<br />
+<br />
+can you please help me<br />
+<br />
+regards and thanks<br />
+Patrick</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15882"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-04 12:01:59</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi, copy and paste<br />
+RewriteCond %{HTTP_REFERER} !^601br> RewriteCond %{HTTP_REFERER} !^http://(.*.)mydomain.nl(/)?.*0NC]<br />
+RewriteRule .*.(wmv|asx|jpg|gif|jpeg|swf)://localhost/ [R,NC]<br />
+<br />
+Above #Forum rules</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15886"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-05 10:25:08</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi HArris,<br />
+Thanx for quick reply<br />
+<br />
+but...<br />
+for testing on localhost?<br />
+&lt;!--....!^http://(.*.)mydomain.nl(/)?.*0NC]... --><br />
+what would be filled in bij "mydomain.nl"?<br />
+<br />
+--"localhost"<br />
+-- 192.168.0.10 (ip-adress of the machine)<br />
+-- xxxxxxx/atutor<br />
+<br />
+the adress of the atutorfolder is localhost/atutor<br />
+the IP of localhost is 192.168.0.10.<br />
+<br />
+Do I have to restart the apache-server after the change?<br />
+<br />
+greetings Patrick</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15887"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-05 10:34:15</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>I think you should use 'localhost'; if it doesn't, you will have to use your DNS (ie. www.atutor.ca).<br />
+<br />
+Note, 192.168.0.10 is not your exact machine IP, it is just your private network IP.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15888"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-05 11:14:36</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi Harris <br />
+I understand it's my private network IP<br />
+because I'm testing atutor before live-use on a local machine<br />
+<br />
+As  I mentioned its possible to access(view) subfolders without being logged in in atutor<br />
+<br />
+eg.  http://www.atutor.ca/atutor/demo162/jscripts/help.js  (it's a demo of the atutor-site) <br />
+<br />
+but for users who are familiar with the atutor-folder-structure it is possible to deeplink to pictures of an existing atutor-used-site or view a lot of folders?<br />
+How can I prevent this?<br />
+<br />
+As mentioned above I want to secure all folders of Atutor so external acces/view without being logged -on is impossible.<br />
+<br />
+I want to create a folder eg: Flashfiles containing flasfiles.swf wich appear in a pop-up, used in a course, I also want to prevent use by non-students, (even when they copied or received flash-url from a student)<br />
+So I want to prevent deeplinking to these flashfiles.<br />
+<br />
+(firefox 3.xxx always shows locationbars at popup-screens even when javascript "location=no" in the popup-script is used so url-location is visible. It's a safety-measure preventing phishing , I read)<br />
+<br />
+So the quaetion is how do I prevent access/viewing from non-logged-in visitors to all the atutor-folders, exepted to the login-screen, and deeplinking to images I use (not uploaded by image-manager) and other files I use in selfcreated folders in the atutor-folder/directory.<br />
+<br />
+Using an other localmachine IN my local network, accessing my local network and browsing to 192,168,0,10/atutor/flash/flashfile.swf , I can view the mentioned flashfiles without being logged-in? Even when I test it off-line (localmachine) of Live (eg: www.myatutor.nl) It won't make a difference...I guess?<br />
+<br />
+So Do I need to use some index.html (..redirect scripts) or adjusting or adding the htacces-file?<br />
+<br />
+thanks in advance<br />
+<br />
+lots of regard <br />
+Patrick</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15889"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-05 12:08:43</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi Patrick,<br />
+<br />
+Unfortunately, if you have created your own folder inside ATutor/, ATutor's code will not prevent people from accessing to it.  We handled deeplinking by storing all our media files inside the content/ folder, and uses get.php to fetch the files from it.  get.php will authenticate against the user's id when it fetches the media.  <br />
+<br />
+Here are a few suggestions for you to prevent users from accessing your custom folder (ie. ATutor/flashfile/*)<br />
+<br />
+1. Make a .htaccess file inside that folder and redirects all medias back to the login page.  This .htacess file is similar to the one you you have posted above.<br />
+2. Move the folder you don't want the users to get to above the www/ directory, so then the web users cannot access to it directly.  Then, create your own get.php file similar to the one we had, for instance, get_flash.php, and uses this script to fetch all your flash files inside the course.  (ie. &lt;a href="get_flash.php?file=flashfile.swf"..>)  In this case, even if FF3 shows your link as http ://yourhost/ATutor/get_flash.php?file=flashfile.swf, the user will not be able to go direction to your file because your script will stop before logging in.  <br />
+<br />
+Hope this helps.<br />
+<br />
+<br />
+cheers,<br />
+Harris</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15890"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-05 12:15:00</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>I'm not exactly clear on the purpose of the flash file, but why not upload it as course content using the course file manager, then inserting the file from the file manager into an ATutor content page.<br />
+<br />
+If your ATutor content/ directory is outside the web root directory, the only way to access the file would be through the content page it is embedded in, assuming the course is either protected or private.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15891"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-05 12:34:06</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi Harris and Greg,<br />
+Thankx for your reply,<br />
+I will try-out your advise next week, <br />
+...why not upload it as course content using the course file manager.....<br />
+I've had a "size-problem" even adjusting file-size settings in the course-admin-page, uploading did not work so I create an own flash-folder.<br />
+<br />
+I'm gonna try it after the weekend <br />
+thanx for the quick reply.<br />
+<br />
+Patrick</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15892"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-05 12:42:13</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>If size is a problem, then you either need to reset course size limits as the ATutor administrator. or set upload and post limits for the server in the system's php.ini file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15921"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-09 06:54:57</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg & Harris,<br />
+<br />
+The size isn't a problem anymore, I had to reinstall Atutor, because adjusting size-limitation in ../atutor/admin/config-edit.php did not work.<br />
+After fresh installation of a new Atutor it works.<br />
+<br />
+Now I can upload a flashfile with use of filemanager inside the course-content-edit-page (.../atutor/editor/content-edit.php?cid=13)<br />
+<br />
+<br />
+realized situation 1:<br />
+Using this flashfile in the page (imported with filemanager) is working. The page is secured against deeplinking, so without logging in(to atutor) it's impossible to view this content, so far no explanation needed for me.<br />
+<br />
+Wished situation 2:<br />
+However I want to use pop-ups in the course-content.<br />
+So users(students) can choose between eg.2 different sizes of flashfiles(screen-size-resolutions) when they use small screen of big screen, by clicking a button eg. size 800x600  of a button 1024x768<br />
+<br />
+realized situation 3:<br />
+I can use pop-up script which refers to another html-page [u]outside[/u] the "secured-atutor-area" which contains the flashfile(s) [b]but it can be viewed without logging in to atutor[/b], also deeplink-abuse.<br />
+<br />
+realized situation 4:<br />
+I try to use pop-up script which refers to another html-page [u]outside[/u] the "secured-atutor-area"<br />
+with the "&lt;object>-tag" which is used in the generated html-code of the page wich is generated in realized situation 1(by using "view page-source in FF)<br />
+It doesn't work I will get the right pop-up without a flasfile playing but only showing a link "..../flasfile.swf which is not working.<br />
+<br />
+realized situation 4:<br />
+I try to use pop-up script which refers to another html-page [u]outside[/u] the "secured-atutor-area"<br />
+with the "page-url of the flashfile-html-page I created inside the course) eg. .../atutor/content.php?cid=13.<br />
+The pop-up is working but redirecting to the loginpage of atutor (.../atutor/login.php)<br />
+so now the user need to login -AGAIN to acces a page which contains an atutor-message "page cannot be found"<br />
+(eg. .../atutor/content.php?cid=13)<br />
+<br />
+I would be verry greatfull if you can help me (again)<br />
+<br />
+thanks in advance<br />
+<br />
+regards Patrick</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15922"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-09 07:00:13</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>correction of previous posting:<br />
+<br />
+realized situation 4:<br />
+I try to use pop-up script which refers to another html-page outside the "secured-atutor-area"<br />
+with the "page-url of the flashfile-html-page I created inside the course) eg. .../atutor/content.php?cid=13.<br />
+The pop-up is working but redirecting to the loginpage of atutor (.../atutor/login.php)<br />
+so now the user need to login -AGAIN to acces a page which contains an atutor-message "page cannot be found"<br />
+(eg. .../atutor/content.php?cid=13)<br />
+<br />
+correction=<br />
+I try to use pop-up script which refers to another html-page [u][b]INSIDE[/b][/u] the "secured-atutor-area"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15923"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-09 07:38:08</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>I think this "problem" is solved by using a <br />
+.htaccess -file used in a created folder ../atutor/content/(self-created)flashfiles.<br />
+<br />
+I used a few .htaccess-scripts as mentioned in postings-above but they did not protect the files<br />
+bij entering the url: 192.168.0.10/atutor/content/flashfiles/xxx.swf<br />
+(perhaps using a XAMPP-server on Ubuntu-machine (intranet) for testing-purpose and aproaching it by a internal other machine by using the url: 192.168.0.10 (ip of the XAMPP-server) is the wrong way to test??<br />
+I read something about htaccess & blank-referral??<br />
+Honestly .htacces is new to me.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15925"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-09 08:26:31</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>The support we can offer here needs to be ATutor related. If you need to create an htaccess file to hide a file that's not part of ATutor, that's something you need to be able to figure out on your own. <br />
+<br />
+<br />
+To start, see the apache documentation on htaccess.<br />
+http://httpd.apache.org/docs/1.3/howto/htaccess.html<br />
+<br />
+<br />
+When we're not busy, we might be able to help with these types of things, but right now we have more work than we can handle.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15929"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-09 09:07:44</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+I sorted it out.<br />
+<br />
+probably using a XAMPP server for testing-purpose in a local network (intranet) is causing a problem.<br />
+<br />
+Securing a folder on a live-website is working with .htaccess.<br />
+<br />
+So I think the problems will be in the XAMPP-settings (locally)<br />
+<br />
+Thanks you and Harris for the advice and help<br />
+<br />
+found a great .htaccess-generator:<br />
+http://www.htmlbasix.com/disablehotlinking.shtml</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16723"></a>
+		<div class="forum-post-author">
+			<label class="title">danieltooop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-18 18:35:18</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi, I have affiliate popups, and my option of setting the cookie for the popups, as in - hours to cookie each popup will pop up a different cookie each page that is viewed. <br />
+And i Choosed how long to set the cookie for each popup <br />
+<br />
+popup code is a full javascript with the 'read cookie' bit already in it, look for a line or lines like the following:<br />
+<br />
+     document.write('&lt;SCRI'+'PT LANGUAGE="JavaScript1.1" ');<br />
+      document.write(' SRC="http://www.popupcompany.com/popup.cgi?id=xxx&affid=xxx">');<br />
+      document.write('&lt;/SCR'+'IPT>'); <br />
+<br />
+I extracted code from htmlbasix.com/cookiedpopup.shtml.<br />
+<br />
+But, it is working fine in firefox, and in IE its not working. What are all the changes i have to make in order to make this work in IE browser. <br />
+<br />
+------------------------<br />
+With Regards,<br />
+Daniel - Web Designer. <br />
+[url=http://www.southcoastrecovery.com]drug rehab[/url] Center.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16724"></a>
+		<div class="forum-post-author">
+			<label class="title">danieltooop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-18 18:38:10</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+It is not even working on Opera browser. <br />
+------------------------<br />
+With Regards,<br />
+Daniel - Web Designer. <br />
+http://www.southcoastrecovery.com<br />
+[op]forums/view.php?fid=7;pid=15881;page=1#16723[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16732"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-19 09:57:27</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Let me investigate in this.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Hi, I have affiliate popups, and my option of setting the cookie for the popups, as in - hours to cookie each popup will pop up a different cookie each page that is viewed. <br />
+And i Choosed how long to...<br />
+[op]forums/view.php?fid=7;pid=15881;page=1#16723[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16733"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-02-19 10:24:37</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>How is this related to ATutor?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Let me investigate in this.<br />
+[op]forums/view.php?fid=7;pid=15881;page=2#16732[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16936"></a>
+		<div class="forum-post-author">
+			<label class="title">pvhnl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-16 06:30:00</p>
+            </div>
+            <div class="postheader"><h3>Re: htaccess deeplink protection</h3></div>
+				
+			<div class="body">
+				<p>Hi Daniel,<br />
+<br />
+I have tested a lot with this htaccess, but with IE it gives a lot of problems.<br />
+I read on a lot forums the problem of IE.<br />
+For example IE is not sending a referral when it is opening a flashfile. It is a probel a lot of postings in other forums are about.<br />
+So using htaccess with "blocking blank referrers" is almost always giving a problem for IE.<br />
+Also verry important some firewalls and proxyservers are blokking this referrer. So people behind such firewalls and proxy's (even using FF, Chrome, Safari Opera etc) are in the risk of being blocked for viewing some content. So I have to figure something out with the advise Harris gave:<br />
+Subject: Re: htaccess deeplink protection	Quote this post in your reply<br />
+Hi Patrick,<br />
+<br />
+Unfortunately, if you have created your own folder inside ATutor/, ATutor's code will not prevent people from accessing to it. We handled deeplinking by storing all our media files inside the content/ folder, and uses get.php to fetch the files from it. get.php will authenticate against the user's id when it fetches the media.<br />
+<br />
+Here are a few suggestions for you to prevent users from accessing your custom folder (ie. ATutor/flashfile/*)<br />
+<br />
+1. Make a .htaccess file inside that folder and redirects all medias back to the login page. This .htacess file is similar to the one you you have posted above.<br />
+2. Move the folder you don't want the users to get to above the www/ directory, so then the web users cannot access to it directly. Then, create your own get.php file similar to the one we had, for instance, get_flash.php, and uses this script to fetch all your flash files inside the course. (ie. &lt;a href="get_flash.php?file=flashfile.swf"..>) In this case, even if FF3 shows your link as http ://yourhost/ATutor/get_flash.php?file=flashfile.swf, the user will not be able to go direction to your file because your script will stop before logging in.<br />
+<br />
+Maybe you (already) found some solutions.<br />
+<br />
+Regards Patrick</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,144 @@
+---
+ title: INSTALLTION ISSUE
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>INSTALLTION ISSUE</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="15461"></a>
+		<div class="forum-post-author">
+			<label class="title">jmcdonald</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-09 15:50:53</p>
+            </div>
+            <div class="postheader"><h3>INSTALLTION ISSUE</h3></div>
+				
+			<div class="body">
+				<p>I am new to atutor - installing atutor and had the following issue 'CALL TO UNDEFINED FUNCTION; SESSION-START() IN ...DIRECTORY<br />
+'<br />
+your help is much appreciated<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - linux suse 9<br />
+  ATutor version - 1.6.1<br />
+  Patch #s applied - none<br />
+  ATutor theme name - n/a<br />
+  PHP version - 4.3.4<br />
+  MySQL version - 5.0.6.7<br />
+  Webserver & version - apache 2<br />
+  Copies of error messages -<br />
+      FATAL ERROR ; CALL TO UNDEFINED FUNCTION; SESSION-START() IN ...DIRECTORY</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15468"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-10 10:25:26</p>
+            </div>
+            <div class="postheader"><h3>Re: INSTALLTION ISSUE</h3></div>
+				
+			<div class="body">
+				<p>Sounds like PHP does not have session support. Turn it on in the php.ini file, or ask your ISP to if your on a hosted system. Sessions documentation is found in the file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15469"></a>
+		<div class="forum-post-author">
+			<label class="title">jmcdonald</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-10 10:30:26</p>
+            </div>
+            <div class="postheader"><h3>Re: installation issue</h3></div>
+				
+			<div class="body">
+				<p>More information:<br />
+<br />
+The above error is received after ATutor has been unpacked during the initial phase of install.<br />
+<br />
+I get to the screen after typing the following URL:<br />
+<br />
+"http://localhost/~jmcdonald/ATutor/"<br />
+<br />
+I am then redirected to the standard "not installed" URL below:<br />
+<br />
+"http://localhost/~jmcdonald/ATutor/install/not_installed.php"<br />
+<br />
+I then get the following message in the browser window:<br />
+<br />
+"ATutor 1.6.1 Installation"<br />
+<br />
+"ATutor does not appear to be installed. Continue on to the installation."<br />
+<br />
+When I click the link to "continue on to the installation", I am presented with the error message:<br />
+<br />
+"Fatal error: Call to undefined function: session_start() in /home/jmcdonald/public_html/ATutor/install/index.php on line 27"<br />
+<br />
+This is where I am stuck.  Has anyone experienced this.  I have verified that Apache2/PHP/Msql are running.<br />
+<br />
+Any help is greatly appreciated![b] [/b] [b] [/b]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15470"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-10 10:45:19</p>
+            </div>
+            <div class="postheader"><h3>Re: installation issue</h3></div>
+				
+			<div class="body">
+				<p>Like Greg has said, your session is not enabled.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15475"></a>
+		<div class="forum-post-author">
+			<label class="title">jmcdonald</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-10 14:19:59</p>
+            </div>
+            <div class="postheader"><h3>Re: installation issue</h3></div>
+				
+			<div class="body">
+				<p>Excellent.  I am on to the next part of the install.<br />
+<br />
+Thank you very much!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

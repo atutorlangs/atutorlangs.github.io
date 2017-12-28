@@ -1,0 +1,214 @@
+---
+ title: Creating student lists
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Creating student lists</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="7964"></a>
+		<div class="forum-post-author">
+			<label class="title">mnk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-07 11:16:56</p>
+            </div>
+            <div class="postheader"><h3>Creating student lists</h3></div>
+				
+			<div class="body">
+				<p>Hi, I am using ATutor with linux. I am using the latest version of ATutor (just upgraded). Now, when I create a list of students, the email that gets sent to the students includes usernames and passwords for all other students up to that student username.<br />
+<br />
+Eg, if i create three users: t_test1, t_test2 and t_test3, these are the emails sent to the various users:<br />
+<br />
+t-test1 gets:<br />
+-----------------<br />
+You have been enrolled into the course ????. To access this course, you must first confirm your account by using the following link: http://www.site.com/ATutor/confirm.php?id=69&m=37857006db. It is strongly suggested you change your password upon logging in.<br />
+<br />
+Web Site : http://www.site.com/ATutor/<br />
+Login Name : t_test1<br />
+Password : t_test1<br />
+<br />
+t_test2 gets:<br />
+-----------------<br />
+You have been enrolled into the course ????. To access this course, you must first confirm your account by using the following link: http://www.site.com/ATutor/confirm.php?id=69&m=37857006db. It is strongly suggested you change your password upon logging in.<br />
+<br />
+Web Site : http://www.site.com/ATutor/<br />
+Login Name : t_test1<br />
+Password : t_test1<br />
+You have been enrolled into the course ????. To access this course, you must first confirm your account by using the following link: http://www.site.com/ATutor/confirm.php?id=70&m=c4271bf2f6. It is strongly suggested you change your password upon logging in.<br />
+<br />
+Web Site : http://www.site.com/ATutor/<br />
+Login Name : t_test2<br />
+Password : t_test2<br />
+<br />
+<br />
+and t_test3 gets:<br />
+-----------------------<br />
+You have been enrolled into the course ????. To access this course, you must first confirm your account by using the following link: http://www.site.com/ATutor/confirm.php?id=69&m=37857006db. It is strongly suggested you change your password upon logging in.<br />
+<br />
+Web Site : http://www.site.com/ATutor/<br />
+Login Name : t_test1<br />
+Password : t_test1<br />
+You have been enrolled into the course ????. To access this course, you must first confirm your account by using the following link: http://www.site.com/ATutor/confirm.php?id=70&m=c4271bf2f6. It is strongly suggested you change your password upon logging in.<br />
+<br />
+Web Site : http://www.site.com/ATutor/<br />
+Login Name : t_test2<br />
+Password : t_test2<br />
+You have been enrolled into the course ????. To access this course, you must first confirm your account by using the following link: http://www.site.com/ATutor/confirm.php?id=71&m=e91fdc0e07. It is strongly suggested you change your password upon logging in.<br />
+<br />
+Web Site : http://www.site.com/ATutor/<br />
+Login Name : t_test3<br />
+Password : t_test3<br />
+<br />
+<br />
+and so on...<br />
+<br />
+Can someone please fix this bug or show me what I have done wrong?<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7965"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-07 11:27:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating student lists</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7966"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-07 12:15:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating student lists</h3></div>
+				
+			<div class="body">
+				<p>Never mind the system info, though in the future include it. <br />
+<br />
+To fix the problem add unset($body) to include/lib/enroll.inc.php at about line 153, just before unset($mail) <br />
+<br />
+[php]<br />
+	        unset($body);<br />
+		unset($mail);<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7967"></a>
+		<div class="forum-post-author">
+			<label class="title">mnk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-07 14:10:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating student lists</h3></div>
+				
+			<div class="body">
+				<p>Thanks for that.<br />
+Can you also tell me how to:<br />
+1) delete more than one user at once (incl all of them)<br />
+2) re-email everyone's welcome email to them?<br />
+3) create a random passwd for the users when creating them?<br />
+4) import a list of users along with their passwds into the student list?<br />
+Thanks in advance. :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7973"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-08 08:41:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating student lists</h3></div>
+				
+			<div class="body">
+				<p>[green] Can you also tell me how to: [/green] <br />
+<br />
+[green] 1) delete more than one user at once (incl all of them) [/green] <br />
+<br />
+One at a time, unless you do it via a mysql management application link phpMyAdmin<br />
+<br />
+[green] 2) re-email everyone's welcome email to them? [/green]<br />
+Yes. Unenroll users, then re-enroll them to resend the Welcome message<br />
+ <br />
+[green] 3) create a random passwd for the users when creating them? [/green] <br />
+<br />
+No.  The system does not create random passwords.<br />
+<br />
+[green] 4) import a list of users along with their passwds into the student list? [/green] <br />
+<br />
+No. Passwords are created by the system based on the persons name.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8042"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-16 10:58:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating student lists</h3></div>
+				
+			<div class="body">
+				<p>remove the first dots from line 142 and 145 of include/lib/enroll.inc.php<br />
+<br />
+before: $body .=<br />
+after: $body =</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

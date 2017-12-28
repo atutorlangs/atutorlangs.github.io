@@ -1,0 +1,202 @@
+---
+ title: Exporting Importing inside Atutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Exporting Importing inside Atutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3790"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-25 07:47:16</p>
+            </div>
+            <div class="postheader"><h3>Exporting Importing inside Atutor</h3></div>
+				
+			<div class="body">
+				<p>IHi<br />
+ I am trying to use some material of one course into another,<br />
+So I exported the content using the EXPORT LINK.<br />
+The content I exported has some Links to some jpg images.<br />
+-----------------------------------------------------<br />
+The data in the Original Course is:<br />
+In the HTML the reference is :<br />
+     &lt;img src="Help_Atutor/image.jpg" border=5/><br />
+<br />
+In the Folder administrator I see <br />
+    Inicio/Atutor_Help/image.jpg<br />
+-------------------------------------------------------<br />
+<br />
+<br />
+When I import the content, in another curse, the app puts all the images, in a new folder with the name of the orginal course<br />
+------------------------------------------------<br />
+The data in the Imported Course is<br />
+In the Folder administator I see:<br />
+   Inicio/Course_name/Atutor_Helo/image.jpg<br />
+<br />
+but de html still has the link to the same direction<br />
+ &lt;img src="Help_Atutor/image.jpg" border=5/> so it cant find the images.<br />
+------------------------------------------------<br />
+is this a bug,or I am doing something wrong?<br />
+<br />
+The version of a Tutor is 1.4.2 running in Linux.<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3792"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-25 08:48:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Let us see</h3></div>
+				
+			<div class="body">
+				<p>The path to the image is right, as is the folder that gets created when you import a content package. Something about your system is not interpreting paths to subdirecties in your filemanager.<br />
+<br />
+You had sent us access information to your ATutor installation. But there is nothing at the URL include with the information. <br />
+<br />
+If possible you should be using ATutor 1.4.3.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3796"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-25 13:44:29</p>
+            </div>
+            <div class="postheader"><h3>More info</h3></div>
+				
+			<div class="body">
+				<p>I am sending the info to my app by mail,<br />
+<br />
+I am not usig 1.4.3., becausse I am waiting for the spanish version.<br />
+As soon it will be ready I will install it.<br />
+About the info , I am not understandig well what is goign on<br />
+ Are both ot the  direcotries ok, and the app must understand that theres is a new Folder in between the Inicio Folder ant the Atutor_help Folder?, and resolve this automatically?<br />
+Thanks you<br />
+Jose</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3797"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-25 13:58:31</p>
+            </div>
+            <div class="postheader"><h3>volunteer to translate</h3></div>
+				
+			<div class="body">
+				<p>You could volunteer to finish up the few items left for the Spanish 1.4.3 language pack. In MyATutor request a translator account.<br />
+<br />
+We are going to need access to your system to try to resolve the problem, if upgrading to 1.4.3 does not correct it.<br />
+<br />
+You did send me access information but it was incorrect.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3798"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-25 14:40:23</p>
+            </div>
+            <div class="postheader"><h3>accent breaks the path</h3></div>
+				
+			<div class="body">
+				<p>The problem is the  in the title of the course. This was a bug in ATutor 1.4.2 and is fixed in 1.4.3. <br />
+<br />
+Until you have upgraded your system, if you want to export content, remove the  from the course title, export your content, then put to  back in the title.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3800"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-26 09:16:37</p>
+            </div>
+            <div class="postheader"><h3>Exporting Importing inside Atutor</h3></div>
+				
+			<div class="body">
+				<p>thanks Greg<br />
+I will help in the translation during the week,.<br />
+Another problem I have , is that is very usuall that the app hangs ( the browser is waiting for a response of the server)<br />
+THe only way to restart te app, is to shut down the browser and start it again<br />
+Isthis a usuall problem of the app? Do you have any idea<br />
+<br />
+Jose</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3802"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-26 10:55:34</p>
+            </div>
+            <div class="postheader"><h3>Where does it hang?</h3></div>
+				
+			<div class="body">
+				<p>It is unlikely that ATutor would be responsible for your system hanging. It is more likely a browser issues or perhaps a connectivity issue with your ISP. <br />
+<br />
+What browser and version are you using.<br />
+<br />
+If there are specific screens that causes your system to hang we will look more closely at those screen if you can list them. If it is a general occurance, then it is probably not ATutor that is causing the problem.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+thanks Greg<br />
+I will help in the translation during the week,.<br />
+Another problem I have , is that is very usuall that the app hangs ( the browser is waiting for a response of the server)<br />
+THe only way t...<br />
+[op]forums/view.php?fid=7;pid=3790;page=1#3800[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

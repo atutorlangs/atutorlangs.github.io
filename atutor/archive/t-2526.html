@@ -1,0 +1,277 @@
+---
+ title: Jump menu problem following upgrade to 142
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Jump menu problem following upgrade to 142</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2526"></a>
+		<div class="forum-post-author">
+			<label class="title">blackwidow</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-22 16:48:59</p>
+            </div>
+            <div class="postheader"><h3>Jump menu problem following upgrade to 142</h3></div>
+				
+			<div class="body">
+				<p>I've just completed an upgrade from 1.4 to 1.4.2. Everything appeared to work perfectly with one exception...the Jump Menu.<br />
+<br />
+Instead of displaying the names of the various courses, it now simply displays a list of numbers. These numbers seem to reflect the [b]orgina[/b]l alphabetical order of the six courses currently available. The course were renamed (using the format 'Number: Course Name') shortly before the upgrade to ensure a specific display order. As a result, the numbers within the Jump Menu no longer bear any relationship to the current display order. <br />
+<br />
+Any suggestions? Is this an upgrade issue/bug?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2527"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-22 17:19:22</p>
+            </div>
+            <div class="postheader"><h3>Jump menu problem following upgrade to 1.4.2</h3></div>
+				
+			<div class="body">
+				<p>which theme are you using?<br />
+if you are using a theme other than the Default one, you will have to download and reinstall the themes for 1.4.2.<br />
+<br />
+ATutor 1.4.2 cannot successfully use themes made for ATutor 1.4.1 or 1.4.0</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2535"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-23 14:10:19</p>
+            </div>
+            <div class="postheader"><h3>Same problem</h3></div>
+				
+			<div class="body">
+				<p>Be sure to provide enough information about your system, and the circumstances of any problems you are experiencing. Support requests lacking complete information may not get a reply. [DELETE THIS NOTICE BEFORE SENDING YOUR SUPPORT REQUEST]		I just completed the same upgrade 1.4.0 --> 1.4.2 and I have a similar experrience.<br />
+<br />
+In my case, it is  giving me the first letter of my course name:<br />
+A<br />
+F<br />
+C<br />
+M<br />
+<br />
+instead of <br />
+Art 10 <br />
+Chemistry 12, <br />
+etc.<br />
+<br />
+i would assume that is why blackwidow is getting the numbers ...first character only showing up<br />
+<br />
+I\'m using a custom theme that stripped out much of the menu options.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2536"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-23 15:01:17</p>
+            </div>
+            <div class="postheader"><h3>apply the fix</h3></div>
+				
+			<div class="body">
+				<p>the old block looked like:<br />
+62 &lt;?php foreach ($tmpl_nav_courses as $course): ?><br />
+63	&lt;?php if ($course['course_id'] == $_SESSION['course_id']): ?><br />
+64		&lt;option value="&lt;?php echo $course['course_id']; ?>" selected="selected">&lt;?php echo $course['title']; ?>&lt;/option><br />
+65	&lt;?php else: ?><br />
+66		&lt;option value="&lt;?php echo $course['course_id']; ?>">&lt;?php echo $course['title']; ?>&lt;/option><br />
+67	&lt;?php endif; ?><br />
+68 &lt;?php endforeach; ?><br />
+<br />
+replace with:<br />
+<br />
+<br />
+62 &lt;?php foreach ($tmpl_nav_courses as $this_course_id => $this_course_title): ?><br />
+63	&lt;?php if ($this_course_id == $_SESSION['course_id']): ?><br />
+64		&lt;option value="&lt;?php echo $this_course_id; ?>" selected="selected">&lt;?php echo $this_course_title; ?>&lt;/option><br />
+65	&lt;?php else: ?><br />
+66		&lt;option value="&lt;?php echo $this_course_id; ?>">&lt;?php echo $this_course_title; ?>&lt;/option><br />
+67	&lt;?php endif; ?><br />
+68 &lt;?php endforeach; ?></p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2537"></a>
+		<div class="forum-post-author">
+			<label class="title">blackwidow</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-23 16:13:10</p>
+            </div>
+            <div class="postheader"><h3>Which script</h3></div>
+				
+			<div class="body">
+				<p>Which script is this fix supposed to be applied to? There's an awful lot to look through to try and find the matching block.<br />
+<br />
+Incidentally, I am using some custom themes but realised that there had been changes in theme application between 1.4 and 1.4.2 so I re-created my themes from the 1.4.2 default one. I've actually only made changes to the CSS sheet. However, it might be worth adding a warning about this incompatibility in the themes readme.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2538"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-23 16:49:05</p>
+            </div>
+            <div class="postheader"><h3>header.tmpl.php</h3></div>
+				
+			<div class="body">
+				<p>it's in the header template<br />
+<br />
+themes/theme_name/header.tmpl.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2540"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-23 17:32:12</p>
+            </div>
+            <div class="postheader"><h3>Older files</h3></div>
+				
+			<div class="body">
+				<p>With this change, is a working modded version of the older <br />
+header.tmpl.php and theme.config.php<br />
+safe to use within a copy of the new default theme?<br />
+<br />
+I realize that the theme has to be added in the config file<br />
+<br />
+thanks<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2541"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-23 18:12:26</p>
+            </div>
+            <div class="postheader"><h3>Should be ok</h3></div>
+				
+			<div class="body">
+				<p>Differences are the jump menu fix above, and the addition of the search tab, two tabs left of the jump menu in the Default theme. Download one of the new themes and paste the code changes into your template, if needed.<br />
+<br />
+Themes is still being perfected. Hopefully there won't too many more changes.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2542"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-23 18:18:26</p>
+            </div>
+            <div class="postheader"><h3>TNX</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2543"></a>
+		<div class="forum-post-author">
+			<label class="title">blackwidow</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-23 18:43:29</p>
+            </div>
+            <div class="postheader"><h3>Problem solved</h3></div>
+				
+			<div class="body">
+				<p>Cheers!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2614"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-30 18:34:45</p>
+            </div>
+            <div class="postheader"><h3>"What we did?"</h3></div>
+				
+			<div class="body">
+				<p>Larry et.al<br />
+<br />
+Would you care to make an addition to the new Community Discussions forum, that talks about your experiences with ATutor and Postnuke. You could help us get the new forum going.<br />
+<br />
+http://atutor.ca/forum/16/1.html</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

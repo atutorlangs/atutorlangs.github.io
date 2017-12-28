@@ -1,0 +1,155 @@
+---
+ title: The Error from LMS RunTime Environment Test 
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>The Error from LMS RunTime Environment Test </h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5304"></a>
+		<div class="forum-post-author">
+			<label class="title">netxiong</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-31 12:56:37</p>
+            </div>
+            <div class="postheader"><h3>The Error from LMS RunTime Environment Test </h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -WINXP<br />
+  version of ATutor -1.5<br />
+  versions of php -4.3.4<br />
+  version of mysq l -4.1<br />
+  webserver & version -apache2<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -ie6<br />
+  and anything else relevant -<br />
+<br />
+I downloaded the ADL SCORM Conformance Test Suite.<br />
+I imported the test content package,see the attachement file.<br />
+After import the scorm package,the page have some errors(such as cann't find the class org/adl/tsuite/lms/LMSRTEApplet.class).<br />
+<br />
+why???can you tell me the answer??<br />
+<br />
+if it is bug,the atutor is not a standarded system.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5315"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-02 09:52:01</p>
+            </div>
+            <div class="postheader"><h3>It works fine</h3></div>
+				
+			<div class="body">
+				<p>I had no trouble running the testsuite you attached. <br />
+<br />
+Do you have the correct version of Java installed? JRE 1.5<br />
+<br />
+You must run the test suite using Internet Explorer.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5439"></a>
+		<div class="forum-post-author">
+			<label class="title">georgy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-12 12:59:12</p>
+            </div>
+            <div class="postheader"><h3>Import scorm oversize error</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -winxp<br />
+  version of ATutor -1.5<br />
+  versions of php -easyphp1.8<br />
+  version of mysq l -easyphp1.8<br />
+  webserver & version -easyphp1.8<br />
+  copies of error messages -The file exceeded the maximum allowable size limit of 2M<br />
+  changes to default settings -<br />
+  web browser being used -ie6<br />
+<br />
+Hello, I have tried to import the adl test package attached above, which is sized 2.3M<br />
+Import package have failed, the message is over 2M limit.<br />
+(using the package section)<br />
+<br />
+However, I used administrator to change course size and file size limit to 4M or so. Checked the course perference, and also created new course. But in both cases, the oversize 2M limit error message still come up. <br />
+<br />
+Thanks for viewing. Looking for help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5440"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-12 14:32:16</p>
+            </div>
+            <div class="postheader"><h3>Edit php.ini</h3></div>
+				
+			<div class="body">
+				<p>You will need to increase the following settings in php.ini<br />
+<br />
+post_max_size           = 8M ; or greater<br />
+upload_max_filesize     = 8M ; or greater<br />
+<br />
+You can set these to whatever size you like.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5444"></a>
+		<div class="forum-post-author">
+			<label class="title">georgy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-13 11:00:31</p>
+            </div>
+            <div class="postheader"><h3>Test ok</h3></div>
+				
+			<div class="body">
+				<p>Thanks greg,<br />
+<br />
+The file limit problem solved.<br />
+Then I also updated the ...package...view.ini.php to get the scorm pkg 1 test ok.<br />
+Now the slides with audio created by Microsoft Producer plays just perfect !! :) <br />
+Your project team\'s work are really neat ..</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

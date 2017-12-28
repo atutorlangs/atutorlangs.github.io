@@ -1,0 +1,115 @@
+---
+ title: Changing content DIR
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Changing content DIR</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3532"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-07 18:33:22</p>
+            </div>
+            <div class="postheader"><h3>Changing content DIR</h3></div>
+				
+			<div class="body">
+				<p>I have installed Atutor 1.4.2 in Linux with apache and Mysql.<br />
+I am trying to change the Content DIR, so it will be outside the access from the internet.<br />
+Today the aututor is installed in:<br />
+/www/hosts/www.interactiva.com.ar/docroot/jbroide/ATutor<br />
+the CONTENT DIR:in <br />
+'/www/hosts/www.interactiva.com.ar/docroot/jbroide/cursos/<br />
+<br />
+and it works fine.<br />
+But when I change the 'AT_CONTENT_DIR' to <br />
+'/home/jbroide/cursos/<br />
+the file manager tells me Access Denied. <br />
+The home/jbroide/cursos/ has the 777 chmod <br />
+Does anyone have any idea of what is goign on?<br />
+<br />
+Thanks you very much<br />
+jbroide</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3537"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-08 09:43:52</p>
+            </div>
+            <div class="postheader"><h3>symbolic links</h3></div>
+				
+			<div class="body">
+				<p>Make sure there are no symbolic links in the path to your content directory.<br />
+<br />
+I assume you have copied the content directory from ...docroot/jbroide/coursos/   to /home/jbroide/cursos</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3547"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-08 17:48:56</p>
+            </div>
+            <div class="postheader"><h3>Symbolic Links</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+thanks for the information..<br />
+About the symbolik lins<br />
+Yes I am sure there are not symbolic Links: <br />
+<br />
+And about if i had copied the contens of the folder, I hadnt . But I do not need the courses that I have in the old folder.<br />
+so I have deleted all of them.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3551"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-08 19:17:02</p>
+            </div>
+            <div class="postheader"><h3>Reinstall</h3></div>
+				
+			<div class="body">
+				<p>There has to be a content directory, and the web server needs to be able to write to it (chmod a+rwx content/). <br />
+<br />
+Reinstall, and set up the content directory as instructed in step 5 to point to the location in your home directory. Make sure that directory is writable.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+And about if i had copied the contens of the folder, I hadnt . But I do not need the courses that I have in the old folder.<br />
+so I have deleted all of them.<br />
+[op]forums/view.php?fid=7;pid=3532;page=1#3547[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

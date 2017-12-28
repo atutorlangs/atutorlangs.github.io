@@ -1,0 +1,193 @@
+---
+ title: remove New USer registration from login screen
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>remove New USer registration from login screen</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="20599"></a>
+		<div class="forum-post-author">
+			<label class="title">rene_iti</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-17 13:40:00</p>
+            </div>
+            <div class="postheader"><h3>remove New USer registration from login screen</h3></div>
+				
+			<div class="body">
+				<p>Still running the older version 1.6.  Atutor.  Is it possible to remove the Atutor New User Registration link from the main login screen?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20606"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-18 09:44:38</p>
+            </div>
+            <div class="postheader"><h3>Re: remove</h3></div>
+				
+			<div class="body">
+				<p>Turn self-registration in the System Preference settings</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20613"></a>
+		<div class="forum-post-author">
+			<label class="title">rene_iti</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-18 14:33:38</p>
+            </div>
+            <div class="postheader"><h3>Remove It</h3></div>
+				
+			<div class="body">
+				<p>That is what I have done but my education dept. Would like to remove it entirely since we preload all user login names and their passwords anyway.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20614"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-18 14:48:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove It</h3></div>
+				
+			<div class="body">
+				<p>You're welcome to dig into the code and remove it. You'd need to be cut it out of the login template for the default theme (or whatever theme you're using if it has a login template)<br />
+<br />
+themes/default/login.tmpl.php<br />
+<br />
+and remove references to registration.php in:<br />
+<br />
+include/lib/menu_pages.php<br />
+<br />
+Is there a reason why disabling registration is not sufficient?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20616"></a>
+		<div class="forum-post-author">
+			<label class="title">rene_iti</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-18 22:43:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove It</h3></div>
+				
+			<div class="body">
+				<p>Just to streamline the process.  No matter how clear you make login instructions there are people who still try and use it when they do not need to use it. <br />
+<br />
+<br />
+-</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20624"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-19 09:00:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove It</h3></div>
+				
+			<div class="body">
+				<p>When you disable registration in system preferecnes the registration link should not be appearing on the login screen. This would probably indicate the login template for the theme you are using is missing the lines to remove the registration box when the option is disabled. <br />
+<br />
+Which theme are you using?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20625"></a>
+		<div class="forum-post-author">
+			<label class="title">rene_iti</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-19 09:03:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove It</h3></div>
+				
+			<div class="body">
+				<p>I am using the default theme.   -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20626"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-19 09:11:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove It</h3></div>
+				
+			<div class="body">
+				<p>Actually, looking back in the log, disable registration was not introduced until version 1.6.2.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20758"></a>
+		<div class="forum-post-author">
+			<label class="title">rene_iti</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-09-23 10:53:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove It</h3></div>
+				
+			<div class="body">
+				<p>Upgraded to version 2 and it now works.   Thanks</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

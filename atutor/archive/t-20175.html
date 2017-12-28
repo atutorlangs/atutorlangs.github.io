@@ -1,0 +1,146 @@
+---
+ title: 404  File not found
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>404  File not found</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="20175"></a>
+		<div class="forum-post-author">
+			<label class="title">crjensen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-14 09:11:23</p>
+            </div>
+            <div class="postheader"><h3>404  File not found</h3></div>
+				
+			<div class="body">
+				<p>When a student tries to login to ATutor on my website, they always get an error message:<br />
+404 Error - File not found. The requested URL was not found on this server.<br />
+<br />
+The file it tries to open is: www.netkonfirmand.dk/users/index.php<br />
+<br />
+But the thing is: The file IS there.<br />
+<br />
+I have tried to re-install, but still the same result.<br />
+<br />
+I can login as admin, but other users can't.<br />
+<br />
+ATutor version: 1.6.4<br />
+PHP version: 5.2.10<br />
+MySQL: 5.1.32<br />
+OS: Linux 2.6.18-92.1.22.el5xen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20177"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-14 09:48:06</p>
+            </div>
+            <div class="postheader"><h3>Re: 404 - File not found</h3></div>
+				
+			<div class="body">
+				<p>Make sure "index.php" is setup in your webserver config as a default page when one is not defined in a URL.<br />
+<br />
+In Apache it gets added to the DirectoryIndex in httpd.conf.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20179"></a>
+		<div class="forum-post-author">
+			<label class="title">crjensen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-14 14:25:08</p>
+            </div>
+            <div class="postheader"><h3>Re: 404 - File not found</h3></div>
+				
+			<div class="body">
+				<p>My webhost (i123.dk) told me the following:<br />
+<br />
+"The folder 'users' is an alias to where the users log in and correct their email addresses. Could you name the folder in ATutor something else?"<br />
+(translated form Danish)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20180"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-14 15:00:41</p>
+            </div>
+            <div class="postheader"><h3>Re: 404 - File not found</h3></div>
+				
+			<div class="body">
+				<p>"users/" is a real folder, not an alias.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20181"></a>
+		<div class="forum-post-author">
+			<label class="title">crjensen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-14 15:10:50</p>
+            </div>
+            <div class="postheader"><h3>Re: 404 - File not found</h3></div>
+				
+			<div class="body">
+				<p>I think he meant that they as webhosts have set up the server in such a way that "/users" in their configuration points to an alias for setting up one's email etc.?<br />
+<br />
+When I go to http://www.netkonfirmand.dk/users I get a 403 error.<br />
+<br />
+When I go to http://www.netkonfirmand.dk/users/index.php directly I get a 404 error.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20182"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-14 15:25:57</p>
+            </div>
+            <div class="postheader"><h3>Re: 404 - File not found</h3></div>
+				
+			<div class="body">
+				<p>I would suggest then you locate your ATutor installation in a subdirectory. You can not move or rename the users/ directory without breaking lots of things.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,337 @@
+---
+ title: Problems uploading Articulate course to ATutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problems uploading Articulate course to ATutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="9363"></a>
+		<div class="forum-post-author">
+			<label class="title">robguy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 09:43:02</p>
+            </div>
+            <div class="postheader"><h3>Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Exporting content from Articulate (microsoft powerpoint plugin) using their LMS export settings, set to Scorm 2004. <br />
+<br />
+Uploaded through content manager, Atutor says the course has been successfully uploaded. <br />
+<br />
+When I go to the actual page/screen in Atutor of the uploaded course[red] it shows nothing but a blank page.[/red] However, this code is there:<br />
+<br />
+&lt;!--/* Copyright  2003-2005 Rustici Software, LLC  All Rights Reserved. */--><br />
+&lt;HTML><br />
+	&lt;HEAD><br />
+		&lt;TITLE>Work Readiness Demo&lt;/TITLE><br />
+		&lt;script language="JavaScript1.2" src="lms/APIConstants.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2" src="lms/Configuration.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2" src="lms/UtilityFunctions.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2" src="lms/SCORM2004Functions.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2" src="lms/SCORMFunctions.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2" src="lms/AICCFunctions.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2" src="lms/NONEFunctions.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2" src="lms/LMSAPI.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2" src="lms/API.js">&lt;/script><br />
+		&lt;script language="JavaScript1.2"><br />
+		<br />
+		strContentLocation = "player.html";  //Put the link to the start of the content here.<br />
+		<br />
+		function LoadContent(){<br />
+			window.content.document.location.href = strContentLocation;<br />
+		}<br />
+		&lt;/script><br />
+	&lt;/HEAD><br />
+	&lt;frameset rows="100%,0%,0%,0%" onload="Start()" border="0" onbeforeunload="Unload()" onunload="Unload()"><br />
+		&lt;frame name="content" src="lms/blank.html" scrolling=yes><br />
+		&lt;frame name="AICCComm" src="lms/AICCComm.html"><br />
+		&lt;frame name="rusticisoftware_aicc_results" src="lms/blank.html"><br />
+		&lt;frame name="NothingFrame" src="lms/blank.html"><br />
+	&lt;/frameset><br />
+	&lt;noframes><br />
+		Your browser must be able to view frames for this content to display.<br />
+	&lt;/noframes><br />
+&lt;/HTML></p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9364"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 10:01:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>ATutor support SCORM 1.2 but not 2004 yet.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9365"></a>
+		<div class="forum-post-author">
+			<label class="title">robguy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 10:28:45</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Exported as 1.2 SCORM, still doesn't work.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9366"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 10:33:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Probably because it requires a framed environment. ATutor does not use frames.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9367"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 10:37:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>You are using the Packages tool to import your content, right? Not importing it as ATutor content.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9368"></a>
+		<div class="forum-post-author">
+			<label class="title">robguy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 10:41:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>I'm using the Import Content tool under Manage > Import/Export Content in Atutor. Is this what you meanby Packages tool?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9369"></a>
+		<div class="forum-post-author">
+			<label class="title">robguy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 10:43:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>I also see that under Modules > Install Modules I have "SCORM Packages" as an option to install. Would this be effecting this problem / should I install it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9370"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 10:53:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Yes, install the module and enable it. Then turn on Packages in Manage>Student Tools.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9372"></a>
+		<div class="forum-post-author">
+			<label class="title">robguy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 11:41:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Installed Scorm module and tried to import the package:<br />
+<br />
+The following errors occurred:<br />
+Problem with Package Directory. <br />
+<br />
+Also the header changes to have the following code in it:<br />
+<br />
+<br />
+Warning: is_dir() [function.is-dir]: Stat failed for ../../include/../sco/2/ (errno=13 - Permission denied) in /home/w0rk5kil/public_html/atutor/tools/packages/scorm-1.2/import.php on line 145<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/w0rk5kil/public_html/atutor/tools/packages/scorm-1.2/import.php:145) in /home/w0rk5kil/public_html/atutor/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/w0rk5kil/public_html/atutor/tools/packages/scorm-1.2/import.php:145) in /home/w0rk5kil/public_html/atutor/include/classes/Language/Language.class.php on line 123</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9374"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-28 11:50:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Did you make the sco dir writable before attempting to import a sco?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9414"></a>
+		<div class="forum-post-author">
+			<label class="title">robguy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-01 09:48:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Just verified that the directory is writable, but I'm getting the same problem still.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9416"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-01 11:20:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>I've just confirmed that articulate packages work okay with ATutor, so something about your setup may not be right. The error message does suggests that permissions on the sco/ directory are incorrect.<br />
+<br />
+Try your package on the atutor.ca demo site.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9478"></a>
+		<div class="forum-post-author">
+			<label class="title">runningmuggle</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-07 05:42:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Hi robguy!<br />
+I had the same problem:<br />
+<br />
+"Exporting content from Articulate (microsoft powerpoint plugin) using their LMS export settings, set to Scorm 1.2.<br />
+Uploaded through content manager, Atutor says the course has been successfully uploaded.<br />
+When I go to the actual page/screen in Atutor of the uploaded course it shows nothing but a blank page."<br />
+<br />
+I tested my course on atutor.ca demo site to be sure but it doesn't work even there...<br />
+<br />
+Did you find any solution?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9481"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-07 08:18:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems uploading Articulate course to ATutor</h3></div>
+				
+			<div class="body">
+				<p>Assumming the sco directory is writable, most often the problem is the sco is being imported as a content package. You need install then use the Packages tool for scos.  <br />
+<br />
+We have experienced no trouble with Articulate content.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

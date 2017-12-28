@@ -1,0 +1,167 @@
+---
+ title: error type 2 in eapacheatutorincludehtmlannouncementsincphp on line 93
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>error type 2 in eapacheatutorincludehtmlannouncementsincphp on line 93</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="4364"></a>
+		<div class="forum-post-author">
+			<label class="title">masoni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-18 07:31:19</p>
+            </div>
+            <div class="postheader"><h3>error type 2 in eapacheatutorincludehtmlannouncementsincphp on line 93</h3></div>
+				
+			<div class="body">
+				<p>Hi All<br />
+After crash server where running ATutor Application we must reinstall all server with this enviroment:<br />
+<br />
+Ms Windows 2000 + sp4<br />
+Apache 1.3.33<br />
+PHP 4.3.11<br />
+MySQL 4.0.24-nt<br />
+<br />
+next operation, we moved old data files ( Db MySql, Atutor/ACollab Pages) into respective folder then restart all services.<br />
+<br />
+In this moment we have some problems with 'announcement and user approve' procedure. <br />
+<br />
+We attach this mail the log files..<br />
+<br />
+asap you answer about this problem<br />
+<br />
+best regards<br />
+<br />
+Marco Masoni</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4375"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-18 19:46:38</p>
+            </div>
+            <div class="postheader"><h3>Describe again</h3></div>
+				
+			<div class="body">
+				<p>I am not sure I understand what you are describing.<br />
+<br />
+The upgrade script should have updated the database and moved the files for you. Revert back to the old version using the backup you took of your database and move the old ATutor installation back to where it was? Then try upgrading again.<br />
+<br />
+The error suggests that the database was not updated properly. See the upgrade instructions for details.<br />
+<br />
+http://www.atutor.ca/atutor/docs/installation.php#upgrade</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4382"></a>
+		<div class="forum-post-author">
+			<label class="title">raggi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-19 05:19:51</p>
+            </div>
+            <div class="postheader"><h3>Describe again and at_news* problem</h3></div>
+				
+			<div class="body">
+				<p>I can try explain better all steps after crash our system.<br />
+<br />
+After reinstalled Windows 2000 with sp4, Apache and MySQL then we have restored the DB_MySQL Data File and Atutor Pages from backup off-line.<br />
+<br />
+At this point restart all services, Apache and MySQL.<br />
+<br />
+Atutor works but we have some problem with 'Announcement Procedure'.<br />
+<br />
+Today I continue to understand the problem and I think that i have the AT_NEWS.* Tables corrupt and when I try to check or repair, via myisamchk, the mysql can't repair.<br />
+when I run<br />
+<br />
+D:\MySQL\bin>myisamchk -s d:\mysql\data\atutor\*.myi<br />
+myisamchk: MyISAM file d:\mysql\data\atutor\ac_events.MYI<br />
+myisamchk: warning: Table is marked as crashed and last repair failed<br />
+MyISAM-table 'd:\mysql\data\atutor\ac_events.MYI' is usable but should be fixed<br />
+myisamchk: error: 'd:\mysql\data\atutor\at_news.MYI' is not a MyISAM-table<br />
+ <br />
+Can I create new table AT_NEWS ?<br />
+<br />
+asap you answer about this problem<br />
+<br />
+best regards<br />
+<br />
+Riccardo Raggi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4383"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-19 10:13:35</p>
+            </div>
+            <div class="postheader"><h3>Recreate the table</h3></div>
+				
+			<div class="body">
+				<p>Rename the old news table (if you can). You can recreate the table with the following sql:<br />
+<br />
+CREATE TABLE `at_news` (<br />
+  `news_id` mediumint(8) unsigned NOT NULL auto_increment,<br />
+  `course_id` mediumint(8) unsigned NOT NULL default '0',<br />
+  `member_id` mediumint(8) unsigned NOT NULL default '0',<br />
+  `date` datetime NOT NULL default '0000-00-00 00:00:00',<br />
+  `formatting` tinyint(4) NOT NULL default '0',<br />
+  `title` varchar(100) NOT NULL default '',<br />
+  `body` text NOT NULL,<br />
+  PRIMARY KEY  (`news_id`)<br />
+) TYPE=MyISAM;<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,127 @@
+---
+ title: Again about rights for the Content Directory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Again about rights for the Content Directory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3659"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-15 07:24:26</p>
+            </div>
+            <div class="postheader"><h3>Again about rights for the Content Directory</h3></div>
+				
+			<div class="body">
+				<p>Hi <br />
+I am making a new installation of ATUTOR 1.4.2<br />
+I am trying to use a COntent directory oustide the access from de internet.But i am having a problem with the rights. <br />
+The installation directory is:<br />
+www/hosts.shiftit.com.ar/docroot/capacitacion/ATutor<br />
+<br />
+The content directory has been created with chmod 777<br />
+in <br />
+/home/jbroide/capacitacion/<br />
+<br />
+As you can see /home/jbroide/ is my user.<br />
+When I am installing i get these messages:<br />
+If I try with  /home/jbroide/capacitacion/ I get:<br />
+Content Directory entered does not exist.<br />
+If I try with /home/jbroide/<br />
+I get :The Content Directory is not writable.<br />
+<br />
+The chmod 777 is for /home/jbroide/capacitacion/ not for /home/jbroide/, because the last one is my rootdirectory.<br />
+<br />
+One information that my be important that the server is a secure server. <br />
+<br />
+<br />
+Things to describe: <br />
+  operating system -Linux<br />
+  version of ATutor -1.4.2<br />
+<br />
+Thank you very much<br />
+JOSE</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3668"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-15 10:06:32</p>
+            </div>
+            <div class="postheader"><h3>Create and make writable</h3></div>
+				
+			<div class="body">
+				<p>If the message states the directory does not exist, then you will need to create it.<br />
+<br />
+to make the directory writable, use:<br />
+<br />
+chmod a+rwx content/  (preferred)<br />
+or<br />
+chmod -R 777 content/<br />
+		<br />
+Follow the directions on the installation screen.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3670"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-15 10:35:24</p>
+            </div>
+            <div class="postheader"><h3>Hi. The directory exists.</h3></div>
+				
+			<div class="body">
+				<p>IHi Greg<br />
+The problem has been posted  because the directory exists, their permissons are 777, but I get a message saying that the directory dosent exists.<br />
+<br />
+Do you have any idea?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3672"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-15 11:07:31</p>
+            </div>
+            <div class="postheader"><h3>Double check</h3></div>
+				
+			<div class="body">
+				<p>This generally means the path you have entered is incorrect. Double check the path you have entered for typing errors.<br />
+<br />
+Also make sure there are no symbolic links in that path. You must use the real path to the directory, rather than a path that has been linked<br />
+<br />
+Also confirm that you are using the -R switch if you are using octal numbers (777) to set permissions. It will not work otherwise. Or, follow the instructions for setting permissions on the directory in step 5 of the installation using chmod a+rwx.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

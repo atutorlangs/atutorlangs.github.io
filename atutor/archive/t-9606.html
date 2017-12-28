@@ -1,0 +1,64 @@
+---
+ title: How to use ATutor without Zlib enabled
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>How to use ATutor without Zlib enabled</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9606"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-04 17:58:28</p>
+            </div>
+            <div class="postheader"><h3>How to use ATutor without Zlib enabled</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I am hosting ATutor in a server whose PHP does not enable Zlib. Unfortunately, the administrator of the server does not want to change this option because he told me that this keeps their PHP memory footprint lower, and also works around some namespace conflicts. He also suggests me include the following code in any file that needs Zlib:<br />
+if ( !extension_loaded( 'zlib' )) {<br />
+  if ( !dl( 'zlib.so' )) {<br />
+      exit( 'Cannot load zlib extension.' );<br />
+  }<br />
+} <br />
+<br />
+Please let me know:<br />
+- If I can continue install ATutor without Zlib enabled<br />
+- If yes, what problems may occur with ATutor if it runs without Zlib support<br />
+- How to overcome this situation most intelligently<br />
+<br />
+Many thanks,<br />
+Vu Minh Chieu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9610"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-05 08:34:15</p>
+            </div>
+            <div class="postheader"><h3>Re: How to use ATutor without Zlib enabled</h3></div>
+				
+			<div class="body">
+				<p>Zlib is a requirement. You could  hack ATutor to install an run without it, but you're on your own.<br />
+<br />
+I'd suggest getting a new ISP.  A "lower memory footpriint" is a pretty lame excuse.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

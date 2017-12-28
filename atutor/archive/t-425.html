@@ -1,0 +1,178 @@
+---
+ title: Jump
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Jump</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="425"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-14 16:58:48</p>
+            </div>
+            <div class="postheader"><h3>Jump</h3></div>
+				
+			<div class="body">
+				<p>While accessing pages of aTutor in a portal frame, all links work as expected ... keeping the pages inside of the frame.<br />
+<br />
+When the "Jump" submit button is used, it opens the course page in the full window as it "jumps" out of the frame.<br />
+<br />
+Is there any way to prevent this from occuring?<br />
+<br />
+Tnx<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="430"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-15 13:12:18</p>
+            </div>
+            <div class="postheader"><h3>Remove  target="_top"</h3></div>
+				
+			<div class="body">
+				<p>You could remove target="_top" from line 51 in /include/html/user_bar.inc.php, though that will fowl up things for the filemanger frame.<br />
+<br />
+You might try replacing _top with the name of the frame you are trying to open into, though that will create a new window when you use the jump menu outside of your frames.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="431"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-15 13:27:09</p>
+            </div>
+            <div class="postheader"><h3>Target="_top"</h3></div>
+				
+			<div class="body">
+				<p>Greg<br />
+<br />
+The only occurances of "_top" in that file on my installation are at Line 17:  &lt;a href="&lt;?php echo substr($_my_uri, 0, strlen($_my_uri)-1); ?>#content" accesskey="c">&lt;img src="images/clr.gif" height="1" width="1" border="0" alt="&lt;?php echo _AT('goto_top'); ?>: ALT-c" />&lt;/a>&lt;a href="&lt;?php echo substr($_my_uri, 0, strlen($_my_uri)-1);<br />
+<br />
+ Line 30: echo '&lt;a class="white" href="logout.php?g=19" title="'._AT('logout').'" target="_top">&lt;img src="images/logout.gif" border="0" height="14" width="15" alt="'._AT('logout').'" class="menuimage" />&lt;/a>';<br />
+and <br />
+ Line 33: echo ' &lt;a class="white" href="logout.php?g=19" target="_top">'._AT('logout').'&lt;/a>';<br />
+<br />
+Should all 3 be replaced?<br />
+<br />
+thanks<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="433"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-15 17:10:14</p>
+            </div>
+            <div class="postheader"><h3>Try it.</h3></div>
+				
+			<div class="body">
+				<p>I would think all occurences of _top should be edited. Try it and see what happens.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="434"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-15 18:48:31</p>
+            </div>
+            <div class="postheader"><h3>I Did!</h3></div>
+				
+			<div class="body">
+				<p>... and it worked.<br />
+<br />
+Thanks again Greg</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="435"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-15 18:57:15</p>
+            </div>
+            <div class="postheader"><h3>Other occurances</h3></div>
+				
+			<div class="body">
+				<p>For my purpose, would you recommend eliminating _top references  in other files as well?<br />
+<br />
+They occur in<br />
+achat:filterHistory.php<br />
+achat:help.php<br />
+achat:include:functions.inc.php<br />
+achat:new_user.php<br />
+achat:options.php<br />
+achat:prefs.php<br />
+achat:prefs2.php<br />
+achat:prefs3.php<br />
+include:admin_html:header.inc.php<br />
+tools:file_manager.php<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="436"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-09-15 19:12:54</p>
+            </div>
+            <div class="postheader"><h3>Answered My Own Question</h3></div>
+				
+			<div class="body">
+				<p>Yes ... at least for the aChat folder.  This is great!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

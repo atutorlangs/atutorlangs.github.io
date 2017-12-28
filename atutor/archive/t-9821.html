@@ -1,0 +1,83 @@
+---
+ title: PHP Warning sessionstart  Issues asks for cookies
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>PHP Warning sessionstart  Issues asks for cookies</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9821"></a>
+		<div class="forum-post-author">
+			<label class="title">sasbazooka</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-01 16:40:19</p>
+            </div>
+            <div class="postheader"><h3>PHP Warning sessionstart  Issues asks for cookies</h3></div>
+				
+			<div class="body">
+				<p>Running ATutor (curren stable build) on server 2003, My SQL 4.1.22, IIS6.0, PHP 4.4.4<br />
+<br />
+Setup went OK but no log-ins work. The error on the main page is "The following errors occurred:<br />
+Session cookies must be enabled in your browser to login. " (don't worry- they are enabled) but at the bottom of the screen I see...<br />
+<br />
+<br />
+"PHP Warning: session_start() [function.session-start]: open(C:\DOCUME~1\ADSYSA~1.NYM\LOCALS~1\Temp\php\upload\sess_4f264bb5c0632c359221613f53834854, O_RDWR) failed: No such file or directory (2) in C:\web\atutor\ATutor\include\vitals.inc.php on line 93 PHP Warning: Unknown(): open(C:\DOCUME~1\ADSYSA~1.NYM\LOCALS~1\Temp\php\upload\sess_4f264bb5c0632c359221613f53834854, O_RDWR) failed: No such file or directory (2) in Unknown on line 0 PHP Warning: Unknown(): Failed to write session data (files). Please verify that the current setting of session.save_path is correct (C:\DOCUME~1\ADSYSA~1.NYM\LOCALS~1\Temp\php\upload) in Unknown on line 0 "<br />
+<br />
+Any feedback or help would be greatly appriciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9822"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-01 16:52:20</p>
+            </div>
+            <div class="postheader"><h3>Re: PHP Warning: session_start()  Issues- asks for cookies</h3></div>
+				
+			<div class="body">
+				<p>This problem has been reported a few times by IIS users, but no solution has been found yet. <br />
+<br />
+I suggest you try using Apache as your web server instead. The problems will go away.<br />
+<br />
+Or, if you do happen to figure out what the problem is will IIS, we'd certainly like to hear of a solution.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9826"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-02 11:24:25</p>
+            </div>
+            <div class="postheader"><h3>Re: PHP Warning: session_start()  Issues- asks for cookies</h3></div>
+				
+			<div class="body">
+				<p>Why is it using your upload directory to store sessions?<br />
+You should specify a sessions directory instead.<br />
+<br />
+Make sure the directory exists, it may not if it's in the Temp directory.<br />
+<br />
+Best to create C:\PHP\session and specify that in your php.ini file. That should fix it.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

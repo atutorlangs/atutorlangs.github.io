@@ -1,0 +1,73 @@
+---
+ title: Ajax Doesnt Pass Value to PHP SESSION
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Ajax Doesnt Pass Value to PHP SESSION</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25304"></a>
+		<div class="forum-post-author">
+			<label class="title">hesha0987</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-03-23 13:24:14</p>
+            </div>
+            <div class="postheader"><h3>Ajax Doesnt Pass Value to PHP SESSION</h3></div>
+				
+			<div class="body">
+				<p>I'm trying to create a contact form on top of the page and want to have the page stays at what it is before users submitting the form.<br />
+<br />
+Now I'm using AJax to call the "send_email.php", which is processing email sending staff. However the problem is the session values are not passed to the send_email.php. <br />
+<br />
+I tried the following code, it doesn't work:<br />
+$('#contextual_help_form').on('submit', function(e) {<br />
+        $.ajax({<br />
+            type: "POST",<br />
+            url: '/send_email.php',<br />
+            data: $('#contextual_help_form').serialize(),<br />
+            success:function(data) {<br />
+                console.log(data);<br />
+            }<br />
+        });<br />
+    <br />
+        return false;<br />
+<br />
+    });<br />
+<br />
+I also tried to replace " return false;" with "e.preventDefault();", it doesn't work.<br />
+<br />
+I added session_start() on the top of the page and am sure there's no extra space between &lt;?php or on the top of the file. <br />
+<br />
+Could you please help me with it? It's also OK if there's another way to do the email sending without refreshing the page.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25311"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-03-25 06:55:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Ajax Doesn't Pass Value to PHP SESSION</h3></div>
+				
+			<div class="body">
+				<p>Process this as PHP and and the full URL to send_mail.php <br />
+<br />
+Something like<br />
+&lt;?php $SERVER['http_host'].$_base_href?&gt;"send_mail.php"</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

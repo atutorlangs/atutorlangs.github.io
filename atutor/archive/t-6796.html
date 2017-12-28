@@ -1,0 +1,198 @@
+---
+ title: help cant create user account
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>help cant create user account</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6796"></a>
+		<div class="forum-post-author">
+			<label class="title">ciuspo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-05 07:38:40</p>
+            </div>
+            <div class="postheader"><h3>help cant create user account</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - windows Xp SP2<br />
+  version of ATutor - ATutor-1.5.2<br />
+  versions of php - php-4.4.1<br />
+  version of mysq l - mysql-essential-5.0.18-win32- mysql-administrator-1.1.6<br />
+  webserver & version - apache_1.3.34<br />
+  copies of error messages - "The following errors occurred:<br />
+* Information could not be added to the database."<br />
+  web browser being used - Firefox<br />
+<br />
+Hi I'm newbi, and I have trobles creating new account.<br />
+When I try to create new user (student or Instructor) i recive this message:<br />
+<br />
+<br />
+    The following errors occurred:<br />
+    * Information could not be added to the database.<br />
+<br />
+can someone help me please?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6798"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-05 10:12:27</p>
+            </div>
+            <div class="postheader"><h3>Re: help can't create user account</h3></div>
+				
+			<div class="body">
+				<p>try installing ATutor again and double check that all the database tables are created correctly.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6992"></a>
+		<div class="forum-post-author">
+			<label class="title">redviper</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-31 11:02:19</p>
+            </div>
+            <div class="postheader"><h3>Re: help can't create user account</h3></div>
+				
+			<div class="body">
+				<p>I am having the same problem.  I have used atutor for many years and have never had this problem.  the only change i made was upgrading to the current stable version of mysql 5.0.18. I'm running this in nt mode.<br />
+<br />
+I have re-installed and tried to configure everything I know.<br />
+<br />
+would like some input on this issue if anyone has any.  i'm stumped.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6993"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-31 11:21:01</p>
+            </div>
+            <div class="postheader"><h3>Re: help can't create user account</h3></div>
+				
+			<div class="body">
+				<p>Either you're using the MySQLi library in PHP, which ATutor does not yet support, or you did not update your tables correctly when upgrading to the latest version of MySQL.<br />
+<br />
+This is the error you are dealing with: http://www.google.com/search?hl=en&q=mysql+php+error+1251&btnG=Google+Search<br />
+<br />
+Try installing phpMyAdmin and see if you can manage your database.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6994"></a>
+		<div class="forum-post-author">
+			<label class="title">redviper</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-31 11:23:50</p>
+            </div>
+            <div class="postheader"><h3>Re: help can't create user account</h3></div>
+				
+			<div class="body">
+				<p>When I try to manually create a user account in mysql, I get an error saying the field "preferences" does not have a default value and I cannot write to this field.<br />
+<br />
+significant?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6995"></a>
+		<div class="forum-post-author">
+			<label class="title">redviper</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-31 11:26:26</p>
+            </div>
+            <div class="postheader"><h3>Re: help can't create user account</h3></div>
+				
+			<div class="body">
+				<p>Iso, do I just comment out "extionsion=php_mysql" in my php.ini file?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6996"></a>
+		<div class="forum-post-author">
+			<label class="title">redviper</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-31 11:32:25</p>
+            </div>
+            <div class="postheader"><h3>Re: help can't create user account</h3></div>
+				
+			<div class="body">
+				<p>ok, weird.<br />
+<br />
+I was able to manually add a user into the member_id table in mysql only after I added memo information in the "preferences" field.  I was able to do this by using navicat to select to see the memo, I wrote something in there, then it let me save the rest of the member record.<br />
+<br />
+???</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6999"></a>
+		<div class="forum-post-author">
+			<label class="title">redviper</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-31 11:49:59</p>
+            </div>
+            <div class="postheader"><h3>Re: help can't create user account</h3></div>
+				
+			<div class="body">
+				<p>ok, i think the issue is in atutor.  here's why.<br />
+<br />
+I can create users if I add the first name and last name.  This was not an astericked field, so, I was leaving this blank.  Once I added the first and last name, users were created like normal.<br />
+<br />
+might want to update the code to either allow no first or last name or to asterick first and last name to show they are required fields.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

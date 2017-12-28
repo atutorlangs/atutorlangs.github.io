@@ -1,0 +1,122 @@
+---
+ title: Custom Login
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Custom Login</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16165"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-30 12:40:00</p>
+            </div>
+            <div class="postheader"><h3>Custom Login</h3></div>
+				
+			<div class="body">
+				<p>My custom login script from my website to atutor 1.6.1 was working BUT after i upgraded to atutor 1.6.2 the following custom script stopped working. Please help<br />
+<br />
+script language="JavaScript" src="sha-1factory.js" type="text/javascript">&lt;/script> <br />
+function encrypt_password() {		<br />
+		document.form1.form_password_hidden.value = hex_sha1(document.form1.form_password.value);  <br />
+	document.form1.form_password.value = "";<br />
+	return true;<br />
+}</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16167"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-30 13:56:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom Login</h3></div>
+				
+			<div class="body">
+				<p>See the theme changelog<br />
+http://wiki.atutor.ca/display/atutorwiki/Themes+Change+Log</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16168"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-30 14:19:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom Login</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+  I am not expert in sessions. I am calling the atutor sigin code from html in a different server. I looked at the Atutor demo code and saw you hard coded the session ID.<br />
+<br />
+Assuming that is the only difference, it still does not work for me.<br />
+Any eloboration on this issue would be much appreciated.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16174"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-31 06:39:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Custom Login</h3></div>
+				
+			<div class="body">
+				<p>Hi there!<br />
+<br />
+The original 1.6.1 contained a security weakness which was later fixed with patch 0007 and eliminated as of 1.6.2. You were probably using unpatched 1.6.1, thus the problem after upgrading.<br />
+<br />
+To fix that in your custom script, you should replace the line reading:<br />
+<br />
+document.form.form_password_hidden.value = hex_sha1(document.form.form_password.value);<br />
+<br />
+With:<br />
+<br />
+document.form.form_password_hidden.value = hex_sha1(hex_sha1(document.form.form_password.value) + "&lt; ?php echo $_SESSION['token']; ? >");<br />
+<br />
+(without spaces inside opening and closing PHP tags (between "&lt;" and "?php", and "?" and ">")).<br />
+<br />
+For more information please refer to the description of patch 0007 in a 1.6.1 installation, if you have one available, or to http://update.atutor.ca/patch/1_6_1/1_6_1-6/patch.xml .<br />
+<br />
+Hope that helps.<br />
+Happy New Year everyone!<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+My custom login script from my website to atutor 1.6.1 was working BUT after i upgraded to atutor 1.6.2 the following custom script stopped working. Please help<br />
+<br />
+script language="JavaScript" src=...<br />
+[op]forums/view.php?fid=7;pid=16165;page=1#16165[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

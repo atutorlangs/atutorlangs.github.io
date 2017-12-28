@@ -1,0 +1,118 @@
+---
+ title: Syntax Highlighter module and ATutor preprocessing
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Syntax Highlighter module and ATutor preprocessing</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="23750"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-11-09 12:33:15</p>
+            </div>
+            <div class="postheader"><h3>Syntax Highlighter module and ATutor preprocessing</h3></div>
+				
+			<div class="body">
+				<p>ATutor version - 2.1<br />
+<br />
+I'm trying to use the Syntax Highlighter module for code segments but am having trouble because of ATutor's preprocessing <br />
+of the content. It works fine for the '&lt;' and '>' characters. When the code segment contains [i], ATutor replaces it with <br />
+the &lt;em> tag and in a newline command '\n' the backslash is removed. Below is a sample of the code I'm trying to display. <br />
+Is there anyway I can stop ATutor from preprocessing code segments? In the past, before using the Syntax Highlighter module, I would have to replace &lt;, >, backslashes, and [i] in code with the html special characters. I would like to get away from having to do this.  Plus, if I do that it makes the Syntax Highlighter module useless.<br />
+<br />
+<br />
+&lt;pre class="c">#include &lt;stdlib.h><br />
+#include &lt;stdio.h><br />
+#include "mpi.h"<br />
+<br />
+main (int argc, char* argv[])<br />
+{<br />
+     int procID, nproc, root, source, target, tag;<br />
+     int k, ncolors, pcolor;<br />
+     int *colorArray;<br />
+     char color[10];<br />
+     MPI_Status status;<br />
+<br />
+     // Set the rank 0 process as the root process<br />
+     root = 0;<br />
+<br />
+     // Generate three colors for color array, where white = 0, red = 1, and green = 2<br />
+     ncolors = 3;<br />
+     colorArray = (int*) malloc(sizeof(int) * ncolors);<br />
+<br />
+     for (i = 0; i &lt; ncolors; i++)<br />
+     {<br />
+          colorArray[i] = i;<br />
+     }<br />
+<br />
+     ...<br />
+<br />
+     printf("proc %d has color %s\n", root, color);<br />
+<br />
+     ...<br />
+}&lt;/pre><br />
+<br />
+Thanks, Sandie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23751"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-11-09 12:51:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Syntax Highlighter module and ATutor preprocessing</h3></div>
+				
+			<div class="body">
+				<p>I'm not familiar with the workings of particular module. You might contact Peter Strba who created it. His email should be listed in the module.xml file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23752"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-11-09 16:04:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Syntax Highlighter module and ATutor preprocessing</h3></div>
+				
+			<div class="body">
+				<p>The problems are caused by how ATutor is handling the content before the Syntax Highlighter works with it. <br />
+I just went ahead and modified the source code to fix the problem.  Hopefully I didn't break anything in the <br />
+process but it seems to work fine now.  Here's what I did:<br />
+<br />
+To stop removal of the backslash when content is saved to the database, I removed $stripslashes from line 180 <br />
+of mods/_core/editor_tab_functions.inc.php:<br />
+<br />
+$_POST['body_text']	= $stripslashes(trim($_POST['body_text']));) ==> $_POST['body_text']	= trim($_POST['body_text']);<br />
+<br />
+Since I don't use ATutor's codes anyway, to stop replacement of &#91;i] with an &lt;em> tag, I commented out lines 563-564 <br />
+in include/lib/output.inc.php:<br />
+<br />
+//	$text = str_replace('[i]','&lt;em>',$text);<br />
+//	$text = str_replace('[/i]','&lt;/em>',$text);</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

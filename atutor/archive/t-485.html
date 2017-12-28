@@ -1,0 +1,308 @@
+---
+ title: Installing Atutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Installing Atutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="485"></a>
+		<div class="forum-post-author">
+			<label class="title">arkopolo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-13 09:29:54</p>
+            </div>
+            <div class="postheader"><h3>Installing Atutor</h3></div>
+				
+			<div class="body">
+				<p>I have installed the ATutor 1.2 and I was able to create my database when I run of my Apache server I just get a blank screen.  Nothing is comes up.  The page changes to http://server/ATutor3/login.php<br />
+<br />
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><br />
+&lt;HTML>&lt;HEAD><br />
+&lt;META http-equiv=Content-Type content="text/html; charset=iso-8859-1">&lt;/HEAD><br />
+&lt;BODY>&lt;/BODY>&lt;/HTML><br />
+<br />
+I am not sure what to do.. please help.<br />
+<br />
+Eric</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="486"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-13 12:26:55</p>
+            </div>
+            <div class="postheader"><h3>More info.</h3></div>
+				
+			<div class="body">
+				<p>Please read the first message in this forum "Help us Help You"<br />
+<br />
+Have you tried reinstalling ATutor? Use Version 1.2.2. Have you double checked config.inc.php to be sure the information is all correct? Is your database and php working properly for other applications?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="487"></a>
+		<div class="forum-post-author">
+			<label class="title">arkopolo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-13 14:18:23</p>
+            </div>
+            <div class="postheader"><h3>Install ATutor</h3></div>
+				
+			<div class="body">
+				<p>I was able to install the php-mysql-4.2.2-17.2-i386.rpm<br />
+and now when I type php -m the module is present.<br />
+<br />
+I have this installed on a red hat 9.0<br />
+<br />
+mysql-client-4.0.14-0.i386.rpm<br />
+mysql-devel-4.0.14-0.i386.rpm<br />
+mysql-shared-4.0.14-0.i386.rpm<br />
+mysql-shared-compact-4.0.14-0.i386.rpm<br />
+<br />
+php-4.2.2-17.2-i386.rpm<br />
+php-devel-4.2.2-17.2-i386.rpm<br />
+php-mysql-4.2.2-17.2-i386.rpm<br />
+<br />
+mySQL is running just fine, and php I have reinstalled to make sure that it's not php.. but it running now.<br />
+and when I tryed to run ATutor.. I did reinstall it as well 3 time.. the only thing that I am not sure is in the insturctions it chown -R nobody:nobody content and I have it I thing to root:root  ..<br />
+<br />
+Eric<br />
+Eric</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="488"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-13 19:21:14</p>
+            </div>
+            <div class="postheader"><h3>More info</h3></div>
+				
+			<div class="body">
+				<p>Nothing here that might suggest  a problem. Read "Help us Help You" again, and read my last message again, and provide the rest of the information asked for. It's difficult to help when we don't have all the details.<br />
+<br />
+You do not need to chown the content directory to root:root. The owner should be set to the owner of your web server, usually nobody:nobody. Or, if you don't have root access (I assume you do) make the content directory world writable. This is described in the installation instructions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="490"></a>
+		<div class="forum-post-author">
+			<label class="title">arkopolo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-14 10:36:41</p>
+            </div>
+            <div class="postheader"><h3>my info</h3></div>
+				
+			<div class="body">
+				<p>Here is a list of things you can describe with your help request. <br />
+1. The version of ATutor you are referring to<br />
+     ATutor 1.2<br />
+<br />
+2. The operating system ATutor is installed on (Windows, Unix etc., Mac ...), and its version<br />
+    Linux Red Hat 9.0<br />
+<br />
+3. The Web server you are using and its version (Apache, Netscape, IIS...).<br />
+    Apache  2.0.40 <br />
+<br />
+4. The version of PHP and MySQL being used (php 4.2.0+ and MySql 3.23+ are required) .<br />
+       MySQL 4.0.14<br />
+       PHP 4.2.2<br />
+<br />
+5. The Web browser you are using to view ATutor, it's version number, and any default settings you may have changed.<br />
+      Mozilla 1.2.1<br />
+<br />
+6. Do you have root access to your server, or are you a hosted user on someone else's server, etc?<br />
+    I got root.<br />
+<br />
+7. List the steps you took prior to experiencing the problem.<br />
+    - gunzip ATutor.tar.gz<br />
+    - tar -xvf ATutor.tar<br />
+    - copy this dir into my /var/www/html/<br />
+    - drwxrwxrwx   16 eric  eric  4096 Oct  9 14:19 ATutor<br />
+    - all files have 777 access<br />
+    - created the database atutor with the ATutor_schema.sql<br />
+    - http://ls1/Atutor<br />
+  <br />
+<br />
+ACCESS INFORMATION<br />
+8. Provide access information to your ATutor installation with appropriate admin/instructor accounts. <br />
+     I am not sure I don't think that I have created this accounts.. I have only used my user name and password since I will be the admin.<br />
+<br />
+<br />
+9. Provide a URL to a phpinfo page so we can see how php has been installed on your system. This is a local server so I can not provide a phpinfo... I could copy and past it.. if you like<br />
+<br />
+define('DB_USER','eric');<br />
+<br />
+/* the database password*/<br />
+define('DB_PASSWORD','admin1');	<br />
+<br />
+/* the database host	*/<br />
+define('DB_HOST', 'ls1');<br />
+<br />
+/* the database tcp/ip port										*/<br />
+define('DB_PORT', '3306');<br />
+<br />
+/* the database name	*/<br />
+define('DB_NAME','atutor');<br />
+<br />
+/* your (ATutor system admin) password to let you add	*/<br />
+/* new instructors */<br />
+define('ADMIN_PASSWORD', 'changeyou');<br />
+<br />
+/* your (admin) email address */<br />
+define('ADMIN_EMAIL','erics@magus-trading.com');<br />
+<br />
+/* do you want to receive emails when new instructor accounts	*/<br />
+/* require approval*/<br />
+define('EMAIL_NOTIFY',	 TRUE);<br />
+<br />
+/* allow regular account users to request their account o be*/<br />
+/* upgraded to instructor accounts.*/<br />
+define('ALLOW_INSTRUCTOR_REQUESTS', TRUE);</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="491"></a>
+		<div class="forum-post-author">
+			<label class="title">arkopolo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-14 12:41:07</p>
+            </div>
+            <div class="postheader"><h3>here is my link</h3></div>
+				
+			<div class="body">
+				<p>I am getting a few warnings..<br />
+<br />
+http://rtn2.magus-trading.com/ATutor/login.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="492"></a>
+		<div class="forum-post-author">
+			<label class="title">arkopolo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-14 12:42:03</p>
+            </div>
+            <div class="postheader"><h3>here is my link</h3></div>
+				
+			<div class="body">
+				<p>I am getting a few warnings..<br />
+<br />
+http://rtn2.magus-trading.com/ATutor/login.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="493"></a>
+		<div class="forum-post-author">
+			<label class="title">arkopolo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-14 13:28:13</p>
+            </div>
+            <div class="postheader"><h3>It's working</h3></div>
+				
+			<div class="body">
+				<p>It's A LIVE... hey I only had my</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="501"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-16 17:39:22</p>
+            </div>
+            <div class="postheader"><h3>Good to here.</h3></div>
+				
+			<div class="body">
+				<p>That's always good to hear. Makes our job easier ;-)<br />
+<br />
+What was the problem, for future reference.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+It's A LIVE... hey I only had my<br />
+[op]forums/view.php?fid=7;pid=485;page=1#493[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="531"></a>
+		<div class="forum-post-author">
+			<label class="title">arkopolo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-10-22 12:25:23</p>
+            </div>
+            <div class="postheader"><h3>The Problem was</h3></div>
+				
+			<div class="body">
+				<p>The name of my database I have used my internal Database host name, which was BOB.. but the internet database host was rtn2.magus-trading.com.. so once I have change that it give me the login screen.<br />
+<br />
+Thanks for all your help.<br />
+<br />
+Eric</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

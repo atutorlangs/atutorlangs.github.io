@@ -1,0 +1,123 @@
+---
+ title: Announcement subscription module
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Announcement subscription module</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22484"></a>
+		<div class="forum-post-author">
+			<label class="title">zesar1980</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-26 13:30:04</p>
+            </div>
+            <div class="postheader"><h3>Announcement subscription module</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I'm trying to install the module "announcement subscription" but I can't.<br />
+<br />
+It says [AT_ERROR_ANOUNCEMENTSUB_INSTALL_UNWRITE]. I know I must set writeable the file editor/add_news.php but there isn't any folder "editor". The module announcements is in standard/announcements/<br />
+<br />
+Can I change the folder in the install file or it will crash?<br />
+<br />
+Thanks a lot.<br />
+<br />
+Csar.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22487"></a>
+		<div class="forum-post-author">
+			<label class="title">zesar1980</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-27 04:21:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Announcement subscription module</h3></div>
+				
+			<div class="body">
+				<p>Hello again,<br />
+<br />
+my version of ATutor is 2.0.2(r10589)<br />
+<br />
+In the manual it says the module "subscription to announcements" is already set, but I don't find it.<br />
+<br />
+I changed the code in the module_install.php as I said in previous post, but it doesn't find the file "add_news.php" and I write the correct URL.<br />
+<br />
+Sorry my english.<br />
+<br />
+Thanks a lot.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22490"></a>
+		<div class="forum-post-author">
+			<label class="title">zesar1980</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-27 10:53:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Announcement subscription module</h3></div>
+				
+			<div class="body">
+				<p>It runs !!!<br />
+<br />
+I changed these lines<br />
+$filename=('../../editor/add_news.php');<br />
+$file = fopen('$filename','w');<br />
+<br />
+for these ones<br />
+$filename=('../../_standard/announcements/add_news.php');<br />
+$file = fopen($filename,'w');<br />
+<br />
+Version of aTutor 2.0.2<br />
+<br />
+I hope the author of this module update it.<br />
+<br />
+Bye.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22491"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-27 12:12:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Announcement subscription module</h3></div>
+				
+			<div class="body">
+				<p>Well done!<br />
+<br />
+The author is not maintaining the module any more. I'll make the adjustment myself and repackage the module with your changes.<br />
+<br />
+thx</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

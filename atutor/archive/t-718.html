@@ -1,0 +1,181 @@
+---
+ title: error sending mail
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>error sending mail</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="718"></a>
+		<div class="forum-post-author">
+			<label class="title">pemase</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-27 12:45:36</p>
+            </div>
+            <div class="postheader"><h3>error sending mail</h3></div>
+				
+			<div class="body">
+				<p>I have this error when y trying to send mail with ATutor 1.3, can you help me?<br />
+<br />
+Warning: mail(): SMTP server response: 550 5.7.1 Unable to relay for instructor@instructor.com in D:\eLearning\lms\include\lib\atutor_mail.inc.php on line 19</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="721"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-27 16:25:54</p>
+            </div>
+            <div class="postheader"><h3>Have you defined an admin email</h3></div>
+				
+			<div class="body">
+				<p>Is the admin email defined in config.inc.php?<br />
+<br />
+Are other mail features working in ATutor. Such as enrollment approval?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="722"></a>
+		<div class="forum-post-author">
+			<label class="title">pemase</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-27 16:39:06</p>
+            </div>
+            <div class="postheader"><h3>yes! it is</h3></div>
+				
+			<div class="body">
+				<p>Yes, i was configured an email in config.inc.php? and it is the only part that sends mail, i was installed ATutor 1 week ago, but never works this funtion, thanks for your help<br />
+THIS IS THE ACTUAL CODE:<br />
+&lt;?php<br />
+<br />
+<br />
+function atutor_mail($email,<br />
+					 $subject,<br />
+					 $body,<br />
+					 $from,<br />
+					 $bcc = '') {<br />
+<br />
+	global $_base_href;<br />
+	global $_template;<br />
+<br />
+	$atutor_sig = "\n\n".'----------------------------------------------'."\n";<br />
+	$atutor_sig .= _AT('sent_via_atutor', $_base_href);<br />
+	$atutor_sig .= "\n"._AT('atutor_home').': http://atutor.ca';<br />
+<br />
+	$body .= $atutor_sig;<br />
+<br />
+	mail($email, stripslashes($subject), stripslashes($body), 'From: '.$from."\n"."Reply-To:".$from."\nBcc: $bcc\nX-Mailer: PHP");<br />
+} <br />
+<br />
+?></p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="723"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-27 16:58:57</p>
+            </div>
+            <div class="postheader"><h3>Try the other mail functions</h3></div>
+				
+			<div class="body">
+				<p>Answer the second question?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="730"></a>
+		<div class="forum-post-author">
+			<label class="title">pemase</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-28 10:23:56</p>
+            </div>
+            <div class="postheader"><h3>second question</h3></div>
+				
+			<div class="body">
+				<p>it is the only part that sends mail, its my first time that i use send mail with php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="731"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-28 10:56:20</p>
+            </div>
+            <div class="postheader"><h3>Test other mail functions</h3></div>
+				
+			<div class="body">
+				<p>Test the other mail functions in ATutor, such as sending a course email, requesting an instructor account, and approving an instructor account.<br />
+<br />
+See the HowTo course if you need help using ATutor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="733"></a>
+		<div class="forum-post-author">
+			<label class="title">pemase</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-11-28 13:16:25</p>
+            </div>
+            <div class="postheader"><h3>post cast</h3></div>
+				
+			<div class="body">
+				<p>Hi, i have the Post Cast for SMTP, this is the other message that appears<br />
+<br />
+<br />
+In  Course email:<br />
+Warning: mail(): SMTP server response: 500 please set from & to first... in D:\Intranet HP\elearning\go\include\lib\atutor_mail.inc.php on line 29<br />
+<br />
+and in the an instructor account:<br />
+<br />
+Warning: mail(): SMTP server response: 500 please set from & to first... in D:\Intranet HP\elearning\go\include\lib\atutor_mail.inc.php on line 29<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at D:\Intranet HP\elearning\go\include\lib\atutor_mail.inc.php:29) in D:\Intranet HP\elearning\go\users\index.php on line 37</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

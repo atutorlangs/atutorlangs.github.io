@@ -1,0 +1,175 @@
+---
+ title: About SCORM zip file  StreamAuthor elearning 30
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>About SCORM zip file  StreamAuthor elearning 30</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="3279"></a>
+		<div class="forum-post-author">
+			<label class="title">binbin306</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-20 20:01:09</p>
+            </div>
+            <div class="postheader"><h3>About SCORM zip file  StreamAuthor elearning 30</h3></div>
+				
+			<div class="body">
+				<p>Hi Everyone:<br />
+I have a problem about inputing a course- StreamAuthor's SCORM zip file.<br />
+<br />
+Things to describe: <br />
+  operating system - win XP<br />
+  version of ATutor -1.4.2<br />
+  versions of php - 4.3.8<br />
+  version of mysq l - 4.0.20<br />
+  webserver & version - Appserv 2.4.1<br />
+  copies of error messages - <br />
+  changes to default settings -<br />
+  web browser being used -  IE6.0<br />
+  and anything else relevant -<br />
+<br />
+I used StreamAuthor 3.0 to result a zip file that support SCORM 1.2. I successed  to input the zip file into Atutor, but it cna't work correctly. Error Messages like this:<br />
+Unable to find an API adapter<br />
+Unable to locale the LMS's API Implementation<br />
+LMSInitalize was not successful<br />
+LMSGetValue was not successful<br />
+<br />
+I tried to edit the course's content. The content likes this:<br />
+-----------------------------------------------------------------<br />
+&lt;HTML><br />
+&lt;HEAD><br />
+&lt;META http-equiv="expires" CONTENT="Tue, 05 DEC 2000 06:00:00 GMT"><br />
+&lt;META http-equiv="Pragma" CONTENT="no-cache"><br />
+&lt;SCRIPT LANGUAGE=JAVASCRIPT SRC="scripts/APIWrapper.js">&lt;/SCRIPT><br />
+&lt;SCRIPT LANGUAGE=JAVASCRIPT SRC="scripts/AUFunctions.js">&lt;/SCRIPT><br />
+&lt;TITLE>SCO Wrapper&lt;/TITLE> <br />
+&lt;Script language = "javascript"><br />
+&lt;!--<br />
+	loadPage();<br />
+--><br />
+&lt;/script><br />
+&lt;/HEAD><br />
+    &lt;frameset rows="*" frameborder=0 onUnload="return unloadPage();"> <br />
+        &lt;frame id=SCOcontents src="index.htm"> <br />
+&lt;/frameset> <br />
+&lt;/HTML>  <br />
+-------------------------------------------------------------------<br />
+Can't enyone helps to resolve the problem?<br />
+Thank You very much!  :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3286"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-22 14:21:57</p>
+            </div>
+            <div class="postheader"><h3>No SCORM RTE</h3></div>
+				
+			<div class="body">
+				<p>ATutor does not yet support the SCORM runtime environment. It does support SCORM 1.2 content packaging.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3310"></a>
+		<div class="forum-post-author">
+			<label class="title">binbin306</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 07:27:04</p>
+            </div>
+            <div class="postheader"><h3>Thank You!</h3></div>
+				
+			<div class="body">
+				<p>Thank You very much!<br />
+Wait...<br />
+Until Atutor supports the SCORM RTE! <br />
+<br />
+GO! GO! GO!<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+ATutor does not yet support the SCORM runtime environment. It does support SCORM 1.2 content packaging.<br />
+[op]forums/view.php?fid=7;pid=3279;page=1#3286[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4044"></a>
+		<div class="forum-post-author">
+			<label class="title">weiheng</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-22 07:26:43</p>
+            </div>
+            <div class="postheader"><h3>We've a similar problem..</h3></div>
+				
+			<div class="body">
+				<p>We've a HTML with javascript to load the flash content.. After we import the SCORM content package.. We can't see anything and we encounter a javascript error. After further checking we notice ATutor actually rip put the content from HTML file without the javascript.<br />
+<br />
+My HTML file content like this :<br />
+------------------------------------------------------------------------<br />
+&lt;HTML><br />
+&lt;HEAD><br />
+&lt;SCRIPT><br />
+.. our code goes here ....<br />
+&lt;/SCRIPT><br />
+&lt;TITLE>SCO Wrapper&lt;/TITLE> <br />
+&lt;/HEAD><br />
+&lt;BODY><br />
+&lt;Script language = "javascript"><br />
+&lt;!--<br />
+loadPage();<br />
+--><br />
+&lt;/script><br />
+&lt;/HTML> <br />
+<br />
+When ATutor rip the content of the file. It rip only from body tag onwards.<br />
+<br />
+Can anyone help me on this?<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4045"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-22 09:07:07</p>
+            </div>
+            <div class="postheader"><h3>Between the body tags</h3></div>
+				
+			<div class="body">
+				<p>We are planning on detecting and saving the Javascript in the head of an imported file for a future release. In current versions (&lt;= 1.4.3) only content between the body tags get imported.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

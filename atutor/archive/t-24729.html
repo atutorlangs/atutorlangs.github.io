@@ -1,0 +1,250 @@
+---
+ title: Error message during Version 22 upgradel
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error message during Version 22 upgradel</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24729"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-07-22 12:27:31</p>
+            </div>
+            <div class="postheader"><h3>Error message during Version 22 upgradel</h3></div>
+				
+			<div class="body">
+				<p>I just upgraded my ATutor version 2.1 to ATutor-2.2-RC1 that I downloaded today. During the installation I got error messages after Step 3 but was able to continue. The messages are attached (with login credential info removed). I haven't tested it much but the upgrade does appear to have worked.<br />
+<br />
+Sandie<br />
+<br />
+Database server<br />
+*	Server: Localhost via UNIX socket<br />
+*	Server type: Percona Server<br />
+*	Server version: 5.5.32-31.0-log - Percona Server (GPL), Release rel31.0, Revision 549<br />
+*	Protocol version: 10<br />
+Web server<br />
+*	cpsrvd 11.42.1.16<br />
+*	Database client version: libmysql - 5.0.96<br />
+*	PHP extension: mysqli <br />
+*	PHP 5.3.28</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24730"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-07-22 12:39:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the report.<br />
+<br />
+You should hold off upgrading production sites until the final release. Though the current RC1 is relatively stable, there have been a few changes since it was released, and there will likely be a few more.<br />
+<br />
+We're investigating this particular problem now.<br />
+http://atutor.ca/atutor/mantis/view.php?id=5495</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24731"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-07-22 14:15:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>I'm just testing 2.2 on a copy of my production site.  My site has a custom theme and some source code customization so it takes me a while to figure out how a new version impacts them. I never got the time to upgrade to 2.1.1 so am hoping to get things figured out early so I can upgrade to 2.2 soon after it is released.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24740"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-07-24 20:54:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>Some progress with this. Theres a temporary work around, but not a full solution yet. See the comments:<br />
+<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=5495</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24743"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-07-25 14:28:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>We've tracked this issue down to a problem with mysql version 5.1.66, and perhaps earlier versions. There was a bug fix in the following version that corrects the issue of backticks/backquotes used in queries. There does not appear to be a reasonable workaround, other than commenting out lines 459-474 to remove the UTF-8 check, or upgrading to a newer version of mysql.<br />
+<br />
+For details on the bug, search the following page for "backtick"<br />
+<br />
+http://dev.mysql.com/doc/relnotes/mysql/5.1/en/news-5-1-67.html [^]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24779"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-25 07:39:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>A work around is to comment out the following block of code<br />
+<br />
+https://github.com/atutor/ATutor/blob/master/include/install/install.inc.php#L460-L474</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24815"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-03 05:33:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>All kinds of things are going wrong for me with this upgrade. I am shifting back to 2.1.<br />
+<br />
+I noticed that godaddy server's default php was 5.3 but mine was set at 5.2. I was able to upgrade to 5.4. The mysql however is 5.0., so that also may be the source of my trouble.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24816"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-03 07:14:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>Sorry for the trouble. We've not been able to reproduce the problem. The php/mysql versions you mention should be okay. Will investigate if you want to share your ATutor and Godaddy login details. I'm curious why Godaddy has problem with ATutor 2.2<br />
+<br />
+info at atutor dot ca</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24863"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-20 12:16:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>An updated bundle of ATutor 2.2 has been released, replacing the old version on Sourceforge. It will correct the errors generated when tables are ALTERed during the upgrade process.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24963"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-04 13:50:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>We've made some adjustments to the installer, which we're hoping will resolve the real_escape_string() error people have been experiencing. Can you test it on the server that was producing the error and let us know how it goes.<br />
+<br />
+atutor.ca/atutor/files/ATutor-2.2-test.tar.gz</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24966"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-04 13:55:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Error message during Version 2.2 upgradel</h3></div>
+				
+			<div class="body">
+				<p>http://atutor.ca/atutor/files/ATutor-2.2-test.tar.gz</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

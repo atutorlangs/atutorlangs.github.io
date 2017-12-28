@@ -1,0 +1,96 @@
+---
+ title: File transfer problems
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>File transfer problems</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20176"></a>
+		<div class="forum-post-author">
+			<label class="title">ngs</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-14 09:13:36</p>
+            </div>
+            <div class="postheader"><h3>File transfer problems</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I have 2 file transfer problems on the following setup:<br />
+<br />
+Operating system  - Windows NT 6.0 (Parallels/Plesk)<br />
+Version of ATutor - 1.6.4<br />
+Versions of php - 5.2.13<br />
+Version of mysql - 5.0.45-community-nt<br />
+Webserver & version - IIS 7<br />
+Test ATutor location- http://sandbox.isrg.org.uk/ATutor<br />
+<br />
+Patch #s applied - All suggested<br />
+ATutor theme name - Default<br />
+Changes to default settings - None<br />
+<br />
+Copies of error messages - see below<br />
+Web browser being used - see below<br />
+  ...and anything else relevant - see below<br />
+<br />
+<br />
+PROBLEM #1<br />
+==========<br />
+File transfers time out after 2 minutes (slow connections cannot upload/download moderately sized files). This has been a problem since installing ATutor; I don't think it is specifically an ATutor issue, but any pointers as to what may be at fault would be appreciated.<br />
+<br />
+The following is what I am experiencing:<br />
+<br />
+An html form upload succeeds with file sizes of 200 kB & 5 MB (80 seconds), but<br />
+<br />
+- 10 MB fails after 130 seconds ("The connection was reset" in firefox / "Connection terminated unexpectedly" in epiphany)<br />
+- 14 MB fails after 130 seconds ("The connection was reset" in firefox / "Connection terminated unexpectedly" in epiphany)<br />
+<br />
+From ATutor,<br />
+- 5MB succeeds (80 seconds)<br />
+- 10MB fails at 180 seconds with a server generated error : "The page cannot be displayed because an interanal server error has occurred."<br />
+- 14 MB fails at 220 seconds with the browser error: "The connection was reset"<br />
+<br />
+The iis/php setup is as follows:<br />
+My ISP support report that "The IIS timeout is set at 600 seconds and the max upload size is 100MB.".<br />
+php.ini has:<br />
+	upload_max_filesize = 128M<br />
+	post_max_size = 64M<br />
+	memory_limit = 128M<br />
+I know these would be better with memory_limit > post_max_size > upload_max_size but the file sizes failing are nowhere near these limits.<br />
+<br />
+<br />
+<br />
+PROBLEM #2<br />
+==========<br />
+File downloads recently (a week ago) started to fail completely.<br />
+<br />
+Tested using 3 different browsers, transfers start, the file seems to download, but the browser isn't notified of the transfer progress or completion. After 2 minutes (see problem #1 above) the server times out.<br />
+ - IE8 - file is transferred but fails to complete (isn't copied from Local Apps\temp);<br />
+ - Firefox/flock - file is downloaded as a .part, but is cleaned up when transfer times out (Error message reads: "C:\Documents and Settings\user\Desktop\test5MB.zip.part could not be saved, because the source file could not be read. Try again later, or contact the server administrator."<br />
+ - Chrome - the part file is made available and is complete after the 2 minute timeout.<br />
+<br />
+Looking into this further, all downloads seem to defautl to the file type "octet-stream", and this seems to be because the php test<br />
+	[php]if (!isset($mime))[/php]<br />
+ALWAYS returns false (!!?!)<br />
+<br />
+After this started happening, I set up a completely fresh test installation (http://sandbox.isrg.org.uk/ATutor) with all defaults, which also has this problem.<br />
+<br />
+The only other thing that may have a bearing is that I cycled the Plesk php setting from fast-cgi -> isapi -> cgi -> fast-cgi on the Friday before this happened.<br />
+<br />
+Other php applications installed on the server do not have this problem.<br />
+<br />
+<br />
+Thanks in advance.<br />
+<br />
+ngs[php][/php] [php][/php]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

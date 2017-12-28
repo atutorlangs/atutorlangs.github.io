@@ -1,0 +1,71 @@
+---
+ title: Where is the enrollment email found php file
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Where is the enrollment email found php file</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22046"></a>
+		<div class="forum-post-author">
+			<label class="title">wattscj</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-18 13:18:39</p>
+            </div>
+            <div class="postheader"><h3>Where is the enrollment email found php file</h3></div>
+				
+			<div class="body">
+				<p>Where can I find the file that creates the email sent to a new student. (i.e. enrolled using the import student list) I'm very proficient at PGP so I can take it from there but I need to find it so that I can edit the email that goes out to the student and so that it doesn't display the username and password at the bottom but instead in the middle of the message.<br />
+<br />
+Any help would be greatly appreciated.<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux<br />
+  ATutor version - 1.6.2<br />
+  Patch #s applied - 0016,0006,0003<br />
+  ATutor theme name - (Custom Theme but is built off of BPO Olive)<br />
+  PHP version - 4.4.9<br />
+  MySQL version - 5.0.91<br />
+  Webserver & version - Shared<br />
+:(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22047"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-18 13:35:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Where is the enrollment email found (php file)</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Instead of the enrollment email, I think you are looking for the mailer class within ATutor.<br />
+It is called ATutorMail which uses PHPMailer.<br />
+<br />
+ATutorMail is in:<br />
+include/classes/phpmailer/atutormailer.class.php<br />
+<br />
+PHPMail library:<br />
+include/classes/phpmailer/<br />
+<br />
+Also, I am interested of seeing PGP integrated into ATutor.  It would be nice if you can pack that into a module. :)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,189 @@
+---
+ title: Tests  Surveys no longer available after upgrade
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Tests  Surveys no longer available after upgrade</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12661"></a>
+		<div class="forum-post-author">
+			<label class="title">sixfinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 12:39:41</p>
+            </div>
+            <div class="postheader"><h3>Tests  Surveys no longer available after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+We have just upgraded to 1.5.5 from 1.5.3 and since have been having trouble with the Tests and Surveys in our courses.<br />
+<br />
+They previously worked fine but now when one clicks upon a survey it brings up the "Take Test" and "survey title" but informs the user it is "Done!". This is replicated across all tests and surveys.<br />
+<br />
+Any assistance would be gratly appreciated.<br />
+<br />
+Many thanks.<br />
+<br />
+Steve<br />
+<br />
+Things to describe: <br />
+  operating system - Linux 2.6.9-42.0.3.ELsmp<br />
+  version of ATutor - v1.5.5<br />
+  versions of php - v5.2.2<br />
+  version of mysq l - v4.1.22-standard<br />
+  webserver & version - Apache v1.3.39 (Unix)<br />
+  copies of error messages -<br />
+  changes to default settings - none<br />
+  web browser being used - Safari v3.0.4 and Firefox v2.0.0.11<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12667"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-25 04:15:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests & Surveys no longer available after upgrade</h3></div>
+				
+			<div class="body">
+				<p>This "Done!" string is probably the same that is always output below the questions when taking a test. If it is, that might mean that question records in the DB are somehow broken (most likely in AT_tests_questions_assoc table). And therefore finding the bug may require direct access to the DB.<br />
+<br />
+Here's what I would have done in the first place:<br />
+1. Go to Manage -> Tests & Surveys -> [select the test] -> Preview. Are the questions displayed? Are any of them missing?<br />
+2. If (1) fails, then select the test and click the Questions button. Are all the questions displayed?<br />
+3. If (1) and (2) fail, then are the questions present in the Question Database? All of them?<br />
+4. Select the test and click Submissions. Then select any submission (if there're any) and click View & Mark Test. Are all the questions displayed?<br />
+4. Can you please attach here a screenshot of the Take Test page with the error you described?<br />
+<br />
+If you (or someone you know) are familiar with MySQL and/or phpMyAdmin, there is much more that can be done:<br />
+5. Check the table "AT_tests_questions_assoc". Under the "test_id" of your test (you can peep it in the browser's address bar when clicking buttons at Manage -> Tests & Surveys page), there must be several records, their number corresponding to the number of questions in your test.<br />
+6. If there are some, then check the "AT_tests_questions" for matching "question_id"s and verify these are the correct questions by checking their "question" field.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12715"></a>
+		<div class="forum-post-author">
+			<label class="title">sixfinger</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-30 10:52:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests & Surveys no longer available after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the post.<br />
+<br />
+OK, I have performed test one to four and the answers are as follows:<br />
+1. Questions missing;<br />
+2. Yes, questions are displayed;<br />
+3. Yes, all of them;<br />
+4. Attached.<br />
+<br />
+Onto the MySQL part:<br />
+5. Found id 667 with value of 3 which matches number of questions;<br />
+6. In all honesty I am not sure about this last one... checking the "question_id" in "AT_tests_questions_assoc", not all the id's are present (ie the id's start at 14) that are found in AT_tests_questions (where there are 1 - 108).<br />
+<br />
+Not sure whether I have helped or hindered there... :-)<br />
+<br />
+If you require access let me know.<br />
+<br />
+Many thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12723"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-01 05:13:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests & Surveys no longer available after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Well, for now it looks much like one strange bug we've encountered. We didn't attribute it to an upgrade, but the real cause is still unknown.<br />
+<br />
+To gather more info, please execute the attached SQL file on your system.<br />
+<br />
+It will probe for some possible reasons of the bug, including verification if it's like the one we've found.<br />
+In a case you have privacy/security concerns here. These five queries perform a read-only access to your DB, getting from it only those data that are needed for the bug identification. No test/question texts are retrieved.<br />
+<br />
+<br />
+To run the SQL file:<br />
+<br />
+1. Replace all the "***"s in the attached probe.sql with the test's id.<br />
+2. Start the Linux shell, go to the directory that probe.sql is in, and type this command:<br />
+<br />
+[b]mysql -u "user" -p "database" &lt; probe.sql > result.txt[/b]<br />
+<br />
+where "user" should be replaced with the database user name that you've input when installing ATutor (probably "root"; if not sure, look in file include/config.inc.php),<br />
+"database" -- with the database name (look in the same file).<br />
+<br />
+3. Press Enter. You'll be asked for the DB password (again, see that very same file).<br />
+<br />
+If everything runs smoothly, you should see no error messages, and there should appear a non-empty file result.txt.<br />
+<br />
+4. Attach the result.txt here. Don't forget to select "Public" before posting.<br />
+<br />
+<br />
+Also answering some background questions will add up for the clarity:<br />
+1. Does this bug occur in tests created after the upgrade?<br />
+2. Does this bug happen only in randomized tests, or only not randomized, or both?<br />
+3. Does toggling "Randomize Questions" in test properties change anything?<br />
+4. Did you restore tests or entire courses from backups before the bug appeared? If so, do you remember if there were any error messages?<br />
+5. Did you change the structure of the DB tables -- added fields, changed their order, etc.? Or changed the PHP code in the files of the test area?<br />
+<br />
+Sorry for that many questions. Locating a bug and ruling out its potential sources usually requires a lot of info.<br />
+<br />
+<br />
+That should help.<br />
+If it doesn't, then I'll probably be able to log to your installation the next week.<br />
+But before, let it be made clear that I don't represent the ATutor developers; I'm just a community member.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12724"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-01 05:15:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests & Surveys no longer available after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Oh, here's the SQL file.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

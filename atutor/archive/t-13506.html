@@ -1,0 +1,285 @@
+---
+ title: Content Navigation Box
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Content Navigation Box</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13506"></a>
+		<div class="forum-post-author">
+			<label class="title">obevans</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-16 00:13:55</p>
+            </div>
+            <div class="postheader"><h3>Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -Win Server 2003<br />
+  version of ATutor -1.6<br />
+  versions of php -5.0.X<br />
+  version of mysq l -4.1<br />
+  webserver & version -Apache 2.2.8<br />
+  copies of error messages -None<br />
+  changes to default settings -None<br />
+  web browser being used -IE 7<br />
+  and anything else relevant -<br />
+<br />
+<br />
+Text in the content navigation box does not wrap and is spilling out of the box into the main page.<br />
+<br />
+How do I configure the box or have something like the demo SCO pages?<br />
+<br />
+Thanks<br />
+<br />
+Ob Evans</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13507"></a>
+		<div class="forum-post-author">
+			<label class="title">Samot</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-16 02:50:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>After same solution someone please help</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13512"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-16 09:06:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>RE: menu title spilling over the edge, see:<br />
+http://www.atutor.ca/view/7/13497/1.html<br />
+<br />
+<br />
+Not sure what you mean by "...have something like the demo SCO pages"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13513"></a>
+		<div class="forum-post-author">
+			<label class="title">Samot</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-16 11:02:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the reply greg but the answer you posted on my thread which is the answer for this thread doesn't seemto work.<br />
+<br />
+When I change those values only changes how the text looks. It still cuts the actualy length of the values.<br />
+<br />
+<br />
+Lets say the title of my content was<br />
+Training For the Disabled<br />
+<br />
+But when this title is in the side menu it cuts it off automatically.<br />
+So<br />
+&lt;a title=Training For the Disabled">Training For...&lt;/a><br />
+<br />
+I need the text in between tags to be full<br />
+<br />
+Thanks once again<br />
+<br />
+Thomas</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13514"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-16 11:21:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>Though I would not recommend it, you could hack the printMenu function in<br />
+<br />
+include/classes/ContentManager.class.php<br />
+<br />
+You'll loose your changes when you upgrade, unless you want to create a patch, or keep track of your changes from version to version.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13515"></a>
+		<div class="forum-post-author">
+			<label class="title">obevans</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-16 21:03:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+Thanks for the reply. The answer you gave fall short of what I was expecting. Please just take a look at a default course page. Unles you name all course tiles "Welcome!" or "Atutor", anything longer than these will cut the box right edge.<br />
+<br />
+I tried an SCO demo. The content navigation had no box.<br />
+<br />
+From my experience with ATutor so far, I think I'm beginning to like it more but there need to be improvements or refinements as we move along. <br />
+<br />
+I tried made some changes to the ContentManager.class.php but they had no effect on the Content navigation box.<br />
+<br />
+Thank you for providing any further info.<br />
+<br />
+ob<br />
+<br />
+ <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13516"></a>
+		<div class="forum-post-author">
+			<label class="title">Samot</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-16 21:18:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>Thanks alot made a solution<br />
+<br />
+					$truncate = false;<br />
+					if ($truncate && ($strlen($content['title']) > (28-$depth*4)) ) {<br />
+						$content['title'] = rtrim($substr($content['title'], 0, (28-$depth*4)-4)).'...';<br />
+					}<br />
+Edited the include/classes/contentmanager.class.php<br />
+<br />
+just put truncate = false above that code</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13528"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-17 10:06:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>the menu is a little too narrow for text, even after it gets truncated. so to fix:<br />
+<br />
+in /themes/default/styles.css, change the margin & width numbers like so:<br />
+<br />
+#contentcolumn_shiftright {<br />
+	margin-left: 18em;<br />
+}<br />
+<br />
+#leftcolumn{<br />
+	float: left;<br />
+	width: 17em;<br />
+	margin-left: 5px;<br />
+	margin-top:-10px;<br />
+}</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13531"></a>
+		<div class="forum-post-author">
+			<label class="title">obevans</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-17 21:39:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Content Navigation Box</h3></div>
+				
+			<div class="body">
+				<p>Thanks Heidi. Your directive took care of my problem.<br />
+<br />
+ob<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

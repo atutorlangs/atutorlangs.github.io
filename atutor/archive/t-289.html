@@ -1,0 +1,127 @@
+---
+ title: Link from 1 content page to another
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Link from 1 content page to another</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="289"></a>
+		<div class="forum-post-author">
+			<label class="title">peter</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-08 11:55:08</p>
+            </div>
+            <div class="postheader"><h3>Link from 1 content page to another</h3></div>
+				
+			<div class="body">
+				<p>How do I link from within the body of a content page to another content page within same course?<br />
+<br />
+&lt;A href="?????">Link&lt;/A><br />
+<br />
+Thanks <br />
+<br />
+Peter</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="290"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-08 12:50:47</p>
+            </div>
+            <div class="postheader"><h3>Use the content id</h3></div>
+				
+			<div class="body">
+				<p>&lt;a href="?cid=123423">Link to content page&lt;/a><br />
+[where the cid value is that of the page you want to link to]<br />
+<br />
+or<br />
+<br />
+Right click on the link to the content page in one of the menus or the sitemap, save the link location, then paste the location in as the href value.<br />
+<br />
+Link to a files in your course content directory with something like:<br />
+<br />
+&lt;a href="CONTENT_DIR/filename.html">Link to content file&lt;/a><br />
+<br />
+Or<br />
+<br />
+You can copy the link location, then paste the url into the page. It will automatically create a link to the page</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="317"></a>
+		<div class="forum-post-author">
+			<label class="title">peter</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-18 15:16:11</p>
+            </div>
+            <div class="postheader"><h3>Links if I use Text option</h3></div>
+				
+			<div class="body">
+				<p>If I use the TEXT option (as opposed to HTML), how do I link to another page?<br />
+<br />
+I searched the on-line course, and I found<br />
+<br />
+[cid] content id To create anchors in content pages use <br />
+href="[cid]#anchor". <br />
+The code is replaced by the content id. <br />
+<br />
+So, I tried putting [3] in the bodytext, but that does not do it.<br />
+<br />
+What should I put instead to link to say cid=3?<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="318"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-18 15:49:29</p>
+            </div>
+            <div class="postheader"><h3>Use HTML</h3></div>
+				
+			<div class="body">
+				<p>Just paste the URL to the page into your plain text page. There is a minor bug. There must be at least one character before the start of the URL. Spaces are stripped away. This is fixed in V1.3.<br />
+<br />
+The informnation you mentioned from HowTo  refers to embedding anchors within single pages, so you can jump from the top of a page to the bottom, for example.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+If I use the TEXT option (as opposed to HTML), how do I link to another page?<br />
+<br />
+I searched the on-line course, and I found<br />
+<br />
+[cid] content id To create anchors in content pages use <br />
+href="[cid]#an...<br />
+[op]forums/view.php?fid=7;pid=289;page=1#317[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

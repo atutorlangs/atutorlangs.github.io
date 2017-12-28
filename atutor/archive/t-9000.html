@@ -1,0 +1,506 @@
+---
+ title: Group problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Group problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="9000"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-16 07:13:43</p>
+            </div>
+            <div class="postheader"><h3>Group problem</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -linux<br />
+  version of ATutor -1.5.3<br />
+  versions of php -php5<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -firefox<br />
+  and anything else relevant -<br />
+<br />
+Hi,<br />
+Thanks for a great lcms.<br />
+<br />
+My problem;<br />
+When i try to enter a group, after successfully created one, this error appear:<br />
+<br />
+<br />
+Warning: implode() [function.implode]: Bad arguments. in /home/grisen/public_html/ATutor/groups.php on line 25<br />
+<br />
+<br />
+      Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/grisen/public_html/ATutor/groups.php on line 31<br />
+<br />
+This error also show up when i try to enter file storage. Everything else seem to work fine.<br />
+<br />
+Maybe it&#347; something with chmod??<br />
+<br />
+Thanks in advance</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9002"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-16 09:05:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Group problem</h3></div>
+				
+			<div class="body">
+				<p>I'm unable to reproduce this problem. We'll need more details. step-by-step.<br />
+<br />
+Are you able to reproduce the problem on the demo site?<br />
+http://www.atutor.ca/atutor/demo.php<br />
+<br />
+You should try version 1.5.3.2.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9011"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-17 07:29:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Group problem</h3></div>
+				
+			<div class="body">
+				<p>Hi again, the problem still apears. I cant reproduce it on the demo site. eg it works fine there.<br />
+<br />
+In my attachment there is a picture showing the error after one click on the links button. <br />
+<br />
+Thanks for taking time for me..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9012"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-17 08:32:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Group problem</h3></div>
+				
+			<div class="body">
+				<p>I would suggest reinstalling. <br />
+<br />
+If difficult to help if we don't know anything about the system ATutor is running on. Details please....</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9014"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-17 10:56:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Group problem</h3></div>
+				
+			<div class="body">
+				<p>ATutor Version: 1.5.3.2 (build r6554 - 2006-08-01 13:15:50) <br />
+Operating System: Linux 2.6.9-42.0.3.EL #1 Fri Oct 6 05:59:54 CDT 2006 i686  <br />
+Web Server: Apache/1.3.37 (Unix) mod_auth_passthrough/1.8 mod_log_bytes/1.2 mod_bwlimited/1.4 FrontPage/5.0.2.2635.SR1.2 mod_ssl/2.8.28 OpenSSL/0.9.7a PHP-CGI/0.1b  <br />
+PHP Version: 4.4.3  <br />
+MySQL Version: 4.1.21-standard  <br />
+?Optional URL: http://72.29.92.243/~grisen/ATutor2/<br />
+<br />
+<br />
+Hi again!<br />
+Reinstalld ATutor (fresh, new install) and same problem apperars...i really have no idea...:(<br />
+Something on serverside?<br />
+<br />
+Thanks anyway</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9025"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-18 05:17:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Group problem</h3></div>
+				
+			<div class="body">
+				<p>And if i try to Mange Links:<br />
+<br />
+Warning: implode() [function.implode]: Bad arguments. in /home/grisen/public_html/ATutor/include/lib/links.inc.php on line 84<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/grisen/public_html/ATutor/include/lib/links.inc.php on line 118<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/grisen/public_html/ATutor/include/lib/links.inc.php:84) in /home/grisen/public_html/ATutor/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/grisen/public_html/ATutor/include/lib/links.inc.php:84) in /home/grisen/public_html/ATutor/include/classes/Language/Language.class.php on line 123</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9033"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-18 10:08:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Group problem</h3></div>
+				
+			<div class="body">
+				<p>Please try a nightly build from here: http://atutor.ca/atutor/builds/ATutor-snap_2006_10_18.tar.gz</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9049"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-20 04:54:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Group problem</h3></div>
+				
+			<div class="body">
+				<p>Im sorry, it doesnt help with that nightly build. The strange error comes up... <br />
+There should be more people out there having the same problem?<br />
+<br />
+Apreciate all kind of tips!<br />
+<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9052"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-20 11:02:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Group problem</h3></div>
+				
+			<div class="body">
+				<p>Did you re-install ATutor using the nightly build?<br />
+<br />
+Are you using a language other than English?<br />
+<br />
+Does this error appear as an instructor or as a student?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9068"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-23 04:32:56</p>
+            </div>
+            <div class="postheader"><h3>Re:Implode problem</h3></div>
+				
+			<div class="body">
+				<p>Hi again!<br />
+<br />
+1. Yes, i re-installed ATutor using the nightly build.<br />
+<br />
+2. I only used English while testing this nightly build.<br />
+<br />
+3. This error (implode ....) appear both as instructor and as student.<br />
+<br />
+Im lost...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9073"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-23 15:20:27</p>
+            </div>
+            <div class="postheader"><h3>Re:Implode problem</h3></div>
+				
+			<div class="body">
+				<p>..when i change line 95 in links/index.php like this:<br />
+from:<br />
+//get links<br />
+$groups = implode(',', $_SESSION['groups']);<br />
+<br />
+to:<br />
+<br />
+//get links<br />
+$groups = ($_SESSION['groups']); <br />
+<br />
+it works, but yes, i know, thats not the way to solve it correct..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9074"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-23 15:30:24</p>
+            </div>
+            <div class="postheader"><h3>register globals</h3></div>
+				
+			<div class="body">
+				<p>do you have register globals enabled?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9083"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-24 06:26:27</p>
+            </div>
+            <div class="postheader"><h3>Re: register globals</h3></div>
+				
+			<div class="body">
+				<p>Are there any students registered for the class? If so yu go to manage groups. Then using the members link you find the students you want in the group and add them using the button meunu.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9084"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-24 09:12:28</p>
+            </div>
+            <div class="postheader"><h3>Re: register globals</h3></div>
+				
+			<div class="body">
+				<p>register_argc_argv On On <br />
+report_memleaks On On <br />
+safe_mode Off Off <br />
+[b]register_globals On On  [/b] <br />
+<br />
+..so they are enabled and set to ON...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9086"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-24 11:08:26</p>
+            </div>
+            <div class="postheader"><h3>Re: register globals</h3></div>
+				
+			<div class="body">
+				<p>Try disabling register globals and letting us know if that fixes the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9093"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-24 16:40:14</p>
+            </div>
+            <div class="postheader"><h3>Re: register globals</h3></div>
+				
+			<div class="body">
+				<p>When i have register_globals off in .htaccess, i get internal server error. <br />
+<br />
+I have my site on a host and can not change in php.ini.<br />
+<br />
+Suggestions?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9094"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-24 16:43:54</p>
+            </div>
+            <div class="postheader"><h3>Re: register globals</h3></div>
+				
+			<div class="body">
+				<p>when i have register_globals off in .htaccess i get internal server error..<br />
+<br />
+as i have my site on a host i cant modify php.ini..<br />
+<br />
+suggestions?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9115"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-26 11:33:54</p>
+            </div>
+            <div class="postheader"><h3>Re: register globals</h3></div>
+				
+			<div class="body">
+				<p>Hi once again,<br />
+It think the problem is solved.<br />
+<br />
+ATutor works om my local linux slackware, without errors so far.<br />
+Here is register globals off by default.<br />
+<br />
+So now i wonder how to turn them off at my host. I tried to put a line in .htaccess, but get Internal server error...<br />
+<br />
+Someone has an idea?<br />
+<br />
+Thanks in advance</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9116"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-26 14:59:34</p>
+            </div>
+            <div class="postheader"><h3>Re: register globals</h3></div>
+				
+			<div class="body">
+				<p>You should probably ask your host to do that for you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9124"></a>
+		<div class="forum-post-author">
+			<label class="title">grisen3</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-27 06:53:36</p>
+            </div>
+            <div class="postheader"><h3>Re: register globals</h3></div>
+				
+			<div class="body">
+				<p>Hi again,<br />
+<br />
+I think i have solved the problem getting register globals off. <br />
+The host provider has register globals on as default, and recommend me to put a php.ini -file with "register globals off" in all folders using the register script. The errors disapeared !<br />
+<br />
+So i hope this is a good way to solve the problem..<br />
+<br />
+/Thank you</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

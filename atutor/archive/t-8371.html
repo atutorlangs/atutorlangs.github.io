@@ -1,0 +1,216 @@
+---
+ title: Admin login on upgrade fails me
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Admin login on upgrade fails me</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="8371"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-07-09 12:51:01</p>
+            </div>
+            <div class="postheader"><h3>Admin login on upgrade fails me</h3></div>
+				
+			<div class="body">
+				<p>ATutor Version:<br />
+1.5.3 (build unknown - 2006-07-09 07:05:34)<br />
+Operating System:<br />
+Darwin 7.9.0 Darwin Kernel Version 7.9.0: Wed Mar 30 20:11:17 PST 2005; root:xnu/xnu-517.12.7.obj~1/RELEASE_PPC Power Macintosh<br />
+Web Server:<br />
+Apache/2.0.52 (Unix) PHP/4.3.9 DAV/2<br />
+PHP Version:<br />
+4.3.9<br />
+MySQL Version:<br />
+4.0.21 Complete MySQL by Server Logistics<br />
+<br />
+<br />
+I upgraded from 1.5.2 to 1.5.3, as follows:<br />
+I first duplicated the AT2006 database to one called Atutor153.<br />
+The old database was called AT2006 connected to the AT2006 web folder<br />
+The new one is Atutor153 connected to the Atutor153 web folder<br />
+<br />
+I can log into AT2006 as my superuser admin account, but can not do the same for the new ATutor153 database. See below for the errors generated when I try to log into  Atutor153 as the ssuperuser.<br />
+<br />
+Yet ... if I log into AT2006 as the superuser, then manually change the directory to ATutor153 in the URL line, I'm in as the superuser for Atutor153.<br />
+<br />
+<br />
+Any idea what gives?<br />
+<br />
+larry<br />
+<br />
+-----<br />
+Errors:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Library/Apache2/htdocs/atutor153/login.php on line 113<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /Library/Apache2/htdocs/atutor153/login.php:113) in /Library/Apache2/htdocs/atutor153/login.php on line 165<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /Library/Apache2/htdocs/atutor153/login.php:113) in /Library/Apache2/htdocs/ATutor153/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /Library/Apache2/htdocs/atutor153/login.php:113) in /Library/Apache2/htdocs/ATutor153/include/classes/Language/Language.class.php on line 123</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8377"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-07-10 10:19:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Admin login on upgrade fails me</h3></div>
+				
+			<div class="body">
+				<p>If you change the database you're using then you have to change it in the config.inc.php file as well before upgrading.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8613"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-10 06:24:22</p>
+            </div>
+            <div class="postheader"><h3>Fresh install</h3></div>
+				
+			<div class="body">
+				<p>atutor 1.5.2<br />
+<br />
+SERVER_SOFTWARE 	<br />
+Apache/2.2.0 (Unix) PHP/5.1.2 mod_fastcgi/2.4.2 mod_ssl/2.2.0 OpenSSL/0.9.7i<br />
+mysql 	5.0.20a<br />
+<br />
+<br />
+<br />
+Hi greg and joel<br />
+<br />
+Based upon my recent almost successful upgrade (previous message) I again can not login as an admin. (it was never resolved from the time I started this thread).  I also get some header error info.<br />
+<br />
+I manually added a new user to the admin table and still the same issue<br />
+<br />
+----------<br />
+<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /Library/WebServer/Documents/ATutor/include/classes/Module/Module.class.php on line 57<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /Library/WebServer/Documents/ATutor/include/classes/Module/Module.class.php:57) in /Library/WebServer/Documents/ATutor/login.php on line 165<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /Library/WebServer/Documents/ATutor/include/classes/Module/Module.class.php:57) in /Library/WebServer/Documents/ATutor/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /Library/WebServer/Documents/ATutor/include/classes/Module/Module.class.php:57) in /Library/WebServer/Documents/ATutor/include/classes/Language/Language.class.php on line 123</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8614"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-10 06:50:30</p>
+            </div>
+            <div class="postheader"><h3>database</h3></div>
+				
+			<div class="body">
+				<p>database is really 1.5.3.2<br />
+<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8616"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-10 10:42:21</p>
+            </div>
+            <div class="postheader"><h3>Re: database</h3></div>
+				
+			<div class="body">
+				<p>are you upgrading from 1.5.2 to 1.5.3.2 ?<br />
+<br />
+did you try a fresh installation of 1.5.3.2?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8617"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-10 11:07:36</p>
+            </div>
+            <div class="postheader"><h3>Re: database</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel<br />
+<br />
+I gave up on the upgrade and decided to do a fresh install.<br />
+I dumpted my data into a text file and removed all drop/create table references.  I just left the insert commands.<br />
+<br />
+During import (run new query) I only encountered issues with the members and courses tables. ( second_name and private_email data placeholders [,''] had to be added to my members' data lines;  release_date and banner entries had to be added to my courses' data lines)<br />
+<br />
+Were there any other major table changes between 1.5.2 and 1.5.3.2 that I might have missed?<br />
+<br />
+It appears to be working so far, based upon my very limited testing<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8703"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-08-29 13:09:27</p>
+            </div>
+            <div class="postheader"><h3>Re: database</h3></div>
+				
+			<div class="body">
+				<p>You can see a list of database changes in the install/db/ directory. The files are clearly named.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

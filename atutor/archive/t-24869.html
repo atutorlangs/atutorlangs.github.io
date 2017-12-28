@@ -1,0 +1,930 @@
+---
+ title: Cannot install Atutor past step 2
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cannot install Atutor past step 2</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24869"></a>
+		<div class="forum-post-author">
+			<label class="title">Benie123</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-22 04:15:16</p>
+            </div>
+            <div class="postheader"><h3>Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -2.2<br />
+  Patch #s applied -None<br />
+  ATutor theme name -?<br />
+  PHP version -5.4.30<br />
+  MySQL version -5.5.37<br />
+  Webserver & version -linux<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+I get these errors:<br />
+[21-Sep-2014 15:54:37 Europe/London] PHP Warning: mysqli::mysqli(): (28000/1045): Access denied for user 'scsltdco_01'@'localhost' (using password: YES) in /home/scsltdco/public_html/ATutor/include/lib/mysql_connect.inc.php on line 18<br />
+[21-Sep-2014 15:54:37 Europe/London] PHP Warning: mysqli::set_charset(): Couldn't fetch mysqli in /home/scsltdco/public_html/ATutor/include/lib/mysql_connect.inc.php on line 20<br />
+[21-Sep-2014 15:54:37 Europe/London] PHP Warning: mysqli::query(): Couldn't fetch mysqli in /home/scsltdco/public_html/ATutor/include/lib/mysql_connect.inc.php on line 257<br />
+[21-Sep-2014 15:54:37 Europe/London] PHP Fatal error: Call to a member function fetch_assoc() on a non-object in /home/scsltdco/public_html/ATutor/include/lib/mysql_connect.inc.php on line 258<br />
+[21-Sep-2014 17:28:29 Europe/London] PHP Fatal error: Call to a member function real_escape_string() on a non-object in /home/scsltdco/public_html/ATutor/include/lib/mysql_connect.inc.php on line 141<br />
+<br />
+I have looked at http://atutor.ca/view/7/24797/1.html<br />
+<br />
+but as this was not solved online I am stuck</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24871"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-22 09:13:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>You've very likely entered the wrong mysql account information. It may not be the same as your shell account login details. Check with your provider for the correct login/pwd for mysql.<br />
+<br />
+Also be sure your mysql user has permission to create directories. If not you'll need to create a database for atutor to use before installing.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24906"></a>
+		<div class="forum-post-author">
+			<label class="title">Benie123</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-29 05:45:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>No I have already created the database I have checked the access and I have also done a test write to the database so nothing wrong there.<br />
+<br />
+A third party has also checked installation of database and access and all was fine your software just hangs after the initial entry screens</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24907"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-29 09:20:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>I would suggest reviewing the server's apache and php error logs to see if there are any clues there.<br />
+<br />
+We've install dozen's without any issues. You may want to review the server requirements to be sure yours is configured to run ATutor:<br />
+<br />
+http://www.atutor.ca/atutor/docs/requirements.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24908"></a>
+		<div class="forum-post-author">
+			<label class="title">Benie123</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-29 11:16:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>All server status levels are fine: as you see by attachment<br />
+<br />
+your software gives this error message:<br />
+<br />
+[29-Sep-2014 16:14:44 Europe/London] PHP Fatal error:  Call to a member function real_escape_string() on a non-object in /ATutor/include/lib/mysql_connect.inc.php on line 141<br />
+<br />
+:( <br />
+<br />
+I am not the only one several forums report this error!!!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24909"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-29 12:13:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>We are aware of this recurring issue, though without being able to reproduce the problem ourselves, it is difficult to resolve.<br />
+<br />
+The error appears to occur when the database ($db) has not been connected. This is typically because the wrong database info has been entered, or the mysql user being used by ATutor does not have adequate permissions. <br />
+<br />
+If someone is able to help us reproduce the problem, we'll revisit this.<br />
+<br />
+For now you can comment out that particular line. It is used to escape strings to prevent potential security issues. You can uncomment the line once installation is successful.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24910"></a>
+		<div class="forum-post-author">
+			<label class="title">Benie123</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-30 02:56:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>The errors just continue!!!<br />
+<br />
+[30-Sep-2014 07:52:56 Europe/London] PHP Fatal error:  Call to a member function query() on a non-object in /ATutor/include/lib/mysql_connect.inc.php on line 167<br />
+<br />
+Before you talk rubbish I have full control over this database.....I can write to it edit it and create tables and views.<br />
+<br />
+You clearly have a bug in your software which needs to be sorted before others are put off using it<br />
+<br />
+:( [b] [/b] [red] [/red]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24922"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-02 14:33:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Just downloaded and tried to install latest version also.  Got past the requirements screen and got error on line 141.  I commented that out, then got error on line 167.  Again, commented that line out, and it continued but had errors in line 182.  Then, I got a database failure error.  It is telling me that my DB is not UTF8, but it is.  I am installing this on a shared server with Dreamhost.  I will be glad to share my login credentials for you to test.<br />
+<br />
+Guilio<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24923"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-02 14:44:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Can you please provide the exact error messages, and the files in which these line numbers apply.<br />
+<br />
+Also provide the other details in Things to describe.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24924"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-02 15:04:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>http://www.fpreports.com/training/ATutor/install/install.php<br />
+<br />
+Fatal error: Call to a member function real_escape_string() on a non-object in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 141<br />
+<br />
+<br />
+Now, I will COMMENT OUT line 141,<br />
+<br />
+=====<br />
+<br />
+Fatal error: Call to a member function query() on a non-object in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 167<br />
+<br />
+<br />
+Now I will COMMENT OUT line 167<br />
+<br />
+=====<br />
+<br />
+Warning: mysqli_affected_rows() expects parameter 1 to be mysqli, null given in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 182<br />
+<br />
+Warning: mysqli_affected_rows() expects parameter 1 to be mysqli, null given in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 182<br />
+<br />
+ Error<br />
+Database fp_atutor is not in UTF8. Please set the database character set to UTF8 before continuing by using the following query: <br />
+ALTER DATABASE `fp_atutor` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci. <br />
+To use ALTER DATABASE, you need the ALTER privilege on the database. You can also check the MySQL manual here.<br />
+<br />
+======<br />
+<br />
+Back to DATABASE INFO REQUEST<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - linux<br />
+  ATutor version - 2.2<br />
+  Patch #s applied - none<br />
+  ATutor theme name - default<br />
+  PHP version - 5.4.20<br />
+  MySQL version - 5<br />
+  Webserver & version - unknown, assuming apache<br />
+  Copies of error messages - see above<br />
+  Changes to default settings - none<br />
+  Web browser being used - chrome for mac<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24925"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-02 15:58:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Comment out the following line in your version of the file, and tell me if that helps<br />
+<br />
+Line 10 in<br />
+install/include/common.inc.php<br />
+<br />
+https://github.com/atutor/ATutor/blob/master/install/include/common.inc.php#L10</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24928"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-02 16:59:45</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Warning: mysql_query() expects parameter 2 to be resource, null given in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 170<br />
+<br />
+Warning: mysql_affected_rows() expects parameter 1 to be resource, null given in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 182<br />
+<br />
+Warning: mysql_query() expects parameter 2 to be resource, null given in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 170<br />
+<br />
+Warning: mysql_affected_rows() expects parameter 1 to be resource, null given in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 182<br />
+<br />
+<br />
+=======<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24932"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-02 17:43:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Now try commenting out lines 460 to 474 in<br />
+<br />
+include/install/install.inc.php<br />
+<br />
+see:<br />
+https://github.com/atutor/ATutor/blob/master/include/install/install.inc.php#L460-L474<br />
+<br />
+With and without <br />
+Line 10 in<br />
+install/include/common.inc.php<br />
+commented if necessary</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24937"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-02 22:29:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Thanks!  Install finally worked...<br />
+<br />
+But, now I get an error at the login page....<br />
+<br />
+http://www.fpreports.com/training/ATutor/login.php<br />
+<br />
+<br />
+Fatal error: Call to a member function addError() on a non-object in /home/fpreports/fpreports.com/training/ATutor/include/lib/mysql_connect.inc.php on line 167<br />
+<br />
+<br />
+-<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24938"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-02 22:44:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Ahhh, I lied.  It appeared to go thru the process, but nothing was written to the database.  Now I can't even reinstall it, so I have to restart the process.<br />
+<br />
+Guilio<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24943"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 09:01:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Where did you download ATutor from?<br />
+<br />
+And, when you uploaded to the server, did you upload the bundle and unzip on the server, or unzip first and upload file by file?<br />
+<br />
+Are you hosting on provider (ISP), if so which one?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Ahhh, I lied.  It appeared to go thru the process, but nothing was written to the database.  Now I can't even reinstall it, so I have to restart the process.<br />
+<br />
+Guilio<br />
+<br />
+<br />
+If you are asking for help,...<br />
+[op]forums/view.php?fid=7;pid=24869;page=1#24938[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24944"></a>
+		<div class="forum-post-author">
+			<label class="title">Benie1234</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 09:11:38</p>
+            </div>
+            <div class="postheader"><h3>my Thread?</h3></div>
+				
+			<div class="body">
+				<p>As this was my thread I have still not received an answer?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24945"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 09:31:35</p>
+            </div>
+            <div class="postheader"><h3>Re: my Thread?</h3></div>
+				
+			<div class="body">
+				<p>@Benie1234 - sorry, didn't mean to hijack your thread...  i thought his advice might help you too as it seemed like we had the same issue.<br />
+<br />
+@greg - i guess you didn't read my original post regarding my hosting.  it is hosted on a shared server at dreamhost.com.  it uploaded the compressed file, then unzipped it through my shell account<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24946"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 09:49:43</p>
+            </div>
+            <div class="postheader"><h3>Re: my Thread?</h3></div>
+				
+			<div class="body">
+				<p>And ggaspero where did you download ATutor from?<br />
+<br />
+I'm trying to eliminate variables, to try and track down which one is causing this issue.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24947"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 09:50:14</p>
+            </div>
+            <div class="postheader"><h3>Re: my Thread?</h3></div>
+				
+			<div class="body">
+				<p>@Benie1234 if you behave, we'll try to help you too. Misbehave and you'll be banned.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+As this was my thread I have still not received an answer?<br />
+[op]forums/view.php?fid=7;pid=24869;page=2#24944[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24948"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 10:21:09</p>
+            </div>
+            <div class="postheader"><h3>Re: my Thread?</h3></div>
+				
+			<div class="body">
+				<p>Downloaded directly from your site...<br />
+<br />
+http://www.atutor.ca/atutor/download.php<br />
+<br />
+<br />
+<br />
+<br />
+====<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24949"></a>
+		<div class="forum-post-author">
+			<label class="title">Benie1234</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 10:35:58</p>
+            </div>
+            <div class="postheader"><h3>Re: my Thread?</h3></div>
+				
+			<div class="body">
+				<p>I only stated that this problem is not confined to a couple of posts on here.<br />
+<br />
+the support desk at UK2.net and godaddy both have records from others who have had problems. Thy refer to a previosu thread on here which was also not answered.<br />
+<br />
+I know how hard it is to sort out issues but trying to blame users who have many years experience with SQL-databases is not helpful<br />
+<br />
+Regards<br />
+<br />
+Bernie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24950"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 10:52:54</p>
+            </div>
+            <div class="postheader"><h3>Re: my Thread?</h3></div>
+				
+			<div class="body">
+				<p>Blame users?  Let be constructive here, instead of dis'ing the people trying to help. <br />
+<br />
+As I said, this is going to require someone who experiencing the problem to help resolve. There's not a lot we can do if we can't reproduce the problem.<br />
+<br />
+If you have many years of SQL-database experience, then help us identify where the problem is occurring.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24953"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-03 13:30:00</p>
+            </div>
+            <div class="postheader"><h3>Re: my Thread?</h3></div>
+				
+			<div class="body">
+				<p>So, at this point, I went into the include/install/db directory and opened the atutor_install.sql file, copied the file and created the tables thru phpMyAdmin.  I now have all the tables setup this way.  <br />
+<br />
+Not sure if that will help or not.<br />
+<br />
+Guilio<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24959"></a>
+		<div class="forum-post-author">
+			<label class="title">Benie1234</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-04 02:36:15</p>
+            </div>
+            <div class="postheader"><h3>hand installed</h3></div>
+				
+			<div class="body">
+				<p>Hi Guilio,<br />
+<br />
+Yes I got it hand installed as well.........I guess this proves there is no problems with our set ups the problem exists in the install PHP codes.....It looks like the way its making calls to the sql server is getting rejected.<br />
+<br />
+You need to check after you hand install that the datbase is protected and not open to SQL injection attack. My guess so far is that they have made recent modifications to protect against this and this may be the root of the issue.<br />
+<br />
+good luck with using atutor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24961"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-04 13:47:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>I know you've managed to install manually. Could you test the bundle linked below on the server that was producing the error to see if it installs. Let me know how it goes.<br />
+<br />
+http://atutor.ca/atutor/files/ATutor-2.2-test.tar.gz<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Ahhh, I lied.  It appeared to go thru the process, but nothing was written to the database.  Now I can't even reinstall it, so I have to restart the process.<br />
+<br />
+Guilio<br />
+[op]forums/view.php?fid=7;pid=24869;page=1#24938[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24967"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-04 14:17:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Greg<br />
+<br />
+That worked!  And, I was even able to log in after the install!<br />
+<br />
+It shows I have 4 patches available upon logging in as the ADMIN.<br />
+<br />
+Thanks!<br />
+Guilio<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24972"></a>
+		<div class="forum-post-author">
+			<label class="title">ggaspero</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-04 18:12:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Got it installed, added the patches, then went to ADD MODULES, and got this error:<br />
+<br />
+Warning: in_array() expects parameter 2 to be array, string given in /home/fpreports/fpreports.com/training/themes/default/admin/modules/install_modules.tmpl.php on line 134<br />
+<br />
+42 times....<br />
+<br />
+Guilio</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24974"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-05 10:09:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>We've noted the issue, and will investigate soon.<br />
+<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=5542<br />
+<br />
+<br />
+Please start a new thread when the topic changes.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24990"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-12 12:07:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot install Atutor past step 2</h3></div>
+				
+			<div class="body">
+				<p>Patch 0005 for ATutor 2.2 has been posted to resolve the long list of error messages. Use the admin's Patcher to apply the patch.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Got it installed, added the patches, then went to ADD MODULES, and got this error:<br />
+<br />
+Warning: in_array() expects parameter 2 to be array, string given in /home/fpreports/fpreports.com/training/themes...<br />
+[op]forums/view.php?fid=7;pid=24869;page=2#24972[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

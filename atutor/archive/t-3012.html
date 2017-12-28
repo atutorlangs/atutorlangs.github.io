@@ -1,0 +1,303 @@
+---
+ title: Problem with Package Import
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem with Package Import</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="3012"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-08 09:11:38</p>
+            </div>
+            <div class="postheader"><h3>Problem with Package Import</h3></div>
+				
+			<div class="body">
+				<p>Hello, <br />
+I have installed ATutor v1.4 on:<br />
+<br />
+- Windows XP<br />
+- Apache 1.3.27<br />
+- PHP 4.3.3<br />
+- MySQL 4.0.15<br />
+<br />
+When I create a course in ATutor, then export it to SCORM and finally import it again to ATutor, all work OK. But, many times when I tried to import some SCORM PIF files that have not been created in ATutor, but in some SCORM editors as Reload Editor or Microsoft LRN or just manually, ATutor seems to ignore the structure of the content represented in the "organizations" section of the manifest file and intead of a hierarchical structure it presents a simple serial structure. <br />
+<br />
+For example, suppose that in your source PIF you have a structure like this:<br />
+<br />
+1.Introduction to MPEG7<br />
+     1.1 Introduction<br />
+     1.2 Training Material <br />
+     1.3 Exercises<br />
+2. Advanced Concepts<br />
+<br />
+After importing the package, ATutor presents the above structure as:<br />
+<br />
+1.Introduction to MPEG7<br />
+2.Introduction<br />
+3. Training Material <br />
+4. Exercises<br />
+5. Advanced Concepts<br />
+<br />
+I experimented a lot with the manifest file and imported the package again and again but the problem remains.<br />
+<br />
+Have you ever heard about this problem or have you any idea about what's happen?<br />
+<br />
+Thank you in advance,<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3015"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-08 11:06:24</p>
+            </div>
+            <div class="postheader"><h3>The Old specification</h3></div>
+				
+			<div class="body">
+				<p>I suspect the packages you are referring to are using an older standard, or have not been correctly constructed. You will not be able to import LRN content because it uses an older specification to construct packages. Reload content should import okay though. <br />
+<br />
+We'd need to examine one the packages to tell you what the problem is.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3020"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-08 14:43:14</p>
+            </div>
+            <div class="postheader"><h3>Package example</h3></div>
+				
+			<div class="body">
+				<p>Dear greg,<br />
+Thank you for your response. I prepared a small sample SCORM package which is valid according to the SCORM specifications (manifest validity tested in XML Spy), but when I import it to ATutor the above problem occurs. In addition some items of the organization do not appear in the ATutor structure.<br />
+<br />
+You can download the package from: http://knosos.music.tuc.gr/xenia_yyy6.zip <br />
+<br />
+Thank you,<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3021"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-08 17:23:07</p>
+            </div>
+            <div class="postheader"><h3>Missing indentifierref's ?</h3></div>
+				
+			<div class="body">
+				<p>Does XML Spy validate XML, or can it also validate against specific schemas (IMS CP 1.1.2 etc.). I'd question the validity of the manifest against the IMS CP 1.1.2/SCORM 1.2, though I haven't checked. <br />
+<br />
+There is an empty metadata section at the top of the manifest, which does not seem right. Compare an ATutor manifest with the one's you are gernerating<br />
+<br />
+It also looks like the pages with no content are not being handled correctly.  ATutor does not know what to do with items that have no identifierref to associate it with a piece of content, otherwise it handles heirarchical content as it should.<br />
+<br />
+I'll add investigating this to the todo list (unless you'd care to do it). The question is Does the LMS need to assume empty content when there is no identifierref and generate a place holder for content, or does the content packager need to generate a place holder for an empty page when it creates the package. <br />
+<br />
+Also keep in mind also that ATutor does not support SCO's, which you can find discussed in the Community Discussions forum.<br />
+<br />
+BTW, what did you generate your package with to produce an ATutor header in the imsmanifest.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3024"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-09 07:16:14</p>
+            </div>
+            <div class="postheader"><h3>The real problem</h3></div>
+				
+			<div class="body">
+				<p>Dear greg,<br />
+<br />
+Regarding your question:<br />
+[i]Does XML Spy validate XML, or can it also validate against specific schemas (IMS CP 1.1.2 etc.). I'd question the validity of the manifest against the IMS CP 1.1.2/SCORM 1.2, though I haven't checked. [/i]<br />
+XML Spy checks not only if an XML document is well formed but also if it is valid according to a specific XML Schema.<br />
+<br />
+The empty metadata which is optional does not seem to be the problem. In a first version of this package I didn't use it and the problem remained. In another version I just did a copy-paste of the metadata section of a ATutor-generated manifest file, but the result was the same. <br />
+<br />
+So, I think that the real problem is that -as you already said- ATutor does not know what to do with items that have no identifierref to associate it with a piece of content. But this is not right because it is not mandatory for an item to point to a resource. In this case it is just a container.<br />
+<br />
+According to the version 1.2 of SCORM, container-items can optionally point to a resource. I include some words of the SCORM 1.2 CAM Specification which mention this point:<br />
+<br />
+[i]"...in the older SCORM CSF only leaf nodes (lowest items in a tree containing no other item) were permitted to point to SCOs. Now any level can optionally point to a learning resource."[/i]<br />
+<br />
+However, in the latest version of SCORM (SCORM 2004) the old fashion (before SCORM 1.2) comes back. Here, only leaf elements can (and to be precise -must) point to resources, which in my opinion is better because it solves many problems. Here is the corresponding fragment of the SCORM 2004 CAM Specification:<br />
+<br />
+[i]"The &lt;item> element can act as a container of other &lt;item> elements or as a leaf node. If an &lt;item> is a leaf node, then the &lt;item> shall reference a &lt;resource> element. If an &lt;item> element is a parent element, the &lt;item> itself is not permitted to reference a &lt;resource> element (only leaf &lt;item> elements are permitted to reference resources)."[/i]<br />
+<br />
+I think that the above is also the answer to your question: <br />
+[i]The question is Does the LMS need to assume empty content when there is no identifierref and generate a place holder for content, or does the content packager need to generate a place holder for an empty page when it creates the package. [/i]<br />
+<br />
+When the LMS encounters an item which does not point anywhere there is no need to generate a place holder for content. Morever, the content packager does not need to generate a place holder for an empty page when it creates the package. Before generating the content package, ATutor should check if an item which is container point to any page (which of course is not empty) and then and only then should generate a place holder for the page. <br />
+<br />
+To conclude, I think that an updated version of ATutor should fix this point. <br />
+<br />
+[i]Also keep in mind also that ATutor does not support SCO's, which you can find discussed in the Community Discussions forum.[/i]<br />
+<br />
+I know that ATutor does not support SCOs. But when a SCORM package get imported to ATutor, ATutor can only ignore the CMI part of SCOs and generate the hierarchical structure normally. Most SCORM viewers (which are not LMSs) do that. I am not sure but I think that ATutor does the same.  <br />
+<br />
+Best regards,<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3025"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-09 07:40:21</p>
+            </div>
+            <div class="postheader"><h3>Where is the to-do list?</h3></div>
+				
+			<div class="body">
+				<p>Dear greg,<br />
+<br />
+I forgot to tell you that I will care about adding this point to the to-do list. But I don't know where is the to-do list and which forum is the most appropriate for this. ATutor Bug Reports, ATutor Feature Requests, or...<br />
+<br />
+Could you please inform me about that?<br />
+<br />
+Thanks.<br />
+<br />
+Best regards,<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3030"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-09 16:48:26</p>
+            </div>
+            <div class="postheader"><h3>Bug Report</h3></div>
+				
+			<div class="body">
+				<p>The todo list is our internal list of thing that we need to address. You can not add to it. You can report the bug to the bug reports forum, including a link to this thread.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Dear greg,<br />
+<br />
+I forgot to tell you that I will care about adding this point to the to-do list. But I don't know where is the to-do list and which forum is the most appropriate for this. ATutor Bug Re...<br />
+[op]forums/view.php?fid=7;pid=3012;page=1#3025[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3047"></a>
+		<div class="forum-post-author">
+			<label class="title">xenia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-11 04:59:36</p>
+            </div>
+            <div class="postheader"><h3>Bug report added to the Bug Reports Forum</h3></div>
+				
+			<div class="body">
+				<p>Dear greg,<br />
+<br />
+Thank you for the information. I added the bug description in the Bug Reports Forum and also a link to this thread.<br />
+<br />
+In the new thread in the Bug Reports Forum (http://atutor.ca/view/3/3046/1.html) I give also a more complete solution to the problem and to your previous question:<br />
+[i]"The question is Does the LMS need to assume empty content when there is no identifierref and generate a place holder for content, or does the content packager need to generate a place holder for an empty page when it creates the package."[/i] <br />
+<br />
+Best regards,<br />
+Polyxeni Arapi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3052"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-11 19:51:56</p>
+            </div>
+            <div class="postheader"><h3>SCORM 2004+ soon</h3></div>
+				
+			<div class="body">
+				<p>What did you create the above content package with?<br />
+<br />
+We will need to take a closer look at your "...only leaf &lt;item> elements are permitted to reference resources" quote when we begin work on the next round of SCORM development, probably early in the new year when the next version of SCORM is released (or shortly before).<br />
+<br />
+I've tried to draw the same meaning out off the IMS Content Packaging 1.1.2 spec, which SCORM 1.2 was based on, but there does not seem to be any mention of items as parent node not being allowed to have attached resources. It seems to suggest that parent nodes can have identifierrefs:<br />
+<br />
+"An &lt;item> always has an identifier, and is linked to resources through an "identifierref" attribute. "<br />
+<br />
+http://www.imsglobal.org/content/packaging/cpv1p1p2/imscp_bestv1p1p2.html#1153641<br />
+http://www.imsglobal.org/content/packaging/cpv1p1p2/imscp_bindv1p1p2.html#1147970<br />
+<br />
+IMS CP 1.1.3 says:<br />
+"If no identifierref is supplied, it is assumed that there is no content associated with this entry in the organization. "<br />
+<br />
+...which might be interpreted as meaning ignore the item if it has no content. <br />
+<br />
+http://www.imsglobal.org/content/packaging/cpv1p1p3/imscp_bestv1p1p3.html#1521855<br />
+http://www.imsglobal.org/content/packaging/cpv1p1p3/imscp_bindv1p1p3.html#1520662<br />
+<br />
+We'll add a function for now to recognize items with no resources/identifierrefs and create an empty content page so the hierarchy is maintained. <br />
+<br />
+We'll have to figure out how to accomodate the resource to leaf only rule if its still around in the next SCORM spec. On a first look at this rule, it doesn't seem compatible with IMS CP</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

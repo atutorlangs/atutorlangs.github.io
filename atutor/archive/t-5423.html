@@ -1,0 +1,101 @@
+---
+ title: Adding new course side menu
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Adding new course side menu</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5423"></a>
+		<div class="forum-post-author">
+			<label class="title">nixel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-10 17:45:46</p>
+            </div>
+            <div class="postheader"><h3>Adding new course side menu</h3></div>
+				
+			<div class="body">
+				<p>In Atutor 1.5 I would like to add a new side bar menu on a courses page say a site map.  I can go and create a new file called side_menu.inc.php in /include/html/dropdowns/<br />
+<br />
+However I can not get it to show up on the side of the courses pages.  I cannot find any documentation on the side_menu variable in footer.tmpl.php<br />
+<br />
+How can I add a side whatever I want?<br />
+<br />
+Does it get put in the database?  Do I need to edit some array somewhere?<br />
+<br />
+Oh yeah, this is a global change.<br />
+<br />
+Let me know.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5428"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-11 08:10:25</p>
+            </div>
+            <div class="postheader"><h3>menu stack</h3></div>
+				
+			<div class="body">
+				<p>Add it to the $_stacks array in include/lib/constants.inc.php then locate your new module in include/html/dropdowns/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5431"></a>
+		<div class="forum-post-author">
+			<label class="title">nixel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-11 13:39:20</p>
+            </div>
+            <div class="postheader"><h3>menu stack additon</h3></div>
+				
+			<div class="body">
+				<p>Well that's great but you run an intersect on that array in include/footer.tmpl.php which kick out the new one.  How is the side_menu data stored.  Is it in the database?  Is it a configurable setting?  Is it just in a file?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5433"></a>
+		<div class="forum-post-author">
+			<label class="title">nixel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-11 15:24:21</p>
+            </div>
+            <div class="postheader"><h3>repurposing the home-links</h3></div>
+				
+			<div class="body">
+				<p>I am moving the home links to the right and filling the content area with something different.  However, I can only get the home-links to show up on the main course page.  For some reason $this->home_links goes out of scoop on say the forums page.<br />
+<br />
+What variable to I need to include in the menu.inc.php file that I have greated to make it work on every page?<br />
+<br />
+This is how I am calling it:<br />
+foreach ($this->home_links as $link)<br />
+     blah;</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

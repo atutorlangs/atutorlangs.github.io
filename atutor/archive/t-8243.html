@@ -1,0 +1,92 @@
+---
+ title: Uploaded html is truncated on ATcontenttext
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Uploaded html is truncated on ATcontenttext</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8243"></a>
+		<div class="forum-post-author">
+			<label class="title">degyves</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-15 14:21:54</p>
+            </div>
+            <div class="postheader"><h3>Uploaded html is truncated on ATcontenttext</h3></div>
+				
+			<div class="body">
+				<p>I have created a long html for the content. When I upload a long html content from a new course it is saved on column "text" on AT_content. I can check (by doing a select text from AT_conten where content_id=...) that my uploaded html has truncated some final part of the &lt;body> tag! It seems that ATutor removes the &lt;head>..&lt;/head> tags and preserves the text inside the &lt;body>..&lt;/body> tag but it seems that it has eaten the tail if it (about 200 lines of the &lt;body>, in fact). What can be the problem?<br />
+<br />
+My system:<br />
+<br />
+Debian Sarge Linux 3.1.<br />
+mysql  Ver 12.22 Distrib 4.0.16, for pc-linux (i686)<br />
+Apache/2.0.55 (Debian) mod_python/3.1.3 Python/2.3.5 PHP/4.4.2-1 mod_perl/2.0.2 Perl/v5.8.<br />
+<br />
+I have root user access to the remote server with the ATutor installed. <br />
+<br />
+Php-info url: http://148.204.74.44/ATutor/phpinfo.php<br />
+<br />
+The source page at: http://148.204.74.44/ATutor/source.html<br />
+The converted page, as found on AT_content.text: http://148.204.74.44/ATutor/dest.html<br />
+<br />
+I do not include the converted page as it is show on the course but I think it is enoug to put the dump of AT_content.text. <br />
+<br />
+But you can see it in the course:<br />
+http://148.204.74.44/ATutor/browse.php?cat=0&show_course=107#info<br />
+And the content is: <br />
+http://148.204.74.44/ATutor/content.php?cid=279<br />
+<br />
+If you see strange characters you can use UTF-8 as the encoding. I have not included it on the htmls to show these exactly as they were played.<br />
+<br />
+I hope you can guide me on a right way to solve this problem. If more information is needed i'll be happy to provide it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8246"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-15 16:47:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Uploaded html is truncated on AT_content.text</h3></div>
+				
+			<div class="body">
+				<p>In 1.5.2 only the content between the BODY elements is imported<br />
+<br />
+The HTML of the document you imported is not valid HTML. I'm guessing it was imported from a MSWord document. Word makes a great mess of HTML. Try searching google for "clean word html", you should come up with a bunch of tools that can be used to clean up your converted word documents.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8248"></a>
+		<div class="forum-post-author">
+			<label class="title">degyves</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-15 21:34:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Uploaded html is truncated on AT_content.text. Tool to solve it.</h3></div>
+				
+			<div class="body">
+				<p>Thanks! as you said, the problem was the word converter to html. I've found a free tool to do the job of clean the html code: if someone else needs it, it is in http://office.microsoft.com/Downloads/2000/Msohtmf2.aspx</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

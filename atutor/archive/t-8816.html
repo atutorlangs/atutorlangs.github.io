@@ -1,0 +1,248 @@
+---
+ title: what does getphp do
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>what does getphp do</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8816"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-18 06:45:18</p>
+            </div>
+            <div class="postheader"><h3>what does getphp do</h3></div>
+				
+			<div class="body">
+				<p>hi, one of our users is experiencing a strange problem. her browser crashes everytime she tries to open any documents linked to from content pages. this time it is a .ppt-file linked to, and the link reads something like /atutor/get.php/filename.ppt  <br />
+<br />
+this *only* happens when atutor uses get.php as part of the link. to debug we have tried putting the file elsewhere on the server (directly), and also putting the file in the file storage area. this creates no problems. <br />
+<br />
+I have no problems opening these files myself, so it's likely the problem is somewhere on her side. however, get.php has *something* to do with it.. also I've experienced some lag myself when getting at file though get.php compared to getting it directly.. <br />
+<br />
+so, what does get.php [b]do[/b], and what can it be that makes a browser tick? I believe this file wasn't used at all before version 1.5.. is it necessary, or could there be a better way to do it? <br />
+<br />
+<br />
+best, vjo</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8822"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-18 10:23:57</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>You could try removing the line:<br />
+$mime['ppt']   = array('application/vnd.ms-powerpoint',   'ppt');<br />
+<br />
+from include/lib/mime.inc.php<br />
+<br />
+and see if it has any affect.<br />
+<br />
+get.php has always been used.<br />
+<br />
+to disable it then place your content directory within the ATutor directory, which we do not recommend since it makes upgrading more difficult and the content less secure.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8823"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-19 05:08:15</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>removing that line causes IE to display the raw data of the file, not prompt you for download, so it's not an option. <br />
+<br />
+..so, any idea why this problem occurs when using get.php, and not when not using get.php?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8824"></a>
+		<div class="forum-post-author">
+			<label class="title">gundee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-19 12:36:23</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>Sounds like a client side browser issue.  What browser and platform is she on?  And is it patched and up to date?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8827"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-20 06:05:55</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>she uses Internet Explorer, but I do not know which windows version. it is a client side issue, but I don't know what causes it, so I still need to know exactly what get.php does which is different from just getting files directly from the server to debug it more! :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8830"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-20 08:31:40</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>get.php retrieves files from a content directory that is located outside an ATutor installation. <br />
+<br />
+If you move the content directory inside your ATutor installation (though its less secure) get.php will not be used. If you do this, adjust the path to the content directory in include/config.inc.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8832"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-20 09:18:11</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>I understand that, but as I say: it seems to me that using get.php (and the lib/mime.inc.php) has something to do with this problem we are experiencing. I might be wrong, but everything points in that direction. <br />
+<br />
+maybe it sends some headers that is different from the ones sent when files are retrieved directly via the server, which can cause a crash, or lag, on some browsers / browser settings? maybe something else.  does anyone have *any* idea what this can be?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8833"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-20 11:21:48</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>get.php has to send the headers itself. so it's possible that it's sending the wrong header, which is why I suggested changing the entry in the mime.inc.php file.<br />
+<br />
+you will have to use a utility to view the headers your server is sending vs the headers get.php is sending. lynx -head will do that for you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8835"></a>
+		<div class="forum-post-author">
+			<label class="title">gundee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-20 13:27:07</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>Since you are only seeing this w/one particular user and the problem has not been seen by others it is quite likely that this may be resulting from a browser bug.  So before I pulled out all my hair troubleshooting ATutor I would first ensure that she her IE is up to latest patch level, especially since MS has had mime issues with IE in the past.<br />
+<br />
+Another problem may be that there is a misbehaving proxy between her and your server that is not handling headers properly.  This happens more frequently than you might imagine.  Joel's recommendation will help diagnosing such problems, but you need to be on her computer to see what headers her browser is actually seeing.  If you have physical access to her machine I would boot from one of the Linux Live CD's and use wget to examine the headers.  You could also do this from your local machine and ascertain whether ATutor itself may have a header issue.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8836"></a>
+		<div class="forum-post-author">
+			<label class="title">gundee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-20 13:30:00</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>P.S.; Additionally, if she has admin rights you may want to walk her through installing Firefox and see if the problem persists.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8837"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-20 14:19:55</p>
+            </div>
+            <div class="postheader"><h3>Re: what does get.php do?</h3></div>
+				
+			<div class="body">
+				<p>Joel: removing that line just caused my browser to display the raw data. I could probably try it again while on the phone with the user, but not for long as this is our production server and people need to be able to download .ppt files..<br />
+<br />
+If this hasn't been reported before I'll just assume the problem is entirely on her side, and will try to get her to install Firefox as Gundee says. I do not have physical access to her machine so it's limited what I can do... Thanks all of you!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

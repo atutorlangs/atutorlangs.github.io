@@ -1,0 +1,131 @@
+---
+ title: Zero Sized Reply problem again
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Zero Sized Reply problem again</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8728"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-01 06:26:51</p>
+            </div>
+            <div class="postheader"><h3>Zero Sized Reply problem again</h3></div>
+				
+			<div class="body">
+				<p>I've had this problem before, but then solved it: http://www.atutor.ca/view/7/5812/1.html<br />
+<br />
+However I am experiencing the same when trying to make a backup of a very large course (420 mb, due to many videos all in several qualities) <br />
+<br />
+IT-dept here gave me the following answer on why this is happening, and a possible solution:<br />
+<br />
+[blue]<br />
+Somewhere a time out is triggered when the files takes too long time to process. Typically a timeout in Squid: it complaines about not getting any answer (zero sized reply) as the job isn't done yet, and therefora hasn't sent an answer. <br />
+<br />
+A typical way to solve this is to start to send the answer before the job is done: a "drip" of progress that surpasses the time out in Squid. <br />
+<br />
+A workaround is to increase the time out. The solution would be to alter the php code so to send data back to Squid before the entire operation is done<br />
+<br />
+BTW: there are dedicated HTTP facilities for operations that takes a long time to finish, alternatively you can return a SGML comment &lt;!-- --> including a whitespace or a period at given intervalls.  [/blue] <br />
+<br />
+(very quickly translated) <br />
+<br />
+any thought or ideas on how to solve this in the Atutor code?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8739"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-04 09:36:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Zero Sized Reply problem again</h3></div>
+				
+			<div class="body">
+				<p>Try resetting default_socket_timeout in php.ini<br />
+<br />
+and maybe:<br />
+<br />
+mysql.connect_timeout</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8753"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-06 10:15:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Zero Sized Reply problem again</h3></div>
+				
+			<div class="body">
+				<p>Sending a response to the server will only work if the output is not buffered, which isn't likely.<br />
+<br />
+Also, regardless of how much time you let PHP execute for, the process will still die because it'll reach PHP's memory limit. Having PHP use up 420 MB of memory is not recommended. (The default limit is 8MB).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8763"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-08 08:35:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Zero Sized Reply problem again</h3></div>
+				
+			<div class="body">
+				<p>ok, I guess this is likely to cause problems for many users when wanting to back up courses, though. <br />
+<br />
+ what do you suggest, backing up courses without the videos, or maybe not upload video in the file manager but include them from somewhere else..?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8766"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-08 09:05:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Zero Sized Reply problem again</h3></div>
+				
+			<div class="body">
+				<p>Locating video content on a separate system intended to serve multimedia, with enough memory to process very large files, and potentially stream those files, is probably a better choice than containing this content within a course.  Link the videos into a content page from outside ATutor. <br />
+<br />
+While you can load your video into the file manager, as you have experienced, generating backups for courses with large amounts of video content is risky.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

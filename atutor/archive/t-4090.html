@@ -1,0 +1,346 @@
+---
+ title: failure to install language pack
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>failure to install language pack</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4090"></a>
+		<div class="forum-post-author">
+			<label class="title">steve</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 01:03:21</p>
+            </div>
+            <div class="postheader"><h3>failure to install language pack</h3></div>
+				
+			<div class="body">
+				<p>Upon attempting to install a language pack for Spanish, I receive the error message:<br />
+<br />
+Fatal error: Call to undefined function: xml_parser_create() in /var/www/html/ATutor/include/classes/Language/LanguageParser.class.php on line 32<br />
+<br />
+Things to describe: <br />
+  I am using Mandrake 9.2 (updated)<br />
+  ATutor version is the present version 1.4.2<br />
+ php - ver. 4.3.3<br />
+  mysql - ver. 4.0.15<br />
+  Apache webserver ver. 2.0.47 (that was installed with my operating system but I did update it lately and wasn't sure about changing it to 1.3 though I would have like to do so.)<br />
+ There have been no changes from the default setting of php, mysql, or Apache.<br />
+I have used Firebird (updated) and IE6 <br />
+I am hoping to get this solved because I would like to use ATutor to place courses on the Web in Spanish.<br />
+Thanks for any help that you might be able to give me!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4091"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 09:35:28</p>
+            </div>
+            <div class="postheader"><h3>Use 1.4.3</h3></div>
+				
+			<div class="body">
+				<p>Use ATutor 1.4.3, and Apache 1.3 and see if that helps.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4092"></a>
+		<div class="forum-post-author">
+			<label class="title">1stop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 11:25:44</p>
+            </div>
+            <div class="postheader"><h3>admin bug</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+<br />
+I completely re-installed and began from the beginning in case there was something I did.  When I went to courses to change property-got the blank screen which made anything else I returned to click on blank<br />
+<br />
+<br />
+I then used the courses file in the re-installion and made the changes on the appropriate lines as this file only went to line 53---that gave me a parse error  for line 21<br />
+<br />
+I then took the fresh file you sent yesterday and made the changes on line 114 to 116 copying from the forum.---same old blank screen again-----<br />
+<br />
+By the way I am using ATutor 1.4.3 and the web provider documentation to me says they are using Apache 1.3<br />
+<br />
+Since I am not a programmer this is the limit of my experimentation.<br />
+<br />
+Have I been the only one to have this bug.  <br />
+This seems like a great program and a minor bug.<br />
+<br />
+Help Help <br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4093"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 11:50:34</p>
+            </div>
+            <div class="postheader"><h3>Keep trying</h3></div>
+				
+			<div class="body">
+				<p>[i]I then used the courses file in the re-installion and made the changes on the appropriate lines as this file only went to line 53---that gave me a parse error for line 21[/i]<br />
+<br />
+It should have 149 lines. This fact suggests browser problems. Use a different browser when you are installing ATutor.<br />
+<br />
+[i]Since I am not a programmer this is the limit of my experimentation.[/i]<br />
+<br />
+You do not need to be a programmer. Experiment by example, using the surrounding code to guide you. You should know some basic HTML if you are intending on creating content, or at least know how to read it. Without it you'll be limited in the content you can create in ATutor. Knowing HTML will also help you understand what you're looking at when you are viewing and editing ATutor source code files.<br />
+<br />
+[i]Have I been the only one to have this bug.<br />
+This seems like a great program and a minor bug.[/i]<br />
+<br />
+Yes this problem has been previously noted, and the solution suggested fixed it.<br />
+<br />
+Also note that you should stick to a single thread, so all related information about a problem is kept together.  In the future, start your own thread on a topic, or find another thread on the topic and continue posting to it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4094"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 11:58:57</p>
+            </div>
+            <div class="postheader"><h3>128 lines</h3></div>
+				
+			<div class="body">
+				<p>Actually courses.php should have  128 lines in ATutor 1.4.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4097"></a>
+		<div class="forum-post-author">
+			<label class="title">1stop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 13:57:17</p>
+            </div>
+            <div class="postheader"><h3>admin bug</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+<br />
+This admin problem is still not corrected.<br />
+<br />
+I reviewed all the messages we have been sending and in a earlier one you stated<br />
+<br />
+Message from: greg<br />
+Subject:- Tracker specific<br />
+Message: The problem only occurs when you change the tracker settings.  <br />
+<br />
+This is not only when the problem occurs.  It is anytime I change anything in course properties, i get a blank screen when I--- SUBMIT----<br />
+<br />
+I don't know if it is a SUBMIT problem but it is not only a tracker problem and it occurs with any changes in course properties as the administrator.  This is the only place this is occurring.<br />
+<br />
+Again it is not only a tracker problem<br />
+<br />
+Thanks <br />
+<br />
+Linda<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4098"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 14:10:11</p>
+            </div>
+            <div class="postheader"><h3>Try register_globals off</h3></div>
+				
+			<div class="body">
+				<p>Make sure register_globals is turned off. See the tail end of the following thread for details<br />
+<br />
+http://www.atutor.ca/view/3/3525/1.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4099"></a>
+		<div class="forum-post-author">
+			<label class="title">1stop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 14:29:05</p>
+            </div>
+            <div class="postheader"><h3>admin bug</h3></div>
+				
+			<div class="body">
+				<p>Okay i am ready to try this but I need clarification<br />
+<br />
+I'm to create a file called<br />
+    .htaccess<br />
+?????what is it a txt, html or php???<br />
+<br />
+I am to simply put <br />
+<br />
+php_flag register_globals off<br />
+on a line in this file<br />
+<br />
+and put in the root directory<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4100"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 14:42:37</p>
+            </div>
+            <div class="postheader"><h3>Plain text file</h3></div>
+				
+			<div class="body">
+				<p>It's a plain text file with the filename .htaccess (no file extension)<br />
+<br />
+with one line in it as follows:<br />
+		<br />
+php_flag register_globals off<br />
+<br />
+Put it in the top directory of your ATutor installation</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4101"></a>
+		<div class="forum-post-author">
+			<label class="title">1stop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-26 15:08:22</p>
+            </div>
+            <div class="postheader"><h3>admin bug</h3></div>
+				
+			<div class="body">
+				<p>hi greg<br />
+halleujah (however it's spelled)<br />
+All is working<br />
+<br />
+Thank you for your patience with me<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

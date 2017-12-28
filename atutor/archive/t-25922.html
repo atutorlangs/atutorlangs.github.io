@@ -1,0 +1,65 @@
+---
+ title: Unable to log in as administrator
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Unable to log in as administrator</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25922"></a>
+		<div class="forum-post-author">
+			<label class="title">mobe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-07-31 14:31:00</p>
+            </div>
+            <div class="postheader"><h3>Unable to log in as administrator</h3></div>
+				
+			<div class="body">
+				<p>I've had atutor for a long time, and for the last year or so, I have not been able to log in as administrator. Since I did not make too many changes in my courses, I didn't need to. Now I need to adjust the file upload size, (I was not able to a couple of years ago, but would like to try again), I am not able to log in as admin. I use the admin log in name, and other emails I have used, but they do not go to the admin, even though I use the password reset.<br />
+Is there another way to log in as admin? I have about 50 courses I need to work on. Thanks.<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25924"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-08-01 09:03:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Unable to log in as administrator</h3></div>
+				
+			<div class="body">
+				<p>If you access the database you can find the administrators login name in the "admins" table. If you have phpMyAdmin available, you can create a new password through the database by editing the password field directly for the admin user, choosing "sha1" as the data type. When you save, sha1 will encrypt the password to match the encryption when you submit your password through the login form in ATutor.<br />
+<br />
+Regarding filesize, you can adjust the size in ATutor up to the maximum set in the php settings in 'post_max_size' and 'upload_max_filesize'. You may need to djust these settings as well, and restart the webserver to enable the new size. The default upload size is 2MB.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

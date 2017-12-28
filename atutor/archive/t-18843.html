@@ -1,0 +1,166 @@
+---
+ title: Gradebook not displaying external test scores
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Gradebook not displaying external test scores</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18843"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-07 18:27:52</p>
+            </div>
+            <div class="postheader"><h3>Gradebook not displaying external test scores</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 1.6.2 installed and external test scores are not being displayed on the student's gradebook.  I've done some testing and found that unless it's associated with an ATutor assignment, it doesn't display.<br />
+<br />
+Is this how it's supposed to be?  Things seem to be fine on the demo server.  See http://www.atutor.ca/atutor/demo/mods/_standard/gradebook/my_gradebook.php<br />
+<br />
+Is it a 1.6.2 vs. 1.6.3 issue?<br />
+<br />
+Please help, as I have students waiting to see scores.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18846"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 10:10:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook not displaying external test scores</h3></div>
+				
+			<div class="body">
+				<p>Hi, before importing external test scores, create an external test first at page "Add Tests/Assignments" -> section "Add External Assignments/Tests". The imported test scores must be linked with an external test or assignment.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18851"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 12:57:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook not displaying external test scores</h3></div>
+				
+			<div class="body">
+				<p>Hi Cindy.  Thanks for responding.<br />
+<br />
+I'm actually not importing external scores, just manually adding them via "Edit Marks".  But am I correct in understanding that for external marks to show up, they must be associated with an ATutor Assignment first?<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18852"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 13:00:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook not displaying external test scores</h3></div>
+				
+			<div class="body">
+				<p>Yes. Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18853"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 13:03:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook not displaying external test scores</h3></div>
+				
+			<div class="body">
+				<p>Ok.  One more kind of dumb question.......<br />
+<br />
+At some point along the way, I commented out the section to display the "Assignments" part of the Manage tab (or turned off some setting somewhere).  Now I can't figure out where to go to get it back.<br />
+<br />
+Any ideas?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18855"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 13:24:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook not displaying external test scores</h3></div>
+				
+			<div class="body">
+				<p>Is it<br />
+<br />
+mods/_standard/assignments/module.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18856"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-08 13:53:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Gradebook not displaying external test scores</h3></div>
+				
+			<div class="body">
+				<p>DOH!!!!!<br />
+<br />
+It was an admin setting.<br />
+<br />
+Thanks Cindy.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

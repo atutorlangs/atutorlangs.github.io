@@ -1,0 +1,116 @@
+---
+ title: Category Themes in 152 help needed
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Category Themes in 152 help needed</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6938"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-25 19:02:15</p>
+            </div>
+            <div class="postheader"><h3>Category Themes in 152 help needed</h3></div>
+				
+			<div class="body">
+				<p>Hello, I have enabled Theme Specific Categories but when I (as Admin) go to Courses and then Categories I se no options at all to decide a Theme for a specific category.<br />
+<br />
+Looking in the db AT_config, category_themes has the value 1 but I see no enable_category_themes like in the ATutor 1.5 db.<br />
+<br />
+Looking in the db AT_course_cats there is of course no values in the fields "theme" wich I think should be the dir_name of a specific theme.<br />
+<br />
+Thanks and regards<br />
+Jens<br />
+<br />
+Things to describe: <br />
+  operating system - Red Hat AS 4<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - 4.3.9<br />
+  version of mysq l - 4.1.12<br />
+  webserver & version - Apache 2.0.52<br />
+  changes to default settings - Theme Specific Categories (Enabled)<br />
+  web browser being used - FireFox and IE</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6939"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-26 06:33:40</p>
+            </div>
+            <div class="postheader"><h3>Forgot</h3></div>
+				
+			<div class="body">
+				<p>Forgot to tell that it is a fresh install.<br />
+<br />
+Any ideas on how to get the theme specific category working in 1.5.2?<br />
+<br />
+Thanks and regards <br />
+Jens</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6942"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-26 10:13:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Forgot</h3></div>
+				
+			<div class="body">
+				<p>edit ./include/vitals.inc.php<br />
+line 722:<br />
+define('AT_ENABLE_CATEGORY_THEMES', $_config['theme_categories']);<br />
+<br />
+Replace 'enable_category_themes' with 'theme_categories'.<br />
+<br />
+That should fix it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6951"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-26 17:24:06</p>
+            </div>
+            <div class="postheader"><h3>Thank you!</h3></div>
+				
+			<div class="body">
+				<p>It fixed it like you said :) <br />
+<br />
+Thanks a lot<br />
+<br />
+Jens</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

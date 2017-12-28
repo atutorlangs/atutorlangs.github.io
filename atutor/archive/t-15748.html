@@ -1,0 +1,271 @@
+---
+ title: Failed to initialize storage module
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Failed to initialize storage module</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15748"></a>
+		<div class="forum-post-author">
+			<label class="title">robinharris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 10:40:39</p>
+            </div>
+            <div class="postheader"><h3>Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>I was logged in a few days a go, I uploaded a file a txt file in file<br />
+ storage and I deleted it just to test it out. I went back and all seemed<br />
+ well. Today I went to log in and got this message:<br />
+ <br />
+ Warning: session_start() [function.session-start]: open_basedir<br />
+ restriction in effect. File(/home/sketch85/tmp) is not within the allowed<br />
+ path(s): (/home/taomrh21:/usr/lib/php:/usr/local/lib/php:/tmp) in<br />
+ /home/taomrh21/public_html/ATutor/include/vitals.inc.php on line 96<br />
+ <br />
+ Fatal error: session_start() [&lt;a<br />
+ href='function.session-start'function.session-start&lt;/a]: Failed to<br />
+ initialize storage module: files (path: ) in<br />
+ /home/taomrh21/public_html/ATutor/include/vitals.inc.php on line 96<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version - Recent version as of Sept. 29, 2008<br />
+  Patch #s applied - none per advise of installer<br />
+  ATutor theme name - default installation<br />
+  Operating system - Linux<br />
+  Apache version - 2.2.8<br />
+  PERL version - 5.8.8  <br />
+  PHP version - 5.2.5 with Zend Optimizer 3.3.0<br />
+  MySQL version - 4.1.22 <br />
+  Changes to default settings - none unless the Atutor changed them during installation<br />
+  Web browser being used - IE 7<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15749"></a>
+		<div class="forum-post-author">
+			<label class="title">robinharris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 10:42:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+Windows Vista OS</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15750"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 11:01:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>open_basedir is used in PHP to ensure all file operations are limited to the files under certain directory and its sub-tree.  <br />
+<br />
+Check your php.ini file and see if you have included the right folders.<br />
+<br />
+[quote]<br />
+File(/home/sketch85/tmp) is not within the allowed<br />
+path(s): (/home/taomrh21:/usr/lib/php:/usr/local/lib/php:/tmp)<br />
+[/quote]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15751"></a>
+		<div class="forum-post-author">
+			<label class="title">robinharris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 11:50:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>Am i looking for a file called "php.ini" ... where do I look. I see a folder called php but I have not located any such file.<br />
+<br />
+Thanks,<br />
+Robin</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15752"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 12:06:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>Your php.ini could possibly be in /usr/local/php/etc/<br />
+<br />
+Inside that file, look for 'open_basedir =', and add <br />
+<br />
+:/home/sketch85/tmp<br />
+<br />
+to the end of <br />
+<br />
+/home/taomrh21:/usr/lib/php:/usr/local/lib/php:/tmp<br />
+<br />
+so then it will be something like this:<br />
+open_basedir = /home/taomrh21:/usr/lib/php:/usr/local/lib/php:/tmp:/home/sketch85/tmp<br />
+<br />
+<br />
+If you do not have permission to do this, please contact your host.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15753"></a>
+		<div class="forum-post-author">
+			<label class="title">robinharris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 15:25:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>I contacted my hosting provider and this is there response (below). How do I implement a work-around.<br />
+<br />
+Keep all the directories within your public html folder usually works Robin.<br />
+It really depends a lot on the script.  Whomever you purchased the script from should know the work around.<br />
+It is a fairly common issue and most scripts should be made or have workarounds for them already.<br />
+As I remember this is mostly solved keeping your folders within a directory that doesn't reach out of it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15754"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 15:57:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>What's the session.save_path in your php.ini?<br />
+<br />
+If it is '/home/sketch85/tmp', can you ask your host if there is any particular reason why it isn't '/home/taomrh21/tmp'?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15755"></a>
+		<div class="forum-post-author">
+			<label class="title">robinharris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-17 17:10:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>Here is the hosts providers response:<br />
+The location is standard..........  /tmp<br />
+<br />
+<br />
+~Robin</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15761"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-18 11:05:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Failed to initialize storage module</h3></div>
+				
+			<div class="body">
+				<p>Hello Robin,<br />
+<br />
+Judging from the fact that your system was working fine a few days ago, and you haven't changed the code from ATutor, it seems to me that it could very well be a server setting problem instead of a client application problem.  <br />
+<br />
+I tried to reproduce this error on my local system but I have no problem using the open_basedir variable.  <br />
+<br />
+By the error you had that is caused by the session_start(), it seems to me that ATutor is blocked off from saving a file into <br />
+/home/sketch85/tmp<br />
+<br />
+However, open_basedir only includes the following folders (notice sketch85 is not in it):<br />
+/home/taomrh21<br />
+/usr/lib/php<br />
+/usr/local/lib/php<br />
+/tmp<br />
+<br />
+(You may want to ask the host why are there 2 different user accounts - sketch85 and taomrh21.  Normally, I would think that it should be /home/taomrh21/tmp instead of /home/sketch85/tmp, but I am not too sure how your host has set the server up...)<br />
+<br />
+At this time, ATutor doesn't have the ability to allow users to change the location of the tmp/ folder.  These have to be set via the server side.  ATutor by defaults, writes to the directory defined in your php.ini.  Such as the <br />
+upload_tmp_dir = "xxxxxxxxxxx"<br />
+session.save_path = "xxxxxxxxxxx"<br />
+So you may want to check these paths and make sure they are writable.  <br />
+<br />
+I hope these helps.<br />
+<br />
+<br />
+-Harris</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

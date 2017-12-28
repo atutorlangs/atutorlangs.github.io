@@ -1,0 +1,92 @@
+---
+ title: Warning when going to enrollment as instructor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Warning when going to enrollment as instructor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="19909"></a>
+		<div class="forum-post-author">
+			<label class="title">talanceatutor</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-13 12:00:00</p>
+            </div>
+            <div class="postheader"><h3>Warning when going to enrollment as instructor</h3></div>
+				
+			<div class="body">
+				<p>As an instructor when going to Manage -> Enrollment and get warning message and no enrolled members are listed.<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/athddi/public_html/include/vitals.inc.php on line 1233<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/athddi/public_html/include/html/enrollment.inc.php on line 207<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/athddi/public_html/include/html/enrollment.inc.php on line 207<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/athddi/public_html/include/html/enrollment.inc.php on line 207<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/athddi/public_html/include/html/enrollment.inc.php on line 207<br />
+<br />
+This on a fresh install of Atutor 1.6.4. I thought at first it was to do with the import of the course content, but the same error occurs on a new course created from the fresh install.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Centos<br />
+  ATutor version - 1.6.4<br />
+  Patch #s applied - up to 7<br />
+  ATutor theme name - default<br />
+  PHP version - 5<br />
+  MySQL version - 5 <br />
+  Webserver & version - Cpanel::Easy::Apache v3.2.0 rev4199<br />
+<br />
+  Copies of error messages - <br />
+  Changes to default settings - Fresh install -did a course import from previous install.<br />
+  Web browser being used - firefox<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19910"></a>
+		<div class="forum-post-author">
+			<label class="title">talanceatutor</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-13 12:11:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Warning when going to enrollment as instructor</h3></div>
+				
+			<div class="body">
+				<p>I should also mention that the error does not occur when logged in as administrator and the list of enrolled users is populated too.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19911"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-13 13:49:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Warning when going to enrollment as instructor</h3></div>
+				
+			<div class="body">
+				<p>Patch #8 has now been posted to fix this problem. Use Patcher to install it.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

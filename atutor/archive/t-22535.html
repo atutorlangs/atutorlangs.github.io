@@ -1,0 +1,259 @@
+---
+ title: Protecting files that link to unreleased content
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Protecting files that link to unreleased content</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22535"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-14 14:25:00</p>
+            </div>
+            <div class="postheader"><h3>Protecting files that link to unreleased content</h3></div>
+				
+			<div class="body">
+				<p>Here's the situation I'm hoping to solve.  Let's say I have content items called "Unit 1 Test", "Unit 2 Test", etc.  In these content pages, there is a link to a .pdf of the actual test (unit_1_test.pdf).  <br />
+<br />
+Now, if Unit 2 Test isn't open yet, the savvy student could simply go to the Unit 1 Test content page, click the link for the .pdf and replace "unit_1_test.pdf" with "unit_2_test.pdf" to get access to the test before it's meant to be available.<br />
+<br />
+So, I thought about doing something like this in the get.php file...<br />
+<br />
+[php]<br />
+$referer = $_SERVER['HTTP_REFERER'];<br />
+<br />
+if ($referer == 'http://ATutor.mydomain.com/go.php/' . $_SESSION['course_id'] . '/content.php/cid/***')<br />
+{<br />
+do all the rest of the stuff in get.php....<br />
+[/php]<br />
+<br />
+The goal is to say that if you didn't come from a content page, then we're not going to let you in.<br />
+<br />
+Of course one problem is the *** which I don't know how to deal with.  I'm trying to have the *** say "any content page", but I'm not sure how to do that.<br />
+<br />
+<br />
+So, thoughts on my plan overall or perhaps a better way to approach this problem?<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22536"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-14 14:57:15</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>try <br />
+[php]<br />
+if(!$_GET['cid']){<br />
+<br />
+do something<br />
+<br />
+}<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22537"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-14 16:38:11</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the tip Greg.  Do you see any adverse effects in other areas from doing it this way?  <br />
+<br />
+Essentially, is get.php involved in anything else other than retrieving files in the content dir.?  Would this effect File Storage, Profile pics., etc.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22538"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-14 19:43:15</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Well, I tried putting your code at the top of get.php and it didn't work.  <br />
+<br />
+I actually put an else with it that, if triggered, would echo "fail" and it said fail under all conditions.<br />
+<br />
+Any other ideas?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22546"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-17 17:03:53</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>No other ideas at the moment. I'm sure it can be done.<br />
+<br />
+If Cindy is monitoring, perhaps she can offer a suggestion.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22547"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-18 12:35:04</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>The direct modification on get.php to include the checking on "cid" raises a warning on me that it  would likely affect other ATutor functionality where get.php is used to fetch file content.<br />
+<br />
+A relatively safe and proper fix is, reinforce the verification in get.php along with the parent caller in this special case that is the pre-test or post-test.<br />
+<br />
+One solution off the top of my head is to send in extra GET arguments to tell get.php,<br />
+<br />
+1. the request is from a test<br />
+2. if the request is from a test, check the sent-along parameter to verify the permission. The parameter could be a token that's generated for the student once he/she satisfies the criteria of viewing pdf or other information that makes sense.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22548"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-18 22:19:59</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Cindy,<br />
+<br />
+I'm sure your suggestion is good, I just don't understand it or know how to implement it.  I'm very much a novice at PHP.<br />
+<br />
+Greg: Do you think this is a feature that ATutor would put into a future release?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22552"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-20 09:20:17</p>
+            </div>
+            <div class="postheader"><h3>Re: "Protecting" files that link to unreleased content</h3></div>
+				
+			<div class="body">
+				<p>This seems like it would be a good feature to add. You can add it to the tracker and we'll see what we could do about getting this into a future version.<br />
+<br />
+http://atutor.ca/atutor/mantis<br />
+<br />
+It might get added faster though if you're able to find a programmer to make the adjustments, then submit them through GitHub. We have a lot of other priorities right now, so it will likely be a while before we can get to it.<br />
+<br />
+https://github.com/atutor/ATutor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22554"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-10-20 09:59:32</p>
+            </div>
+            <div class="postheader"><h3>Re:</h3></div>
+				
+			<div class="body">
+				<p>Ok.  I couldn't login to Manits, so I posted it as a Feature Request.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22594"></a>
+		<div class="forum-post-author">
+			<label class="title">kayoda</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-04 22:44:20</p>
+            </div>
+            <div class="postheader"><h3>Re:loading graphics</h3></div>
+				
+			<div class="body">
+				<p>My content page fails to take graphics or images but only text. How do I resolve this. I need help pls...<br />
+Am running atutor 2.0.2 on widows xp professional. Php version is 5.2</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

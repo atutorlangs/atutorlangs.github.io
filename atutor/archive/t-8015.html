@@ -1,0 +1,60 @@
+---
+ title: Can I access specific functions from an outside AP
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Can I access specific functions from an outside AP</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8015"></a>
+		<div class="forum-post-author">
+			<label class="title">artkohn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-13 03:00:29</p>
+            </div>
+            <div class="postheader"><h3>Can I access specific functions from an outside AP</h3></div>
+				
+			<div class="body">
+				<p>I need your help to let me know if ATutor can met my needs.  Our plan is to create a custom web application that will allow students to critically analyze a wide range of video and animation assets.  We need a custom GUI and the specifications are pretty demanding so we plan to create it as a Flash application.  <br />
+At the same time, while in the midst of the application, we want students to be able to jump to specific pedagogical tools such as discussion forums, chat rooms, and quizzing.  <br />
+My question is this: Does ATutor allow me to jump to these specific functions and then return to the Flash application?  Or on the other hand, are all of these functions available exclusively from with within ATutor?  Is there a way to make this work?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8017"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-13 09:26:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Can I access specific functions from an outside AP?</h3></div>
+				
+			<div class="body">
+				<p>It would not be difficult to create a module to link your application into ATutor. See the module documentation.<br />
+<br />
+There are not tokens you can insert into your flash to create links to various tools, though it would not be too difficult. You can define a token in include/lib/output.inc.php myCodes function, then use those tokens as params in the HTML that embeds your flash into a page.<br />
+<br />
+Define tokens something like the following. In the case below the token "nid" represents the link to the next content page.<br />
+[php]<br />
+<br />
+if (isset($sequence_links['next']) && $sequence_links['next']['url']) {<br />
+		$text = str_replace('[nid]', $sequence_links['next']['url'], $text);<br />
+	}<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

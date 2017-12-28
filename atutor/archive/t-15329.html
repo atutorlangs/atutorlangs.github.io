@@ -1,0 +1,117 @@
+---
+ title: Fail to send external email but displays success message
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Fail to send external email but displays success message</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="15329"></a>
+		<div class="forum-post-author">
+			<label class="title">iambaya</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-30 02:31:37</p>
+            </div>
+            <div class="postheader"><h3>Fail to send external email but displays success message</h3></div>
+				
+			<div class="body">
+				<p>Problem: I am using a shared hosting service, so I am unable to alter the php.ini file, and I have tried many different ways to set up the smtp files, but all my efforts fail. I have looked in the forums, but I have not found a complete solution. <br />
+<br />
+Symptoms: When I register as a new user or ask the site to remind me of my password via email, it displays a success message, but the email never arrives. I have tried different email accounts and checked the junk mail folder.<br />
+<br />
+What I've tried: <br />
+1. config.inc.php: I've tried with define('MAIL_USE_SMTP', true); as both true and false. It seems to be no good running to my default php.ini settings.<br />
+2. In atutormailer.class.php, I've tried 		$this->SMTPAuth = false;  // turn on SMTP authentication      as both true and false. (I've made it alternately match and opposite to the value in class.phpmailer.php.)<br />
+3. Maybe the problem lies in my class.phpmailer.php. Here is an abridged version. Does anyone see any problems? Note that I have changed some of the options a few times to experiment:<br />
+<br />
+<br />
+<br />
+  var $Priority          = 3;<br />
+<br />
+    var $CharSet           = "iso-8859-1";<br />
+    var $ContentType        = "text/plain";<br />
+   var $Encoding          = "8bit";<br />
+    var $ErrorInfo         = "";<br />
+    var $From               = "studywithme@chinesetonestudio.com";<br />
+   var $FromName           = "ChineseToneStudio";<br />
+   var $Sender            = "studywithme@chinesetonestudio.com";<br />
+     var $Subject           = "";<br />
+    var $Body               = "";<br />
+    var $AltBody           = "";<br />
+    var $WordWrap          = 0;<br />
+   var $Mailer            = "smtp";<br />
+   var $Sendmail          = "/usr/sbin/sendmail";<br />
+     var $PluginDir         = "";<br />
+     var $Version           = "1.73";<br />
+    var $ConfirmReadingTo  = "";<br />
+    var $Hostname          = "mail.chinesetonestudio.com";<br />
+    var $Host        = "mail.chinesetonestudio.com";<br />
+    var $Port        = 8889;<br />
+   var $Helo        = "";<br />
+   var $SMTPAuth     = true;<br />
+    var $Username     = "studywithme";<br />
+   var $Password     = "XXXXXXXXXXXXX";<br />
+      var $Timeout      = 10;<br />
+     var $SMTPDebug    = false;<br />
+    var $SMTPKeepAlive = false;<br />
+    var $smtp            = NULL;<br />
+    var $to              = array();<br />
+    var $cc              = array();<br />
+    var $bcc             = array();<br />
+    var $ReplyTo         = array();<br />
+    var $attachment      = array();<br />
+    var $CustomHeader    = array();<br />
+    var $message_type    = "";<br />
+    var $boundary        = array();<br />
+    var $language        = array();<br />
+    var $error_count     = 0;<br />
+    var $LE              = "\n";<br />
+   <br />
+<br />
+Questions: 1. Since I can't change my server's php.ini file, should the config.inc.php define('MAIL_USE_SMTP', true);  be true or false?<br />
+2. Should I be using smtp or one of the other options?<br />
+3. If I use smtp (or one of the others) what parts of what files should I alter?<br />
+<br />
+Site location: http://chinesetonestudio.com/phptesting/atutor/<br />
+PHPinfo file:  http://chinesetonestudio.com/whatsmyphp.php<br />
+Operating system ATutor is installed on - Windows NT 5.2<br />
+ATutor version - 1.6.1<br />
+Patch #s applied - 1-12<br />
+ATutor theme name - <br />
+PHP version -5.2.5<br />
+MySQL version - 5.0.54<br />
+Webserver & version - <br />
+Copies of error messages - ?<br />
+Changes to default settings - Just to tinker with these email files.<br />
+Web browser being used - Firefox,IE</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15342"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-30 16:02:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Fail to send external email, but displays success message.</h3></div>
+				
+			<div class="body">
+				<p>SMTP needs to be setup in php.ini for windows systems. <br />
+<br />
+There isn't another solution if you provider has not setup a valid SMTP server.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

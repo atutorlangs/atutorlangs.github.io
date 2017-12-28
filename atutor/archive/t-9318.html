@@ -1,0 +1,80 @@
+---
+ title: Error BLOBTEXT column cant have a default value
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error BLOBTEXT column cant have a default value</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="9318"></a>
+		<div class="forum-post-author">
+			<label class="title">solaris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-22 07:32:49</p>
+            </div>
+            <div class="postheader"><h3>Error BLOBTEXT column cant have a default value</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+Sorry, my english is very poor.<br />
+<br />
+I have a problem installing ATutor 1.5.3.3 with MySQL 5.0.27, PHP 4.3.10 and Apache 2.0.52 in Windows XP.<br />
+<br />
+In step 2 (Database) i get several errors of type "Table AT_xxxx creation failed".<br />
+<br />
+I tried to run the sql scripts to create one of the tables with the client Mysql-Front and I get the error message "BLOB/TEXT column can't have a default value". Then, i realize that all tables with errors have a column with TEXT NOT NULL default ''. Tables with only TEXT NOT NULL are created without problems.<br />
+<br />
+What can i do? If i modify the script to use tables without default values in TEXT fields will works? May i use another version of mysql? ...?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9319"></a>
+		<div class="forum-post-author">
+			<label class="title">solaris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-22 07:49:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Error: BLOB/TEXT column can't have a default value</h3></div>
+				
+			<div class="body">
+				<p>Hi again,<br />
+<br />
+It seems to be a bug of MySql. Removing the value STRICT_TRANS_TABLES in the property sql_mode in my.ini works fine.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9322"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-22 12:07:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Error: BLOB/TEXT column can't have a default value</h3></div>
+				
+			<div class="body">
+				<p>Thanks. This issue will be available in the 1.5.3.3 release.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,254 @@
+---
+ title: Stuck in Installer Loop
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Stuck in Installer Loop</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="1124"></a>
+		<div class="forum-post-author">
+			<label class="title">maui1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-19 20:52:45</p>
+            </div>
+            <div class="postheader"><h3>Stuck in Installer Loop</h3></div>
+				
+			<div class="body">
+				<p>I just installed the new ATutor 1.3.2 and it all went well, tables installedall permissions ok I get to the finish page with the login link, I click the login and it comes back and gives me the install page again:<br />
+<br />
+ATutor does not appear to be installed. Continue on to the installation.<br />
+<br />
+I have checked the database and all tables are installed.  No error messages, just can't get out of the install loop.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1125"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-19 22:00:01</p>
+            </div>
+            <div class="postheader"><h3>More Info</h3></div>
+				
+			<div class="body">
+				<p>Can't reproduce the problem. <br />
+<br />
+see:<br />
+http://www.atutor.ca/view/7/149/1.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1127"></a>
+		<div class="forum-post-author">
+			<label class="title">maui1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 00:23:52</p>
+            </div>
+            <div class="postheader"><h3>install loop</h3></div>
+				
+			<div class="body">
+				<p>What does the index or login file look for to determine if ATutor is installed or not. <br />
+<br />
+I notice there is a conditional at the very end of the config file that has something to do with the install.  I tried setting it to true but it didn't have an effect.<br />
+<br />
+ I seem to remember having this problem on another installation but not sure how it was resolved.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1133"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 08:51:24</p>
+            </div>
+            <div class="postheader"><h3>Help us Help you</h3></div>
+				
+			<div class="body">
+				<p>As I suggested in my previous message...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1148"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 17:40:46</p>
+            </div>
+            <div class="postheader"><h3>Comment vitals</h3></div>
+				
+			<div class="body">
+				<p>Try commenting out lines 32 to 36 in include/vital.inc.php.<br />
+<br />
+-----<br />
+<br />
+Yes, it is set to true:<br />
+<br />
+/* DO NOT ALTER THIS LAST LINE              */<br />
+define('AT_INSTALL', true);<br />
+<br />
+<br />
+On Feb 20, 2004, at 5:18 PM, Greg Gay wrote:<br />
+<br />
+> is the last line of config.inc.php set to "true"<br />
+> eg<br />
+> define('AT_INSTALL', true);</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1149"></a>
+		<div class="forum-post-author">
+			<label class="title">maui1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 18:14:20</p>
+            </div>
+            <div class="postheader"><h3>puzzled but digging deeper</h3></div>
+				
+			<div class="body">
+				<p>I commented out the conditional in vitals and now it goes to login.php and gives me a cannot connect to database.<br />
+<br />
+I have checked the database with phpMyAdmin and it is totally populated, and given the database login info requested during installation.  I also checked the config file and it has the appropriate db login info.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1150"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 18:38:11</p>
+            </div>
+            <div class="postheader"><h3>Server Config?</h3></div>
+				
+			<div class="body">
+				<p>This would indicate that the db info is not correct, but you should not have been able to get through the install if that was the case. <br />
+<br />
+<br />
+Do you have root access, or is this a hosted system? Show the problem to your ISP if its hosted. Perhaps your MySQL account is not configured properly. Perhaps a firewall...<br />
+<br />
+Post here an exact copy of any errors or messages you receive.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1151"></a>
+		<div class="forum-post-author">
+			<label class="title">maui1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 19:03:01</p>
+            </div>
+            <div class="postheader"><h3>Database checks out but...</h3></div>
+				
+			<div class="body">
+				<p>the exact error on the login page now is:<br />
+<br />
+"Unable to connect to db."<br />
+<br />
+I just took a good look into the database that was set up during installation.  It contains 30 tables and has the instructor account I entered during setup. <br />
+<br />
+I am on a hosted server but I have close to 50 databases on it, and have never had a problem creating databases, adding deleting or editing tables etc on 100 or more scripts that access them.  When I have a db connect error I can usually track it down to a typo in the config file.  This is not the case here as the connect info did in fact set up the tables properly.<br />
+<br />
+I do remember a similar problem with an earlier version of ATutor, but cannot recall what combination of late night jiggling cured the problem.  This time I'll take notes ;-)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1174"></a>
+		<div class="forum-post-author">
+			<label class="title">maui1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-21 23:08:50</p>
+            </div>
+            <div class="postheader"><h3>Same problem on another server</h3></div>
+				
+			<div class="body">
+				<p>Wierder still,  I just installed the latest release of ATutor on an entirely different server and have the same install loop problem.<br />
+<br />
+Database tables get installed fine, Admin and user accounts get set up, but when I click the login link on the last page of the install script, it sends me to the not installed error page with a link to start the installation.<br />
+<br />
+I am starting to think I am just not destined to use this great script.  Any other ideas what could be going on?  I will send you the phpinfo page url for this second server by email.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1195"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-23 10:45:43</p>
+            </div>
+            <div class="postheader"><h3>Same problem on another server</h3></div>
+				
+			<div class="body">
+				<p>There is a parse error in your config.inc.php file.<br />
+<br />
+Check to make sure that you don't have any single quotes (') or double quotes (") that are not escaped (/').<br />
+<br />
+if you have a quote in your db password then you will end up with something like:<br />
+define('DB_PASSWORD', 'my'spass');<br />
+<br />
+which will result in a parse error since the first single quote is not escaped.<br />
+<br />
+( i was just using "DB_PASSWORD" as an example, it could be the problem with any of the options, so double check them all).<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

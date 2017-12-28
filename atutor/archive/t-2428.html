@@ -1,0 +1,70 @@
+---
+ title: Applet in a SCO
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Applet in a SCO</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2428"></a>
+		<div class="forum-post-author">
+			<label class="title">kinchut</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-07 11:23:46</p>
+            </div>
+            <div class="postheader"><h3>Applet in a SCO</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I'm new to ATutor.<br />
+I wanted to import a SCO in which there is a web page with an applet jar.<br />
+But the problem is that the jar file is not well imported by ATutor. I tried the same SCO in another LMS and it works.<br />
+<br />
+Is there a special way to use the &lt;applet> tag or reference jar files ?<br />
+<br />
+Thans for the response.<br />
+<br />
+eric</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2431"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-09 18:54:46</p>
+            </div>
+            <div class="postheader"><h3>Applets yes, SCOs no (for now)</h3></div>
+				
+			<div class="body">
+				<p>ATutor does not have a SCORM runtime environment with which to play the interactivity of a SCO. It's on the drawing board. <br />
+<br />
+Assuming the SCO you are running was created in a current authoring tool, it should still import into ATutor, but without the interactivity. There are a number of examples in the Play Here Course demo on the atutor.ca site. Although the jar files should install into ATutor, you could upload them using the filemanager, and link them into you page using applet, or object. <br />
+<br />
+Here's the markup from one of the applets in the commonly found business startup tutorial. <br />
+<br />
+&lt;applet code="org.jelsim.applet.ProgressApplet.class" archive="progress.jar" width="1" height="1"><br />
+&lt;param name="loadApplet" value="cdcsimpletf" /><br />
+&lt;/applet><br />
+&lt;applet code="org.jelsim.applet.JSApplet" archive="jscore.jar,BizStartup.jar" name="cdcsimpletf" width="548" height="414"><br />
+&lt;param name="isPanel" value="X" /><br />
+&lt;param name="loadFile" value="cdcsimpletf.jsm" /><br />
+&lt;param name="modelClass" value="org.jelsim.models.bizstartup.BizStartup" /><br />
+&lt;/applet></p>
+			</div>
+		</div>
+	</li>
+</ul></div>

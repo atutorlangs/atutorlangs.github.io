@@ -1,0 +1,412 @@
+---
+ title: Browser  problems
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Browser  problems</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9616"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-06 16:54:46</p>
+            </div>
+            <div class="postheader"><h3>Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I just install ATutor v.1.5.3.3 :<br />
+Operating system Windows 2003 Server SP1<br />
+Apache 2.0.46<br />
+Internet explorer 7.0.5730.11<br />
+Firefox 1.5.0.9<br />
+MySql 5.0.18<br />
+PHP 5.2.0<br />
+<br />
+The fisrt connection and system configuration was ok <br />
+<br />
+i'm trying to login Atutor using IE and Firefox but the message <br />
+"Session cookies must be enabled in your browser to login." always appears. I just modifed the Options in those 2 browser to accept cookies but the message persists.<br />
+<br />
+Any idea will be welcome ...!!!<br />
+<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9617"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-07 08:57:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>Are you trying to login through a remote form. One outside ATutor?<br />
+<br />
+You'll need to modify the login script if so. Comment out <br />
+<br />
+[php]<br />
+<br />
+if (isset($this_login, $this_password) && !isset($_SESSION['session_test'])) {<br />
+    $msg->addError('SESSION_COOKIES');<br />
+} else<br />
+<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9623"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-08 08:50:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Thanks Greg,<br />
+I did it, now i get the new message  :<br />
+Invalid login/password combination.<br />
+I chek table contents in database and it's all right.<br />
+All my browsers accepts cookies, why login.php couldn...<br />
+[op]forums/view.php?fid=7;pid=9616;page=1#9617[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9625"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-08 09:07:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>Hi greg ,<br />
+Install env. description :<br />
+Operating system Windows 2003 Server SP1<br />
+Apache 2.0.46<br />
+Internet explorer 7.0.5730.11<br />
+Firefox 1.5.0.9<br />
+MySql 5.0.18<br />
+PHP 5.2.0<br />
+<br />
+I modify the login script comment out<br />
+<br />
+line  59 :<br />
+if (isset($this_login, $this_password) && !isset($_SESSION['session_test'])) {<br />
+    $msg->addError('SESSION_COOKIES');<br />
+} else<br />
+<br />
+i get the new message :<br />
+Invalid login/password combination.<br />
+I chek table contents in database and it's all right.<br />
+All my browsers accepts cookies, why login.php couldn...<br />
+<br />
+Questions :<br />
+- Could i make a mistake during apache config ?<br />
+- Do you recommend a 2second install with PHP 4 / MySql 4?<br />
+<br />
+Thx</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9634"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-09 08:17:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>Restart your browser.<br />
+<br />
+Try creating a new account and log in with it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9638"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-09 12:10:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>I did it, a new user .. was created but logins doesn't works too.<br />
+I'm planning a second installation in a new PC<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Restart your browser.<br />
+<br />
+Try creating a new account and log in with it.<br />
+[op]forums/view.php?fid=7;pid=9616;page=1#9634[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9672"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-12 05:46:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>I did it ...<br />
+i can create new accounts but problem persists ...<br />
+Following my research i add in line 39 <br />
+$_SESSION['session_test'] = TRUE ;     <br />
+<br />
+Wehn i fill user and password  now i have the message :<br />
+Invalid login/password combination.<br />
+<br />
+My OS and all my environnment is in french<br />
+<br />
+Thnx<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I did it, a new user .. was created but logins doesn't works too.<br />
+I'm planning a second installation in a new PC<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Restart your browser.<br />
+<br />
+Try creating a new account a...[/reply]<br />
+[op]forums/view.php?fid=7;pid=9616;page=1#9638[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9673"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-12 09:57:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>I've attached a modified login script. Replace yours with this one and see if that helps.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9676"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-12 10:09:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>I create a user lavipeyre / passw atya1408<br />
+at the 'Invalid login/password combination' persists ,<br />
+<br />
+the sql generated is :<br />
+<br />
+SELECT member_id, login, first_name, second_name, last_name, preferences, language, status, SHA1(CONCAT(password, '-', 'root')) AS pass FROM AT_members WHERE (login='lavipeyre' OR email='lavipeyre') AND SHA1(CONCAT(password, 'f7f8fb2b11914bff86a8a7ebe89381e948836d96'))='a546f1294e6be13b2e6e4f50fb88fd348bfb4b4a'<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I've attached a modified login script. Replace yours with this one and see if that helps.<br />
+[op]forums/view.php?fid=7;pid=9616;page=1#9673[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9677"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-12 10:10:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so this using the new login.php<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I've attached a modified login script. Replace yours with this one and see if that helps.<br />
+[op]forums/view.php?fid=7;pid=9616;page=1#9673[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9678"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-12 10:11:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>i use the new login.php<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I've attached a modified login script. Replace yours with this one and see if that helps.<br />
+[op]forums/view.php?fid=7;pid=9616;page=1#9673[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9698"></a>
+		<div class="forum-post-author">
+			<label class="title">lavipeyre</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-16 04:59:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>Subject: Re: Browser problems  <br />
+I create a user lavipeyre / passw atya1408<br />
+at the 'Invalid login/password combination' persists ,<br />
+<br />
+the sql generated is :<br />
+<br />
+SELECT member_id, login, first_name, second_name, last_name, preferences, language, status, SHA1(CONCAT(password, '-', 'root')) AS pass FROM AT_members WHERE (login='lavipeyre' OR email='lavipeyre') AND SHA1(CONCAT(password, 'f7f8fb2b11914bff86a8a7ebe89381e948836d96'))='a546f1294e6be13b2e6e4f50fb88fd348bfb4b4a'<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+test login.php<br />
+[op]forums/view.php?fid=7;pid=9616;page=1#9672[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9701"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-16 08:39:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>I've used a dozen systems now to try to reproduce this, but with no luck.  The source code look fine. <br />
+<br />
+There's not much more we can do to help if we are unable to reproduce the problem. No one else seems to be having this problem that we are aware of, so it is almost certainly a problem with your server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9710"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-17 13:09:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Browser  problems</h3></div>
+				
+			<div class="body">
+				<p>I too have seen this error on our systems, along with the timeout issue, which I have found the root cause of, but not a fix..<br />
+<br />
+Restore your original login file, the one where you were getting the cookies error.<br />
+<br />
+This issue has to do with the session.save_path in php.ini. I will not try to troubleshoot your issue directly, as you will need to get with your server-host for that; but rather I will detail how this error appeared for me.<br />
+<br />
+I was trying to update the session.save_path in php.ini, but when I changed it from the default (/tmp) to anything else, in my case (/tmp/atutor) I would receive this error, because the atutor system couldn't write session data to this folder that I had created.<br />
+<br />
+I hope this helps when you take your issue to your server host.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

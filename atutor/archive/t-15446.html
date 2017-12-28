@@ -1,0 +1,114 @@
+---
+ title: editor problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>editor problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15446"></a>
+		<div class="forum-post-author">
+			<label class="title">sam79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-09 04:39:56</p>
+            </div>
+            <div class="postheader"><h3>editor problem</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+I think something is wrong in ATutor Editor, I enter the code below on the text editor and then switch to virtual editor to do some changes and then back to text editor some of the content code remove by the editor.<br />
+check editor with this code:<br />
+<br />
+&lt;p>&lt;strong>&lt;span style="font-size: medium; font-family: tahoma,arial,helvetica,sans-serif;"> &lt;/span> &lt;/strong><br />
+&lt;table dir="rtl" border="0" align="center"><br />
+&lt;tbody><br />
+&lt;tr><br />
+&lt;td><br />
+&lt;a href="http://lms.mums.ac.ir/content.php?cid=81">&lt;span style="font-size: 16px; font-family: tahoma;color: #336699;">1.  &lt;/span>  <br />
+         &lt;/a>                 <br />
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+		 &lt;a href="../content.php?cid=4341">&lt;span style="font-size: 16px; font-family: tahoma;color: #990033;"> 2.  &lt;/span>&lt;/a><br />
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+		 <br />
+		                  &lt;a href="../content.php?cid=4342">&lt;span style="font-size: 16px; font-family: tahoma;color: #009933;"><br />
+							   3.   &lt;/span>&lt;/a>&lt;/td><br />
+&lt;/tr><br />
+&lt;/tbody><br />
+&lt;/table><br />
+&lt;/p><br />
+&lt;iframe name="I1" src="http://lms.mums.ac.ir/get.php/9052.cervical_cancer_files/cervical cancer_files/frame.htm" width="100%" height="528"><br />
+Your browser does not support inline frames or is currently configured not to display inline frames.<br />
+&lt;/iframe>&lt;/p><br />
+<br />
+<br />
+<br />
+after switch to text editor it shows  this code:<br />
+&lt;p>&lt;strong>&lt;span style="font-size: medium; font-family: tahoma,arial,helvetica,sans-serif;">&lt;/span>&lt;/strong><br />
+&lt;table dir="rtl" border="0" align="center"><br />
+&lt;tbody><br />
+&lt;tr><br />
+&lt;td>&lt;a href="http://lms.mums.ac.ir/content.php?cid=81">&lt;span style="font-size: 16px; color: #336699; font-family: tahoma;">1.  &lt;/span> &lt;/a>       &lt;a href="../content.php?cid=4341">&lt;span style="font-size: 16px; color: #990033; font-family: tahoma;">2.  &lt;/span>&lt;/a>        &lt;a href="../content.php?cid=4342">&lt;span style="font-size: 16px; color: #009933; font-family: tahoma;">3.   &lt;/span>&lt;/a>&lt;/td><br />
+&lt;/tr><br />
+&lt;/tbody><br />
+&lt;/table><br />
+&lt;/p><br />
+&lt;p> &lt;/p><br />
+<br />
+<br />
+<br />
+iframe tag remove by ditor!!!!<br />
+Any help would be appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15447"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-09 06:36:56</p>
+            </div>
+            <div class="postheader"><h3>Re: editor problem</h3></div>
+				
+			<div class="body">
+				<p>hia, this is more likely a feature than a bug, as TinyMCE strips some elements by default, see:<br />
+<br />
+http://wiki.moxiecode.com/index.php/TinyMCE:FAQ#TinyMCE_strip_away_attributes_or_tags_from_my_source.3F<br />
+<br />
+..and I am *guessing* you will have to allow iframe (with attributes) in extended_valid_elements in the configuration, which you will find in:<br />
+<br />
+/include/lib/tinymce.inc.php around line 82.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15450"></a>
+		<div class="forum-post-author">
+			<label class="title">sam79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-09 08:29:59</p>
+            </div>
+            <div class="postheader"><h3>Re: editor problem</h3></div>
+				
+			<div class="body">
+				<p>thank you very much vegard for your useful help.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

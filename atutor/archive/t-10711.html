@@ -1,0 +1,157 @@
+---
+ title: Error after 152 to 154 upgrade
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error after 152 to 154 upgrade</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="10711"></a>
+		<div class="forum-post-author">
+			<label class="title">rim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-29 06:27:37</p>
+            </div>
+            <div class="postheader"><h3>Error after 152 to 154 upgrade</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - Linux (centOS4)<br />
+  version of ATutor - 1.5..4<br />
+  versions of php - 5.04<br />
+  version of mysq l - 5.0<br />
+  webserver & version - Apache 2<br />
+  copies of error messages - Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /var/www/html/ATutor/include/lib/output.inc.php on line 330<br />
+<br />
+<br />
+  changes to default settings -<br />
+  web browser being used - IE 6, Opera<br />
+  and anything else relevant -<br />
+<br />
+Error message is mentioned above. Upgrade was successful. There are two languages installed in the ATutor system English and Russian.<br />
+There is no defference in output.inc.php files. MySQL query is the same. From the first glance nothing was changes in the related tables in MySQL db. Any ideas.<br />
+<br />
+Here is the error message again: Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /var/www/html/ATutor/include/lib/output.inc.php on line 330</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10713"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-29 12:46:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Error after 1.5.2 to 1.5.4 upgrade</h3></div>
+				
+			<div class="body">
+				<p>Are you sure it's line 330?<br />
+<br />
+Because my line 330 only has a comment on it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10734"></a>
+		<div class="forum-post-author">
+			<label class="title">rim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-31 02:29:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Error after 1.5.2 to 1.5.4 upgrade</h3></div>
+				
+			<div class="body">
+				<p>This is my line:<br />
+while ($row = mysql_fetch_assoc($result)) {<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Are you sure it's line 330?<br />
+<br />
+Because my line 330 only has a comment on it.<br />
+[op]forums/view.php?fid=7;pid=10711;page=1#10713[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10739"></a>
+		<div class="forum-post-author">
+			<label class="title">rim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-31 06:33:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Error after 1.5.2 to 1.5.4 upgrade</h3></div>
+				
+			<div class="body">
+				<p>Thanks to everybody! The problem is solved. Some of DB table properties were wrong. Atutor 1.5.2 didn't pay attention to them and the error apeared only in 1.5.4</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10740"></a>
+		<div class="forum-post-author">
+			<label class="title">rim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-31 07:01:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Error after 1.5.2 to 1.5.4 upgrade</h3></div>
+				
+			<div class="body">
+				<p>New problem appeared. Variable AT_BASE_HREF is undefined and shows the wrong path to /tools/tests direciry in Atutor 1.5.4.<br />
+<br />
+In 1.5.2 the variable was $_base_href.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10775"></a>
+		<div class="forum-post-author">
+			<label class="title">iguana</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-06-05 04:24:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Error after 1.5.2 to 1.5.4 upgrade</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I'm interest to know which are these table properties that were wrong because I've the some problem upgrading from 1.5.3.3 to 1.5.4<br />
+<br />
+Thanks<br />
+<br />
+Nancy</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

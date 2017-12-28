@@ -1,0 +1,122 @@
+---
+ title: how to login to ATutor from a remote login form
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>how to login to ATutor from a remote login form</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="12616"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-22 09:29:26</p>
+            </div>
+            <div class="postheader"><h3>how to login to ATutor from a remote login form</h3></div>
+				
+			<div class="body">
+				<p>not related to the other cookie discussion. <br />
+<br />
+what I want to do is set a session cookie on my Atutor install on one domain with the login form from a different domain. <br />
+<br />
+here's my situation: I have created a login form at www.example.com that directs to my Atutor install at www2.example.com - when I use it I am redirected, but get the "session cookies must be enabled" message.. <br />
+<br />
+if I go back and try again it works, as the cookie is set the first time. <br />
+<br />
+but how do I set the cookie on the www2 domain from the www domain? anyone has any experience with this?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12617"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-22 10:20:23</p>
+            </div>
+            <div class="postheader"><h3>Re: how to login to ATutor from a remote login form..?</h3></div>
+				
+			<div class="body">
+				<p>You can comment out the cookie check in login.php at about line 59, then make the following "else if" into an "if" statement.<br />
+<br />
+These lines are intended to stop remote login.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12630"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-23 09:00:07</p>
+            </div>
+            <div class="postheader"><h3>Re: how to login to ATutor from a remote login form..?</h3></div>
+				
+			<div class="body">
+				<p>thanks! <br />
+<br />
+haven't done it yet as I came to think of the JS to encrypt passwords, which I probably would have to transfer in some way to the remote site as well.. you know if that would be complicated?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12631"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-23 09:07:08</p>
+            </div>
+            <div class="postheader"><h3>Re: how to login to ATutor from a remote login form..?</h3></div>
+				
+			<div class="body">
+				<p>Its fairly straight forward. Have a look at the default theme login template. Everything you need you should be able to cut and paste from there.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12655"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 06:30:33</p>
+            </div>
+            <div class="postheader"><h3>Re: how to login to ATutor from a remote login form..?</h3></div>
+				
+			<div class="body">
+				<p>cool, I will experiment some more with it! <br />
+<br />
+the reason I ask is that there's included some PHP in the onclick attribute as of 1.6, namely this:<br />
+<br />
+&lt;?php echo $_SESSION['token']; ?><br />
+<br />
+..within the return crypt_sha1() - and this session token would refer to Atutor, not Drupal where we need to include the code..?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

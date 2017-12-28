@@ -1,0 +1,136 @@
+---
+ title: ATutor 1532  Error in Forum
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor 1532  Error in Forum</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11904"></a>
+		<div class="forum-post-author">
+			<label class="title">gloridea</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-17 12:13:36</p>
+            </div>
+            <div class="postheader"><h3>ATutor 1532  Error in Forum</h3></div>
+				
+			<div class="body">
+				<p>OS: linux <br />
+Version ATutor: 1.5.3.2<br />
+Version Php: 5.2<br />
+Mysq version:  5.0.<br />
+Web Server: Apache 2.2.<br />
+browser: microsoft explorer 6<br />
+<br />
+I've the problem when i post some words to forum.<br />
+-------------------------------------------------<br />
+Warning: vsprintf() [function.vsprintf]: Too few arguments in /home/gloridea/public_html/atutor/include/lib/output.inc.php on line 307<br />
+<br />
+-----------------------------------------<br />
+<br />
+This error occurs only with Chinese Simplified - GB2312 version, none with english.<br />
+<br />
+Can enyone help me?And how to change Chinese Simplified - GB2312 to utf-8?<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11905"></a>
+		<div class="forum-post-author">
+			<label class="title">gloridea</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-17 12:18:40</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor 1.5.3.2 - Error in Forum</h3></div>
+				
+			<div class="body">
+				<p>I've searched and tried to "delete the language pack and import it again". But it not works.<br />
+<br />
+When I save the language pack as utf-8 in notpad2 and import it ,an error occored,the inf is :<br />
+-------------------------------<br />
+Error : PCLZIP_ERR_BAD_FORMAT (-10) : Unable to find End of Central Dir Record signature<br />
+-------------------------</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11906"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-17 13:41:37</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor 1.5.3.2 - Error in Forum</h3></div>
+				
+			<div class="body">
+				<p>Hi, you can try converting the GB2312 to UTF8 through here: http://atutor.ca/atutor/translate/convert.php<br />
+<br />
+Or, you can try using ATutor 1.5.5 where it has Simplfied Chinese (UTF8) available for download.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11914"></a>
+		<div class="forum-post-author">
+			<label class="title">gloridea</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-19 10:22:58</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor 1.5.3.2 - Error in Forum</h3></div>
+				
+			<div class="body">
+				<p>Thanks a lot.<br />
+<br />
+But the problem in forum still exist and I meet the same problem in atutor1.5.5.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11915"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-19 11:05:30</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor 1.5.3.2 - Error in Forum</h3></div>
+				
+			<div class="body">
+				<p>Hi, the problem of the following error is due to the Simplified Chinese package problem.  <br />
+---------<br />
+Warning: vsprintf() [function.vsprintf]: Too few arguments in /home/gloridea/public_html/atutor/include/lib/output.inc.php on line 307<br />
+---------<br />
+The translator has mistakenly translated the term "subscribe" and "unsubscribe"<br />
+<br />
+Please redownload the language package in the download page or use this one instead.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

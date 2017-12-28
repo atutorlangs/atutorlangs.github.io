@@ -1,0 +1,218 @@
+---
+ title: css not shown with atutor redux and own theme in new version life
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>css not shown with atutor redux and own theme in new version life</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="12843"></a>
+		<div class="forum-post-author">
+			<label class="title">harry_ej</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-12 01:50:24</p>
+            </div>
+            <div class="postheader"><h3>css not shown with atutor redux and own theme in new version life</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+<br />
+Last night i installed the new version of Atutor on my remote server.<br />
+After that i imported my own theme and all worked right. But after i made my own theme the default theme i saw that the css is not showing and that the images are not linked.<br />
+I did not have a problem with this when i had the beta version on my localhost and the themes are still working fine on my localhost.<br />
+the path to my themes is as in localhost, something like<br />
+http://site url/ATutor/themes/<br />
+Things to describe: <br />
+  operating system -linux 2.6.9-67.01-el<br />
+  version of ATutor -1.6 latest stable<br />
+  versions of php -5.1.6<br />
+  version of mysq l -4.1.20<br />
+  webserver & version -2.0.52<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used - firefox<br />
+  and anything else relevant -<br />
+<br />
+Harry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12844"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-12 03:02:26</p>
+            </div>
+            <div class="postheader"><h3>Re: css not shown with atutor redux and own theme in new version life</h3></div>
+				
+			<div class="body">
+				<p>that sounds a lot like a permission problem, where there's no public read access to these files set on the server. I have experienced this myself when importing themes. <br />
+<br />
+make sure the CSS file and image files are readable by giving them the atleast the 644 permission - do it by chmod in SSH if you have that / know that, or FTP to your server and change permissions with the FTP-program. in Filezilla this is done by right-clicking the file, and chosing "file atttributes" - see screenshot</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12848"></a>
+		<div class="forum-post-author">
+			<label class="title">harry_ej</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-12 10:50:44</p>
+            </div>
+            <div class="postheader"><h3>Re: css not shown with atutor redux and own theme in new version life</h3></div>
+				
+			<div class="body">
+				<p>No that is unfortunately not the issue. Strange thing is that your atutor redux theme has the same issues on my remote server.<br />
+<br />
+I might have to grab one of the default themes and try to convert that to my theme :(<br />
+<br />
+Nothing to do about it i think<br />
+<br />
+harry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12849"></a>
+		<div class="forum-post-author">
+			<label class="title">harry_ej</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-12 11:10:49</p>
+            </div>
+            <div class="postheader"><h3>Re: update</h3></div>
+				
+			<div class="body">
+				<p>I exported the atutor default theme and changed the theme_info_xml and gave it a name then zipped it back and improted it again and guess what? Same thing happened, no css and no pics. <br />
+<br />
+I g uess it must be a webhost/server related issue then and probably not a bug or something in atutor:(<br />
+<br />
+I will run it with an atutor theme then and no same look and feel<br />
+<br />
+harry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12851"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-12 14:21:41</p>
+            </div>
+            <div class="postheader"><h3>Re: update</h3></div>
+				
+			<div class="body">
+				<p>it has nothing to do with the theme itself, it's just files. <br />
+<br />
+try to upload the theme manually (the whole directory) via FTP, not import the zip file through Atutor. importing the zip file gives the web server user the ownership, while you have the ownership if you ftp the directory up.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12852"></a>
+		<div class="forum-post-author">
+			<label class="title">harry_ej</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-12 17:27:11</p>
+            </div>
+            <div class="postheader"><h3>Re: update</h3></div>
+				
+			<div class="body">
+				<p>Thansk Vegard,<br />
+<br />
+I had to chmod the whole theme directory instead of only the core files (stupid me im ashamed of myself)<br />
+<br />
+Thanks for giving me the right direction, my site can be seen at www.bahasabelanda.com<br />
+<br />
+The atutor part of my site is at www.bahasabelanda.com/ATutor<br />
+<br />
+Not a lot of content as of yet but i hope to get to that in the weekend<br />
+<br />
+thanks loads again,<br />
+<br />
+Harry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12876"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-18 09:04:23</p>
+            </div>
+            <div class="postheader"><h3>Re: update</h3></div>
+				
+			<div class="body">
+				<p>no problem! and that's a nice site you have made there :) <br />
+<br />
+I see one problem (in Firefox 2) which is the placement of the content navigation, or rather the placement of the sequence links and shwo / hide menu function. see screenshot. <br />
+<br />
+I haven't investigated a lot but I guess it's because the side menu is an absolutely placed element, you'll find it in the sidemenu.css file - and maybe it's only to adjust the "top" part here:<br />
+<br />
+/* side-menu-container general styles */ <br />
+#side-menu-container{<br />
+position: absolute;<br />
+top: 145px;</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12977"></a>
+		<div class="forum-post-author">
+			<label class="title">harry_ej</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-28 05:17:40</p>
+            </div>
+            <div class="postheader"><h3>Re: update</h3></div>
+				
+			<div class="body">
+				<p>Cheers,<br />
+<br />
+Fixed it cos it didn't look very nice both in IE and Firefox.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

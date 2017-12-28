@@ -1,0 +1,216 @@
+---
+ title: problems with Upgrading from 202 to 22
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>problems with Upgrading from 202 to 22</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25438"></a>
+		<div class="forum-post-author">
+			<label class="title">My1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-24 04:47:57</p>
+            </div>
+            <div class="postheader"><h3>problems with Upgrading from 202 to 22</h3></div>
+				
+			<div class="body">
+				<p>well I have a problem with upgrading ATutor 2.0.2  to 2.2 I already did once in a test scenario to 2.1.1 and we found out lately that there's a new version and now we want to go to that. we migrated the files and db from the old server I think it was opensuse 9 to the new one (opensuse 12.3) which went well. then we made sure that the config files are corrrect with db pass and stuff and then we started the upgrade, selected the folder and continued and then we got an error with the db operations.<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - openSuse<br />
+  ATutor version - 2.0.2<br />
+  Patch #s applied - #01-#09<br />
+  ATutor theme name - <br />
+versions of php - 5.5.9<br />
+version of mysql - 5.6.16<br />
+webserver & version - apache 2.4.7 (unix)<br />
+  Copies of error messages -<br />
+    Table AT_feeds alteration failed.<br />
+    Table AT_myown_patches alteration failed.<br />
+    Table AT_myown_patches_dependent alteration failed.<br />
+    Table AT_myown_patches_files alteration failed.<br />
+    Table AT_auto_enroll alteration failed.<br />
+    Table AT_auto_enroll_courses alteration failed.<br />
+    Table AT_gradebook_detail alteration failed.<br />
+    Table AT_social_member_contact alteration failed.<br />
+    Table AT_social_member_representation alteration failed.<br />
+    Table AT_oauth_client_servers alteration failed.<br />
+    Table AT_oauth_client_tokens alteration failed.<br />
+    Table AT_pa_albums alteration failed.<br />
+    Table AT_pa_album_comments alteration failed.<br />
+    Table AT_pa_photo_comments alteration failed.<br />
+    Table AT_modules alteration failed.<br />
+    Table AT_language_pages alteration failed.<br />
+    Table AT_language_pages alteration failed.<br />
+  Changes to default settings -<br />
+  Web browser being used - Firfox 38.0.5<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25439"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-24 09:29:50</p>
+            </div>
+            <div class="postheader"><h3>Re: problems with Upgrading from 2.0.2 to 2.2</h3></div>
+				
+			<div class="body">
+				<p>It would appear that the MySQL user does not have table Alter permissions.<br />
+<br />
+More about privileges can be found at:<br />
+https://dev.mysql.com/doc/refman/5.6/en/privileges-provided.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25440"></a>
+		<div class="forum-post-author">
+			<label class="title">My1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-24 09:30:58</p>
+            </div>
+            <div class="postheader"><h3>Re: problems with Upgrading from 2.0.2 to 2.2</h3></div>
+				
+			<div class="body">
+				<p>I am using the root user for this, so I dont think that.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25441"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-24 10:20:21</p>
+            </div>
+            <div class="postheader"><h3>Re: problems with Upgrading from 2.0.2 to 2.2</h3></div>
+				
+			<div class="body">
+				<p>Also check the ownership on the db files you moved to be sure they are owned by the mysql user. Those files should also have read/write permissions set for user and group (-rw-rw----)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25442"></a>
+		<div class="forum-post-author">
+			<label class="title">My1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-24 10:34:20</p>
+            </div>
+            <div class="postheader"><h3>Re: problems with Upgrading from 2.0.2 to 2.2</h3></div>
+				
+			<div class="body">
+				<p>I dont think that's possible since I ex and imported the db using pna and stuff but i'll check...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25447"></a>
+		<div class="forum-post-author">
+			<label class="title">My1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-25 01:36:05</p>
+            </div>
+            <div class="postheader"><h3>Re: problems with Upgrading from 2.0.2 to 2.2</h3></div>
+				
+			<div class="body">
+				<p>I did check, and there are no problems with editing the tables manually in phpmyadmin and as I said I am using the same user in pma and Atutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25449"></a>
+		<div class="forum-post-author">
+			<label class="title">My1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-25 02:33:38</p>
+            </div>
+            <div class="postheader"><h3>Re: problems with Upgrading from 2.0.2 to 2.2</h3></div>
+				
+			<div class="body">
+				<p>as there is no edit button I have to not that a lot of the tables can be created and altered without problems. while the others (from the error message) have the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25452"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-25 09:08:48</p>
+            </div>
+            <div class="postheader"><h3>Re: problems with Upgrading from 2.0.2 to 2.2</h3></div>
+				
+			<div class="body">
+				<p>What did you end up doing to resolve the problem, to help others that may have experienced the same issue?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25454"></a>
+		<div class="forum-post-author">
+			<label class="title">My1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-25 09:13:54</p>
+            </div>
+            <div class="postheader"><h3>Re: problems with Upgrading from 2.0.2 to 2.2</h3></div>
+				
+			<div class="body">
+				<p>oh lol, I thought I wrote that, probably forgot to send, or whatever.<br />
+instead of directly going from 2.0.2 to 2.2 I went over 2.1.1, so I had<br />
+2.0.2->2.1.1->2.2 upgrade after upgrade, but now I have another problem as described in the other thread (login problems).</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

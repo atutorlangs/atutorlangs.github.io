@@ -1,0 +1,415 @@
+---
+ title: atutor crash
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>atutor crash</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="4641"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-29 10:14:40</p>
+            </div>
+            <div class="postheader"><h3>atutor crash</h3></div>
+				
+			<div class="body">
+				<p>Hi, <br />
+Since I installed atutor, i am having the same problem<br />
+The application crash and I cannot continue until I close the browser and open it again.<br />
+I tried to reproduce the problem, but it is totally random.<br />
+What hapens is that sometimes when I click in some place that needs to load a new page, the application never responds. Also not to the sing -out or any kind of navigation.<br />
+I do not receive any respone from the system. For having again the application I need to close the browser ( mozilla, or  microsoft explorer), and when I oppened again is start working.<br />
+I detecte that if I clear the Atutor cookie, I can sign in again from the same browser session.<br />
+Configuration:<br />
+I am sendig as an attachment de phpinfo <br />
+The Mysql version:MySQL 4.0.13<br />
+Atutor version: 1.4 over linux and apache<br />
+The servers is configured as secure server<br />
+Do you have any ideas?<br />
+Thank you very much<br />
+Jose Broide</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4642"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-29 10:19:39</p>
+            </div>
+            <div class="postheader"><h3>Something else, I forgot</h3></div>
+				
+			<div class="body">
+				<p>I am sendig the err_log of the apache in docroot.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4643"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-29 10:52:53</p>
+            </div>
+            <div class="postheader"><h3>Turn register_globals off</h3></div>
+				
+			<div class="body">
+				<p>Try turning register_globals off in php.ini, and restarting Apache. If register_global has to stay on for other application you can create a local .htaccess file in the root directory of ATutor with the following line in it.<br />
+<br />
+php_flag register_globals off</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4644"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-29 11:42:05</p>
+            </div>
+            <div class="postheader"><h3>Where do I have to put the file</h3></div>
+				
+			<div class="body">
+				<p>the structure I have is<br />
+docroot/capacitacion/Atutor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4645"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-29 11:54:40</p>
+            </div>
+            <div class="postheader"><h3>in the ATutor root</h3></div>
+				
+			<div class="body">
+				<p>docroot/capacitacion/Atutor/.htaccess</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4646"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-29 12:00:15</p>
+            </div>
+            <div class="postheader"><h3>Thanks greg</h3></div>
+				
+			<div class="body">
+				<p>Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4657"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-30 09:31:08</p>
+            </div>
+            <div class="postheader"><h3>Still crashes,</h3></div>
+				
+			<div class="body">
+				<p>Hi greg.<br />
+I have made the changes you told me ( attached you will find the phpinfo), but still crashes<br />
+I am not sure, but often it crashes when I click in the Tool Icon, (http://shiftit.com.ar/capacitacion/ATutor/tools/index.php?g=15)<br />
+But not only and not always.<br />
+do you have any ideas?<br />
+Do you need any other info?<br />
+If you tell me where to put a tracer ( like copying to a file any data) i can do it.<br />
+Thank you again<br />
+Jose Broide</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4658"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-30 09:33:07</p>
+            </div>
+            <div class="postheader"><h3>Still crashes,</h3></div>
+				
+			<div class="body">
+				<p>Hi greg.<br />
+I have made the changes you told me ( attached you will find the phpinfo), but still crashes<br />
+I am not sure, but often it crashes when I click in the Tool Icon, (http://shiftit.com.ar/capacitacion/ATutor/tools/index.php?g=15)<br />
+But not only and not always.<br />
+do you have any ideas?<br />
+Do you need any other info?<br />
+If you tell me where to put a tracer ( like copying to a file any data) i can do it.<br />
+Thank you again<br />
+Jose Broide</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4659"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-30 10:02:39</p>
+            </div>
+            <div class="postheader"><h3>More info</h3></div>
+				
+			<div class="body">
+				<p>Hi greg<br />
+I detected that when I navigate, edit or create contents, the system dosent crash.<br />
+As soon as I try to get into a different section it USUALLY crashes inmidiatly<br />
+<br />
+Main Menu: My course, preferences etc<br />
+User Menu: Home tools ,resources etc.<br />
+Global Menu: ONLY glossary, site map. ( anything related to content navigation is ok)<br />
+Thank you<br />
+JOSE</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4660"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-30 16:42:59</p>
+            </div>
+            <div class="postheader"><h3>Let us see</h3></div>
+				
+			<div class="body">
+				<p>Send us a link to your installation.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4664"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-31 11:42:11</p>
+            </div>
+            <div class="postheader"><h3>Data</h3></div>
+				
+			<div class="body">
+				<p>www.shiftit.com.ar/capacitacion/ATutor<br />
+Please tell me where  I have to send the user<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4665"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-31 11:42:29</p>
+            </div>
+            <div class="postheader"><h3>Data</h3></div>
+				
+			<div class="body">
+				<p>www.shiftit.com.ar/capacitacion/ATutor<br />
+Please tell me where  I have to send the user<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4667"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-31 12:14:26</p>
+            </div>
+            <div class="postheader"><h3>Contact Us form</h3></div>
+				
+			<div class="body">
+				<p>Use the Contact Us form linked from the About page on atutor.ca</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4668"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-31 13:28:48</p>
+            </div>
+            <div class="postheader"><h3>Can not reproduce</h3></div>
+				
+			<div class="body">
+				<p>I tried with different operating systems using serveral browsers but could not reproduce the crash. It is unlikely this is an ATutor problem. It is probably a browser of OS problem. If that is the case there is not much more we can do to help.<br />
+<br />
+Have you tried emptying the cookies from your browser? Have you tried reinstalling or upgrading your browser? Have you tried on a different system? Are your student also experiencing the problem?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4722"></a>
+		<div class="forum-post-author">
+			<label class="title">jbroide</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-04 11:24:02</p>
+            </div>
+            <div class="postheader"><h3>It looks now it is working oK</h3></div>
+				
+			<div class="body">
+				<p>IHi greg, <br />
+After changing  the ip address of my machine ,( i have used a new one), and setting php bglobals off, it looks it si working ok. <br />
+I have a hub with DHCP off, so It machine has its own fixed IP.<br />
+I really do not know which is the relation;:<br />
+But may be you can get a conclussion:<br />
+Thanks for all<br />
+JOSE</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4747"></a>
+		<div class="forum-post-author">
+			<label class="title">Trevor</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-07 16:13:35</p>
+            </div>
+            <div class="postheader"><h3>Tiger producing Error?</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - OS 10.4.1<br />
+  version of ATutor -1.4.3<br />
+  versions of php -4.3.1<br />
+  version of mysq l -not sure<br />
+  webserver & version -apache 1.3.33(Darwin)<br />
+  error messages -<br />
+<br />
+An error occurred. Output sent before it should have. Please correct the above error(s).<br />
+<br />
+<br />
+Headers already sent. Cannot initialise session.<br />
+<br />
+Web browser being used - safari<br />
+<br />
+This error appeared the other morning and all of the existing installed versions of atutor are producing this error.  It appears right at login-in e.g.<br />
+http://www.socrateslearning.com/sciq/centius/login.php<br />
+<br />
+It was working for a few days on Tiger (the new mac os) and then seemed to stop suddenly.  Here is the sequence of events.<br />
+<br />
+1.  Install Tiger and atutor instances don't work after getting webserver going.<br />
+2.  Find databases and reconnect and everything is fine (not sure where they were being hidden)<br />
+3.   Try to start streaming server and accidently caused a port 80 conflict whereby webserver not working.  Eliminate conflict, reconfigure webserver and restart; webserver works, but now error is generated when trying to access index.php in aTutor.<br />
+<br />
+It is probably something to do with the set up of the server and not aTutor.  Any thoughts?<br />
+<br />
+Trevor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4748"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-07 16:58:06</p>
+            </div>
+            <div class="postheader"><h3>White spaces</h3></div>
+				
+			<div class="body">
+				<p>This is usually what happens when a whitespace is introduced into a file, usually the include/vitals.inc.php file. Make sure there are no whitespaces following the closing php tag in the file, or any other files your opened and saved in an editor. Make sure your editor is using Unix "end of lines" instead of windows EOLs<br />
+<br />
+And/or enable output buffering, or zlib output compression in php.ini then restart Apache.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

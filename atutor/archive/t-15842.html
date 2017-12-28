@@ -1,0 +1,96 @@
+---
+ title: Installation Error Step 2  MySQL version 4110
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installation Error Step 2  MySQL version 4110</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15842"></a>
+		<div class="forum-post-author">
+			<label class="title">tutubein</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-01 07:02:15</p>
+            </div>
+            <div class="postheader"><h3>Installation Error Step 2  MySQL version 4110</h3></div>
+				
+			<div class="body">
+				<p>Details below:<br />
+<br />
+  Operating system ATutor is installed on - Linux<br />
+  Apache 2.2.9<br />
+  ATutor version - 1.6.2<br />
+  PHP version - 5.26<br />
+  MySQL version - 4.1.10<br />
+  Web browser being used - Mozilla firefox 2.0.0.18<br />
+  error messages -  <br />
+<br />
+    Error* MySQL version 4.1.10-standard was detected. ATutor requires version 4.1.10 or later.<br />
+<br />
+What could the problem be??<br />
+The server i'm on meets the minimum requirements, and i've used the same database and others with success for  different applications, cms...<br />
+<br />
+Any help would be appreciated.<br />
+<br />
+Thanks<br />
+<br />
+ <br />
+  <br />
+[red] [/red]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15843"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-01 08:29:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation Error Step 2 - MySQL version 4.1.10</h3></div>
+				
+			<div class="body">
+				<p>You could try commenting out the line that generates the error message. Perhaps MySQL is not identifying itself properly.<br />
+<br />
+line 31 in<br />
+install/include/step2.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15845"></a>
+		<div class="forum-post-author">
+			<label class="title">tutubein</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-01 09:45:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation Error Step 2 - MySQL version 4.1.10</h3></div>
+				
+			<div class="body">
+				<p>Awesome! Your advice was simple but precise.<br />
+<br />
+Problem solved!!<br />
+<br />
+Thanks a lot!<br />
+<br />
+cheers</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

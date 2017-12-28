@@ -1,0 +1,193 @@
+---
+ title: ATutor upgrade problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor upgrade problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="10949"></a>
+		<div class="forum-post-author">
+			<label class="title">thurston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-06-30 02:03:58</p>
+            </div>
+            <div class="postheader"><h3>ATutor upgrade problem</h3></div>
+				
+			<div class="body">
+				<p>[system info= Apache-AdvancedExtranetServer/2.0.53 (Mandriva Linux/PREFORK-9.4.102mdk) mod_ssl/2.0.53 OpenSSL/0.9.7e PHP/4.3.1]<br />
+<br />
+I am trying to upgrade to 1.5.4 from 1.5.3.3 but get the following error:<br />
+<br />
+Warning: Invalid argument supplied for foreach() in ....ATutor/install/include/common.inc.php on line 136<br />
+<br />
+The initial installation status tests run ok, but the process hangs on this error in upgrade.php<br />
+<br />
+Any suggestions as to how I can sort this problem?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10951"></a>
+		<div class="forum-post-author">
+			<label class="title">thurston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 01:13:11</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor upgrade problem</h3></div>
+				
+			<div class="body">
+				<p>I still can't solve this problem!<br />
+<br />
+Could someone outline the process of using a clean installation to upgrade an existing one [i]without[/i] using the 'upgrade' option?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10952"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 08:39:20</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor upgrade problem</h3></div>
+				
+			<div class="body">
+				<p>I'd suggest first commenting out line 136, and the following two lines, in install/include/common.inc.php  then running the Upgrade again.<br />
+<br />
+The foreach loop at line 136 presents the feedback after each step. (so feedback won't be presented if its commented)<br />
+<br />
+If that fails, the manual process goes like this:<br />
+<br />
+1. move the original version and unpack the new version in its place<br />
+<br />
+2. take a backup of the original database (in case something goes wrong so it can be restored)<br />
+<br />
+2. copy the over the /include/config.inc.php file<br />
+<br />
+3. copy over the content directory<br />
+<br />
+4. run the SQL upgrade file install/include/db/atutor_upgrade_1.5.3.3_to_1.5.4.sql, either at the command prompt or using something like phpMyAdmin.<br />
+<br />
+<br />
+mysql -u adminuser -p atutor &lt; ./include/db/atutor_upgrade_x.x_to_y.y.sql<br />
+<br />
+<br />
+...where adminuser is the mysql admin users, and atutor is the name of the ATutor database<br />
+<br />
+5. download and install the language pack for 1.5.4<br />
+<br />
+http://www.atutor.ca/atutor/translate/index.php<br />
+<br />
+The manual upgrade process is described in the older upgrade instructions<br />
+http://www.atutor.ca/atutor/docs/installation_pre_1_3.php#upgrade</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10956"></a>
+		<div class="forum-post-author">
+			<label class="title">thurston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 10:15:55</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor upgrade problem</h3></div>
+				
+			<div class="body">
+				<p>Thanks a lot for your help...I'll let you know what happens.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10957"></a>
+		<div class="forum-post-author">
+			<label class="title">thurston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 10:54:18</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor upgrade problem</h3></div>
+				
+			<div class="body">
+				<p>I tried commenting out the parts of common.inc.php as suggested - the error message in my first post disappears but the upgrade process hangs at the first step (locate old version) and gives the following error:<br />
+<br />
+Fatal error: [] operator not supported for strings in ...cgibin/ATutor/install/include/ustep1.php on line 26<br />
+<br />
+So I suppose I should go for a manual upgrade?<br />
+<br />
+Do I need to have write permissions for the sql database in order to upgrade or is my existing database sufficient.<br />
+<br />
+Thanks again for any help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10958"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-01 11:39:27</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor upgrade problem</h3></div>
+				
+			<div class="body">
+				<p>The mysql user does need table create permissions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10968"></a>
+		<div class="forum-post-author">
+			<label class="title">thurston</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-02 05:09:16</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor upgrade problem</h3></div>
+				
+			<div class="body">
+				<p>Thanks.<br />
+<br />
+The people in charge of my network say that I might be do with php versions and the syntax of new functions.<br />
+<br />
+...so I'll go for the manual process.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

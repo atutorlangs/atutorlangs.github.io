@@ -1,0 +1,137 @@
+---
+ title: Image  Flash insert problems
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Image  Flash insert problems</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12120"></a>
+		<div class="forum-post-author">
+			<label class="title">jmokie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-02 16:30:10</p>
+            </div>
+            <div class="postheader"><h3>Image  Flash insert problems</h3></div>
+				
+			<div class="body">
+				<p>I have just downloaded the latest version of ATutor and installed it on my webserver www.azarchsoc.com/ATutor.<br />
+I am learniing to create content on course pages and have been able to create text content.  However when I try to insert flash or photos, I get nothing but a box where the photo/flash should go.  Like it couldn't find it.  I have changed folders for the source and have tried many different setting of the source location, but to no avail.<br />
+<br />
+Here is the source from my last attempt to put a flash object in:<br />
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="160" height="160">&lt;param name="movie" value="typpetro.swf" />&lt;param name="quality" value="high" />&lt;param name="menu" value="false" />&lt;param name="wmode" value="" />&lt;embed src="typpetro.swf" wmode="" quality="high" menu="false" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="160" height="160">&lt;/embed>&lt;/object><br />
+<br />
+I have the src in azarchsoc.com/atutor/typpetro.swf<br />
+The ATutor src is in azarchsoc.com/ATutor<br />
+<br />
+Also everytime I edit something puts additional back slashes in the code like:<br />
+<br />
+&lt;object classid=\\\\\\\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\\\\\\\" codebase=\\\\\\\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0\\\\\\\" width=\\\\\\\"160\\\\\\\" height=\\\\\\\"160\\\\\\\">&lt;param name=\\\\\\\"movie\\\\\\\" value=\\\\\\\"typpetro.swf\\\\\\\" />&lt;param name=\\\\\\\"quality\\\\\\\" value=\\\\\\\"high\\\\\\\" />&lt;param name=\\\\\\\"menu\\\\\\\" value=\\\\\\\"false\\\\\\\" />&lt;param name=\\\\\\\"wmode\\\\\\\" value=\\\\\\\"\\\\\\\" />&lt;embed src=\\\\\\\"/atutor/content/typpetro.swf\\\\\\\" wmode=\\\\\\\"\\\\\\\" quality=\\\\\\\"high\\\\\\\" menu=\\\\\\\"false\\\\\\\" pluginspage=\\\\\\\"http://www.macromedia.com/go/getflashplayer\\\\\\\" type=\\\\\\\"application/x-shockwave-flash\\\\\\\" width=\\\\\\\"160\\\\\\\" height=\\\\\\\"160\\\\\\\">&lt;/embed>&lt;/object><br />
+<br />
+Could really use some help here.<br />
+Jerry<br />
+<br />
+Things to describe: <br />
+  operating system - Linux  version of ATutor - 1.5.5<br />
+  versions of php -  <br />
+  version of mysq l - protocol v. 2<br />
+  webserver & version - <br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used - IE6 & Firefox 2.0.0.11<br />
+  phpMyAdmin - 2.8.0.1<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12121"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-02 18:37:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Image & Flash insert problems</h3></div>
+				
+			<div class="body">
+				<p>See the following for a solution to the slashes problem.<br />
+http://www.atutor.ca/view/7/11680/1.html<br />
+<br />
+For the flash content, try using the [media][/media] tags in your content, with the file's URL in between them. See the instructor handbook for details.<br />
+<br />
+Or you could try using the SWF insert button in the visual editor.<br />
+<br />
+Are you able to view the flash from another Web location?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12122"></a>
+		<div class="forum-post-author">
+			<label class="title">jmokie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-02 23:41:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Image & Flash insert problems</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg,<br />
+I replaced the files referred to in www.atutor.ca/view/7/11680/1.html, and lost the slashes fine.  <br />
+<br />
+I can't the media tags you refer to, I have used the Instructor Documentation @http://help.atutor.ca/instructor/<br />
+And I have checked the ATutor Handbook<br />
+<br />
+When I use the "visual editor", to insert a gif file, it produces the following code:<br />
+&lt;img src="atutor/slide1.GIF" border="0" alt="Typical Petroglyph" title="Typical Petroglyph" /><br />
+<br />
+This results in the display of the alternate title "Typical Petroglyph" on the preview and nothing else.<br />
+<br />
+the atutor folder is on the same level as the ATutor folder.  When i use the full URL, :<br />
+&lt;img src="http://www.azarchsoc.com/atutor/slide1.GIF" border="0" alt="Typical Petroglyph" title="Typical Petroglyph" /><br />
+it works.  So I guess I have to use the full URL for all pictures?<br />
+<br />
+I find the same with the flash file.  I had hoped to use only the "../atutor/slide1.GIF" to get to the pictures or flash files.<br />
+<br />
+Not so?<br />
+Jerry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12130"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-12-03 09:15:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Image & Flash insert problems</h3></div>
+				
+			<div class="body">
+				<p>I can't tell you what the problem is. You should not need to use the full path. Path to files seem to work fine on our local installations.<br />
+<br />
+Are you working from an imported content package?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

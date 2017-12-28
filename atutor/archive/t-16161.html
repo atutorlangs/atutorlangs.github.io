@@ -1,0 +1,117 @@
+---
+ title: Change the default port
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Change the default port</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16161"></a>
+		<div class="forum-post-author">
+			<label class="title">EsqLegal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-29 22:35:02</p>
+            </div>
+            <div class="postheader"><h3>Change the default port</h3></div>
+				
+			<div class="body">
+				<p>It was suggested in an earlier response that I use another port to run ATutor... How do I specify the port number?<br />
+<br />
+Operating system ATutor is installed on - Win XP SP2<br />
+ATutor version - latest ATutor2Go 1.5.5.<br />
+Patch #s applied - ...<br />
+ATutor theme name - ...<br />
+PHP version - included in 2Go version<br />
+MySQL version - included in 2Go version<br />
+Webserver & version - none<br />
+Copies of error messages - ...<br />
+Changes to default settings - none<br />
+Web browser being used - Firefox 3<br />
+...and anything else relevant -<br />
+<br />
+I already have a XAMPP version of Moodle on my laptop but even when I shut down Moodle's included Apache and MySQL by clicking on "StopMoodle.exe" I cannot get the ATutor local site to come up using localhost:4001 as directed in the instructions.<br />
+<br />
+Moodle also requires that I surf to localhost to use its XAMPP version as well, but I think it uses port 80, so I don't know why ATutor won't start if it's using port 4001.<br />
+<br />
+It was suggested that I try port 1880, but I don't know how to specify the port.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16162"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-30 08:34:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Change the default port?</h3></div>
+				
+			<div class="body">
+				<p>google<br />
+<br />
+"change port apache"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16169"></a>
+		<div class="forum-post-author">
+			<label class="title">EsqLegal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-30 23:23:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Change the default port?</h3></div>
+				
+			<div class="body">
+				<p># Listen: Allows you to bind Apache to specific IP addresses and/or<br />
+# ports, instead of the default. See also the &lt;VirtualHost><br />
+# directive.<br />
+#<br />
+# Change this to Listen on specific IP addresses as shown below to <br />
+# prevent Apache from glomming onto all bound IP addresses (0.0.0.0)<br />
+#<br />
+#Listen 12.34.56.78:80<br />
+Listen %CDPMS:HOST%:%CDPMS:PORT%<br />
+<br />
+Ok, fine... how do I specify the port you suggested?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16240"></a>
+		<div class="forum-post-author">
+			<label class="title">EsqLegal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-10 22:06:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Change the default port?</h3></div>
+				
+			<div class="body">
+				<p>Well, thanks for nothing.<br />
+<br />
+I'll stick with Moodle.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

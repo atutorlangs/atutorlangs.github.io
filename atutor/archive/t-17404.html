@@ -1,0 +1,111 @@
+---
+ title: Photo album stopped working
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Photo album stopped working</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17404"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-13 08:02:31</p>
+            </div>
+            <div class="postheader"><h3>Photo album stopped working</h3></div>
+				
+			<div class="body">
+				<p>hia, after we upgraded our server to php 5.1.6 the Photo Album module has stopped working for some reason. No output is shown for students, instructors or admins after the header is included, see screenshot:<br />
+<br />
+http://skitch.com/vegardjo/bxr9p/helsekompetanse.no-fotoalbum<br />
+<br />
+I have tried to download it again, but that didn't help. This is the only problem we've had after upgrading. I also have a different server with php 5.2.9 where this works fine, and it worked fine on php 4. it's not theme related either. <br />
+<br />
+..so is there anything this module requires that no other mods do? any server settings that needs to be enabled?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17416"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-14 06:04:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Photo album stopped working..</h3></div>
+				
+			<div class="body">
+				<p>Looks like a function incompatible with your version of PHP is used in the code. You can check the server error log (/var/log/httpd/error_log or something like that) for PHP errors.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17421"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-14 09:41:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Photo album stopped working..</h3></div>
+				
+			<div class="body">
+				<p>thanks, you are right - seems like the photo album needs pear installed, which it wasn't on our new server. I'll report back if this solves the problem :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17437"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-15 03:12:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Photo album stopped working..</h3></div>
+				
+			<div class="body">
+				<p>which it did - installed php-pear and all is back to normal, thanks again! :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17438"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-05-15 03:16:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Photo album stopped working..</h3></div>
+				
+			<div class="body">
+				<p>Which is, strictly speaking, not the thing that I suspected.<br />
+Anyways, glad to hear that the module's back to normal.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

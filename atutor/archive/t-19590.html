@@ -1,0 +1,127 @@
+---
+ title: Common Cartridge import error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Common Cartridge import error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19590"></a>
+		<div class="forum-post-author">
+			<label class="title">alo</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-11 03:52:27</p>
+            </div>
+            <div class="postheader"><h3>Common Cartridge import error</h3></div>
+				
+			<div class="body">
+				<p>Operating system ATutor is installed on: www.fels.dk/lcms<br />
+  ATutor version: 1.6.4<br />
+  Patch #s applied: ALL (1-5)<br />
+  ATutor theme name: Default<br />
+  PHP version: 5.2.3 <br />
+  MySQL version: 5.0.37-community-nt<br />
+  <br />
+<br />
+I get an import error when trying to import a Common Cartrige Course to my ATutor installation:<br />
+<br />
+[i]The following errors occurred:<br />
+Import failed. Does not appear to be a valid content package or common cartridge: <br />
+Error 3063: complex type 'language': The content type must specify a particle. in file:///C%3A/websider/fels.dk/httpdocs/LCMS/tools/ims/domainProfile_1/elementTypes_localised.xsd on line 137[/i]<br />
+<br />
+[b]Ive tried to import the same package to your DEMO server without any problems.[/b]<br />
+<br />
+Can you help me?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19596"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-12 14:01:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Common Cartridge import error</h3></div>
+				
+			<div class="body">
+				<p>I tried reproducing the problem on multiple server, all using apache, without any problems. My guess is its something to do with IIS.  We generally recommend against using it, at least for a production ATutor environment.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22032"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-12 07:40:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Common Cartridge import error</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux<br />
+  ATutor version - 2.0.2<br />
+  Patch #s applied - None Needed<br />
+  ATutor theme name - Default<br />
+  PHP version - 5.x<br />
+  MySQL version - 5<br />
+  Webserver & version - don't know (GoDaddy)<br />
+  Copies of error messages - XML error: Not well-formed (invalid token) at line 1<br />
+  Changes to default settings - no<br />
+  Web browser being used - Safari and Firefox<br />
+  ...and anything else relevant - <br />
+<br />
+I cannot import a common cartridge I exported due to xml error reported above. Same result on demo server.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Operating system ATutor is installed on: www.fels.dk/lcms<br />
+  ATutor version: 1.6.4<br />
+  Patch #s applied: ALL (1-5)<br />
+  ATutor theme name: Default<br />
+  PHP version: 5.2.3 <br />
+  MySQL version: 5.0.37-communit...<br />
+[op]forums/view.php?fid=7&pid=19590&page=1#19590[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22034"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-12 09:27:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Common Cartridge import error</h3></div>
+				
+			<div class="body">
+				<p>I can confirm that CC importing on the demo site works okay, so this is likely a problem with foreign characters in your content. This often occurs when content is copied and pasted from MS Word for instance. The quote characters often do not copy properly, and end up breaking a cartridge or content package.<br />
+<br />
+Try exporting a single page, then a folder, then a larger unit to determine where the break occurs. Then go through the content, delete any quote marks, then retype them.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

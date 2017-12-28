@@ -1,0 +1,135 @@
+---
+ title: Creating another Administrator
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Creating another Administrator</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="15911"></a>
+		<div class="forum-post-author">
+			<label class="title">mrtrenth</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-08 14:47:21</p>
+            </div>
+            <div class="postheader"><h3>Creating another Administrator</h3></div>
+				
+			<div class="body">
+				<p>Operating system ATutor is installed on - Linux 2.6.24.3-grsec-sg1<br />
+  ATutor version - 1.6.1<br />
+  Patch #s applied - 01 through 12<br />
+  ATutor theme name -<br />
+  PHP version - 5.2.5<br />
+  MySQL version - 4.1.22-standard-log<br />
+  Webserver & version -<br />
+  <br />
+Hello - I am new to Atutor and I am loving it.<br />
+<br />
+My site is hosted at Site Ground. <br />
+<br />
+I am trying to ad another Administrator, but I get the following error message each time I try:<br />
+<br />
+ You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'privileges, last_login) VALUES ('superman_42',' at line 7</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15914"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-08 15:15:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating another Administrator</h3></div>
+				
+			<div class="body">
+				<p>Hi, can you confirm something with me please.  Open up admin/admins/create.php<br />
+line 102, line 119<br />
+<br />
+does it say <br />
+`privileges`,<br />
+<br />
+or <br />
+privileges,<br />
+<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15916"></a>
+		<div class="forum-post-author">
+			<label class="title">mrtrenth</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-08 17:55:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating another Administrator</h3></div>
+				
+			<div class="body">
+				<p>privileges</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15930"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-09 09:50:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating another Administrator</h3></div>
+				
+			<div class="body">
+				<p>I believe some old versions of mysql breaks on sensitive keywords like privileges, it requires backquotes around them.<br />
+<br />
+Please apply patch 13 and let me know if the problem persists.  Thanks.<br />
+<br />
+<br />
+-harris</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15933"></a>
+		<div class="forum-post-author">
+			<label class="title">mrtrenth</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-09 12:01:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating another Administrator</h3></div>
+				
+			<div class="body">
+				<p>Patch 13 worked.<br />
+<br />
+I really appreciate your assistance.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

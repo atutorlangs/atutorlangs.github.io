@@ -1,0 +1,163 @@
+---
+ title: Installing Tutor on CentOS 7 server
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installing Tutor on CentOS 7 server</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="26136"></a>
+		<div class="forum-post-author">
+			<label class="title">PWither2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-01-08 10:26:28</p>
+            </div>
+            <div class="postheader"><h3>Installing Tutor on CentOS 7 server</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - CentOS 7<br />
+  ATutor version - 2.2.2<br />
+  ATutor theme name -N/A<br />
+  PHP version -5.6.29<br />
+  MySQL version - 5.7.17<br />
+  Webserver & version - Apache 2.4.6<br />
+  <br />
+After following the installation instructions for new installation, I get to the first log-in screen I see the following text:<br />
+<br />
+[i][ the_follow_errors_occurred ]<br />
+<br />
+    [ AT_ERROR_DB_QUERY ] [/i]<br />
+<br />
+When I looked at the error_log, it tells me that three tables are missing from the schema:<br />
+* themes<br />
+* language_text<br />
+* courses<br />
+<br />
+It also says it doesn't like the use of the date() function because the time zone hasn't been set.<br />
+<br />
+What is odd is that when I go through the installation process, it reports that the three tables were successfully created. But when I go to MySQL they don't exist.<br />
+<br />
+I have attached a text document with my error log first and then the text showing what tables were created.<br />
+<br />
+Is the installation process creating the tables, then dropping them?<br />
+<br />
+Help please!<br />
+<br />
+Cheers,<br />
+Paul:(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26137"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-01-08 15:54:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Tutor on CentOS 7 server</h3></div>
+				
+			<div class="body">
+				<p>See if the answer on StackOverflow helps. There is probably a timezone setting missing, or misset, in php.ini <br />
+<br />
+http://stackoverflow.com/questions/16765158/date-it-is-not-safe-to-rely-on-the-systems-timezone-settings</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26138"></a>
+		<div class="forum-post-author">
+			<label class="title">PWither2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-01-08 17:40:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Tutor on CentOS 7 server</h3></div>
+				
+			<div class="body">
+				<p>For some reason the system seems to be creating and then dropping these tables:<br />
+- admins<br />
+- language_text<br />
+- members<br />
+- courses<br />
+<br />
+By going through the install sql scripts I was able to go in and separated recreate these tables, which seemed to eliminate the errors, however, there continue to be issues:<br />
+<br />
+* [Sun Jan 08 17:14:06.152733 2017] [:error] [pid 6136] [client ::1:38442] Incorrect date value: '0000-00-00' for column 'dob' at row 1\nSQL: INSERT INTO AT_members (member_id, login, password, email, website, first_name, second_name, last_name, dob, gender, address, postal, city, province, country, phone, status,preferences, creation_date, language, inbox_notify, private_email, last_login) VALUES (NULL,'PaulW','c7blahblahblah4d','pwithier2@blah.net','','Paul','','Wither2','0000-00-00','n', '','','','','', '',3,'', NOW(),'en', 0, 1, '0000-00-00 00:00:00'), referer: http://localhost/ATutor/install/install.php<br />
+* [Sun Jan 08 17:17:49.245195 2017] [:error] [pid 31043] [client ::1:38470] PHP Warning:  require(/var/www/html/ATutor/themes/../themes//theme.cfg.php): failed to open stream: No such file or directory in /var/www/html/ATutor/include/vitals.inc.php on line 314, referer: http://localhost/ATutor/login.php?submit=%C2%BB+Log-in%21<br />
+<br />
+I did notice the follow errors when I was creating these tables from your scripts:<br />
+<br />
+- When creating date fields, it rejected default dates of "0000-00-00" required  something like "1950-01-01'<br />
+- When creating timestamp field is required a date after "1970-01-01"<br />
+<br />
+Adding the tables got me further along, but the system still didn't create an account for me. It did create an administrator's account, however.<br />
+<br />
+Cheers,<br />
+PW</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26139"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-01-08 17:51:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Tutor on CentOS 7 server</h3></div>
+				
+			<div class="body">
+				<p>It would then seem like the error is because MySQL is set to strict mode, added in MySQL v5.7+ <br />
+<br />
+http://stackoverflow.com/questions/36374335/error-in-mysql-when-setting-default-value-for-date-or-datetime/36374690#36374690<br />
+<br />
+We'll make a note of it, and work a fix into the next release.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26140"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-01-08 17:57:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Tutor on CentOS 7 server</h3></div>
+				
+			<div class="body">
+				<p>In the meantime, disable strict mode as described in the stackoverflow post, and you should be good to go.<br />
+<br />
+The next release is at least a couple months away.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

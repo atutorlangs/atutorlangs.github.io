@@ -1,0 +1,122 @@
+---
+ title: Content pane to right
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Content pane to right</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12799"></a>
+		<div class="forum-post-author">
+			<label class="title">sw0rdfish</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-09 00:55:42</p>
+            </div>
+            <div class="postheader"><h3>Content pane to right</h3></div>
+				
+			<div class="body">
+				<p>Hey friends,<br />
+<br />
+I am using Atutor 1.6 Latest. I like to how to move the pane from left side to right side in the default theme?<br />
+<br />
+Thanks<br />
+<br />
+Robin</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12821"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-11 10:30:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Content pane to right</h3></div>
+				
+			<div class="body">
+				<p>Add the following to the end of the default themes's style.css file.<br />
+<br />
+<br />
+[php]<br />
+<br />
+h2.page-title {<br />
+	clear:left<br />
+}<br />
+h2, h3, h4, h5, h6 {<br />
+   	 clear: left;<br />
+}<br />
+#contentcolumn_shiftright {<br />
+	margin-right: 17em;<br />
+}<br />
+#leftcolumn{<br />
+	float: right;<br />
+}<br />
+<br />
+[/php] <br />
+<br />
+You'll will also need to adjust the hide/show menu link, which is hard coded into the default/include/header.tmpl.php file, floating the link to the right, instead of its current left alignment.<br />
+<br />
+This last adjustment should actually be done in the stylesheet, but is mistakenly done in the template. It been reported it as a bug.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12836"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-11 15:47:45</p>
+            </div>
+            <div class="postheader"><h3>Re: Content pane to right</h3></div>
+				
+			<div class="body">
+				<p>We published an updated version of the Default 1.6 theme todays, which includes a few bug fixes, as well as a block in the main stylesheet that you can uncomment to move the menu over to the right.<br />
+<br />
+<br />
+http://www.atutor.ca/atutor/themes/index.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12949"></a>
+		<div class="forum-post-author">
+			<label class="title">islander</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-25 15:40:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Content pane to right</h3></div>
+				
+			<div class="body">
+				<p>Greg, would these changes have been incorporated into the 1.6 program download after Feb 11, 2008?<br />
+<br />
+I would like to be able to move the content navigation menu.  Also, the content of pages are displaying below where the side menu ends rather than beside it.  (When looking at a page it appears to be empty - unless you scroll to the bottom of the page)<br />
+<br />
+Using IE6 as a browser.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

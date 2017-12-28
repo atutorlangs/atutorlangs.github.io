@@ -1,0 +1,121 @@
+---
+ title: removing a Tab
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>removing a Tab</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6096"></a>
+		<div class="forum-post-author">
+			<label class="title">sinus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-16 23:48:22</p>
+            </div>
+            <div class="postheader"><h3>removing a Tab</h3></div>
+				
+			<div class="body">
+				<p>how do i remove a Tab? i would like to remove Preferences tab but where do i do that?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6097"></a>
+		<div class="forum-post-author">
+			<label class="title">sinus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-17 02:29:30</p>
+            </div>
+            <div class="postheader"><h3>removed a tab</h3></div>
+				
+			<div class="body">
+				<p>hi, i managed to remove the Preferences Tab by editing header.tmpl.php<br />
+these lines:<br />
+	&lt;?php foreach ($this->top_level_pages as $page): ?><br />
+		&lt;?php <br />
+			if ($page[\'title\'] == \"Preferences\") //disable preferences tab. -wenbert<br />
+			{<br />
+				echo \"\";<br />
+			}<br />
+			else if ($page[\'url\'] == $this->current_top_level_page): ?><br />
+			&lt;li>&lt;a href=\"&lt;?php echo $page[\'url\']; ?>\" accesskey=\"&lt;?php echo ++$accesscounter; ?>\" title=\"&lt;?php echo $page[\'title\']; ?> Alt+&lt;?php echo $accesscounter; ?>\" class=\"active\">&lt;?php echo $page[\'title\']; ?>&lt;/a>&lt;/li><br />
+		&lt;?php else: ?><br />
+			&lt;li>&lt;a href=\"&lt;?php echo $page[\'url\']; ?>\" accesskey=\"&lt;?php echo ++$accesscounter; ?>\" title=\"&lt;?php echo $page[\'title\']; ?> Alt+&lt;?php echo $accesscounter; ?>\">&lt;?php echo $page[\'title\']; ?>&lt;/a>&lt;/li><br />
+		&lt;?php endif; ?><br />
+	&lt;?php endforeach; ?><br />
+if you have a better and safer solution, please notify me..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6098"></a>
+		<div class="forum-post-author">
+			<label class="title">sinus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-17 02:29:55</p>
+            </div>
+            <div class="postheader"><h3>removed a tab</h3></div>
+				
+			<div class="body">
+				<p>hi, i managed to remove the Preferences Tab by editing header.tmpl.php<br />
+these lines:<br />
+	&lt;?php foreach ($this->top_level_pages as $page): ?><br />
+		&lt;?php <br />
+			if ($page[\'title\'] == \"Preferences\") //disable preferences tab. -wenbert<br />
+			{<br />
+				echo \"\";<br />
+			}<br />
+			else if ($page[\'url\'] == $this->current_top_level_page): ?><br />
+			&lt;li>&lt;a href=\"&lt;?php echo $page[\'url\']; ?>\" accesskey=\"&lt;?php echo ++$accesscounter; ?>\" title=\"&lt;?php echo $page[\'title\']; ?> Alt+&lt;?php echo $accesscounter; ?>\" class=\"active\">&lt;?php echo $page[\'title\']; ?>&lt;/a>&lt;/li><br />
+		&lt;?php else: ?><br />
+			&lt;li>&lt;a href=\"&lt;?php echo $page[\'url\']; ?>\" accesskey=\"&lt;?php echo ++$accesscounter; ?>\" title=\"&lt;?php echo $page[\'title\']; ?> Alt+&lt;?php echo $accesscounter; ?>\">&lt;?php echo $page[\'title\']; ?>&lt;/a>&lt;/li><br />
+		&lt;?php endif; ?><br />
+	&lt;?php endforeach; ?><br />
+if you have a better and safer solution, please notify me..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6190"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-01 12:49:24</p>
+            </div>
+            <div class="postheader"><h3>removing tabs</h3></div>
+				
+			<div class="body">
+				<p>hi, you can change tabs easily by editing include/lib/menu_pages.inc.php at the top of the file<br />
+<br />
+change <br />
+<br />
+$_pages[AT_NAV_START]  = array('users/index.php',  'users/profile.php', 'users/preferences.php');<br />
+<br />
+to<br />
+<br />
+$_pages[AT_NAV_START]  = array('users/index.php',  'users/profile.php');</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

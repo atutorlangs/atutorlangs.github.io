@@ -1,0 +1,186 @@
+---
+ title: import on linux has problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>import on linux has problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="256"></a>
+		<div class="forum-post-author">
+			<label class="title">khajehnejad</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-07-28 09:05:15</p>
+            </div>
+            <div class="postheader"><h3>import on linux has problem</h3></div>
+				
+			<div class="body">
+				<p>I export my cources from atutor 1.1 and now I can import them to atutor1.2 on windows (apache + mysql) but I can not import them into atutor on linux?<br />
+why?<br />
+please help me as soon as possible.<br />
+khajehnejad.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="257"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-07-28 09:33:23</p>
+            </div>
+            <div class="postheader"><h3>Content directory permissions</h3></div>
+				
+			<div class="body">
+				<p>We have not had any reports of trouble importing into an ATutor system on Linux. <br />
+<br />
+Have you set the content directory to be writable?<br />
+<br />
+Has the max_upload_filesize variable in php.ini been reduced from its default 2mb. It should not be reduced, in fact you may want to increase this value to you can upload larger courses.<br />
+<br />
+I suspect this is a configuration problem on your server. We import and export course everyday on Linux system without any trouble.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="270"></a>
+		<div class="forum-post-author">
+			<label class="title">khajehnejad</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-07-30 11:17:40</p>
+            </div>
+            <div class="postheader"><h3>just send the "document contains no data" alert</h3></div>
+				
+			<div class="body">
+				<p>I import a course to ATutor on windows OS and ir work correctly, but on linux:<br />
+I increase the maximum upload file size in php.ini to 4MB. and set chmod -R a+rwx content. but when I import the same course,  ATutor 1.2.1 alert "The document contains no data" ! <br />
+why? <br />
+help me please,<br />
+thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="283"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-05 17:49:20</p>
+            </div>
+            <div class="postheader"><h3>Windows export problem fixed</h3></div>
+				
+			<div class="body">
+				<p>We've released an update V1.2.2 that fixes the Windows exporting problem. You should now be able to export/import between OSs.<br />
+<br />
+For other Windows users, V1.2.2 replaces V1.2 and V1.2.1.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="292"></a>
+		<div class="forum-post-author">
+			<label class="title">khajehnejad</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-09 06:41:41</p>
+            </div>
+            <div class="postheader"><h3>????</h3></div>
+				
+			<div class="body">
+				<p>1. my server is RedHat 9 and itself install php, apache & mysql. (php 4.2.2) <br />
+2. I change the owner of all files in ATutor folder to apache and change the their mod to 777. <br />
+3. I never change max file size and post size on php.ini and config.inc.php<br />
+4. I import a course (that it has imported correctly on windows server). a few second the progress bar work and sudenly it alert "the document contains no data" and abort after I OK<br />
+5. my course size is under 1 MB.<br />
+6. I install zlib.1.1.4-8<br />
+7. what dos it work? it  make a 700 mod directory named import and create (for example 4) a folder named 4. 4 contains some csv files and an empty content foleder.  but it copy the imported files to ATutor/content/4 ! (on windows it copied the imported file into ATutor/content/import/5/content and work correctly)  I manually copied them into ATutor/content/5 but didn't work.<br />
+by the way, after wrong import, noting insert to content table<br />
+so I  can not see anything.why? this version of  mysql has been installed by RedHat 9. <br />
+<br />
+what should I do?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="293"></a>
+		<div class="forum-post-author">
+			<label class="title">khajehnejad</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-09 06:45:25</p>
+            </div>
+            <div class="postheader"><h3>4 is 5</h3></div>
+				
+			<div class="body">
+				<p>sorry , somewhere I write 4 and the otherwhere 5. 4 is 5</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="294"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-09 07:49:33</p>
+            </div>
+            <div class="postheader"><h3>More info</h3></div>
+				
+			<div class="body">
+				<p>Send us a url to a phpinfo page for both your Windows and Linux machines, and access information for ATutor on each system so we can login.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="300"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-11 10:12:53</p>
+            </div>
+            <div class="postheader"><h3>Upgrade to 1.2.2</h3></div>
+				
+			<div class="body">
+				<p>You need to upgrade your systems to ATutor V1.2.2, which includes the windows export bug fix.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

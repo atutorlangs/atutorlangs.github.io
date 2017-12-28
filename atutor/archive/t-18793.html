@@ -1,0 +1,206 @@
+---
+ title: Parse error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Parse error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18793"></a>
+		<div class="forum-post-author">
+			<label class="title">hal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-29 22:31:32</p>
+            </div>
+            <div class="postheader"><h3>Parse error</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux<br />
+  ATutor version - 1.6.3<br />
+  Patch #s applied -<br />
+  ATutor theme name - default<br />
+  PHP version - 5.0.4<br />
+  MySQL version - 4.1.22<br />
+  Webserver & version - apache 2<br />
+  Copies of error messages - Parse error: parse error, unexpected T_ARRAY, expecting '&' or T_VARIABLE in /test-atutor/mods/_standard/social/lib/BlobCrypter.php on line 40<br />
+  <br />
+This error occurs when trying to access a course.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18796"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-30 11:47:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Parse error</h3></div>
+				
+			<div class="body">
+				<p>Hi, <br />
+<br />
+I can't reproduce it.  Can you give me more information please.  Which page were you on when you experience this error?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18803"></a>
+		<div class="forum-post-author">
+			<label class="title">hal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-30 16:34:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Parse error</h3></div>
+				
+			<div class="body">
+				<p>I created a course as a teacher, the course is successfully created, display it in the courses of the teacher, when I click on the course I get the error page (parse error ...)<br />
+<br />
+Since ATutor was installed for a test I can give you the url and login information.<br />
+url: http://www.web-libero.it/test-atutor/<br />
+	<br />
+Administrator:<br />
+login name = admin<br />
+password = admin<br />
+<br />
+Teacher:<br />
+login name = andrea<br />
+Password = andrea<br />
+<br />
+If you login as a teacher find a course called "aaa", if you try to access the course you have the error page.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18804"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-01 09:40:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Parse error</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the access.  I am not sure why you are getting this error.  I will investigate.<br />
+<br />
+Edited:<br />
+Can you do me a favor and try adding a "?>" at the end of the file?<br />
+<br />
+Do this for BasicBlobCrypter.php, BasicSecurityToken.php, BlobCrypter.php, Crypto.php.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18805"></a>
+		<div class="forum-post-author">
+			<label class="title">hal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-01 11:18:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Parse error</h3></div>
+				
+			<div class="body">
+				<p>Thank you for the help you're giving me.<br />
+<br />
+I added "?>" At the end of the file you've indicated, but did not produce any effect.<br />
+	<br />
+ATutor in my pc works fine.<br />
+Windows Vista - Apache Web Server Version 2.2.8 - PHP Script Language Version 5.2.6 - MySQL Database Version 5.0.51b<br />
+<br />
+I tried to disable the function that gave error. 	<br />
+There have been other error messages that have involved other functions.<br />
+<br />
+These:<br />
+<br />
+file BlobCrypter.php<br />
+row 40: abstract public function wrap(Array $in)<br />
+<br />
+file BasicBlobCrypter.php<br />
+row 60: public function wrap(Array $in)<br />
+row 72: private function serializeAndTimestamp(Array $in)<br />
+row 122: private function checkTimestamp(Array $out, $maxAge)<br />
+<br />
+	<br />
+After disabling all functions are managed to enter the course.<br />
+	<br />
+Of course, I do not find the right solution.But I hope you can say something.<br />
+Now I have given everything to the initial situation.<br />
+with the addition of "?>" for BasicBlobCrypter.php, BasicSecurityToken.php, BlobCrypter.php, Crypto.php.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18806"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-01 11:31:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Parse error</h3></div>
+				
+			<div class="body">
+				<p>Thanks, can you try taking the "Array" out from the () and see if you still get the errors?<br />
+<br />
+I am wondering if it's a PHP version bug/problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18866"></a>
+		<div class="forum-post-author">
+			<label class="title">hal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-11 04:14:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Parse error</h3></div>
+				
+			<div class="body">
+				<p>Unfortunately, even with the changes you suggested those lines of code cause the error anyway.<br />
+I ran the "php debugger": the pages are correct.<br />
+So, I thought it was a problem with version of PHP. Like you said.<br />
+I updated the version of PHP to 5.2.5.<br />
+ATutor now works fine.<br />
+Thank Harris for his kindness and for the help they gave me. :)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

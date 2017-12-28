@@ -1,0 +1,219 @@
+---
+ title: Language Variables
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Language Variables</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2862"></a>
+		<div class="forum-post-author">
+			<label class="title">kami</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-25 02:06:24</p>
+            </div>
+            <div class="postheader"><h3>Language Variables</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+Some of the language variables defined in language area are not showing up. <br />
+For example: <br />
+[AT_HELP_CONTROL_CENTER1]<br />
+[AT_HELP_CONTROL_CENTER2<br />
+....................................<br />
+I am using  Atutor 1.4.2 on linux system and I was wondering if you can tell me what might be causing this.<br />
+<br />
+Thanks in advance.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2869"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-25 11:13:07</p>
+            </div>
+            <div class="postheader"><h3>which language</h3></div>
+				
+			<div class="body">
+				<p>Which language are you referring to?<br />
+<br />
+You may be able to manually add them to the lang2 table if they are missing.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2870"></a>
+		<div class="forum-post-author">
+			<label class="title">kami</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-25 11:31:52</p>
+            </div>
+            <div class="postheader"><h3>Language problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+Thanks a million for your reply.<br />
+I am using default english and farsi language.<br />
+I checked the lang2 and english language and the values<br />
+for the translation are already there.<br />
+It just that some of the values from language both for english and farsi are not loading up .<br />
+Below are a few which I am not getting any value for:<br />
+---------------------------------<br />
+[AT_HELP_CONTENT_PATH]	<br />
+[AT_HELP_CONTROL_CENTER1]<br />
+[AT_HELP_CONTROL_CENTER2]<br />
+AT_HELP_ADD_TEST]<br />
+=====================<br />
+As you can see from above all of the fields which are not showing up any value for are **help related values** and I have doulble checked to make sure a value is defined for them in language section.<br />
+<br />
+Thanks alot</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2871"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-25 11:37:10</p>
+            </div>
+            <div class="postheader"><h3>Use 1.4.2 language pack</h3></div>
+				
+			<div class="body">
+				<p>Sounds like you are using an old language pack. Install the one for 1.4.2.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2872"></a>
+		<div class="forum-post-author">
+			<label class="title">kami</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-25 12:11:45</p>
+            </div>
+            <div class="postheader"><h3>Language problem</h3></div>
+				
+			<div class="body">
+				<p>Hi again,<br />
+I deleted the old farsi language and downloaded the 1.4.2 pack and imported it and still the same problem.<br />
+Also the same exact problem with the default english language that came with the Atutor.<br />
+<br />
+I was wondering if it has anything to do with:<br />
+define('CACHE_DIR', '');<br />
+<br />
+That is how it appears in my config file.<br />
+Do I need to define a directory for cache if it is enabled??<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2873"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-25 12:39:47</p>
+            </div>
+            <div class="postheader"><h3>Empty your browser cahche</h3></div>
+				
+			<div class="body">
+				<p>Empty your browser's cache.<br />
+<br />
+You do not need to define a cache directory in config.inc.php. It can remain empty. <br />
+<br />
+If the problem continues, manually add them to the database, into the lang2 and lang_base tables. <br />
+<br />
+Not sure why they would be missing. We still can not reproduce this problem ourselves.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2874"></a>
+		<div class="forum-post-author">
+			<label class="title">kami</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-25 13:20:58</p>
+            </div>
+            <div class="postheader"><h3>Language problem</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+Sorry to keep bugging you again and thanks for your<br />
+help.<br />
+I emptied my browser cache and I also checked the database table for both languages.<br />
+All the values are already there.<br />
+<br />
+It is very strange as only the help and info related variables are not showing up. <br />
+Everything else is loading fine.<br />
+<br />
+Could this be caused by one or more corupted files and if yes what files are responsible for showing the language??<br />
+<br />
+Thanks again</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2875"></a>
+		<div class="forum-post-author">
+			<label class="title">kami</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-25 14:15:34</p>
+            </div>
+            <div class="postheader"><h3>Thanks</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+Thanks for the help and I was able to resolve the problem.<br />
+I had a corupted **output.inc.php** file.<br />
+<br />
+It is working fine now.<br />
+<br />
+Thanks again</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

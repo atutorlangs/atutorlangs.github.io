@@ -1,0 +1,585 @@
+---
+ title: Questions Missing
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Questions Missing</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21427"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-15 12:31:22</p>
+            </div>
+            <div class="postheader"><h3>Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Operating system ATutor is installed on - CentOS <br />
+  ATutor version - 2.0.1<br />
+  Patch #s applied - none, fresh install<br />
+  ATutor theme name - default<br />
+  PHP version - 5.2.10<br />
+  MySQL version - 5.0.77<br />
+  Web browser being used - Any<br />
+<br />
+This issue occured since I updated the database to the latest version through upgrade. Basically, the questions do not appear on the test, or in the admin backend test preview; however, upon editing the questions, the actual question is still there as illustrated in the attached screenshots.<br />
+<br />
+I have since tested this on a brand new install, so it must be something in the database, unless there is a setting in php that I am missing.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21429"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-15 14:15:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>What version did you upgrade from?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21430"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-15 15:00:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I want to say it was 1.6? Here is another caveat for you to think about - I moved this install from an upgrade to 2.0.1 that was functional on a Windows box, running XAMPP to a Linux Box running Centos5.<br />
+<br />
+Is there any php setting that you can think of that could cause this issue?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21432"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-15 15:27:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Its important to know the exact version you upgraded from. There was the conversion to UTF-8 at 1.6, and there were various updates to tests in the upgrade from 163 to 164.<br />
+<br />
+Copying ATutor from one OS to another is always a risky business. Unfortunately we don't have a CentOS system to test on, so we could only guess what might be causing the problem. If you don't have too many courses, you might consider a fresh install, then generating backups from the old install then moving those over one by one and restoring them in the new system.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21433"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-15 16:34:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+Thanks...I may look into the backup/replace option. Is there an easy way to do the same with users in the system? I suppose I could just dump the users/admin table and import into the new database?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21434"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-15 17:18:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Try setting up a test course on the new site, and importing a backup and just restoring the tests from the backup. If all goes well, you might try restoring the test into an existing course. <br />
+<br />
+You can also import/export tests on their own, as IMS QTI test packages. That might be another option for moving tests between the systems.<br />
+<br />
+There is a course list import/export feature, but not one for copying an entire list of registered users. In that case copying over the members table would be the best option, but only if you are copying over from 1.6 or later.<br />
+<br />
+If you do discover why questions are not showing up, please do let us know.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21445"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 14:35:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Just an update, this also happens with a brand new install...questions don't show up where they should.<br />
+<br />
+I have looked over php.ini for things that would cause the questions not to render or "pull" from the database, but I honestly can't find anything.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21446"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 15:16:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>I suppose I should have been clearer...with a new install, and new questions, this issue occurs.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Just an update, this also happens with a brand new install...questions don't show up where they should.<br />
+<br />
+I have looked over php.ini for things that would cause the questions not to render or "pull...<br />
+[op]forums/view.php?fid=7&pid=21427&page=1#21445[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21447"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 15:40:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Hi, <br />
+<br />
+I am curious why this is happening.  Can you open up mods/_standard/tests/html/tests_question.inc.php<br />
+<br />
+replace line 125~127 to the following:<br />
+<br />
+echo '&lt;a>'.htmlentities($row[question], ENT_QUOTES, 'UTF-8').'&lt;/a>';<br />
+<br />
+Do the questions show now?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21449"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 17:49:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>The questions actually started showing up in the question bank after this change; however, they still aren't showing up when taking or previewing tests.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Hi, <br />
+<br />
+I am curious why this is happening.  Can you open up mods/_standard/tests/html/tests_question.inc.php<br />
+<br />
+replace line 125~127 to the following:<br />
+<br />
+echo '<a>'.htmlentities($row[question], ENT...<br />
+[op]forums/view.php?fid=7&pid=21427&page=1#21447[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21450"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 18:38:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Can you check if you have mbstring enabled in your PHP?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21451"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 18:53:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>mbstring is enabled, with the following settings:<br />
+<br />
+Multibyte Support 	enabled<br />
+Multibyte string engine 	libmbfl<br />
+Multibyte (japanese) regex support 	enabled<br />
+Multibyte regex (oniguruma) version 	4.4.4<br />
+Multibyte regex (oniguruma) backtrack check 	On <br />
+mbstring.detect_order	no value	no value<br />
+mbstring.encoding_translation	Off	Off<br />
+mbstring.func_overload	0	0<br />
+mbstring.http_input	pass	pass<br />
+mbstring.http_output	pass	pass<br />
+mbstring.internal_encoding	no value	no value<br />
+mbstring.language	neutral	neutral<br />
+mbstring.strict_detection	Off	Off<br />
+mbstring.substitute_character	no value	no value<br />
+<br />
+<br />
+<br />
+Also, system is running PHP 5.2</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21452"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 19:00:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Thanks.  If you could also test this for me, revert the changes I suggested earlier.  <br />
+<br />
+Instead, edit the line 126 to the following:<br />
+<br />
+echo AT_print(htmlentities($row['question']), 'tests_questions.question');<br />
+<br />
+Do you still see the questions on the question bank?<br />
+<br />
+<br />
+Thanks for spending your time to trace this down with me.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21453"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 19:05:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Negative, questions not showing in question bank.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21454"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 19:06:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>And thank you for spending your time on this, it has certainly been an odd one.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21455"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-17 20:35:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Maybe a partial SQL dump of the question could hint at the cause of this bug?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21457"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-20 12:17:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Not that I mind giving a SQL dump, but this problem occurs on a brand new install as well. If you still think a SQL dump is relevant, I would be happy to post it :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21472"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-23 18:17:45</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Okay,<br />
+<br />
+After further inspection of my apache error log, I have noticed the following error (this is a brand new installation):<br />
+<br />
+PHP Warning: preg_replace() [a href='function.preg-replace'>function.preg-replace&lt;/a>: Compilation failed: unrecognized character after (? at offset 2 in /removedurl on line 810, referrer: http://removedurl/school/mods/_standard/tests/question_db.php <br />
+<br />
+<br />
+Does this help?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21473"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-23 18:37:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+http://atutor.ca/view/3/21206/1.html<br />
+<br />
+Wow..<br />
+[op]forums/view.php?fid=7&pid=21427&page=2#21472[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21474"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-23 18:53:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Did you copy and paste your questions from a word processor?<br />
+<br />
+If so, do your questions have any special characters, including quotes?<br />
+<br />
+Also, when you installed, did you upload the tar.gz file and unzip it on the server, or unzip it locally and upload the unzipped files?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21475"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-23 19:29:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I have tried both wget and unzip on server, and unzipping locally and uploading..<br />
+<br />
+This issue happens on a "fresh" install, and the one question that I typed in to test was typed by hand, no copy/paste.<br />
+<br />
+Is there a hidden php setting, apache setting, anything that could affect this? <br />
+<br />
+I don't have this issue on an XAMPP-based server running PHP 5.3,<br />
+but I have this issue on a CentOS server running PHP 5.2.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Did you copy and paste your questions from a word processor?<br />
+<br />
+If so, do your questions have any special characters, including quotes?<br />
+<br />
+Also, when you installed, did you upload the tar.gz file and ...<br />
+[op]forums/view.php?fid=7&pid=21427&page=2#21474[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21476"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-23 20:08:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>It's hard to say which PHP or MySQL settings might affect that (if any). If your questions use ASCII symbols only (i.e. Latin alphabet, digits and the usual punctuation marks), there's very, very little space for any such errors.<br />
+<br />
+Whatever the reason, I think there's a good chance that we'll find something in the DB.<br />
+So I'd suggest a few steps for you to try:<br />
+1. Try reducing the question to a bare minimum of characters that would still cause the problem (I imagine you should get a character or two in the end).<br />
+2. Get a SQL dump containing that single question (it's stored in AT_tests_questions table) and post it here.<br />
+3. Using that question, try reproducing the issue on ATutor's demo server: http://atutor.ca/atutor/demo.php<br />
+<br />
+Please let us know the results.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21526"></a>
+		<div class="forum-post-author">
+			<label class="title">dvickers79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-03 12:43:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Questions Missing</h3></div>
+				
+			<div class="body">
+				<p>I'm working on what you asked for Indie, my only hangup is that I can reproduce this on my box with a new database, and a brand new install of Atutor, with nothing old imported.<br />
+<br />
+The person in this thread seemed to run into the same problem:<br />
+<br />
+http://atutor.ca/view/3/21206/1.html<br />
+<br />
+I suppose since it was taken to priority support, the resolution was never posted; but, if you can find the solution to this user's issue, it might shed a little light.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

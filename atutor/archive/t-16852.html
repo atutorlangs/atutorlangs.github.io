@@ -1,0 +1,91 @@
+---
+ title: Configuring ATutor with Dyndns
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Configuring ATutor with Dyndns</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="16852"></a>
+		<div class="forum-post-author">
+			<label class="title">pwsoe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 10:03:03</p>
+            </div>
+            <div class="postheader"><h3>Configuring ATutor with Dyndns</h3></div>
+				
+			<div class="body">
+				<p>Hi all,<br />
+<br />
+I installed ATutor on a Linux server machine which had a public IP address. Everything was fine. Then, we needed that public IP address for something else and I had to use dyndns for ATutor server. <br />
+<br />
+We have a router on the network that has a web server which is using port 80. Thus, I decided to use port 8080 for ATutor's Apache server.(I chose something like - atutorserver.selfip.net:8080) After that, I tested it and it was fine. It was a few days ago. When I checked again today, the log in page for Atutor (login.php) shows blank. I have other HTML pages outside ATutor folders and they are still accessible. I don't know what the problem is. I tried restarting Apache and it started ok. Can someone help me?<br />
+<br />
+Thanks a lot.<br />
+<br />
+Operating system ATutor is installed on - Kubuntu 8.10<br />
+ATutor version - 1.6.2<br />
+Patch #s applied - 13<br />
+ATutor theme name - Default<br />
+PHP version - 5.2.4<br />
+MySQL version - 5.0.51a<br />
+Webserver & version - Apache 2.2.8<br />
+Changes to default settings - none<br />
+<br />
+Web browser being used - FireFox 3 and InternetExplorer 7</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16856"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 11:18:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Configuring ATutor with Dyndns</h3></div>
+				
+			<div class="body">
+				<p>We're not familiar with dyndns. <br />
+<br />
+You might start by telling them what you've  described here. If it was working yesterday but not today, something on the server likely changed.<br />
+<br />
+The change in ports should not be a problem.<br />
+<br />
+ATutor is generated HTML, unlike usual static HTML pages. So there could be a problem with the PHP, mysql, or maybe the apache configuration.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16868"></a>
+		<div class="forum-post-author">
+			<label class="title">pwsoe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 09:40:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Configuring ATutor with Dyndns [SOLVED]</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+Thanks so much for the suggestion. It was indeed a wrong configuration in MySQL's config file. I changed the IP address of the server and forgot to update the address in the my.cnf file.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

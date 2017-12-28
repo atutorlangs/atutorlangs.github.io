@@ -1,0 +1,81 @@
+---
+ title: IP changed could not enter into Atutor system
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>IP changed could not enter into Atutor system</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="17100"></a>
+		<div class="forum-post-author">
+			<label class="title">juwenfei</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-06 13:19:25</p>
+            </div>
+            <div class="postheader"><h3>IP changed could not enter into Atutor system</h3></div>
+				
+			<div class="body">
+				<p>Before I describe my question, I should say I am too new to be a user of atutor, forgive me if i make mistakes.<br />
+<br />
+My IP is provided by DHCP, the machine with atutor is always online so not to change the address. But one day the address was changed by the DHCP server from 192.168.19.38 to 192.168.19.146, after that I could not enter my atutor system.(I know its not a good idea to do so in a dhcp environment, but I had to.)<br />
+<br />
+I reviewed my MySQL database, and updated the home_url in table AT_config, from "http://192.168.19.38/atutor" to "http://192.168.19.146/atutor" by SQL command Update. I took for granted that this could solve the problem.<br />
+<br />
+But,then I receive a fatal error message in my browser like this :"Fatal error: Call to a member function printErrors() on a non-object in /var/www/atutor/include/phpCache/phpCache.inc.php on line 527"<br />
+<br />
+I reviewed the phpCache.inc.php and turned the debug mode on, the only thing I could get from debugging is "Debug: Creating cache storage".<br />
+<br />
+I updated the home_url field in AT_config table back to 192.168.19.38/atutor, and set my ip manually as 192.168.19.38,tried to solve it, but it still could not work, the browser displays the same message.<br />
+<br />
+Could you pls give me some hint to resolve this problem? Thank you so much!<br />
+<br />
+ <br />
+<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -ubuntu 8.10<br />
+  ATutor version - recent version (The newest version, sorry ,I cannot enter into it, that's why I forget it.)<br />
+  Patch #s applied - none<br />
+  ATutor theme name - default<br />
+  PHP version - 5.2.6<br />
+  MySQL version - 5.0.67<br />
+  Webserver & version - apache 2.0<br />
+  Copies of error messages -<br />
+<br />
+Debug: Creating cache storage<br />
+<br />
+Fatal error: Call to a member function printErrors() on a non-object in /var/www/atutor/include/phpCache/phpCache.inc.php on line 527<br />
+<br />
+  Changes to default settings - none<br />
+  Web browser being used - Firefox 3.0<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17104"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-06 16:34:53</p>
+            </div>
+            <div class="postheader"><h3>Re: IP changed, could not enter into Atutor system.</h3></div>
+				
+			<div class="body">
+				<p>changing home_url should have worked. Maybe you have an old session running, dump your browser's cache or restart it, or try a different browser.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

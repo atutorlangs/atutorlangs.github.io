@@ -1,0 +1,463 @@
+---
+ title: Move to new server
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Move to new server</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25027"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-03 12:57:41</p>
+            </div>
+            <div class="postheader"><h3>Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+We're in the process of moving our site to a new host and have transferred ATutor over. This was done by downloading the whole folder and ftp to the new host. I then renamed the ATutor folder and downloaded the latest version - uploaded to the server and unzipped on the server. Changed permissions where necesary.<br />
+<br />
+I then ran the upgrade routine which sees the old installation but the upgrade hangs on the upgrade screen - it's just blank. If I'm doing this all wrong - can you advise as to the best way to move it? Backing up courses and uploading them is not an option.<br />
+<br />
+php is versiion 5.4.30 with mbstring enabled<br />
+Apache version 2.4.9<br />
+MySQL version 5.5.36-cll<br />
+<br />
+<br />
+Thanks in advance<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25028"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-03 17:20:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>I would suggest taking a look at the end of the php_error.log file for your system, wherever its located, to see if there are any clues there.<br />
+<br />
+Have you confirmed ATutor is working properly after the move, before attempting to upgrade. I assume you also copied over the mysql database.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25032"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-04 17:19:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg, thanks for getting back to me.  Nope it is not working. Getting a server 500 error and I can't find the php_error.log file. Yes - I imported the database.<br />
+<br />
+Would it be better to start a fresh installation? Would I be able to then import the database and content?<br />
+<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25033"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-04 18:00:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg, thanks for getting back to me.  Nope it was not working. Had a server 500 error and I couldn't find the php_error.log file. Yes - I imported the database.<br />
+<br />
+OK - I now have installed a fresh copy and have ATutor working with a fresh database. So - how to get the courses in from the old installation?<br />
+<br />
+Thanks<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25034"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-05 09:14:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>You would generate course backups on the old server, either as an admin, under the Courses tab, or as an instructor under the Manage tab.<br />
+<br />
+Download the course backups, then create an empty shell for each course on the new server, then import and restore the backups in each of those shells.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25035"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-05 18:21:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+I assume you mean I create a course of the same name without content, then upload the backup and restore it.<br />
+<br />
+I uploaded one and received this error:<br />
+Error : PCLZIP_ERR_BAD_FORMAT (-10) : Invalid archive structure<br />
+<br />
+This has happened on previous occasions - I have  never been successful in uploading a backup - even on the old setup (v 2.1.1) which is why I thought it would not be an option. Is there a fix for this?<br />
+<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25036"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-06 09:10:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>There are a variety of reasons why this may occur. The most common results from pasting content from MSWord directly into ATutor. Typically quote characters from word documents are not standard quotes, and when these characters are zipped, they break the zip file. The only way to fix this issue is to go through your content and retype all quotes.<br />
+<br />
+You could try using the content packaging feature (manage>content>import/export) to export smaller chunks of the course content as a common cartidge, then import those to help narrow down where the quotes are in the content.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25037"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-06 09:16:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Yes - I thought you might say that. There are 3 of us here and whilst I have forbidden any Word content - it still creeps in! OK - will go through it and find the culprits.<br />
+<br />
+Is there another way to do this though - obviously we have many users on the system too and didn't really want to recreate them individually. Is it possible to import the database from the old to new or even the tables containing the users?<br />
+<br />
+Will it work to copy over the course content folders and then the whole database? Or is this just too hopeful!<br />
+<br />
+Thanks<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25038"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-06 09:28:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Your original plan was that, I gather. <br />
+<br />
+In a case like this you'd move everything from one server to the other, get it running, then run an upgrade. This would avoid having to deal with MS quotes. <br />
+<br />
+In the long run though, cleaning the content is probably something you do want to address.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25039"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-06 12:05:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>It was indeed the plan - I think I'll go back to that plan as the blank page problem during the installation I traced down to a permissions issue. So I'll give it another go and let you know how I get on. Thanks anyway Greg.<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25040"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-07 12:04:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>OK Greg<br />
+I renamed the new ATutor and back working on the old installation now to try to get it working. Still getting a 500 error page when going to login. Could you guide me as to where to start fixing this?<br />
+<br />
+I created a new database and then imported the tables from the old setup. Have checked permissions - all 755 on folders with 644 on the php files etc but still getting 500 error<br />
+<br />
+Many thanks<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25041"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-07 12:14:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Back to my original suggestion, see the tail of the php_error.log. <br />
+<br />
+If you are unable to find the file, it may be php error logging is not turned on. Do a quick search for "enable php error log" to find details on enabling error logging.<br />
+<br />
+You can also look at the apache error logs as well if nothing turns up in the php log.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25042"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-07 12:45:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Found error log for the site which showed that the ATutor folder itself had 777 permissions applied - made this 755 and now whilst I don't get a 500 error I am now seeing a blank page. <br />
+<br />
+Getting closer though. I'm sure this is a permission issue too - just can't remember now which! Any suggestions?<br />
+<br />
+Thanks for your perseverance Greg!<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25056"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-21 12:32:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Before purchasing tickets, who is your service provider?<br />
+<br />
+Permissions do not typically cause the problems you've described. It may be some other setting set by your provider.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25057"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-11-21 17:50:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+Host is 5Quidhost:<br />
+http://www.5quidhost.co.uk.<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25074"></a>
+		<div class="forum-post-author">
+			<label class="title">dalmer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-12-14 21:49:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>please I need your help, Im tryinmg to move entire site to another server, I copied entire files, I created a date base, I created a data base, I imported the database, I modified "include/config.inc.php" with  new parameters and the site is not showing. it only shows.<br />
+<br />
+_____<br />
+" Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/intutsx5/public_html/examen/include/vitals.inc.php on line 141<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/intutsx5/public_html/examen/include/vitals.inc.php:141) in /home/intutsx5/public_html/examen/include/vitals.inc.php on line 153 <br />
+____<br />
+<br />
+My new site is: http://inpedeslg.com/examen/<br />
+<br />
+Please help me..  <br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25075"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-12-15 09:00:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Double check your mysql login details, and be sure you have not added a trailing space at the end of the config file, particularly if you're edit file on a windows machine.<br />
+<br />
+Other than that, it could a corrupted file.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+please I need your help, Im tryinmg to move entire site to another server, I copied entire files, I created a date base, I created a data base, I imported the database, I modified "include/config.inc....<br />
+[op]forums/view.php?fid=7;pid=25027;page=2#25074[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25079"></a>
+		<div class="forum-post-author">
+			<label class="title">dalmer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-12-16 01:19:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg<br />
+Sorry but, Where can I find "mysql login details"? I uploaded all again and reviewed config file and there is no trailing spaces.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25080"></a>
+		<div class="forum-post-author">
+			<label class="title">dalmer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-12-16 01:32:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Move to new server</h3></div>
+				
+			<div class="body">
+				<p>I found the error, Thanks Greg<br />
+It was the config file. <br />
+<br />
+The data base prefix was in capitals "AT_"<br />
+and it must be "at_"</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

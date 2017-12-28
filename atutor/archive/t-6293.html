@@ -1,0 +1,280 @@
+---
+ title: Problems during installation in Requirements step
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problems during installation in Requirements step</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6293"></a>
+		<div class="forum-post-author">
+			<label class="title">reynierpm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-11 13:31:43</p>
+            </div>
+            <div class="postheader"><h3>Problems during installation in Requirements step</h3></div>
+				
+			<div class="body">
+				<p>I have Debian Sarge 3.1 installed on my server. Now I try to install Atutor but when I go trought the step "Requirements" I have this problem:<br />
+[quote] session.save_path  	Directory Not Writeable[/quote] <br />
+and I can't continue. I check the /var/lib/php4 that is the directory in where PHP store sessions vars and it is writable because another application using them. So how I can fix this problem??<br />
+<br />
+Cheers</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6329"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-17 10:53:36</p>
+            </div>
+            <div class="postheader"><h3>Problems during installation in Requirements step</h3></div>
+				
+			<div class="body">
+				<p>what version of atutor are you using?  the latest?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6330"></a>
+		<div class="forum-post-author">
+			<label class="title">reynierpm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-17 11:00:01</p>
+            </div>
+            <div class="postheader"><h3>Yes</h3></div>
+				
+			<div class="body">
+				<p>I have installed the latest version. Download few days ago.<br />
+Cheers</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6331"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-17 11:13:42</p>
+            </div>
+            <div class="postheader"><h3>Problems during installation in Requirements step</h3></div>
+				
+			<div class="body">
+				<p>do you have session cookies enabled?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6332"></a>
+		<div class="forum-post-author">
+			<label class="title">reynierpm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-17 11:26:41</p>
+            </div>
+            <div class="postheader"><h3>Yes</h3></div>
+				
+			<div class="body">
+				<p>Yes, see the session directives from php.ini file<br />
+<br />
+session.save_handler = files<br />
+session.use_cookies = 1<br />
+; session.use_only_cookies = 1<br />
+session.name = PHPSESSID<br />
+session.auto_start = 1<br />
+session.cookie_lifetime = 0<br />
+session.cookie_path = /<br />
+session.cookie_domain =<br />
+session.serialize_handler = php<br />
+gc_probability/gc_divisor,<br />
+session.cache_limiter = nocache<br />
+session.cache_expire = 180<br />
+session.use_trans_sid = 0<br />
+<br />
+As you can see cookies are enabled. I test another applications as vBulletin, Invision Board and it\'s work with cookies and sessions and not bring any problems to me.<br />
+<br />
+Cheers<br />
+Cheers</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6333"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-17 12:08:17</p>
+            </div>
+            <div class="postheader"><h3>session.save_path</h3></div>
+				
+			<div class="body">
+				<p>do you have cookies enabled in your browser?<br />
+<br />
+thinking that perhaps our check for session.save_path is not correct.  for now, comment out that part and continue with the install.<br />
+<br />
+i.e. comment out lines 186-198 in /install/index.php <br />
+<br />
+we'll look into it more tho..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6335"></a>
+		<div class="forum-post-author">
+			<label class="title">reynierpm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-17 12:27:46</p>
+            </div>
+            <div class="postheader"><h3>Good</h3></div>
+				
+			<div class="body">
+				<p>I comment the lines as you can say me and now it works fine.<br />
+Thanks<br />
+Regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6480"></a>
+		<div class="forum-post-author">
+			<label class="title">lsabug</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-01 14:23:15</p>
+            </div>
+            <div class="postheader"><h3>Install error on Step 2-fresh install</h3></div>
+				
+			<div class="body">
+				<p>Greetings, <br />
+I'm using the following for a new install of Atutor:<br />
+<br />
+  operating system - Windows NT 5.2 build 3790<br />
+  version of ATutor -  1.5.1<br />
+  versions of php - 5.0.5<br />
+  version of mysq l - 5<br />
+  webserver & version - IIS6 <br />
+  changes to default settings - None<br />
+  web browser being used - Firefox 1.06, IE 6<br />
+<br />
+I can open the index.php first step page no problem but when I click on continue I get the following error message:<br />
+<br />
+[i] Fatal error: session_start() [function.session-start]: Failed to initialize storage module: user (path: D:\PHP\sessions) in D:\Inetpub\wwwlearn\tutor\install\index.php on line 27[/i]<br />
+<br />
+I have session cookies enabled in PHP, and I did take a look at uncommenting lines 186-198 but I think the script is hanging right after line 27. <br />
+<br />
+Any advice or suggestions would be greatly appreciated.<br />
+Lsabug</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6481"></a>
+		<div class="forum-post-author">
+			<label class="title">lsabug</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-01 15:59:08</p>
+            </div>
+            <div class="postheader"><h3>Fatal error: session_start ... line 27 install/index.php</h3></div>
+				
+			<div class="body">
+				<p>I decided to try uncommenting the line 27 which did get me to the next step of the install process (requirements) but when I clicked on the ATutor Handbook I received the following error which is basically the same re: sessions.<br />
+<br />
+[i]Fatal error: session_start() [function.session-start]: Failed to initialize storage module: user (path: D:\PHP\sessions) in D:\Inetpub\wwwlearn\tutor\documentation\common\body_header.inc.php on line 17 [/i] <br />
+<br />
+At this rate, I'm going to be uncommenting like mad and I think this will affect the use of ATutor in a bad way.<br />
+<br />
+Lsabug  (PHP5/MySQL5/IIS6/WIN2003)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6482"></a>
+		<div class="forum-post-author">
+			<label class="title">lsabug</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-01 17:28:15</p>
+            </div>
+            <div class="postheader"><h3>More info on session_start PHP bug</h3></div>
+				
+			<div class="body">
+				<p>I'm sorry to keep posting but thought that  in case anyone else runs into this problem they might benefit from the dialogue at this  link:<br />
+<br />
+http://bugs.php.net/bug.php?id=25876<br />
+<br />
+Lsabug</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6488"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-02 09:06:20</p>
+            </div>
+            <div class="postheader"><h3>IIS Problems</h3></div>
+				
+			<div class="body">
+				<p>I would suggest you move to an Apache Web server. PHP support in IIS is quite buggy.<br />
+<br />
+The bug referecne is for php 4.3.9-10</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

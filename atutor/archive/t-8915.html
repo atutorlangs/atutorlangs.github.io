@@ -1,0 +1,155 @@
+---
+ title: configincphp SECURITY
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>configincphp SECURITY</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="8915"></a>
+		<div class="forum-post-author">
+			<label class="title">kbranley</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-01 17:03:29</p>
+            </div>
+            <div class="postheader"><h3>configincphp SECURITY</h3></div>
+				
+			<div class="body">
+				<p>Hi, I have just installed ATutor and find it fab...<br />
+<br />
+However, I have a problem that is going to make me uninstall in a few hours if I can't get a resolution to this problem.  I have searched the documentation and forum and have not found an answer as yet.<br />
+<br />
+in include/config.inc.php all my database username, and password etc details are held.  If I go to my web browser and type in www.pathtoAtutor/includes/config.inc.php and then view source I can read the entire file. Hence anyone can hack my entire site.<br />
+<br />
+If I chmod so cannot read file then cannot access Atutor at all?<br />
+<br />
+Is there something I am doing wrong???<br />
+<br />
+Should I move the file elsewhere?  <br />
+<br />
+Please help, if no answer will have to uninstall and find something more secure.<br />
+<br />
+kind regards<br />
+Karen :( <br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - of my server? (unix i think) or my computer? (windows xp pro)<br />
+  version of ATutor - 1.5.3.2<br />
+  versions of php - <br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8916"></a>
+		<div class="forum-post-author">
+			<label class="title">pruffin</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-01 17:37:49</p>
+            </div>
+            <div class="postheader"><h3>Re: config.inc.php SECURITY???</h3></div>
+				
+			<div class="body">
+				<p>I tried to duplicate your problem on our servers.  We are running several installations of Atutor.  On all the installations we tested we were unable to view the source as described in your post.  <br />
+<br />
+Since we control our own servers we have our systems configured not to display source without a web page present.  This is normally done by setting permissions on the file or directory.  <br />
+<br />
+Our config.inc.php file is set with a permissions level of 666, which give read/write access but not execute permissions.<br />
+<br />
+Our directory - include - is set at a permissions level of 755 which is - "world read" - "owner write" - "world execute"<br />
+<br />
+All files are "chown"'d  - "server owner" by our ftp login and not owned by the web server ie .. "www" or "nobody"<br />
+<br />
+  I hope you understand what I mean.  In other words the web server owner - usually "www" or "nobody" should not be the username that owns the files or directories<br />
+<br />
+All file ownership should be owned by the actual FTP or Cpanel login name.  <br />
+<br />
+Only files created by students or ones generated during the actual use of ATutor should have an ownership by the webserver.<br />
+<br />
+You might need to talk with your hosting company regarding the issue and how overall server permissins are set if your are not in control of how your user area permissions and ownership levels.<br />
+<br />
+I hope this helps</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8917"></a>
+		<div class="forum-post-author">
+			<label class="title">kbranley</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-01 18:44:26</p>
+            </div>
+            <div class="postheader"><h3>Re: config.inc.php SECURITY???</h3></div>
+				
+			<div class="body">
+				<p>Thanks,<br />
+<br />
+I am not sure what is going on....<br />
+<br />
+thanks for the info :-)<br />
+<br />
+the rest of the site i am working on that is using php is working fine and a view of the page source of these other files shows nothing,<br />
+ <br />
+I will look into why it is doing it on this atutor install<br />
+<br />
+cheers<br />
+karen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8918"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-10-02 08:34:53</p>
+            </div>
+            <div class="postheader"><h3>Re: config.inc.php SECURITY???</h3></div>
+				
+			<div class="body">
+				<p>This is usually the result of the Web server being misconfigured.  Be sure it is setup to execute php, rather than read it.<br />
+<br />
+I'll guess you are using Apache. in apache's httpd.conf file, the following should be set.<br />
+<br />
+[php]<br />
+<br />
+ AddType application/x-httpd-php .php .phtml<br />
+<br />
+[/php]<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+in include/config.inc.php all my database username, and password etc details are held.  If I go to my web browser and type in www.pathtoAtutor/includes/config.inc.php and then view source I can read t...<br />
+[op]forums/view.php?fid=7;pid=8915;page=1#8915[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

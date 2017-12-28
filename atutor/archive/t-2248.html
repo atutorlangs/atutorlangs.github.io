@@ -1,0 +1,57 @@
+---
+ title: Course enroll date
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Course enroll date</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2248"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-05 16:37:37</p>
+            </div>
+            <div class="postheader"><h3>Course enroll date</h3></div>
+				
+			<div class="body">
+				<p>We are considering switching to ATutor from WebCT and I need to be able to generate a monthly report from ATutor that shows how many new enrollments we have had in each course every month.  From looking at the ATutor database I don't see where a course enroll date is stored.  Am I missing it?  I figure that I can modify the php scripts to capture a date and add an enroll_date field to the course_enrollment table but don't want to do that if I can find the information somewhere.  Also, if I need to update the scripts am I correct in thinking that the following three files are the only ones where the course_enrollment table is updated - \users\create_course.php; \users\enroll.php; and private_enroll.php? <br />
+<br />
+Thanks, Sandie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2268"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-07 10:49:16</p>
+            </div>
+            <div class="postheader"><h3>Feature request enroll date</h3></div>
+				
+			<div class="body">
+				<p>There's no collection of enrollment dates currently, though that would be fairly easy to add. Suggest it to the Feature Requests forum so it gets recorded and included in a future release.<br />
+<br />
+Run the following command to find all references to the course_enrollment table:<br />
+<br />
+> grep -R course_enrollment /path/to/ATutor/*<br />
+<br />
+Some references may be relevant, others not.<br />
+<br />
+Or if you're on windows, use the find in file utility</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

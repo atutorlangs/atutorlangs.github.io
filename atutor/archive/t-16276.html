@@ -1,0 +1,88 @@
+---
+ title: Problem with Paste from File in Edit Content
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem with Paste from File in Edit Content</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="16276"></a>
+		<div class="forum-post-author">
+			<label class="title">pwsoe</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-14 09:42:56</p>
+            </div>
+            <div class="postheader"><h3>Problem with Paste from File in Edit Content</h3></div>
+				
+			<div class="body">
+				<p>Hi all,<br />
+<br />
+I am doing a test run of ATutor on a server. The system specs are as followed:<br />
+<br />
+---------<br />
+  Operating system ATutor is installed on - Kubuntu 8.10<br />
+  ATutor version - 1.6.2<br />
+  Patch #s applied - 8<br />
+  ATutor theme name - Default<br />
+  PHP version - 5.2.4<br />
+  MySQL version - 5.0.51a<br />
+  Webserver & version - Apache 2.2.8<br />
+  <br />
+Copies of error messages - <br />
+<br />
+The following errors occurred:<br />
+<br />
+    * You did not select a file to upload.<br />
+<br />
+Changes to default settings - none<br />
+  <br />
+  Web browser being used - FireFox 3 and InternetExplorer 7<br />
+<br />
+-------<br />
+<br />
+I had no problem with installing and configuring a sample course and a test. However I am having a problem with editing the course contents. If I type into the Body area on the edit content page, it is ok. But I cannot use the Paste from File feature. Whenever I browsed to a txt or a html file and click Upload, I get this error message:<br />
+<br />
+[b]The following errors occurred:[/b]<br />
+   [red] * You did not select a file to upload.[/red]<br />
+<br />
+This happens regardless of the web browser being used, the location of the file to be uploaded or the computer that is used to upload the files (I even tried it on the web server PC). <br />
+<br />
+I created /var/atcontent folder as the content folder and changed the permission to $ chmod -R a+rwx. I have also checked the file upload size for PHP and max file size allowed for that course. I tried with different sizes and the problem remains.<br />
+<br />
+I can upload the files using the File Manager though. <br />
+I don't know what can be wrong. I have some HTML files that I want to use to create course contents instead of having to copy/paste from those existing files.<br />
+<br />
+Thanks for any help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16284"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-14 11:38:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with</h3></div>
+				
+			<div class="body">
+				<p>Thanks. This is confirmed as a bug. The patch 0009 has been issued for this fix.<br />
+<br />
+To install the patch, make sure your computer have internet connection, login ATutor as admin, go to "Patcher" tab, you will see the list of all the patches. You may like to install all of them or 0009 particularly for this fix.<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

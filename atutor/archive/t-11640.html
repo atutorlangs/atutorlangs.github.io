@@ -1,0 +1,217 @@
+---
+ title: Problem with SCORM Package
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem with SCORM Package</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="11640"></a>
+		<div class="forum-post-author">
+			<label class="title">mugito06</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-10 15:18:08</p>
+            </div>
+            <div class="postheader"><h3>Problem with SCORM Package</h3></div>
+				
+			<div class="body">
+				<p>Hi <br />
+<br />
+we are trying to import a SCORM-compatible Content Package generated with Reload Editor<br />
+2.0.2 into aTutor. We have a simple layout with an index.html file and an image in img which is embeded in index.html (&lt;img src="img/image.jpg"/>). When<br />
+the structur is like:<br />
+<br />
+index.html<br />
+img<br />
+   image.jpg<br />
+   <br />
+the import works perfectly fine, we have text and image displayed.<br />
+<br />
+But when we chose to have something like this (&lt;img src="../img/image.jpg"/>):<br />
+<br />
+html<br />
+    index.html<br />
+img<br />
+    image.jpg<br />
+    <br />
+there is just text after the import, no image.<br />
+Both, Reload SCORM Editor and Reload SCORM 1.2 Player have no difficulties to display the<br />
+page correctly.<br />
+Do you have any ideas, what could go wrong, during the import into aTutor?<br />
+<br />
+Thanks alot for any advice.<br />
+<br />
+Regards,<br />
+Michael<br />
+<br />
+>> operating system - MacOS<br />
+>> version of ATutor - 1.5.5<br />
+>> versions of php - 4.4.1<br />
+>> version of mysql - 5.0.15<br />
+>> your ATutor location- http://g5-16.geo.uzh.ch/ATutor/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11644"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-10 16:46:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with SCORM Package</h3></div>
+				
+			<div class="body">
+				<p>Can you attach a copy of the package here.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11704"></a>
+		<div class="forum-post-author">
+			<label class="title">mugito06</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-15 13:06:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with SCORM Package</h3></div>
+				
+			<div class="body">
+				<p>Here is the package, thanks for help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11713"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-17 08:54:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with SCORM Package</h3></div>
+				
+			<div class="body">
+				<p>The image appears to be outside the CPs directory. It should exists in "img/image.jpg" instead of "../img/image.jpg".</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11716"></a>
+		<div class="forum-post-author">
+			<label class="title">mugito06</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-17 11:06:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with SCORM Package</h3></div>
+				
+			<div class="body">
+				<p>ok, but the index.html is in html, so the link must translate to ../img/.. I produced another cp with the correct directory structure. but that one doesn't work either.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11733"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-19 14:52:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with SCORM Package</h3></div>
+				
+			<div class="body">
+				<p>Something else is going on, which you might want to talk to the Reload people about. In the directory that gets created in the file manager, a sub directory gets created which is actually a binary file called .DS_Store. Looking at the image in the package, it looks like you are working out of a CVS directory. Something is wrong here.<br />
+<br />
+Why not try creating your content in ATutor. It produces content packages as well.  I have attached a content package generated by ATutor. Start with it and build upon it, either in Reload or in ATutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11753"></a>
+		<div class="forum-post-author">
+			<label class="title">mugito06</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-24 04:29:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with SCORM Package</h3></div>
+				
+			<div class="body">
+				<p>.DS_Store is a file which on Mac OS X is produced in every directory (seems like a kind of index file) and doesn't belong here (normally i have to delete it bevore creating the package). <br />
+We're actually producing the files for the package (html, img, manifest.xml) out of an xml-based e-Learning Authoring tool so it's not easy to change the directory structure. I just used Reload editor to reproduce a simple model of the structure to find out, why it's not working on aTutor (WebCT, Moodle, OLAT no problems). <br />
+Thank you for the attached package, if you could produce a structure like:<br />
+<br />
+resources<br />
+    html<br />
+        300.html<br />
+    img<br />
+        ....<br />
+<br />
+that would be a great help, so i could look at the manifest.xml to get the right tags and id's.<br />
+<br />
+thx for helping<br />
+michael</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11760"></a>
+		<div class="forum-post-author">
+			<label class="title">mugito06</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-24 12:42:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with SCORM Package</h3></div>
+				
+			<div class="body">
+				<p>meaning:<br />
+<br />
+[quote]<br />
+- resources<br />
+-- html<br />
+---- 300.html<br />
+-- img<br />
+----1.gif<br />
+ [/quote]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

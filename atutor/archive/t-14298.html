@@ -1,0 +1,287 @@
+---
+ title: 161 System Preferenses broken
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>161 System Preferenses broken</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="14298"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 10:20:55</p>
+            </div>
+            <div class="postheader"><h3>161 System Preferenses broken</h3></div>
+				
+			<div class="body">
+				<p>The system preferences menu results in the following error message:<br />
+<br />
+Below the line "apache mod_rewrite":<br />
+<br />
+Fatal error: Call to undefined function apache_get_modules() in /home/3/r/rosetta/www/atutor/admin/config_edit.php on line 311<br />
+<br />
+There is no "save" button on this page...<br />
+<br />
+System info:<br />
+<br />
+Fresh installation of ATutor<br />
+<br />
+PHP Version:<br />
+    5.2.6<br />
+MySQL Version:<br />
+    5.0.45-log<br />
+OS:<br />
+    Linux 2.6.18-6-686-bigmem</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14301"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 10:37:21</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>Just curious, are u hosting this locally or from a hosting firm?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14302"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 10:39:03</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>It is on a hosting firm. <br />
+<br />
+Verson 1.6.0 runs fine, though.<br />
+<br />
+BTW, I probably should have posted this in the bugs forum (which I've now done). Sorry about that....</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14303"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 10:41:35</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>nah don't worry.<br />
+<br />
+<br />
+Sometimes, hosting firm blocks off some of the PHP functions for security reasons.  In this case, i think it's blocking off apache_get_modules().</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14305"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 10:49:42</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>if you have access to the php.ini file, look for <br />
+<br />
+disable_functions = ....<br />
+<br />
+and take apache_get_modules() out from there.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14306"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 10:53:18</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>phpinfo says: <br />
+<br />
+disable_functions=no value, no value (local, master)<br />
+<br />
+php.ini says:<br />
+disable_functions =</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14307"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 11:04:20</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>hm.. Not sure why the function is not found on your end.   If you want to enable apache_get_modules(), you may want to contact your host. <br />
+<br />
+In any case, it shouldn't halt on the fatal error.  I have fixed this in the 1.6.1-pl1.<br />
+<br />
+I will post the pl1 up soon.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14308"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 11:25:38</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>Pl1 is now ready to download.  http://www.atutor.ca/atutor/download.php<br />
+<br />
+<br />
+Thanks for the report.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14312"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 11:39:29</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>Thanks a lot for the fix! <br />
+<br />
+It would not upgrade my existing 1.6.1 installation, though - complaining that the existing installation is not older that the pl1....<br />
+<br />
+Is it best to delete the old installation and start new with the pl1?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14313"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 12:05:14</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>Actually, for this problem, it would be okay if you just replace all the files without going through the installation again.<br />
+<br />
+Though, I would recommend you to redownload it from http://downloads.sourceforge.net/atutor/ATutor-1.6.1_pl1.tar.gz.<br />
+<br />
+Earlier, sourceforge did something funny to the file I uploaded, and I am not sure if it was linked to an old file. <br />
+<br />
+This link is definitely the pl1 file though.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14316"></a>
+		<div class="forum-post-author">
+			<label class="title">eviking</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 12:34:08</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>Thanks a lot! Everything seems to be working fine now.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14317"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-03 14:36:07</p>
+            </div>
+            <div class="postheader"><h3>Re: 1.6.1 System Preferenses broken?</h3></div>
+				
+			<div class="body">
+				<p>That's good to hear!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

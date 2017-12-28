@@ -1,0 +1,124 @@
+---
+ title: Announcement creation problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Announcement creation problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6949"></a>
+		<div class="forum-post-author">
+			<label class="title">putri</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-26 16:18:58</p>
+            </div>
+            <div class="postheader"><h3>Announcement creation problem</h3></div>
+				
+			<div class="body">
+				<p>When trying to create an announcement I would get this error after I click Save.<br />
+<br />
+Parse error: parse error, unexpected $, expecting ',' or ')' in /home/hnd8383/public_html/ATutor/tools/news/index.php on line 37<br />
+<br />
+The announcement will save but it will still give me that error each time I click the "Announcement" on the breadcrumb or in Manage and I click the bold "Announcement."<br />
+<br />
+Things to describe: <br />
+  operating system - Win XP<br />
+  version of ATutor - The newest one... 1.5.2<br />
+  versions of php - 4.4.1<br />
+  version of mysq l - 4.1.14-standard<br />
+  webserver & version - <br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used - Netscape/Mozilla<br />
+  and anything else relevant -<br />
+<br />
+Server info:<br />
+Operating system  	Linux<br />
+Service Status 	Click to View<br />
+Kernel version 	2.6.9-22.0.1.ELsmp<br />
+Machine Type 	i686<br />
+Apache version 	1.3.34 (Unix)<br />
+PERL version 	5.8.5</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6953"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-27 08:30:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Announcement creation problem</h3></div>
+				
+			<div class="body">
+				<p>This is likely the result of a corruputed file. You can replace the file by taking a new copy from the source code repository to replace the broken one.<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/tags/atutor_1_5_2/docs/tools/news/index.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6975"></a>
+		<div class="forum-post-author">
+			<label class="title">putri</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-30 11:02:58</p>
+            </div>
+            <div class="postheader"><h3>Forum issue now</h3></div>
+				
+			<div class="body">
+				<p>The announcement is fixed and now I just recieved this issue (it was fine Friday) in my Forums. <br />
+<br />
+Warning: mysql_fetch_row(): supplied argument is not a valid MySQL result resource in /home/hnd8383/public_html/ATutor/forum/list.php on line 60<br />
+<br />
+When I click on one of the Forums I created it gave me this above my ATutor:<br />
+<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/hnd8383/public_html/ATutor/forum/index.php on line 45<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/hnd8383/public_html/ATutor/forum/index.php:45) in /home/hnd8383/public_html/ATutor/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/hnd8383/public_html/ATutor/forum/index.php:45) in /home/hnd8383/public_html/ATutor/include/classes/Language/Language.class.php on line 123<br />
+<br />
+<br />
+I tried replacing the files with what's available in your atutorsvn.atrc.utoronto.ca/repos/atutor/tags/atutor_1_5_2/docs files but that didn't work.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6989"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-31 08:46:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Forum issue now</h3></div>
+				
+			<div class="body">
+				<p>Remove any trailing spaces from include/config.inc.php file if there are any. Windows has a habit of inserting windows line breaks when files are saved.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

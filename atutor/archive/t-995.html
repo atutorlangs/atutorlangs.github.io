@@ -1,0 +1,588 @@
+---
+ title: Login
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Login</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="995"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-28 09:37:14</p>
+            </div>
+            <div class="postheader"><h3>Login</h3></div>
+				
+			<div class="body">
+				<p>Hi All,<br />
+<br />
+New user here!<br />
+I followed the steps described in the installation, got all the way to the end successfully and then attempted to log in.<br />
+Here is the list of messages I got:<br />
+Show me the light?<br />
+<br />
+Warning: session_start(): open(/tmp\sess_c781d89a72d0c56514d8b0bf5793c0bf, O_RDWR) failed: No such file or directory (2) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: session_start(): Cannot send session cookie - headers already sent by (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 63<br />
+<br />
+Warning: Unknown(): open(/tmp\sess_c781d89a72d0c56514d8b0bf5793c0bf, O_RDWR) failed: No such file or directory (2) in Unknown on line 0<br />
+<br />
+Warning: Unknown(): Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="998"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-28 10:19:04</p>
+            </div>
+            <div class="postheader"><h3>Login</h3></div>
+				
+			<div class="body">
+				<p>which version of ATutor?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1001"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-28 16:18:41</p>
+            </div>
+            <div class="postheader"><h3>Turn off cache</h3></div>
+				
+			<div class="body">
+				<p>Comment out the caching line near the end of include/config.inc.php, or define it with a directory that exists. On windows it should be something like c:\windows\temp.<br />
+<br />
+The directory /tmp would not exist on your system</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1003"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 08:24:02</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+I commented the line:<br />
+/* define('CACHE_DIR', ''); */<br />
+<br />
+I still get the same messages:<br />
+Before the login box:<br />
+<br />
+Warning: session_start(): open(/tmp\sess_ec5ef75557054c51d70c184d73668ea2, O_RDWR) failed: No such file or directory (2) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: session_start(): Cannot send session cookie - headers already sent by (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\vitals.inc.php on line 83<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\basic_html\header.php on line 15<br />
+<br />
+<br />
+After the login box:<br />
+Warning: Unknown(): open(/tmp\sess_ec5ef75557054c51d70c184d73668ea2, O_RDWR) failed: No such file or directory (2) in Unknown on line 0<br />
+<br />
+Warning: Unknown(): Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Comment out the caching line near the end of include/config.inc.php, or define it with a directory that exists. On windows it should be something like c:\windows\temp.<br />
+<br />
+The directory /tmp would no...<br />
+[op]forums/view.php?fid=7;pid=995;page=1#1001[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1004"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 08:38:56</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+Info:<br />
+     ATutor 1.3.1<br />
+     - install dir:  /htdocs/ATutor<br />
+<br />
+     Apache: 2.0<br />
+     - install dir:  /Program Files/Apache Group/Apache2<br />
+<br />
+     PHP:     4.3.4<br />
+     - install dir:  /php<br />
+<br />
+     MySQL: 4.0.17<br />
+     - install dir:  /mysql<br />
+<br />
+Config.inc.php file (condensed):<br />
+<br />
+&lt;?php <br />
+define('DB_USER',                      'root');<br />
+define('DB_PASSWORD',                  '');<br />
+define('DB_HOST',                      'localhost');<br />
+define('DB_PORT',                      '3306');<br />
+define('DB_NAME',                      'atutor');<br />
+define('TABLE_PREFIX',                 'AT_');<br />
+define('ADMIN_USERNAME',               'admin');<br />
+define('ADMIN_PASSWORD',               'admin');<br />
+define('ADMIN_EMAIL',                  'dprice_2000@yahoo.com');<br />
+define('EMAIL_NOTIFY',                 TRUE);<br />
+define('ALLOW_INSTRUCTOR_REQUESTS',    TRUE);<br />
+define('AUTO_APPROVE_INSTRUCTORS',     FALSE);<br />
+$MaxFileSize   =   1048576; /* 1 MB */<br />
+$MaxCourseSize =  10485760; /* 10 MB */<br />
+$MaxCourseFloat =  2097152; /* 2 MB */<br />
+$IllegalExtentions = array('exe', 'asp', 'php', 'php3', 'bat', 'cgi', 'pl', 'com', 'vbs', 'reg', 'pcd', 'pif', 'scr', 'bas', 'inf', 'vb', 'vbe', 'wsc', 'wsf', 'wsh', );<br />
+define('SITE_NAME',                    'Course Server');<br />
+define('DEFAULT_LANGUAGE',             'en');<br />
+/* define('CACHE_DIR', ''); 						*/<br />
+define('BACKWARDS_COMPATIBILITY',       FALSE);<br />
+define('AT_INSTALL', true);<br />
+?><br />
+<br />
+     Windows XP Pro<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+which version of ATutor?<br />
+[op]forums/view.php?fid=7;pid=995;page=1#998[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1005"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 10:32:05</p>
+            </div>
+            <div class="postheader"><h3>sessions</h3></div>
+				
+			<div class="body">
+				<p>ATutor does not officially support Apache2 for this reason.<br />
+<br />
+find your php.ini file (use windows' search) and edit the line:<br />
+session.save_path = C:\PHP\sessiondata<br />
+<br />
+and set it to something as above, instead of to /tmp which obviously doesn't exist on your windows machine.<br />
+<br />
+Make sure that session.save_path uses a directory that exists!<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1007"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 11:36:41</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+Here is the entry I created:<br />
+     session.save_path = C:\PHP\sessiondata<br />
+<br />
+And I created the corresponding directory.<br />
+No such luck.<br />
+<br />
+It still seems to want to use the "tmp" directory.<br />
+<br />
+Any ideas?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1009"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 12:17:10</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+Some progress...<br />
+Greg mentioned to either comment out the cache parameter or give it a valid directory.<br />
+I put in C:\PHP\sessiondata.<br />
+<br />
+The directory now contains the following files:<br />
+<br />
+.phpCache-storage-V1.4.1-HASH=0                       0 KB<br />
+phpCache.lang=enXXloginXphp                              2 KB<br />
+phpCache.msgs=en<br />
+phpCache.systemXcourses=systemXcourses         1 KB<br />
+phpCache.systemXlangs=systemXlangs                 1 KB<br />
+<br />
+Ideas?<br />
+<br />
+thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1010"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 12:30:02</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+I now get this message:<br />
+"ATutor does not appear to be installed. Continue on to the installation"<br />
+<br />
+Should I reinstall?<br />
+<br />
+Please confirm my changes:<br />
+<br />
+     php.ini<br />
+     session.save_path = c:\php\sessiondata<br />
+<br />
+     config.inc.php<br />
+     define('CACHE_DIR', 'C:\PHP\sessiondata\');<br />
+<br />
+thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1011"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 12:51:20</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+No resolution yet.<br />
+Can you tell me the correct syntax for the<br />
+config.inc.php item:<br />
+  define('CACHE_DIR', 'C:\PHP\sessiondata\');<br />
+<br />
+If I place a backslash on the path, the login.php says:<br />
+   "ATutor does not appear to be installed..."<br />
+If I remove it, I get the list of errors.<br />
+<br />
+Can you tell me what I should do?<br />
+<br />
+thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1013"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 13:55:43</p>
+            </div>
+            <div class="postheader"><h3>login</h3></div>
+				
+			<div class="body">
+				<p>You should not have touched the CACHE_DIR it had nothing to do with any of this and was not the problem. Now that you changed CACHE_DIR you're escaping the single quote which is causing a parse error.<br />
+<br />
+edit your php.ini file searching for the session.save_path and make sure it points to C:\PHP\sessiondata and that directory must exist.<br />
+<br />
+Delete anything in that directory and make sure it's empty first.<br />
+<br />
+Then delete the config.inc.php file and reinstall (you will have to delete your AT_ tables as well in your database).<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1014"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 14:25:48</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+I did as you suggested.<br />
+I did not specify a cache directory during installation.<br />
+I get the same list of errors.<br />
+<br />
+Ideas?<br />
+<br />
+thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1015"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 14:34:33</p>
+            </div>
+            <div class="postheader"><h3>l</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+I would be willing to be the lab rat for Apache 2 if you wouldn't mind spending the time with me to get this thing up and running.<br />
+I would prefer not to go to an older version of Apache if at all possible.<br />
+<br />
+Thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1016"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-29 16:46:08</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+In spite of the Login problems, I am able to register a as a user.  I checked the database and the new record exists.<br />
+<br />
+Here are the errors it produces when I login with the newly created ID:<br />
+<br />
+Warning: session_start(): open(/tmp\sess_8aa792259e093322b5a3bf1d2c8bf01b, O_RDWR) failed: No such file or directory (2) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: session_start(): Cannot send session cookie - headers already sent by (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: session_start(): Cannot send session cache limiter - headers already sent (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php on line 20<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\vitals.inc.php on line 83<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at C:\Program Files\Apache Group\Apache2\htdocs\ATutor\include\session.inc.php:20) in C:\Program Files\Apache Group\Apache2\htdocs\ATutor\login.php on line 89<br />
+<br />
+Warning: Unknown(): open(/tmp\sess_8aa792259e093322b5a3bf1d2c8bf01b, O_RDWR) failed: No such file or directory (2) in Unknown on line 0<br />
+<br />
+Warning: Unknown(): Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1017"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-30 10:25:15</p>
+            </div>
+            <div class="postheader"><h3>apache</h3></div>
+				
+			<div class="body">
+				<p>PHP support in Apache2 is still [b]Experimental[/b], which is why it is not recommended. Apache 1.x is the most stable version.. much more stable than Apache2, so don't confuse 2 with being the latest and greatest, it's just a newer code base, but isn't a mature version of 1.<br />
+<br />
+create a php file with phpinfo(); in it and see where your php.ini file is being saved, b/c it still has session.save_path set to /tmp, which is wrong, it should be a directory that exists on your machine. it's possible that you're editing the wrong php.ini file, so double check its location.<br />
+<br />
+your problem has nothing to do with ATutor. your PHP/Apache installation is not set up correctly.<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1018"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-30 13:36:48</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+Apache 2 - understood.<br />
+<br />
+I followed your instructions and created a file with the function specified.  <br />
+The list states session.save_path as /tmp as you suspected.  I've looked everywhere for this reference and can't find it.<br />
+<br />
+However, in my finite wisdom decided to create a directory by that name under the root as c:/tmp.<br />
+It worked!!!!!!!!!!!!!!!!!<br />
+<br />
+What do you make of that?<br />
+<br />
+thanks,<br />
+Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1019"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-30 14:28:49</p>
+            </div>
+            <div class="postheader"><h3>php.ini</h3></div>
+				
+			<div class="body">
+				<p>your phpinfo() page should somewhere tell you where the php.ini page is being looked for. it might be in c:\winnt\system\php.ini<br />
+though it could be in a different place.<br />
+<br />
+if that file does not exist then php will be using the default options and you will not be able to change them, so you will have to find an original php.ini file and place it where it's supposed to be, then any changes you make to that file will be used by php (after you restart your server).<br />
+<br />
+installing php with apache is always a bit tricky since it doesn't do it automatically, there's a bit of manual options to set to get it to work.<br />
+<br />
+glad it works though.<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1020"></a>
+		<div class="forum-post-author">
+			<label class="title">Dave</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-01-30 14:52:15</p>
+            </div>
+            <div class="postheader"><h3>Login problem</h3></div>
+				
+			<div class="body">
+				<p>Hi Joel,<br />
+<br />
+FYI<br />
+<br />
+You were right.  PHP uses /tmp as a default.<br />
+<br />
+In my case it was because it was expecting to find the PHP.INI file in the Windows directory.<br />
+I had place it in the System32 dirctory under Windows.<br />
+<br />
+As a test I moved it up one and it picked up the path.<br />
+Interesting.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,151 @@
+---
+ title: Importing SCO failed
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Importing SCO failed</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5790"></a>
+		<div class="forum-post-author">
+			<label class="title">roselmichael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-12 06:55:38</p>
+            </div>
+            <div class="postheader"><h3>Importing SCO failed</h3></div>
+				
+			<div class="body">
+				<p>I was trying to import the sample SCO (the 26Mb one) but it didn't turn out ok. What could be wrong?<br />
+<br />
+I am using WinXP Pro as the client workstation.<br />
+<br />
+<br />
+ATutor Version: 1.5.1 (build r5269 - 2005-08-16 12:59:49) <br />
+Operating System: Linux 2.6.11-6mdk #1 Tue Mar 22 16:04:32 CET 2005 i686  <br />
+Web Server: Apache-AdvancedExtranetServer/2.0.53 (Mandriva Linux/PREFORK-9.1.102mdk) mod_ssl/2.0.53 OpenSSL/0.9.7e PHP/4.3.10 mod_perl/1.999.21 Perl/v5.8.6  <br />
+PHP Version: 4.3.10  <br />
+MySQL Version: 4.1.11  <br />
+<br />
+<br />
+The following errors occurred:<br />
+The file you tried to import is not a scorm-1.2 package. The required adlcp:scormtype is missing for some resource(s). <br />
+The file you tried to import is not a scorm-1.2 package. The required href attribute is missing for some resource(s).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5795"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-12 17:24:28</p>
+            </div>
+            <div class="postheader"><h3>Valid package, or size</h3></div>
+				
+			<div class="body">
+				<p>The message would suggest the package is missing the ADL xml schema files (and thus are not valid packages).  But I happen to know that package is valid.<br />
+<br />
+It's more likely the file is larger than that allowed. Set the allowable file sizes as an ATutor administrator, and set the system limits in php.ini (usually in /usr/local/lib/php.ini). Restart the webserver when php.ini has been edited. Let us know if this helps, and we'll correct the error messages.<br />
+<br />
+<br />
+#set these something larger than the largest file you want to <br />
+#allow users to upload.<br />
+post_max_size = 30M<br />
+upload_max_filesize = 30M<br />
+<br />
+You might also try importing the file over the Web. Use the Package Url field in the Import Package tool</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5796"></a>
+		<div class="forum-post-author">
+			<label class="title">roselmichael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-12 20:24:22</p>
+            </div>
+            <div class="postheader"><h3>SCO Importing ok now</h3></div>
+				
+			<div class="body">
+				<p>Following your suggestion, I changed it to:<br />
+<br />
+post_max_size = 500M<br />
+upload_max_filesize = 500M<br />
+<br />
+then restarted Apache and made a new install of  Atutor. I was able to successfuly import the sample SCO - International Security Risks. Of course I have to create a new course and import that to it.<br />
+<br />
+Another thing is that, the feedback error (which I posted in another thread) that I was getting during install about line 126 in common.inc.php did not appear anymore. I don't know if those changes solved it also.<br />
+<br />
+And yet another thing is that I already set it to 1000M the other day and did a new install but it didn't work.<br />
+<br />
+Anyway, now that I imported the package successfully, how do I make it available as a lesson which appears in the content area? I can just see it in the packages area even if I set it to normal in Lesson Mode of the packages settings.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5797"></a>
+		<div class="forum-post-author">
+			<label class="title">roselmichael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-12 21:06:47</p>
+            </div>
+            <div class="postheader"><h3>Packages ok for viewing now</h3></div>
+				
+			<div class="body">
+				<p>Please disregard the last paragraph of my previous post. I was now able to change the settings to make available for viewing to students.<br />
+<br />
+Thanks for all the help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5809"></a>
+		<div class="forum-post-author">
+			<label class="title">roselmichael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-13 19:32:18</p>
+            </div>
+            <div class="postheader"><h3>post and upload max_size</h3></div>
+				
+			<div class="body">
+				<p>I played a bit with the settings and when I set it both to 900M, the same problem as my original post appears. Then I set it 600M and its ok again.<br />
+<br />
+From that, i'm slowly believing that there is a range of value that it works ok. Am I correct to assume that?<br />
+<br />
+As a background in what i'm trying to do, I am trying to import packages done in Outstart's Trainersoft 8.3 and our packages sizes goes from 500Mb to 600Mb because of the videos that we have. I don't know how far Trainersoft is with their SCORM compliance because when I output the lesson as SCORM output it does not include the directories that contains the videos and other materials. As a workaround, I thought that just copying those directories to the resulting zip file would do it but when i import it to Atutor as SCORM package it says that the package is empty. So what i did was just to upload what trainersoft outputted as "SCORM" (without the directories) and just look for the directory in the server under atutor/sco then just manually copy the directories there and change the permissions. I can now access the packages from atutor as it were hosted directly from the webserver.<br />
+<br />
+Any comments to the process i've taken?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

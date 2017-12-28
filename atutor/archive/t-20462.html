@@ -1,0 +1,160 @@
+---
+ title: class and title are stripped from link tags with WYSIWYG editor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>class and title are stripped from link tags with WYSIWYG editor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20462"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-31 22:15:30</p>
+            </div>
+            <div class="postheader"><h3>class and title are stripped from link tags with WYSIWYG editor</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I recently installed 2.0 and I've noticed that WYSIWYG editor doesn't allow for using class and title attributes in &lt;a href......>&lt;/a> links.  The previous version I had (1.6.3) did the same thing.<br />
+<br />
+For example, something like:<br />
+<br />
+&lt;a class="thickbox" title="Unit 9, Lesson 3" href="../restoflink/page.html?keepThis=true&amp;TB_iframe=true&amp;height=680&amp;width=1105"><br />
+<br />
+Would be replaced by the editor as:<br />
+<br />
+&lt;a href="../restoflink/page.html?keepThis=true&amp;TB_iframe=true&amp;height=680&amp;width=1105"><br />
+<br />
+<br />
+<br />
+Any thoughts on this?<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20463"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-01 10:49:26</p>
+            </div>
+            <div class="postheader"><h3>Re: class=</h3></div>
+				
+			<div class="body">
+				<p>This might be something to bring up with the TinyMCE people.<br />
+<br />
+http://tinymce.moxiecode.com/<br />
+<br />
+<br />
+For now you'll need to turn off the WYSIWYG editor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20464"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 03:54:17</p>
+            </div>
+            <div class="postheader"><h3>Re: class=</h3></div>
+				
+			<div class="body">
+				<p>Found the fix for this problem.<br />
+<br />
+In ATutor/include/lib/tinymce.inc.php, you need to add "class" into the list of "extended_valid_elements".<br />
+<br />
+The final code should look like...<br />
+<br />
+[php]extended_valid_elements : "a[[red]class|[/red]name|href|target|title|onclick],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",<br />
+[/php]  <br />
+<br />
+<br />
+Cheers.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20465"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 03:56:12</p>
+            </div>
+            <div class="postheader"><h3>Re: class=</h3></div>
+				
+			<div class="body">
+				<p>I was trying to highlight the "class" part in red and apparently that doesn't jive well with php code being displayed on the forum.<br />
+<br />
+The proper final code should look like...<br />
+<br />
+[php]<br />
+extended_valid_elements : "a[class|name|href|target|title|onclick],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20469"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 08:43:10</p>
+            </div>
+            <div class="postheader"><h3>Re: class=</h3></div>
+				
+			<div class="body">
+				<p>Good catch, thx<br />
+<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=4445</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20496"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-04 16:00:13</p>
+            </div>
+            <div class="postheader"><h3>Re: class=</h3></div>
+				
+			<div class="body">
+				<p>fixed in patch #4.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

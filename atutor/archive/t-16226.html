@@ -1,0 +1,77 @@
+---
+ title: Error when uploading pictures to lab instructors
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error when uploading pictures to lab instructors</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16226"></a>
+		<div class="forum-post-author">
+			<label class="title">rury</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-09 09:58:40</p>
+            </div>
+            <div class="postheader"><h3>Error when uploading pictures to lab instructors</h3></div>
+				
+			<div class="body">
+				<p>Hello<br />
+<br />
+We get a PHP error when trying to upload pictures to lab instructors. Is this a permissions error?<br />
+<br />
+The error in question is below.<br />
+<br />
+All the best,<br />
+Rury<br />
+<br />
+---------<br />
+<br />
+operating system - Linux 2.6.23.14<br />
+version of ATutor - 1.6.1.<br />
+versions of php - 5.2.5<br />
+version of mysql - 4.1.22-standard-log<br />
+webserver & version - (not sure about this)<br />
+your ATutor location- unk.com/lab<br />
+<br />
+---------<br />
+<br />
+"Warning: move_uploaded_file(/home/relliott/lab-content/profile_pictures/originals/60.jpg) [function.move-uploaded-file]: failed to open stream: Permission denied in /home/relliott/public_html/lab/include/html/profile_picture.inc.php on line 121<br />
+<br />
+Warning: move_uploaded_file() [function.move-uploaded-file]: Unable to move '/tmp/phpAyRLxL' to '/home/relliott/lab-content/profile_pictures/originals/60.jpg' in /home/relliott/public_html/lab/include/html/profile_picture.inc.php on line 121<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/relliott/public_html/lab/include/html/profile_picture.inc.php:121) in /home/relliott/public_html/lab/include/html/profile_picture.inc.php on line 123"<br />
+<br />
+---------<br />
+<br />
+We get this error when trying to upload pictures for lab instructors. Is this another permissions error?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16227"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-01-09 10:50:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Error when uploading pictures to lab instructors</h3></div>
+				
+			<div class="body">
+				<p>Yes, this is a permission error. Does the directory exist to upload picture to, and is it writeable and owned by the Web server user (e.g. "nobody")<br />
+<br />
+If this is something that has started recently, you may want to check with your provider so see if anything has changed recently, such as an upgrade to the system, or perhaps being moved to another server.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

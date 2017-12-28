@@ -1,0 +1,221 @@
+---
+ title: Move some modules
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Move some modules</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2908"></a>
+		<div class="forum-post-author">
+			<label class="title">proyecto_atutor</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-28 14:27:56</p>
+            </div>
+            <div class="postheader"><h3>Move some modules</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+I need to move some modules from atutor. for example: registration module INTO administrator module. where can i do this? how can i do it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3041"></a>
+		<div class="forum-post-author">
+			<label class="title">proyecto_atutor</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-10 22:05:22</p>
+            </div>
+            <div class="postheader"><h3>now not database conection</h3></div>
+				
+			<div class="body">
+				<p>I did what you said:<br />
+"You have moved the file down a directory so you need to adjust the path to the include directory at the top of the file<br />
+<br />
+define('AT_INCLUDE_DIR', '../include/'); "<br />
+<br />
+Now my sistem is working with register module into administrator module but when i register a new user, the database doesnt do it! (the service IS running). Do i have to change something else?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4197"></a>
+		<div class="forum-post-author">
+			<label class="title">estefania</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-04 13:22:58</p>
+            </div>
+            <div class="postheader"><h3>now not database conection</h3></div>
+				
+			<div class="body">
+				<p>hello!!<br />
+My sistem is working with register module into administrator module but when i register a new user, the database doesnt do it! <br />
+what do i have to change?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4206"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-04 18:06:28</p>
+            </div>
+            <div class="postheader"><h3>Not Administrator</h3></div>
+				
+			<div class="body">
+				<p>You will be able to register users as an administrator in the 1.5 release coming in May or June. <br />
+<br />
+For now, in registration.php, change<br />
+$_user_location	= 'public';<br />
+to<br />
+$_user_location = 'admin';<br />
+<br />
+Please provide the information asked for when posting a message. It is difficult for to help without it.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+hello!!<br />
+My sistem is working with register module into administrator module but when i register a new user, the database doesnt do it! <br />
+what do i have to change?<br />
+[op]forums/view.php?fid=7;pid=2908;page=1#4197[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4216"></a>
+		<div class="forum-post-author">
+			<label class="title">estefania</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-05 09:57:48</p>
+            </div>
+            <div class="postheader"><h3>unable to register new user in database</h3></div>
+				
+			<div class="body">
+				<p>I have changed <br />
+<br />
+In registration.php, i have change<br />
+$_user_location = 'public';<br />
+to<br />
+$_user_location = 'admin';<br />
+<br />
+In theme.cfg.php i have change<br />
+<br />
+$pub_nav['register']['name'] = _AT('register');<br />
+$pub_nav['register']['url']  = 'registration.php';<br />
+<br />
+to <br />
+<br />
+$admin_nav['register']['name'] = _AT('register');<br />
+$admin_nav['register']['url']  = 'admin/registration.php';<br />
+<br />
+when i register a new user, the database doesnt insert a new user, and the frame back to login.php.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4217"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-05 10:00:24</p>
+            </div>
+            <div class="postheader"><h3>Change the include path</h3></div>
+				
+			<div class="body">
+				<p>You need to change the include path, as described above.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4218"></a>
+		<div class="forum-post-author">
+			<label class="title">estefania</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-05 10:09:22</p>
+            </div>
+            <div class="postheader"><h3>Change the include path</h3></div>
+				
+			<div class="body">
+				<p>yes a i have change, but nothing<br />
+<br />
+In registration.php<br />
+define('AT_INCLUDE_PATH', '../include/');</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4219"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-05 10:16:31</p>
+            </div>
+            <div class="postheader"><h3>Experiment please</h3></div>
+				
+			<div class="body">
+				<p>We are too busy at the moment to spend time on this. You will need to experiment on your own. The registration form was never intended to run as an admin tool in 1.4.3 or earlier, so there may be other issues that arise.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4221"></a>
+		<div class="forum-post-author">
+			<label class="title">estefania</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-05 10:35:36</p>
+            </div>
+            <div class="postheader"><h3>Experiment please</h3></div>
+				
+			<div class="body">
+				<p>Ok Greg thank's for your attencion.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

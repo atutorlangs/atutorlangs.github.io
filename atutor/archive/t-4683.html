@@ -1,0 +1,185 @@
+---
+ title: Atutor and Apache 20
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Atutor and Apache 20</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="4683"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-02 08:38:33</p>
+            </div>
+            <div class="postheader"><h3>Atutor and Apache 20</h3></div>
+				
+			<div class="body">
+				<p>Hi, Ive evaluated aTutor and other LMSes for some time now and are so far very impressed with both aTutor and aCollab.<br />
+<br />
+However, if we are going to use aTutor as our LMS, my sysadmin would like aTutor to run on Apache 2.0 and not 1.3, as all our other systems run 2.0, and as 1.3 is not developed any more. And as far as my knowledge goes that seemes reasonable..<br />
+<br />
+Luckily he (mr. sysadmin) knows about everything there is to know about Apache, so what I need is a detailed reason / descriptions of why Apache 2.0 is not recommended, and what one would have to do to a Apache 2.0 installation (or php or MySQL) to make it work like the recommended 1.3 installation.<br />
+<br />
+If a modified Apache 2.0 can be used he will most likely know how to do this, but need to know what to do and what the specific reasons for warning about using 2.0 are.<br />
+<br />
+Ive searced around but havent found it anywhere on the site or in the forums, so I would greatly appreciate any answer!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4691"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-02 20:21:33</p>
+            </div>
+            <div class="postheader"><h3>Apache 2 and ATutor</h3></div>
+				
+			<div class="body">
+				<p>Although it is not recommended, I have had absolutely no problem running ATutor using Apache 2.  My year old install is bridged to PostNuke, using Cas Nuy's pnATutor.<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4698"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-03 05:21:50</p>
+            </div>
+            <div class="postheader"><h3>Apache 2 and ATutor</h3></div>
+				
+			<div class="body">
+				<p>That's good to know, and I've had it up and running on 2.0 myself earlier. Also my sysadmin cannot see any reason why it shouldn't work. <br />
+<br />
+However, there is a direct  [b]warning[/b] about using 2.0 on this page:<br />
+<br />
+http://atutor.ca/atutor/docs/requirements.php <br />
+<br />
+" * HTTP Web Server (Apache 1.3.x is recommended. [b]Do not use Apache 2.x ).[/b]"<br />
+<br />
+If we are to implement aTutor as a semi large scale LMS I need to atleast know the reason for this warning, and preferably know how to configure Apache 2.0 to make it work like 1.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4700"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-03 08:17:35</p>
+            </div>
+            <div class="postheader"><h3>Some articles about Apache2 and PHP</h3></div>
+				
+			<div class="body">
+				<p>Here are a couple links that talk about Apache 2 issues.<br />
+	http://www.php.net/manual/en/faq.installation.php#faq.installation.apache2	http://groups-beta.google.com/group/php.general/msg/9031e5112f534413<br />
+<br />
+I know Larry (lelchuk) has disabled a few features in his installation. Perhaps he could describe his installation, and what has been disabled. The primary issues with Apache 2 is threading, and the use of libraraies that are not thread safe. The articles above explain...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4702"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-03 11:28:24</p>
+            </div>
+            <div class="postheader"><h3>thanks</h3></div>
+				
+			<div class="body">
+				<p>thanks Greg, it looks like this is just the information I (well, he) needs! We'll look into it and I'll post whatever he finds out here. <br />
+<br />
+(I guess more people would like to know this as time goes, as it is increasingly harder to find hosts that provide Apache 1.3.. I actually couldn't find it at all, so we had to set up a dedicated test server ourselves)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4743"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-07 08:22:48</p>
+            </div>
+            <div class="postheader"><h3>sysadmin answers</h3></div>
+				
+			<div class="body">
+				<p>The usenet article referred to above says:<br />
+<br />
+"There is an Apache2 mpm, called "prefork", which isn't threaded and basically makes Apache2 look like Apache1." <br />
+<br />
+and our sysadmin says: <br />
+<br />
+"We're using the default installation of Apache which is 'apache2-mpm-prefork'".. so threading isn't an issue with Apache 2.0 unless you chose another mpm."<br />
+<br />
+He also refers to (and agrees with) the following blog post:<br />
+<br />
+http://www.preinheimer.com/index.php?/archives/102-Apache-2-with-PHP.html<br />
+<br />
+There are several weighty arguments for running Apache 2.0 (virtual sites, SSL support, better performance, it's still developed etc etc), so can we trust that aTutor will work on a Apache 2.0 with the prefork mpm?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4848"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-15 18:08:54</p>
+            </div>
+            <div class="postheader"><h3>Time will tell</h3></div>
+				
+			<div class="body">
+				<p>Things are looking good for using ATutor with Apache 2, but it's a little too early to tell if we can "trust" Apache 2 yet. As more users report their experiences, good and bad, we'll develop a better picture of what the issues are (if any). The mpm info is good to know. ...making the picture a little clearer<br />
+<br />
+For now, we are still recommending Apache 1.3 for production systems. But, if you want to give Apache 2 a try, your experience could help us change that recommendation if things work out. <br />
+<br />
+Larry (lelchuk) has been running ATutor with Apache 2 for some time, and seems to have had no trouble . Our initial tests were also positive, with no problems found ( http://atutor.ca/view/16/4724/1.html ), though though tests were preliminary.  A few more reports like this would go a long way to changing the recommendation.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+There are several weighty arguments for running Apache 2.0 (virtual sites, SSL support, better performance, it's still developed etc etc), so can we trust that aTutor will work on a Apache 2.0 with t...<br />
+[op]forums/view.php?fid=7;pid=4683;page=1#4743[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

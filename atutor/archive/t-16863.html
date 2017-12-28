@@ -1,0 +1,845 @@
+---
+ title: Cant download uploaded files
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cant download uploaded files</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16863"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-08 15:03:11</p>
+            </div>
+            <div class="postheader"><h3>Cant download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>ATutor Version:<br />
+    1.6.2. Check Latest Version.<br />
+PHP Version:<br />
+    4.4.6<br />
+MySQL Version:<br />
+    5.0.67-community<br />
+OS:<br />
+    Linux 2.6.24.2.dn.p4 <br />
+<br />
+I am able to upload files into File Storage in Courses that i creating as an instructor, but am unable to download. The download window comes up asking for saving destination and so on. The download finishes in less than a second. File Size is 0 KB and cannot be opened. Whatever be the file type the result is the same. In System Preferences very generous file size limits have been set.<br />
+Currently the site is under development at http://www.leaninstitute.in/LEArN/. You can check with user admin, password admin and let me know what is wrong please.<br />
+<br />
+Regards<br />
+<br />
+Ravi<br />
+:( [red] [/red]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16866"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 09:14:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+Where is your content folder located and what is the permission of it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16867"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 09:16:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>I could be any number of reasons. <br />
+<br />
+Start investigating by replacing spaces in file names with underscores. Then upload the files and see if you can then download.<br />
+<br />
+If that's not it, try searching google for "download 0 bytes" and see if you can find any answers.<br />
+<br />
+Can you upload/download from the file manager as opposed to  file storage?<br />
+<br />
+This problem is probably not related to ATutor, but rather a server setting, or maybe even a browser issue.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16870"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 10:36:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Hi! Harris,<br />
+<br />
+Contents folder is in /home/leaninst/public_html/LEArN which is the root for the website on the server.<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16874"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 10:52:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Like greg has suggested, it could be a number of reasons.  If you could upload and download(0 bytes), it suggests to me that it could be a server setting problem.  It could also be a symlink problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16875"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 10:55:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>I also checked permissions of content folder on server and set all permissions to 777.<br />
+<br />
+Situation is unchanged. I checked to see the behaviour on my localhost on my laptop computer and found it to be the same.<br />
+<br />
+All downloaded files are of 0 bytes,and download is over instantaneuously while ATutor takes time to uplad and shows a file on some 1.35 MB and so on.<br />
+<br />
+I am stumped.<br />
+<br />
+I tried doing what Greg suggested and removed spaces from filenames, but the problem remains the same.<br />
+<br />
+I want to try uploading from the server cpanel filemanager as suggested by Greg, but in which directory should I upload. I cant see any files resembling the filenames I have given anywhere in content directory.<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16876"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 11:00:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>public_html is generally a symlink. create a script with the following lines, place it in your ATutor installation, then open it in  your web browser to get the real path to your ATutor installation. Then use that path in the include/config.inc.php file to point to you content/ directory<br />
+<br />
+[php]<br />
+<br />
+getcwd();<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16877"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 11:00:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>ATutor renames the files after uploaded for several reasons.  The actual filename is being stored in the database.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+I want to try uploading from the server cpanel filemanager as suggested by Greg, but in which directory should I upload. I cant see any files resembling the filenames I have given anywhere in content ...<br />
+[op]forums/view.php?fid=7;pid=16863;page=1#16875[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16880"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 11:31:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Greg, I have created a file called cont_dir_find.php and placed it in /home/leaninst/public_html/LEArN which is the website's root.<br />
+In that file I wrote in <br />
+<br />
+&lt;?php<br />
+<br />
+getcwd();<br />
+?><br />
+<br />
+and saved it.<br />
+<br />
+Then I put www.leaninstitute.in/LEArN/cont_dir_find.php but nothing happens. Anyway I think my content directory is visblein filemanager in /home/leaninst/public_html/LEArN/content, that is what is also entered in config.in.php. When I did not do this initially I got a series of error messages. So that is the first problem I solved after migrating from localhost to server.<br />
+<br />
+When uploading from filemanager should i simply upload into /home/leaninst/public_html/LEArN/content/ . Anyway even if I upload there, will file sbe visible in filemanager. I will do this and see. I am able to upload and download files to and from my website in general without any problem.<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16882"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 11:42:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>I am referring to the ATutor file manager, not cpanel.<br />
+<br />
+go to:<br />
+<br />
+Manage>File Manager<br />
+<br />
+try:<br />
+[php]<br />
+<br />
+echo getcwd();<br />
+<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16884"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 12:09:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Hi! Greg,<br />
+<br />
+I have uploaded a file through file manager into content/file_storage/1/  which was one directory within file_storage sub directory that had a file in it.<br />
+<br />
+Now how do I see this file in ATutor?<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16885"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 12:14:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>You can't upload files directly to the content dir and have them show up in file storage.<br />
+<br />
+What was the output of getcwd()?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16887"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 12:29:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Greg, thanks for clarifying. I have tried to upload file through Manage>File Manager<br />
+I try creating a file called findcont.html and pasted the code you gave and tried to save the file:<br />
+<br />
+<br />
+The following errors occurred:<br />
+<br />
+    * The file cannot be saved.<br />
+<br />
+Then I try creating a new folder-<br />
+<br />
+<br />
+The following error occurred:<br />
+<br />
+    * The folder " bplm " could not be created.<br />
+<br />
+Then I tried to upload file by first unticking enable multiple file upload, because in that option the + Browse tab does nothing.<br />
+<br />
+The following error occurred:<br />
+<br />
+    * Page cannot be found.<br />
+and the page comes back to course home.<br />
+<br />
+What should I do now?<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16888"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 13:00:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>What was the output of getcwd()?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16889"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 13:03:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>I am sorry I am complete nub and dont know how to execute: <br />
+<br />
+&lt;?php<br />
+<br />
+echo getcwd();<br />
+?><br />
+<br />
+after getting into Manage > File Manager <br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16890"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 13:09:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>FTP the getcwd() file into the top directory of ATutor, then open the file through your Web browser.<br />
+<br />
+http://www.leaninstitute.in/LEArN/cont_dir_find.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16891"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 13:20:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>I have created cont_dir_find.php and typed in the code:<br />
+<br />
+&lt;?php<br />
+<br />
+echo getcwd();<br />
+?><br />
+and saved it - all through cpanel directly on the server and placed it in /home/leaninst/public_html/LEArN/  <br />
+<br />
+- which is the top directory of my ATutor installation on the server<br />
+<br />
+Then I executed <br />
+<br />
+http://www.leaninstitute.in/LEArN/cont_dir_find.php <br />
+<br />
+in the browser, and get a white screen and Done at the right bottom of screen.<br />
+<br />
+to login to ATutor I need to type in http://www.leaninstitute.in/LEArN/<br />
+<br />
+into the browser<br />
+<br />
+SO I have placed cont_dir_find.php at the right place I guess.<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16892"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 13:30:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>It does not matter where the file goes, as long as you can open it in a Web browser.<br />
+<br />
+I don't know how else to help. If you're getting a blank screen, the file is not correct. This is fairly basic stuff, and we can't really spend time helping with PHP coding. I'll point you to the reference, and you can continue from there yourself.<br />
+<br />
+http://ca.php.net/getcwd</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16893"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 13:54:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>I dont know why all this is required. php programming should not be required to populate ATutor.<br />
+<br />
+My content directory is known. These are contents of file_storage in content directory<br />
+<br />
+<br />
+	/ public_html / LEArN / content / file_storage / (Current Folder) 		<br />
+<br />
+	Create New Folder		<br />
+	Upload file(s)		<br />
+	Up one level		<br />
+	1		755<br />
+	Create New File		<br />
+	index.html	0 k	0644<br />
+<br />
+The other files in content folder are:<br />
+<br />
+<br />
+	/ public_html / LEArN / content / (Current Folder) 		<br />
+	Create New Folder		<br />
+	Upload file(s)		<br />
+	Up one level		<br />
+	1		755<br />
+	2		755<br />
+	3		755<br />
+	4		755<br />
+	backups		755<br />
+	chat		755<br />
+	feeds		755<br />
+	file_storage		755<br />
+	hello_world		755<br />
+	import		755<br />
+	module		755<br />
+	patcher		755<br />
+	photo_album		755<br />
+	profile_pictures		755<br />
+	theme		755<br />
+	Create New File		<br />
+	index.html<br />
+<br />
+So content folder location is known, which was supposed to be the output of getcwd().<br />
+<br />
+What next, after knowing where the content directory is. This same directory has been entered into the right place in config.inc.php  which is to be found in <br />
+home/leaninst/public_html/LEArN/include<br />
+<br />
+As I said before,  if we do not have the right content directory defined in config.inc.php you cannot get an error free login screen.<br />
+<br />
+I request you to get into <br />
+<br />
+http://www.leaninstitute.in/LEArN/login.php <br />
+and <br />
+user admin <br />
+paswword admin <br />
+<br />
+and check out once and let me know. With your expertise, you might get to know what is wrong in a minute and be able to advise me.<br />
+<br />
+Regards<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Everything else is working, why not file download in ATutor. The file is definitely getting up[loaded it seems,</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16894"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-09 14:42:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>There's no programming. We are just trying to determine if your host uses symbolic links in paths to your Web site. This is not a problem most people experience. It has to do with the way your host is configured.<br />
+<br />
+I'm still not seeing any output from the getcwd() file you created. I need to confirm with my own eyes that public_html is not a symbolic link before we continue trying to help. While you're at it, also add the following line to the file, so we can see how your host is configured.<br />
+<br />
+<br />
+[php]<br />
+<br />
+echo getcwd();<br />
+phpinfo();<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16896"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-10 04:02:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Hi! Greg <br />
+<br />
+Here is the result of various entries in config.inc.php<br />
+<br />
+First:<br />
+define('AT_CONTENT_DIR', '/home/leaninst/public_html/LEArN/content/');<br />
+<br />
+Manage > File Manager<br />
+<br />
+A window comes up allowing me to browse to file to be uploaded. I press Upload and wait..<br />
+The page jumps to Course > Home<br />
+<br />
+Home<br />
+The following errors occurred:<br />
+<br />
+    * Page cannot be found.<br />
+<br />
+The rest of the Home page is as usual<br />
+<br />
+Second:<br />
+define('AT_CONTENT_DIR', '/home/leaninst/public_html/LEArN/tools/content/');<br />
+<br />
+Manage > File Manager<br />
+<br />
+File Manager<br />
+The following errors occurred:<br />
+<br />
+    * Unable to open content directory. You may try to create it now.<br />
+<br />
+<br />
+Third:<br />
+<br />
+define('AT_CONTENT_DIR', '/home/leaninst/public_html/LEArN/');<br />
+<br />
+Manage > File Manager<br />
+File Manager<br />
+The following errors occurred:<br />
+<br />
+    * Unable to open content directory. You may try to create it now.<br />
+<br />
+In all the cases content folder permissions were changed to 777<br />
+<br />
+I hope this info help you help me<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16897"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-10 04:08:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Output of getcwd() <br />
+<br />
+I created creating placed a file called findpwd.php with the code you gave (&lt;?php<br />
+<br />
+echo getcwd();<br />
+phpinfo();<br />
+?>)<br />
+<br />
+into top directory of my ATutor installation on my server - <br />
+/home/leaninst/public_html/LEArN/ :<br />
+<br />
+I than ran in browser:<br />
+http://www.leaninstitute.in/LEArN/findpwd.php<br />
+<br />
+<br />
+Output:<br />
+/home/leaninst/public_html/LEArN<br />
+<br />
+That settles the issue of output of getcwd()<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16898"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-10 04:19:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Output of:<br />
+<br />
+&lt;?php<br />
+<br />
+echo getcwd();<br />
+phpinfo();<br />
+?><br />
+<br />
+Please click the link:<br />
+http://www.leaninstitute.in/LEArN/findpwd.php <br />
+<br />
+or see if required attached zip file of saved html file file:</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16901"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-10 09:22:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Permissions on the file storage directory seems to be the problem. Files do not appear to be uploading. If you try uploading a plain text file, then click on edit, you get the following error:<br />
+<br />
+&lt;b>Warning&lt;/b>:  file_get_contents(/home/leaninst/public_html/LEArN/content/file_storage/1/21) [&lt;a href='function.file-get-contents'>function.file-get-contents&lt;/a>]: failed to open stream: No such file or directory in &lt;b>/home/leaninst/public_html/LEArN/file_storage/edit.php&lt;/b> on line &lt;b>182&lt;/b>&lt;br /><br />
+<br />
+run "ls -al" at the command prompt in the content directory. You should get something that looks like this:<br />
+<br />
+<br />
+drwxr-xr-x  12 nobody  nobody      4096 Dec 16 10:23 file_storage<br />
+<br />
+Then look inside the directory for another directory with the number corresponding to the course id number. Run "ls -al" again.<br />
+<br />
+Everything should be owned by the webserver users, in the case above "nobody". <br />
+<br />
+Directories inside file storage should look like:<br />
+<br />
+drwxr-xr-x   2 nobody  nobody  4096 Feb 26 19:19 1<br />
+<br />
+File inside the course id directory should look like this:<br />
+<br />
+-rw-r--r--  1 nobody nobody   65217 Feb 10 18:12 111<br />
+<br />
+<br />
+If the above are not all true, you should recreate the file storage directory, set its permission to 777, or  if you run chmod -R 777 on the current file storage directory (latter which is less advisable)<br />
+<br />
+Though you base Web directory is in the open_basedir, you may also need to add the path to the content directory to it. This is set in the system's php.ini file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16911"></a>
+		<div class="forum-post-author">
+			<label class="title">rachanta</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-11 09:29:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't download uploaded files</h3></div>
+				
+			<div class="body">
+				<p>Hi! Greg,<br />
+<br />
+Thanks for the painstaking diagnosis. I have changed permissions from cpanel on my webserver of /home/leaninst/puublic_html/LEArN/content/file_storage/ to 777, and checked. <br />
+<br />
+Later I deleted the file_storage directory and created a new directory by the same name and set permissions to 777.<br />
+<br />
+The result in both cases above is the same:<br />
+<br />
+From file storage menu file appears to get uploaded but when downloaded shows 0 bytes size.<br />
+<br />
+From file manager menu the same upload causes a return to course home with the error message "page not found".<br />
+<br />
+I will need to check with our server administrator about changes to php.ini, which I will do tomorrow.<br />
+<br />
+Meanwhile I am in a jam and can't go forward with developing my pilot course content which I was working on to serve as an example for my other instructors to follow suit.<br />
+<br />
+I have done a little bit of hacking in my life. Learning about php will not be an insurmountable challenge.<br />
+<br />
+I run a triple boot dell inspiron 1525 with Mandriva Linux 2009, OS X 10.5.6 and a fall back Windows Vista.<br />
+<br />
+OS X is my favourite OS. My Dell works just like a MacPro with all its systems operational and I am quite proud of almost kicking out windows and am enjoying all the benefits of speed and security that Linux or OS X provide.<br />
+<br />
+In the same spirit,I vow to find a solution to this problem along with you and my server administrators.<br />
+<br />
+Regards<br />
+<br />
+Ravi</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,126 @@
+---
+ title: Time is NOT correct with System Time
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Time is NOT correct with System Time</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16849"></a>
+		<div class="forum-post-author">
+			<label class="title">azanio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-05 23:12:57</p>
+            </div>
+            <div class="postheader"><h3>Time is NOT correct with System Time</h3></div>
+				
+			<div class="body">
+				<p>I am running ATutor 1.6.2 on Linux FC9 with PHP 5.1.2 , MySQL and Apache.<br />
+<br />
+The issue is the date and time is show correctly in Admin->System Pref <br />
+<br />
+Time Zone Offset = 0<br />
+2009-03-06 12:11:29<br />
+<br />
+and my linux system time is<br />
+[root@localhost A-Tutor]# date<br />
+Fri Mar  6 12:11:29 MYT 2009<br />
+<br />
+but when user take the exam and submit the date and time is 1 day behind. I tried to change Time Zone offset to 12 and also -12 but the result is the same.<br />
+<br />
+Appreciate if you can help.<br />
+<br />
+Regards <br />
+A.A</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16850"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 08:52:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Time is NOT correct with System Time</h3></div>
+				
+			<div class="body">
+				<p>ATutor time is based on the server's time. Use the Linux date() function to set the server's date.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16899"></a>
+		<div class="forum-post-author">
+			<label class="title">azanio</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-10 04:36:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Time is NOT correct with System Time</h3></div>
+				
+			<div class="body">
+				<p>Thank you,<br />
+As I posted earlier, the date and time is correct on my linux system and also is shows the same in ATUTOR->SYSTEM PREFERENCE menu.<br />
+<br />
+But when user takes the exam, the time is out..<br />
+<br />
+It shows correctly when user takes the exam, but when the reviewer login to mark the exam the date is out by 1 day but the time is correct.<br />
+<br />
+Both users - "SET TIME OFFSET" in preference = 0<br />
+<br />
+Can you help?<br />
+Thank you<br />
+<br />
+<br />
+<br />
+**************************<br />
+* System Date in Linux ***<br />
+***************************<br />
+System Date<br />
+[root@localhost ~]# date<br />
+Tue Mar 10 16:21:31 MYT 2009<br />
+[root@localhost ~]# clock<br />
+Tue 10 Mar 2009 04:21:55 PM MYT  -0.000975 seconds</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16900"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-10 08:53:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Time is NOT correct with System Time</h3></div>
+				
+			<div class="body">
+				<p>I can not reproduce the problem. The date that shows for the person marking is the same as the date displayed for the test taker on the demo site.<br />
+<br />
+See if you can reproduce the problem there. If you can, describe it so we can reproduce it.<br />
+<br />
+http://www.atutor.ca/atutor/demo.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

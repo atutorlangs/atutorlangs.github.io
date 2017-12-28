@@ -1,0 +1,289 @@
+---
+ title: Patch not working right
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Patch not working right</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17275"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-29 11:13:49</p>
+            </div>
+            <div class="postheader"><h3>Patch not working right</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 1.6.2 installed and I just put the newest patch (about time zones) in place. <br />
+<br />
+When I edit settings in the "Test and Surveys" area, the dropdown menu for the months now just has "[ ]" instead of the actual months.<br />
+<br />
+Has this happened for anyone else?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17276"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-29 11:31:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>Check here:<br />
+http://www.atutor.ca/view/3/17258/1.html<br />
+<br />
+Working on a patch.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17278"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-29 11:45:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>Yes. This has been confirmed as a bug. Patch #0022 has been issued for the fix. Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17280"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-29 13:53:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>Got it.  Thanks.<br />
+<br />
+When setting the user offset, how can a student tell what the system time is?  In My Start Page > Preferences the current system time is not displayed.  but it is displayed in admin when you adjust the sytem time offset.<br />
+<br />
+Thanks for the help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17281"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-29 14:19:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>A very good suggestion. The system time is added into user preference page. You will see it in next ATutor release. Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17282"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-29 14:46:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>Ok.  In the meantime, I've added some code to my /ATutor/users/atutor_settings.inc.php in my installation and it works great.  Maybe this could be a patch for others?<br />
+<br />
+---------------------------------<br />
+OPEN: /ATutor/users/atutor_settings.inc.php <br />
+<br />
+<br />
+FIND: <br />
+<br />
+echo '&lt;input type="text" name="time_zone" value="'.$selected_time_zone.'" size="4"/>';<br />
+<br />
+<br />
+ADD BELOW THAT LINE:<br />
+//following line added to display current system time when users are selecting their timezone offset under the "Preferences" tab<br />
+echo '&nbspCurrent System Time is:&nbsp;&nbsp&lt;b>' . AT_date(_AT('server_date_format'), '', AT_DATE_MYSQL_DATETIME) . '&lt;/b>&nbsp;&nbsp(Please add or subtract hours to adjust time displays to match your time zone.)';<br />
+<br />
+--------------------------------------<br />
+<br />
+Hope it helps.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17283"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-29 15:00:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>Ok.  New problem......<br />
+<br />
+The times selected for releasing content and starting/ending Tests and Surveys don't match up.  I keep getting a difference of 3 hrs. even though my time offset seems to be correctly set up.<br />
+<br />
+Is anyone else getting this?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17284"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-29 15:36:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>Umm.. this is confirmed. we are looking into it. Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17748"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 10:06:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>Hi, the 3 hrs difference is because timezone set in "admin preference" plus timezone set in "user preference" is 3 hrs.<br />
+<br />
+When start/end time of a test on "create/edit test" page is set to, for example, 9AM, the according values displayed at "Tests & Surveys" page would be 9AM + timezone.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17749"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-15 10:26:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>In addition to what Cindy has said, you can also look at "admin preference" timezone as the Server Timezone, which affects the entire system.<br />
+<br />
+"User preference" would be the User Timezone, which the user is at, but is relative to the server time.  <br />
+<br />
+So the current timezone = admin timezone + user timezone.<br />
+<br />
+You are right though, this will create confusion because the users don't know what the admin timezone is and the result would appear to be a "bug".<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Hi, the 3 hrs difference is because timezone set in "admin preference" plus timezone set in "user preference" is 3 hrs.<br />
+<br />
+When start/end time of a test on "create/edit test" page is set to, for...<br />
+[op]forums/view.php?fid=7;pid=17275;page=1#17748[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17764"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-16 00:16:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>Ok.  I see what you guys are saying. <br />
+<br />
+Maybe this could be fixed in 1.6.3?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17773"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-16 08:38:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Patch not working right?</h3></div>
+				
+			<div class="body">
+				<p>According to the original goal of timezone, this is how it's supposed to work. There won't be a fix in 1.6.3.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

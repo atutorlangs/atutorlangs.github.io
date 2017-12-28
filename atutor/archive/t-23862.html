@@ -1,0 +1,184 @@
+---
+ title: Yet another blank page after install thread
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Yet another blank page after install thread</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="23862"></a>
+		<div class="forum-post-author">
+			<label class="title">rnzfb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-01-06 17:36:37</p>
+            </div>
+            <div class="postheader"><h3>Yet another blank page after install thread</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+<br />
+I have the "blank page after install" issue, which has been discussed extensively in these forums before.<br />
+<br />
+Things to describe about the installation: <br />
+  Operating system ATutor is installed on - Windows Web Server 2008R2 SP1 64-bit<br />
+  ATutor version - 2.1<br />
+  Patch #s applied - none, just downloaded<br />
+  ATutor theme name - default<br />
+  PHP version - 5.4.7 (current XAMPP)<br />
+  MySQL version - 5.5.27 (current XAMPP)<br />
+  Webserver & version - Apache 2.4.3 (current XAMPP)<br />
+  Changes to default settings - none<br />
+  Web browser being used - IE9 and Chrome 23.0.1271.97 m<br />
+The site is internal only so I can't provide a URL you can get to.<br />
+<br />
+Things I have tried:<br />
+- A reinstall<br />
+- Unzipping the tgz on the server not on my PC<br />
+- Checking permissions on config.inc.php (RO/RW)<br />
+- Checking config.inc.php looks like it contains all of the required parameters<br />
+- Confirming my atutor db account has full permissions on the database by logging in on the server using mysql -u atutor -p<br />
+- Using multiple browsers<br />
+- Using the browser on the server as well as on my client PC<br />
+- Confirming no errors during install<br />
+- Checked the XAMPP and system event logs for signs of trouble<br />
+- Confirmed the database exists, the tables have been created, and they contain sensible-looking data<br />
+- Removed special characters from the database password<br />
+<br />
+In all cases I get a blank page: <br />
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><br />
+&lt;HTML>&lt;HEAD><br />
+&lt;META content="text/html; charset=windows-1252" http-equiv=Content-Type>&lt;/HEAD><br />
+&lt;BODY>&lt;/BODY>&lt;/HTML><br />
+(Hope I can post HTML tags in this forum).<br />
+<br />
+My config.inc.php, sans comments and passwords, looks like this:<br />
+&lt;?php <br />
+define('DB_USER',                      'atutor');<br />
+define('DB_PASSWORD',                  '*******');<br />
+define('DB_HOST',                      'app3');<br />
+define('DB_PORT',                      '3306');<br />
+define('DB_NAME',                      'atutor');<br />
+define('TABLE_PREFIX',                 'AT_');<br />
+define('AT_CONTENT_DIR', 'C:\xampp\htdocs\ATutor\content\');<br />
+define('MAIL_USE_SMTP', false);<br />
+define('AT_FORCE_GET_FILE', TRUE);<br />
+define('AT_INSTALL', TRUE);<br />
+?><br />
+<br />
+As it's XAMPP, mysql and apache are both on the same box. I've tried changing the DB_HOST to 'localhost', no change.<br />
+<br />
+Access.log contains (IE9):<br />
+192.168.xxx.xxx - - [07/Jan/2013:11:27:07 +1300] "GET /atutor/ HTTP/1.1" 200 - "-" "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"<br />
+<br />
+Error.log contains nothing at the time of page request, but last server start produced this:<br />
+[Mon Jan 07 11:04:59.884373 2013] [mpm_winnt:notice] [pid 2824:tid 372] AH00456: Server built: Aug 18 2012 12:41:37<br />
+[Mon Jan 07 11:04:59.884373 2013] [core:notice] [pid 2824:tid 372] AH00094: Command line: 'C:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'<br />
+[Mon Jan 07 11:04:59.884373 2013] [mpm_winnt:notice] [pid 2824:tid 372] AH00418: Parent: Created child process 3640<br />
+[Mon Jan 07 11:05:00.696925 2013] [ssl:warn] [pid 3640:tid 276] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]<br />
+[Mon Jan 07 11:05:00.728177 2013] [mpm_winnt:notice] [pid 3640:tid 276] AH00354: Child: Starting 150 worker threads.<br />
+<br />
+php_error.log has nothing since yesterday, and that was likely from a previous attempt at installation, so not relevant.<br />
+<br />
+mysqld_error.log contains nothing at the time of request, last start was:<br />
+130107 11:04:32 [Note] Plugin 'FEDERATED' is disabled.<br />
+130107 11:04:32 InnoDB: The InnoDB memory heap is disabled<br />
+130107 11:04:32 InnoDB: Mutexes and rw_locks use Windows interlocked functions<br />
+130107 11:04:32 InnoDB: Compressed tables use zlib 1.2.3<br />
+130107 11:04:32 InnoDB: Initializing buffer pool, size = 16.0M<br />
+130107 11:04:32 InnoDB: Completed initialization of buffer pool<br />
+130107 11:04:32 InnoDB: highest supported file format is Barracuda.<br />
+130107 11:04:32  InnoDB: Waiting for the background threads to start<br />
+130107 11:04:33 InnoDB: 1.1.8 started; log sequence number 1595685<br />
+130107 11:04:33 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306<br />
+130107 11:04:33 [Note]   - '0.0.0.0' resolves to '0.0.0.0';<br />
+130107 11:04:33 [Note] Server socket created on IP: '0.0.0.0'.<br />
+130107 11:04:33 [Note] Event Scheduler: Loaded 0 events<br />
+130107 11:04:33 [Note] C:\xampp\mysql\bin\mysqld.exe: ready for connections.<br />
+Version: '5.5.27'  socket: ''  port: 3306  MySQL Community Server (GPL)<br />
+<br />
+The phpinfo() page for XAMPP displays sensible looking content, so PHP looks to be working.<br />
+<br />
+Any other suggestions?<br />
+<br />
+TIA for any help<br />
+Sean</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23863"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-01-07 09:06:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Yet another</h3></div>
+				
+			<div class="body">
+				<p>Have you confirmed that the php_error.log is working? It sound suspicious when its not writing anything to the log. Watching the php log would be a suggestion.<br />
+<br />
+Another suggestion I do have is to revert back to an earlier version of PHP. There are issues running ATutor with 5.4+ in which some major changes occurred before we had a chance to work around them for the last release.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23865"></a>
+		<div class="forum-post-author">
+			<label class="title">rnzfb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-01-07 15:44:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Yet another</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+<br />
+Thanks for the response. The problem is with this line in config.inc.php:<br />
+define('AT_CONTENT_DIR', 'C:\xampp\htdocs\ATutor\content\');<br />
+<br />
+If I change this to:<br />
+define('AT_CONTENT_DIR', 'C:/xampp/htdocs/ATutor/content/');<br />
+then the site works.<br />
+<br />
+Thanks<br />
+Sean</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23867"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-01-09 08:57:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Yet another</h3></div>
+				
+			<div class="body">
+				<p>Thanks, we've noted the problem.<br />
+http://atutor.ca/atutor/mantis/view.php?id=5149</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

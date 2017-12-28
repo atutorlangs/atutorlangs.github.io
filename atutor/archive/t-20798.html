@@ -1,0 +1,141 @@
+---
+ title: loading content
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>loading content</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20798"></a>
+		<div class="forum-post-author">
+			<label class="title">chadbentley8</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-01 21:43:10</p>
+            </div>
+            <div class="postheader"><h3>loading content</h3></div>
+				
+			<div class="body">
+				<p>hey guys. i've been playing with atutor for a while now. im trying to upload .ppt files so my students can click the link and view or download the file. i go to edit content and used the file manager to upload the file and insert it. now when i go back and click the link nothing happens. i click it and i get taken to a white page. <br />
+<br />
+http://hionlinecertification.com/get.php/Chapter_1_-_Review.ppt<br />
+<br />
+im using firefox and thought maybe that was the problem so i tried with IE and still get the same thing. can anyone help me out?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20801"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-04 09:17:29</p>
+            </div>
+            <div class="postheader"><h3>Re: loading content</h3></div>
+				
+			<div class="body">
+				<p>We need a little more information, particularly the version of ATutor, and the Web server/php version you're using.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20819"></a>
+		<div class="forum-post-author">
+			<label class="title">chadbentley8</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-07 15:47:07</p>
+            </div>
+            <div class="postheader"><h3>Re: loading content</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 2.6.28.5-grsec-sg2<br />
+  ATutor version - 1.6.3<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -5.2.9<br />
+  MySQL version -5.0.91mm-log<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - firefox<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20820"></a>
+		<div class="forum-post-author">
+			<label class="title">chadbentley8</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-07 15:51:21</p>
+            </div>
+            <div class="postheader"><h3>Re: loading content</h3></div>
+				
+			<div class="body">
+				<p>i also get these warnings on top of where i got that information from <br />
+<br />
+<br />
+Warning: fsockopen() [function.fsockopen]: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/hionline/public_html/admin/index.php on line 105<br />
+<br />
+Warning: fsockopen() [function.fsockopen]: unable to connect to update.atutor.ca:80 (php_network_getaddresses: getaddrinfo failed: Name or service not known) in /home/hionline/public_html/admin/index.php on line 105</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20823"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-08 10:12:36</p>
+            </div>
+            <div class="postheader"><h3>Re: loading content</h3></div>
+				
+			<div class="body">
+				<p>Difficult to say why the ppt produces a blank screen. A corrupted file perhaps. I'm unable to reproduce the problem myself. Another option might be to load it into "File Storage", and share it from there (not to be confused with File Manager.<br />
+<br />
+The error messages you're seeing are likely the result of a firewall. ATutor connects to the update server for things like patches, modules, and language packs. A firewall can cause this to fail. Either open a hole to allow access to the update server, or add an at sign (@) to the beginning of the @fsockopen() function to suppress the error message.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

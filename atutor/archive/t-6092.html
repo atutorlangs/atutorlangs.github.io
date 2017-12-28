@@ -1,0 +1,163 @@
+---
+ title: Surveys  Leave blank
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Surveys  Leave blank</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6092"></a>
+		<div class="forum-post-author">
+			<label class="title">cbh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-15 15:41:16</p>
+            </div>
+            <div class="postheader"><h3>Surveys  Leave blank</h3></div>
+				
+			<div class="body">
+				<p>Is there a way to turn off the "leave blank" feature in Likert scale questions? I'm measuring frequency of occurrence (never - always) so for my purposes "never" would be the only alternative for the "blank" end of the scale.<br />
+<br />
+Thanks!<br />
+Chris Hutcheson</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6148"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-25 05:16:24</p>
+            </div>
+            <div class="postheader"><h3>Edit file tools/take_test.php</h3></div>
+				
+			<div class="body">
+				<p>If you want to turn off that feature for ALL the Likert questions in your installations so that applies to all the courses (i.e. system-widely), you should manually edit the file tools/take_test.php.<br />
+Comment out lines 308 and 309 so they look like (1.5.1):<br />
+<br />
+308 /*<br />
+309 echo $spacer;<br />
+310 echo '&lt;input type="radio" ....... &lt;/label>';<br />
+311 */<br />
+<br />
+This will be enough to turn off this option when taking tests.<br />
+<br />
+You could wish to remove it when previewing test and viewing submissions. In that case youll also need to comment the appropriate lines in:<br />
+* tools/tests/preview.php;<br />
+* tools/tests/view_results.php;<br />
+* tools/tests/results_all_quest.php.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6150"></a>
+		<div class="forum-post-author">
+			<label class="title">cbh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-25 09:46:31</p>
+            </div>
+            <div class="postheader"><h3>Surveys - Leave blank</h3></div>
+				
+			<div class="body">
+				<p>Thanks for your help! I'll try this out. Since this appeared to be the default answer as well does this now mean participants could skip questions? If so, is there a way to oblige them to answer all items?<br />
+<br />
+Thanks<br />
+Chris</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6155"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-26 05:59:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Surveys - Leave blank</h3></div>
+				
+			<div class="body">
+				<p>You can make a few more changes to your tools/take_test.php file. I'm not sure about exact numbering since our file has been modified.<br />
+The file should look like (modifications are in bold):<br />
+<br />
+300                        if ($i > 0) {<br />
+301                             echo $spacer;<br />
+[b]302                             $ch = '';<br />
+303                         } else {<br />
+304                             $ch = 'checked="checked" ';[/b]<br />
+305                         }<br />
+306<br />
+307                         echo '&lt;input type="radio" name="answers['.$row['question_id'].']" value="'.$i.'" id="choice<br />
+        _'.$row['question_id'].'_'.$i.'" [b]'.$ch.'[/b]/>&lt;label for="choice_'.$row['question_id'].'_'.$i.'">'.AT_print($row['choic<br />
+        e_'.$i], 'tests_answers.answer').'&lt;/label>';<br />
+308                     }<br />
+309                 }<br />
+<br />
+Don't forget to backup your original file first!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6156"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-26 06:46:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Surveys - Leave blank</h3></div>
+				
+			<div class="body">
+				<p>I'm sorry, those lines are wrong for the default installation. If you made no changes to tools/take_test.php, line numbering in the above fragment starts from 283.<br />
+<br />
+Anyway, test that before using. With these changes applied, first choices should now be always pre-checked.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6157"></a>
+		<div class="forum-post-author">
+			<label class="title">cbh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-26 11:18:57</p>
+            </div>
+            <div class="postheader"><h3>Leave blank</h3></div>
+				
+			<div class="body">
+				<p>Thanks very much for your help! I'll try this out.<br />
+<br />
+Cheers<br />
+Chris</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

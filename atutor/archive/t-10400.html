@@ -1,0 +1,211 @@
+---
+ title: Cannot insert picture into content via file manager
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cannot insert picture into content via file manager</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10400"></a>
+		<div class="forum-post-author">
+			<label class="title">biarr</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-16 01:47:16</p>
+            </div>
+            <div class="postheader"><h3>Cannot insert picture into content via file manager</h3></div>
+				
+			<div class="body">
+				<p>first of all thanks for great system!<br />
+I have 2 errors. <br />
+1. when i insert pictures using file manager into course content, the pictures are not displaying, only "Alternative text" is there.<br />
+When i try to upload a file to file storage I got an errors<br />
+Warning: move_uploaded_file(/home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/content/file_storage/3/23): failed to open stream: No such file or directory in /home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/file_storage/index.php on line 333<br />
+<br />
+Warning: move_uploaded_file(): Unable to move '/tmp/phpIc8KtN' to '/home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/content/file_storage/3/23' in /home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/file_storage/index.php on line 333<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/file_storage/index.php:333) in /home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/file_storage/index.php on line 355<br />
+<br />
+but it seams the file is uploaded, But when i try to download this file 0 size file is downloading.<br />
+<br />
+During the Installation of ATutor:<br />
+<br />
+I got message:<br />
+Content Directory:<br />
+It has been detected that your webserver does not support the protected content directory feature. The content directory stores all of the courses' files.<br />
+<br />
+Due to that restriction your content directory must exist within your ATutor installation directory and cannot be moved. Its path is specified below. Please create it if it does not already exist.<br />
+<br />
+SO I created dir. "content" and chmod 777<br />
+<br />
+Any Ideas?<br />
+...<br />
+<br />
+  operating system - Linux 2.4.21-40.ELsmp #1 SMP Thu Feb 2 22:22:39 EST 2006 i686<br />
+  version of ATutor - ATutor-1.5.3.3pl1<br />
+  versions of php - 4.3.11<br />
+  version of mysq l - 4.1.22-max-log<br />
+  webserver & version - Apache<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used - firefox 2.0.0.3<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10401"></a>
+		<div class="forum-post-author">
+			<label class="title">biarr</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-16 01:50:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot insert picture into content via file manager</h3></div>
+				
+			<div class="body">
+				<p>Sorry<br />
+[b] version of mysq l - 4.0.27-max-log[/b]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10402"></a>
+		<div class="forum-post-author">
+			<label class="title">biarr</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-16 01:54:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot insert picture into content via file manager</h3></div>
+				
+			<div class="body">
+				<p>Additional info<br />
+  changes to default settings -<br />
+Cache Directory<br />
+/home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/cache<br />
+<br />
+I chmod this dir 777</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10405"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-16 08:43:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot insert picture into content via file manager</h3></div>
+				
+			<div class="body">
+				<p>cache or content?<br />
+<br />
+Double check the path in include/config.inc.php<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Additional info<br />
+  changes to default settings -<br />
+Cache Directory<br />
+/home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/cache<br />
+<br />
+I chmod this dir 777<br />
+[op]forums/view.php?fid=7;pid=10400;page=1#10402[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10407"></a>
+		<div class="forum-post-author">
+			<label class="title">biarr</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-16 14:01:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot insert picture into content via file manager</h3></div>
+				
+			<div class="body">
+				<p>thanks for promt reply.<br />
+<br />
+the path for content in include/config.inc.php<br />
+/home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/content<br />
+and chmod for  content   is 777<br />
+<br />
+I also specify Cache Directory in the Preferances tab in the ATutor. and this directory is<br />
+/home/content/u/z/b/uzbmaster/html/domains/e-darslar_net/cache<br />
+and chmod for  cache  is also 777<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+cache or content?<br />
+<br />
+Double check the path in include/config.inc.php<br />
+[op]forums/view.php?fid=7;pid=10400;page=1#10405[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10408"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-16 14:08:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot insert picture into content via file manager</h3></div>
+				
+			<div class="body">
+				<p>Leave the chache directory field empty.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10430"></a>
+		<div class="forum-post-author">
+			<label class="title">biarr</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-18 00:09:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot insert picture into content via file manager</h3></div>
+				
+			<div class="body">
+				<p>I cleared the chache directory, by still no results. <br />
+:(<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Leave the chache directory field empty.<br />
+[op]forums/view.php?fid=7;pid=10400;page=1#10408[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,169 @@
+---
+ title: Mobile Theme Fatal Error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Mobile Theme Fatal Error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25014"></a>
+		<div class="forum-post-author">
+			<label class="title">WATCuser</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-24 12:16:55</p>
+            </div>
+            <div class="postheader"><h3>Mobile Theme Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>The following fatal error is displayed when users try to access our site using a mobile device and when I try to preview the mobile theme on the themes tab under system preferences: <br />
+<br />
+Fatal error: Uncaught exception 'Exception' with message 'TeraWurflRemoteClient Error: Could not query Tera-WURFL master server.' in /hsphere/local/home/c372773/watccourses.com/ATutor/themes/mobile/include/TeraWurflRemoteClient.php:160 Stack trace: #0 /hsphere/local/home/c372773/watccourses.com/ATutor/themes/mobile/include/TeraWurflRemoteClient.php(99): TeraWurflRemoteClient->callTeraWurfl('http://wurfl.th...') #1 /hsphere/local/home/c372773/watccourses.com/ATutor/themes/mobile/include/header.tmpl.php(63): TeraWurflRemoteClient->getCapabilitiesFromAgent(NULL, Array, 'json') #2 /hsphere/local/home/c372773/watccourses.com/ATutor/include/classes/Savant2/Savant2.php(1325): include('/hsphere/local/...') #3 /hsphere/local/home/c372773/watccourses.com/ATutor/include/classes/Savant2/Savant2.php(1354): Savant2->fetch('include/header....') #4 /hsphere/local/home/c372773/watccourses.com/ATutor/include/header.inc.php(291): Savant2->display('include/header....') #5 /hsphere/local/home/c372773/watccourses.com/ATutor/mods/_core/themes/i in /hsphere/local/home/c372773/watccourses.com/ATutor/themes/mobile/include/TeraWurflRemoteClient.php on line 160<br />
+<br />
+Research indicates there is a patch to correct errors for the mobile theme. All of the patches ( #4848 and it's fixes, #4949 and #5337)  in our patcher list have been installed.  Where can I find the patch for the mobile theme.<br />
+ <br />
+Will the patch correct this error?<br />
+<br />
+If not what is the next step? <br />
+<br />
+<br />
+<br />
+Our system Statistics & Information<br />
+Database:<br />
+5.72 MB<br />
+Disk Usage:<br />
+48.21 MB<br />
+Courses:<br />
+55<br />
+Users:<br />
+930<br />
+ATutor Version:<br />
+2.0.3(r11495 - 2011-09-13 13:27:29). Check Latest Version.<br />
+PHP Version:<br />
+5.2.17<br />
+MySQL Version:<br />
+5.1.68-community-log<br />
+OS:<br />
+Linux 2.6.18-371.3.1.el5xen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25015"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-24 12:28:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Mobile Theme Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>There was not a patch for 2.0.3, but the one for version 2.1 should work, though you'd need to manually apply what's described in the patch.<br />
+<br />
+http://update.atutor.ca/patch/2_1/2_1-18/patch.xml</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25024"></a>
+		<div class="forum-post-author">
+			<label class="title">WATCuser</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-28 16:30:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Mobile Theme Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>We manually applied the patch. We are now getting a different error.<br />
+<br />
+This is the new error:<br />
+Fatal error: Call to a member function getDeviceCapability() on a non-object in /hsphere/local/home/c372773/watccourses.com/ATutor/themes/mobile/include/header.tmpl.php on line 138<br />
+ <br />
+<br />
+This is line 131 - 141 <br />
+&lt;script src="&lt;?php echo $this->base_path; ?>jscripts/infusion/InfusionAll.js" type="text/javascript">&lt;/script><br />
+	&lt;script language="javascript" type="text/javascript"><br />
+	//&lt;!--<br />
+	jQuery.noConflict();<br />
+	//--><br />
+	&lt;/script><br />
+	&lt;script src="&lt;?php echo $this->base_path; ?>jscripts/ATutor.js" type="text/javascript">&lt;/script>   <br />
+&lt;?php if (($wurflObj->getDeviceCapability("mobile_browser")=="Safari")): ?>	<br />
+<br />
+&lt;?php endif; ?><br />
+<br />
+This is line 138: <br />
+&lt;?php if (($wurflObj->getDeviceCapability("mobile_browser")=="Safari")): ?>	<br />
+<br />
+<br />
+This is the patch we applied: <br />
+//&lt;patch>&lt;atutor_patch_id>18&lt;/atutor_patch_id>&lt;applied_version>2.1&lt;/applied_version>&lt;description>Correct problem with mobile/tablet theme not loading properly because TeraWurfl is no longer available&lt;/description>&lt;dependent_patches><br />
+<br />
+//                &lt;/dependent_patches>&lt;sql><br />
+// the patch comments out the following lines from require to the open/close  found here: update.atutor.ca/patch/2_1/2_1-18/patch.xml <br />
+// the patch manually  applied 10.28.2014  <br />
+<br />
+//$wurflObj = new TeraWurflRemoteClient('http://wurfl.thesedays.com/webservice.php');<br />
+//$capabilities = array("product_info");<br />
+//$data_format = TeraWurflRemoteClient::$FORMAT_JSON;<br />
+//$wurflObj->getCapabilitiesFromAgent(null, $capabilities, $data_format);<br />
+<br />
+<br />
+Lines 131 - 141  with line numbers <br />
+131)  &lt;script src="&lt;?php echo $this->base_path; ?>jscripts/infusion/InfusionAll.js" type="text/javascript">&lt;/script><br />
+132)	&lt;script language="javascript" type="text/javascript"><br />
+133)	//&lt;!--<br />
+134)	jQuery.noConflict();<br />
+135)	//--><br />
+136)	&lt;/script><br />
+137)	&lt;script src="&lt;?php echo $this->base_path; ?>jscripts/ATutor.js" type="text/javascript">&lt;/script>   <br />
+138) &lt;?php if (($wurflObj->getDeviceCapability("mobile_browser")=="Safari")): ?>	<br />
+139)<br />
+140) &lt;?php endif; ?><br />
+141)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25025"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-10-28 17:39:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Mobile Theme Fatal Error</h3></div>
+				
+			<div class="body">
+				<p>It would appear you are using a custom version of the mobile header template. Line 138 above does not exist in distribution version of the file.<br />
+<br />
+https://github.com/atutor/ATutor/blob/atutor_2_1/themes/mobile/include/header.tmpl.php#L138<br />
+<br />
+You might take a fresh copy of the file from the link above, then comment out lines line 59 to 63<br />
+<br />
+https://github.com/atutor/ATutor/blob/atutor_2_1/themes/mobile/include/header.tmpl.php#L59-L63<br />
+<br />
+Otherwise if you want to keep the custom version, remove lines 138 to 140.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

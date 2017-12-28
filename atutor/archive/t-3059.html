@@ -1,0 +1,308 @@
+---
+ title: Error in the exported zip archive
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error in the exported zip archive</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3059"></a>
+		<div class="forum-post-author">
+			<label class="title">it00127</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-13 19:32:10</p>
+            </div>
+            <div class="postheader"><h3>Error in the exported zip archive</h3></div>
+				
+			<div class="body">
+				<p>For every zip archive I export via the export content tool I get the same message when I try to open it with an archive manager (such as Winrar). The error is "Unexpected end of archive". Needless to say that I cannot import the file as well. Then ATutor displays the error:"Error : PCLZIP_ERR_BAD_FORMAT (-10) : Unable to find End of Central Dir Record signature ".What is the problem?<br />
+<br />
+<br />
+  operating system -Windows XP Pro<br />
+  version of ATutor -1.4<br />
+  versions of php -PHP 4.3.3<br />
+  version of mysq l -MySQL 4.0.15<br />
+  webserver & version -Apache 1.3.27</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3060"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-14 12:31:47</p>
+            </div>
+            <div class="postheader"><h3>WinXP zipping</h3></div>
+				
+			<div class="body">
+				<p>We have noticed this problem when attempting to unzip ATutor achived files on WinXP Pro. It does not appear to happen on other systems. We have not been able to determine the cause but strongly suspect it is WinXP specific. <br />
+<br />
+Try unzipping on another system.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3317"></a>
+		<div class="forum-post-author">
+			<label class="title">lschult2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 16:08:32</p>
+            </div>
+            <div class="postheader"><h3>What is the status of the WinXP zipping problem?</h3></div>
+				
+			<div class="body">
+				<p>Has this been fixed?  Will it be fixed?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3318"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 16:23:30</p>
+            </div>
+            <div class="postheader"><h3>Eventually</h3></div>
+				
+			<div class="body">
+				<p>Seems to only be a problem with XP Pro. Winzip works fine on XP Home, and all other flavours of Windows we've tested it on.<br />
+<br />
+It is a fairly low priority item at the moment, but it will get fixed eventually. Whether its us creating a work around, or Microsoft fixing XP, or Winzip fixing their XPPro version....<br />
+<br />
+Try using WinRar if you can't get winzip to work.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3320"></a>
+		<div class="forum-post-author">
+			<label class="title">lschult2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 17:10:34</p>
+            </div>
+            <div class="postheader"><h3>XP Home doesn't work either</h3></div>
+				
+			<div class="body">
+				<p>I tried opening the ZIP file with a Windows XP Home computer, and that got the same error.   I've attached the file here.  Let me know if you can open it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3321"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 18:42:28</p>
+            </div>
+            <div class="postheader"><h3>Can't reproduce on XPHome</h3></div>
+				
+			<div class="body">
+				<p>Just setup a new XPHome/ATutor installation and all seems fine. The bundle was taken from the 12-28 nightly build. I could not unzip the beta distribution of ATutor 1.4.3 on XP for some reason, which we'll have to investigate later. The nightly build has not had any zip related changes since the beta was released.<br />
+<br />
+Anyway....<br />
+<br />
+I could not open your attached content package on XP or Linux. It appeared to contain no files. (i.e. 12kb, should be more than that.)<br />
+<br />
+But...<br />
+<br />
+I was able to generate a package on Linux.<br />
+Import that package into XP/ATutor/EasyPHP1-7<br />
+Export the package from XP and import back into XP<br />
+Import the XP package back into Linux<br />
+Extract the XP package using winzip<br />
+<br />
+The problem seems to be export related on your systems. Can't say why though. All seems to work for me.<br />
+<br />
+Can you import a package into XP exported from the demo site (running on Linux)?<br />
+<br />
+http://atutor.ca/atutor/demo.php<br />
+<br />
+Try exporting then importing from the development demo as well<br />
+<br />
+http://atutor.ca/development/index.php<br />
+<br />
+The attached is a package generated from XP, of the admin section of the coming howto documentation. See if you can import, then export it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3324"></a>
+		<div class="forum-post-author">
+			<label class="title">lschult2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 19:51:19</p>
+            </div>
+            <div class="postheader"><h3>continued...</h3></div>
+				
+			<div class="body">
+				<p>I went to atutor.ca/atutor/demo.php<br />
+I created a public test course called "Len's Course" (3 pages)<br />
+I entered the course<br />
+I clicked on "Export Content"<br />
+I saved the ZIP file (12.8K)<br />
+I opened the ZIP file and got the following error:<br />
+  "The Compressed (zipped) Folder is invalid or corrupted"<br />
+<br />
+What am I doing wrong?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3325"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 20:50:38</p>
+            </div>
+            <div class="postheader"><h3>confirmed, but it seems to be IE</h3></div>
+				
+			<div class="body">
+				<p>I was able to reproduce the problem on the demo site, which is running 1.4.2, and the development demo site running pre1.4.3.   <br />
+<br />
+But only when using Internet Explorer 6.0 on XP. When I used Firefox everything works fine. On my local XP installation I was able to import and export as described above, using IE, but when I did the same on a remote server the zip files don't export properly. Firefox works local and remote. I'll bring it up with Joel when we're back to work in January, to see if he has any ideas. <br />
+<br />
+I've also noticed that when using IE apostrophies in the course titles are a problem, but not a problem when using Firefox.<br />
+<br />
+IE on XP seems to be the combination the consistently produces the broken zip when exported from 1.4.2 and 1.4.3beta.<br />
+<br />
+.... try another browser</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3326"></a>
+		<div class="forum-post-author">
+			<label class="title">lschult2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 20:59:15</p>
+            </div>
+            <div class="postheader"><h3>Confirmed bug</h3></div>
+				
+			<div class="body">
+				<p>Good, we've confirmed it as a bug.  Let me know when it is fixed.<br />
+<br />
+FYI, I am evaluating this platform for use with our customers. "try another browser" isn't an option with our customers, so this stuff has to work.  I'm surprised that IE on XP isn't the #1 browser platform you guys test on.  If functionality on IE/XP is a low priority, then this is probably not the plaftorm I want to use.<br />
+<br />
+Is my concern merited, or am I being paranoid?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3327"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 21:53:28</p>
+            </div>
+            <div class="postheader"><h3>Its the browser</h3></div>
+				
+			<div class="body">
+				<p>It comes down to how motivated we are to create a workaround for a bug that exists in IE. Which often means, if there's funds to pay for it. We build to standards, which Microsoft has a tendency to bend to meet their needs.<br />
+<br />
+ATutor runs fine on an XP server, and we do develop on several versions of Windows. And,  ATutor works fine in all  browsers we've come across, except perhaps IE (and Netscape 4 when it was around).  <br />
+<br />
+We are open source developers, and I admit we do develop for the open source community first. Windows gets developed for because there is demand, as is the case for most open source projects that supports Windows. Linux/Apache/PHP/MySQL is a better server environment as far as we're concerned. And its all free. As are many (better) browsers. <br />
+<br />
+Browser requirements are not uncommon for LMSs. I'd hate to see you pass on ATutor because of problems with IE. Apart from the zip issue, IE works fine with ATutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3328"></a>
+		<div class="forum-post-author">
+			<label class="title">lschult2</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-28 22:12:05</p>
+            </div>
+            <div class="postheader"><h3>Thanks</h3></div>
+				
+			<div class="body">
+				<p>Thanks for your patience and explanations, Greg.  You have been a great help.  The fact that you are out there and willing to answer my questions (even if I don't like the answer) increases my confidence in this as an option.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3332"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-29 09:43:40</p>
+            </div>
+            <div class="postheader"><h3>Contributing a fix</h3></div>
+				
+			<div class="body">
+				<p>Part of open source development is the user community contributing features they need to the primary source code. This way the creator ensures that those features they need continue into future versions of the software, and other users benefit from those contribution. Many features of ATutor are supported by groups outside our own.<br />
+<br />
+If you do decide to use ATutor, offering a fix to deal with the XP/IE zip problem, could be a contribution your group could make to the ATutor community. I'm sure it would be useful for others. <br />
+		<br />
+See the Development section for more about how community members can contribute.<br />
+<br />
+http://www.atutor.ca/development/index.php<br />
+<br />
+Good luck in your search...</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

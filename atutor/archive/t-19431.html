@@ -1,0 +1,172 @@
+---
+ title: Lack of mbstring causing problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Lack of mbstring causing problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19431"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-15 13:34:03</p>
+            </div>
+            <div class="postheader"><h3>Lack of mbstring causing problem</h3></div>
+				
+			<div class="body">
+				<p>I was very excited to finally be upgrading from ATutor 1.5.5 to 1.6.4. I had to make considerable changes to my theme and the upgrade worked on my test server. After doing the upgrade on the production server there are problems occurring only in IE (8), Firefox works. In summary, what happens is the user gets logged out when trying to enroll or clicking on a link in the Content navigation. I suspect that a variable value isn't being passed appropriately and that it is due to the lack of mbstring on the production server but don't know enough about it to know if it would cause IE and Firefox to act differently. Unfortunately, my site admin tells me that he cannot install mbstring to see if it is the problem. Could it be or should I be looking elsewhere?<br />
+<br />
+Thanks, Sandie<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19432"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-15 13:36:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Lack of mbstring causing problem?</h3></div>
+				
+			<div class="body">
+				<p>I forgot to mention that mbstring is installed on the test server, where it does work.<br />
+<br />
+Sandie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19433"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-15 13:56:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Lack of mbstring causing problem?</h3></div>
+				
+			<div class="body">
+				<p>Pretty well any multilingual Web application today run using UTF-8 characters, which requires mbstring, so your provider is a little behind the times.<br />
+<br />
+<br />
+Yes there have been lots of changes to themes since 1.5.5. Rather than trying to update your theme, it may be better to create a new one based on the new default theme. The problem may be something to do with your custom theme. I can't reproduce the it myself, which leads me to believe the theme is the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19434"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-15 14:02:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Lack of mbstring causing problem?</h3></div>
+				
+			<div class="body">
+				<p>I created the theme from the default theme in 1.6.3.  I also forgot to mention that I have the same problem with the default theme in 1.6.4 on the server without mbstring.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19435"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-15 14:46:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Lack of mbstring causing problem?</h3></div>
+				
+			<div class="body">
+				<p>Maybe it is an mbstring problem then. The system requirement for 1.6+ includes compiling php with mbstring support, so there's not much we can do to help if the provider won't install it.<br />
+<br />
+sorry...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19436"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-15 14:55:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Lack of mbstring causing problem?</h3></div>
+				
+			<div class="body">
+				<p>Your saying that the lack of mbstring could be the problem is helpful.  My site admin doesn't want to accept that but it makes sense to me.  I've tested my theme in 1.6.4 on two servers with mbstring and it works. It also doesn't work with the ATutor default theme with the same behavior. I just don't know enough about mbstring to know why IE would treat things differently than Firefox.  My suspicion is that IE handles something differently and is not capturing the session variables properly whereas Firefox makes up for it somehow.  Firefox does seem to be more forgiving than IE. <br />
+<br />
+Thanks for responding. I think I better look for somewhere else to install my production site.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19443"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-16 12:57:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Lack of mbstring causing problem?</h3></div>
+				
+			<div class="body">
+				<p>There are quite a few providers supporting ATutor. There' a list to choose from. SiteGround has received some good reviews. <br />
+<br />
+http://www.atutor.ca/services/#providers<br />
+<br />
+And lots of others if you google "atutor hosting"</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

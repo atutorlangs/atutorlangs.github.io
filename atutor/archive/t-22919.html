@@ -1,0 +1,74 @@
+---
+ title: courses operation access
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>courses operation access</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22919"></a>
+		<div class="forum-post-author">
+			<label class="title">kmangi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-22 05:37:04</p>
+            </div>
+            <div class="postheader"><h3>courses operation access</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+<br />
+I want to give courses operations (creation, updation, deletion)to only admin. Means Instructor can not do the operation. Is there any possibility?<br />
+Or any help that I can do it?<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Win 2008 server<br />
+  ATutor version -2.0.3(r11495 - 2011-09-13 13:27:29)<br />
+  Patch #s applied -<br />
+  ATutor theme name - customized<br />
+  PHP version - 5.3.5<br />
+  MySQL version - 5.1.49-community<br />
+  Webserver & version - IIS 7<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22920"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-02-22 09:08:30</p>
+            </div>
+            <div class="postheader"><h3>Re: courses operation access</h3></div>
+				
+			<div class="body">
+				<p>There is not a setting, but you could comment out the following lines in include/lib/menu_pages.php<br />
+<br />
+[php]<br />
+$_pages['mods/_core/courses/users/create_course.php']['title_var'] = 'create_course';<br />
+$_pages['mods/_core/courses/users/create_course.php']['parent'] = 'users/index.php';<br />
+$_pages['mods/_core/courses/users/create_course.php']['guide'] = 'instructor/?p=creating_courses.php';<br />
+$_pages['users/index.php']['children'] = array_merge(array('mods/_core/courses/users/create_course.php'), isset($_pages['users/index.php']['children']) ? $_pages['users/index.php']['children'] : array());<br />
+<br />
+<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,163 @@
+---
+ title: savant2 upgraded in 154
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>savant2 upgraded in 154</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11016"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-06 11:53:15</p>
+            </div>
+            <div class="postheader"><h3>savant2 upgraded in 154</h3></div>
+				
+			<div class="body">
+				<p>Sorry if this post is a little far off topic but ... <br />
+I have an ATutor installation where I have implemented Google Analytics tracking. It worked in ver. 1.5.3 of ATutor, but somehow broke when upgrading to 1.5.4. I have implemented the tracking code in the new dir of the bluemin theme just before the &lt;/body> tag as I did in 1.5.3.<br />
+The only possible explanation I see, is that the update in the Savant2 template engine that took place from  1.5.3 to 1.5.4 disrupts my attempt to use Google Analytics. Any help or hints on what's happening is very welcome :-)<br />
+<br />
+PS. the Urchin code looks ok when wieving the source code of a page.<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -1.5.4<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings - implementing Google Analytics code in theme footer<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11020"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-06 12:32:47</p>
+            </div>
+            <div class="postheader"><h3>Re: savant2 upgraded in 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Its hard to say what's happened, not knowing much about Google Analytics. <br />
+<br />
+The blumin theme has changed significantly in 1.5.4 to div/css layout. Does it work with the other table based theme? e.g. the Default theme</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11021"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-06 12:47:58</p>
+            </div>
+            <div class="postheader"><h3>Re: savant2 upgraded in 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>I tried to disable bluemin and set the "Default" theme as the deafult, but Google Analytics still wont recognize my installed tracking code. I will look more in to the problem and return here if I find a solution. Seems like beeing Google related.<br />
+Thanks for helping.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11022"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-06 12:58:13</p>
+            </div>
+            <div class="postheader"><h3>Re: savant2 upgraded in 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>We'd like to hear more about what you're doing with google tools, perhaps sharing the code if its modular enough. <br />
+<br />
+Is it something that could be distributed through a theme and/or module?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11026"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-06 15:10:00</p>
+            </div>
+            <div class="postheader"><h3>Re: savant2 upgraded in 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>It's really simple what im trying to do and I have done it some times before, but somehow it wont work this time.<br />
+I use the Google Analytic (GA) to track use of my sites including ATutor sites. I use drupal a lot for community sites and use there the module for GA. Normally I do the integration of GA in ATutor by editing the footer.inc.php for a theme to include the code for tracking visitors. When it works you can set a "Goal" which could be how many visitors visits your ATutor installation and actually complete a login and so on - really nice.<br />
+When I (hopefully) get it working I could make a description of how to do it, but to be really elegant it ought to be a module where you type in the GA ID given (GA gives you a unique ID that should be inserted). <br />
+I have considered making another module (Skype integration) but somehow stopped at the same point as purifier: http://atutor.ca/view/7/11015/1.html . There I would need an extra text field in the registration form [skype name] but with my relatively sparesomme PHP knowledge I don't see the way ahead for my module :-)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11878"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-11 15:47:04</p>
+            </div>
+            <div class="postheader"><h3>Re: savant2 upgraded in 1.5.4</h3></div>
+				
+			<div class="body">
+				<p>Sorry that I'm late in answering your question- you know been busy.<br />
+You go to google.com/analytics and make an account. There you make an account for the URL you want to survey.<br />
+You are going to get some code from google that look like this:<br />
+&lt;code>&lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"><br />
+&lt;/script><br />
+&lt;script type="text/javascript"><br />
+_uacct = "UA-xxxxxxx-xx";<br />
+urchinTracker();<br />
+&lt;/script>&lt;/code><br />
+This code should be inserted right before the ending body tag.<br />
+When I get some spare time I will try to make a module for ATutor where you can type in the "UA-xxxxxxx-xx" part and then it will be in every theme.<br />
+That rises a question. Does every theme in ATutor have a footer with an ending body tag? Meaning is it enough to search every footer.tmpl.php for the closing body tag or will I have to search the hole theme for the closing body tag?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Is it something that could be distributed through a theme and/or module?<br />
+[op]forums/view.php?fid=7;pid=11016;page=1#11022[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

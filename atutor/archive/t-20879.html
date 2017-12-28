@@ -1,0 +1,64 @@
+---
+ title: Automatic Disable Accounts
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Automatic Disable Accounts</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="20879"></a>
+		<div class="forum-post-author">
+			<label class="title">bspano</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-14 13:57:56</p>
+            </div>
+            <div class="postheader"><h3>Automatic Disable Accounts</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+What would be the general steps to make my installation of ATutor so that accounts are automatically disabled after 30 days of inactivity?<br />
+Thank you<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Suse Enterprise<br />
+  ATutor version - 2.0<br />
+  Patch #s applied - none yet<br />
+  ATutor theme name - standard<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version - Apache<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20881"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-14 15:04:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Automatic Disable Accounts?</h3></div>
+				
+			<div class="body">
+				<p>You would probably need to write a little script that scans the members table for last_login, compares it with the current date/time,  and updates the status to disabled (4) if days inactive as larger that 30. <br />
+<br />
+You could probably build this into a little module, and run the module with cron.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

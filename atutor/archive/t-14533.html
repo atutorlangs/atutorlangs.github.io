@@ -1,0 +1,484 @@
+---
+ title: Upgrade issues
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Upgrade issues</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="14533"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 10:46:11</p>
+            </div>
+            <div class="postheader"><h3>Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Hi, Hope you can help with an upgrade issue<br />
+We have just upgraded to the latest version. In order to manage this we asked our web host to move our entire web to a new server to take advantage of the latest version of MySQL and php. <br />
+<br />
+The upgrade went successfully after that but we now have no content showing in our lms and nothing in our file manager for any of the courses we have.<br />
+<br />
+In trying to abandon the upgrade and go back to our old lms but now cannot access this either. You can see the mess we are in at www.mycourse.co.uk/ATutor<br />
+<br />
+Please help - there are many hundreds of hours of work in there. Thanks<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14536"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 10:54:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>After you moved your installation to another server before the upgrade, please make sure you also changed the content directory definition @<br />
+<br />
+include/config.inc.php<br />
+<br />
+define('AT_CONTENT_DIR', 'xxxxx\atutor155\ATutor_161\content\');<br />
+<br />
+Change that path to point to your new location so that your content would be found.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14537"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 11:09:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Many thanks for your prompt response.<br />
+<br />
+Is this now for the upgrade - or to take me back to the old installation ?<br />
+<br />
+Obviously, I would prefer to make use of the new version. If I change the path in the new installation config file to point to the existing content files - will that fix the issue ?<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14538"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 11:12:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>That is for the upgrade.<br />
+<br />
+If you change the path in the new installation's config file, then it should fix the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14539"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 11:22:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>OK - tried pounting the file to the content of the old lms but still major issues. We have an awful mess at the top of the screen - in the headers, which is stopping navigation to the courses. Any ideas to fix ?Thanks <br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14540"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 11:37:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Are the errors saying that there is no such file or directory?<br />
+<br />
+Check the permissions and ownserships.  Apache(nobody) have to have the permission to write in the content folder.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14542"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 11:44:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Hi - copy of the text at the top of the browser shown below. Check it out at www.mycourse.co.uk/ATutor. The server is running Apache on linux. How can I set permissions on the content folder? Can I use Firefox ftp properties? We usually set each folder within the content folder to 7777.<br />
+Thanks <br />
+Jim<br />
+<br />
+Warning: opendir(/home/mycourse/htdocs/lms/content//feeds) [function.opendir]: failed to open dir: No such file or directory in /home/mycourse/htdocs/ATutor/mods/_standard/rss_feeds/module.php on line 42<br />
+<br />
+Warning: readdir(): supplied argument is not a valid Directory resource in /home/mycourse/htdocs/ATutor/mods/_standard/rss_feeds/module.php on line 44<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/mycourse/htdocs/ATutor/mods/_standard/rss_feeds/module.php:42) in /home/mycourse/htdocs/ATutor/include/header.inc.php on line 17<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/mycourse/htdocs/ATutor/mods/_standard/rss_feeds/module.php:42) in /home/mycourse/htdocs/ATutor/include/classes/Language/Language.class.php on line 123</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14543"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 11:49:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Where is your content folder located at?<br />
+<br />
+Is it located at /home/mycourse/htdocs/lms/?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14544"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 12:09:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>The content folder created by the installation upgrade is at htdocs/content. But that has little within it.<br />
+<br />
+So I changed the path to point to the content within the old lms which holds all of our courses:<br />
+<br />
+htdocs/lmsold/content<br />
+<br />
+Thanks for your help with this Harris<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14545"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-17 13:52:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Perhaps the old content folder wasn't copied over to the new installation.  <br />
+<br />
+Please try to replace the 161 content folder with the old lmsold/content folder.<br />
+<br />
+Change the config to your new one, for instance, <br />
+define('AT_CONTENT_DIR', '/home/mycourse/htdocs/content');<br />
+<br />
+Note, the content ownership must be from the apache, not root, not the webuser.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14548"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-18 05:43:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Thanks Harris,<br />
+OK - I've shifted the content over now and altered the config file accordingly and hey presto, we're in business. Problems still remain however, as all of the hyperlinks to documents/graphics etc. are relative to the old lms. We're in the process of restoring all hyperlinks - unless you have a script that could do this ?<br />
+<br />
+The customised headers we coded into each page have also knocked out the page structure, so we have had to remove all of them. However, part of the reason for the upgrade was to take advantage of the new feature for customising headers across courses, so in the long run this will save time.<br />
+<br />
+It looks like the upgrade did not work too well in our case.<br />
+<br />
+In your last post you mentioned content ownership must be from apache, not root or web user - what do you mean by this ? ...and how do I make the changes ?<br />
+<br />
+Many thanks once again for your help.<br />
+Jim :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14550"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-18 08:57:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Perhaps take another glance over the upgrade instructions again. <br />
+<br />
+http://www.atutor.ca/atutor/docs/installation.php#upgrade<br />
+<br />
+<br />
+In particular the part about preparation before an upgrade. Does the upgraded system exist in the same place the old one existed in?<br />
+<br />
+For some reason, on some servers, the content directory does not get copied by the upgrade script, though we have not found any consistent pattern to why this is occurring. It is rare. Moving the content directory manually usually fixes the problem.<br />
+<br />
+<br />
+What do you mean by "relative to the old lms"? This should not be a problem after an upgrade if the content uses relative paths from below the ATutor main directory e.g "images/someimage.jpg" where images/ is a directory in your course file manager.<br />
+<br />
+To change ownership of the contents of the content directory, as the system's root user run the following command on the content directory:<br />
+<br />
+chown -R nobody:nobody content/<br />
+<br />
+<br />
+Where "nobody:nobody" is the owner and group of the webserver. Sometimes the owner and group are  "apache:apache" or something else.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14552"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-18 09:54:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>You are welcome~<br />
+<br />
+I am not sure how this has happened either.  Like Greg has mentioned, if you used the "Open file manager" beside the "Switch to visual editor" under "Edit Content" to upload files.  Once you click insert, the media's links will always be relative to the content folder and it shouldn't be a problem.  What are your links likes?  They should be like, &lt;img src="image00.jpg" border="0" alt="Alternate Text" width="300" /><br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Problems still remain however, as all of the hyperlinks to documents/graphics etc. are relative to the old lms. We're in the process of restoring all hyperlinks - unless you have a script that could ...<br />
+[op]forums/view.php?fid=7;pid=14533;page=1#14548[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14553"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-18 09:59:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+Yes, we followed the instructions and the step-by-step process went ok - just no content, so as you say, it just did not copy over. <br />
+<br />
+With regard to the hyperlinks, I see what you mean - we started on one or two and they are as they should be - pointing to images/documents within the course content but just showing placeholders. This suggested a permissions issue. The images folder is named with a capital I - may that be the problem ?<br />
+<br />
+As the lms is on a hosted server and being an educator as opposed to an IT technician I have no idea how to run a command on the content directory - sorry for my ignorance. What we have used though is FireFTP and its directory properties which we can use to set permissions. Normally we set this to 7777 for all content and sub-directories but it does not now seem to have the desired effect - we still do not see the images etc.<br />
+<br />
+We're getting closer to fixing it now. We have created a new short course as a trial and used some of the new features - it's impressive !<br />
+<br />
+Thanks for your assistance<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14554"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-18 10:14:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Thanks for your response Harris - have just seen your posting. As said, I don't think it's an issue with the link itself now. Any advice over permissions or other ideas most welcome.<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14557"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-18 10:46:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>You may want to ask your webhost to alter the permissions to for content and its subfolders to alter its permission.<br />
+<br />
+It is usually done in the unix box, I am not quite sure if fireftp can change the ownerships.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14558"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-18 11:35:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Greg, Harris<br />
+<br />
+It was noted that all of the hyperlinks pointed to domain/ATutor/content, so a quick fix was for us to move the content folder into the main ATutor folder, update the include/config file ...and all of the links are working fine now, with images etc. <br />
+<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14587"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-22 07:12:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>Greg, Harris<br />
+<br />
+All seems to work ok now - contacted our web host and they have altered the permissions for the content folder for me, as per your suggestion.<br />
+<br />
+Many thanks for your help on this, it was really appreciated. Shall we now call this closed ?<br />
+<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14596"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-22 09:49:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade issues</h3></div>
+				
+			<div class="body">
+				<p>You are welcome, I am glad to hear that it all worked out fine now.  We will just leave the thread here just in case someone else come across with the same problem, then they can find the solution here.  <br />
+<br />
+<br />
+cheers,<br />
+harris</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

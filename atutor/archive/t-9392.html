@@ -1,0 +1,309 @@
+---
+ title: scorm file importationhelp
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>scorm file importationhelp</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="9392"></a>
+		<div class="forum-post-author">
+			<label class="title">scormer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-11-30 04:37:47</p>
+            </div>
+            <div class="postheader"><h3>scorm file importationhelp</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+i ask help for sco importation.<br />
+I installed successfully the ATutor 1.5.3.2 in localhost. I have a SCO package to import (this one is functional).<br />
+I already try to unzip and put my package in :<br />
+C:\Program Files\Apache Group\Apache2\htdocs\ATutor\mods<br />
+<br />
+or in:<br />
+<br />
+C:\Program Files\Apache Group\Apache2\htdocs\ATutor\packages<br />
+<br />
+I don't know where find him in ATutor.<br />
+Somebody would have the kindness to explain me, how import this package (coursepackage.zip) in ATutor?<br />
+========================================<br />
+<br />
+  operating system -Microsoft Windows server 2003 R2<br />
+                             Enterprise Edition SP1<br />
+  version of ATutor - 1.5.3.2<br />
+  version of mysq l -MySql Server 4.1<br />
+    web browser being used - IE<br />
+  and anything else relevant - JRE1.5<br />
+<br />
+========================================</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9411"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-01 08:30:08</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>Be sure the ATutor Scorm Packages module is installed. See Admin>Modules>Install Modules<br />
+<br />
+Make sure the sco directory has been created, and that it is writable by your web server. Enabled the Packages tools for a course and use it to import the zipped SCO. Do not try to unzip the SCO yourself.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9419"></a>
+		<div class="forum-post-author">
+			<label class="title">scormer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-03 06:08:20</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>thanks greg for your answer,<br />
+<br />
+now, when i want to upload in "Import/Export Content"<br />
+i have the follow error message:<br />
+"The following errors occurred:<br />
+The file exceeded the maximum allowable size limit of 8M. "<br />
+How can i do for modify the size limit? (my package size is 72MB)<br />
+<br />
+thanks again</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9420"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-03 11:18:50</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>increase the value of max_upoad_filesize in php.ini.<br />
+<br />
+Then increase restart the webserver, and increase the allowable upload size for the course in question through admin>courses>"course">properties</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9422"></a>
+		<div class="forum-post-author">
+			<label class="title">scormer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-04 04:23:12</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>Thanks!<br />
+<br />
+i increased the value of upload_max_filesize to 80M<br />
+and the value of post_max_size to 100M<br />
+in the follow files:<br />
+- php.ini (c:\windows and c:\php\backup)<br />
+-php.ini-dist (c:\php4)<br />
+-php.ini-recommended (c:\php4)<br />
+<br />
+i restarted Apache and increased the allowable upload size for the course (properties):<br />
+<br />
+Course Quota<br />
+Current course size: 10.14 MB<br />
+ Other -  80MB <br />
+<br />
+Max File Size<br />
+ Other -  80MB <br />
+<br />
+After that, when i want to upload, its begin to upload, and stop in the middle...i forgotten everything?<br />
+<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9428"></a>
+		<div class="forum-post-author">
+			<label class="title">scormer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-04 08:17:07</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>i fixed my problem<br />
+thank you very much for your advices,<br />
+<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9433"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-04 09:54:45</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>What was the problem, in case someone else experiences the same thing?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9441"></a>
+		<div class="forum-post-author">
+			<label class="title">scormer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-05 05:48:15</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>The problem was: I must parametrize the administrator settings too....<br />
+<br />
+My scorm package appear now in ATutor, but just in "14.SCORM PACKAGE" menu.(working successfuly).<br />
+The content don't appear in LMS ATutor (right menu), its means that i havn't relation between my scorm package and the lms. <br />
+How can i do this relation?<br />
+<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9444"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-05 08:18:16</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>SCORM packages do not appear in the content menu. <br />
+<br />
+You could create a content page and place a link on the page to the package.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9445"></a>
+		<div class="forum-post-author">
+			<label class="title">scormer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-05 08:31:19</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>ok, thank you. But its mean that i cannot have the lessons ' scores in ATutor , isn't it?<br />
+<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9459"></a>
+		<div class="forum-post-author">
+			<label class="title">scormer</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-06 02:36:28</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>its mean i cannot see the scores of my courses in the ATutor LMS, isn't it?<br />
+<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9626"></a>
+		<div class="forum-post-author">
+			<label class="title">anandh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-08 09:08:24</p>
+            </div>
+            <div class="postheader"><h3>Re: scorm file importation...help!</h3></div>
+				
+			<div class="body">
+				<p>'scromer'<br />
+<br />
+I am facing the same problem you mentioned here could you please help? can you explain what do you mean by <br />
+"I must parametrize the administrator settings too...."</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

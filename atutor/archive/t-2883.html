@@ -1,0 +1,109 @@
+---
+ title: Install Problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Install Problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2883"></a>
+		<div class="forum-post-author">
+			<label class="title">khanson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-26 19:10:22</p>
+            </div>
+            <div class="postheader"><h3>Install Problem</h3></div>
+				
+			<div class="body">
+				<p>RedHat 7.1<br />
+PHP 4.1.2<br />
+mySQL 3.23.56<br />
+Apache 1.3.27<br />
+<br />
+I have ATutor working on another website on this server so I know it all works with my versions but something went weird installing it on a second domain.<br />
+<br />
+Went through the install successfully.  Clicked on login and I get this error:<br />
+<br />
+Fatal error: Call to undefined function: ob_clean() in /home/webadmin/blahblah.com/html/include/session.inc.php on line 31<br />
+<br />
+<br />
+Line 31 of session.inc.php  is this:<br />
+ob_clean();<br />
+<br />
+If I try accessing any files such as the index.php file I also get this error.<br />
+<br />
+TYIA</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2888"></a>
+		<div class="forum-post-author">
+			<label class="title">Henner</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-27 08:40:15</p>
+            </div>
+            <div class="postheader"><h3>maybe this</h3></div>
+				
+			<div class="body">
+				<p>Be sure to provide enough information about your system, and the circumstances of any problems you are experiencing. Support requests lacking complete information may not get a reply. [DELETE THIS NOTICE BEFORE SENDING YOUR SUPPORT REQUEST]		please look in the vitals.php and ssearch this <br />
+require(AT_INCLUDE_PATH.\'lib/output.inc.php\');                /* output functions */<br />
+require(AT_INCLUDE_PATH.\'phpCache/phpCache.inc.php\');         /* cache library */<br />
+require(AT_INCLUDE_PATH.\'lib/select_lang.inc.php\');           /* set current language */<br />
+require(AT_INCLUDE_PATH.\'classes/ContentManager.class.php\');  /* content management class */<br />
+require(AT_INCLUDE_PATH.\'classes/Savant/Savant.php\');         /* for the theme and template management */<br />
+<br />
+the output.inc.php must bevore the other .</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2899"></a>
+		<div class="forum-post-author">
+			<label class="title">khanson</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-27 15:38:27</p>
+            </div>
+            <div class="postheader"><h3>Thanks for replying...but</h3></div>
+				
+			<div class="body">
+				<p>I changed my vitals.inc.php and put the output.inc.php string before the rest like your example but still have the same error.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2900"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-27 15:51:15</p>
+            </div>
+            <div class="postheader"><h3>Upgrade php</h3></div>
+				
+			<div class="body">
+				<p>You need to upgrade php. PHP 4.2 is the minimum, but you should be using 4.3+.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

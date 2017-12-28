@@ -1,0 +1,79 @@
+---
+ title: Backing up or exporting language packs
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Backing up or exporting language packs</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2488"></a>
+		<div class="forum-post-author">
+			<label class="title">blackwidow</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-17 07:17:42</p>
+            </div>
+            <div class="postheader"><h3>Backing up or exporting language packs</h3></div>
+				
+			<div class="body">
+				<p>ATutor version: 1.4<br />
+Default Lang Pack: English - iso-8859-1<br />
+<br />
+I have made extensive changes to the current default language pack, via the Admin interface, in order to make use of natural language that is more appropriate for our students. Ideally, I'd like to be able to make a copy of all of my changes or, at least, back this pack up, to avoid having to repeat the work in the event of an upgrade or, worst case, a fresh re-install.<br />
+<br />
+I can't see anything within the ATutor interface that allows this. Other than doing a dump of the appropriate table (a possibility that I'm currently  investigating), do you have any suggestions?<br />
+<br />
+Is it worth adding this to the Features list?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2491"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-17 14:28:16</p>
+            </div>
+            <div class="postheader"><h3>Wait for 1.4.3</h3></div>
+				
+			<div class="body">
+				<p>ATutor 1.4.3, likely coming in early December, will have an overhauled language system that will allow you to recycle change you;ve made. For now you could use an application like phpMyAdmin to create an SQL dump of the lang_base table.<br />
+<br />
+The structure of the language tables is changing, so there will likely be some effort required to reuse your current language. If you know a little SQL, you should be able to adjust the dump so it will import into the new table. In 1.4.3 you will be able to create your own language packs so they can be reused from version to version.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2496"></a>
+		<div class="forum-post-author">
+			<label class="title">blackwidow</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-17 16:05:04</p>
+            </div>
+            <div class="postheader"><h3>Thanks</h3></div>
+				
+			<div class="body">
+				<p>It looks like I'll have to do it the hard way, for now then. Thanks for the response and for the heads-up re 1.4.3. It's reassuring to know that I'm not picking up on petty side issues.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+ATutor 1.4.3, likely coming in early December, will have an overhauled language system that will allow you to recycle change you;ve made. For now you could use an application like phpMyAdmin to create...<br />
+[op]forums/view.php?fid=7;pid=2488;page=1#2491[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

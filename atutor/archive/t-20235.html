@@ -1,0 +1,238 @@
+---
+ title: Cant open ATutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cant open ATutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20235"></a>
+		<div class="forum-post-author">
+			<label class="title">logal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-27 23:52:58</p>
+            </div>
+            <div class="postheader"><h3>Cant open ATutor</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+Suddenly, ATutor can't open. When I enter its home page URL on the browser, I just get a blank page with the following text: <br />
+<br />
+Warning: opendir(/home/preparac/online_courses_content/logs/6-27-2010) [function.opendir]: failed to open dir: No such file or directory in /home/preparac/public_html/Online_Courses/ATutor/include/classes/ErrorHandler/ErrorHandler.class.php on line 324<br />
+<br />
+Fatal error: Call to a member function printNoLookupFeedback() on a non-object in /home/preparac/public_html/Online_Courses/ATutor/include/classes/ErrorHandler/ErrorHandler.class.php on line 325<br />
+<br />
+It had been working seamlessly until now. Does anybody have any idea on what I could do to fix it?<br />
+<br />
+Thank you very much for your help.<br />
+<br />
+Alex<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - UNIX<br />
+  ATutor version - 1.6.2<br />
+  Patch #s applied - None<br />
+  ATutor theme name -<br />
+  PHP version - 3.2.4<br />
+  MySQL version - 5.0.90-community<br />
+  Webserver & version - cpaneld 5.0.90<br />
+  Copies of error messages -<br />
+  Changes to default settings - <br />
+  Web browser being used - IE8 and IE7<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20239"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-28 09:01:45</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't open ATutor</h3></div>
+				
+			<div class="body">
+				<p>This would be a problem to present to your service provider. This would appear to be a Web server configuration problem. I'd guess it was upgraded recently.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20263"></a>
+		<div class="forum-post-author">
+			<label class="title">logal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-29 17:48:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't open ATutor</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg,<br />
+<br />
+I'm trying to contact the guy at web hosting. But meanwhile, let me give you one additional piece of info. In the error message I detailed in my last post, there is a text in brackets, specifically [function.opendir] that has a hyperlink. When I clic on this text, I get another message:<br />
+<br />
+Internal Error Detected<br />
+Fatal. Could not create /content/logs/6-29-2010. Please resolve<br />
+<br />
+Does this give you any other clue, so that I can at least guide somewhat the guy in charge of the hosting? I'm sure he will need a starting point on where to look for the probable culprit.<br />
+<br />
+Thanks again for your valuable help.<br />
+<br />
+Alex</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20264"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-06-29 17:54:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't open ATutor</h3></div>
+				
+			<div class="body">
+				<p>I've seen this before. When a system gets updated, the write permission on the ATutor content directory gets changed to unwritable. First let your provider have a look, perhaps there's a setting that's been changed. <br />
+<br />
+If not, you could reset the permissions on the directory to writable as the system's root user, though this is generally not recommended. <br />
+<br />
+Are you able to do things like uploading a file with the file manager?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20299"></a>
+		<div class="forum-post-author">
+			<label class="title">logal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-05 16:49:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't open ATutor</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg,<br />
+<br />
+I asked the datacenter to fix the permissions on my site's directory and today they say the they did it. With this fix, the error message dissapeared, but now I just get a blank page. Nothing appears.<br />
+<br />
+This is the URL that previously displayed the welcome screen: http://www.preparacion-nova.com/Online_Courses/ATutor<br />
+<br />
+By the way, in answering your question, I verified that I was able to upload and delete files in the ATutor directory, even before the fix. It's weird.<br />
+<br />
+What should I do next? <br />
+<br />
+Thank you.<br />
+<br />
+Alex</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20300"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-05 18:05:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't open ATutor</h3></div>
+				
+			<div class="body">
+				<p>My guess is they changed the permissions, with the root user, and the owner of the files was also changed. The content directory and everything in it needs to be owned by the webserver's users (for apache, that user is usually "nobody.")<br />
+<br />
+see if you can upload a file with the file manager now.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20313"></a>
+		<div class="forum-post-author">
+			<label class="title">logal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-08 00:14:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't open ATutor</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg,<br />
+<br />
+Using your suggestion, they were able to make the welcome screen appear. But now, when I log in and enter a course I find another problem: the content pages display only the text, but none of the images that were inserted therein.<br />
+<br />
+I have attached a screenshot of one of the content pages (this one has no text; it is supposed to display only an image).<br />
+<br />
+When I click on "Edit this page" (on any of the content pages) I get the following error message: "Unable to open content directory. You may try to create it now." The words "create it now" have a hyperlink. If I click on it, I get another error message: "HTTP 404 Not Found; The webpage cannot be found".<br />
+<br />
+It seems that we are closer to a fix, but I still need some more of your help.<br />
+<br />
+Thank you very much in advance.<br />
+<br />
+Alex</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20317"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-08 08:54:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Can't open ATutor</h3></div>
+				
+			<div class="body">
+				<p>I'd guess your theme is not setup properly, though there could be many reasons why this might occur. <br />
+<br />
+Did you upload the ATutor source code to the server as a zip file, or did upload files one by one?<br />
+<br />
+The content directory problem usually indicates access permissions were not setup properly, or there's a server setting preventing users from writing to the server. That would be an issue to take up with your provider.<br />
+<br />
+Id suggest you start over, using ATutor 2.0.<br />
+<br />
+Read the FAQs before you start, and the installation documentation.<br />
+http://www.atutor.ca/atutor/docs/faq.php<br />
+http://www.atutor.ca/atutor/docs/installation.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

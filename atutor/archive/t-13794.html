@@ -1,0 +1,377 @@
+---
+ title: How to show the website by IP address
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>How to show the website by IP address</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13794"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 04:42:55</p>
+            </div>
+            <div class="postheader"><h3>How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>I uses XAMMP to run Atutor..../ I want to know<br />
+how to use address like<br />
+http://(ip address)/atutor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13795"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 04:48:01</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>I uses windows version of XAMMP..../</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13796"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 05:26:38</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>if XAMMP is running properly you can access it in a browser with http://localhost/ or http://127.0.0.1/<br />
+<br />
+note that the atutor folder must be placed in the htdocs folder to be accessible.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13805"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 11:49:23</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>atutor folder is placed in the htdocs folder to be accessible.<br />
+<br />
+localhost is OK, but I want to show like<br />
+http://(ip address)/atutor <br />
+<br />
+How to config apache in XAMMP</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13809"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 13:00:58</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>You have to have an IP address assign by your network manager if you want to using something other than 127.0.0.1 <br />
+<br />
+When that's done, you don't have to do anything in ATutor, assuming Apache is configured properly. You may need to adjust the value of ServerName in the apache conf/apache/httpd.conf file. ATutor will automatically use the IP address you were assigned.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13817"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-23 08:04:13</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>You have to have an IP address assign by your network manager if you want to using something other than 127.0.0.<br />
+<br />
+network manager means TCP/IP??<br />
+<br />
+conf/apache/httpd.conf <br />
+where is the httpd.conf<br />
+<br />
+I use Windows Version of XAMMP</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13818"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-23 08:16:19</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>network manager is a person who manages your network. <br />
+<br />
+XAMP/conf/apache/httpd.conf</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13819"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-23 08:54:37</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>to ask differently: what do you wish to do?<br />
+<br />
+do you want to check out Atutor on your local machine? if so, why can the domain [b]not[/b] be named "localhost" or "127.0.0.1"? you will be the only one to see it. does this not work? what happens if you type localhost in the address bar in your browser? <br />
+<br />
+XAMMP and similar "local server" tools are mostly used by developers, or people who wish to explore the inner workings of something, if you just want to check out how Atutor works, use the demo server instead! http://www.atutor.ca/atutor/demo.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13820"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-23 08:57:53</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>how to edit httpd.conf</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13821"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-23 09:07:29</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>you open it in a text editor..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13838"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-24 10:54:25</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>I know <br />
+<br />
+but which part need to configure.../</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13844"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-25 21:35:48</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>do you want to check out Atutor on your local machine? if so, why can the domain not be named "localhost" or "127.0.0.1"? you will be the only one to see it. does this not work? what happens if you type localhost in the address bar in your browser? <br />
+<br />
+I have checked the localhost is OK. I want to show the<br />
+atutor for the client computer. Therefore I must show the atutor by IP address.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13868"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-28 00:07:22</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>I will use software to configuare</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14004"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-06-12 10:45:10</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>which line of httpd.conf must configure../</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14008"></a>
+		<div class="forum-post-author">
+			<label class="title">victorckc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-06-13 03:00:34</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>OK.../ It is worked</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17689"></a>
+		<div class="forum-post-author">
+			<label class="title">Gunnar</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-08 05:48:17</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>Hi all I am new to this.<br />
+<br />
+I am based in Australia and creating a small number (about 5) of websites for a children's hiv charity in Romania(Health Aid Romania is the name of the charity). Now I am a software developer mainly working in ASP.Net so I now a bit about creating websites. <br />
+Currently I am looking to host the above web sites on my simple PC. This are my current systems spec. Operating System 7 ultimate so I do have IIS, Hardware - Processor Intel(R) Celron(R) CPU 3.06GHz 3.06 GHZ, Installed RAM 512 MB and a 64 bit operating System.<br />
+Currently I made a small test ASP.Net application, configured the IIS and it came up fine on my PC (this is the address http://192.168.1.2/HAR). Now I have a laptop in the house and looked if the page came up on it and it did (but I did have to disable the firewall on my PC to allow this to happen).<br />
+I asked friends if they saw it and they did not. My questions are<br />
+1 - Is there some sort of software that I am missing that allows my website to be seen by other PCs. If so is there some sort of free download<br />
+2 - Or may it be that the hardware (processor) may needed to be updated in some sort of fashion.<br />
+<br />
+I have looked to downloading Apache HTTP server but if I already have ISS is APACHe needed.<br />
+<br />
+Many thanks for your time Bye Gunnar<br />
+I do appreciate your help. Kind regards Gunnar<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+you open it in a text editor..<br />
+[op]forums/view.php?fid=7;pid=13794;page=1#13821[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18941"></a>
+		<div class="forum-post-author">
+			<label class="title">jackyr</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-10-24 02:07:29</p>
+            </div>
+            <div class="postheader"><h3>Re: How to show the website by IP address</h3></div>
+				
+			<div class="body">
+				<p>Its really easy you can get your website IP through http://www.ip-details.com/ and then you can put up your site through with ISP provider...</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

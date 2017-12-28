@@ -1,0 +1,233 @@
+---
+ title: Error on Login Page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error on Login Page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22628"></a>
+		<div class="forum-post-author">
+			<label class="title">Lehmenix</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-09 21:18:02</p>
+            </div>
+            <div class="postheader"><h3>Error on Login Page</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+I want to know what could be causing this error to appear at the top of the Login Page of my Atutor site. Please advise on why this is happening and how to change it. <br />
+<br />
+Error is:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/success1/public_html/www.MySite.com/specificpage/include/lib/output.inc.php on line 269<br />
+<br />
+___________________<br />
+<br />
+My hosting, HostGator, could not figure it out- after several calls, saying that they could not spot any obvious error in the coding. They did conclude that the entire function was affected by this and would not properly execute. The function is included below:<br />
+<br />
+while ($row = mysql_fetch_assoc($result)) {<br />
+				//Do not overwrite the variable that existed in the cache_template already.<br />
+				//The edited terms (_c_template) will always be at the top of the resultset<br />
+				//0003279<br />
+				if (isset($_cache_template[$row['term']])){<br />
+					continue;<br />
+				}<br />
+<br />
+				// saves us from doing an ORDER BY<br />
+				if ($row['language_code'] == $_SESSION['lang']) {<br />
+					$_cache_template[$row['term']] = stripslashes($row['text']);<br />
+				} else if (!isset($_cache_template[$row['term']])) {<br />
+					$_cache_template[$row['term']] = stripslashes($row['text']);<br />
+				}<br />
+			}</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22635"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-10 10:14:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on Login Page</h3></div>
+				
+			<div class="body">
+				<p>This warning is very likely due to your database setup.<br />
+<br />
+You could try:<br />
+<br />
+1. Find the credentials to access ATutor database @ include/config.inc.php<br />
+<br />
+2. Use them to connect to ATutor database thru command line<br />
+<br />
+3. Make sure the tables are properly created and try a couple of "select" statements, especially on AT_language_text & AT_language_text that are used by the SQL which outputs a problematic $result.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23564"></a>
+		<div class="forum-post-author">
+			<label class="title">tooniceted</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-02 13:14:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on Login Page</h3></div>
+				
+			<div class="body">
+				<p>I'm having the same problem. Has there been any solutions?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23565"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-02 13:36:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on Login Page</h3></div>
+				
+			<div class="body">
+				<p>This problem sounds typical of an ATutor installation that was installed by unpacking ATutor on a local computer, then uploading all the files to the server. <br />
+<br />
+Instead, upload just the ATutor bundle, then unpack the files on the server. File-by-file very often result in minor file corruptions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23566"></a>
+		<div class="forum-post-author">
+			<label class="title">tooniceted</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-02 15:03:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on Login Page</h3></div>
+				
+			<div class="body">
+				<p>I did as requested and still receive the error message using 2.0.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23567"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-02 15:17:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on Login Page</h3></div>
+				
+			<div class="body">
+				<p>What exactly is the error message, and can you provide the additional details below describing your server environment.<br />
+<br />
+Are you on HostGator?<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23569"></a>
+		<div class="forum-post-author">
+			<label class="title">tooniceted</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-02 18:03:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on Login Page</h3></div>
+				
+			<div class="body">
+				<p>I am with HostGator<br />
+ATutor v 2.0.3<br />
+All patches that came with it are applied<br />
+Default theme<br />
+No changes to default settings<br />
+ATutor was unpacked, installed then ran and following error message appeared<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/XXXXX/public_html/ATutor/include/lib/output.inc.php on line 269<br />
+Linux Apache v2.2.22<br />
+PHP v5.2.17<br />
+MySQL v5.55.23-55<br />
+Pearl v5.8.8<br />
+Kernel v.3.8.28</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23574"></a>
+		<div class="forum-post-author">
+			<label class="title">tooniceted</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-03 10:10:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on Login Page</h3></div>
+				
+			<div class="body">
+				<p>I have eliminated the error message by doing the following:<br />
+<br />
+I have modified lines 268 and 269 as follows:<br />
+<br />
+$result	= mysql_query($sql, $db);<br />
+while ($row = mysql_fetch_assoc($result)) {<br />
+<br />
+Modified to:<br />
+<br />
+$result	= @mysql_query($sql, $db);<br />
+while ($row = @mysql_fetch_assoc($result)) {</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

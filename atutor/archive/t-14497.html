@@ -1,0 +1,176 @@
+---
+ title: using relatives URL
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>using relatives URL</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="14497"></a>
+		<div class="forum-post-author">
+			<label class="title">mmadera</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-14 19:28:51</p>
+            </div>
+            <div class="postheader"><h3>using relatives URL</h3></div>
+				
+			<div class="body">
+				<p>Hi all, <br />
+The problem is this.<br />
+<br />
+Our installation is in an experimental webserver, behind a proxy and the hosts is not the same than the main web server.<br />
+<br />
+To experiment from the outside mod_rewrite is used in order to traduce from https://www.domain/institute/e-cursos to http://experimental/ATutor.<br />
+<br />
+The application generates all the URLS in the form http://experimental/ATutor/somthing....<br />
+<br />
+Is there a way to make URL relatives to ATutor instalation? Lets say ./something ?<br />
+<br />
+Thank you,<br />
+            Mario<br />
+<br />
+PS: please copy to mmadera@fing.edu.uy<br />
+  Operating system ATutor is installed on - Windows Xp<br />
+  ATutor version - 1.5.4<br />
+  ATutor theme name - Default<br />
+  PHP version - 5.2.1<br />
+  MySQL version - 5.0.37<br />
+  Webserver & version - apache 2.2.4</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14505"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-15 11:14:11</p>
+            </div>
+            <div class="postheader"><h3>Re: using relatives URL</h3></div>
+				
+			<div class="body">
+				<p>ATutor generates the URLs based on PHP server path, which is defined in include/lib/constants.inc.php, define('AT_BASE_HREF', $_base_href);<br />
+<br />
+You may try alter the following:<br />
+$url_parts	 = explode('/', $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);<br />
+<br />
+to say<br />
+<br />
+$url_parts	 = explode('/', $_SERVER['HTTP_HOST'] . 'experimental/ATutor');</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14507"></a>
+		<div class="forum-post-author">
+			<label class="title">mmadera</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-15 15:28:41</p>
+            </div>
+            <div class="postheader"><h3>Re: using relatives URL</h3></div>
+				
+			<div class="body">
+				<p>HI Harris, thanks for your reply, but I think it would not work.<br />
+<br />
+I believe this, because PHP_SELF includes the script name. <br />
+<br />
+And I must say sorry because I hadn't explain myself clear. The rewriting rules changes https://www.fing.edu.uy/iimpi/e-cursos to https://myhost.fing.edu.uy/ATutor.<br />
+<br />
+Perhaps if I change <br />
+$url_parts = explode('/', $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);<br />
+<br />
+to <br />
+<br />
+$url_parts = explode('/', 'https://myhost.fing.edu.uy/ATutor');<br />
+<br />
+it works, but the script name is lost....<br />
+<br />
+Thanks again,<br />
+                Mario</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14508"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-15 15:36:50</p>
+            </div>
+            <div class="postheader"><h3>Re: using relatives URL</h3></div>
+				
+			<div class="body">
+				<p>Ah, in this case, how about setting a constant for your original host (www.fing.edu.uy/iimpi/e-cursos), and replace it by 'myhost.fing.edu.uy/ATutor' before the url_parts is generated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14509"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-15 16:01:11</p>
+            </div>
+            <div class="postheader"><h3>Re: using relatives URL</h3></div>
+				
+			<div class="body">
+				<p>Sorry, I meant before the $_base_href is generated, not url_parts.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Ah, in this case, how about setting a constant for your original host (www.fing.edu.uy/iimpi/e-cursos), and replace it by 'myhost.fing.edu.uy/ATutor' before the url_parts is generated.<br />
+[op]forums/view.php?fid=7;pid=14497;page=1#14508[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14510"></a>
+		<div class="forum-post-author">
+			<label class="title">mmadera</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-15 17:58:05</p>
+            </div>
+            <div class="postheader"><h3>Re: using relatives URL</h3></div>
+				
+			<div class="body">
+				<p>Harris, thanks again. I had try the solution you mention befor posting whithout success, mod_rewrite enter in loop aparently.<br />
+<br />
+So, after some advice from Greg in other post and 'hacking' around I get it!<br />
+<br />
+I will sumerize the modifications I made, and post them here.<br />
+<br />
+Mario.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

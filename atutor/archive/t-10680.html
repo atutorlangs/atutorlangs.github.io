@@ -1,0 +1,175 @@
+---
+ title: Side Menu Gone in Upgraded Version
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Side Menu Gone in Upgraded Version</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="10680"></a>
+		<div class="forum-post-author">
+			<label class="title">scottott</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-24 06:31:03</p>
+            </div>
+            <div class="postheader"><h3>Side Menu Gone in Upgraded Version</h3></div>
+				
+			<div class="body">
+				<p>I just updated to the latest version (1.5.4), and initially had a problem with a $_stacks argument on line 208 in /includes/header.inc.php which the error message said was not an array. I went to the code and changed it to [php](array)$_stacks[/php] and that made the error message go away. <br />
+<br />
+However, I still have no side menu in my courses. I can advance through course content with the arrow icon, but cannot see the outline of the course, nor any modules on the right side. (Frankly, I wish I knew how to move the menu to the left side, but that's another issue.)<br />
+<br />
+In addition, when I login using my former admin username, I have access only to basic system preferences, error logging and cron-setup...nothing else, including no courses. Is there a default admin login for new installs that I should be using. <br />
+<br />
+I'm glad that I don't seem to have lost my content, but I have lost most functionality. What can I tell you that would help you puzzle this out?<br />
+<br />
+Scott Ott<br />
+http://www.LiveTheFreedom.org/learn</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10681"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-24 06:39:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Side Menu Gone in Upgraded Version</h3></div>
+				
+			<div class="body">
+				<p>and "content navigation" is turned on in the side menu I guess? <br />
+<br />
+regarding moving the menu: I'm working on a new theme where this is resolved, and the menu can be moved left / right by altering a few lines in the CSS.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10682"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-24 08:18:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Side Menu Gone in Upgraded Version</h3></div>
+				
+			<div class="body">
+				<p>My first though is to restore the original version from the database backup and the copy of the ATutor directories you made before upgrading, then try upgrading again.<br />
+<br />
+Please describe the system ATutor is running on if you need more help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10685"></a>
+		<div class="forum-post-author">
+			<label class="title">scottott</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-24 12:08:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Side Menu Gone in Upgraded Version</h3></div>
+				
+			<div class="body">
+				<p>I do have the old directories, but I do not have a db backup.<br />
+Which folders should I overwrite with the old ones?<br />
+<br />
+Here's some more on my setup...Apache/1.3.33 (Darwin) PHP/4.4.0 DAV/1.0.3 mod_ssl/2.8.24 OpenSSL/0.9.7l<br />
+<br />
+Vegard: I don't know where to turn on content navigation, since I have almost nothing in the admin panel when I login with my old admin username.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10686"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-24 12:20:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Side Menu Gone in Upgraded Version</h3></div>
+				
+			<div class="body">
+				<p>Without a backup of the database, you'll need to do a manual install, which is essentially setting up ATutor without running the db upgrade scripts (in fact do not run the installer/upgrade this time).<br />
+<br />
+Move you broken upgrade directory to a new location, or rename it. <br />
+<br />
+Unpack a fresh copy of ATutor 1.5.4 into the old location  of the  broken upgrade.<br />
+<br />
+Copy or move the include/config.inc.php file and the content directory from the broken upgrade into the fresh copy.<br />
+<br />
+That should be anoutgh to get you running. Depending on customiztions, modules, etc, there may be a few more steps to copy eveything over from the broken upgrade.<br />
+<br />
+We do have a troubleshooting/installation service available if you'd like us to repair things for you. See the services page:<br />
+http://www.atutor.ca/services/index.php<br />
+<br />
+Turn on content navigation as the instructor under the Manage tab, then Student Tools>Side menu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10687"></a>
+		<div class="forum-post-author">
+			<label class="title">scottott</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-05-24 12:30:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Side Menu Gone in Upgraded Version</h3></div>
+				
+			<div class="body">
+				<p>Thanks, Greg. I'll give that a shot when I get an hour.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11009"></a>
+		<div class="forum-post-author">
+			<label class="title">bahasen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-06 03:26:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Side Menu Gone in Upgraded Version</h3></div>
+				
+			<div class="body">
+				<p>please help me to move the side menu from the right side to left side. i want to locate the navigation menu on the left side.<br />
+<br />
+thanks for your help</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

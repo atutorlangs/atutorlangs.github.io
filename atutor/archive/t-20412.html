@@ -1,0 +1,61 @@
+---
+ title: Installation of ATutor 20 Fails during Step2 Database Fixed
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installation of ATutor 20 Fails during Step2 Database Fixed</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20412"></a>
+		<div class="forum-post-author">
+			<label class="title">Brandroid</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-19 20:44:50</p>
+            </div>
+            <div class="postheader"><h3>Installation of ATutor 20 Fails during Step2 Database Fixed</h3></div>
+				
+			<div class="body">
+				<p>Hopefully this helps someone else who may have the same problem either upgrading or during a fresh install.<br />
+<br />
+During a fresh install of the latest ATutor Stable (v2) the installation would halt during step 2 while importing the DB Schema. The behavior indicated several tables would be created and many more failed to be created.<br />
+<br />
+Inside the &lt;Atutor Root>/install/db/ folder there are two files "atutor_schema.sql" and "atutor_language_text.sql" that are applicable to new installations and the remainder appear to indicate schema changes for upgrading.<br />
+<br />
+In any case they use the syntax TYPE=MyISAM which is a deprecated syntax and has been removed as of MySQL 5.4.4. Performing a quick SED replace of this to make this use ENGINE=MyISAM corrects the problem and lets installation proceed as normal.<br />
+<br />
+Affected platforms/users:<br />
+<br />
+MySQL Server Version >= 5.4.4<br />
+ATutor Version = 2 (Most likely all previous versions will be affected the same way)<br />
+Fix: Update Schema Syntax in install directory.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20416"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-07-20 08:35:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation of ATutor 2.0 Fails during Step2 (Database) [Fixed]</h3></div>
+				
+			<div class="body">
+				<p>Thanks, good to know.<br />
+<br />
+Ever since MySQL 5.3 new db problems have been occurring. Changes are happening to mysql. For now we'd suggest stay with a version less than 5.3, until mysql restabilizes.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

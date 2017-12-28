@@ -1,0 +1,135 @@
+---
+ title: Password disappears during login
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Password disappears during login</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="19801"></a>
+		<div class="forum-post-author">
+			<label class="title">Scottbiz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-20 01:56:38</p>
+            </div>
+            <div class="postheader"><h3>Password disappears during login</h3></div>
+				
+			<div class="body">
+				<p>Host: Network Solutions / shared server <br />
+ATutor Version:	1.6.4 (build r9047 - 2009-12-17 11:41:43)<br />
+Operating System:	Linux 2.6.22.10-NETSOL #1 SMP Mon Jul 14 16:26:14 EDT 2008 i686<br />
+Web Server:	Apache/2.2.8 (Unix) FrontPage/5.0.2.2635<br />
+PHP Version:	5.2.6<br />
+MySQL Version:	5.0.75 <br />
+<br />
+I have done three clean installs. The install goes flawlessly; then when I attempt to login, just as I click the login button, the password disappears and I get an Invalid username or password message, which then counts me out after three attempts. It is very clear that the password is being stripped upon clicking the login button. I have never seen this before with any login anywhere on the web.<br />
+<br />
+This happens with both admin and personal user login attempts using Firefox, Chrome, IE, and Opera. <br />
+<br />
+I have numerous Wordpress and one Moodle installation which login with no problems. <br />
+<br />
+Any ideas?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19809"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-20 10:06:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Password disappears during login</h3></div>
+				
+			<div class="body">
+				<p>The password disappearing is normal. It gets encrypted before sending it to the server.<br />
+<br />
+This problem generally occurs when working with a custom theme or an older one that hasn't had the encryption scripts added to the login template.<br />
+<br />
+<br />
+There's some discussion here that may help.<br />
+http://www.atutor.ca/view/7/14863/1.html<br />
+<br />
+Or, use the search to look for "login encryption"<br />
+<br />
+Also, if you've installed ATutor by uploading file-by-file, rather than uploading the bundle and unzipping it on the server, that might also contribute to the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19816"></a>
+		<div class="forum-post-author">
+			<label class="title">Scottbiz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 13:17:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Password disappears during login</h3></div>
+				
+			<div class="body">
+				<p>The solution!<br />
+<br />
+FYI: In case anyone else has this problem in the future; apparently ATutor uses "third party cookies" in the login process. When I changed my settings to allow third party cookies I was able to successfully login. <br />
+<br />
+Thanks for your help, it was a supposition posed in the thread you pointed to that led me to try this.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19817"></a>
+		<div class="forum-post-author">
+			<label class="title">Scottbiz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 13:36:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Password disappears during login</h3></div>
+				
+			<div class="body">
+				<p>I guess I wrote too soon. After successfully logging in, as soon as I tried to navigate anywhere, I was logged out, and could not log back in again. <br />
+<br />
+I do not like to give up easily and have tried many fixes to no avail. I am sure that you have a fine application here and I will eventually check back in to look for suggestions, but for now I am going on to something else. <br />
+<br />
+Thanks again for your help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19818"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-03-21 14:09:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Password disappears during login</h3></div>
+				
+			<div class="body">
+				<p>did you clear your browser's cookies and try again?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

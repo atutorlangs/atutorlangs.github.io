@@ -1,0 +1,293 @@
+---
+ title: Inherited a broken Atutor install
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Inherited a broken Atutor install</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25145"></a>
+		<div class="forum-post-author">
+			<label class="title">fandyman</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-30 12:49:05</p>
+            </div>
+            <div class="postheader"><h3>Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 2.6.18-308.24.1.el5PAE<br />
+  ATutor version - 1.4.2<br />
+  Patch #s applied - Uknown<br />
+  ATutor theme name -<br />
+  PHP version - 5.3.29<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages - See below<br />
+  Changes to default settings -<br />
+  Web browser being used -Chrome<br />
+<br />
+Warning: mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/madd/public_html/courses/install/include/ustep2.php on line 62<br />
+<br />
+Hello ATutor:<br />
+<br />
+I come here with cap firmly in hand.<br />
+<br />
+I inherited a broken ATutor install at <br />
+<br />
+http://www.maddcanadatraining.ca/courses/<br />
+<br />
+I am trying to upgrade the install from 1.4.2. to 2.0 since the web host could no longer support 1.4.2.<br />
+<br />
+I am stuck at Step 2 with the error message above and a list of tables that it could not create. I check the MySQL user and it has all the rights required.<br />
+<br />
+If you can provide any guidance, that would be appreciated.<br />
+<br />
+Fraser</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25146"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-31 14:57:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>Can you please confirm the exact version you are upgrading to. <br />
+<br />
+The upgrade may be failing because it is not finding English language. You may need to reinstall the english language pack.<br />
+http://atutor.ca/atutor/translate/index.php<br />
+<br />
+Also try using a different browser.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25151"></a>
+		<div class="forum-post-author">
+			<label class="title">fandyman</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 11:18:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>Hello Greg:<br />
+<br />
+Thanks for the reply.<br />
+<br />
+I downloaded 2.1 from Sourceforge.<br />
+<br />
+I tried unsuccessfully to upload the language pack. I'll try and run the SQL.<br />
+<br />
+Here's the error from Step 2 - <br />
+<br />
+Error<br />
+Table languages creation failed.<br />
+Table language_pages creation failed.<br />
+Table backups creation failed.<br />
+Table forums_courses creation failed.<br />
+Table forums_subscriptions creation failed.<br />
+Table tests_questions_assoc creation failed.<br />
+Table tests_questions_categories creation failed.<br />
+Table tests_questions alteration failed.<br />
+Table tests_questions alteration failed.<br />
+Table groups creation failed.<br />
+Table tests_groups creation failed.<br />
+Table tests alteration failed.<br />
+Table backups alteration failed.<br />
+Table member_track creation failed.<br />
+Table admin_log creation failed.<br />
+Table master_list creation failed.<br />
+Table admin_log alteration failed.<br />
+Table groups_types creation failed.<br />
+Table groups alteration failed.<br />
+Table groups alteration failed.<br />
+Table forums_groups creation failed.<br />
+Table reading_list creation failed.<br />
+Table external_resources creation failed.<br />
+Table file_storage_groups creation failed.<br />
+Table assignments creation failed.<br />
+Table mail_queue creation failed.<br />
+Table blog_posts_comments creation failed.<br />
+Table resource_categories alteration failed.<br />
+Table links_categories alteration failed.<br />
+Table resource_links alteration failed.<br />
+Table links alteration failed.<br />
+Table admin_log alteration failed.<br />
+Table backups alteration failed.<br />
+Table blog_posts_comments alteration failed.<br />
+Table member_track alteration failed.<br />
+Table tests_questions_assoc alteration failed.<br />
+Table admin_log alteration failed.<br />
+Table backups alteration failed.<br />
+Table blog_posts_comments alteration failed.<br />
+Table groups alteration failed.<br />
+Table mail_queue alteration failed.<br />
+Table reading_list alteration failed.<br />
+Table external_resources alteration failed.<br />
+Table groups alteration failed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25152"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 12:20:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>Installing a language pack should not generate these errors so I'm guess you did not use the admin's language manager.<br />
+<br />
+These errors would appear to be the result of trying to create table that already exist if you are trying to install over a previous attempt.<br />
+<br />
+Or, if this is a fresh install, the mysql user does not have the necessary permissions. Be sure the mysql user has create database and table privileges, and table alter privileges.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25153"></a>
+		<div class="forum-post-author">
+			<label class="title">fandyman</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 12:53:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>Correct.  Those errors were from Step 2 of an installation (2.1 over an existing 1.4.2). <br />
+<br />
+If I wanted to engage services, would purchasing a single support ticket from - <br />
+<br />
+http://www.atutor.ca/services/<br />
+<br />
+be the proper course of action?<br />
+<br />
+Thanks,<br />
+<br />
+Fraser</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25154"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 13:08:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>An upgrade is typically three tickets, though this may need your system admin to upgrade if the mysql user does not have enough permission, which would appear to be the case.<br />
+<br />
+Did you create a backup of the database before attempting to upgrade?<br />
+<br />
+Is there a reason for choosing 2.1 rather than 2.2?<br />
+<br />
+If you send the shell and ATutor login details to "info AT atutor dot ca" we'll take a look first to see if we are able to upgrade without your sysadmin.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25155"></a>
+		<div class="forum-post-author">
+			<label class="title">fandyman</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 13:16:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>No. No back up. Naturally. <br />
+<br />
+I tried 2.2 and the install said it was a no-go - too big a leap from 1.4.2.<br />
+<br />
+I'll work on getting Shell access.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25156"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 13:26:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>Control p[anel access would also be helpful, if you have one.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25157"></a>
+		<div class="forum-post-author">
+			<label class="title">fandyman</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-02-02 14:01:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Inherited a broken Atutor install</h3></div>
+				
+			<div class="body">
+				<p>I've sent you an email to the address mentioned above.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

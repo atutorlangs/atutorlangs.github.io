@@ -1,0 +1,65 @@
+---
+ title: FAQs for Course seems to be character limited
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>FAQs for Course seems to be character limited</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="21802"></a>
+		<div class="forum-post-author">
+			<label class="title">debearl</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-21 20:08:16</p>
+            </div>
+            <div class="postheader"><h3>FAQs for Course seems to be character limited</h3></div>
+				
+			<div class="body">
+				<p>I'm adding FAQ to a course and it's cutting off my answers.  I can't find where to increase the allowable length of FAQ's answers.  Can you please direct me to where I can do this?  I've searched and cannot find it.  Thanks much.  <br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Windows NT 5.2<br />
+  ATutor version - 2.0.2<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version - 5.2.5<br />
+  MySQL version - 5.0.45<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21806"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-02-22 15:10:13</p>
+            </div>
+            <div class="postheader"><h3>Re: FAQ's for Course seems to be character limited</h3></div>
+				
+			<div class="body">
+				<p>go to <br />
+mods/_standard/faq/add_questions.php line 48~49<br />
+<br />
+change the "250" to a larger value.  Also check with your database table type, if it's VARCHAR(250), then it should also get updated.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,152 @@
+---
+ title: Error appear when I use Gadgets
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error appear when I use Gadgets</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21056"></a>
+		<div class="forum-post-author">
+			<label class="title">tintindks</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-27 17:19:56</p>
+            </div>
+            <div class="postheader"><h3>Error appear when I use Gadgets</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I have installed some gadgets, and when I use them it appears in the top of the webpage this error:<br />
+[php]<br />
+<br />
+Warning: file_get_contents() [function.file-get-contents]: URL file-access is disabled in the server configuration in /var/www/vhosts/airibiza.es/subdomains/escuela/httpdocs/mods/_standard/social/lib/classes/Application.class.php on line 364<br />
+<br />
+Warning: file_get_contents(http://translateg.googlecode.com/svn/trunk/translateg.xml) [function.file-get-contents]: failed to open stream: no suitable wrapper could be found in /var/www/vhosts/airibiza.es/subdomains/escuela/httpdocs/mods/_standard/social/lib/classes/Application.class.php on line 364<br />
+[/php]<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - linux<br />
+  ATutor version - 2.0.1<br />
+  Patch #s applied -<br />
+  ATutor theme name - default<br />
+  PHP version - 5.2.14<br />
+  MySQL version - 5.1<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - firefox<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21060"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-27 23:27:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Error appear when I use Gadgets</h3></div>
+				
+			<div class="body">
+				<p>Your host has file_get_contents() turned off, needed to connect to content on remote sites.<br />
+<br />
+see<br />
+http://forums.digitalpoint.com/showthread.php?t=1753282</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21089"></a>
+		<div class="forum-post-author">
+			<label class="title">esterzia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-30 20:04:14</p>
+            </div>
+            <div class="postheader"><h3>sql error</h3></div>
+				
+			<div class="body">
+				<p>i use wampserver and in atutor instalation this error occur"Unable to connect to database server" in step 2</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22625"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-09 10:32:24</p>
+            </div>
+            <div class="postheader"><h3>Error Appear when I use gadget</h3></div>
+				
+			<div class="body">
+				<p>Atutor 2.0.2<br />
+I experience the same problem when I install gadgets too about the file_get_contents() functions too. I've reported it to my host though.<br />
+Another thing I would love to point out is the fact that students can find more gadgets around when using the google social. I would love to redirect the gadget to [b]http://www.google.com/ig/directory?synd=open&source=gghp[/b] instead of the usual [b]http://atutor.ca/get_gadgets.php[/b].<br />
+Please kindly assist!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22634"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-10 10:03:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Error Appear when I use gadget</h3></div>
+				
+			<div class="body">
+				<p>This warning may mean that your server configuration (your host) is blocking external file access.<br />
+<br />
+In php.ini, set: allow_url_fopen = On</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22636"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-10 12:21:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Error Appear when I use gadget</h3></div>
+				
+			<div class="body">
+				<p>Oh! Thanks Cindy</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

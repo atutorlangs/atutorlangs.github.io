@@ -1,0 +1,119 @@
+---
+ title: a weid  error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>a weid  error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2835"></a>
+		<div class="forum-post-author">
+			<label class="title">sabino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-20 12:54:52</p>
+            </div>
+            <div class="postheader"><h3>a weid  error</h3></div>
+				
+			<div class="body">
+				<p>after using the drop down bar to select a course I received this error message<br />
+<br />
+[ Variable: error]<br />
+[AT_ERROR_NO_SUCH_COURSE]<br />
+<br />
+besides the menu changed to this 'buttons' <br />
+<br />
+ [ Variable: home]   [ Variable: register]   [ Variable: browse_courses]   [ Variable: login]   [ Variable: password_reminder <br />
+<br />
+i can send you a screenshot if you want<br />
+<br />
+and the log in box switched to <br />
+ [ Variable: logged_in_as]: [ Variable: guest] <br />
+ [ Variable: login]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2836"></a>
+		<div class="forum-post-author">
+			<label class="title">sabino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-20 12:56:19</p>
+            </div>
+            <div class="postheader"><h3>i forgot the</h3></div>
+				
+			<div class="body">
+				<p>http://elearning.med.unifi.it/atutor/info.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2842"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-20 18:51:10</p>
+            </div>
+            <div class="postheader"><h3>Template bug</h3></div>
+				
+			<div class="body">
+				<p>There is a bug in the default theme template for 1.4. Upgrade to the 1.4.2 theme.<br />
+<br />
+or replace the following block in themes/default/header.tmpl/php<br />
+<br />
+----<br />
+&lt;!-- course select drop down --><br />
+					&lt;td align="right" valign="middle" class="navmenu">&lt;form method="post" action="&lt;?php echo $tmpl_base_path; ?>bounce.php" target="_top">&lt;label for="jumpmenu" accesskey="j">&lt;/label><br />
+						&lt;select name="course" id="jumpmenu" title="&lt;?php echo _AT('jump'); ?>:  ALT-j"><br />
+							&lt;option value="0">&lt;?php echo _AT('my_courses'); ?>&lt;/option><br />
+							&lt;optgroup label="&lt;?php echo _AT('courses_below'); ?>"><br />
+								&lt;?php foreach ($tmpl_nav_courses as $course): ?><br />
+									&lt;?php if ($course['course_id'] == $_SESSION['course_id']): ?><br />
+										&lt;option value="&lt;?php echo $course['course_id']; ?>" selected="selected">&lt;?php echo $course['title']; ?>&lt;/option><br />
+									&lt;?php else: ?><br />
+										&lt;option value="&lt;?php echo $course['course_id']; ?>">&lt;?php echo $course['title']; ?>&lt;/option><br />
+									&lt;?php endif; ?><br />
+								&lt;?php endforeach; ?><br />
+							&lt;/optgroup><br />
+						&lt;/select>&nbsp;&lt;input type="submit" name="jump" value="&lt;?php echo _AT('jump'); ?>" id="jump-button" />&lt;input type="hidden" name="g" value="22" />&lt;/form>&lt;/td><br />
+					&lt;!-- end course select drop down --><br />
+<br />
+----<br />
+<br />
+with<br />
+<br />
+----<br />
+&lt;!-- course select drop down --><br />
+					&lt;td align="right" valign="middle" class="navmenu">&lt;form method="post" action="&lt;?php echo $tmpl_base_path; ?>bounce.php" target="_top">&lt;label for="jumpmenu" accesskey="j">&lt;/label><br />
+						&lt;select name="course" id="jumpmenu" title="&lt;?php echo _AT('jump'); ?>:  ALT-j"><br />
+							&lt;option value="0">&lt;?php echo _AT('my_courses'); ?>&lt;/option><br />
+							&lt;optgroup label="&lt;?php echo _AT('courses_below'); ?>"><br />
+								&lt;?php foreach ($tmpl_nav_courses as $this_course_id => $this_course_title): ?><br />
+									&lt;?php if ($this_course_id == $_SESSION['course_id']): ?><br />
+										&lt;option value="&lt;?php echo $this_course_id; ?>" selected="selected">&lt;?php echo $this_course_title; ?>&lt;/option><br />
+									&lt;?php else: ?><br />
+										&lt;option value="&lt;?php echo $this_course_id; ?>">&lt;?php echo $this_course_title; ?>&lt;/option><br />
+									&lt;?php endif; ?><br />
+								&lt;?php endforeach; ?><br />
+							&lt;/optgroup><br />
+						&lt;/select>&nbsp;&lt;input type="submit" name="jump" value="&lt;?php echo _AT('jump'); ?>" id="jump-button" />&lt;input type="hidden" name="g" value="22" />&lt;/form>&lt;/td><br />
+					&lt;!-- end course select drop down --></p>
+			</div>
+		</div>
+	</li>
+</ul></div>

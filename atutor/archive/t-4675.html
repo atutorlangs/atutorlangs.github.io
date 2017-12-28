@@ -1,0 +1,92 @@
+---
+ title: Installation step 7 wont advance to step 8
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installation step 7 wont advance to step 8</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4675"></a>
+		<div class="forum-post-author">
+			<label class="title">maravert</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-02 00:02:29</p>
+            </div>
+            <div class="postheader"><h3>Installation step 7 wont advance to step 8</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -Apache 200.40 red Hat Linux<br />
+  version of ATutor - 1.4.3<br />
+  versions of php - 4.2.2<br />
+  version of mysq  3.23.58<br />
+  webserver & version  -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -<br />
+<br />
+In the installation step 7 wont advanced to step 8, this is the message :<br />
+<br />
+Step 7: Anonymous Usage Collection (current step)<br />
+<br />
+<br />
+Warning: Wrong parameter count for php_uname() in /home/httpd/vhosts/intermercadeo.com/httpdocs/tutor/install/include/step7.php on line 24<br />
+<br />
+Warning: Wrong parameter count for php_uname() in /home/httpd/vhosts/intermercadeo.com/httpdocs/tutor/install/include/step7.php on line 24<br />
+<br />
+Warning: Wrong parameter count for php_uname() in /home/httpd/vhosts/intermercadeo.com/httpdocs/tutor/install/include/step7.php on line 24<br />
+<br />
+Warning: Wrong parameter count for php_uname() in /home/httpd/vhosts/intermercadeo.com/httpdocs/tutor/install/include/step7.php on line 24<br />
+<br />
+Here there is more information :<br />
+<br />
+HTTP Web Server (Apache 1.3.x is highly recommended. We do not recommend Apache 2.x) Detected: Apache/2.0.40 (Red Hat Linux) <br />
+PHP 4.2.0 or higher (Version 4.3.0 or higher is recommended) Detected: PHP 4.2.2<br />
+With the following options: <br />
+--with-zlib to enable Zlib (Required) Detected: Enabled  <br />
+--with-mysql to enable MySQL support (Required) Detected: Enabled  <br />
+safe_mode must be disabled (Required) Detected: Disabled  <br />
+file_uploads must be enabled (Required) Detected: Enabled  <br />
+upload_max_filesize should be at least 5 Megabyte to be useful Detected: 20M  <br />
+post_max_size should be set to at least 8 Megabyte to be useful Detected: 8M  <br />
+session.save_path must exist and be writable Detected: /tmp - writable  <br />
+MySQL 3.23.x or higher (Version 4.0.16 or higher is recommended) Detected: Found Unknown Version  <br />
+<br />
+<br />
+Please, help me<br />
+<br />
+Alex Maravert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4681"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-06-02 08:33:29</p>
+            </div>
+            <div class="postheader"><h3>Don't use Apache 2</h3></div>
+				
+			<div class="body">
+				<p>Apache 2 does not work all that well with PHP, which is why we recommend against using it. <br />
+<br />
+Also you may want to upgrade to a more current version of PHP. Though 4.2 is the minimum, 4.3+ is recommended.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

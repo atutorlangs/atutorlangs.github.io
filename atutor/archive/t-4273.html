@@ -1,0 +1,80 @@
+---
+ title: Customize categories
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Customize categories</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="4273"></a>
+		<div class="forum-post-author">
+			<label class="title">Valentine</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-11 10:14:38</p>
+            </div>
+            <div class="postheader"><h3>Customize categories</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I'm trying to add a logo behind the list of categories.<br />
+I've added a field "logo" in AT_courses_cat, but I can't display my logo (vars pb) :<br />
+<br />
+[i]browse_categories.inc.php[/i]<br />
+[quote] if (!defined('AT_INCLUDE_PATH')) { exit; }<br />
+<br />
+$sql = "SELECT * FROM ".TABLE_PREFIX."course_cats ORDER BY cat_name ";<br />
+$result = mysql_query($sql, $db);<br />
+if (mysql_num_rows($result) == 0) {<br />
+	$msg->addInfo('NO_CATEGORIES');<br />
+} else {<br />
+	while($row = mysql_fetch_assoc($result)){<br />
+		$current_cats[$row['cat_id']] = $row['cat_name'];<br />
+		$parent_cats[$row['cat_id']]  = $row['cat_parent'];<br />
+		$cat_cats[$row['cat_id']]     = $row['cat_id'];<br />
+		[b]$logo_cats[$row['cat_id']]    = $row['logo'];[/b]<br />
+<br />
+	}<br />
+}<br />
+<br />
+// count the number of courses in each category<br />
+$sql = "SELECT cat_id from ".TABLE_PREFIX."courses WHERE hide=0";<br />
+$result = mysql_query($sql, $db);<br />
+<br />
+	while($row = mysql_fetch_array($result)){<br />
+		$cat_count[$row['cat_id']][$i] = $i++;<br />
+	}<br />
+<br />
+function print_parent_cats($parent_cat_id, &$cats, $cat_row) {<br />
+	$my_cats = $cats[$parent_cat_id];<br />
+	$new_depth = ($old_depth - $depth);<br />
+	global $cat_count;<br />
+	echo '&lt;ul>'."\n";<br />
+	foreach ($my_cats as $cat) {<br />
+		echo '&lt;li>&lt;a href="'.$_SERVER['PHP_SELF'].'?current_cat='.$cat['cat_id'].SEP.'show_courses='.$cat['cat_id'].'">';<br />
+		if($cat['cat_id'] != $cat_row){<br />
+			echo $cat['cat_name'][b].'&nbsp;&lt;img src="images/'.$cat['logo'].'" border="0"/>'[/b];<br />
+		}else{<br />
+			echo '&lt;strong>'.$cat['cat_name'].'[b]&nbsp;&lt;img src="images/'.$cat['logo'].'" border="0"/>[/b]&lt;/strong>';<br />
+		}<br />
+		echo '&lt;/a> &lt;small>';<br />
+		echo '( '.count($cat_count[$cat['cat_id']]).' )&lt;/small>';<br />
+<br />
+		if (is_array($cats[$cat['cat_id']]) && ($cat['cat_id'] !== 0) ) {<br />
+			print_parent_cats($cat['cat_id'], $cats,  $cat_row, $depth+1);<br />
+		}<br />
+		echo '&lt;/li>';<br />
+	}<br />
+	echo '&lt;/ul>';<br />
+}<br />
+[/quote]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

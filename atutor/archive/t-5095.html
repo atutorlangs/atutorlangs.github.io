@@ -1,0 +1,279 @@
+---
+ title: Login page errors
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Login page errors</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="5095"></a>
+		<div class="forum-post-author">
+			<label class="title">alberto_verdoy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-13 18:35:34</p>
+            </div>
+            <div class="postheader"><h3>Login page errors</h3></div>
+				
+			<div class="body">
+				<p>I had a succesful install, but i can't see images in login.php, all links are broken and are linked to a https:// url. Help!<br />
+<br />
+Information about my system:<br />
+<br />
+Version of ATutor - ATutor 1.4.3<br />
+Operating system - Windows 2003 Server Enterprise Edition<br />
+Web server - IIS 6.0<br />
+Version of PHP - 4.3.11<br />
+Version of MySQL - 4.1.12<br />
+Web browser - Internet Explorer 6.0.3790.0 with default settings<br />
+I have root access to my server<br />
+The file php.ini is configured ok<br />
+The file config.inc.php seems ok too<br />
+Php information page:  http://193.147.138.2/phpinfo.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5104"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-14 10:34:45</p>
+            </div>
+            <div class="postheader"><h3>Login page errors</h3></div>
+				
+			<div class="body">
+				<p>in ./include/lib/constants.inc.php<br />
+<br />
+change line 122 from<br />
+if (isset($_SERVER['HTTPS']) || strtolower($_SERVER['HTTPS']) == 'on') {<br />
+<br />
+to<br />
+<br />
+if (isset($_SERVER['HTTPS']) && (strtolower($_SERVER['HTTPS']) == 'on')) {</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5126"></a>
+		<div class="forum-post-author">
+			<label class="title">alberto_verdoy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-16 10:39:55</p>
+            </div>
+            <div class="postheader"><h3>No form in login.php</h3></div>
+				
+			<div class="body">
+				<p>Thank you joel. Now I can see the images, but I get a new error in web browser (Internet Explorer 6.0.3790.0). The error is<br />
+<br />
+document.form.form_login is null ot not an object<br />
+<br />
+This is my URL:  http://193.147.138.2/ATutor/<br />
+<br />
+System Information:<br />
+<br />
+Version of ATutor - ATutor 1.4.3<br />
+Operating system - Windows 2003 Server Enterprise Edition<br />
+Web server - IIS 6.0<br />
+Version of PHP - 4.3.11<br />
+Version of MySQL - 4.1.12<br />
+Web browser - Internet Explorer 6.0.3790.0 with default settings<br />
+I have root access to my server<br />
+The file php.ini is configured ok<br />
+The file config.inc.php seems ok too<br />
+Php information page: 193.147.138.2/phpinfo.php<br />
+I changed the line 122 in ./include/lib/constants.inc.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5127"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-16 11:15:12</p>
+            </div>
+            <div class="postheader"><h3>Remove whitespace</h3></div>
+				
+			<div class="body">
+				<p>You've likely introduced the Windows end of line characters when you save the constants.inc.php file. Open the file again and delete any whitespaces at the end of the file. In your editor's preference settings, change the end of line option from Windows, to Unix end of lines. Then save the file.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Thank you joel. Now I can see the images, but I get a new error in web browser (Internet Explorer 6.0.3790.0). The error is<br />
+<br />
+document.form.form_login is null ot not an object<br />
+<br />
+This is my URL:  htt...<br />
+[op]forums/view.php?fid=7;pid=5095;page=1#5126[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5131"></a>
+		<div class="forum-post-author">
+			<label class="title">alberto_verdoy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-16 13:20:56</p>
+            </div>
+            <div class="postheader"><h3>Removing whitespaces</h3></div>
+				
+			<div class="body">
+				<p>Thank you Greg, but I replace constants.inc.php with original constants.inc.php and I edit it with joe in a Linux machine. Then I copy the modified constants.inc.php to my windows machine, but the problem doesn't disappear. Perhaps it's a problem with the ftp program that I used to transfer the file from one machine to another.<br />
+<br />
+I don't know any program to edit constants.inc.php correctly in windows.<br />
+<br />
+Can you help me?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5140"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-18 10:32:55</p>
+            </div>
+            <div class="postheader"><h3>Removing whitespaces</h3></div>
+				
+			<div class="body">
+				<p>Please try ATutor 1.5</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5156"></a>
+		<div class="forum-post-author">
+			<label class="title">alberto_verdoy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-07-20 08:05:29</p>
+            </div>
+            <div class="postheader"><h3>ATutor is Running!!!!!</h3></div>
+				
+			<div class="body">
+				<p>Hi, thank you joel and greg for your support. After the problems, I decided to start again, and this time I don't get any problem. I like to say that ATutor runs perfectly on Windows system. This is the information of the system:<br />
+<br />
+Version of ATutor - ATutor 1.5<br />
+Operating system - Windows 2003 Server Enterprise Edition<br />
+Web server - IIS 6.0<br />
+Version of PHP - 4.3.11<br />
+Version of MySQL - 4.0.25</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10149"></a>
+		<div class="forum-post-author">
+			<label class="title">padmini</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-26 06:09:33</p>
+            </div>
+            <div class="postheader"><h3>ATutor installation problem</h3></div>
+				
+			<div class="body">
+				<p>I wanted to install ATutor in my system. I've disabled the network connection to ensure that i'm not connected to the system in the intranet taht is having atutor intalled.<br />
+ My Problem is when i try to type in install.php in the browser i get a message saying "it seems that ATutor is already installed in this system". <br />
+ When i try to open any other index.php page i get a blank page.<br />
+<br />
+Things to describe: <br />
+  operating system -windows XP 2 service pack<br />
+  version of ATutor -1.4.3<br />
+  versions of php -5.2.1<br />
+  version of mysq l -<br />
+  webserver & version -Apache 2.0<br />
+I've checked with phpinfo.php file, everything is fine.<br />
+Plz help me out.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10150"></a>
+		<div class="forum-post-author">
+			<label class="title">padmini</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-26 06:09:57</p>
+            </div>
+            <div class="postheader"><h3>ATutor installation problem</h3></div>
+				
+			<div class="body">
+				<p>I wanted to install ATutor in my system. I've disabled the network connection to ensure that i'm not connected to the system in the intranet taht is having atutor intalled.<br />
+ My Problem is when i try to type in install.php in the browser i get a message saying "it seems that ATutor is already installed in this system". <br />
+ When i try to open any other index.php page i get a blank page.<br />
+<br />
+Things to describe: <br />
+  operating system -windows XP 2 service pack<br />
+  version of ATutor -1.4.3<br />
+  versions of php -5.2.1<br />
+  version of mysq l -<br />
+  webserver & version -Apache 2.0<br />
+I've checked with phpinfo.php file, everything is fine.<br />
+Plz help me out.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10152"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-26 08:18:49</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor installation problem</h3></div>
+				
+			<div class="body">
+				<p>What version of ATutor?<br />
+<br />
+Try a downloading a fresh copy and reinstalling.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

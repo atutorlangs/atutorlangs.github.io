@@ -1,0 +1,209 @@
+---
+ title: Upgrade from 155 to 202 Stopped at Content Files
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Upgrade from 155 to 202 Stopped at Content Files</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22059"></a>
+		<div class="forum-post-author">
+			<label class="title">jparraez</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-21 15:34:11</p>
+            </div>
+            <div class="postheader"><h3>Upgrade from 155 to 202 Stopped at Content Files</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I've found the following issue when upgrading Atutor from 1.5.5 to 2.0.2. I've converted myy databases as explained in Wiki , but when installation is at Step 6. It stops at that point. In fact, I've checked and files are copied to content/ folder. Then, I don't understand why installation process is stopped.  Attached is a screen shot. <br />
+<br />
+How can I debug this issue? What am I doing wrong?<br />
+<br />
+<br />
+Thanks for the help<br />
+<br />
+Juan Pablo<br />
+<br />
+MySQL 4.1.10+  	Found Version 4.1.22<br />
+PHP 4.3.0+  	5.2.13  	Good<br />
+zlib 	        Enabled	Good<br />
+mbstring 	Enabled	Good<br />
+mysql       	Enabled	Good<br />
+safe_mode        = Off 	Off	Good<br />
+file_uploads     = On 	On	Good<br />
+GD 	On	Good<br />
+JPEG Support 	On	Good<br />
+upload_max_filesize >= 2 MB 	20M 	Good<br />
+post_max_size >= 8 MB 	20M 	Good<br />
+sessions 	Enabled	Good<br />
+session.auto_start = 0 	0	Good<br />
+session.save_path 	Directory Writeable	Good<br />
+curl 	Enabled	Good<br />
+. in include_path 	Enabled	Good<br />
+Mail configuration 	Enabled	Good</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22060"></a>
+		<div class="forum-post-author">
+			<label class="title">jparraez</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-21 15:42:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade from 1.5.5 to 2.0.2 Stopped at</h3></div>
+				
+			<div class="body">
+				<p>I've just noticed that AT_languages tables are empty when the upgrade is done.<br />
+<br />
+<br />
+I had installed in 1.5.5 two language modules (Spanish and Catalan), and they have been deleted during the upgrade. <br />
+<br />
+Must I add English package before the process?<br />
+<br />
+I have a backup of the database, so I have the original content. <br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22061"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-21 15:48:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade from 1.5.5 to 2.0.2 Stopped at</h3></div>
+				
+			<div class="body">
+				<p>It may have timed out if there was a lot of content being copied over. <br />
+<br />
+What's the size of the content directory?<br />
+<br />
+You might be able to resolve the problem by increasing the time out value in php.ini, and restarting the Web server.<br />
+<br />
+Set:<br />
+default_socket_timeout = 60<br />
+<br />
+to something larger.<br />
+<br />
+The other option might be to clean out any old courses if there are any before upgrading.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22066"></a>
+		<div class="forum-post-author">
+			<label class="title">jparraez</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-21 16:05:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade from 1.5.5 to 2.0.2 Stopped at</h3></div>
+				
+			<div class="body">
+				<p>The size is not too big. 25Mbytes.<br />
+<br />
+All files and folders seem to be copied correctly.<br />
+<br />
+I'm going to try to change the timeout.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22067"></a>
+		<div class="forum-post-author">
+			<label class="title">jparraez</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-21 16:15:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade from 1.5.5 to 2.0.2 Stopped at</h3></div>
+				
+			<div class="body">
+				<p>Thanks againg for your support<br />
+<br />
+By the way, the total size is around 50Mb sorry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22074"></a>
+		<div class="forum-post-author">
+			<label class="title">jparraez</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-22 07:55:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade from 1.5.5 to 2.0.2 Stopped at</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+Thanks for the help.<br />
+<br />
+<br />
+I've been able to do the upgrade. The prtoblem was the permissions folder in the old directory. It seems that the install script was not able to read the files.<br />
+<br />
+Once changed that, process was finished correctly.<br />
+<br />
+However, when I tried to login after the upgrade, it appeared a message saying that no languages were installed. I added English in AT_languages table as a new entry, and I was able to login as admin and add new langauges. So, I think it's done OK.<br />
+<br />
+Thank you very much again<br />
+ <br />
+Juan Pablo</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22080"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-04-25 09:06:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade from 1.5.5 to 2.0.2 Stopped at</h3></div>
+				
+			<div class="body">
+				<p>thanks for the report. I'm guessing the problem is related to this bug.<br />
+http://atutor.ca/atutor/mantis/view.php?id=4750</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

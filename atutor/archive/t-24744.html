@@ -1,0 +1,84 @@
+---
+ title: Auto Enroll Master list or Cron Job
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Auto Enroll Master list or Cron Job</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24744"></a>
+		<div class="forum-post-author">
+			<label class="title">alangoldstein</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-07-26 15:11:36</p>
+            </div>
+            <div class="postheader"><h3>Auto Enroll Master list or Cron Job</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 2.6.18-348.4.1.el5<br />
+  ATutor version - 2.1.1<br />
+  Patch #s applied - All<br />
+  ATutor theme name - Original<br />
+  PHP version - 5.2.17<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+I must first thank everyone involved in Atutor as I love the simplicity of the software for my LMS needs. Here is my story:<br />
+<br />
+I'll start with what I need as I know someone brighter than me has figured it out. I have a course in Atutor that I need to grant access to the course automatically after the student has used the Jotform on my site and paid. Here are the options I've explored and the issues I have with each one:<br />
+<br />
+1. Auto Enroll. The auto enroll feature with Atutor is fantastic but the problem is that I can send the link to the student automatically after they paid but I'm concerned that they can then distribute the link and then I will have people completing the course that have not paid. I read that I can set the course enrollment to instructor approval but then it defeats the purpose of being automatic.<br />
+<br />
+2. Master List. I read up on the using the master list to mass enroll but how can i make this work? <br />
+<br />
+3. Jotform allows webhooks/scripts to run after payment. Is there any way to write a specific script that contains specific data of the student to enroll that particular student in the course? What I mean is maybe a url that has the name, id, password, etc and that information will be send to Atutor and then the student can just log in with their info since they will already be in the system?<br />
+<br />
+4. I explored using the payment feature of Atutor with paypal but the part about the paypal IPN concerns me as I already use the IPN for other registrations? Any idea if the IPN can be used on multiple sites?<br />
+<br />
+5. Cron job. Is it possible to have a cron job setup that will every hour will query a certain database of paid students and allow them to start the course?<br />
+<br />
+The ideal situation would be to find a way to create a script/url/cron/etc... that Jotform can send to Atutor to enroll the student after payment. However, I'm open to suggestions.<br />
+<br />
+Thanks to everyone that has read this post.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24745"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-07-28 09:19:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Auto Enroll, Master list, or Cron Job?</h3></div>
+				
+			<div class="body">
+				<p>It sounds like you've given this a lot of thought.<br />
+<br />
+I suppose if I were to choose one of these option, I'd go for the Paypal route. Since you already have a Paypal account it seems, its then relatively easy with the Payments module to automate course enrollment. I would assume IPN would not be a problem, but can't confirm that. If you have a Paypal sandbox, you could experiment.<br />
+<br />
+I'm not familiar with JotForm, but it seems like it might also be a good option, combined with a cron job to pull info from wherever it stores its data, to update the ATutor database. Of course there'd be some programming involve, but nothing too complicated.<br />
+<br />
+Good luck!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

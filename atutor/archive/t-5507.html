@@ -1,0 +1,110 @@
+---
+ title: Bug fix for email footers v15
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Bug fix for email footers v15</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5507"></a>
+		<div class="forum-post-author">
+			<label class="title">Joka</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 12:23:59</p>
+            </div>
+            <div class="postheader"><h3>Bug fix for email footers v15</h3></div>
+				
+			<div class="body">
+				<p>ATutor version: 1.5<br />
+<br />
+E-mail footers use a php variable defined in '/include/lib/constants.inc.php' called $_base_href to implement the URL of the server/application.<br />
+<br />
+The problem I ran in to was that this pointed to http://localhost/ . If you ran into this same problem, here is the solution I devised.<br />
+<br />
+I first made sure that my Apache server had the right name. One defines that in the httpd.conf file. I then wrote a new variable container that I inserted just after the '$_base_href' one, as follows:<br />
+<br />
+/* added by  Jonathan Kaplan for email footers */<br />
+$safe_url_parts = explode('/', $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']);<br />
+$_base_server	 = array_slice($safe_url_parts, 0, count($safe_url_parts) - $dir_deep-1);<br />
+$_base_server	 = $server_protocol . implode('/', $_base_server).'/';<br />
+<br />
+Finally I replaced (in the following files) '$_base_href' by '$_base_server':<br />
+'/include/classes/phpmailer/atutormailer.class.php'<br />
+'/inbox/send_message.php'<br />
+<br />
+Please comment if you have come across the same problem or have found better workarounds. If the problem is to be considered as some sort of a bug, well then I'm sure those that are working on version 1.52 will take this into account :) .</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5509"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:14:28</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>using localhost as $_base_href is the expected behaviour if that is the URL of the installation.<br />
+<br />
+it is unlikely that installations being viewed using localhost will even have a publically available address.<br />
+<br />
+instead of using localhost, you could use 127.0.0.1, in which case it'll use that internal IP, which also is not accessible publically.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5511"></a>
+		<div class="forum-post-author">
+			<label class="title">Joka</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:28:35</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>In some cases it is the router that has the public IP address related to the domain name. It then forwards requests on port 80 (www) to the right computer serving the Web.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5514"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-08-18 13:46:02</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>I still do not see this as a big problem. If it's the router doing the mapping then ATutor wouldn't know what the real domain name or IP address is anyway.<br />
+<br />
+I do not think it's too realistic to access a localhost server if it has a domain name and IP.<br />
+<br />
+If you wanted to avoid accessing the router simply edit your hosts file to point the domain name to the internal IP.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,161 @@
+---
+ title: Cyrillic Encoding
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cyrillic Encoding</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="3946"></a>
+		<div class="forum-post-author">
+			<label class="title">smal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-15 08:19:28</p>
+            </div>
+            <div class="postheader"><h3>Cyrillic Encoding</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -Linux Fedora Core 2<br />
+  version of ATutor -1.4.3<br />
+  versions of php -4.3.8<br />
+  version of mysq l -3.23.58<br />
+  webserver & version -Apache 2.00.49<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3947"></a>
+		<div class="forum-post-author">
+			<label class="title">smal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-15 08:29:06</p>
+            </div>
+            <div class="postheader"><h3>Encoding Cyrillic</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -<br />
+		i have a problem with displaing cyrillic symbols in question db.<br />
+I have a fresh Atutor 1.4.3 installation with Atutor1.4.3 Russian Pack.<br />
+(which system i write before)<br />
+I adding some kind of questions(in cyrillic symbols) in question db. When i looking in question database  question in cyrillic displaing in wrong symbols.<br />
+( in my browser coding sets rigth)<br />
+So i like to know in which file i can change somethig to change display symbol coding?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3948"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-15 08:52:32</p>
+            </div>
+            <div class="postheader"><h3>Broken Char set</h3></div>
+				
+			<div class="body">
+				<p>The "1" seems to be missing from the Character set definition. it should be russian-windows-1251 instead of russian-windows-125.<br />
+<br />
+You can change this in the language table of the ATutor database. If that does not fix the problem, you could try changing the character set to utf-8. This may break some of the other language, which you can fix through the Language Manager by retyping the broken language.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3957"></a>
+		<div class="forum-post-author">
+			<label class="title">smal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-16 06:57:57</p>
+            </div>
+            <div class="postheader"><h3>Encoding Cyrillic</h3></div>
+				
+			<div class="body">
+				<p>i had change for Russian Language "Character Set" from "russian-windows-125" to "russian-windows-1251" but cyrillic question in  a page question database still show in wrong coding.<br />
+I also change "Character Set" to utf-8 but in this case i that all messages ( not only questions) shows in bad (so bad) symbols.<br />
+(when i changed to utf-8 i also changed web browser setting to utf-8).<br />
+I think it's problem with "myatutor_instalation/tools/tests/question_db.php" script when loading question from AT_tests_questions table or wrong chars coding when displaing questions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3966"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-16 08:53:15</p>
+            </div>
+            <div class="postheader"><h3>Unable to reproduce</h3></div>
+				
+			<div class="body">
+				<p>As far as I can tell with our local installations the character set is being set properly. <br />
+<br />
+Visit the translation forum and post a message to one of the Russin threads to see if anyone else is experiencing this problem, or has a solution.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4060"></a>
+		<div class="forum-post-author">
+			<label class="title">smal</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-23 07:06:01</p>
+            </div>
+            <div class="postheader"><h3>Change Coding</h3></div>
+				
+			<div class="body">
+				<p>Now i know how to resolve this problem:<br />
+if file ../include/html/[b]tests_questions.inc.php[/b] add some parameters into function [b] htmlentities [/b] .<br />
+You must   change htmlentites from [b] htmlentities($row['question']) [/b] to [b] htmlentities($row['question'], ENT_COMPAT, 'cp1251') [/b].<br />
+You must do this twice: in line 72 and 74</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

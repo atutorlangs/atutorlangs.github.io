@@ -1,0 +1,443 @@
+---
+ title: Fatal error after upgrade from 153 to 161pl1
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Fatal error after upgrade from 153 to 161pl1</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15774"></a>
+		<div class="forum-post-author">
+			<label class="title">webmark</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-20 17:56:51</p>
+            </div>
+            <div class="postheader"><h3>Fatal error after upgrade from 153 to 161pl1</h3></div>
+				
+			<div class="body">
+				<p>Hello.<br />
+<br />
+I downloaded and upgraded successfully. When I clicked on the Log in link after the upgrade was finished I get:<br />
+<br />
+"Fatal error: Call to a member function printErrors() on a non-object in .../public_html/training/include/phpCache/phpCache.inc.php on line 527.<br />
+<br />
+I tested the login using the old atutor backup on my browser and it resolves to the right page.<br />
+<br />
+Should I restore the old database backup and try it again?  Any other suggestions?<br />
+<br />
+Thanks in advance.<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+operating system  - Linux<br />
+version of ATutor - 1.5.3.3 upgraded to 1.61-pl1<br />
+versions of php - 5.2.5<br />
+version of mysql - 5.0.45-community-<br />
+log <br />
+webserver & version - <br />
+apache ver 1.3.37 (Unix)<br />
+shared hosting - Siteground.com<br />
+   Changes to default settings - none<br />
+  Web browser being used - IE 7<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15775"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-20 18:07:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Perhaps, don't reload any pages during upgrade.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15778"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-21 06:04:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>webmark, there could be a whole lot of reasons.<br />
+<br />
+If you've backed up, then yes, the easiest thing you can do is to restore the backup and try once (few times?) more -- upgrade paths between versions so long apart could be undertested and tricky.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15832"></a>
+		<div class="forum-post-author">
+			<label class="title">webmark</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-28 23:33:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Thank you for your replies. I inherited this site without documentation and it is old and unstable. I think he had tweaked several things because it is integrated with Joomla ecommerce... <br />
+I have tried the upgrade several times with no luck. <br />
+Should I just go to a fresh install instead of trying to upgrade? The site has about 300 active students with current classes in progress. Is it possible to upload the db from 1.53 into a fresh 1.61?<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15834"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-29 08:49:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>I suppose it is possible to copy a 1.5.3 database into 1.6.1, but it will take some care. You probably should not try this while courses are going on. Wait for some down time, when you can afford to have your courses down for a while. <br />
+<br />
+The upgrade from 1.5.3 should work fine, but if there have been manual changes to the db, that may no longer be the case.<br />
+<br />
+I might suggest waiting until 1.6.2, a couple weeks away (Dec 10 +/-), and try upgrading then. I'll make a note trying the an upgrade from 1.5.3 to 1.6.2 before the release to be sure it works okay.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15835"></a>
+		<div class="forum-post-author">
+			<label class="title">webmark</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-29 09:06:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg. I will wait to 1.62 to upgrade. Your help is much appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15838"></a>
+		<div class="forum-post-author">
+			<label class="title">webmark</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-29 12:28:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Murphy's law... the db backup is corrupted (all 3 copies that I made). I have an older backup that works but it is 3 months old. My host restored the old db as a new one named _test and left the upgraded _atutor db also. The site now has the upgraded db and another db with the 3 mo. old data. <br />
+<br />
+I restored the old atutor (1.53) directory and deleted the upgraded one. The restored old atutor works now. My questions are, does it make a difference to atutor what the db name is, and is it writing in the _test db or the upgraded _atutor db? <br />
+<br />
+I'm really sorry for my ignorance, I am new to this and have to take it over and fix it for the company.<br />
+<br />
+Many thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15839"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-11-29 12:44:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>It does not matter what the db is called. Adjust it in the include/config.inc.php file.<br />
+<br />
+It will be read from whichever db is listed in the file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15848"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-01 13:20:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I am going to give a test on this.  You have specified the ATutor version as both 1.5.3.3 and 1.5.3, can you tell me which one is it exactly please?  <br />
+<br />
+<br />
+Thanks,<br />
+<br />
+Harris</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15849"></a>
+		<div class="forum-post-author">
+			<label class="title">webmark</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-01 14:27:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Hi Harris.<br />
+<br />
+The version that is listed when I log in as admin is 1.5.3.3<br />
+<br />
+One other question... can I continue to use the upgraded database with the old files that I restored?<br />
+<br />
+<br />
+Thanks,<br />
+<br />
+<br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15850"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-01 15:37:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Do you mean old ATutor files (1.5.3.3) or your content files?  The latter is fine.  1.5.3.3 ATutor files with 1.6.1 database may generate unwanted database entries or even triggers unwanted errors.  This is due some of the changes within the database structure through out 1.5.3.3 to 1.6.1.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+One other question... can I continue to use the upgraded database with the old files that I restored?..<br />
+[op]forums/view.php?fid=7;pid=15774;page=1#15849[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15851"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-01 16:13:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>I have upgrading 1.5.3.3 to 1.6.1 with a 1.4.3 backup file successfully. <br />
+<br />
+Looking at your error, it could very well be caused by a customization you made to your system; it also suggests to me that the $msg variable has not been declared somewhere in your code, or if it has and is inside a function, make sure it is declared as "global $msg".  You can try debugging this in your system by searching all "print_errors()" under your ATutor installation, and just look though them and see which of them is missing the variable $msg.<br />
+<br />
+Hope this helps.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15852"></a>
+		<div class="forum-post-author">
+			<label class="title">webmark</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-01 16:30:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Thank you harris. This site was created by a person who is not with the company any longer and the site was integrated to joomla with the bridge.  There were errors everywhere and I'm not familiar with the code. <br />
+<br />
+I have a restored 1.5.3.3 content folder and a database that was upgraded in the 1.6.1 attempt. I also have an old 1.5.3.3 database which is 3 months old. The current backup I did prior to upgrade is corrupted.<br />
+<br />
+I was hoping to be able to upgrade without customizations and just use both parts of the site individually but the site courses fees are collected in the Joomla site and somehow were written to the atutor site dynamically. My guess is there are customizations there too. I am not able to log in to atutor site as a student or anything but admin.<br />
+<br />
+I'm thinking of buying the atutor support ticket option to see if an expert could restore this back to where it was or help me figure this out. What do you think?<br />
+<br />
+Thank you again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15865"></a>
+		<div class="forum-post-author">
+			<label class="title">webmark</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-02 13:44:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Thank you so much for all your help. <br />
+<br />
+I have successfully restored the site to the old 1.5.3.3 version of atutor but I found that it is integrated using a cusomized "enroll_mambo.php" which is connecting to the atutor db which is now upgrded to 1.6.1pl but I have modified the atutor config to connect to the old 1.5.3.3 db.<br />
+<br />
+Everything seems to be working, I can manully enroll the students from joomla to atutor. I'm guessing, since the modified enroll is connected to the 'wrong' db, that all the student's progress will now be in that db.  Should I edit all the customized files to connect to the 1.5.3.3 db or can I later just export the data and import it to the db once I upgrade to 1.6.2.<br />
+<br />
+Any suggestions are greatly appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15871"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-03 09:03:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>You can copy data over, but it may not be an easy task.<br />
+<br />
+The upgrade to 1.6.2 should should be fine from 1.5.3.3. But, if you've been using a 1.6.1 db for a while before reverting, you are likely going to loose that data. I would not want to be faced with the task of trying to merge data from it, into the 1.5.3.3 to 1.6.2 upgrade.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15878"></a>
+		<div class="forum-post-author">
+			<label class="title">webmark</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-03 22:18:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Greg, When I convert I want to use atutor stand alone, without the integration and use the paypal module for payment. <br />
+<br />
+I'm going to do a fresh install of atutor on another account to learn the system as it should be used.<br />
+<br />
+How can I tell if the other admin has made db changes to this old version ?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15879"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-04 08:26:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Fatal error after upgrade from 1.53 to 1.61-pl1</h3></div>
+				
+			<div class="body">
+				<p>Look at the administrator log to see what admins have been doing. In the admin area<br />
+<br />
+User>Administrators>Administrator Activity<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Greg, When I convert I want to use atutor stand alone, without the integration and use the paypal module for payment. <br />
+<br />
+I'm going to do a fresh install of atutor on another account to learn the sys...<br />
+[op]forums/view.php?fid=7;pid=15774;page=2#15878[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

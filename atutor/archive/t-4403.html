@@ -1,0 +1,153 @@
+---
+ title: cannot import content or language pack for Spanish
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>cannot import content or language pack for Spanish</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4403"></a>
+		<div class="forum-post-author">
+			<label class="title">steve</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-21 11:32:19</p>
+            </div>
+            <div class="postheader"><h3>cannot import content or language pack for Spanish</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -<br />
+		Upon trying to import content, whether a language pack or a course file, I receive the following errors:<br />
+<br />
+When importing course material:<br />
+<br />
+Fatal error: Call to undefined function: xml_parser_create() in /var/www/html/ATutor/tools/ims/ims_import.php on line 344<br />
+<br />
+When importing language pack from atutor site:<br />
+<br />
+Fatal error: Call to undefined function: xml_parser_create() in /var/www/html/ATutor/include/classes/Language/LanguageParser.class.php on line 32<br />
+<br />
+I find that although these are two different processes, they have the xml_parser_create() function in common. Why would  it be an undefined function?<br />
+<br />
+Could you help me find a solution to this problem?  The instalation is on a Linux server using Mandrake 10. I am using Apache 2 because that was what came with the Mandrake 10 install. Globals are turned off in php.ini. No other modification has been made. I  have already checked all the version numbers of mysql, apatche, and php and they are in excess of what is required.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4415"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-22 09:57:04</p>
+            </div>
+            <div class="postheader"><h3>cannot import content or language pack for Spanish</h3></div>
+				
+			<div class="body">
+				<p>Double check to see if you have the XML library available in your PHP installation. It is installed by default, but may have been disabled on your system for some reason.<br />
+<br />
+create an info.php scirpt with:<br />
+&lt;?php<br />
+phpinfo();<br />
+?><br />
+<br />
+and look for the XML part.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4417"></a>
+		<div class="forum-post-author">
+			<label class="title">steve</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-22 12:54:53</p>
+            </div>
+            <div class="postheader"><h3>xml extension</h3></div>
+				
+			<div class="body">
+				<p>Thank you for your kind reply. Since I already had a test. php script on my web server, I used that and got this list of extensions:<br />
+<br />
+mysql pgsql sqlite gd imap ldap bcmath bz2 calendar cpdf crack curl cyrus db dba dba_bundle dbase dbx dio domxml exif fbsql fdf filepro fribidi gmp hwapi hyperwave iconv imagick informix ingres_ii interbase ircg java mbstring mcal mcrypt mcve mhash mime_magic ming mnogosearch msession msql mssql ncurses notes oci8 odbc oracle overload ovrimos pam_auth pcntl pdf pfpro pspell qtdom readline recode rrdtool shmop snmp smbauth sockets swf sybase sybase_ct sysvmsg tokenizer wddx xml xmlrpc xslt yaz zip adodb mmcache apd cybercash cybermut mono mqseries netools python spplus spread inifile<br />
+<br />
+I identified xml in the list of extensions. Is that where I was supposed to look? <br />
+<br />
+Is there yet another step I can take?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4425"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-23 08:37:00</p>
+            </div>
+            <div class="postheader"><h3>Mandrake/Apache2  issues</h3></div>
+				
+			<div class="body">
+				<p>Mandrake seems to present its have it own set of issues. Various issues have been reported by Mandrake users that do not appear to happen on other Linux system. Unfortunately we don't have a Mandrake installation to reproduce the problems ourselves.<br />
+<br />
+Apache 2 also presents its own set of problems, since its compatibility with php is still somewhat unstable. I would suggest moving to Apache 1.3 for the time being. You'll likely need to compile it with PHP manually. There are good installation instructions on the php.net site in the documentation.<br />
+<br />
+http://www.php.net/manual/en/install.unix.php#install.unix.apache<br />
+		<br />
+You can run ATutor with Apache2, but you will likely experience  other problems. If you are intending on setting up a production server, you should most certainly use Apache 1.3.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4438"></a>
+		<div class="forum-post-author">
+			<label class="title">steve</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-25 11:19:51</p>
+            </div>
+            <div class="postheader"><h3>greg's reply</h3></div>
+				
+			<div class="body">
+				<p>Thank you Greg for your reply. I wanted to let you know that as I experimented at home with another installation, I found that the xml extension was not installed as I had thought. When I found that, I eagerly returned to my office at the school district and observed that the same condition existed there. After installing the xml extension, everything worked with the imports. I haven't tried the exports, but I suppose the same woudld apply there.<br />
+<br />
+As a precaution, enven though the server was working, I installed and switched to the Apache 1.3 instead of the Apache2. I was not then having problems, but wanted to avoid what I could. I had previously turned globals off in php.ini to solve a diffferent problem. <br />
+<br />
+As far as I can tell now, I'm okay. The reason why I have been using Mandrake 9.2. and 10.0 is that generally they have been more likely to function for me for a LAMP server. I tried others, but didn't come out with as workable a result. <br />
+<br />
+Thanks again for you kind help.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

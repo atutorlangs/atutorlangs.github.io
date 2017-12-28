@@ -1,0 +1,92 @@
+---
+ title: Duplicate a Course
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Duplicate a Course</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24757"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-08 22:41:57</p>
+            </div>
+            <div class="postheader"><h3>Duplicate a Course</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have a modified version of 2.0 installed and I'm trying to make an EXACT duplicate of a course.  I'm wanting to do this to use as another course for a new teacher to run, so I want everything to be the same as it is in the current course.<br />
+<br />
+I've already made a backup of the original course and imported it into the new course.  I've also exported/imported all course content.  However, there are several items that didn't get imported and I'm wondering how to copy these over.  Specifically...<br />
+<br />
+* All of file storage (with folders, etc.)<br />
+* All forums and threads<br />
+* The main nav tabs and side nav items that are set to being available<br />
+* All gradebook data<br />
+* All assignments in the "Assignment Dropbox"<br />
+<br />
+So, what's the easiest/best way to do this?<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24758"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-09 11:20:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Duplicate a Course</h3></div>
+				
+			<div class="body">
+				<p>Backups are really used to create a blank copy of a course, reset with no data so it can be filled with new data from a new course session. Tyically things like forum threads, gradebook data, assignments submitted to the drop box etc. would not be part of the new course session. So we have not included that "data" in a backup. The trouble with data, its all associated with users, so if you copy it to a new course it becomes orphaned. <br />
+<br />
+To copy forums use the Forum Archive tool, which generates a static HTML copy of the forums and threads that can be uploaded into File storage and made available as a static reference for students in the new session. Not exactly what you're looking for I gather.<br />
+<br />
+As for the other elements you mention, there isn't a simple way to copy them over automatically. It would be a manual process.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24759"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-10 18:14:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Duplicate a Course</h3></div>
+				
+			<div class="body">
+				<p>Darn.... <br />
+<br />
+For those who are wondering the same, here's what you can do (below).  It's not as good as automation, but it's better than doing this manually via the instructor interface.  Of course, do this ONLY if you are comfortable with working with website code, PHP MyAdmin, exporting/importing .sql files, etc.  Of course, backup EVERYTHING first.  MySQL databases and do a course backup.<br />
+<br />
+Using PHP MyAdmin (and doing this for forum threads as an example)...<br />
+1.) Select all forum threads in a forum that you want to move to a new course via a SELECT statement.<br />
+2.) Select all results and export them as a SQL file and save on your computer.<br />
+3.) Edit the SQL file to set the new forum_id. (Tip: You can delete the part of the INSERT INTO statement that will update auto-incremented ID columns.  That way, it your new inserts (see #4) will auto-increment automatically.<br />
+4.) Import it into the new course.<br />
+<br />
+Hope that helps!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

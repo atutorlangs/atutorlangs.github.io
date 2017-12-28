@@ -1,0 +1,117 @@
+---
+ title: activating user contributed notes
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>activating user contributed notes</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8245"></a>
+		<div class="forum-post-author">
+			<label class="title">kgray</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-15 14:25:48</p>
+            </div>
+            <div class="postheader"><h3>activating user contributed notes</h3></div>
+				
+			<div class="body">
+				<p>Things to describe: <br />
+  operating system - Linux 2.4.29<br />
+  version of ATutor - 1.52<br />
+  versions of php - 4.3.11 <br />
+  version of mysq l - 4.0.23a<br />
+  webserver & version - Apache 1.3<br />
+<br />
+I have been trying to activate User Contributed Handbook Notes, but it keeps jumping back to disabled.<br />
+<br />
+This would be a great feature for what I want to do, just need some help getting it going.<br />
+<br />
+Do I need to create a new folder somewhere and assign rights?<br />
+<br />
+System preferences saved successfully. Does display each time I try, but it remains disabled.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8247"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-15 16:52:38</p>
+            </div>
+            <div class="postheader"><h3>Re: activating user contributed notes</h3></div>
+				
+			<div class="body">
+				<p>There is a bug in 1.5.2. you can add the following line <br />
+<br />
+$_config_defaults['user_notes'] = 0; <br />
+<br />
+to constants.inc.php but still the admin login to handbook is not working.<br />
+<br />
+We'll address the problem soon, for the 1.5.3 release.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8362"></a>
+		<div class="forum-post-author">
+			<label class="title">kgray</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-07-07 13:09:12</p>
+            </div>
+            <div class="postheader"><h3>Re: activating user contributed notes</h3></div>
+				
+			<div class="body">
+				<p>Info same as above, except just upgraded ATutor to 1.53<br />
+<br />
+Probably something real easy and I am just overlooking the button or info in the documentation. But I can not seem to get User Contributed Notes to display on any pages.<br />
+<br />
+In administration I do have User Contributed Handbook Notes activated.<br />
+<br />
+Do not see how to activate it for a certain course in Admin or Instructor management.<br />
+<br />
+Please advise.<br />
+<br />
+Thanks in advance,<br />
+Ken</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8363"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-07-07 15:00:20</p>
+            </div>
+            <div class="postheader"><h3>Re: activating user contributed notes</h3></div>
+				
+			<div class="body">
+				<p>It seems to be working ok for us. Try the demo site. When enabled, an Add Note link should appear to the bottom right of handbook pages.<br />
+<br />
+It's not a course tool, but rather a system wide tool. There isn't a way to make handbook notes course specific.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

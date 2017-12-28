@@ -1,0 +1,63 @@
+---
+ title: The Registration page become blank after server changed  from windows to linux
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>The Registration page become blank after server changed  from windows to linux</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="19377"></a>
+		<div class="forum-post-author">
+			<label class="title">hongjun</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-06 11:59:33</p>
+            </div>
+            <div class="postheader"><h3>The Registration page become blank after server changed  from windows to linux</h3></div>
+				
+			<div class="body">
+				<p>I used ATutor nearly a year, but recently, the registration page became blank after my hosting provider switch the server from windows to linux.<br />
+<br />
+You can see my login page here:<br />
+<br />
+http://21vcity.com/school/login.php?lang=en,<br />
+<br />
+when click Register, got a blank page, but it worked correctly before.<br />
+<br />
+all other pages are working now, but only Registration and Verify page became blank.<br />
+<br />
+I guess the reason is the differece of case sensitivity or the path between windows and Linux, But I can't find it out, I even don't know how to find it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19378"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-01-06 12:25:10</p>
+            </div>
+            <div class="postheader"><h3>Re: The Registration page become blank after server changed  from windows to linux</h3></div>
+				
+			<div class="body">
+				<p>Its difficult to say what the problem might be. <br />
+<br />
+Case sensitivity could be the problem. It appears to be a customized version of the registration form, passing through the registration_sel.php file (which is not an ATutor file) before linking to the registration.php file, which I'm assuming you have modified.<br />
+<br />
+You might have a look at the php error log, to see if there is anything there that might suggest what the problem is.<br />
+<br />
+Also check which version of php you are using, there have been some issues with 5.3.0+ with version of ATutor prior to 1.6.4. In which case you may need to upgrade ATutor, or revert back to an older version of php (&lt;= 5.2.9)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

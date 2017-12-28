@@ -1,0 +1,303 @@
+---
+ title: installation perfect but points to wrong links
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>installation perfect but points to wrong links</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8104"></a>
+		<div class="forum-post-author">
+			<label class="title">allbhatias</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-26 07:58:58</p>
+            </div>
+            <div class="postheader"><h3>installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>Things to describe: <br />
+  operating system - windows server 2003<br />
+  version of ATutor - 1.5.2(latest)<br />
+  versions of php - 4.something, green tick in installation<br />
+  version of mysq l - it said unknown, but database created fine <br />
+  webserver & version - its MS IIS, version i really cant remember but again there was a green tick<br />
+  copies of error messages - no error messages during installation<br />
+  changes to default settings - nil<br />
+  web browser being used - mozilla fiefox latest<br />
+  and anything else relevant - NOW WE TALK THE PROBLEM OUT.<br />
+I downloaded atutor.tar.gz, unzipped on my local comp running win xp sp2, then FTPed (Auto mode, was unsure if it must be binary or ascii) atutor folder to the wwwroot folder of my website that runs on windows server, opened browser and brought up- www.doctoratyourdoorstep.com/atutor/<br />
+INSTALLATION WAS A BREEZE. NO ISSUES.<br />
+Then I logged in as administrator and a page comes up which shows all the buttons only as hyperlinked text and themes are missing. Still no hassle. The PROBLEM IS ALL THE LINKS POINT  WRONGLY. E.G. CREATE USER POINTS TO- http://www.doctoratyourdoorstep.com/atutor/admin/admin/create_user.php,  while the real path is http://www.doctoratyourdoorstep.com/atutor/admin/create_user.php.<br />
+Now if i manuaally delete one 'admin/' from my browser address bar, the correct page opens up sans any theme. <br />
+Can someone tell me if i did something wrong or have these links been set wrongly etc.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8105"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-26 08:28:05</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>I've never seen this happen before. Two missing pieces of the system description may be the problem. <br />
+<br />
+IIS 6 is required , which is probably the case if you're on win2003 (IIS5 will not work),  as is php4.3+. <br />
+<br />
+It could also be some files were corrupted. Try reinstalling a freshly downloaded copy.<br />
+<br />
+Send us a link to a phpinfo page if the problem persists.<br />
+<br />
+Create a file with the following lines, and open it in your browser<br />
+<br />
+[php]<br />
+<br />
+phpinfo();<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8118"></a>
+		<div class="forum-post-author">
+			<label class="title">allbhatias</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-29 10:07:47</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>WELL!!<br />
+as per your advice i decided to install a fresh copy. <br />
+so i opened my ftp client and deleted atutor folder and content folder. now the problem is there is a file called config.inc.php in the 'include' folder inside 'atutor'. this file is not getting deleted ftp says 550, access is denied.<br />
+so anyway i renamed it to undeletedfile.txt<br />
+can i re-upload atutor folder and re-install??</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8120"></a>
+		<div class="forum-post-author">
+			<label class="title">allbhatias</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-29 10:13:03</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>I guess a person at<br />
+http://www.atutor.ca/view/7/8115/1.html<br />
+is also facing similar probs</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8123"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-29 11:16:52</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>Installing ATutor via an FTP client is not ideal, but possible. You can "move" the files if they get in the way of re-uploading for the reinstall. <br />
+<br />
+We still need to see a phpinfo dump so we can see the PHP settings.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+WELL!!<br />
+as per your advice i decided to install a fresh copy. <br />
+so i opened my ftp client and deleted atutor folder and content folder. now the problem is there is a file called config.inc.php in the ...<br />
+[op]forums/view.php?fid=7;pid=8104;page=1#8118[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8127"></a>
+		<div class="forum-post-author">
+			<label class="title">allbhatias</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-30 00:01:10</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>thanks Greg<br />
+Actually i was not 'installing 'thru ftp but merely uploading the atutor folder. then i open the atutor/install/index.php in my browser and do the installation.<br />
+I am a doctor so i get a li'l fuzzy abt ur phpinfo dump. i am not sure how to do it but i will try to do it  and let you know.<br />
+Thanks a lot.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8129"></a>
+		<div class="forum-post-author">
+			<label class="title">allbhatias</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-30 00:45:43</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>ok<br />
+ i did it<br />
+i am attaching  the phpinfo file as pdf<br />
+in case u wish to open it urself, the url is http://www.doctoratyourdoorstep.com/phpinfo.php <br />
+i hope there is a simple solution to all this.<br />
+thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8130"></a>
+		<div class="forum-post-author">
+			<label class="title">allbhatias</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-30 02:38:51</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>i re-installed it and it's worse than before.<br />
+Please check the link  http://www.doctoratyourdoorstep.com/atutor/login.php all i get is a blank page. i can't even log in now.<br />
+phpinfo page is available at http://www.doctoratyourdoorstep.com/phpinfo.php<br />
+installation was a breeze and all installation pages were saved by me as pdf........anonymous info page i am attaching here. rest all can be made available if you want.<br />
+last page congratulated me and gave a link to login........then on its blank screen.........details about system are as above and deficiencies are rectified here....IIS is 6.0 version, php is 4.3.11 and my sql is version 4.............in case you are inclined, i'll be happy to provide u super admin id and password to have a look around...there is nothing classified on my site yet..........i hope you help me<br />
+regards</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8131"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-05-30 08:36:36</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>Did you delete the old database before installing again? You will need to.<br />
+<br />
+You will also need to turn off register_globals. It should be off regardless, for security reasons. Edit the php.ini file to turn it off, then restart your webserver.<br />
+<br />
+Take a look at the include/config.inc.php file, to make sure the file end with ?>, and there are no foreign charaters in the file.<br />
+<br />
+Also I notice the phpinfo page mentions MySQL 3.23, though the installation output shows 4.1.18. I'm not sure why that might be the case, but it could potentially be part of the problem.<br />
+<br />
+Though ATutor will run with IIS, Apache is recommended. It's support for PHP is much better. If you have the opportunity, switch to Apache. It will save you a variety of headaches.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8883"></a>
+		<div class="forum-post-author">
+			<label class="title">harrietrgagliano</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-27 01:03:24</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8884"></a>
+		<div class="forum-post-author">
+			<label class="title">harrietrgagliano</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-27 01:03:28</p>
+            </div>
+            <div class="postheader"><h3>Re: installation perfect but points to wrong links</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

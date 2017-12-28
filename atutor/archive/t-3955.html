@@ -1,0 +1,178 @@
+---
+ title: Problems installing  running
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problems installing  running</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3955"></a>
+		<div class="forum-post-author">
+			<label class="title">joa1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-16 00:08:13</p>
+            </div>
+            <div class="postheader"><h3>Problems installing  running</h3></div>
+				
+			<div class="body">
+				<p>Greetings,<br />
+<br />
+I have installed ATUTOR and aparently all was OK -- at least the installation routine went along no problem...<br />
+<br />
+When I try to login behind IE 6, my user names and passwords do not work and I am taking back to the login page...<br />
+<br />
+If I use FireFox, I can login... but as I try to create a first rial course... I am getting errors:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/www/mamHere/0_php-bin/aTutor/include/classes/ContentManager.class.php on line 147<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /home/www/mamHere/0_php-bin/aTutor/include/classes/ContentManager.class.php:147) in /home/www/mamHere/0_php-bin/aTutor/users/create_course.php on line 60<br />
+<br />
+I also found a bit puzzling (being the average user) during setup the way permissions are mentioned --- it would be far more clear, when referringt o UNIX, to mention "CHMOD 777" or "CHMOD 666" etc., for example, then the way it appears... a+rwe name May I suggest that these are included in the future!?<br />
+<br />
+Thanks in advnace for any help.<br />
+<br />
+Joa1<br />
+<br />
+The info below is what I believe describes the server/setup of the machine I am trying to install/run ATUTOR on..<br />
+<br />
+  operating system - Apache 1.3.33<br />
+  version of ATutor - 1.4.3<br />
+  versions of php - 4.3.10<br />
+  version of mysq l - 3.23.54<br />
+  webserver & version - i686 (PC) UNIX 2.4.25-ci <br />
+  copies of error messages - above<br />
+  changes to default settings - not sure what this means...<br />
+  web browser being used - IE and FireFox as per above, but would rather use IE only, and the template in FireFox look horrid<br />
+  and anything else relevant - can't think of anyhting else right now, but willtry to provide info if someone requests any specific...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3965"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-16 08:47:28</p>
+            </div>
+            <div class="postheader"><h3>cookies</h3></div>
+				
+			<div class="body">
+				<p>make sure cookies are enabled<br />
+<br />
+Reinstall ATutor. perhaps a file was corrupted.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4428"></a>
+		<div class="forum-post-author">
+			<label class="title">designedmind</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-24 22:53:11</p>
+            </div>
+            <div class="postheader"><h3>FIX!!!!</h3></div>
+				
+			<div class="body">
+				<p>comment out lines 145-148 of ContentManager.class.php and add a line immediately after that has <br />
+<br />
+$cid=mysql_insert_id($this->db);</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8173"></a>
+		<div class="forum-post-author">
+			<label class="title">joa1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-05 20:53:01</p>
+            </div>
+            <div class="postheader"><h3>Re: FIX!!!!</h3></div>
+				
+			<div class="body">
+				<p>hi designedmind,<br />
+<br />
+thanks for the sugestions... did as you say... getting this error:<br />
+<br />
+Warning: main(Language.class.php): failed to open stream: No such file or directory in /home/www/mamHere/0_php-bin/aTutor/include/classes/Language/LanguageManager.class.php on line 15<br />
+<br />
+Fatal error: main(): Failed opening required 'Language.class.php' (include_path='') in /home/www/mamHere/0_php-bin/aTutor/include/classes/Language/LanguageManager.class.php on line 15<br />
+<br />
+any ideas?...<br />
+<br />
+many thanks,<br />
+<br />
+joa1<br />
+ps. yep, greg, cookies are enabled...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8174"></a>
+		<div class="forum-post-author">
+			<label class="title">joa1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-05 21:09:04</p>
+            </div>
+            <div class="postheader"><h3>Re: FIX!!!!</h3></div>
+				
+			<div class="body">
+				<p>hi,<br />
+<br />
+just a couple details more:<br />
+<br />
+This error is showing up when i go to <br />
+/aTutor/index.php<br />
+a page that is automatically redirecting me to <br />
+/aTutor/login.php<br />
+<br />
+and<br />
+<br />
+when i open Language.class.php this is what i see on line 15:<br />
+<br />
+define('AT_LANGUAGE_LOCALE_SEP', '-');<br />
+<br />
+for LanguageManager.class.php line 15 is:<br />
+<br />
+require_once('Language.class.php');<br />
+<br />
+i tried looking for a string like <br />
+<br />
+include_path='' <br />
+<br />
+in both files to see if i could insert a path there or something... but neither file has any such string...<br />
+<br />
+and the path and files seem to be ok...<br />
+<br />
+thks in advance for any further feedback,<br />
+<br />
+joa1</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

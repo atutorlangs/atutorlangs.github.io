@@ -1,0 +1,463 @@
+---
+ title: INstallation problem 142
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>INstallation problem 142</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="3115"></a>
+		<div class="forum-post-author">
+			<label class="title">rinald</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-25 06:00:57</p>
+            </div>
+            <div class="postheader"><h3>INstallation problem 142</h3></div>
+				
+			<div class="body">
+				<p>Hi, I am instaling 1.4.2 version on Linux Mandrake 9 with the following specs:<br />
+MySQL version 3.23.52 <br />
+<br />
+Detected: Apache-AdvancedExtranetServer/1.3.26 (Mandrake Linux/6mdk) sxnet/1.2.4 mod_ssl/2.8.10 OpenSSL/0.9.6g PHP/4.2.3<br />
+<br />
+PHP 4.2.0 or higher (Version 4.3.0 or higher is recommended) Detected: PHP 4.2.3<br />
+ With the following options: <br />
+--with-zlib to enable Zlib (Required) Detected: Enabled<br />
+--with-mysql to enable MySQL support (Required) Detected: Enabled<br />
+safe_mode must be disabled (Required) Detected: Disabled<br />
+<br />
+MySQL 3.23.x or higher (MySQL 4.x is not yet officially supported) Detected: Version Unknown<br />
+ In step 2 I have the following error:<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /var/www/html/atutor/install/include/common.inc.php on line 118<br />
+ <br />
+After going through all the details and after creating content folder I get the following:<br />
+<br />
+[b]Fatal error: [] operator not supported for strings in /var/www/html/atutor/install/include/step6.php on line 31[/b]<br />
+<br />
+Please help!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3117"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-25 13:39:42</p>
+            </div>
+            <div class="postheader"><h3>Check mysql access info</h3></div>
+				
+			<div class="body">
+				<p>Sounds like you may have entered incorrect mysql access information. Was the database setup after step2?<br />
+<br />
+You should probably upgrade php to 4.3+ if you intend on using ATutor in a production environment.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3118"></a>
+		<div class="forum-post-author">
+			<label class="title">rinald</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-25 13:44:05</p>
+            </div>
+            <div class="postheader"><h3>Installation problems</h3></div>
+				
+			<div class="body">
+				<p>Hi, Thanks for reply. Database was created Ok and tables as well.<br />
+<br />
+I hace downloaded PHP 4.3 but not sure of an easy way to install it. Any advise?<br />
+<br />
+Cheers<br />
+<br />
+Rinald</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3165"></a>
+		<div class="forum-post-author">
+			<label class="title">shen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-06 03:31:55</p>
+            </div>
+            <div class="postheader"><h3>install waring message ?</h3></div>
+				
+			<div class="body">
+				<p>I use mysql-4.0.12 + php-4.3.9 +apache-1.3.27+redhat-9.0(kernel 2.4.20 ). After install from web,it shows<br />
+<br />
+Warning: mysql_connect(): Access denied for user: 'root@localhost' (Using password: YES) in /usr/local/apache/htdocs/ATutor/install/include/step4.php on line 53<br />
+..................<br />
+.................<br />
+Warning: mysql_insert_id(): A link to the server could not be established in /usr/local/apache/htdocs/ATutor/install/include/step4.php on line 67<br />
+-------------------------<br />
+I logon server and execute mysql command<br />
+ /usr/local/mysql/bin/mysql -u root -pxxxxx<br />
+it work fine as below.<br />
+Welcome to the MySQL monitor.  Commands end with ; or \g.<br />
+Your MySQL connection id is 20 to server version: 4.0.12<br />
+<br />
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.<br />
+<br />
+mysql> <br />
+-----------------------------<br />
+what`s wrong with that ?<br />
+I</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3166"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-06 08:29:47</p>
+            </div>
+            <div class="postheader"><h3>create db and table permissions</h3></div>
+				
+			<div class="body">
+				<p>Make sure the database user has create database and create table permissions.<br />
+<br />
+Try restarting with a fresh copy of ATutor and Install again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3170"></a>
+		<div class="forum-post-author">
+			<label class="title">shen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-07 00:18:47</p>
+            </div>
+            <div class="postheader"><h3>I find the real problem</h3></div>
+				
+			<div class="body">
+				<p>if I setup the database password with special character like<br />
+" @, * "  ,it will cause connection problem when install atutor. so I change the password ,it work fine.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3175"></a>
+		<div class="forum-post-author">
+			<label class="title">liesmavi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-09 10:29:54</p>
+            </div>
+            <div class="postheader"><h3>problems in step 2</h3></div>
+				
+			<div class="body">
+				<p>Hello. greg.<br />
+I am installing atutor the 1.4.2 in fedora Core 3, on apache 2, php 4.3.9 and mysql 3.23.58 and in step two says:<br />
+[red] Error  [/red]<br />
+[blue]Unable to connect to database server [/blue]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3176"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-09 10:45:40</p>
+            </div>
+            <div class="postheader"><h3>Check mysql user info</h3></div>
+				
+			<div class="body">
+				<p>This usually indicates that you have entered incorrect database connection information. Check for typing errors, make sure the mysql user has create database and create table permission.<br />
+<br />
+Note that we recommend against using Apache 2, which is likely to produce a variety problems which we are unable to help with.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3187"></a>
+		<div class="forum-post-author">
+			<label class="title">fathianf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-12 05:54:20</p>
+            </div>
+            <div class="postheader"><h3>Installation problem with atutor 1.4 and 1.4.2</h3></div>
+				
+			<div class="body">
+				<p>hi, my os is mandrake 9.1 and other requirements are:<br />
+HTTP Web Server: Detected: Apache-AdvancedExtranetServer/2.0.44 (Mandrake Linux/11mdk) mod_perl/1.99_08 Perl/v5.8.0 mod_ssl/2.0.44 OpenSSL/0.9.7a PHP/4.3.1<br />
+PHP 4.3.1detected<br />
+ With the following options: <br />
+--with-zlib to enable Zlib (Required) Detected: Enabled<br />
+ --with-mysql to enable MySQL support (Required) Detected: Enabled<br />
+ safe_mode must be disabled (Required) Detected: Disabled<br />
+MySQL 3.23.x or higher (MySQL 4.x is not yet officially supported) Detected: Version Unknown<br />
+<br />
+ and all tables in atutor database are created successfully, but I got one warning and one fatal eror as bellow:<br />
+Warning: Invalid argument supplied for foreach() in /var/www/html/iut/ATutor/install/include/common.inc.php on line 118<br />
+Fatal error: [] operator not supported for strings in /var/www/html/iut/ATutor/install/include/step6.php on line 31<br />
+would anyone help me to solve this problem. I have tried to install 1.4 and 1.4.2, but I got the same eror for both<br />
+ :(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3188"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-12 08:41:44</p>
+            </div>
+            <div class="postheader"><h3>Initialize arrays</h3></div>
+				
+			<div class="body">
+				<p>I can't reproduce the problem, but you might try explicitely initializing the arrays the installer seems to be having trouble with. Near the top of install/include/step6.php insert the following lines.<br />
+<br />
+after:<br />
+$file = '../include/config.inc.php';<br />
+<br />
+insert:<br />
+$progress = array();<br />
+$feedback = array();</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3191"></a>
+		<div class="forum-post-author">
+			<label class="title">fathianf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-13 00:26:28</p>
+            </div>
+            <div class="postheader"><h3>Installation problem with atutor 1.4 and 1.4.2</h3></div>
+				
+			<div class="body">
+				<p>Thanks alot greg, I did what you said and I installed atutor 1.4.2 successfully.<br />
+This forum is really fantastic.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3227"></a>
+		<div class="forum-post-author">
+			<label class="title">rinald</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-17 08:56:39</p>
+            </div>
+            <div class="postheader"><h3>instaling 1.4.2 same problem!</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg, I have changed the system as follows:  <br />
+instaling 1.4.2 version on Linux Mandrake 10.0 with the following specs:<br />
+MySQL 4.0.18<br />
+<br />
+# HTTP Web Server (Apache 1.3.x is highly recommended. We do not recommend Apache 2.x) Detected: Apache-AdvancedExtranetServer/1.3.29 (Mandrake Linux/1mdk) mod_perl/1.29 PHP/4.3.4<br />
+<br />
+# PHP 4.2.0 or higher (Version 4.3.0 or higher is recommended) Detected: PHP 4.3.4<br />
+With the following options:<br />
+<br />
+    * --with-zlib to enable Zlib (Required) Detected: Enabled<br />
+    * --with-mysql to enable MySQL support (Required) Detected: Enabled<br />
+    * safe_mode must be disabled (Required) Detected: Disabled<br />
+<br />
+In step 2 I have the following error:<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /var/www/html/atutor/install/include/common.inc.php on line 118<br />
+<br />
+After going through all the details and after creating content folder I get the following:<br />
+<br />
+Fatal error: [] operator not supported for strings in /var/www/html/atutor/install/include/step6.php on line 31<br />
+<br />
+Please help! Now that I have changed the PHP but MySQL is v4 but the problem is the same?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3229"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-12-17 09:05:46</p>
+            </div>
+            <div class="postheader"><h3>Try the solution</h3></div>
+				
+			<div class="body">
+				<p>The solution is listed above.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4251"></a>
+		<div class="forum-post-author">
+			<label class="title">OlegEkb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-08 07:55:14</p>
+            </div>
+            <div class="postheader"><h3>May I to install ATutor without Apache</h3></div>
+				
+			<div class="body">
+				<p>Hi. I want to install ATutor on my workstation, but I haven't Apachi. My I to iunstall it with using over web-server?<br />
+;) [red] [/red]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4252"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-08 09:53:06</p>
+            </div>
+            <div class="postheader"><h3>Most Webservers Work</h3></div>
+				
+			<div class="body">
+				<p>Apache is the is the best webserver to use with ATutor, but you may also use others.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5711"></a>
+		<div class="forum-post-author">
+			<label class="title">nwlc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-04 15:28:53</p>
+            </div>
+            <div class="postheader"><h3>mysql</h3></div>
+				
+			<div class="body">
+				<p>IOperating system  	Linux<br />
+Kernel version 	2.4.21-27.0.4.ELsmp<br />
+Machine Type 	i686<br />
+Apache version 	1.3.33 (Unix)<br />
+PHP version 	4.3.11<br />
+MySQL version 	4.0.25<br />
+lunarpages company hosts<br />
+<br />
+i too get mysql errors. i began with these errors on acollab. on acollab install i got mysql: 'not detected.' and it said it did not support above 4x.<br />
+<br />
+  i saw that atutor supported 4 and above mysql .But on install of atutor, it said mysql: 'found unknown version.' i installed atutor parallel to acollab in directory. i integrated. no mysql errors on atutor, but i still have the same ones on atutor. and there is no acollab tab on atutor nor any atutor tab on acollab, though there is a radio button.<br />
+<br />
+the errors are gotten by choosing the right-hand 'options' icon after signing in under a regular user, then choosing 'accessibility' then you can choose 'drafting room' 'chatroom' or 'library' or just about any other and arrive at errors on those next pages or when you try to add a file.  <br />
+the errors can also be gotten through the admin user, going to 'chat settings' 'chat_journal' then choosing any of those 'drafting room' 'library' etc. options. if you go in through the main interface you don't see them. just when you go through accessibility options or language things.<br />
+the mysql command errors are like this:<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/nhs-usa2/public_html/acpp/ACollab/include/lib/folders.inc.php on line 123<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/nhs-usa2/public_html/acpp/ACollab/drafting/index.php on line 164<br />
+<br />
+<br />
+<br />
+<br />
+this is on the homepage going through 'options' as regular user, but is not seen if you go through 'groups' options at the beginning:<br />
+<br />
+News & Announcements<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/nhs-usa2/public_html/acpp/ACollab/home.php on line 56<br />
+<br />
+No news or announcements found.<br />
+<br />
+Go to Archive<br />
+	<br />
+New Files<br />
+Library<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/nhs-usa2/public_html/acpp/ACollab/home.php on line 79<br />
+<br />
+No files found.<br />
+<br />
+Go to Library<br />
+Drafting Room<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/nhs-usa2/public_html/acpp/ACollab/home.php on line 95<br />
+<br />
+No files found.<br />
+<br />
+Go to Drafting Room<br />
+Upcoming Events<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/nhs-usa2/public_html/acpp/ACollab/home.php on line 137<br />
+<br />
+<br />
+<br />
+what should i do? how do i get acollab to work on my server?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,168 @@
+---
+ title: PHP  safe mode
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>PHP  safe mode</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="1141"></a>
+		<div class="forum-post-author">
+			<label class="title">wesdale</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 12:55:48</p>
+            </div>
+            <div class="postheader"><h3>PHP  safe mode</h3></div>
+				
+			<div class="body">
+				<p>I downloaded the latest version of ATutor and the installation went <br />
+> really sweetly.  I tried to import a SCORM package and this message <br />
+> appeared.  I'm guessing it is because the safe mode of the PHP is on <br />
+> and if that's the case, how do I resolve the problem?<br />
+> ____________________________________<br />
+>  <br />
+> *Warning*: opendir(): SAFE MODE Restriction in effect. The script <br />
+> whose uid is 10117 is not allowed to access ../content/3 owned by uid <br />
+> 2525 in <br />
+> */usr/local/psa/home/vhosts/techknowledgey.co.uk/httpdocs/ATutor/tools/file_manager.php* <br />
+> on line *188*<br />
+> __________________________________<br />
+>  <br />
+> PS - This version of ATutor looks better and has more flexibility in <br />
+> the older version - well done.<br />
+> Thanks for any help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1142"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 13:15:43</p>
+            </div>
+            <div class="postheader"><h3>Can not run in safemode</h3></div>
+				
+			<div class="body">
+				<p>PHP Safe mode will prevent php scripts from running a variety server commands, and is generally turned on for security reasons. ATutor runs many server commands, so it will not run if safemode is turned on.<br />
+<br />
+Review the php documentation on safemode:<br />
+http://www.php.net/manual/en/features.safe-mode.php#ini.sect.safe-mode<br />
+<br />
+In php.ini set safe_mode to off<br />
+<br />
+safe_mode Off</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1143"></a>
+		<div class="forum-post-author">
+			<label class="title">wesdale</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 13:59:31</p>
+            </div>
+            <div class="postheader"><h3>Cannot run in safe mode</h3></div>
+				
+			<div class="body">
+				<p>Greg<br />
+Brilliant.<br />
+Thanks again for all your help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1145"></a>
+		<div class="forum-post-author">
+			<label class="title">wesdale</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 16:31:09</p>
+            </div>
+            <div class="postheader"><h3>Cannot run in safe mode</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+I contacted the guy who runs the servers and he says that safe_mode cannot be turned off as it is a security risk and I don't have access to PHP.ini.  Is there another way around this problem?<br />
+<br />
+Thanks in anticipation.<br />
+Bill</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1146"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-20 17:29:24</p>
+            </div>
+            <div class="postheader"><h3>try .htaccess</h3></div>
+				
+			<div class="body">
+				<p>Paranoia... :-(<br />
+<br />
+I'm not sure, but you may be able to create an ".htaccess" file with the following line in it<br />
+<br />
+php_flag safe_mode off<br />
+<br />
+Place it in the root directory of ATutor.<br />
+<br />
+If that doesn't work, I'll see what Joel has to say, Monday.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Greg,<br />
+I contacted the guy who runs the servers and he says that safe_mode cannot be turned off as it is a security risk and I don't have access to PHP.ini.  Is there another way around this problem?...<br />
+[op]forums/view.php?fid=7;pid=1141;page=1#1145[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1194"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-23 10:40:32</p>
+            </div>
+            <div class="postheader"><h3>safe mode</h3></div>
+				
+			<div class="body">
+				<p>ATutor runs fine in safe_mode if set up correctly.<br />
+<br />
+safe_mode can only be changed in the php.ini file.<br />
+<br />
+See my post in: http://atutor.ca/view/7/1153/1.html</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

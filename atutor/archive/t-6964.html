@@ -1,0 +1,152 @@
+---
+ title: Error on modules installation page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error on modules installation page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6964"></a>
+		<div class="forum-post-author">
+			<label class="title">zork</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-27 17:07:23</p>
+            </div>
+            <div class="postheader"><h3>Error on modules installation page</h3></div>
+				
+			<div class="body">
+				<p>Hi everybody!<br />
+<br />
+I got another problem:<br />
+<br />
+operating system - Ubuntu Linux 5.10 (Breezy Bagger)<br />
+version of ATutor - 1.5.2<br />
+versions of php - 5.0.2-2ubuntu1<br />
+version of mysq l - 4.0.24-10ubuntu2<br />
+webserver & version - apache 2.0.54-5ubuntu2<br />
+<br />
+When I  go to to ../ATutor/admin/modules/add_new.php the following error is displayed:<br />
+<br />
+Fatal error: Only variables can be passed by reference in /var/www/ATutor/include/classes/Module/Module.class.php on line 287<br />
+<br />
+What did I make wrong?<br />
+<br />
+Jrn</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6978"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-30 12:25:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on modules installation page</h3></div>
+				
+			<div class="body">
+				<p>I can't reproduce this.<br />
+<br />
+Are you able to upgrade to the latest version of PHP?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7027"></a>
+		<div class="forum-post-author">
+			<label class="title">zork</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-03 04:30:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on modules installation page</h3></div>
+				
+			<div class="body">
+				<p>It seems to be a problem with some releases of PHP higher than PHP 5.0 and lower PHP 5.1. But I am not sure, beacuse I am not familar with PHP. I will try to upgrade to the latest version of PHP next days and then will give a brief report whether it works.<br />
+<br />
+Jrn</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8165"></a>
+		<div class="forum-post-author">
+			<label class="title">kimmysia</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-04 22:53:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on modules installation page</h3></div>
+				
+			<div class="body">
+				<p>I found out that it is a problem with PHP 5 plus.<br />
+<br />
+with reference to http://trac.wordpress.org/ticket/1614, I manage to solve this problem by adding the following code:-<br />
+<br />
+[b]Original Code[/b]<br />
+[php]<br />
+function getName() {<br />
+		if ($this->isUninstalled()) {<br />
+			return current($this->getProperty('name'));<br />
+		}<br />
+		return _AT(basename($this->_directoryName));<br />
+	}<br />
+[/php] <br />
+<br />
+[b]Fixed Code[/b]<br />
+[php]<br />
+function getName() {<br />
+		if ($this->isUninstalled()) {<br />
+			[red]$_nameFix = $this->getProperty('name');<br />
+			return current($_nameFix);[/red]<br />
+		}<br />
+		return _AT(basename($this->_directoryName));<br />
+	}<br />
+/php] <br />
+<br />
+I keep a copy of the solution here at my personal techblog, <br />
+http://www.kimmysia.com/techblog/2006/06/05/php5-only-variables-can-be-passed-by-reference-in-atutor/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8329"></a>
+		<div class="forum-post-author">
+			<label class="title">marcucha</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-07-02 02:37:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Error on modules installation page</h3></div>
+				
+			<div class="body">
+				<p>Kimmysia, it works very well with you code... thanks a lot!!!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

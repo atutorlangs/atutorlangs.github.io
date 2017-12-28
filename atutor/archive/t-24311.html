@@ -1,0 +1,88 @@
+---
+ title: Double Quotes after upgrade
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Double Quotes after upgrade</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24311"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-09-10 06:21:53</p>
+            </div>
+            <div class="postheader"><h3>Double Quotes after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+I've recently upgraded an ATutor installation from 1.6.2 to 2.1.1 and I've noticed that when ATutor tries to render the HTML from questions in the question bank, that it adds an extra double quote around the existing attribute values causing the image src (and other attributes) to become invalid. I checked the ATutor forum and noticed that other users described a similar scenario but I was unable to find a solution. After doing some more research through Google it seem that it might be something to do with UTF8 encoding?<br />
+<br />
+I tried creating a new question and adding an image but it results with two double quotes as well so I doubt it's isolated to the old questions.<br />
+<br />
+Have you come across a solution to this or can you suggest where I should start looking for the cause?<br />
+<br />
+<br />
+  Operating system ATutor is installed on - linux<br />
+  ATutor version - 2.1.1 (from 1.6.2)<br />
+  Patch #s applied - default 2.1.1 patches plus custom<br />
+  ATutor theme name - custom<br />
+  PHP version - 5.3.27<br />
+  MySQL version - 5.5.32-cll<br />
+  Webserver & version - Apache version 	2.2.25<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - Firefox 23.0.1</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24312"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-09-10 06:26:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Double Quotes after upgrade</h3></div>
+				
+			<div class="body">
+				<p>Forgot to attach the screen shot. Have also checked the HTML code in the database and it's valid.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24316"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-09-17 19:28:45</p>
+            </div>
+            <div class="postheader"><h3>Re: Double Quotes after upgrade</h3></div>
+				
+			<div class="body">
+				<p>The double quotes issue was fixed in patch 5 for ATutor 2.0.3 (see http://atutor.ca/view/7/22854/1.html for more details).<br />
+<br />
+I'm guessing this issue occurred for me because of custom theme files during an upgrade from 1.6.2 to 2.1.1. I was able to use a modified version of the patch file located here (http://update.atutor.ca/patch/2_0_3/2_0_3-5/patch.xml) to patch my custom theme files.<br />
+<br />
+This is likely to be the same issue that causes images to not display in questions which other users have posted about in these forums.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

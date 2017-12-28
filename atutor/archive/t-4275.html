@@ -1,0 +1,76 @@
+---
+ title: Import SPIP content
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Import SPIP content</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4275"></a>
+		<div class="forum-post-author">
+			<label class="title">Valentine</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-11 10:25:46</p>
+            </div>
+            <div class="postheader"><h3>Import SPIP content</h3></div>
+				
+			<div class="body">
+				<p>Hi it's me again,<br />
+<br />
+I was wondering, is it possible to import SPIP easily ?<br />
+I would like also to display ELM files (E-Learning Maker), that are xml files displayed through a flash player.<br />
+<br />
+Here is the code I use today to display my ELM files in a html page :<br />
+[quote]&lt;SCRIPT language='javascript'><br />
+			<br />
+			var sParameters = unescape(window.location.search.substring(1));<br />
+			// appel de la page, exemple : testeur.htm?surldata=C:/Mondossier/&ssconame=Eval3A&sxmlfile=seance_auteur.xml&stype=seance&sindex=3&lookurl=C:/MondossierLook/look_auteur.xml<br />
+		<br />
+			<br />
+			// IExplorer<br />
+			document.writeln('&lt;OBJECT classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" ID="player_edoceo" WIDTH="780" height="568">');<br />
+			document.writeln('&lt;param name="allowScriptAccess" value="sameDomain">');<br />
+			document.writeln('&lt;param name="movie" value="player_edoceo.swf?' + sParameters + ' ">');<br />
+			document.writeln('&lt;param name="quality" value="high">');<br />
+			document.writeln('&lt;param name="bgcolor" value="#FFFBDE">');		<br />
+		<br />
+			// Netscape<br />
+			document.writeln('&lt;EMBED SRC="player_edoceo.swf?' + sParameters + '" quality="high" bgcolor="#FFFBDE" width="790" height="575" name="player_edoceo" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"' + '>');<br />
+			document.writeln('&lt;/EMBED>&lt;/OBJECT>');<br />
+			<br />
+		&lt;/SCRIPT> [/quote] <br />
+<br />
+Of course, this is Javascript, and not really accessible, but for now we are going to keep those files and see how to change them later on...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4285"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-11 15:29:01</p>
+            </div>
+            <div class="postheader"><h3>SPIP/ELM</h3></div>
+				
+			<div class="body">
+				<p>I can't say whether SPIP or ELM content will desplay in ATutor, not being famniliar with either of them. If they are compatible with the IMS CP specification you may be able to import them.<br />
+<br />
+Note that ATutor (&lt;=1.4.3) strips away JS in the head of HTML documents, and does not support SCORM SCO packages which contain JS in the head of the HTML documents they contain. JS can be run from within an ATutor content page though you will likely need to make adjustments to paths etc.  so the files the script depends on can be found.<br />
+<br />
+You should have no trouble displaying Flash in ATutor content pages.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

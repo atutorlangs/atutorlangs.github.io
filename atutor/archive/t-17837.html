@@ -1,0 +1,160 @@
+---
+ title: Display first name with last initial
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Display first name with last initial</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="17837"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-24 15:11:24</p>
+            </div>
+            <div class="postheader"><h3>Display first name with last initial</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 1.6.2 installed and I am working with formatting the link to my Elluminate classroom.  I want to pass the username into the URL of the Elluminate link.  However, I would like it to be student first name and last initial.  I can do that one of two ways....<br />
+<br />
+1. Get ATutor to display the username as the first name and last initial (currently not an option in the System Preferences in admin).  Then use something like<br />
+<br />
+[php] echo get_display_name($_SESSION['member_id']);[/php]<br />
+<br />
+<br />
+2. Manually build the first name, last initial part in the index.php file of the Elluminate module.  So far I have <br />
+<br />
+[php]<br />
+	$sql	= "SELECT last_name FROM ".TABLE_PREFIX."members WHERE member_id='$_SESSION[member_id]'";<br />
+	$result = mysql_query($sql,$db);<br />
+	if ($row = mysql_fetch_assoc($result)) {<br />
+		<br />
+		$last_name = $row['last_name'];<br />
+		}<br />
+<br />
+php echo ($last_name['last_name']);<br />
+[/php]<br />
+<br />
+This returns the last initial.  Unsure as to why it only returns the last initial instead of the entire last name.  If I do something similar for the first name I will only get the first initial.<br />
+<br />
+<br />
+Any ideas on which would be better/easier?<br />
+<br />
+Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17838"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-24 15:15:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Display first name with last initial</h3></div>
+				
+			<div class="body">
+				<p>Oops.... never mind the double "&lt;?php" and "?>" tags.  I didn't know it would put those in twice when I wrapped my code in the php tags on this forum.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17839"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-24 15:46:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Display first name with last initial</h3></div>
+				
+			<div class="body">
+				<p>#1 one would be the more efficient way, but if you are not the ATutor admin, there's no guarantee of the display name format being first name second name. <br />
+<br />
+#2 would be more fool proof,  pulling the first and last name directly from the db.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17840"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-24 15:53:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Display first name with last initial</h3></div>
+				
+			<div class="body">
+				<p>Thanks for responding Greg.<br />
+<br />
+Do you have any insight on #2?  Why would I just get the first initial of the name?  How can I get the full last name or full first name?<br />
+<br />
+By the way, I am the ATutor admin.<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17841"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-24 17:46:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Display first name with last initial</h3></div>
+				
+			<div class="body">
+				<p>No idea why only the first initial. Your sql looks fine.<br />
+<br />
+You've confirmed the full name is actually in the database?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17842"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-24 18:07:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Display first name with last initial</h3></div>
+				
+			<div class="body">
+				<p>Yes.  Full names in the database........<br />
+<br />
+Some kind of php.ini setting perhaps?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

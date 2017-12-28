@@ -1,0 +1,81 @@
+---
+ title: Certificates are not uploading
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Certificates are not uploading</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24050"></a>
+		<div class="forum-post-author">
+			<label class="title">WATCuser</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-04-04 12:13:49</p>
+            </div>
+            <div class="postheader"><h3>Certificates are not uploading</h3></div>
+				
+			<div class="body">
+				<p>I have taken over support for ATutor. Currently, I cannot get the upload to the server. <br />
+If I manually upload a certificate, it will print correctly, but if I upload the certificate using the add new certificate tab, the certificate is not written to the correct folder.<br />
+How do I fix the problem?<br />
+<br />
+<br />
+This is the line of code in the certify_certificate.php module that I think is causing the issue: <br />
+if ($_FILES['certify_file']['size'] > 0 && $_FILES['certify_file']['error'] == 0) {<br />
+                                    if (move_uploaded_file($_FILES['certify_file']['tmp_name'], $templatefile)) {<br />
+                                                // File ok<br />
+                                    } else {<br />
+                                                unlink($templatefile);<br />
+                                    }<br />
+                        }<br />
+                        $templatepresent = file_exists($templatefile);<br />
+<br />
+<br />
+The output from the following echo  is: templatefile = /xxxxx/local/home/xxxxx/xxxxx.com/ATutor/content/certify/template_.pdf ....<br />
+<br />
+$templatefile = AT_CONTENT_DIR .'certify/template_'.$certify_id.'.pdf';<br />
+$templatepresent = file_exists($templatefile);<br />
+            // echo "templatefile = ";<br />
+            // echo $templatefile;<br />
+            // echo "  .... ";<br />
+<br />
+Statistics & Information<br />
+ATutor Version:<br />
+2.0.3(r11495 - 2011-09-13 13:27:29). <br />
+PHP Version:<br />
+5.2.17<br />
+MySQL Version:<br />
+5.1.68-community-log<br />
+OS:<br />
+Linux 2.6.18-348.3.1.el5xen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24051"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-04-04 16:01:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Certificates are not uploading</h3></div>
+				
+			<div class="body">
+				<p>We created a new version, with that bug and a few other fixed. You can replace the old version with the new one found on the modules page.<br />
+<br />
+http://atutor.ca/atutor/modules/index.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,79 @@
+---
+ title: Registration required fields
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Registration required fields</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="23693"></a>
+		<div class="forum-post-author">
+			<label class="title">spaul</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-26 15:31:33</p>
+            </div>
+            <div class="postheader"><h3>Registration required fields</h3></div>
+				
+			<div class="body">
+				<p>I am trying to make another field (province) REQUIRED in the registration form and even though I have the code similar to the first_name field, the field is not required. It lets me submit with value empty. I am in the registration.tmpl.php file.<br />
+<br />
+IF I remove the last_name field from this file, I still get the error message that the last_name is required, which tells me that there is another location to indicate required in addition to the coding of the form fields. Do you know where that location for the code is located that indicates these fields are required?<br />
+<br />
+Lastest version of Atutor, and php. HOsted on linux server<br />
+T</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23699"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-29 09:24:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Registration required fields</h3></div>
+				
+			<div class="body">
+				<p>There are validation checks associated with each required field in registration.php, that will also need to be adjusted. If address is to be required, one of these checks would need to be created for it. <br />
+<br />
+This what the first name fields validation check looks like. Adjust the values accordingly for "address." Remove or comment out the checks for fields you don't need.<br />
+<br />
+[php]<br />
+if (!$_POST['first_name']) {<br />
+   $missing_fields[] = _AT('first_name');<br />
+}<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23700"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-29 09:31:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Registration required fields</h3></div>
+				
+			<div class="body">
+				<p>I meant, adjust for "province"</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

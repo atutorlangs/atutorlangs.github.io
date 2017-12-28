@@ -1,0 +1,169 @@
+---
+ title: topnavigation menu sticks to the screen when scrolling
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>topnavigation menu sticks to the screen when scrolling</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25695"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-02-10 13:14:27</p>
+            </div>
+            <div class="postheader"><h3>topnavigation menu sticks to the screen when scrolling</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+In Atutor 2.2 when you scroll the page towards the bottom of the page, when topnavigation menu (id=topnalistcontainer) reaches to the top of the screen, it sticks there and you can still see it as you going down the page. The same thing happens to the login bar when it reaches to the top of the screen.<br />
+Can anyone help me to solve this?<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25696"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-02-10 13:21:19</p>
+            </div>
+            <div class="postheader"><h3>Re: topnavigation menu sticks to the screen when scrolling</h3></div>
+				
+			<div class="body">
+				<p>Not quite sure what the problem is you are trying to describe. The navigation bars are supposed to stick to the top of the screen.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25739"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-03-08 21:38:20</p>
+            </div>
+            <div class="postheader"><h3>Re: topnavigation menu sticks to the screen when scrolling</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+If you scroll this page, you would see the problem.<br />
+<br />
+http://nosmoking.my/login.php<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25740"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-03-09 07:07:41</p>
+            </div>
+            <div class="postheader"><h3>Re: topnavigation menu sticks to the screen when scrolling</h3></div>
+				
+			<div class="body">
+				<p>It would appear the flash in the header area has pushed the main nav bar down. You would need to adjust the .scroll-to-fixed-fixed style on line 3411 of the themes/default/styles.css. Probably add on negative margin.<br />
+<br />
+margin-top:-2em;<br />
+<br />
+The menu is supposed to stick to the top of the screen.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25806"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-05-04 19:19:44</p>
+            </div>
+            <div class="postheader"><h3>Re: topnavigation menu sticks to the screen when scrolling</h3></div>
+				
+			<div class="body">
+				<p>Is there a way to turn off the fixed navigation bars and footer in ATutor 2.2.1? I tried to do it in the stylesheet but it looks like the style, at least for the footer, is being embedded in code somewhere:<br />
+<br />
+element.style {<br />
+    z-index: 1000;<br />
+    position: fixed;<br />
+    bottom: 0px;<br />
+    margin-left: 0px;<br />
+    width: 1332px;<br />
+    left: 0px;<br />
+}<br />
+<br />
+I am working from the ATutor default theme.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25807"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-05-05 09:09:53</p>
+            </div>
+            <div class="postheader"><h3>Re: topnavigation menu sticks to the screen when scrolling</h3></div>
+				
+			<div class="body">
+				<p>You can disable the sticky footer in System Preferences>Themes>Custom Logo<br />
+<br />
+The header is a little more complicated. You'd need to comment out, or remove the following block of code:<br />
+<br />
+https://github.com/atutor/ATutor/blob/master/jscripts/ATutor_js.php#L45-L160</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25808"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-05-05 11:58:14</p>
+            </div>
+            <div class="postheader"><h3>Re: topnavigation menu sticks to the screen when scrolling</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the quick response! It worked like a charm. Although I will definitely remove the sticky footer, I'm reconsidering the sticky header. I'm trying to design a theme that doesn't require any source code modifications. Plus, I just found a good article on the pros and cons of fixed navigation bars - http://www.awwwards.com/fixed-navigation-bars-pros-and-cons.html.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

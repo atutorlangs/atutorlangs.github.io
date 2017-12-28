@@ -1,0 +1,168 @@
+---
+ title: Configuring Email SMTP Authentication
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Configuring Email SMTP Authentication</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="26247"></a>
+		<div class="forum-post-author">
+			<label class="title">danghoaiphuc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-04-14 08:34:49</p>
+            </div>
+            <div class="postheader"><h3>Configuring Email SMTP Authentication</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I am unable to config to send email notification from ATutor via SMTPSL auth. Can you guide me how to config those settings for ATutor. As without SMTP, our emails to users mostly go into their spam folder. I already followed either the FAQ or forum thread at https://www.atutorspaces.com/forums/view.php?fid=7&pid=25602 but still notsuccessful... It returns an error message "There was an error sending the email" when I submit the forgot password form.<br />
+Fyi, I am successful to config smtp with Drupal cms on the same server. Your help would be highly appreciated. Thanks.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux<br />
+  ATutor version - 2.2.2<br />
+  Patch #s applied -<br />
+  ATutor theme name - Default<br />
+  PHP version - 5.6.3<br />
+  MySQL version - 5<br />
+  Webserver & version - Apache<br />
+  Copies of error messages - There was an error sending the email message.<br />
+  Changes to default settings -<br />
+  Web browser being used - <br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26249"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-04-14 10:44:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Configuring Email SMTP Authentication</h3></div>
+				
+			<div class="body">
+				<p>Setting up email authentication is beyond what we can guide you with here. <br />
+<br />
+You might try searching out resources on the Web on how to do that. Perhaps start with this:<br />
+<br />
+https://en.wikipedia.org/wiki/SMTP_Authentication</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26250"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-04-14 10:48:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Configuring Email SMTP Authentication</h3></div>
+				
+			<div class="body">
+				<p>Also see:<br />
+https://mandrill.zendesk.com/hc/en-us/articles/205582267-About-SPF-and-DKIM</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26254"></a>
+		<div class="forum-post-author">
+			<label class="title">danghoaiphuc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-04-15 10:05:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Configuring Email SMTP Authentication</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg for showing some reference materials. I went through those documents and can you give me the clue where to define smtp info such as username, password and smtpAuth in ATutor? My server is setup working well with smtp auth support but know no way where to delclre such information in ATutor. Again, thanks for your support.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26255"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-04-15 10:55:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Configuring Email SMTP Authentication</h3></div>
+				
+			<div class="body">
+				<p>SPF and DKIM are usually setup through your DNS provider.<br />
+<br />
+There is no place in ATutor to add these.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26256"></a>
+		<div class="forum-post-author">
+			<label class="title">danghoaiphuc</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-04-15 11:11:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Configuring Email SMTP Authentication</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg. I already configured SPF and DKIM and it works fine with my existing CMS. But I need to define user info in the CMS itself. So I am trying to find where is the place in ATutor to declare those info such as outcoming host, smtp username/password, tls/ssl authentication and outcoming smtp port. I see under the include/classes/phpmailer folder of ATutor, it has several files which have variables to define smtp info but I am not successful with with it. If you see any clue on this, I am much  highly thankful for that.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26257"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-04-15 13:49:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Configuring Email SMTP Authentication</h3></div>
+				
+			<div class="body">
+				<p>There should be no need to change any setting in ATutor if your SPF and DKIM are setup properly. This works fine with all our servers.<br />
+<br />
+The SMTP setting in phpmailer is for windows systems that are using a remote SMTP server to send email. These do not need to be set when using a Linux server.<br />
+<br />
+There is no further advice I can offer on this issue.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

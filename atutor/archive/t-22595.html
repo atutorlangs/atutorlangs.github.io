@@ -1,0 +1,373 @@
+---
+ title: Continuous logout
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Continuous logout</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22595"></a>
+		<div class="forum-post-author">
+			<label class="title">HenryGR</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-05 16:29:54</p>
+            </div>
+            <div class="postheader"><h3>Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>My details are:<br />
+Statistics & Information<br />
+<br />
+Database:<br />
+    5.85 MB<br />
+Disk Usage:<br />
+    0.09 MB<br />
+Courses:<br />
+    6<br />
+Users:<br />
+    33<br />
+ATutor Version:<br />
+    2.0.3(r11495 - 2011-09-13 13:27:29). Check Latest Version.<br />
+PHP Version:<br />
+    5.3.3-7+squeeze3<br />
+MySQL Version:<br />
+    5.1.49-3<br />
+OS:<br />
+    Linux 2.6.32-5-686<br />
+<br />
+My problem:<br />
+<br />
+Whenever I login with a given user, does not matter whether instructor, administrator or student, after the first menu, I select... any class or menu tab, I am forced logout and need to log in again.<br />
+This behavior occurs with Firefox, Chromium, and Safari browsers, tested on Windows and Linux platforms.<br />
+<br />
+Any light, please?<br />
+:) :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22596"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-06 07:54:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Try emptying the browser's cache.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22597"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-06 07:55:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Dump your browsers cookies.<br />
+<br />
+<br />
+Be sure cookies and Javascript are turned .</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22598"></a>
+		<div class="forum-post-author">
+			<label class="title">HenryGR</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-06 11:11:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg.<br />
+Thanks for the tip. Unfortunately, none of those worked, I am still forced logout every time; it looks like the session expires in ten seconds instead of ten hours.<br />
+Also tried to change the values at vitals.inc for experimenting. The lines 64 and 65, I tried with:<br />
+<br />
+	$_SESSION['OBSOLETE'] = false;<br />
+and<br />
+	$_SESSION['EXPIRES'] = time() + 10000000;<br />
+<br />
+None of those changes reported any good.<br />
+<br />
+Rgds,<br />
+Henry. :(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22599"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-06 13:39:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Can you send your ATutor URL and a test login to my email: cli at ocad dot ca. Wanna try it out myself.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22600"></a>
+		<div class="forum-post-author">
+			<label class="title">HenryGR</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-06 13:46:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Sure Cindy.<br />
+URL: campus.sidar.org<br />
+user: usuario1<br />
+pwd: usuario1<br />
+<br />
+Rgds.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22601"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 09:23:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Hi Henry, I tried with the provided site and login with <br />
+<br />
+1. firefox, chrome and safari on Mac<br />
+2. firefox and IE on windows<br />
+<br />
+I've been clicking around and haven't been kicked out, which prompts that the issue you encountered is likely caused by the old cookie data. The solution is exactly as what Greg has suggested:<br />
+<br />
+1. Clean up the browser cookies, especially the ones that are associated with your site "campus.sidar.org";<br />
+2. Re-start the browser.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22602"></a>
+		<div class="forum-post-author">
+			<label class="title">HenryGR</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 10:53:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Cindy.<br />
+Just tried few minutes ago. I cleared all cookies on my Firefox and did enter again.<br />
+It was discouraging  to find that it worked, apparently, as long as I keep moving continuously (navigating tabs, lessons, etc) but when I stop for say... 40 seconds and restarted navigation, I was bumped out. :(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22603"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 13:00:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Hi Henry,<br />
+<br />
+I cannot re-produce the exactly same issue with my firefox. Tried with leaving the session unattendeded for over ten minutes and the re-visit still works fine. I did get bumped out after leaving the session idle for around an hour.<br />
+<br />
+If any script that you've modified, revert them back.<br />
+<br />
+Pay special attention to include/vitals.inc.php, in particular that line 159 stays intact, which controls the session lifetime:<br />
+<br />
+@ini_set('session.gc_maxlifetime', '36000'); /* 10 hours */</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22604"></a>
+		<div class="forum-post-author">
+			<label class="title">HenryGR</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 13:40:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Ok.<br />
+Thanks a lot anyway for the help. I will post my findings (if any) when I solve the issue. It is weir to notice that the same issue occurs to three different instructors in three different cities 4000+ Km apart.<br />
+<br />
+Regards.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22605"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 13:56:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>To experiment, try commenting out line 181 - 185 @ include/vitals.inc.php. In case of the line offset, the chunk of code is,<br />
+<br />
+if (count($_SESSION) == 0) {<br />
+	regenerate_session();<br />
+} else {<br />
+	$valid_session = check_session();<br />
+}<br />
+<br />
+Note that please backup vitals.inc.php before making any change.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22606"></a>
+		<div class="forum-post-author">
+			<label class="title">HenryGR</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 14:37:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Thanks Cyndi.<br />
+That definitely did the trick (as far as I was able to test) but that removes completely the CSRF protection, right? (I am not a php master, I'm guessing).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22607"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 14:49:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Somewhat yes. It certainly reduces the CSRF protection level.<br />
+<br />
+However, it's nice that we realized this implementation does not make some browsers (probably) happy. Thanks for the report, Henry.<br />
+<br />
+I will file it in the bug tracker. Hopefully could get it fixed soon.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22608"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 14:58:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Hi Henry, just for my curiosity, do you have pretty URL turned on?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22609"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-07 15:00:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Continuous logout</h3></div>
+				
+			<div class="body">
+				<p>Henry, ignore my previous question. I've found the answer myself, no, you don't have pretty URL turned on.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

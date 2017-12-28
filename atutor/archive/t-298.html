@@ -1,0 +1,190 @@
+---
+ title: Table prefix  safe mode
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>Table prefix  safe mode</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="298"></a>
+		<div class="forum-post-author">
+			<label class="title">hakan_tcm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-10 13:59:36</p>
+            </div>
+            <div class="postheader"><h3>Table prefix  safe mode</h3></div>
+				
+			<div class="body">
+				<p>Hi!<br />
+<br />
+I've just surfed in to your page and I must say that ATutor is impressive so far. I'm  thinking about trying ATutor but I have a couple of questions first:<br />
+<br />
+1) I'm going to do a remote installation on a hosted server (is that correct english?::crazy::  that is, the server isn't mine and I don't have physical access to it). Is it possible to do a ftp installation?<br />
+<br />
+2) I already have a mySQL database that I use - is it possible to get table prefixes when I install ATutor? I don't want the table names to collide. For example all tables are called atutor_tablename.<br />
+<br />
+3) Is it possible to run ATutor in Safe mode? This seems to mess things up for similar products like Moodle.<br />
+<br />
+Regards<br />
+<br />
+/Hkan</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="299"></a>
+		<div class="forum-post-author">
+			<label class="title">hakan_tcm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-10 14:21:06</p>
+            </div>
+            <div class="postheader"><h3>...and here comes the phpinfo()</h3></div>
+				
+			<div class="body">
+				<p>http://www.shell.linux.se/tcm/info.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="301"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-11 10:18:51</p>
+            </div>
+            <div class="postheader"><h3>No remote install</h3></div>
+				
+			<div class="body">
+				<p>If you mean can you install ATutor on your server by accessing the src remotely, no you can not. Please follow the installation instruction documented on the ATutor.ca Web site.<br />
+<br />
+Table prefixes are being added to ATutor V1.3, which will be released Sept/Oct. For now you will need to create a separate database for ATutor, or be careful the database table do not conflict. <br />
+<br />
+ATutor should run without any problems in safemode.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="302"></a>
+		<div class="forum-post-author">
+			<label class="title">hakan_tcm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-11 12:19:11</p>
+            </div>
+            <div class="postheader"><h3>remote install</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg and thanks for the answer!<br />
+<br />
+By remote installation I mean:<br />
+<br />
+I rent space on a web server (see the phpinfo() above) that I have ftp-access to. I ftp my files to the web server. I can chmod with my ftp client but I cannot chown. I can access the database (mySQL) with phpMyAdmin. I cannot create a new database so I have to work with the one I have.<br />
+<br />
+Do I need shell access to do an installation?<br />
+<br />
+I hope you'll understand me - I'm from Sweden and a little rusty with my english :) .<br />
+<br />
+Regards<br />
+<br />
+/Hkan</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="303"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2003-08-11 14:56:20</p>
+            </div>
+            <div class="postheader"><h3>Hosted Installations are Possible</h3></div>
+				
+			<div class="body">
+				<p>Ah. You mean a hosted installation of ATutor. Yes you can install ATutor into your home directory on an ISP (Internet Service Provider). The installation instructions include information for both hosted and root user installations.<br />
+<br />
+You will likely need shell access to chmod the content directory recursively. The rest you could probably do with an ftp client, zip application, a local text editor, and phpMyAdmin.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Hi Greg and thanks for the answer!<br />
+<br />
+By remote installation I mean:<br />
+<br />
+I rent space on a web server (see the phpinfo() above) that I have ftp-access to. I ftp my files to the web server. I can chmod ...<br />
+[op]forums/view.php?fid=7;pid=298;page=1#302[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1051"></a>
+		<div class="forum-post-author">
+			<label class="title">liftcrew</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-08 18:52:59</p>
+            </div>
+            <div class="postheader"><h3>Warning: SAFE MODE Restriction in effect</h3></div>
+				
+			<div class="body">
+				<p>Can't take care of this warning<br />
+raq3<br />
+mysql<br />
+php<br />
+Any help would be great. Clear english please, limited abilities.<br />
+<br />
+Thanks Dave</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1053"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-02-09 09:01:15</p>
+            </div>
+            <div class="postheader"><h3>Comment out session line</h3></div>
+				
+			<div class="body">
+				<p>If I were guessing what you are talking about, I'd say comment out the following line in include/session.inc.php <br />
+<br />
+//set_time_limit(0);<br />
+<br />
+It's difficult to provide help without details...</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

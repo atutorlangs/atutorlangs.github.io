@@ -1,0 +1,114 @@
+---
+ title: adding a page to the pages variable
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>adding a page to the pages variable</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6960"></a>
+		<div class="forum-post-author">
+			<label class="title">dmcavitt</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-27 12:35:36</p>
+            </div>
+            <div class="postheader"><h3>adding a page to the pages variable</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - Windows XP<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - 4.3.8<br />
+  version of mysq l - 4.1.8<br />
+  webserver & version - Linux Fedora Core 2<br />
+  copies of error messages - none<br />
+  changes to default settings - none<br />
+  web browser being used - Internet Explorer 6<br />
+  and anything else relevant - <br />
+<br />
+     I am trying to add a new page under the tools/tests directory. Here is the only code I have on the page so far..<br />
+---------------------------------------------------------------------<br />
+$page = 'correlate';<br />
+define('AT_INCLUDE_PATH', '../../include/');<br />
+require(AT_INCLUDE_PATH.'vitals.inc.php');<br />
+authenticate(AT_PRIV_TESTS);<br />
+<br />
+require(AT_INCLUDE_PATH.'header.inc.php');<br />
+---------------------------------------------------------------------<br />
+I'm using Zend Development Environment as my php editor.  When I run the debugger from Internet Explorer and I step into the header.inc.php file.....I get down to line 78...which consists of this code....<br />
+----------------------------------------------------------------------------<br />
+if (!isset($_pages[$current_page])) {<br />
+	global $msg;<br />
+	debug($_pages[$current_page]);<br />
+	exit;<br />
+	$msg->addError('PAGE_NOT_FOUND'); // probably the wrong error<br />
+	header('location: '.$_base_href.'index.php');<br />
+	exit;<br />
+}<br />
+----------------------------------------------------------------------------<br />
+...and the debugger is showing that the file I created is not in the $_pages array......I was curious how do I get my page inserted into this variable so it can be recognized in the ATutor system?  Right now it just shows a blank screen because the page doesn't even exist for the debug() function to output any page name to the screen before it exits the file.  Thank you so much for all your responses and hard work you all do for this great project!!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6961"></a>
+		<div class="forum-post-author">
+			<label class="title">dmcavitt</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-27 12:39:49</p>
+            </div>
+            <div class="postheader"><h3>Re: adding a page to the $_pages variable</h3></div>
+				
+			<div class="body">
+				<p>Below is the corrected version of the above<br />
+Things to describe: <br />
+  operating system - Fedora Core 2<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version - Apache 2.0.49-4<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -<br />
+<br />
+Sorry for the misinformation in the first posting</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6962"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-27 12:48:35</p>
+            </div>
+            <div class="postheader"><h3>See a module.php file</h3></div>
+				
+			<div class="body">
+				<p>Have a look at any of the module.php files, under the mods/ directory, for examples of adding new $_pages.<br />
+<br />
+Tests module.php file<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/mods/_standard/tests/module.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

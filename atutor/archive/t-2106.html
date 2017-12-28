@@ -1,0 +1,183 @@
+---
+ title: Logically separate atutor instances
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Logically separate atutor instances</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2106"></a>
+		<div class="forum-post-author">
+			<label class="title">rallen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-20 16:12:57</p>
+            </div>
+            <div class="postheader"><h3>Logically separate atutor instances</h3></div>
+				
+			<div class="body">
+				<p>I am trying to create logically separate instances of atutor (separate courses within an organization). Users within an organization should only see courses for that organization. I looked at ACollab but it appears to handle grouping within a course not courses within a group. My first thought was to dynamically set the DB_NAME in config.inc.php using a parameter passed when loading atutor and setting a session variable but once I'm logged into atutor the session variable is no longer available and the database reverts back to my default. Any ideas / thoughts / suggestions on what would be the best approach for this?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2119"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-21 08:26:21</p>
+            </div>
+            <div class="postheader"><h3>Logically seperate?</h3></div>
+				
+			<div class="body">
+				<p>What do you mean by logically separate. <br />
+<br />
+Could you rephrase your post. It's not clear what you are trying to accomplish.<br />
+<br />
+Have you read through the Administrators section of ATutor HowTo?<br />
+<br />
+http://atutor.ca/atutor/demo/?cid=3406;g=2</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2127"></a>
+		<div class="forum-post-author">
+			<label class="title">rallen</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-21 10:15:36</p>
+            </div>
+            <div class="postheader"><h3>Logically separate</h3></div>
+				
+			<div class="body">
+				<p>I would like to be able to group students by company / entity and allow those students to view only the courses available for that company / entity. My thought is that I could create a separate database for each company / entity and change the config.inc.php to dynamically load the database name instead of the static default. I have looked at the Administrators section and ACollab and neither appeared to address a situation such as this. I tried to modify the config.inc.php to push the database name into a session variable but after the login it is no longer set. With you knowledge of the system, does my approach seem viable or would you approach this differently? <br />
+Thank you very much for your response.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2133"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-21 10:36:56</p>
+            </div>
+            <div class="postheader"><h3>Logically separate</h3></div>
+				
+			<div class="body">
+				<p>I understand what you're trying to do, and an easy solution doesn't come to mind.<br />
+<br />
+If possible, I'd say just create two seperate installations of ATutor and ACollab, but then you would have two different member tables and would have to direct different members to a different installations/URL, which could be complicated. Not having ALL accounts in the same table could become a problem to your ogranization. Once ATutor has LDAP support then that wouldn't be an issue anymore, but that's not for some time yet.<br />
+<br />
+You could also make all the courses private and hidden, and only give access to the courses on a member by member basis (a lot more manual work assigning members to courses).<br />
+<br />
+You could also try using the Course Categories to group your courses, then adding a small peice of code that would depending on some session variable default to a different Category. (not sure which session variable you might use, you would have to add one, and possibly add a field in the database as well).<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2139"></a>
+		<div class="forum-post-author">
+			<label class="title">perryr</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-23 12:07:26</p>
+            </div>
+            <div class="postheader"><h3>What we did</h3></div>
+				
+			<div class="body">
+				<p>At the university we are dealing with 1st to 4th year students with a total of some 7,000 students studying English in any given semester.<br />
+<br />
+We created five seperate installations of ATutor and ACollab, (ATutor and ACollab contain the master courses and are only used for development and change while ATutor 1 - 4 and ACollab 1 - 4) are used for each year groups' courses. <br />
+<br />
+The main Language Centre page has links for each year group which links to another page with their course links to ATutor. <br />
+<br />
+Incidentally there are quite a lot of courses in each semester - for example Year 1 students could be doing any of the three courses - Remedial English, English 1 or English 2. Yjere are 41 classes with about 30 students in each doing English 2 in Year 2 and the content in replicated from a backup of the master course to these 35 classes. <br />
+<br />
+This may seem comlex but it is not at all difficult. Only occassionally do students try to access a course that they are not enrolled in. Hope it makes sense.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2151"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-23 20:39:45</p>
+            </div>
+            <div class="postheader"><h3>What we did</h3></div>
+				
+			<div class="body">
+				<p>Perry ,<br />
+<br />
+It sounds like you're using ATutor extensively. Perhaps if you give us more details and guest access to your installations we can work together to figure out a real solution, if you are in fact committed to using ATutor in your university environment.<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2745"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-13 17:23:12</p>
+            </div>
+            <div class="postheader"><h3>What We Did</h3></div>
+				
+			<div class="body">
+				<p>Perry<br />
+There is a message addressed to you in the Community Discussions forum, where I reposted your well written description of your experiences with ATutor.<br />
+<br />
+http://www.atutor.ca/view/16/2609/1.html<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Dear Joel:<br />
+<br />
+I am sorry that it has taken so long to get back to you but things have been rather hectic here.<br />
+<br />
+First let me give you a brief description of the system:<br />
+<br />
+Server: HP ML 300<br />
+CPU: 3....<br />
+[op]forums/view.php?fid=7;pid=2106;page=1#2412[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

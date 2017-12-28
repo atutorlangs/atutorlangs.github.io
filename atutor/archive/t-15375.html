@@ -1,0 +1,85 @@
+---
+ title: Problem exporting content
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem exporting content</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15375"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-02 13:17:02</p>
+            </div>
+            <div class="postheader"><h3>Problem exporting content</h3></div>
+				
+			<div class="body">
+				<p>ATutor Version: 1.6. <br />
+PHP Version: 5.2.6 <br />
+MySQL Version: 5.0.51a-community-log <br />
+OS: Linux 2.6.18-53.1.4.el5<br />
+Browser: Explorer<br />
+<br />
+Hello <br />
+<br />
+When I try to export the content of e course I get this error:<br />
+<br />
+Fatal error: Allowed memory size of 33554432 bytes exhausted (tried to allocate 12302644 bytes) in /home/emprenau/public_html/trainmonher.net/include/classes/zipfile.class.php on line 233<br />
+<br />
+<br />
+I did try to export some some chapter and also get that error.<br />
+<br />
+I was looking the zipfile.class.php but I didn't find how to allocate more memory.<br />
+<br />
+Any suggestion?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15376"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-02 13:30:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem exporting content</h3></div>
+				
+			<div class="body">
+				<p>Are you sure your system has not run out of memory?<br />
+<br />
+Have you tried to export a single, text on page?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15390"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-03 10:53:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem exporting content</h3></div>
+				
+			<div class="body">
+				<p>Looks like the PHP ran out of memory. Try to edit the /php.ini file (most likely at /etc/php.ini) and change the "memory_limit" param.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,70 @@
+---
+ title: Parameter passing
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Parameter passing</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="7123"></a>
+		<div class="forum-post-author">
+			<label class="title">banderson407</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-13 11:30:12</p>
+            </div>
+            <div class="postheader"><h3>Parameter passing</h3></div>
+				
+			<div class="body">
+				<p>banderson407 Subject: parameter passing  <br />
+I know that you can jump to the E-mail the course instructor by using:<br />
+www.yoursite.com/inbox/send_message.php?id=1<br />
+<br />
+Is there a way to also pass the subjets as well so the user only has to enter comments if wanted and then submit ? <br />
+Posted: 2006-02-12 23:35:05 <br />
+======================================== <br />
+greg Subject: Re: parameter passing  <br />
+I don't which version of ATutor you are referring to, but the subject is inserted in the subject form field of the Inbox automatically in the current versions.<br />
+<br />
+Questions like this would be better posted to the support forum.  <br />
+=========================================<br />
+<br />
+It is ver. 1.5.2 runnin on windows with the current easy PHP build from this site.<br />
+<br />
+You lost me when you state that the subject is automatically filled in on this version. <br />
+<br />
+I know if I link to send_message.php and pass ?id=# I get the form with the recipient filled in but also want the subject filled in and the cursor waiting in the comment box. <br />
+<br />
+So for example I want to insert an quick link in a course for a student to send a request for instructor audit, is there a paramater I can pass as well to have "Instructor audit requested" automatically inserted as the subject of the e-mail ?<br />
+<br />
+Thanks in advance</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7130"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-14 10:23:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Parameter passing</h3></div>
+				
+			<div class="body">
+				<p>You would need to modify the code on lines 181 and 187 of inbox/send_message.php from POST['subject'] to REQUEST['subject']<br />
+<br />
+Then you could attach "?subject=something" to the end of the link you create to the inbox.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

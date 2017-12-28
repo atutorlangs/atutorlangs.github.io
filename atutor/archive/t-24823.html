@@ -1,0 +1,170 @@
+---
+ title: Creating a New Role
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Creating a New Role</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="24823"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-11 10:35:26</p>
+            </div>
+            <div class="postheader"><h3>Creating a New Role</h3></div>
+				
+			<div class="body">
+				<p>Hi.  I have 2.0 installed and I'm wondering where the "roles" are defined that are used in the AT_course_enrollment table.  <br />
+<br />
+I'm making a modification and I want to create a new role, but I don't want to break anything.  Is there a file where these live?  Or would it be ok to just manually type in a new role directly into the table?<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24824"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-11 10:54:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating a New Role</h3></div>
+				
+			<div class="body">
+				<p>There are not custom roles per se, but rather permissions. In the enrollment manager you can select a member then click the Privileges button and assign access to specific tools in a course.<br />
+<br />
+There's a similar tool for admin, under User>Administrators, you can assign specific privileges on a user by user basis for admin tools.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24825"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-11 12:10:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating a New Role</h3></div>
+				
+			<div class="body">
+				<p>Right.  I know about permissions.... this would be something different though.<br />
+<br />
+Do you think it would break something if I manually entered a new "role" directly in the database?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24826"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-11 12:28:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating a New Role</h3></div>
+				
+			<div class="body">
+				<p>I'm not certain how you'd go about creating a role without some significant changes. Potentially the status field in the members table could have another value added. I believe it would be a little more involved than just adding a new status in the database.<br />
+<br />
+Perhaps if you describe what you're trying to accomplish, I could suggest something based on current functionality.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24827"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-11 14:18:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating a New Role</h3></div>
+				
+			<div class="body">
+				<p>Sure.  I do live online sessions via webconferencing and I've created a system to track attendance.  The live sessions are recorded, and some users have signed up to only view the recorded sessions instead of attending live.<br />
+<br />
+So, I have a simple table that displays all enrolled students.  In that table, I want to NOT show those users when I update attendance.<br />
+<br />
+I'm thinking that a simple call to the database would be used here.  So, something like... <br />
+<br />
+[php]<br />
+if($row['role'] == 'Student'){<br />
+  echo '&lt;tr>&lt;td>display_name($row['role'])&lt;/td>&lt;/tr>';<br />
+}<br />
+[/php]<br />
+<br />
+and I would have recording only people's role be "recorded_only" in the database.<br />
+<br />
+What do you think?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24828"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-11 16:00:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating a New Role</h3></div>
+				
+			<div class="body">
+				<p>Sorry for the follow up post, but to clarify, I would just manually type in "recorded_only" or something like that for a particular user in the database.<br />
+<br />
+If that would break something or just isn't a good idea in general, I'll look at another route.  I have some other ideas in mind.<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24829"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-09-11 17:30:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Creating a New Role</h3></div>
+				
+			<div class="body">
+				<p>It doesn't seem like there would be any ill side effect of doing what you suggest. If its self-contained in its own table, and there aren't any variables used that are already used elsewhere, you should be fine.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

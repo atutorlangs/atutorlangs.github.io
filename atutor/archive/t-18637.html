@@ -1,0 +1,118 @@
+---
+ title: Preferences
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Preferences</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18637"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-09 22:15:24</p>
+            </div>
+            <div class="postheader"><h3>Preferences</h3></div>
+				
+			<div class="body">
+				<p>Can I disable the preferences menu at My start page?<br />
+Thanks<br />
+<br />
+ATutor: 1.6.2<br />
+PHP: 5.2.9 <br />
+MySQL: 5.0.81-community-log <br />
+OS: Linux 2.6.18-128.1.16.el5</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18643"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-10 08:37:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Preferences.</h3></div>
+				
+			<div class="body">
+				<p>Near the top of the file /include/lib/menu_pages.php you can see where the preferences tab is constructed. You can delete the references there to users/preferences.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18649"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-11 10:22:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Preferences.</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg.<br />
+<br />
+I removed the line 27 at menu_pages.php:<br />
+<br />
+$_pages[AT_NAV_START]  = array_merge(array('users/index.php',  'users/profile.php', 'users/preferences.php'), (isset($_pages[AT_NAV_START]) ? (array) $_pages[AT_NAV_START] : array()));<br />
+<br />
+Now I get this error:<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/emprenau/public_html/aulavirtual/include/lib/menu_pages.php on line 317<br />
+<br />
+<br />
+Any suggestion?<br />
+<br />
+==============<br />
+ATutor: 1.6.2<br />
+PHP: 5.2.9 <br />
+MySQL: 5.0.81-community-log <br />
+OS: Linux 2.6.18-128.1.16.el5</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18650"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-11 10:39:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Preferences.</h3></div>
+				
+			<div class="body">
+				<p>NEW<br />
+<br />
+Now I'v chaged the line 27:<br />
+<br />
+$_pages[AT_NAV_START]  = array_merge(array('users/index.php',  'users/profile.php', isset($_pages[AT_NAV_START]) ? (array) $_pages[AT_NAV_START] : array()));<br />
+<br />
+And get this warning:<br />
+<br />
+Warning: Illegal offset type in isset or empty in /home/emprenau/public_html/aulavirtual/include/lib/menu_pages.php on line 324<br />
+<br />
+thanks again</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

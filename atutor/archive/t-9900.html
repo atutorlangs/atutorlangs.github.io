@@ -1,0 +1,145 @@
+---
+ title: Session expiry
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Session expiry</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9900"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-19 15:29:36</p>
+            </div>
+            <div class="postheader"><h3>Session expiry</h3></div>
+				
+			<div class="body">
+				<p>I am currently using ATutor 1.5.3.2 and I have problems with how to increase session expiry time (2 hours, for instance). I found some solutions in previous versions of ATutor but they don't work for my version. Currently session expiry time is only several minutes. I don't know the problem is in ATutor or in the config of web server (APACHE) or PHP or ... Please help.<br />
+<br />
+Chieu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9908"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-20 09:01:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Session expiry</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9909"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-20 10:30:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Session expiry</h3></div>
+				
+			<div class="body">
+				<p>Please have a look at http://grip.umich.edu/themat/info.php.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9910"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-20 12:11:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Session expiry</h3></div>
+				
+			<div class="body">
+				<p>Set session.cache_expire to something higher than 180.<br />
+180 seconds is 3 minutes!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9911"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-20 13:59:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Session expiry</h3></div>
+				
+			<div class="body">
+				<p>I don't think it is only in session.cache_expire. Indeed, session.cache_expire is measured in minutes (http://us3.php.net/session). It may have other reasons, right?<br />
+<br />
+Note: The ATutor version I am using is 1.5.3.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9912"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-02-21 14:47:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Session expiry</h3></div>
+				
+			<div class="body">
+				<p>In "include/vitals.inc.php", line 77, I modified the code as follows:<br />
+<br />
+	@ini_set('session.cache_expire', '180'); /* 3 hours */<br />
+	@ini_set('session.gc_maxlifetime', '3600'); /* 1 hours */<br />
+	@session_save_path(AT_CONTENT_DIR . 'save_path');</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

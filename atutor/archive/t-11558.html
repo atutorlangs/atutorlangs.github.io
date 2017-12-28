@@ -1,0 +1,247 @@
+---
+ title: problem importing SCOs
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>problem importing SCOs</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="11558"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 04:22:46</p>
+            </div>
+            <div class="postheader"><h3>problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>hi, have this strange problem. trying to import SCOs to my installation, and get the following errors:<br />
+<br />
+[b]when uploading from my computer[/b] <br />
+<br />
+The following errors occurred:<br />
+    * Problem with Package Directory.<br />
+<br />
+[b]when importing from URL [/b] <br />
+<br />
+The following errors occurred:<br />
+    * You did not select a file to upload.<br />
+<br />
+There should be nothing wrong with the SCOs, as I've uploaded several SCOs from the same tool earlier. also, I did manage to upload one of the packages to the Atutor demo server here.. <br />
+<br />
+any ideas? what are the correct permissions for the sco directory and the dir/file when uploading from web?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11560"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 07:56:14</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>further info: I cannot upload the file via the Atutor demo server either, it also reports that I did not select a file to upload. <br />
+<br />
+the file / URL is here though: http:///www2.helsekompetanse.no/atutor-scorm/mpw/42UnderlyingCausesOfConflicts.zip<br />
+<br />
+I've tried to set different permissions on the file, right now it's chmodded to 777, same with the folder, so . <br />
+<br />
+I've experienced this problem on and off before, sometimes it works, sometimes not, and I cannot seem to find any pattern at all.. <br />
+<br />
+what are the correct permissions for the sco-folder and files anyway?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11562"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 08:49:27</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>The SCO linked above seems okay. <br />
+<br />
+Make sure the the max_upload_filesize is sufficient in php.ini, and for the course property. <br />
+<br />
+The sco folder should be 777</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11567"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 09:23:23</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>max_upload_filesize is sufficient, and course properties are set to unlimited / max. I've uploaded several SCOs like this, which was much larger before. <br />
+<br />
+now I was able to upload this at your demo server (didn't earlier though!), but still not at any of my servers (two different servers, see my profile for the specs). <br />
+<br />
+I get the "problems with Package Directory" error all the time. the atutor/sco directory is 777 - the folders inside this are 755.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11569"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 09:32:27</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>also my servers, and your test server, cannot find http://www2.helsekompetanse.no/atutor-scorm/test.zip now.. <br />
+<br />
+"You did not select a file to upload." :(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11572"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 09:38:51</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>duh, sorry. it wasn't there. I get to import it at your server, still get "Problem with Package Directory" on my servers.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11574"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 09:45:47</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>Everything inside the sco directory should be owned by the web server's owner (probably nobody)<br />
+<br />
+As root try recursive write permissions (-R 777), or start over with a new sco directory with the recursive switch on when setting the initial permissions.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11578"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 10:01:59</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>thanks Greg, changed this at the one server where I am root, and it worked! have notified root at my other server to do this, so hopefully it's done by tomorrow. I'll post the results here for reference) <br />
+<br />
+(strange thing is that I uploaded several SCOs to this server just last week, with no particular problems.)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11579"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-03 10:07:51</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>You may want to recreate the sco directory on the hosted server if possible, and set the permissions yourself.<br />
+<br />
+Maybe something has changed on the hosted server?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11583"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-04 05:52:11</p>
+            </div>
+            <div class="postheader"><h3>Re: problem importing SCOs</h3></div>
+				
+			<div class="body">
+				<p>..and setting recursive 777 on the other server worked as well. thanks, good to know!<br />
+<br />
+I'm thinking that starting out with a new sco directory could be a bit troublesome, as there were many sub directories within in, owned by the webserver, making it hard to move them to a new directory? the sco directory has followed us through several versions of atutor, as noted here: <br />
+<br />
+http://www.atutor.ca/view/7/10462/1.html<br />
+<br />
+..and I did not want to take the risk of doing anything that could affect the other sco's allready running / uploaded. <br />
+<br />
+(while I could change permissions on the actual sco directory, I could not make it recursive, as the server has ownership to the directories made when uploading through the app.. )<br />
+<br />
+there hasn't been any changes done at the hosted server as I'm aware of, but maybe there's been some hickups as the directory has been moved between installations / version..? Thanks anyway! :)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

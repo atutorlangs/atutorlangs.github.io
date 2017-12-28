@@ -1,0 +1,102 @@
+---
+ title: Page editor removes custom html code 
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Page editor removes custom html code </h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20575"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-13 05:45:27</p>
+            </div>
+            <div class="postheader"><h3>Page editor removes custom html code </h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+We have a 2.0 install of atutor, we also have an extra module that allows us to play video files within course pages.<br />
+When I click 'edit this page', I can see a blank box within the page editor that represents the video block, with the course text around it.<br />
+<br />
+The problem is, if I try and expand the menu items within the editor, the video block disapears, and clicking on 'HTML' shows that the code for the video block has been removed from the page :(<br />
+Is there a way to stop the editor 'cleaning up' the code (I presume this is what its doing) ?<br />
+<br />
+Matt</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20576"></a>
+		<div class="forum-post-author">
+			<label class="title">knowledgelab</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-13 06:25:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Page editor removes custom html code :(</h3></div>
+				
+			<div class="body">
+				<p>The code that the editor is removing from the page is as follows :<br />
+<br />
+&lt;!-- START OF DO NOT EDIT --><br />
+<br />
+&lt;iframe src="../content/articulate/r41d8cd98f00b204e9800998ecf8427e/player.html" height="700px" width="95%"><br />
+  &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;<br />
+&lt;/iframe><br />
+<br />
+&lt;!-- END OF DO NOT EDIT -->&lt;/div></p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20583"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-13 08:32:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Page editor removes custom html code :(</h3></div>
+				
+			<div class="body">
+				<p>Its likely a browser rendering issue. See if it happens in different browsers.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20584"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-13 09:17:23</p>
+            </div>
+            <div class="postheader"><h3>Re: Page editor removes custom html code :(</h3></div>
+				
+			<div class="body">
+				<p>Confirmed, I have tried copying your code into the editor.  Swap it from HTML to plaintext, the &lt;iframe> code disappeared.<br />
+<br />
+This is a TinyMCE config problem.  I have added this to the bug tracker.  We will post a patch once it's fixed.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

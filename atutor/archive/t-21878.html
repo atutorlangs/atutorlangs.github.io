@@ -1,0 +1,134 @@
+---
+ title: content directory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>content directory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="21878"></a>
+		<div class="forum-post-author">
+			<label class="title">kisomadmin</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-03-06 01:18:32</p>
+            </div>
+            <div class="postheader"><h3>content directory</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - windows 7 home prem<br />
+  ATutor version -  newest, just downloaded<br />
+  Patch #s applied - none that i know of<br />
+  ATutor theme name -<br />
+  PHP version - latest<br />
+  MySQL version - latest <br />
+  Webserver & version -<br />
+  Copies of error messages - attached<br />
+  Changes to default settings -  <br />
+  Web browser being used -  latest firefox<br />
+  ...and anything else relevant -  i did create the content directory in /public_html/ATutor/content  and tried continuing the installation with and without the "public_html" section... still nothing.  I have read these posts for hours and tried everything.  Tried creating the getcwd document... nothing... just a blank screen...  I see this is an issue going back for years...  I am at a lost and have no idea where to go from here.  any help would be so much appreciated.  I am not a programmer so If you suggest code... please tell me what to do with it.  Please help and thank you.  Tim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21879"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-03-06 09:08:47</p>
+            </div>
+            <div class="postheader"><h3>Re: content directory</h3></div>
+				
+			<div class="body">
+				<p>Its difficult to say what the problem is. You could try reviewing the php error log to see if there are any hints there. <br />
+<br />
+Start by using a Windows path if ATutor is installed on Windows, as described above the content directory form field shown in your screenshot. It should have a C:\ before it (or another disk if appropriate), and point to the ...public_html/ATutor/content (with the ... replaced by the path to public_html, whatever that may be on your system)<br />
+<br />
+Perhaps a file was corrupted. Try a fresh download and install again.<br />
+<br />
+There might be a an issue with the system ATutor is being installed on. Try installing on a different system.<br />
+<br />
+If you are not getting any output from the getcwd() file, then maybe your PHP installation is not functioning properly.<br />
+<br />
+There are many thousands of installs of this version, without any problem, so its likely something specific to the system you are using. Linux as a server should be more stable than Windows, though there have not been any problems reported by Windows users. But, you might try a Linux installation.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21880"></a>
+		<div class="forum-post-author">
+			<label class="title">kisomadmin</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-03-07 00:19:56</p>
+            </div>
+            <div class="postheader"><h3>Re: content directory</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+Well, i figured out that I just wasnt putting the file location string down right.  it was supposed to be:  /home/kisom/public_html/ATutor/content<br />
+<br />
+so I did that... and success!  clicked next... everything looked good then I got the "success message" with the "log in" button.... clicked on log in... and got this....<br />
+<br />
+(look at attached pic to see error message)<br />
+<br />
+I  have no clue what to do now.....  Please advise with simple directions... Thanks so much!  Tim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21881"></a>
+		<div class="forum-post-author">
+			<label class="title">kisomadmin</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-03-07 00:37:18</p>
+            </div>
+            <div class="postheader"><h3>Re: content directory</h3></div>
+				
+			<div class="body">
+				<p>My apologies...  It seems to be successful and working fine now.<br />
+<br />
+I just ignored that error... closed my browser... went back to the atutor site I just installed... and wahlah... I am logged in and ready to go!<br />
+<br />
+Thanks for your help!<br />
+Tim</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

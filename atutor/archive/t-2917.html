@@ -1,0 +1,173 @@
+---
+ title: There was an error sending the message
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>There was an error sending the message</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2917"></a>
+		<div class="forum-post-author">
+			<label class="title">fersfeir</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-29 16:34:32</p>
+            </div>
+            <div class="postheader"><h3>There was an error sending the message</h3></div>
+				
+			<div class="body">
+				<p>1. The version of ATutor 1.4.2<br />
+<br />
+2. ATutor is installed on Linux 2.4.24<br />
+<br />
+3. The Web server is Apache 1.3.33<br />
+<br />
+4. The version of PHP is 4.3.9 and MySQL is 4.0.20 standard<br />
+<br />
+5. The Web browser is ephiphany 1.2.8 based on mozilla (debian testing)<br />
+<br />
+6. Do you have root access to your server NO<br />
+or are you a hosted user on someone else's server, YES<br />
+<br />
+7. List the steps you took prior to experiencing the problem.<br />
+I am a registered user of ATutor, and when i try to contat to my instructor or when i enroll in a private course, i receive the message:<br />
+"There was an error sending the message".<br />
+The installation run without problems, and I am not a expert to diagnose what is happening. Your help are welcome<br />
+<br />
+ACCESS INFORMATION<br />
+8. Provide access information to your ATutor installation with appropriate admin/instructor accounts.<br />
+[red]request to my if it is needed [/red] <br />
+<br />
+9. Provide a URL to a phpinfo page so we can see how php has been installed on your system.<br />
+The LMS is in http://cursos.aulasur.com.ar <br />
+[red] le url is not public... sorry[/red] <br />
+<br />
+Thank you so much to try help my, an sorry for my english, i am only speak spanish</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2918"></a>
+		<div class="forum-post-author">
+			<label class="title">fersfeir</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-29 18:14:28</p>
+            </div>
+            <div class="postheader"><h3>More info</h3></div>
+				
+			<div class="body">
+				<p>http://cursos.aulasur.com.ar is broken :(<br />
+<br />
+i create a fresh install, Broken it! :D<br />
+http://www.aulasur.com.ar/ATutor/login.php<br />
+<br />
+some aditional info:<br />
+[http://xs.to/pics/04105/install.pic.png|install pic][/image] <br />
+<br />
+admin<br />
+user & pass: administrador<br />
+<br />
+regular user:<br />
+username: user<br />
+password: pass<br />
+<br />
+To recreate the error, log in as regular user, and send a message http://www.aulasur.com.ar/ATutor/users/contact_instructor.php?course=1&from_browse=1 <br />
+<br />
+I search in google, and found info about SMTP, but I use sendmail.<br />
+<br />
+Is needed to touch: include/classes/phpmailer/class.phpmailer.php ?<br />
+<br />
+Thanks again</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2921"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-29 19:04:04</p>
+            </div>
+            <div class="postheader"><h3>Does mail work otherwise?</h3></div>
+				
+			<div class="body">
+				<p>Does sendmail work for you otherwise?<br />
+<br />
+<br />
+Set the MAIL_USE_SMTP constant in include.inc.php to false.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2922"></a>
+		<div class="forum-post-author">
+			<label class="title">fersfeir</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-29 20:32:54</p>
+            </div>
+            <div class="postheader"><h3>sendmail works fine</h3></div>
+				
+			<div class="body">
+				<p>sendmail works.... (i have nuke, oscommerce, etc. working fine)<br />
+<br />
+i search for include.inc.php and I can't find... :(<br />
+<br />
+if you refer to include/config.inc.php, this section is ok<br />
+<br />
+/* Whether or not to use the default php.ini SMTP settings.             */<br />
+/* If false, then mail will try to be sent using sendmail.              */<br />
+define('MAIL_USE_SMTP', false);<br />
+<br />
+I will try to configure include/classes/phpmailer/class.phpmailer.php<br />
+<br />
+Thanks again for help me.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2923"></a>
+		<div class="forum-post-author">
+			<label class="title">fersfeir</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-29 21:22:58</p>
+            </div>
+            <div class="postheader"><h3>RESOLVED</h3></div>
+				
+			<div class="body">
+				<p>ATutor+sendmail don't work for me. :(<br />
+<br />
+But if I use SMTP ATutor works fine! :)<br />
+<br />
+I change to use smtp. Thanks so much for the time...<br />
+<br />
+Best regards<br />
+Fernando Sfeir</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

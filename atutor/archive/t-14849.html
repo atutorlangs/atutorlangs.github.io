@@ -1,0 +1,173 @@
+---
+ title: Installation Step 4 Content Directory
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installation Step 4 Content Directory</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="14849"></a>
+		<div class="forum-post-author">
+			<label class="title">carmella99</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-17 18:49:31</p>
+            </div>
+            <div class="postheader"><h3>Installation Step 4 Content Directory</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux<br />
+  ATutor version - 1.6.1<br />
+  ATutor theme name - <br />
+  PHP version - <br />
+  MySQL version - 5.0<br />
+  Webserver & version -<br />
+  Copies of error messages -  Error<br />
+Content Directory entered does not exist.<br />
+  Changes to default settings - none<br />
+  Web browser being used - IE 7<br />
+  ...and anything else relevant -<br />
+<br />
+I'm sure someone might be able to point out where to find my answer, but I've been struggling with this issue for 3 days now and reading tons of posts here.  I am in the process of installing ATutor and I am on Step 4.  ATutor has given me a very specific directory to create with 8 subdirectories.  I have created these directories inside of the install directory and also inside of the install/include directory and any other directories I could think of.  I have made them all writeable.  Unfortunately the system keeps telling me that the directory does not exist which from looking at the code does not seem to be an issue with the directory writeability but instead the system seems unable to find the directory I have created.  <br />
+<br />
+So, what do I do?  ATutor will not let me edit the path that it so specifically gives me to create so I cannont change what directory I am to create.  The instructions say to create this series of directories in the installation directory which I have done.  I have also made the directories writeable.  However, no matter how many times I check my spelling and the path of the directories, I still get the error that the directory do not exist.  Does anyone have a work-around for this or does anyone know what I am doing wrong?<br />
+<br />
+Thanks!<br />
+Carmella</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14853"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-18 11:29:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation Step 4 Content Directory</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I believe ATutor is giving you an error on "Content" directory is not writable.  First, you will have to create that folder under ATutor/<br />
+<br />
+<br />
+-harris</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14855"></a>
+		<div class="forum-post-author">
+			<label class="title">carmella99</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-18 11:54:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation Step 4 Content Directory</h3></div>
+				
+			<div class="body">
+				<p>Sigh...that's what I did.  I have attached the screenshot.  I have created that specific directory with sub directories in my /ATutor/ folder and in my <br />
+/ATutor/install/ folder.  The installation is not recognizing that these folders have been created.  I was surprised that the system would request and force me to use such specific directories/sub-directories, but I created them just as specified and they are all writeable.<br />
+<br />
+Thanks for any help you can provide,<br />
+Carmella</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14856"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-18 12:49:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation Step 4 Content Directory</h3></div>
+				
+			<div class="body">
+				<p>Not sure which instructions you are reading. The only directory you should need to create is a content directory. The installer will create the rest, assuming write permissions have been set on the directory as described in the installation instructions. The content directory (or whatever you want to call it) can exist anywhere on the server. Copy the path to the directory into the field of installation step to create a content directory.<br />
+<br />
+<br />
+Installation Instructions<br />
+http://www.atutor.ca/atutor/docs/installation.php<br />
+<br />
+Also be sure there are no symbolic links (i.e. short cuts) in the patch to your content directory. Create a file with the following code in it, place it in the ATutor root directory, then open it in a web browser. The path listed with getcwd() should be the one you use in the path to your content directory.<br />
+<br />
+<br />
+[php]<br />
+<br />
+getcwd();<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14858"></a>
+		<div class="forum-post-author">
+			<label class="title">carmella99</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-18 14:40:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation Step 4 Content Directory</h3></div>
+				
+			<div class="body">
+				<p>I'm sorry, did you look at my screenshot?  The system is forcing me to use a certain grouping of directories/subdirectories.  If you look at the screenshot, you will see that ATutor is forcing this certain grouping of directories/subdirectories and telling me I must create it.  It's not giving me a choice and when I create it as it specifies, it tells me it does not exist.  Please take a look at the screenshot as it explains a lot.  I will attach it to this posting as well.<br />
+<br />
+Thanks!<br />
+Carmella</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14859"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-08-18 15:10:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Installation Step 4 Content Directory</h3></div>
+				
+			<div class="body">
+				<p>The screen shot is the usual message displayed during installation. <br />
+<br />
+How did you create, then set the directory to writable?<br />
+<br />
+<br />
+What was the output from the getcwd() file you created?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

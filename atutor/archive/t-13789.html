@@ -1,0 +1,467 @@
+---
+ title: I cant login
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>I cant login</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="13789"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 01:53:33</p>
+            </div>
+            <div class="postheader"><h3>I cant login</h3></div>
+				
+			<div class="body">
+				<p>Versin de ATutor: 1.6. <br />
+Versin de PHP: 4.3.9 <br />
+Versin de MySQL: 4.1.12-log <br />
+OS: Linux 2.6.9-34.EL <br />
+<br />
+I just installed the ATutor version 1.6 pl1 and I can not enter with a registered user, I get error "HTTP 404". <br />
+<br />
+However I can login with the admin user, install languages, the Pacher, install all the patches even created a course from admin and I can enter to that course from admin.<br />
+<br />
+But I can not enter with a common user including the instructor who is created when you install. <br />
+<br />
+Appreciate some help to resolve the issue.<br />
+<br />
+I attach the screens</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13799"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 07:27:44</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>As the admin, switch to the default theme. It may be some left over files in the other themes, though the patches should have fixed that.<br />
+<br />
+If necessary you can replace the themes with fresh copies from:<br />
+<br />
+http://www.atutor.ca/atutor/themes/index.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13803"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 10:09:00</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>Hi greg;<br />
+<br />
+I've replaced the themes and the problem persist.<br />
+<br />
+Then I reinstalled atutor and I got the same problem.<br />
+<br />
+In this fresh instalation upload the fresh copie theme defualt 1.5 and I'cant login again because the problem whith the pasword apear so I go back.<br />
+<br />
+Well, I still have the http 404 problem<br />
+<br />
+Thanks and sorry for my english</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13811"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 16:22:25</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>This is not from a virtual host is it?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13812"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-22 22:48:04</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>yes!<br />
+<br />
+Its a virtual server (VPS). <br />
+<br />
+Can this be a problem?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13825"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-23 14:17:09</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>Well, I've contacted my hosting provider and he said:<br />
+<br />
+There is an error in a path:<br />
+<br />
+client 200.117.252.4] script '/home/virtual/site28/fst/home/index.php' not found or unable to stat, referer: http://www.trainmonher.net/login.php<br />
+<br />
+<br />
+Its must be:<br />
+<br />
+/home/virtual/site28/fst/var/www/html/index.php<br />
+<br />
+<br />
+It's chinese for me.... :( <br />
+<br />
+but may be it is useful for you.....<br />
+<br />
+Thank you for your patience....</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13826"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-23 14:40:19</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>There is probably a symbolic link in the path to your site's directory on the server. Maybe thats what your ISP was suggesting. Look at the content path in the include/config.inc.php file in ATutor, and adjust it if necessary.<br />
+<br />
+<br />
+Your can also create a little script to get the real path like so:<br />
+<br />
+<br />
+[php]<br />
+<br />
+echo getcwd();<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13829"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-24 00:27:32</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>Hi greg;<br />
+<br />
+the config file is ok. <br />
+<br />
+Atutor gets the path in another place?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13834"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-24 09:17:52</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>Don't know what else to suggest. That is the only path defined in ATutor. The rest are build based on the server environment. If the paths are broken, then something in the server setup is likely the cause. <br />
+<br />
+Its not happening anywhere else, so it seems its something specific to the system you have ATutor running on. ATutor is installed on many ISPs without any trouble.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13840"></a>
+		<div class="forum-post-author">
+			<label class="title">sw0rdfish</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-24 16:08:01</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>I was worrying with the same problem. Replacing the theme directory gives me the solution. Also i followed greg's Manual Password changing steps given here.<br />
+<br />
+http://www.atutor.ca/view/7/13823/1.html<br />
+<br />
+Thanks Greg !</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13848"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-26 10:02:13</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>Try adding a symlink <br />
+/home/virtual/site28/fst/home/index.php -> /home/virtual/site28/fst/var/www/html/index.php<br />
+<br />
+Does it give you 404 errors still on all the associated pages?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13909"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-29 10:24:10</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login</h3></div>
+				
+			<div class="body">
+				<p>Finally, just for now, I've installed ATutor  on another server (where it was already running another domain). <br />
+Soon I'll  come back to see what happened with this hosting but now I need it working urgency. <br />
+<br />
+I have others problems (with mail) in the new instalation but that topic is for another thread. <br />
+<br />
+Many thanks to all those who helped me.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14481"></a>
+		<div class="forum-post-author">
+			<label class="title">toni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-11 12:13:31</p>
+            </div>
+            <div class="postheader"><h3>I can't login neither</h3></div>
+				
+			<div class="body">
+				<p>Hi, I'm teacher from a secundary school. Today I have "upgraded" our ATutor to 1.6.1.<br />
+<br />
+ Until today (ATutor 1.5.3) works fine but now I can't login like admin neither other users. <br />
+<br />
+1.- The option "forgot your password" work like well, but at last don't send any email.<br />
+<br />
+2.- Greg, I replaced themes default and default15 but the problem continue.<br />
+<br />
+3.- I tried the "echo getcwd();" for test the path. All is OK.<br />
+ <br />
+4.-  I changed in the database the size of the field "AT_Admins-->Password" from 30 to 40, and enabled the option SHA1 (and later I compared the encrypted password with the site http://www.hashemall.com/ and all it's OK).<br />
+<br />
+<br />
+  --------------------------------<br />
+  Our ATutor site don't run yet... <br />
+  Have some other think that I can do? <br />
+  --------------------------------<br />
+<br />
+<br />
+ I wanna prepare ATutor for the next course, but now I thinking to back to 1.5.3. I'm confused... <br />
+ <br />
+  <br />
+<br />
+-----------------------<br />
+My system:<br />
+-----------------------<br />
+<br />
+<br />
+My MBSTring is not enabled (my site don't support it) but no errors noted during install.<br />
+<br />
+ATutor Version: 1.6.1 (build r7692 - 2008-07-03 11:39:10) <br />
+<br />
+Operating System: Linux 2.6.18-53.1.4.el5PAE #1 SMP Wed Feb 13 15:24:10 CET 2008 i686  <br />
+<br />
+Web Server: Apache/2.0  <br />
+PHP Version: 4.4.7  <br />
+MySQL Version: 5.0.62-log  <br />
+www.escolateide.com/ATutor</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14482"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-11 13:41:10</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login neither</h3></div>
+				
+			<div class="body">
+				<p>This sounds like a theme problem, but that should not be a problem in 1.6.1. <br />
+<br />
+Are you able to replace the themes/default/login.tmpl.php file with a fresh copy.<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/themes/default/login.tmpl.php<br />
+<br />
+Also make sure the sha-1factory.js file exists in the top level ATutor directory.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="14483"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-11 13:45:14</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login neither</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+Make sure your password in the DB is of length 40, not 30.  <br />
+<br />
+Did you try other themes and see if you can log in?  Log in as both admin/ instructors<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+4.-  I changed in the database the size of the field "AT_Admins-->Password" from 30 to 40, and enabled the option SHA1 (and later I compared the encrypted password with the site http://www.hashemall...<br />
+[op]forums/view.php?fid=7;pid=13789;page=1#14481[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="14484"></a>
+		<div class="forum-post-author">
+			<label class="title">toni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-07-11 14:13:37</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login neither</h3></div>
+				
+			<div class="body">
+				<p>I put before a fresh copy in themes/default/login.tmpl.php (donwloaded today) and length of password to 40, but didn't work.<br />
+<br />
+<br />
+At last, I open the DB and put the admin passwd in blank (like greg sayed in http://www.atutor.ca/view/7/13823/1.html) and I can enter at last like admin!<br />
+<br />
+Later (like admin) I have changed the default lang to English (before was Catalan) and I changed too the default theme to this "ATutor 1.5, version 1.6.1". <br />
+<br />
+Later I try to put the password again to admin and enable the SHA1 option (again) and... now works well with password! :D<br />
+<br />
+ I write here my steps for help in the future other people with the same problem. Thanks to everybody and especially to greg. :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16001"></a>
+		<div class="forum-post-author">
+			<label class="title">AhmedElGamil</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-12-15 20:00:53</p>
+            </div>
+            <div class="postheader"><h3>Re: I can't login neither</h3></div>
+				
+			<div class="body">
+				<p>You have helped some body here..Thanks very much :)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

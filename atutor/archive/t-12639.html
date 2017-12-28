@@ -1,0 +1,157 @@
+---
+ title: Remove all mention of Export Content Glossary and Groups
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Remove all mention of Export Content Glossary and Groups</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="12639"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-23 16:52:40</p>
+            </div>
+            <div class="postheader"><h3>Remove all mention of Export Content Glossary and Groups</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+Thanks for the help in the other threads!<br />
+I'm using ver 1.5.5 on linux.<br />
+1)I know it is possible for an instructor to turn these off but I needed to remove all mention of these from even the Instructors' interface.No checkbox and no accompanying text saying "glossary" etc.<br />
+I do not think this is possible from within Admin. But where and how(in which php file) could one modify or comment out the code for this?<br />
+2)is it not possible for an instructor to email all students in a course? This would be odd but it seems so.<br />
+3)Whne the side menus are turned off from admin, the old menus continue to appear. Is it that turning off only becomes applicable to courses created AFTER the disabling?<br />
+<br />
+thanks so much!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12643"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 02:31:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove all mention of Export Content, Glossary and Groups</h3></div>
+				
+			<div class="body">
+				<p>need input on (1) above specially. Can anyone help? would appreciate it v. much!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12646"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 03:37:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove all mention of Export Content, Glossary and Groups</h3></div>
+				
+			<div class="body">
+				<p>1. haven't tried it much myself, but this should work: log in as admin -> modules -> choose module -> disable. <br />
+<br />
+2. you can, manage -> course e-mail -> to enrolled. will send mail to all enrolled users (students + assistants). personally I belive this needs to be adjusted: http://www.atutor.ca/view/3/11625/1.html<br />
+<br />
+3. dont' really understand what you mean here :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12649"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 04:01:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove all mention of Export Content, Glossary and Groups</h3></div>
+				
+			<div class="body">
+				<p>about (1), I really think it will have to be done through the php files somewhere because there are no modules for the three features I listed (Groups, Gloassary, Export Content). These seem to be "built-in"<br />
+<br />
+Will try (2) and I guess will have to explain (3) a bit better :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12651"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 05:45:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove all mention of Export Content, Glossary and Groups</h3></div>
+				
+			<div class="body">
+				<p>About #1.<br />
+<br />
+These modules are the core modules, and as such cannot be disabled. You can only view them at admin's Module tab by checking "Core" checkbox.<br />
+<br />
+I believe they can be disabled by commenting out relevant code in mods/_core/[module name]/module.php .<br />
+<br />
+The code that needs to be commented out is the block containing assignments as following (these lines are from Groups):<br />
+[php]<br />
+$this->_pages['tools/groups/index.php']['title_var'] = 'groups';<br />
+$this->_pages['tools/groups/index.php']['parent']    = 'tools/index.php';<br />
+$this->_pages['tools/groups/index.php']['children']  = array('tools/groups/create.php');<br />
+$this->_pages['tools/groups/index.php']['guide']  = 'instructor/?p=groups.php';<br />
+<br />
+	$this->_pages['tools/groups/edit_group.php']['title_var'] = 'edit';<br />
+	$this->_pages['tools/groups/edit_group.php']['parent']    = 'tools/groups/index.php';<br />
+<br />
+/* etc. etc. */<br />
+[/php]<br />
+<br />
+ATutor should automatically deny access to pages that are not listed in that structure. But nevertheless, test before using at a production environment.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12653"></a>
+		<div class="forum-post-author">
+			<label class="title">alghazn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-01-24 06:22:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Remove all mention of Export Content, Glossary and Groups</h3></div>
+				
+			<div class="body">
+				<p>can't thank you enough, IndieRect!<br />
+and thanks for pointing out the email thing,vegard!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

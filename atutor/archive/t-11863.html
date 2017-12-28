@@ -1,0 +1,113 @@
+---
+ title: Front Page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Front Page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="11863"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-10 19:27:52</p>
+            </div>
+            <div class="postheader"><h3>Front Page</h3></div>
+				
+			<div class="body">
+				<p>First let me say that I have used ATutor for all my classes for two years now and tested all the other open source LMS/LCMS systems and this is by far the best. Course creation is simple, and the testing functions are non-pareil.<br />
+<br />
+I only have one problem with it. There is no way to welcome new viewers to my site. The login page is the first thing they see and it doesn't permit any welcome message or explanation of the site. <br />
+<br />
+Is there any way the login functions could be moved to a sidebar and an announcement module added to the center of the page?<br />
+<br />
+I've tried using the hello_world module but I can't make the default front page.<br />
+<br />
+Is my only option to try to reproduce the look in Dreamweaver and link the home page ATutor?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11865"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-11 03:26:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Front Page</h3></div>
+				
+			<div class="body">
+				<p>sure, this is quite easy, you just need a tiny bit of HTML / CSS knowledge. <br />
+<br />
+ftp in to your server, and find the atutor/themes/[theme-name]/login.tmpl.php file - open this, and you see the code that controls the login page. you are probably able to see what is what there if you know a little bit of HTML / PHP.  <br />
+<br />
+if you have only one language on your site you can add the welcome text where you'd like it in this page, and if you have more languages, add a language term as an administrator and call it in that file. this is the code used to call a term:<br />
+<br />
+[php]<br />
+echo _AT('confirm_account_text');<br />
+[/php] <br />
+<br />
+..where what's in the (' ') is the name of the term. here you can see a login page that is modifies a bit: http://www.atutor.no/atutor/login.php<br />
+<br />
+remember to document your changes for yourself, so you remember it when you upgrade Atutor the next time :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11868"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-11 07:31:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Front Page</h3></div>
+				
+			<div class="body">
+				<p>II really appreciate your input, Vegard. It was nice of you to respond. At your suggestion I tried monkeying around in Dreamweaver but none of the changes I tried showed up in the browser. I don't know enough about php to pull it off properly.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11869"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-11 09:03:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Front Page</h3></div>
+				
+			<div class="body">
+				<p>that was strange.. you did download the file, edit it, and upload it again - replacing the one on the server?  (do have a backup of it!) <br />
+<br />
+did you edit the correct file? if you use the default theme it should be this: <br />
+<br />
+atutor/themes/default/login.tmpl.php<br />
+<br />
+try the one attached here, you see where I have edited it (welcome to my site etc) - I've tried it and it works. <br />
+<br />
+note again: do have a backup of the old file! :)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

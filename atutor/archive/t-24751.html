@@ -1,0 +1,176 @@
+---
+ title: Defalt folder page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Defalt folder page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24751"></a>
+		<div class="forum-post-author">
+			<label class="title">JohnS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-04 05:09:24</p>
+            </div>
+            <div class="postheader"><h3>Defalt folder page</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I'm setting up an aTutor site and adding course material.<br />
+<br />
+I was just wondering if it is possible to have a 'default' page of some sort in the folders, so that if you click on a folder, instead of it just expanding the content in the navigation, it actually takes you to a page. I'd like to create index pages that explain the content sections an link through to the content in that section.<br />
+<br />
+Many Thanks<br />
+<br />
+John.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24752"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-04 08:23:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Defalt folder page?</h3></div>
+				
+			<div class="body">
+				<p>As a student, folders act only as a toggle to open and close a section of content, and for instructors a folder properties page opens. <br />
+<br />
+You would not be able to set a folder as a default page. They are intended to work like folders in a desktop file manager, and a requirement specified by IMS standards.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24761"></a>
+		<div class="forum-post-author">
+			<label class="title">JohnS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-12 07:11:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Defalt folder page?</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+Thanks for the reply,<br />
+<br />
+That's a shame, I was hoping it would work more like website folders, so you could put in an index file ,say, and that would be the default.<br />
+<br />
+I ask, because during testing, my (admittedly small number of) testers did ask me why clicking on a folder 'didn't do anything'<br />
+<br />
+Could it be possible to modify the theme (Blumin i think) with an OnClick event on the folder link to open up a file? essentially add a javascript redirect.<br />
+<br />
+I'd have a go, but I don't really know the aTutor themes at all. <br />
+<br />
+Many thanks<br />
+<br />
+John.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24763"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-12 09:04:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Defalt folder page?</h3></div>
+				
+			<div class="body">
+				<p>That would be part of the core code, rather than theme, and it would not be a simple adjustment. You can find the code for the folder links in:<br />
+<br />
+ATutor/include/classes/ContentManager.class.php<br />
+<br />
+Search the file for getInitMenuJS().</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24764"></a>
+		<div class="forum-post-author">
+			<label class="title">JohnS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-12 09:08:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Defalt folder page?</h3></div>
+				
+			<div class="body">
+				<p>Great, Thanks<br />
+<br />
+I don't really like the idea, but is the best (also quickest!) way to modify the core, or would it be possible to do with a plugin?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24765"></a>
+		<div class="forum-post-author">
+			<label class="title">JohnS</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-12 09:08:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Defalt folder page?</h3></div>
+				
+			<div class="body">
+				<p>Great, Thanks<br />
+<br />
+I don't really like the idea, but is the best (also quickest!) way to modify the core, or would it be possible to do with a plugin?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24766"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2014-08-12 09:22:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Defalt folder page?</h3></div>
+				
+			<div class="body">
+				<p>Unless you have a skilled developer to do the work, its not something I'd recommend doing. <br />
+<br />
+There would be broad implication of changing the content structure. You'd need to change the way import/export works, how backups work, and how to set folder properties, and other things I'm sure.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,82 @@
+---
+ title: Setting User Preferences changes theme fontsize
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Setting User Preferences changes theme fontsize</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="21510"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-31 19:25:35</p>
+            </div>
+            <div class="postheader"><h3>Setting User Preferences changes theme fontsize</h3></div>
+				
+			<div class="body">
+				<p>I have developed a custom theme from the default theme for Version 2.0.2.  Everything works great except when a user changes their Preferences. Whenever a change is set (Apply button is clicked) the default font-size is reset to a larger font than specified by my theme.  This happens regardless of whether the font size is modified in the text settings or not.  Is this a bug? Can I disable the ability for a user to set their preferences so my theme settings are not messed up?<br />
+<br />
+Thanks,<br />
+Sandie<br />
+<br />
+ATutor Version:     2.0.2(r10589 - 2010-12-21 16:47:09). <br />
+PHP Version:     5.2.9<br />
+MySQL Version:     5.0.91mm-log<br />
+OS:     Linux 2.6.28.5-grsec-sg2</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="21511"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-12-31 19:47:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Setting User Preferences changes theme font-size</h3></div>
+				
+			<div class="body">
+				<p>I just figured out that this problem only occurs when I am logged in as admin and then view a course from the courses listing in the admin interface.  In this case, I am taken to the course with the login of the instructor. When I set preferences from the course (while logged in as the instructor via my admin login) the font-size is changed. It seems to work fine when a regular user logs in and changes their preferences. <br />
+<br />
+Here's the preferences value for the instructor's AT_members record after setting preferences:<br />
+<br />
+a:16:{s:10:"PREF_THEME";s:14:"ci-tutor-2.0.2";s:13:"PREF_MODIFIED";i:1;s:17:"PREF_MOBILE_THEME";s:0:"";s:14:"PREF_NUMBERING";i:0;s:13:"PREF_TIMEZONE";s:1:"0";s:15:"PREF_FORM_FOCUS";i:0;s:19:"PREF_CONTENT_EDITOR";i:0;s:15:"PREF_SHOW_GUIDE";i:1;s:14:"PREF_FONT_FACE";s:0:"";s:15:"PREF_FONT_TIMES";s:3:"1.0";s:14:"PREF_FG_COLOUR";s:0:"";s:14:"PREF_BG_COLOUR";s:0:"";s:14:"PREF_HL_COLOUR";s:0:"";s:18:"PREF_SHOW_CONTENTS";i:0;s:31:"PREF_SHOW_NEXT_PREVIOUS_BUTTONS";i:1;s:22:"PREF_SHOW_BREAD_CRUMBS";i:1;}<br />
+<br />
+Sandie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21512"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-01-02 00:53:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Setting User Preferences changes theme font-size</h3></div>
+				
+			<div class="body">
+				<p>Another odd thing happening when setting preferences -  when I change a default preference in the Admin area, it partially changes the desktop theme to the ATutor default. To fix it, I have to go back to 'Themes' and set my theme as the default desktop theme even though it is still shown as the default theme in the listing. Or I can logout and log back in.<br />
+<br />
+Sandie</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

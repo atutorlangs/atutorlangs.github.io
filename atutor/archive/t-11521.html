@@ -1,0 +1,236 @@
+---
+ title: admin login etc
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>admin login etc</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="11521"></a>
+		<div class="forum-post-author">
+			<label class="title">joikochan</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-30 16:11:31</p>
+            </div>
+            <div class="postheader"><h3>admin login etc</h3></div>
+				
+			<div class="body">
+				<p>I installed most recent version 1.5.5<br />
+to windows server<br />
+php 4.<br />
+mySql 4.0 +<br />
+both firefox/ie<br />
+<br />
+The install seemed incomplete.  It went through all the steps, except "anonymous usage" and done.  I got blank at anonymous usage.  I can log in (admin privilages set at 1).  The other user I created is not in admin table???<br />
+<br />
+When I log-in as admin I get message that log-in is successful, but I see only what appears to be a user screen.  I don't get any info on admin controls.<br />
+<br />
+I've set php.ini  _global to off (server was on) but no differences here.  Please advise on next steps.<br />
+<br />
+located at geckotechonline.com/atutor (test site)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11522"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-30 17:06:37</p>
+            </div>
+            <div class="postheader"><h3>Re: admin login etc.</h3></div>
+				
+			<div class="body">
+				<p>During installation you should have created two users, an admin and an instructor.<br />
+<br />
+I'm unable to reproduce it the blank screen. <br />
+<br />
+See the system requirements to be sure yours will support ATutor.<br />
+<br />
+http://www.atutor.ca/atutor/docs/requirements.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11541"></a>
+		<div class="forum-post-author">
+			<label class="title">joikochan</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-31 12:39:07</p>
+            </div>
+            <div class="postheader"><h3>Re: admin login etc.</h3></div>
+				
+			<div class="body">
+				<p>Yes it meets all requirements.  I am attempting to install a new version again ---  I am unable to delete old files off of the server so I am installing in a new path.<br />
+<br />
+I went through the install process in setting up both users but for some reason the 2nd user never got loaded into db while the first did.  I will post the results of the reinstallation.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11544"></a>
+		<div class="forum-post-author">
+			<label class="title">joikochan</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-31 15:34:37</p>
+            </div>
+            <div class="postheader"><h3>Re: admin login etc.</h3></div>
+				
+			<div class="body">
+				<p>I am having other installation problems after I uninstall and reinstall.   I tried now on two servers, both meet the minimum requirements.<br />
+<br />
+on windows server, I get blank page after installation of db.<br />
+<br />
+on linux server, I get sent back to a loop (back to agreement) after db is installed.<br />
+<br />
+Any suggestions?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11545"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-31 17:22:52</p>
+            </div>
+            <div class="postheader"><h3>Re: admin login etc.</h3></div>
+				
+			<div class="body">
+				<p>You could also try using something like phpMyAdmin to manually add the admin user to the admins table if you have access to mysql.<br />
+<br />
+Can you provide the correct details for your system? The exact webserver, php, mysql,  and their versions, in particular. Were they installed as a bundle, or separately.<br />
+<br />
+It may also be that the include/config.inc.php file is not being generated properly. See if the file exists and has settings written to it. <br />
+<br />
+Try move the old content, and ask your service provider to delete it, then install ATutor where it used to be.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11546"></a>
+		<div class="forum-post-author">
+			<label class="title">joikochan</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-31 17:55:46</p>
+            </div>
+            <div class="postheader"><h3>Re: admin login etc.</h3></div>
+				
+			<div class="body">
+				<p>I was able to go all the way through -- had errors with content directory but I didn't get error message just the blank screen.  I have admin and instructor.  But, now, I just get circular log-in (successful log in but it doesn't take me to admin) which is where I started.<br />
+<br />
+I am working on getting host to update php.ini to meet configuration:<br />
+<br />
+mainly:<br />
+register_argc_argv      = Off<br />
+zlib.output_compression = On<br />
+<br />
+All the other settings appear correct.<br />
+<br />
+PHP 4.4.1<br />
+mySQL 4.1.20<br />
+I don't know details of server but it is Windows Server and whether bundled (shared hosting environment)<br />
+<br />
+Specific server settings are written to config.inc.php<br />
+<br />
+Any help would be appreciated</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11547"></a>
+		<div class="forum-post-author">
+			<label class="title">joikochan</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-01 01:14:47</p>
+            </div>
+            <div class="postheader"><h3>Re: admin login etc.</h3></div>
+				
+			<div class="body">
+				<p>All the new configurations are in place.  I still can't get past the login.<br />
+<br />
+I just get the same log-in screen (regardless of which log-in is used).  And of course, since nothing is set up, I can't go anywhere.<br />
+<br />
+How do I get the admin menu?<br />
+<br />
+Thanks, again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11550"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-01 08:13:33</p>
+            </div>
+            <div class="postheader"><h3>Re: admin login etc.</h3></div>
+				
+			<div class="body">
+				<p>Be sure sessions are enabled. <br />
+<br />
+If its IIS web server, then that is likely the problem. I'd suggest finding a provider that uses Apache.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11551"></a>
+		<div class="forum-post-author">
+			<label class="title">joikochan</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-01 22:44:21</p>
+            </div>
+            <div class="postheader"><h3>Re: admin login etc.</h3></div>
+				
+			<div class="body">
+				<p>Yes!  That was it  (plus some old files on the server that were incompatible.  Thanks for your help.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

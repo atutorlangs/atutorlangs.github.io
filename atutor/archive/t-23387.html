@@ -1,0 +1,92 @@
+---
+ title: Cannot reassign autoglobal variable
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cannot reassign autoglobal variable</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="23387"></a>
+		<div class="forum-post-author">
+			<label class="title">spaul</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-30 17:13:46</p>
+            </div>
+            <div class="postheader"><h3>Cannot reassign autoglobal variable</h3></div>
+				
+			<div class="body">
+				<p>i am trying to create my first course in Atutor. i am on IIS7 running the latest version PHP downloaded last week from the PHP web. I am logged in as ADMIN. When I click on the create course link, I receive a 500 error. I turned on logging and am showing the following error.<br />
+Fatal error: Cannot re-assign auto-global variable _FILES in E:\ATutor\mods\_core\backups\classes\Backup.class.php on line 151<br />
+<br />
+I have no idea on how to correct this or even where to start. We are a windows environement and this is our first forray inot PHP. Any help would be appreciated. Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23388"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-30 17:34:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot re-assign auto-global variable</h3></div>
+				
+			<div class="body">
+				<p>Though there have been reports of ATutor working okay with IIS, there have been many issues reported. We generally recommend using Apache instead. You can install a package link XAMP to get the Apache/PHP/MYSQL up and running quickly.<br />
+<br />
+Or, check to see if register_globals is turned on. Look in the system's php.ini file. Turn it off if it is on. Other setting to check are listed in the Requirements & Recommendations section of the ATutor Administrator Handbook.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23389"></a>
+		<div class="forum-post-author">
+			<label class="title">spaul</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-31 17:11:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot re-assign auto-global variable</h3></div>
+				
+			<div class="body">
+				<p>We reinstalled ATutor.. for the third time.. We have progressed past the error, but now we are encountering a 500 internal error when trying to create a course. https://ecs.watc.edu/mods/_core/courses/admin/create_course.php.. Any other suggestions?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23390"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-07-31 18:23:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Cannot re-assign auto-global variable</h3></div>
+				
+			<div class="body">
+				<p>Are you uploading to the server then unpacking ATutor there, or unzipping first and uploading file by file? The latter will almost always create random problems.<br />
+<br />
+Other than that, my only suggestion is to use apache as the Web server.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

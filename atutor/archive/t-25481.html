@@ -1,0 +1,153 @@
+---
+ title: an error occurred while processing this directive error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>an error occurred while processing this directive error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25481"></a>
+		<div class="forum-post-author">
+			<label class="title">fazli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-07-01 06:11:19</p>
+            </div>
+            <div class="postheader"><h3>an error occurred while processing this directive error</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux 3.12.35.1418868052<br />
+ATutor version - 2.2(unknown - 2015-07-01 02:09:53)<br />
+Patch #s applied - gg0005<br />
+ATutor theme name - Default 2.2<br />
+PHP version - 5.4.40<br />
+MySQL version - 5.5.42-37.1-log<br />
+Webserver & version -<br />
+Copies of error messages -<br />
+Changes to default settings -<br />
+Web browser being used - Chrome, Firefox, IE<br />
+  ...and anything else relevant -<br />
+<br />
+When I tried to upload mp4 file of 98MB while editing a content I got error of [an error occurred while processing this directive].</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25482"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-07-01 11:15:37</p>
+            </div>
+            <div class="postheader"><h3>Re: [an error occurred while processing this directive] error</h3></div>
+				
+			<div class="body">
+				<p>To allow file uploads greter than 2MB (the php default) you need to adjust the values for upload_max_filesize and post_max_size in the system's php.ini file, then restart the Web server.<br />
+<br />
+You'd also need to increase the allowable upload file size in the ATutor system preferences once you've adjusted the above values</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25492"></a>
+		<div class="forum-post-author">
+			<label class="title">fazli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-07-06 08:48:43</p>
+            </div>
+            <div class="postheader"><h3>Re: [an error occurred while processing this directive] error</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+I made the changes you told but it still produce the same error, Greg</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25493"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-07-06 09:05:41</p>
+            </div>
+            <div class="postheader"><h3>Re: [an error occurred while processing this directive] error</h3></div>
+				
+			<div class="body">
+				<p>I would suggest you examine the system's php error log.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25496"></a>
+		<div class="forum-post-author">
+			<label class="title">fazli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-07-10 06:41:52</p>
+            </div>
+            <div class="postheader"><h3>Re: [an error occurred while processing this directive] error SOLVED</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -<br />
+<br />
+Thanks Greg,<br />
+After increasin memeory_limit, upload_max_filesize and post_max_size values uploading and running large files works properley. <br />
+:)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

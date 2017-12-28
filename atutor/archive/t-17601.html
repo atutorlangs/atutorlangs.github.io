@@ -1,0 +1,224 @@
+---
+ title: Email notification of the posting of an announcement
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Email notification of the posting of an announcement</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="17601"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-01 02:03:06</p>
+            </div>
+            <div class="postheader"><h3>Email notification of the posting of an announcement</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I've been modifiying some files recently and I'm attempting to put in some code that will notify the user of a posted announcement.  The problem I'm having is that it only notifies the instructor.  Enrolled students don't get the notification.<br />
+<br />
+In /ATutor/editor/add_news.php, under:<br />
+<br />
+		$sql	= "INSERT INTO ".TABLE_PREFIX."news VALUES (NULL, $_SESSION[course_id], $_SESSION[member_id], NOW(), $_POST[formatting], '$_POST[title]', '$_POST[body_text]')";<br />
+		mysql_query($sql, $db);<br />
+	<br />
+		$msg->addFeedback('ACTION_COMPLETED_SUCCESSFULLY');<br />
+<br />
+<br />
+I inserted:<br />
+<br />
+//BOF Email notification of announcement<br />
+		//send email notification if recipient has message notification enabled<br />
+		$sql_notify = "SELECT first_name, last_name, email, email2, inbox_notify FROM ".TABLE_PREFIX."members WHERE member_id>0";<br />
+		$result_notify = mysql_query($sql_notify, $db);<br />
+		$row_notify = mysql_fetch_assoc($result_notify);<br />
+<br />
+		if ($row_notify['inbox_notify'] == 1) {<br />
+			require(AT_INCLUDE_PATH . 'classes/phpmailer/atutormailer.class.php');<br />
+<br />
+			$body = _AT('notification_new_inbox', $_base_href.'bounce.php?course='.$_SESSION['course_id']);<br />
+//			$sender = get_display_name($_SESSION['member_id']);<br />
+			$mail = new ATutorMailer;<br />
+			$mail->AddAddress($row_notify['email']);<br />
+			$mail->AddAddress($row_notify['email2']);<br />
+			$mail->FromName = $_config['site_name'];<br />
+			$mail->From     = $_config['contact_email'];<br />
+			$mail->Subject  = _AT('message_notification');<br />
+			$mail->Body     = $body;<br />
+<br />
+			if(!$mail->Send()) {<br />
+				$msg->addError('SENDING_ERROR');<br />
+			}<br />
+			unset($mail);<br />
+		}<br />
+//EOF Email notification of announcement<br />
+<br />
+<br />
+I got the code from /ATutor/inbox/send_message.php but altered it to work (mostly) with the add_news.php file.<br />
+<br />
+NOTE: The refereces to "email2" are another mod that I've been working on to add a 2nd email address to the account as discussed here: http://www.atutor.ca/view/16/17600/1.html.  I don't think this could be effecting anything though as the instructor receives the notification at the "email2" email address.<br />
+<br />
+Thanks for your consideration.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17608"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-01 08:49:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Email notification of the posting of an announcement</h3></div>
+				
+			<div class="body">
+				<p>Take a look at Course Email scripts.<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/tools/course_email.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17610"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-01 09:23:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Email notification of the posting of an announcement</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I did look at the Course Email file, but I went with the code from send_message.php file because I want it to be an automatic notification.<br />
+<br />
+What were you wanting me to see in course email?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17618"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-02 04:14:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Email notification of the posting of an announcement</h3></div>
+				
+			<div class="body">
+				<p>have you had a look at the "subscribe to announcement" feature we made? <br />
+<br />
+http://atutor.no/contribs/subscribe-announcements and <br />
+http://atutor.no/2008/07/announcement-subscription-and-improved-directory<br />
+<br />
+this will let the user subscribe and unsubscribe to announcement. if you install this you could probably tweak it to work as you wish too! <br />
+<br />
+(Greg, maybe you could review and possibly get this patch in core?)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17653"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-04 10:20:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Email notification of the posting of an announcement</h3></div>
+				
+			<div class="body">
+				<p>Vegard,<br />
+<br />
+That lookgs great.<br />
+<br />
+However, when I went to install it I got:<br />
+<br />
+Warning<br />
+This patch is for ATutor version 1.6.1. Does not match with your current ATutor version. The installation of it may break ATutor. Are you sure you want to proceed?<br />
+<br />
+<br />
+Will it work on 1.6.2 without causing other things to break?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17665"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-04 12:20:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Email notification of the posting of an announcement</h3></div>
+				
+			<div class="body">
+				<p>hia, yes it'll work on 1.6.2 as well</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17675"></a>
+		<div class="forum-post-author">
+			<label class="title">aelfwine</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-04 16:36:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Email notification of the posting of an announcement</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

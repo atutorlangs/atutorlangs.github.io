@@ -1,0 +1,103 @@
+---
+ title: Danish language again
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Danish language again</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2045"></a>
+		<div class="forum-post-author">
+			<label class="title">finnvikke</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-15 07:48:25</p>
+            </div>
+            <div class="postheader"><h3>Danish language again</h3></div>
+				
+			<div class="body">
+				<p>Is it possible to put the content of the danish languagefile into phpmyadmin myself I cant upload the file via ATutor. I have asked my webhost, but they cant help me. They say everything works fine at the hotel.<br />
+I have understod that the languagefile isnt a  plain textfile<br />
+I hope you can help<br />
+Best regards<br />
+Finn	;)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2047"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-15 12:37:14</p>
+            </div>
+            <div class="postheader"><h3>Import CSV</h3></div>
+				
+			<div class="body">
+				<p>Language packs are plain text  CSV (comma separated value) files. You should be able to unzip the file and import language.cvs directly into the lang2 table with phpmyadmin.<br />
+<br />
+Before you try this though, make sure the content/import directory is writable, and try importing via ATutor again. If you still have trouble, then go with the phpmyadmin import CSV.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2053"></a>
+		<div class="forum-post-author">
+			<label class="title">finnvikke</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-16 05:08:43</p>
+            </div>
+            <div class="postheader"><h3>Danish</h3></div>
+				
+			<div class="body">
+				<p>Thans for your answer. <br />
+I have tried again with no result. I have also tried to import the CVS-fil, but no succes.<br />
+I get this information<br />
+Warning: Cannot set time limit in safe mode in /customers/finnvikke.dk/finnvikke.dk/httpd.www/tutor141/ATutor/admin/import_lang.php on line 24<br />
+<br />
+Warning: SAFE MODE Restriction in effect. The script whose uid is 19898 is not allowed to access /customers/finnvikke.dk/finnvikke.dk/httpd.www/tutor141/ATutor/admin owned by uid 0 in /customers/finnvikke.dk/finnvikke.dk/httpd.www/tutor141/ATutor/admin/import_lang.php on line 63<br />
+<br />
+Do you have a solution to that<br />
+Best regards<br />
+Finn<br />
+		;) [red] [/red] [b] [/b]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2055"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-16 07:42:19</p>
+            </div>
+            <div class="postheader"><h3>No safemode</h3></div>
+				
+			<div class="body">
+				<p>ATutor will not function properly in  safemode. <br />
+<br />
+You will have to ask your webhost to turn safemode off.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

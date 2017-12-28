@@ -1,0 +1,192 @@
+---
+ title: Content packaging
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Content packaging</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3698"></a>
+		<div class="forum-post-author">
+			<label class="title">pat</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-18 04:24:26</p>
+            </div>
+            <div class="postheader"><h3>Content packaging</h3></div>
+				
+			<div class="body">
+				<p>Who can help me?<br />
+when I pack a whole course it works fine, when I import it it works also fine, when I unzipp the resources it works also fine - but the documents in the resources (only text or ppp or pdf, not websites, this works fine)  linked to content pages, cannot be found on the server, even the path of the links correspond with the original links. <br />
+thanks<br />
+pat</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3701"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-18 08:25:55</p>
+            </div>
+            <div class="postheader"><h3>Local Resources</h3></div>
+				
+			<div class="body">
+				<p>Are the resources linked to your content local, or are you trying to link to remote documents?<br />
+<br />
+Use relative paths to link files into your content that exist in the File Manager, rather than absolute paths.<br />
+<br />
+If you need additional help please provide the detail asked for when posting a help message. It makes it difficult to help if we know nothing about the system ATutor is running on.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3705"></a>
+		<div class="forum-post-author">
+			<label class="title">pat</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-18 10:04:26</p>
+            </div>
+            <div class="postheader"><h3>Local resource</h3></div>
+				
+			<div class="body">
+				<p>Ithanks again for your answer.<br />
+I am just the course - teacher and not the administrator, but I will do my technical best: <br />
+II use windows XP professional<br />
+ATutor Version is 1.4.1<br />
+<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version - I don't know<br />
+<br />
+  copies of error messages : The requested URL /export/www/documents/ele.researchstudio.at/ATutor/content/4/Texte_zum_Kurs/konstr-paed_HUG_.pdf was not found on this server.<br />
+  <br />
+web browser Mozilla<br />
+<br />
+About the path: I uploaded the files through the file manager, then switched on "copy link location" and linked it to a content file file in local menu. <br />
+This is a relative path, I guess?<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3714"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-18 16:40:17</p>
+            </div>
+            <div class="postheader"><h3>relative vs absolute paths</h3></div>
+				
+			<div class="body">
+				<p>It sounds like you are using absolute paths<br />
+<br />
+an absolute path would look like this:<br />
+http://http://ele.researchstudio.at/ATutor/content/4/images/myimage.gif<br />
+		<br />
+<br />
+a relative path to that same file would look like this<br />
+images/myimage.gif<br />
+<br />
+Use the relative path.<br />
+<br />
+The /4/ would represent the root directory of your course file manager (or what every course id number your course has). All paths to files should be relative to it in order for content package to retreive files associated with pages you are packaging. <br />
+<br />
+I don't see anything else about your system that mught explain the problem.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3735"></a>
+		<div class="forum-post-author">
+			<label class="title">pat</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-20 23:13:01</p>
+            </div>
+            <div class="postheader"><h3>content packaging</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  version of ATutor -<br />
+  versions of php -<br />
+  version of mysq l -<br />
+  webserver & version -<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3736"></a>
+		<div class="forum-post-author">
+			<label class="title">pat</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-20 23:15:50</p>
+            </div>
+            <div class="postheader"><h3>Content Packaging</h3></div>
+				
+			<div class="body">
+				<p>IThank you - the relative path was the problem. Now it worked fine.<br />
+pat</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3960"></a>
+		<div class="forum-post-author">
+			<label class="title">e_shehaj</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-03-16 08:05:33</p>
+            </div>
+            <div class="postheader"><h3>Problems with File Manager</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I'm a new user of ATutor and recentley I want to create a course with all of his contents. The problem is that I didn't yet understand how file manager work, clearly, once I had create the directory and I had insert there several files, how can I use them later, for example inside of a page content. How can I  make this files visible to all the students, enrolled to my course.<br />
+Please help me, it's so important.<br />
+Thank you!!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

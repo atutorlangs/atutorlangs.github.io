@@ -1,0 +1,65 @@
+---
+ title: File Manager error in ATUTOR 15
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>File Manager error in ATUTOR 15</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="8314"></a>
+		<div class="forum-post-author">
+			<label class="title">fathianf</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-28 01:55:36</p>
+            </div>
+            <div class="postheader"><h3>File Manager error in ATUTOR 15</h3></div>
+				
+			<div class="body">
+				<p>I upgraded from ATutor 1.4 to ATutor 1.5.  Now everything works except file manager either from manage or content and I mentioned the error below with my server properties. Please let me know what should I do.<br />
+BTW, ownership of my content directory is:<br />
+drwxrwxrwx 116 501 501  4096 Jun 27 12:06 content<br />
+even I change the ownership to apache:apache but no difference.<br />
+<br />
+Things to describe: <br />
+  operating system - fedora 5<br />
+  version of ATutor - 1.5<br />
+  versions of php - 5.1.2<br />
+  version of mysq l - 5.0.18<br />
+  webserver & version -apache/2.2.0<br />
+  copies of error messages -<br />
+Unable to open content directory. You may try to create it now.<br />
+  <br />
+changes to default settings -<br />
+  web browser being used - Mozilla on linux<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8319"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-28 11:35:27</p>
+            </div>
+            <div class="postheader"><h3>Re: File Manager error in ATUTOR 1.5</h3></div>
+				
+			<div class="body">
+				<p>First I would suggest upgrading to the current version 1.5.2, or wait about a week for the 1.5.3 release<br />
+<br />
+I can guess that the permissions were not set recursively on the new content directory during the upgrade. You might also use "chown -R apache:apache content" to recursively change the ownership of the files. assuming the webserver's owner is "apache"</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

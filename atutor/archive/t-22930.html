@@ -1,0 +1,100 @@
+---
+ title: Tests fail to submit after long inactivity
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Tests fail to submit after long inactivity</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22930"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-03-09 13:51:37</p>
+            </div>
+            <div class="postheader"><h3>Tests fail to submit after long inactivity</h3></div>
+				
+			<div class="body">
+				<p>Hi.  I have 2.0 installed and one thing I've observed an issue with tests.  If a student begins a test, then steps away for it for a long period, then comes back and submits it, the result isn't logged.  <br />
+<br />
+Most likely this happens due to being logged out due to inactivity.  However, for the unaware student, they feel like they've completed it.  <br />
+<br />
+Any thoughts here?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22931"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-03-09 14:39:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests fail to submit after long inactivity</h3></div>
+				
+			<div class="body">
+				<p>There have been a few reports of this problem. We do need a popup warning of some sort to warn users that a session is about to expire, and give them the opportunity to extend the session. It would be a nice feature for community based project. Hint ;-)<br />
+<br />
+This time length is generally set as a security feature, so if a student walks away while still logged in, at a public workstation in particular, someone is less likely to be able to sit down and access that student's information. The timeout however, is problematic at other times, like test, and when writing long forum messages, or writing content etc.<br />
+<br />
+For now you can reset the timeout to a longer period than the 15 minutes its currently set at. See the value for the $expiry variable in the include/vitals.inc.php file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22936"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-03-16 00:22:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests fail to submit after long inactivity</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the reply Greg.  What about a message that pops up when a user clicks to take a test saying something like, "You will be logged out after [time in the $expiry variable].  Please complete this test before then."<br />
+<br />
+That might be a short term fix.  Although, if a user is entering answers, does that reset the timeout?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22944"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-03-19 09:55:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests fail to submit after long inactivity</h3></div>
+				
+			<div class="body">
+				<p>That might work for now, and would be fairly easy to add for your purpose. We'd hold off until a proper warning utility is created to add such a feature to the core code. <br />
+<br />
+<br />
+Perhaps another approach for now could be to present questions one at a time. It would be less likely then that a test taking would be perceived as inactive.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

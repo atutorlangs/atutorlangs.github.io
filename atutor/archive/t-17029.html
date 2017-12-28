@@ -1,0 +1,213 @@
+---
+ title: CorrectIncorrect Question Feedback
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>CorrectIncorrect Question Feedback</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="17029"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-31 00:57:45</p>
+            </div>
+            <div class="postheader"><h3>CorrectIncorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>Is it possible to provide students with a two different sets of feedback to questions, one for correct answers and one for incorrect answers? Also, in a "1 question per page" scenario, is it possible to display this feedback after the user has answered the question and before the next questions is displayed (to improve continuity)?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17033"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-31 09:07:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>Only one question feedback is currently available. <br />
+<br />
+No feedback is not presented after each question. Only after the test is completed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17069"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-02 16:36:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>2 Joshua:<br />
+The first thing requires changes to the DB structure and code. It's doable but will require additional attention after any changes such as patching, upgrading and custom coding -- there [i]might[/i] be unforeseen troubles.<br />
+<br />
+The second thing is easier: one would have to edit a single PHP file, tools/take_test_q.php .</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17071"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-02 19:25:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>Thank you both for your feedback. My client requires a LCMS which can provide two sets of feedback to questions (one for correct answers and one for incorrect). I'm new to LMS but it seems like a fairly logical feature, is it possible to create a module to do this?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17130"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-13 22:17:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>What i would like to do is alter the "feedbackmessage.tmpl.php" file so that it only displays the feedback message if the answer is incorrect. I'm not sure what the code would be to test if the answer is correct/incorrect, could you please provide a suggestion? Also, will i need to write code to test each "type" of questions?<br />
+<br />
+Any help or suggestions would be greatly appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17131"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-14 02:38:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>You're looking at a wrong file. That should be tools/view_results.php, lines 150 to 153 in version 1.6.2. You'll need to modify the condition to check $answer_row['answer'] to find out whether the answer is correct.<br />
+If you want to check for partially correct answers, the code will be a bit less easy.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17132"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-14 02:39:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>I'm sorry: not $answer_row['answer'] but $answer_row['score'].</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17133"></a>
+		<div class="forum-post-author">
+			<label class="title">joshua_howell</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-14 02:44:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>Thank you for your response.<br />
+I ended up writing code to test each of the question types and placed it in the "questiontype"_result.tmpl.php files but i'll try your suggestion as it sounds like a much simpler solution.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17143"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-15 02:30:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>On a second thought on displaying different feedbacks for each question: in principle, you could have that feature without changing the DB structure -- by serializing the two feedbacks and writing them into the single feedback field available.<br />
+It's a hacky solution though, not sure if the advantage of not changing the DB structure is worth the required maintenance.<br />
+<br />
+Would you let us know how you solve that? Just interesting.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17147"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-04-15 09:08:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Correct/Incorrect Question Feedback</h3></div>
+				
+			<div class="body">
+				<p>Serialized feedback would likely be problematic for exporting/importing IMS tests. Most systems would not know what to do with two feedback messages in one.<br />
+<br />
+There may be a way around it by modifying the QTI tools, but if we're going to add it, it might as well be a new database field.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

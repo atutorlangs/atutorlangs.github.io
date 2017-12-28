@@ -1,0 +1,84 @@
+---
+ title: Invalid username password combination
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Invalid username password combination</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25086"></a>
+		<div class="forum-post-author">
+			<label class="title">moitti</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-10 03:39:14</p>
+            </div>
+            <div class="postheader"><h3>Invalid username password combination</h3></div>
+				
+			<div class="body">
+				<p>1-A log in to Atutor from a win-7 PC on same LAN does not work and gives the aforementioned error.  Even though ...<br />
+  1- A login to ATutor from localhost is working fine.<br />
+  2- A login in from another PC on same LAN that run windows-xp works fine.<br />
+<br />
+ the following settings on win-7 pc are effective:<br />
+  a- windows firewall is off<br />
+  b- java scripting is enabled on browser<br />
+  c- cookies are enabled<br />
+  d- a call to http://192.168.15.155:8081/ from win-7 pc works fine<br />
+  e- a call to http://192.168.15.155:8081/?phpinfo=1 from win-7 pc works fine<br />
+  f- root localhost:8081 has all privileges set on<br />
+  g- root localhost has all privileges set on<br />
+   <br />
+I have been working on this problem for two months without any breakthrough.  Any help!!! <br />
+<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -microsoft server 2003<br />
+  ATutor version -2.2<br />
+  Patch #s applied -all last<br />
+  ATutor theme name -default<br />
+  PHP version -5.4.16<br />
+  MySQL version -5.6.12<br />
+  Webserver & version -wamp server 2.4<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -chrome<br />
+  ...and anything else relevant -<br />
+:(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25087"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-01-11 09:39:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Invalid username/ password combination</h3></div>
+				
+			<div class="body">
+				<p>Try dumping any ATutor related cookies. <br />
+<br />
+Make sure the session_path variable in the DB config table is the root directory of ATutor relative to the domain. If ATutor is installed in the root http://domain.com/<br />
+Then the session path would be "/" (without the quotes).<br />
+<br />
+http://domain.com/ATutor<br />
+Would be "/ATutor"<br />
+Etc.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

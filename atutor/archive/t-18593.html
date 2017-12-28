@@ -1,0 +1,111 @@
+---
+ title: Timezone offset
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Timezone offset</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18593"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-06 20:27:28</p>
+            </div>
+            <div class="postheader"><h3>Timezone offset</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 1.6.2 installed and I'm trying to get the timezone offset to work.<br />
+<br />
+My server is located in the Central timezone and most students (as well as myself) are in the Pacific timezone.  So, I put a system timezone offset of -2 to have the system time be in Pacific time.  <br />
+<br />
+When I login as a instructor, I have no timezone offset in my personal preferences, as I live in Pacific time.  When I post announcements the time posted matches the timestamp on the announcement.<br />
+<br />
+The issue occurs for the releasing of content.  For example, at 5:30PM, I set a piece of content to release at 18:00.  When I save it, it is already released.  When I set that same content to release at 20:00, it says that it will be released at 6:00PM.  With content, there is a constant 2 hr. difference that I can't get away from.<br />
+<br />
+I've tried this on the 1.6.3 demo server and the same behavior is present.  Go to: http://www.atutor.ca/atutor/demo/content.php?cid=949 to see what I'm talking about.  Or, enter the demo server, and enter course "ABCD".  I've created a piece of content called "Timezone offset issue".<br />
+<br />
+Thanks in advance for helping.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18600"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-07 23:52:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Timezone offset</h3></div>
+				
+			<div class="body">
+				<p>BTW, the same behavior is present for Tests and Surveys (the start and end times are always 2 hrs. off).<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18603"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-08 09:25:16</p>
+            </div>
+            <div class="postheader"><h3>Re: Timezone offset</h3></div>
+				
+			<div class="body">
+				<p>This is either the result of the server time, the ATutor time set in System Preferences, or one's timezone personal preference setting being set 2 hours off. <br />
+<br />
+I've confirmed in 1.6.3 at least, that time zone settings are working properly.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18604"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-08 09:48:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Timezone offset</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+I don't know what to say......<br />
+<br />
+I seem to have everything set up properly as described in the first post.  I have even added code to show the current system time on the User Preferences page:<br />
+<br />
+echo '&nbspCurrent System Time is:  &lt;b>' . AT_date(_AT('server_date_format'), '', AT_DATE_MYSQL_DATETIME) . '&lt;/b> <br />
+<br />
+Then, when people do an individual timezone offset, it will reflect that change.  The problem still persists though.  <br />
+<br />
+Also, did you see my piece of content on the 1.6.3 demo server showing this behavior (http://www.atutor.ca/atutor/demo/content.php?cid=949)?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

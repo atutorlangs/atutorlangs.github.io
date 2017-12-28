@@ -1,0 +1,60 @@
+---
+ title: language variable error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <strong><a href="exported_forum15.html">15</a></strong> </div>
+<div><p><br /><h3>language variable error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="1319"></a>
+		<div class="forum-post-author">
+			<label class="title">kindley</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-11 13:48:30</p>
+            </div>
+            <div class="postheader"><h3>language variable error</h3></div>
+				
+			<div class="body">
+				<p>I installed ATutor, but have a problem apparently with the language variable. On the login page I get<br />
+<br />
+[ Variable: error]<br />
+[AT_ERROR_NO_LANGUAGE]<br />
+<br />
+This kind of variable error show on all pages. When I go to the admin page, click on the (apparent) language link and press the "set" button, it clears and shows english. But when I logout and log back in, I have the same problem.<br />
+<br />
+Seems to be, as I said, a language variable problem, but my probe of the config files and the data tables does not find the problem.<br />
+<br />
+Please advise! Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1321"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-03-11 16:47:43</p>
+            </div>
+            <div class="postheader"><h3>Set default lang to English</h3></div>
+				
+			<div class="body">
+				<p>I'm guessing you've set the initial default language to something other than English when you installed. In include/config.inc.php set the value of DEFAULT_LANGUAGE to "en". After you have ATutor running correctly, then import other languages and reset the default language to one of those languages.<br />
+<br />
+If that does not fix the problem, we'll need more information. See "Help us Help You", the first message thread in this forum.<br />
+<br />
+What is the default language set in your Web browser?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

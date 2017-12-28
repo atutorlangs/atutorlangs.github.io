@@ -1,0 +1,131 @@
+---
+ title: Theme upload not working  broken css
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Theme upload not working  broken css</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="13078"></a>
+		<div class="forum-post-author">
+			<label class="title">alexd181</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-03-12 09:59:16</p>
+            </div>
+            <div class="postheader"><h3>Theme upload not working  broken css</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+<br />
+Whenver I click on "Import" theme it says the file was imported successfully but the screenshot doesnt show up and when I enable and set the theme there are no images, all the css is missing, and everything is in 12 times new roman text. Have tried setting permissions to 777 on all files plus the theme dir, have tried uploading direct from the web, still the same problem.<br />
+<br />
+Am I doing something wrong?<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system -unix<br />
+  version of ATutor -latest<br />
+  versions of php -4x<br />
+  version of mysq l -?<br />
+  webserver & version -?<br />
+  copies of error messages -no error message given<br />
+  changes to default settings -?<br />
+  web browser being used -FireFox<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13079"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-03-12 10:16:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme upload not working - broken css</h3></div>
+				
+			<div class="body">
+				<p>this is a common problem when importing new themes, and it is a permission problem (times new roman 12 is a browsers default font, which in this case just means that the CSS is not read). <br />
+<br />
+make sure again that permissions are right (set them to 644 as 777 is insecure), and that you are not viewing a cached version (ctrl + f5).<br />
+<br />
+developers, is there some way to ensure that all CSS files get the correct permission when importing a theme like this?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13083"></a>
+		<div class="forum-post-author">
+			<label class="title">alexd181</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-03-12 10:55:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme upload not working - broken css</h3></div>
+				
+			<div class="body">
+				<p>Awesome just had to do a few hard refreshes and now it's working fine. Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13110"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-03-13 14:10:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme upload not working - broken css</h3></div>
+				
+			<div class="body">
+				<p>I have not seen a problem with permissions on theme css files before. Are you able to reproduce this?<br />
+<br />
+The apparent broken CSS is a browser cache issue. It is normal to have to hard refresh after making changes to a stylesheet</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13118"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-03-14 04:46:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme upload not working - broken css</h3></div>
+				
+			<div class="body">
+				<p>yes, it always happens at my server, then for alexd181 here, and also here: http://www.atutor.ca/view/7/12843/1.html<br />
+<br />
+you have to manually change permissions, then refresh, so it's not only a question of hard refreshing. <br />
+<br />
+I don't know if the theme alexd181 tried was the Redux theme, but that might be the case..? in the Redux theme the CSS is not called style.css as in the default theme, but split up in several files such as core.css, sidemenu.css etc.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

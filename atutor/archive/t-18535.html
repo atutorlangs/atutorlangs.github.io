@@ -1,0 +1,332 @@
+---
+ title: Cache is not working
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cache is not working</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="18535"></a>
+		<div class="forum-post-author">
+			<label class="title">venkateshb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 00:42:48</p>
+            </div>
+            <div class="postheader"><h3>Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>Hi All,<br />
+I am trying to cache the terms, for that I have enabled the cache but it is not caching.<br />
+<br />
+If I enable the cache debug it is printing - <br />
+Debug: 61: $cache_absfile -><br />
+Debug: 72: $cache_absfile -><br />
+Debug: 187: $cache_absfile -><br />
+Debug: Not caching, CACHE_ON is off<br />
+Debug: 123: Adding _cache_template to the variable store<br />
+Debug: 279: $cache_absfile -><br />
+Debug: Not caching, CACHE_ON is off<br />
+<br />
+If I change the CACHE_ON 1 or 0 it is displaying the same thing -<br />
+i.e:-<br />
+Debug: 61: $cache_absfile -><br />
+Debug: 72: $cache_absfile -><br />
+Debug: 187: $cache_absfile -><br />
+Debug: Not caching, CACHE_ON is off<br />
+Debug: 123: Adding _cache_template to the variable store<br />
+Debug: 279: $cache_absfile -><br />
+Debug: Not caching, CACHE_ON is off<br />
+<br />
+And if I see in the mysql log file always it is firing one sql query as shown below - <br />
+SELECT L.* FROM at_language_text L, at_language_pages P WHERE L.language_code='en' AND L.variable&lt;>'_msgs' AND L.term=P.term AND P.page='/login.php' ORDER BY L.variable ASC<br />
+<br />
+I don't want this query to be firing for every page.<br />
+<br />
+Can any body tell me how to enable the caching to stop firing this sql query?<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Windows XP<br />
+  ATutor version - 1.6.3<br />
+  ATutor theme name - Default<br />
+  PHP version - 5.2.6<br />
+  MySQL version - 5.1<br />
+  Webserver & version - Apache 2.2.9<br />
+  Web browser being used - IE6 and above, Mozilla Firefox, Chrome and Safari</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18536"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 01:49:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>Do you have a path to cache dir specified in system properties?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18537"></a>
+		<div class="forum-post-author">
+			<label class="title">venkateshb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 02:53:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>No.<br />
+If I set CACHE_DIR, here it will disable caching.<br />
+<br />
+[php]<br />
+if (defined('CACHE_DIR') && (CACHE_DIR != '')) {<br />
+	define('CACHE_ON', 1); /* disable caching */<br />
+} else {<br />
+	define('CACHE_ON', 0); /* enable caching */<br />
+}<br />
+if (!defined('CACHE_DIR')) {<br />
+	define('CACHE_DIR', '');<br />
+}<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18538"></a>
+		<div class="forum-post-author">
+			<label class="title">venkateshb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 02:56:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>Shall I need to specify cache dir in the _config table? how?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18541"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 03:44:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>I believe that in the above code snippet the comments are wrong (they should've been just swapped). So it should work.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18543"></a>
+		<div class="forum-post-author">
+			<label class="title">venkateshb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 05:31:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>Thank you IndieRect for your response.<br />
+<br />
+Can you tell me where to specify cache dir?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18544"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 07:48:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>You should log in as an admin and go to System Preferences tab. The field in question is Cache Directory.<br />
+Please have a look at the ATutor Handbook on that page for directions on what to put there.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18548"></a>
+		<div class="forum-post-author">
+			<label class="title">venkateshb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 09:15:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>Thank you IndieRect. It works fine.<br />
+<br />
+The confusion was if I specify cache dir name it is going to disable caching. So I didn't specified cache dir.<br />
+<br />
+<br />
+I wanted know what is the mechanism being used for caching? What is the format of the cache file?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18549"></a>
+		<div class="forum-post-author">
+			<label class="title">venkateshb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 09:19:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+ Can you please ask them to change these comments in the next release.<br />
+[b]Original[/b] <br />
+[php]<br />
+if (defined('CACHE_DIR') && (CACHE_DIR != '')) {<br />
+    define('CACHE_ON', 1); /* disable caching */<br />
+} else {<br />
+    define('CACHE_ON', 0); /* enable caching */<br />
+}<br />
+[/php] <br />
+[b]To[/b] <br />
+[php]<br />
+if (defined('CACHE_DIR') && (CACHE_DIR != '')) {<br />
+    define('CACHE_ON', 1); /* enable caching */<br />
+} else {<br />
+    define('CACHE_ON', 0); /* disable caching */<br />
+}<br />
+[/php] <br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18550"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 09:35:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>You're welcome.<br />
+<br />
+The mechanism is all in the file include/phpCache/phpCache.inc.php, and the cache file format is, I believe, a serialized nested array.<br />
+You can check phpCache.inc.php and docs for PHP serialize() function for more detail.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Thank you IndieRect. It works fine.<br />
+<br />
+The confusion was if I specify cache dir name it is going to disable caching. So I didn't specified cache dir.<br />
+<br />
+<br />
+I wanted know what is the mechanism being us...<br />
+[op]forums/view.php?fid=7;pid=18535;page=1#18548[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18552"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-02 11:33:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>The comment has now been adjusted, and will show up in the next release.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18559"></a>
+		<div class="forum-post-author">
+			<label class="title">venkateshb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-03 02:44:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Cache is not working</h3></div>
+				
+			<div class="body">
+				<p>Thank you IndieRect for your information it was very useful.<br />
+<br />
+Thank you Greg for changing. It will be helpful for others.<br />
+<br />
+In the thread<br />
+[quote]http://www.atutor.ca/view/7/1064/1.html[/quote] <br />
+they have mentioned that it isn't recommended to enable caching. what is the disadvantage I get if enabled.<br />
+And also I wanted to know what is database saturation, when do you say database is saturated.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

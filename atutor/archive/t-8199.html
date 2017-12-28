@@ -1,0 +1,167 @@
+---
+ title: Theme customization error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Theme customization error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="8199"></a>
+		<div class="forum-post-author">
+			<label class="title">swells808</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-08 04:25:01</p>
+            </div>
+            <div class="postheader"><h3>Theme customization error</h3></div>
+				
+			<div class="body">
+				<p>I took the default theme and made a copy.  After doing this i edited some of the color settings and pictures.  When I rezipped it and uploaded it, the theme browser says its a 1.4.x theme (instead of 1.5.2).  What gives???<br />
+<br />
+  operating system - linux<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - ?<br />
+  version of mysq l - ?<br />
+  webserver & version - apache<br />
+  copies of error messages - "The theme, ketter - version: 1.4.x, may not be compatible with this version of Atutor"<br />
+  changes to default settings -<br />
+  web browser being used - safari<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8202"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-08 08:36:35</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme customization error</h3></div>
+				
+			<div class="body">
+				<p>Edit the theme.cfg.php file to change the version number.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8220"></a>
+		<div class="forum-post-author">
+			<label class="title">swells808</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-09 11:43:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme customization error</h3></div>
+				
+			<div class="body">
+				<p>From theme.cfg.php:<br />
+<br />
+/* The theme's name. */<br />
+	$_theme['name'] = 'Ketter';<br />
+<br />
+/* The theme's version number. */<br />
+	$_theme['version'] = '0.1';<br />
+<br />
+/* Which version of ATutor is this theme intended for. */<br />
+	$_theme['atutor-version'] = '1.5.2';<br />
+<br />
+As you can see I have made sure that it is set as a 1.5.2 theme.  What gives?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8221"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-09 11:56:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme customization error</h3></div>
+				
+			<div class="body">
+				<p>The version number is right. I can't tell from your description why it would suggest you are using a 1.4.x theme.<br />
+<br />
+Attach your theme to this thread, and we'll take a look at it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8222"></a>
+		<div class="forum-post-author">
+			<label class="title">swells808</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-09 12:11:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme customization error</h3></div>
+				
+			<div class="body">
+				<p>Here you go...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8223"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-09 12:29:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme customization error</h3></div>
+				
+			<div class="body">
+				<p>Works fine for me.<br />
+<br />
+Is your themes directory writable? chmod a+w themes</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8226"></a>
+		<div class="forum-post-author">
+			<label class="title">swells808</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-09 21:57:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Theme customization error</h3></div>
+				
+			<div class="body">
+				<p>What is that numerically? 777?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

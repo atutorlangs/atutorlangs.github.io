@@ -1,0 +1,127 @@
+---
+ title: Sudent enrolled but where
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Sudent enrolled but where</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="7381"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-19 07:09:06</p>
+            </div>
+            <div class="postheader"><h3>Sudent enrolled but where</h3></div>
+				
+			<div class="body">
+				<p>When I get a mail that a student have requested to be enrolled in one of my courses I miss a indication on the "My Courses" page (atutor/users/index.php) on wich course it is the student wish to enroll.<br />
+<br />
+Is it right that I have to go through every of my courses and check the "Pending Enrollment" on the page "Manage  Enrollment"?<br />
+<br />
+In the earlier versions of ATutor I believe that you where able to see pending enrollments for all your courses at the instructors start page.<br />
+<br />
+  operating system - Red Hat Linux 4<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - 4.3.9<br />
+  version of mysq l - 4.1.12<br />
+  webserver & version - Apache/2.0.52 (Red Hat)<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used - Firefox and IE<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7383"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-19 09:26:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Sudent enrolled but where?</h3></div>
+				
+			<div class="body">
+				<p>The course in which the student is enrolling is listed in the enrollment message. If it is not there let us know, sending us a copy of the message so we can track down the problem.<br />
+<br />
+There is other work needed on My Start page. When that happens we'll add in a Pending Enrolments link</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7420"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-20 06:33:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Sudent enrolled but where?</h3></div>
+				
+			<div class="body">
+				<p>There is no indication in the enrollment mail of wich course the enrollment is intended for. I have attached an enrollment request mail (.eml from Thunderbird).<br />
+<br />
+I'm wondering: could it be something with the danish translation. Missing/deleted variable?  I used the danish one from the ATutor website and I think I converted it to utf-8.<br />
+ <br />
+Thank you for looking in to the problem!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7421"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-20 08:22:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Sudent enrolled but where?</h3></div>
+				
+			<div class="body">
+				<p>Yes it does seem to associated with Danish translation. I will add it to the bug tracker. It might be a little while before we can look into it, so you may want to investigate yourself. If you discover the problem, please post it here.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7428"></a>
+		<div class="forum-post-author">
+			<label class="title">jens</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-20 13:00:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Student enrolled but where?</h3></div>
+				
+			<div class="body">
+				<p>Thanks for looking into it and guiding me in the rigth direction of the problem.<br />
+It was a missing "s" after a % in the translation. I corrected it in the online translation for future translations.<br />
+I corrected it on my system by finding (in table "AT_language_text" in the ATutor database)  the "enrol_messagenew" and putting an "s" in place (after the first %). <br />
+Now the e-mail with request for enrollment also tells wich course the enrollment is meant for.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

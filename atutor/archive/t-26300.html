@@ -1,0 +1,185 @@
+---
+ title: announcements in current activity box
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>announcements in current activity box</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="26300"></a>
+		<div class="forum-post-author">
+			<label class="title">chipwiegand</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-07-09 12:14:33</p>
+            </div>
+            <div class="postheader"><h3>announcements in current activity box</h3></div>
+				
+			<div class="body">
+				<p>On My Start page there is the Current Activity box, that box shows some system generated news, such as when I have added a new quiz, and it shows the ammouncements that I have written. I would like to have it show only my own written announcements, no system generated info. I would expect there is a way to limit this through the mysql queries? I've been experimenting but haven't found a way to do it yet.<br />
+Thanks,<br />
+Chip<br />
+<br />
+ATutor Version:2.2.2.<br />
+PHP Version:5.4.45<br />
+MySQL Version:5.6.35-cll-lve<br />
+OS:Linux 2.6.32-673.26.1.lve1.4.27.el6.x86_64<br />
+My laptop: win8.1 6 gigs ram intel i3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26301"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-07-12 18:10:35</p>
+            </div>
+            <div class="postheader"><h3>Re: announcements in current activity box</h3></div>
+				
+			<div class="body">
+				<p>You can disabled Current Activities in the system preferences to remove the system generated info.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26304"></a>
+		<div class="forum-post-author">
+			<label class="title">chipwiegand</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-07-20 13:37:02</p>
+            </div>
+            <div class="postheader"><h3>Re: announcements in current activity box</h3></div>
+				
+			<div class="body">
+				<p>Yes, I'm aware of that, but, to reiterate - I would like to have it show only my own written announcements, no system generated info. I would expect there is a way to limit this through the mysql queries? I've been experimenting but haven't found a way to do it yet.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26305"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-07-20 13:56:21</p>
+            </div>
+            <div class="postheader"><h3>Re: announcements in current activity box</h3></div>
+				
+			<div class="body">
+				<p>Okay, I guess I'm not understanding what you mean by "system generated info" and "own written announcements". <br />
+<br />
+All elements in the Current activities are generated through the "module_news.php" file associated with each module.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26306"></a>
+		<div class="forum-post-author">
+			<label class="title">chipwiegand</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-07-20 22:52:32</p>
+            </div>
+            <div class="postheader"><h3>Re: announcements in current activity box</h3></div>
+				
+			<div class="body">
+				<p>Ok, what I'm referring to are the notices created by the Atutor system, such as new quizes and tests, or announcements that I create myself. My desire is to prevent the entries that the system creates from being displayed, but I want my announcements displayed. So, in essence, changing the Current Activty listing to Announcements listing. <br />
+<br />
+I tried modifying every mysql query I could find that appeared to be related to that one db table but nothing I did had any effect on the Current Activity box.<br />
+<br />
+Maybe for the next verion update there can be a switch to enable/disable either of those types of messages. Or, provide the option of turning on a seperate box for announcements. Then make the two selectable as either shown or not shown on the My Start Page.<br />
+<br />
+I hope that helps<br />
+:)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26307"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-07-21 08:45:56</p>
+            </div>
+            <div class="postheader"><h3>Re: announcements in current activity box</h3></div>
+				
+			<div class="body">
+				<p>There isn't a quick way to disable all except announcements. You would need to either add an exit; statement to the top of all the module_news.php files in the module directories, or disable current activity in system preferences and create something of your own that only displays announcements.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26308"></a>
+		<div class="forum-post-author">
+			<label class="title">chipwiegand</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-07-21 12:31:06</p>
+            </div>
+            <div class="postheader"><h3>Re: announcements in current activity box</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the reply. I see there are 11 (if I remember correctly) module_news.php files. Just as a test I added the exit; just before the function announcements_news() line in the announcements/module_news.php file but it broke the Start Page so it displayed nothing. Upon removing the exit; statement the Start Page worked as normal. So, maybe there is more to it than just that one change? If I change all 11 files I'm sure the results will be the same - a broken Start Page, but I could be wrong about that. Please correct me.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26309"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-07-21 17:37:26</p>
+            </div>
+            <div class="postheader"><h3>Re: announcements in current activity box</h3></div>
+				
+			<div class="body">
+				<p>Try commenting out the whole function() in the module_news.php files<br />
+<br />
+/*<br />
+function(){<br />
+...<br />
+}<br />
+<br />
+*/</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

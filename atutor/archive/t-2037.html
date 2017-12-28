@@ -1,0 +1,167 @@
+---
+ title: Apostrophe in course title
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Apostrophe in course title</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2037"></a>
+		<div class="forum-post-author">
+			<label class="title">efranc65</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-14 18:22:57</p>
+            </div>
+            <div class="postheader"><h3>Apostrophe in course title</h3></div>
+				
+			<div class="body">
+				<p>We have version1.4  installed  (French environment)<br />
+<br />
+(http://www.geraldpaquin.com/ATutor)<br />
+<br />
+When I specify the following course title in course property:<br />
+<br />
+DST801 Introduction  l'univers technologique<br />
+<br />
+the system gives me:<br />
+<br />
+DST801 Introduction  l'/univers technologique<br />
+<br />
+on the welcome page (notice slash after apostrophe).<br />
+Any suggestions? Thanks!<br />
+<br />
+Eric<br />
+<br />
+P.S: Any way to search the forums?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2040"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-14 18:46:40</p>
+            </div>
+            <div class="postheader"><h3>Apostrophy bug in 1.4</h3></div>
+				
+			<div class="body">
+				<p>The apostrophy problem in course titles, and elsewhere, should have been fixed in 1.4.1. Upgrade to fix the problem.<br />
+<br />
+There's no way to search the forums yet. Add it to the Feature Requests forum so it gets in the new features cue.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3737"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-21 00:57:53</p>
+            </div>
+            <div class="postheader"><h3>apostrophe in emailer</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+<br />
+I'm running 1.4.2 and still get the apostrophe in messages sent from the course emailer.<br />
+<br />
+Is there a quick fix I can implement for this<br />
+<br />
+thanks<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3745"></a>
+		<div class="forum-post-author">
+			<label class="title">shozub</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-21 06:48:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Apostrophe in emailer</h3></div>
+				
+			<div class="body">
+				<p>Hi Larry,<br />
+<br />
+In the file tools/course_email.php replace lines 68 and 69 with the following code:<br />
+<br />
+	$mail->Subject = stripslashes($_POST['subject']);<br />
+	$mail->Body    = stripslashes($_POST['body']);<br />
+<br />
+<br />
+this should get rid of the extra slashes.<br />
+<br />
+Shozub</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3749"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-21 10:00:57</p>
+            </div>
+            <div class="postheader"><h3>eMailer fix</h3></div>
+				
+			<div class="body">
+				<p>Thanks Shozub<br />
+<br />
+Just made the change.  I'll have an instructor test it out today.<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3753"></a>
+		<div class="forum-post-author">
+			<label class="title">lelchuck</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-02-21 13:58:07</p>
+            </div>
+            <div class="postheader"><h3>eMailer fix</h3></div>
+				
+			<div class="body">
+				<p>Did the trick<br />
+<br />
+Thanks again<br />
+<br />
+larry</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

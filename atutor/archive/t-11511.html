@@ -1,0 +1,169 @@
+---
+ title: How to disable public registration in AT 155
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>How to disable public registration in AT 155</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11511"></a>
+		<div class="forum-post-author">
+			<label class="title">oboehlk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-30 03:46:29</p>
+            </div>
+            <div class="postheader"><h3>How to disable public registration in AT 155</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I would disable  the public registration. What mus I do?<br />
+<br />
+Greetings.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11515"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-30 05:28:56</p>
+            </div>
+            <div class="postheader"><h3>Re: How to disable public registration in AT 1.5.5?</h3></div>
+				
+			<div class="body">
+				<p>Log in as Instructor<br />
+Go to Manage<br />
+Next go to Properties<br />
+Actvate<br />
+Private: Available only to users with an ATutor System Account, and Instructor approved enrollment. Login required. Enrollment is required.<br />
+<br />
+And ctivate also<br />
+<br />
+Hide this course from the Browse Courses list. <br />
+<br />
+If you want to dissable Regristration of new members<br />
+I made it as followed<br />
+Log in as Administrator<br />
+Select System Preferences<br />
+If you enable<br />
+Authenticate Against A Master Student List (Default: Disable)<br />
+and the new registration is not in this list he can not create a account</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11519"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-30 07:47:14</p>
+            </div>
+            <div class="postheader"><h3>Re: How to disable public registration in AT 1.5.5?</h3></div>
+				
+			<div class="body">
+				<p>Or perhaps remove  registration.php form near the top of the file:<br />
+<br />
+ <br />
+include/lib/menu_pages.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11531"></a>
+		<div class="forum-post-author">
+			<label class="title">oboehlk</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-31 01:45:33</p>
+            </div>
+            <div class="postheader"><h3>Re: How to disable public registration in AT 1.5.5?</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the quick assistance!!!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11835"></a>
+		<div class="forum-post-author">
+			<label class="title">sinologic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-04 09:05:31</p>
+            </div>
+            <div class="postheader"><h3>Re: How to disable public registration in AT 1.5.5?</h3></div>
+				
+			<div class="body">
+				<p>Hi ipool, <br />
+<br />
+i want to disable public registration also, i've made all the operation you've described but it don't seems to work well for me. I've also Atutor v. 1.5.5, there's something other i can do to disable public registration? <br />
+<br />
+thanks in advance. <br />
+Alessandro<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Log in as Instructor<br />
+Go to Manage<br />
+Next go to Properties<br />
+Actvate<br />
+Private: Available only to users with an ATutor System Account, and Instructor approved enrollment. Login required. Enrollment is re...<br />
+[op]forums/view.php?fid=7;pid=11511;page=1#11515[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11836"></a>
+		<div class="forum-post-author">
+			<label class="title">sinologic</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-10-04 09:15:04</p>
+            </div>
+            <div class="postheader"><h3>Re: How to disable public registration in AT 1.5.5?</h3></div>
+				
+			<div class="body">
+				<p>A little integration to my previous post. I don't want to disable public registration only but moreover to hide the registation form displayed in login.php page. Now, as i've verified, by enabling authentication against a master student list  i'ts pratically impossible to someone register on the system without being just  inserted as student. This works good but i want also to hide the "Register" column "register" link (top menu) vievable in login.php. <br />
+<br />
+How i can hide that?<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Log in as Instructor<br />
+Go to Manage<br />
+Next go to Properties<br />
+Actvate<br />
+Private: Available only to users with an ATutor System Account, and Instructor approved enrollment. Login required. Enrollment is re...<br />
+[op]forums/view.php?fid=7;pid=11511;page=1#11515[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

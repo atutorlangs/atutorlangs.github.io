@@ -1,0 +1,118 @@
+---
+ title: Decimal Points Partially Breaks on Tests and Surveys
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Decimal Points Partially Breaks on Tests and Surveys</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25776"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-04-18 16:37:57</p>
+            </div>
+            <div class="postheader"><h3>Decimal Points Partially Breaks on Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>I just tried this on the demo version of ATutor on the atutor.ca and the same problem exists on my installation.<br />
+<br />
+If you (as the instructor) try to give a question a score of .5 pts. out of 2 (for example), the AT_tests_answers table gets updated correctly and the overall score does as well.  However, if you go back into view the result, the question will be identified as "Unmarked" and it will show 0/2 pts.<br />
+<br />
+I've looked for over an hour now and can't find where to fix this.  Please advise as to how to correct this.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25777"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-04-18 18:44:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Decimal Points Partially Breaks on Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>change intval() to floatval() in <br />
+mods/_standard/tests/classes/testQuestions.class.php<br />
+about line 567<br />
+<br />
+https://github.com/atutor/ATutor/commit/d9514c2759445c2338e8ff18489f17983709db52</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25778"></a>
+		<div class="forum-post-author">
+			<label class="title">es24tv</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-04-19 04:16:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Decimal Points Partially Breaks on Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>ATutor version - 2.2.1<br />
+<br />
+I asked if this change is necessary to apply in all cases, even if we use only whole numbers (no decimals) to score the answers in the quiz. That is, if I only use for example: 1, 5 or 10 points for each answer do I need to modify "testQuestions.class.php"?<br />
+<br />
+Thank you!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25779"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-04-19 06:25:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Decimal Points Partially Breaks on Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>No, you do not need the change if you only use whole numbers.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25781"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2016-04-19 10:00:13</p>
+            </div>
+            <div class="postheader"><h3>Re: Decimal Points Partially Breaks on Tests and Surveys</h3></div>
+				
+			<div class="body">
+				<p>That worked.  Thanks Greg!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

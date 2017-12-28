@@ -1,0 +1,71 @@
+---
+ title: Missing quotation marks
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Missing quotation marks</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="13701"></a>
+		<div class="forum-post-author">
+			<label class="title">nikko_bautista</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-13 01:34:12</p>
+            </div>
+            <div class="postheader"><h3>Missing quotation marks</h3></div>
+				
+			<div class="body">
+				<p>We're currently using a 1.5 version of ATutor, and we're thinking about upgrading to 1.6<br />
+<br />
+We made a full backup of our courses from our 1.5 version and uploaded them to our 1.6 ATutor.<br />
+<br />
+The problem is that some quotation marks were ignored from our content which makes our embedded SWF files unreadable.<br />
+<br />
+Example:<br />
+<br />
+&lt;param name="wmode" value="" /> BECAME &lt;param name="wmode" value="/><br />
+<br />
+the backup omitted the other " in the value tag.<br />
+<br />
+Another problem is that when we restore our backup, the content is scrambled. They do not appear in the order that they originally were.<br />
+<br />
+Any insights? Thank you very much in advance.<br />
+ <br />
+  operating system - Windows XP<br />
+  version of ATutor - 1.6 and 1.5<br />
+  versions of php - Using XAMPP 1.6.6a<br />
+  version of mysq l - Using XAMPP 1.6.6a<br />
+  webserver & version - Using XAMPP 1.6.6a<br />
+  web browser being used - Firefox</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13704"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-05-13 08:21:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Missing quotation marks</h3></div>
+				
+			<div class="body">
+				<p>You should not need to take backups of individual courses to be restored. A copy of the entire database should be sufficient, to be restored only if something goes wrong during your upgrade. <br />
+<br />
+<br />
+The missing quotes is likely due to cutting and pasting from another application. The quotes when copied this way will break in some cases.This is fairly common when pasting from a windows clipboard. To avoid this problem, copy the markup into an plain text editor, then paste it back into ATutor.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,77 @@
+---
+ title: importing a languagepack
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>importing a languagepack</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2693"></a>
+		<div class="forum-post-author">
+			<label class="title">ojn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-08 07:54:35</p>
+            </div>
+            <div class="postheader"><h3>importing a languagepack</h3></div>
+				
+			<div class="body">
+				<p>When I am trying to import a language pack I got the following messages, what dio I do wrong:<br />
+<br />
+<br />
+Warning: set_time_limit(): Cannot set time limit in safe mode in /hsphere/local/home/holge0/xcorporate.dk/ATutor/admin/import_lang.php on line 24<br />
+<br />
+Warning: fopen(): Unable to access /hsphere/local/home/holge0/xcorporate.dk/ATutor/content/import/language.csv in /hsphere/local/home/holge0/xcorporate.dk/ATutor/admin/import_lang.php on line 79<br />
+<br />
+Warning: fopen(/hsphere/local/home/holge0/xcorporate.dk/ATutor/content/import/language.csv): failed to open stream: No such file or directory in /hsphere/local/home/holge0/xcorporate.dk/ATutor/admin/import_lang.php on line 79<br />
+<br />
+Warning: fgetcsv(): supplied argument is not a valid stream resource in /hsphere/local/home/holge0/xcorporate.dk/ATutor/admin/import_lang.php on line 81<br />
+<br />
+Warning: Cannot modify header information - headers already sent by (output started at /hsphere/local/home/holge0/xcorporate.dk/ATutor/admin/import_lang.php:24) in /hsphere/local/home/holge0/xcorporate.dk/ATutor/admin/import_lang.php on line 111</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2702"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-09 17:02:20</p>
+            </div>
+            <div class="postheader"><h3>Safemode off</h3></div>
+				
+			<div class="body">
+				<p>It appears php safemode is turned on. It needs to be turned off.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2708"></a>
+		<div class="forum-post-author">
+			<label class="title">ojn</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-10 04:07:50</p>
+            </div>
+            <div class="postheader"><h3>Safe Mode</h3></div>
+				
+			<div class="body">
+				<p>Thank You, you are right, that was the problem.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

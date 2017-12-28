@@ -1,0 +1,117 @@
+---
+ title: language pack
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>language pack</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2890"></a>
+		<div class="forum-post-author">
+			<label class="title">sabino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-27 11:33:23</p>
+            </div>
+            <div class="postheader"><h3>language pack</h3></div>
+				
+			<div class="body">
+				<p>I updated the old 1.4, the newest version is now running on the web server.<br />
+I tried to import the language packs (italian and spanish) and, whilst I got no error message, I cannot find the imported language in the drop down menu, the only language is still English.<br />
+any suggestion?<br />
+thanks<br />
+<br />
+http://elearning.med.unifi.it/atutor/info.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2891"></a>
+		<div class="forum-post-author">
+			<label class="title">sabino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-27 11:40:47</p>
+            </div>
+            <div class="postheader"><h3>version</h3></div>
+				
+			<div class="body">
+				<p>of course the language pack version is the same as the LCMS (1.4.2.).<br />
+I tried to download it again and install it locally (the precedeing try was made remotely) and I received this error message<br />
+<br />
+Warning: dir(Error : PCLZIP_ERR_BAD_FORMAT (-10) : Unable to find End of Central Dir Record signature): failed to open dir: Invalid argument in D:\elearning\atutor\admin\import_lang.php on line 62</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2892"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-27 11:52:46</p>
+            </div>
+            <div class="postheader"><h3>Writable import dir</h3></div>
+				
+			<div class="body">
+				<p>Make sure the content/import/ directory is recursively writable. You must use the "-R" switch when setting permissions on the content directory.<br />
+<br />
+chmod -R a+rwx content/import/<br />
+<br />
+<br />
+Unfortunately we don't have an IIS server available on which to reproduce this problem. If possible the best server combination is Apache 1.3 using PHP as an Apache module. There have been other problems reported when using the CGI version on Windows.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2894"></a>
+		<div class="forum-post-author">
+			<label class="title">sabino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-27 12:17:19</p>
+            </div>
+            <div class="postheader"><h3>it is already writable</h3></div>
+				
+			<div class="body">
+				<p>and I tried again and I received the same error message riported above</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2895"></a>
+		<div class="forum-post-author">
+			<label class="title">sabino</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-10-27 12:17:30</p>
+            </div>
+            <div class="postheader"><h3>it is already writable</h3></div>
+				
+			<div class="body">
+				<p>and I tried again and I received the same error message reported above</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

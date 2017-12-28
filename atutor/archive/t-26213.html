@@ -1,0 +1,128 @@
+---
+ title: Create Course Page Throws Warnings
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Create Course Page Throws Warnings</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="26213"></a>
+		<div class="forum-post-author">
+			<label class="title">marklee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-03-28 23:36:49</p>
+            </div>
+            <div class="postheader"><h3>Create Course Page Throws Warnings</h3></div>
+				
+			<div class="body">
+				<p>Just went to the courses admin page at /mods/_core/courses/admin/courses.php and there are two instances of the "Create Course" tab on the menu.<br />
+<br />
+Clicking on "Create Course" goes to /mods/_core/courses/admin/create_course.php which throws these 10 warnings:<br />
+<br />
+Warning: defined() expects parameter 1 to be string, array given in /Training/include/lib/menu_pages.php on line 338<br />
+<br />
+Warning: Illegal offset type in /Training/include/lib/menu_pages.php on line 333<br />
+<br />
+Warning: defined() expects parameter 1 to be string, array given in /Training/include/lib/menu_pages.php on line 369<br />
+<br />
+Warning: Illegal offset type in /Training/include/lib/menu_pages.php on line 367<br />
+<br />
+Warning: defined() expects parameter 1 to be string, array given in /Training/include/lib/menu_pages.php on line 379<br />
+<br />
+Warning: Illegal offset type in /Training/include/lib/menu_pages.php on line 382<br />
+<br />
+Warning: Illegal offset type in /Training/include/lib/menu_pages.php on line 401<br />
+<br />
+Warning: defined() expects parameter 1 to be string, array given in /Training/include/lib/menu_pages.php on line 450<br />
+<br />
+Warning: defined() expects parameter 1 to be string, array given in /Training/include/lib/menu_pages.php on line 491<br />
+<br />
+Warning: Illegal offset type in isset or empty in /Training/include/lib/menu_pages.php on line 325<br />
+<br />
+My server is running PHP 7.x and I applied all the patches on installing ATutor.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26214"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-03-29 08:46:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Create Course Page Throws Warnings</h3></div>
+				
+			<div class="body">
+				<p>PHP 7 is not yet supported.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26312"></a>
+		<div class="forum-post-author">
+			<label class="title">Professor828</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-08-02 17:08:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Create Course Page Throws Warnings</h3></div>
+				
+			<div class="body">
+				<p>Good Afternoon, I've just installed to new domain<br />
+I'm setup as administrator and trying to 'create course' (just for testing purposes at moment) while i find my way round.<br />
+However when i click save it sends me here with warning.<br />
+Can anyone help me out as to way it's doing this please?<br />
+<br />
+https://excaliburproject4u.net/dir/mods/_core/courses/admin/create_course.php<br />
+<br />
+Forbidden<br />
+You don't have permission to access /dir/mods/_core/courses/admin/create_course.php on this server.<br />
+Additionally, a 403 Forbidden error was encountered while trying to use an ErrorDocument to handle the request.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26313"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-08-03 08:29:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Create Course Page Throws Warnings</h3></div>
+				
+			<div class="body">
+				<p>Be sure there is not a symmbolic link in the path to your content directory.<br />
+<br />
+From within you content directory, at the command prompt run:<br />
+<br />
+>pwd<br />
+and<br />
+>pwd -P<br />
+<br />
+Both should return the same path<br />
+<br />
+If not, there's a symbolic link. In that case, use the value of "pwd -P" as you content directory path in the atutor/include/config.inc.php file</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

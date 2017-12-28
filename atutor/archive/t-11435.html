@@ -1,0 +1,103 @@
+---
+ title: Invalid argument Error Warning
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Invalid argument Error Warning</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11435"></a>
+		<div class="forum-post-author">
+			<label class="title">remnorz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-22 10:40:28</p>
+            </div>
+            <div class="postheader"><h3>Invalid argument Error Warning</h3></div>
+				
+			<div class="body">
+				<p>Using the latest version Installed a custom theme I created and this is the error it gave me.<br />
+<br />
+Warning: Invalid argument supplied for foreach() in C:\wamp\www\ATutor\themes\default\index.tmpl.php on line 19<br />
+<br />
+<br />
+index.tmpl<br />
+<br />
+[php]&lt;?php<br />
+/************************************************************************/<br />
+/* ATutor																*/<br />
+/************************************************************************/<br />
+/* Copyright (c) 2002-2006 by Greg Gay, Joel Kronenberg & Heidi Hazelton*/<br />
+/* Adaptive Technology Resource Centre / University of Toronto			*/<br />
+/* http://atutor.ca														*/<br />
+/*																		*/<br />
+/* This program is free software. You can redistribute it and/or		*/<br />
+/* modify it under the terms of the GNU General Public License			*/<br />
+/* as published by the Free Software Foundation.						*/<br />
+/************************************************************************/<br />
+if (!defined('AT_INCLUDE_PATH')) { exit; } ?><br />
+<br />
+&lt;?php if ($this->banner): ?>&lt;?php echo $this->banner; ?>&lt;?php endif; ?><br />
+<br />
+&lt;div style="width: 100%; margin-top: -5px;"><br />
+	&lt;ul id="home-links"><br />
+	&lt;?php foreach ($this->home_links as $link): ?><br />
+		&lt;li>&lt;a href="&lt;?php echo $link['url']; ?>">&lt;img src="&lt;?php echo $link['img']; ?>" alt="" class="img-size-home" border="0" />&lt;?php echo $link['title']; ?>&lt;/a>&lt;/li><br />
+	&lt;?php endforeach; ?><br />
+	&lt;/ul><br />
+&lt;/div><br />
+<br />
+&lt;?php if ($this->announcements): ?><br />
+&lt;h2 class="page-title">&lt;?php echo _AT('announcements'); ?>&lt;/h2><br />
+	&lt;?php foreach ($this->announcements as $item): ?><br />
+		&lt;div class="news"><br />
+			&lt;h3>&lt;?php echo $item['title']; ?>&lt;/h3><br />
+			&lt;p>&lt;span class="date">&lt;?php echo $item['date']; ?>&lt;/span> &nbsp; &lt;?php echo $item['body']; ?>&lt;/p><br />
+		&lt;/div><br />
+	&lt;?php endforeach; ?><br />
+<br />
+	&lt;?php if ($this->num_pages > 1): ?><br />
+		&lt;?php echo _AT('page'); ?>: | <br />
+		&lt;?php for ($i=1; $i&lt;=$this->num_pages; $i++): ?><br />
+			&lt;?php if ($i == $this->current_page): ?><br />
+				&lt;strong>&lt;?php echo $i; ?>&lt;/strong><br />
+			&lt;?php else: ?><br />
+				&lt;a href="&lt;?php echo $_SERVER['PHP_SELF']; ?>?p=&lt;?php echo $i; ?>">&lt;?php echo $i; ?>&lt;/a><br />
+			&lt;?php endif; ?><br />
+			 | <br />
+		&lt;?php endfor; ?><br />
+	&lt;?php endif; ?><br />
+&lt;?php endif; ?><br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11436"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-22 11:20:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Invalid argument Error Warning</h3></div>
+				
+			<div class="body">
+				<p>What have you edited? This appears to be an unedited  default index temple.<br />
+<br />
+The problem is probably in some other file you have modified.<br />
+<br />
+If you are editing on window, make sure your text editor is set to use Unix line breaks.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,103 @@
+---
+ title: Enrollment through import course list
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Enrollment through import course list</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22414"></a>
+		<div class="forum-post-author">
+			<label class="title">wattscj</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-08 16:28:05</p>
+            </div>
+            <div class="postheader"><h3>Enrollment through import course list</h3></div>
+				
+			<div class="body">
+				<p>This isn't necessarily a problem but I'm looking to try to find a way to add a second email address or a BCC email address to the email sent out to the student when you use the import student list option in a course. Is there a way so that when that email is sent out it is also sent to a second email (for internal use) at the same time?<br />
+<br />
+Thanks in advance<br />
+Chris<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Linux<br />
+  ATutor version - 1.6.1<br />
+  Patch #s applied - 1,2,3,4,6,7,8,9,10,11,12,13<br />
+  ATutor theme name - BPO Olive<br />
+  PHP version - 4.4.9<br />
+  MySQL version - 5.0.91</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22416"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-08 17:16:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Enrollment through import course list</h3></div>
+				
+			<div class="body">
+				<p>I'm not exactly sure where the mail is sent from in 1.6.1, but I'd start by looking in the files in the following directory. You can add a $mail->bcc value where the mailer runs to send out the enrolment emails<br />
+<br />
+<br />
+http://svn.atutor.ca/repos/atutor/tags/atutor_1_6_1/include/html/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22461"></a>
+		<div class="forum-post-author">
+			<label class="title">wattscj</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-21 13:26:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Enrollment through import course list</h3></div>
+				
+			<div class="body">
+				<p>Thanks I finally found the file I needed but I don't know how to format the $mail->bcc. do you set it up like below?<br />
+<br />
+$mail->bcc = 'email@email.com';<br />
+<br />
+If not any help would be greatly appreciated.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22462"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-21 14:20:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Enrollment through import course list</h3></div>
+				
+			<div class="body">
+				<p>Yes, that should work.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

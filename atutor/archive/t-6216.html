@@ -1,0 +1,75 @@
+---
+ title: Problem on Step 2
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem on Step 2</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6216"></a>
+		<div class="forum-post-author">
+			<label class="title">onebraveheart</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-03 12:25:43</p>
+            </div>
+            <div class="postheader"><h3>Problem on Step 2</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - unix<br />
+  version of ATutor -1.5.1<br />
+  versions of php - 4.3.2<br />
+  version of mysq l -4.0.16<br />
+  webserver & version -Apache 2.0.46(red hat)<br />
+  copies of error messages - <br />
+Feedback:<br />
+Connected to database ogsms successfully.<br />
+Error:<br />
+Table ogsms_admin_log creation failed.<br />
+Table ogsms_admins creation failed.<br />
+Table ogsms_backups creation failed.<br />
+Table ogsms_content creation failed.<br />
+<br />
+<br />
+  web browser being used - I Explorer<br />
+  and anything else relevant - the database has already created and the user has permission to create tables. I have already made config.inc.php writable (chmod a+rwx)<br />
+<br />
+I have previos installation succesful, I am wondering Is there a way to change the database connection if database location has been changed?. I tried to  change the connectin detail in config.inc.php but it didn't work out.  Do I need to make changes in any other file too?<br />
+<br />
+Finally Is there a way so that I can skip the table creatin step  and do the table creation manually because I am able to create tables manually using the same user on mysql.<br />
+<br />
+Thanks in advance for your help.<br />
+Sam</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6256"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-07 14:40:47</p>
+            </div>
+            <div class="postheader"><h3>db changes</h3></div>
+				
+			<div class="body">
+				<p>the DB information is stored in config.inc.php so changing that will update your DB settings.  be sure that the TABLE_PREFIX is right too.<br />
+<br />
+why do you want to do the table creation manually?  the sql scripts are stored in /install/db</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

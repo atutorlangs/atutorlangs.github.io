@@ -1,0 +1,159 @@
+---
+ title: Need help with exercises
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Need help with exercises</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="17910"></a>
+		<div class="forum-post-author">
+			<label class="title">tklauw</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-30 23:09:15</p>
+            </div>
+            <div class="postheader"><h3>Need help with exercises</h3></div>
+				
+			<div class="body">
+				<p>Hi all,<br />
+<br />
+I'm not sure if this topic has been discuss before or not, so forgive my posting if it has.<br />
+<br />
+I'm trying to use ATutor for foreign language learning tools.<br />
+<br />
+One of my requirements is to produce some exercises involving a passage of text with lots if fill in the blanks with choices of answer the student can choose from (kind of cloze type exercises). <br />
+<br />
+I can create "fill in the blank" questions, but my exercises are usually one paragraph long with about 20 "blanks".<br />
+<br />
+Is this possible in ATutor? if not, any pointer on how to do it?<br />
+<br />
+Also need help to create yet another type of exercise that includes listening of a short audio recording and the students would answer a few questions based on the recording in multiple choice format (about 10 different questions with the same recording). <br />
+<br />
+Any assisstance would be appreciated very much.<br />
+<br />
+I'm using version 1.6.2 on Windows with XAMPP 1.7.0 stack (Apache 2.2.11, PHP 5.2.8, SQL 5.1.30-community).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17915"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-01 04:37:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Need help with exercises</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Cloze questions are not supported in ATutor. Admittedly, existing question types aren't as flexible in that respect, but you could try to reformulate your questions so that other existing types would do (multiple choice/answer, ordering, matching etc.).<br />
+<br />
+As for the second question, you can upload the clip into your course (using File Manager), put it on a content page (using [media] tags) and then associate a test with that page (using Tests & Surveys tab when editing the content page).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17920"></a>
+		<div class="forum-post-author">
+			<label class="title">tklauw</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-01 09:36:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Need help with exercises</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Thanks so much for the enlightenment.<br />
+<br />
+ATutor is my choice of platform for lots of reasons and I'd be a perfect one if it could just do the cloze type exercises.<br />
+<br />
+Looks like I need to look for some 'work-around' to do this as, frankly speaking, the existing types just short of features for language learning exercises, at least for my purposes.<br />
+<br />
+I don't mind doing a bit of hacking and coding if it is what it takes but don't really know where to start.<br />
+<br />
+Alternatively, maybe something like Flash should be used instead? Again, not sure about the integration. Just a thought anyway.<br />
+<br />
+Thanks again.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17929"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-07-01 15:50:57</p>
+            </div>
+            <div class="postheader"><h3>Re: Need help with exercises</h3></div>
+				
+			<div class="body">
+				<p>Programming cloze-type questions is likely to be quite a large task. The best places to start are AT_tests_questions DB table and files: include/classes/testQuestions.class.php and themes/default/test_questions/* .</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23205"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-06-18 05:47:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Need help with exercises</h3></div>
+				
+			<div class="body">
+				<p>I do close exercises in eXe and then import them into content.  The students can do them online and print out the results, or print out the form and do it by hand. Not the perfect solution, but it works. <br />
+<br />
+I export them as web pages and upload the index files in a single folder on my server, then call them into content as external files.<br />
+<br />
+I've been wondering if those eXe files could be modified somehow using php to make them work as a module, though the hello world module.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23209"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-06-18 16:58:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Need help with exercises</h3></div>
+				
+			<div class="body">
+				<p>You could turn an exe content unit, with tests etc. into a module. It would be available to any instructor however. Modules are intended more for adding activities or functionality, rather than content, though there's nothing to prevent you from using them for content.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,182 @@
+---
+ title: Can you put php in a content page
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Can you put php in a content page</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20479"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 15:27:23</p>
+            </div>
+            <div class="postheader"><h3>Can you put php in a content page</h3></div>
+				
+			<div class="body">
+				<p>I have 2.0 installed and I was wondering if it was possible to put php code into a piece of content.<br />
+<br />
+Situation: I have my content dir. in the root of my site (not a web accessible area).  In a piece of content, I want to link to a page in the content dir.  Normal html links don't seem to be working.  So I'd like to do something like...<br />
+<br />
+[php] a href="&lt;?php echo AT_CONTENT_DIR . '/path_to_file_in_content_dir'?>/file.html">file in content dir.&lt;/a> [/php]<br />
+<br />
+<br />
+Or perhaps there's a better way to do this?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20480"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 15:36:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Can you put php in a content page?</h3></div>
+				
+			<div class="body">
+				<p>Php in content would be to dangerous to allow.<br />
+<br />
+You should just have to use a relative path. If you have a folder in your file manager called images, the path to its file would be something like:<br />
+<br />
+images/someimage.jpg</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20481"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 16:05:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Can you put php in a content page?</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+The content I'm referring to is video content in an html file.<br />
+<br />
+Uploading all of this via file storage would probably be unrealistic as we're talking a lot of files and large files at that.<br />
+<br />
+Can I manually create a dir. in the content folder and use a relative path somehow?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20482"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 16:13:15</p>
+            </div>
+            <div class="postheader"><h3>Re: Can you put php in a content page?</h3></div>
+				
+			<div class="body">
+				<p>By the way, my installation is in a sub dir. of my site, if it matters.<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20483"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 17:03:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Can you put php in a content page?</h3></div>
+				
+			<div class="body">
+				<p>Upload files to any Web accessible directory, then create  Weblink content pages that points to them. See content editing in the handbook. Or use the [media] tag to link directly to media files.<br />
+<br />
+You can't link to files in file storage, not to be confused with file manager.<br />
+<br />
+A sub directory makes no difference<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Uploading all of this via file storage would probably be unrealistic as we're talking a lot of files and large files at that.<br />
+[op]forums/view.php?fid=7;pid=20479;page=1#20481[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20484"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-02 19:29:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Can you put php in a content page?</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+As a security measure, I was wanting to place the dir. with the video content outside of the web accessible area so that people couldn't just link to them directly.<br />
+<br />
+Clearly, files in the content dir. that are outside of the web accessible area can be accessed via the content pages. I just need to make that happen for my files.  Is there a place that explains how this happens?<br />
+<br />
+Can't use the media tag because I'm linking to a html page that loads and plays an mp4.<br />
+<br />
+In my earlier post I meant [b]subdomain[/b] not [b]subdirectory[/b], if it matters.  I also was referring to the file manager instead of file storage.<br />
+<br />
+<br />
+Thanks for your thoughts.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20491"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-03 15:49:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Can you put php in a content page?</h3></div>
+				
+			<div class="body">
+				<p>I'll point you to the get.php file. You'd need to create yourself something that works like it does.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

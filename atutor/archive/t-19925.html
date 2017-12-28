@@ -1,0 +1,140 @@
+---
+ title: Problem with Add Getget
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problem with Add Getget</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19925"></a>
+		<div class="forum-post-author">
+			<label class="title">Pyrrhon</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-21 00:13:57</p>
+            </div>
+            <div class="postheader"><h3>Problem with Add Getget</h3></div>
+				
+			<div class="body">
+				<p>If I like to add for example the dictionary gadget http://syn.dict.cc/dcc-gadget.xml<br />
+<br />
+on our ATutor system answers<br />
+<br />
+Fatal error: Call to undefined function json_encode() in /opt/lampp/htdocs/ATutor/mods/_standard/social/lib/classes/Application.class.php on line 145<br />
+<br />
+Any idea what I make wrong. <br />
+<br />
+Thanks,<br />
+<br />
+Uwe<br />
+<br />
+ATutor Version: 1.6.4<br />
+PHP Version: 5.1.4<br />
+MySQL Version: 5.0.21<br />
+OS: Linux 2.6.11.4-21.17-default<br />
+Patch #s applied: all standard patchs</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19926"></a>
+		<div class="forum-post-author">
+			<label class="title">Pyrrhon</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-21 00:27:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with Add Getget</h3></div>
+				
+			<div class="body">
+				<p>I forgot to say, the same fatal error occurs with other gadgets, for example <br />
+<br />
+http://www.waiting4wind.de/max2air/xml/GGLEO.xml<br />
+<br />
+http://hosting.gmodules.com/ig/gadgets/file/108810348889111247842/tts.xml<br />
+<br />
+http://widgets.tropicalpcsolutions.com/widgets/2009-widgets/adbrite/blue/COLOR/translate.xml</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19929"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-21 08:43:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with Add Getget</h3></div>
+				
+			<div class="body">
+				<p>Not all gadgets will work. Not all gadgets will be conformant. Gadgets that require authentication won't work in this version of ATutor. We are adding OAuth to the next version of ATutor, so gadgets that do require authentication should work then.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19932"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-21 10:11:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with Add Getget</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Thanks for reporting.  You need PHP 5.2+ for json_encode, json_decode to work.<br />
+<br />
+I will fix this issue in the next ATutor for lower version PHP.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+If I like to add for example the dictionary gadget http://syn.dict.cc/dcc-gadget.xml<br />
+<br />
+on our ATutor system answers<br />
+<br />
+Fatal error: Call to undefined function json_encode() in /opt/lampp/htdocs/ATuto...<br />
+[op]forums/view.php?fid=7;pid=19925;page=1#19925[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19933"></a>
+		<div class="forum-post-author">
+			<label class="title">Pyrrhon</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-04-21 10:35:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Problem with Add Getget</h3></div>
+				
+			<div class="body">
+				<p>Thank you for making that.<br />
+<br />
+Uwe</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

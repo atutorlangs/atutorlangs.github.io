@@ -1,0 +1,71 @@
+---
+ title: Cron for a report
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Cron for a report</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="23223"></a>
+		<div class="forum-post-author">
+			<label class="title">betcCandela</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-06-25 13:08:33</p>
+            </div>
+            <div class="postheader"><h3>Cron for a report</h3></div>
+				
+			<div class="body">
+				<p>I have had to create a custom report to query and send email to students who have not taken a test or who have failed the test.  This needs to run everyday.  There is no documentation on using cron except basics on getting it setup (it is setup).  How do I have a .php page run everyday?  I can't run this through the system crontab since the script requires authenticated access to ATutor.  Do I have to create an entire custom module for this report?  Please advise.<br />
+<br />
+Thanks,<br />
+Betc<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Red Hat Enterprise 5.6<br />
+  ATutor version - 1.5.5<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version - 5.2<br />
+  MySQL version - 5.0.77<br />
+  Webserver & version - Apache 2.2.3<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23224"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-06-25 16:42:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Cron for a report?</h3></div>
+				
+			<div class="body">
+				<p>You would not be able to run a file with cron that requires authentication.<br />
+<br />
+You'd need to move your script into a module_cron.php file, then set the period to run it in a module.php file.<br />
+<br />
+Have a look at module developer documentation for details. You can take a copy of the Hello World module and start from there. <br />
+<br />
+http://help.atutor.ca/developer/modules.html#cron</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

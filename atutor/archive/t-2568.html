@@ -1,0 +1,163 @@
+---
+ title: Get stuck on step 5
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Get stuck on step 5</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2568"></a>
+		<div class="forum-post-author">
+			<label class="title">Yumi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-27 01:18:46</p>
+            </div>
+            <div class="postheader"><h3>Get stuck on step 5</h3></div>
+				
+			<div class="body">
+				<p>I try a first time installation of version 1.4.2.  Am on a windows machine but ISP is Linux with php and mysql working. Root directory and Mysql database contain a working postnuke installation. Installation went without hitch until step 5 "Content directory". I created a folder in root called AT_content with permissions set at 777. Entered the path in the installation box as http://www.mypage.info/AT_content, which resulted in error message "Content Directory entered does not exist".  Created a directory on drive C (as example suggested), set path to C:\content\ and also got the same error message. Read in FAQ reference to "Step 2" which I can not locate. Please instructions what I am doing wrong.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2573"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-27 14:29:20</p>
+            </div>
+            <div class="postheader"><h3>Linux path & chmod recursive</h3></div>
+				
+			<div class="body">
+				<p>First use:<br />
+<br />
+chmod -R 777 AT_content<br />
+<br />
+to make the directory recursively writable.<br />
+<br />
+or better use<br />
+<br />
+chmod a+rwx AT_content<br />
+<br />
+The path you need to define is the unix path, something like:<br />
+<br />
+/home/yumi/www/AT_content<br />
+<br />
+The content directory must reside on you ISP server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2599"></a>
+		<div class="forum-post-author">
+			<label class="title">Yumi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-29 00:28:42</p>
+            </div>
+            <div class="postheader"><h3>Working ok</h3></div>
+				
+			<div class="body">
+				<p>Thank you. It is working now. Correct path is /www/htdocs/username/AT_content. To much of a newbie figure it out myself.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5992"></a>
+		<div class="forum-post-author">
+			<label class="title">agiorni</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-01 13:29:46</p>
+            </div>
+            <div class="postheader"><h3>Same problem</h3></div>
+				
+			<div class="body">
+				<p>I tried the procedure but didnt work. Help!!!!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6906"></a>
+		<div class="forum-post-author">
+			<label class="title">brooksonline</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-20 10:35:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Same problem</h3></div>
+				
+			<div class="body">
+				<p>i would like to open this thread again.<br />
+<br />
+i'm getting problems and its my first time i've installed this :(<br />
+<br />
+i've created a new folder called atcontent in the /public_html/ folder of my webserver.<br />
+<br />
+chmod -R 777 atcontent<br />
+and<br />
+chmod a+rwx atcontent<br />
+<br />
+i am unsure where to enter these? is it in the directory box? do u put in 1 at a time and press next?<br />
+<br />
+and would my link me /public_html/atcontent or would you have to put /home/ at the beginning?<br />
+<br />
+thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6907"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-20 10:57:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Same problem</h3></div>
+				
+			<div class="body">
+				<p>At the command line on the server where ATutor resides, set the permissions as described.<br />
+<br />
+This is fairly basic UNIX functionality. You may want to find yourself a basic UNIX tutorial.<br />
+<br />
+Also, make sure there are no symbolic links in the path to your web directory (which you'll also find info on in most basic UNIX tutorials)<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+i would like to open this thread again.<br />
+<br />
+i'm getting problems and its my first time i've installed this :(<br />
+<br />
+i've created a new folder called atcontent in the /public_html/ folder of my webserve...<br />
+[op]forums/view.php?fid=7;pid=2568;page=1#6906[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

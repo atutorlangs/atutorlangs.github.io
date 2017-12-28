@@ -1,0 +1,243 @@
+---
+ title: Error sending the email message
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error sending the email message</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="18354"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-17 12:14:08</p>
+            </div>
+            <div class="postheader"><h3>Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>Hi, I made a fresh instalation of Atutor 1.6.2 and I an't send mails from Atutor, I get this error sendind a mail to the course:<br />
+             The following errors occurred: <br />
+             There was an error sending the email message.<br />
+<br />
+I've defined:<br />
+     define('MAIL_USE_SMTP', TRUE);<br />
+<br />
+in my config-inc.php and my ISP said me that the php.ini is OK.<br />
+<br />
+Any suggestion?<br />
+<br />
+<br />
+<br />
+ATutor: 1.6.2.<br />
+PHP: 5.1.6<br />
+MySQL: 5.0.45-log<br />
+OS: Linux 2.6.18-92.el5<br />
+All Patch applied</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18356"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-17 13:44:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>On Linux MAIL_USE_SMTP is normally set to "false." If it is set to true, an external SMTP server needs to be defined in php.ini. This is normally done on windows servers, but not on Linux.<br />
+<br />
+On Linux, ATutor makes use of the local Sendmail server. Be sure it is installed and functioning properly, and ATutor should handle mail without any trouble.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18362"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-17 20:28:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>Thanks, Greg.<br />
+<br />
+I've made the change to FALSE (mail_use_smtp)but I still have the problem.<br />
+<br />
+I asked to my ISP for the Sendmail and they said me that it's installed and working right.<br />
+<br />
+I'll appreciate any assistance<br />
+<br />
+PD: Sorry for my english ;)<br />
+<br />
+ATutor: 1.6.2.<br />
+PHP: 5.1.6<br />
+MySQL: 5.0.45-log<br />
+OS: Linux 2.6.18-92.el5<br />
+All Patch applied</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18367"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-18 13:05:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>MORE INFORMATION<br />
+<br />
+In the same web-server (diferent domain) I've installed a 1.6.1 version of Atutor and in this case el mail is working right.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18368"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-18 13:58:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>The ATutor mail system has not changed in years. Maybe there was a problem with the installation of 1.6.2, or perhaps some other server setting associated with that installation or domain is not right. It's difficult to say.<br />
+<br />
+Try installing again a fresh copy of ATutor. And, you should probably be using 1.6.3, rather than 1.6.2.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18425"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-21 11:40:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg.<br />
+<br />
+I installed a fresh Atutor 1.6.2 and the first thing that I'did was try to send an e-mail to the intere group. And the error persist.<br />
+Now I'm thinking in deleting the domain and start all againg.....<br />
+<br />
+I'll tell you...<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18431"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-21 23:23:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>MORE INFORMATION.<br />
+<br />
+Now I upgraded to 1.6.3 and the error persist :-(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18432"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-22 09:24:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>Interesting problem. <br />
+<br />
+I have no suggestions. Its the same code in both ATutor versions running email. Perhaps ask your ISP if they'll help you investigate.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18508"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-30 23:14:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Error sending the email message</h3></div>
+				
+			<div class="body">
+				<p>Finally I've moved to a diferent ISP and all is working ok.<br />
+<br />
+Thanks for your help.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

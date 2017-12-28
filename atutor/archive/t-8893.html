@@ -1,0 +1,116 @@
+---
+ title: how to alter content side menu
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>how to alter content side menu</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="8893"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-28 08:25:42</p>
+            </div>
+            <div class="postheader"><h3>how to alter content side menu</h3></div>
+				
+			<div class="body">
+				<p>I wish to alter a small part of the side menu where the content structure is. what I wish to do is to add a class to the item you are currently viewing, to be able to style this better. <br />
+<br />
+now the current item is identified with the STRONG tag, so that could be styled. problem is if you're at a child item, as the parent item of that is also marked with the STRONG tag, and gets the same style. <br />
+<br />
+so what I wish to do is <br />
+a) remove the STRONG tag from parent items, or rather<br />
+b) add a class="current" to the STRONG tag on the current item. <br />
+<br />
+...but where is the side menu code created? which file can I alter to do this? I can't seem to find it anywhere...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8894"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-28 18:20:12</p>
+            </div>
+            <div class="postheader"><h3>Re: how to alter content side menu?</h3></div>
+				
+			<div class="body">
+				<p>I think its coming from:<br />
+include/classes/ContentManager.class.php<br />
+<br />
+There's also the sidemenu HTML files you could look at:<br />
+/include/html/dropdowns/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8899"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-29 08:41:31</p>
+            </div>
+            <div class="postheader"><h3>Re: how to alter content side menu?</h3></div>
+				
+			<div class="body">
+				<p>thanks Greg, you are right:<br />
+<br />
+it's in include/classes/ContentManager.class.php<br />
+<br />
+you alter line 624 to do this. part of that line looks like this:<br />
+<br />
+[php]&lt;strong title="'.$content['title'].'">';[/php] <br />
+<br />
+I altered that to:<br />
+<br />
+[php]&lt;strong class="current" title="'.$content['title'].'">';[/php]<br />
+<br />
+and then the current position can be style by using the following CSS<br />
+<br />
+[php]#side-menu strong.current {<br />
+<br />
+style goes here<br />
+<br />
+}<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8901"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-09-29 08:42:44</p>
+            </div>
+            <div class="postheader"><h3>Re: how to alter content side menu?</h3></div>
+				
+			<div class="body">
+				<p>oh, ignore the php start and end tags in the examples above.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

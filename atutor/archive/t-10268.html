@@ -1,0 +1,93 @@
+---
+ title: report to show when a course was started and when it was finished
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>report to show when a course was started and when it was finished</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10268"></a>
+		<div class="forum-post-author">
+			<label class="title">pegasusb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-02 23:43:30</p>
+            </div>
+            <div class="postheader"><h3>report to show when a course was started and when it was finished</h3></div>
+				
+			<div class="body">
+				<p>Does a way exist to get a report that shows the start and the end date of when a user starts and completes the course? I looked through the database thinking I could just write a report outside of the application but I do not see a start and complete date anywhere.<br />
+<br />
+TIA, Gabriel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10269"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-03 08:54:41</p>
+            </div>
+            <div class="postheader"><h3>Re: report to show when a course was started and when it was finished</h3></div>
+				
+			<div class="body">
+				<p>There is a course release date, if you wanted to try using that.<br />
+<br />
+There isn't a specific field for defining a start/end. This is something you might include with the course description.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10271"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-03 10:37:53</p>
+            </div>
+            <div class="postheader"><h3>Re: report to show when a course was started and when it was finished</h3></div>
+				
+			<div class="body">
+				<p>The release date doesn't  capture the actual start date in asynchronous courses where a student can start taking the course whenever they choose.  All of our courses are like that since they are provided free to the public (365/24/7) but for reporting purposes I need to track the number of people who started or "enrolled" in a course each month.  Since ATutor does not consider these types of students, I added an enroll_date field to the AT_course_enrollment table in the database and modified the enroll.php file to capture and store the information. Fortunately, that is a simple fix but I wish it were an ATutor "feature".<br />
+<br />
+I think the end date can be determined from the last_accessed field in the AT_member_track table.  However, I also think before the data is captured by ATutor, a student must be enrolled in the course and member tracking has to be enabled by adding My Tracker to the student tools.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10276"></a>
+		<div class="forum-post-author">
+			<label class="title">pegasusb</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-04-03 20:56:52</p>
+            </div>
+            <div class="postheader"><h3>Re: report to show when a course was started and when it was finished</h3></div>
+				
+			<div class="body">
+				<p>Yes for us the the individuals that take the course have no actual start or end date requirement. The problem we have is that a person that manages the individuals wants to know who has started the course and when they completed it. I can take the previous suggestion and run with it easy enough.<br />
+<br />
+Thanks for your replies, Gabriel</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

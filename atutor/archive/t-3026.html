@@ -1,0 +1,153 @@
+---
+ title: Using File Manager to create subfolders
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Using File Manager to create subfolders</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="3026"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-09 13:17:53</p>
+            </div>
+            <div class="postheader"><h3>Using File Manager to create subfolders</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I would like to upload a course content - which is orginized as a collection of folders and subfolders - into the ATutor files. I am using Tools -> Instructor Tools -> File Manager<br />
+<br />
+There I see two options: "create folder" and "Upload".<br />
+<br />
+No matter what I do, every folder I create ends up being a top-level folder. Is it possible to create sub-folders using the FIle Manager? How do I do it?<br />
+<br />
+I am using ATutor 1.4.1 on Windows XP.<br />
+<br />
+Thank you,<br />
+<br />
+Inna Zharnitsky</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3029"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-09 16:43:44</p>
+            </div>
+            <div class="postheader"><h3>Enter into a folder to create a subfolder</h3></div>
+				
+			<div class="body">
+				<p>Enter the folder into which you want to add a subfolder. Then create a new folder.<br />
+<br />
+You could also zip the folders and files together, upload the zip file, then unzip the file in the filemanager to recreate the subfolders.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3037"></a>
+		<div class="forum-post-author">
+			<label class="title">innaz</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-10 13:28:42</p>
+            </div>
+            <div class="postheader"><h3>Creating subfolders in File Manager</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+Thank you for your reply.<br />
+<br />
+> Enter the folder into which you want to add a subfolder. Then create a new folder.<br />
+<br />
+ <br />
+I have tried doing that - and a new folder is created on the top level, not as a sub-folder.<br />
+<br />
+Let me describe my steps:<br />
+<br />
+1)Go to Tools-> File Manager <br />
+Path to Current Directory: Home / <br />
+create folder "parent".<br />
+<br />
+2) Click on "parent" link - now I am in "parent" folder.<br />
+Path to Current Directory: Home / parent<br />
+<br />
+3) Create folder "child".<br />
+<br />
+Now I see the message:<br />
+Path to Current Directory: Home / <br />
+<br />
+and I see folders "parent" and "child".<br />
+But "child" is on the top level, just like "parent"<br />
+Path to Current Directory: Home / child<br />
+<br />
+Am I doing smth wrong?<br />
+<br />
+Inna</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="3038"></a>
+		<div class="forum-post-author">
+			<label class="title">norma</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-10 13:53:15</p>
+            </div>
+            <div class="postheader"><h3>fix</h3></div>
+				
+			<div class="body">
+				<p>replace line293 in tools/file_manager.php:<br />
+	echo '&lt;form name="form1" method="post" action="'.$_SERVER['PHP_SELF'].'?frame='.$_GET['frame'].'">'."\n";<br />
+<br />
+with:<br />
+	echo '&lt;form name="form1" method="post" action="'.$_SERVER['PHP_SELF'].'?frame='.$_GET['frame'].SEP.'pathext='.$pathext.'">'."\n";</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="3039"></a>
+		<div class="forum-post-author">
+			<label class="title">norma</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-10 14:36:31</p>
+            </div>
+            <div class="postheader"><h3>fix 2</h3></div>
+				
+			<div class="body">
+				<p>you have to put the $pathext as urlencode($pathext)<br />
+so line 293 is actually:<br />
+echo '&lt;form name="form1" method="post" action="'.$_SERVER['PHP_SELF'].'?frame='.$_GET['frame'].SEP.'pathext='.urlencode($pathext).'">'."\n";</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

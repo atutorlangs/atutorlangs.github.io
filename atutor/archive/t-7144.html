@@ -1,0 +1,177 @@
+---
+ title: sendmail configuration
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>sendmail configuration</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="7144"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-17 07:06:12</p>
+            </div>
+            <div class="postheader"><h3>sendmail configuration</h3></div>
+				
+			<div class="body">
+				<p>I realise this is not related to Atutor, but we need some help finding out how to best configure sendmail, and then need some information on how Atutor uses it. <br />
+<br />
+as far as I've seen the sender adress is different if:<br />
+<br />
+* using course e-mail function: the sender is the one who generated the message<br />
+* creating accounts: the sender adress is system account, and<br />
+* subscribing to forums: also system account<br />
+* password-reminder: also system account? <br />
+<br />
+we have ongoing problems with mail not going througt as they are rejected by spamfilters. we get the following error:<br />
+<br />
+Sender address rejected: Domain not found<br />
+<br />
+(we might have fixed this now)<br />
+<br />
+but, when *some* generate a message from the course email we get this:<br />
+<br />
+Feb 16 22:13:14 hk2 sendmail[6764]: k1GLDEgf006764: headers too large (32768 max) from local during message collect<br />
+<br />
+all help appreciatet, also any tips on mailservers to use rather than sendmail (the server is a red hat, apache2)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7147"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-17 09:03:59</p>
+            </div>
+            <div class="postheader"><h3>Re: sendmail configuration</h3></div>
+				
+			<div class="body">
+				<p>more info: <br />
+<br />
+we've narrowed this down a bit more: the message goes through fine if you only send it to "enrolled". if you send it to both "enrolled" and "assistants" you get the error message headers too large..<br />
+<br />
+anyone experienced the same? is this a bug?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7148"></a>
+		<div class="forum-post-author">
+			<label class="title">link</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-17 13:21:34</p>
+            </div>
+            <div class="postheader"><h3>Re: sendmail configuration</h3></div>
+				
+			<div class="body">
+				<p>The headers too large problem seems to be a bug in tools/course_email.php.<br />
+<br />
+The PHP code tries to construct an SQL query to extract the relevant recipients for the message based on the state of the Assistant, Enrolled, etc. checkboxes. This code works fine when only a single checkbox is selected, and generates SQL as follows:<br />
+<br />
+* Assistants<br />
+- SELECT email FROM course_enrollment C, members M WHERE C.course_id=7 AND C.member_id=M.member_id AND C.privileges&lt;>0;<br />
+<br />
+* Enrolled<br />
+- SELECT email FROM course_enrollment C, members M WHERE C.course_id=7 AND C.member_id=M.member_id AND (C.approved='y' AND C.role&lt;>'Instructor');<br />
+<br />
+But when both Assistants and Enrolled are selected, the PHP code blindly tries to combine these two into one SQL statement using an OR operator, and ends up with:<br />
+<br />
+SELECT email FROM course_enrollment C, members M WHERE C.course_id=7 AND C.member_id=M.member_id AND (C.approved='y' AND C.role&lt;>'Instructor') OR C.privileges&lt;>0;<br />
+<br />
+Which fails due to an operator precendence problem.<br />
+<br />
+<br />
+For this to work the statement must be something like:<br />
+<br />
+SELECT email FROM course_enrollment C, members M WHERE C.course_id=7 AND C.member_id=M.member_id AND ((C.approved='y' AND C.role&lt;>'Instructor') OR C.privileges&lt;>0);<br />
+<br />
+(note added parens around the two sides of the OR)<br />
+<br />
+Alternately, the recipients from the two classes (Assistants and Enrolled; probably the same situation with the other groups) must be extracted in separate queries.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7149"></a>
+		<div class="forum-post-author">
+			<label class="title">link</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-17 13:34:31</p>
+            </div>
+            <div class="postheader"><h3>Re: sendmail configuration</h3></div>
+				
+			<div class="body">
+				<p>Attached is a simple patch that might be sufficient to fix this.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7162"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-02-20 14:59:31</p>
+            </div>
+            <div class="postheader"><h3>Re: sendmail configuration</h3></div>
+				
+			<div class="body">
+				<p>as far as we've seen the patch from link here has eliminated this bug, and our mail now works fine.  <br />
+<br />
+what happens is that when "assistant" and "enrolled" (and probably the two other options as well) are both checked the system tries to send ~64 emails to ALL registred users (on the system, not just the course) - luckily causing sendmail to not send it as the header fields becomes too large..<br />
+<br />
+..if you have checked the patch you should probably make it available to all users! <br />
+<br />
+<br />
+best, <br />
+vjo</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7454"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-03-22 07:53:59</p>
+            </div>
+            <div class="postheader"><h3>Re: sendmail configuration</h3></div>
+				
+			<div class="body">
+				<p>Patch attached here</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

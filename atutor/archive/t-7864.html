@@ -1,0 +1,123 @@
+---
+ title: removing create course link from student login
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>removing create course link from student login</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="7864"></a>
+		<div class="forum-post-author">
+			<label class="title">rameshjha1</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-28 01:08:18</p>
+            </div>
+            <div class="postheader"><h3>removing create course link from student login</h3></div>
+				
+			<div class="body">
+				<p>1. how to remove the create course link which appears when we logged in as student,<br />
+<br />
+2. how to remove the export content  link from the student link.<br />
+<br />
+<br />
+Please help<br />
+<br />
+Ramesh</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="7868"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-28 17:21:21</p>
+            </div>
+            <div class="postheader"><h3>Re: removing create course link from student login</h3></div>
+				
+			<div class="body">
+				<p>1. You can remove the references to the create_course tool in include/lib/menu_pages.php (lns 161, 163-168), but you'll be removing it for instructors as well. All users are considered students when they are on MyStart page, so if you wanted to remove it for just students, you'd need to write a sql query to check the courses table to see if the current users is an instructor in any course.<br />
+<br />
+2. Turn off export content in Manage>>Properties</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="7869"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-04-28 17:21:27</p>
+            </div>
+            <div class="postheader"><h3>Re: removing create course link from student login</h3></div>
+				
+			<div class="body">
+				<p>1. You can remove the references to the create_course tool in include/lib/menu_pages.php (lns 161, 163-168), but you'll be removing it for instructors as well. All users are considered students when they are on MyStart page, so if you wanted to remove it for just students, you'd need to write a sql query to check the courses table to see if the current users is an instructor in any course.<br />
+<br />
+2. Turn off export content in Manage>>Properties</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22583"></a>
+		<div class="forum-post-author">
+			<label class="title">LAL</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-03 14:20:43</p>
+            </div>
+            <div class="postheader"><h3>Re: removing create course link from student login</h3></div>
+				
+			<div class="body">
+				<p>Atutor 2.0.2<br />
+1. If you remove the references you discussed above viz. instructor and students not able to create course, would the administrator still be able to create the courses?<br />
+2. I really don't get the (ins 161, 163-168). Please explain better how to go about removing it.<br />
+<br />
+Basically, I want an outcome of the administrator being the sole user of the system to create courses.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22587"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-03 18:08:41</p>
+            </div>
+            <div class="postheader"><h3>Re: removing create course link from student login</h3></div>
+				
+			<div class="body">
+				<p>1. yes<br />
+<br />
+2. Just wrap a php comment around the lines with create_course.php in it to remove the create course tab.<br />
+<br />
+Please experiment.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

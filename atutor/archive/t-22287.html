@@ -1,0 +1,77 @@
+---
+ title: UTF8 Conversion issue in description course Text box
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>UTF8 Conversion issue in description course Text box</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="22287"></a>
+		<div class="forum-post-author">
+			<label class="title">jparraez</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-07-27 11:43:18</p>
+            </div>
+            <div class="postheader"><h3>UTF8 Conversion issue in description course Text box</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I've found the following issue and I'm not sure what's is wrong.<br />
+<br />
+Attached is an screenshot. <br />
+<br />
+As you can see in the image, the UTF characters are displayed correctly in the description field, but not in the yellow text box (pop-up) which appears when the mouse is in description.<br />
+<br />
+Do you know what can be the root cause of the issue?<br />
+<br />
+Thank you very much<br />
+<br />
+Juan Pablo<br />
+<br />
+<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version - 2.0.2<br />
+  Patch #s applied -<br />
+  ATutor theme name - Ice Bluse<br />
+  PHP version - <br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22288"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-07-27 11:59:52</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF8 Conversion issue in description course Text box</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+It could be a problem with the "Ice blues" themes.  I don't have that theme in my system but check into themes/&lt;ice blue theme name>/users/browse.tmpl.php and replace "htmlentities" with "htmlentities_utf8"</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

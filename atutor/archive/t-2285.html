@@ -1,0 +1,182 @@
+---
+ title: ImportExport Experiences  Problems
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ImportExport Experiences  Problems</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2285"></a>
+		<div class="forum-post-author">
+			<label class="title">dnuttall</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-09 07:36:09</p>
+            </div>
+            <div class="postheader"><h3>ImportExport Experiences  Problems</h3></div>
+				
+			<div class="body">
+				<p>After successfully creating "original courseware" with ATutor 1.4.1 on a commercial/hosted environment, I used the "Export Content" and successfully created a ZIPped version on my local machine.<br />
+<br />
+If I create a new, but empty course on the host and try to use the ZIPed file on my local machine as the source to insert, it TRIES to run, but eventually times out.<br />
+<br />
+However, if I try the same process to a "prototype" environment that is basically local, the inserts happen so quickly that I barely notice the pop-up window indicating progress.<br />
+<br />
+At first, I thought it might be caused by mixed permissions/ownership issues, since on my hosted environment, MOST of the files are owned by my login account which is an ordinary user.  In the hosted environment, the Apache web-server is apparently running as UID/GID nobody/nobody.<br />
+<br />
+However, when I consider my prototype environment, I have a similar condition with regard to permissions/ownership, although it is not exactly the same.  My prototype system has Apache running under UID/GID "apache" and my baseline ATutor files/folders are assigned to UID/GID nobody or root.<br />
+<br />
+So my "problem" may have something to do with permissions and owneship on the hosted system, but it seems like it could just be a "timing" problem.<br />
+<br />
+Obviously I can't change the PHP timeout features for the hosted system, but it seems like they could be ammended within ATutor.<br />
+<br />
+I've browsed the forum(s), but haven't detected where anyone indicated they're using ATutor in a hosted environment such as mine, so that may be why this problem hasn't done its "Phoenix Act" yet! :) <br />
+<br />
+Any thoughts/ideas on a work-around or fix will be greatly appreciated.<br />
+<br />
+Dave Nuttall<br />
+San Antonio, TX</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2286"></a>
+		<div class="forum-post-author">
+			<label class="title">dnuttall</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-09 09:05:20</p>
+            </div>
+            <div class="postheader"><h3>Additional Import Problems</h3></div>
+				
+			<div class="body">
+				<p>Something seems to be fundamentally wrong with my test environment of ATutor 1.4.1 running on Linux.<br />
+<br />
+I'm able to create a course and import SOME but not all of the default ATutor "How-To" courseware.<br />
+<br />
+Successfully imported:<br />
+-Getting Started<br />
+-Administrators<br />
+-Accessible Authoring <br />
+-Learners<br />
+-Navigation<br />
+<br />
+But THESE fail to import:<br />
+- Full course<br />
+- Instructors<br />
+<br />
+It's hard to imagine why apparently pristine data from the ATutor site won't just get sucked up into a "stock installation".<br />
+<br />
+I can change anything on my prototype site, but its not clear WHAT to change.  Please let me know if you can fill in the blank spot(s) for met<br />
+<br />
+TIA.<br />
+Dave Nuttall<br />
+San Antonio, TX</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2296"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-10 13:18:02</p>
+            </div>
+            <div class="postheader"><h3>Additional Import Problems</h3></div>
+				
+			<div class="body">
+				<p>Check your php.ini file to ensure that both<br />
+[b]post_max_size[/b] and [b]upload_max_filesize[/b] are large enough (over 2MB). if they are not then that would be the problem and you would have to change it.<br />
+<br />
+You can view that information by creating a phpinfo page:<br />
+&lt;?php<br />
+phpinfo();<br />
+?><br />
+<br />
+to see what the value of those settings are.<br />
+<br />
+Additionally, the script may be taking too long to process. Both [b]max_execution_time[/b] and [b]max_input_time[/b] should be set large enough if the server is busy or slow and if your internet connection to the server is slow.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2303"></a>
+		<div class="forum-post-author">
+			<label class="title">dnuttall</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-11 11:25:00</p>
+            </div>
+            <div class="postheader"><h3>Increased values to fix it!</h3></div>
+				
+			<div class="body">
+				<p>Increasing the values for max_execution_time and upload_max_filesize seems to have fixed the problem.<br />
+<br />
+Thanks, Joel.<br />
+<br />
+On the hosted environmnet, I used an .htaccess file in the root directory of ATutor.   The hosting company had set everything to defaults, so max_input_time was set to -1 which I think means "no limit" and the post_max_size was set to 55M, so I didn't fool with that.<br />
+<br />
+The max_execution_time default is 30 seconds.  I reset to 10 minutes.<br />
+<br />
+The upload_max_filesize was 2M, so I reset mine to be 100M.<br />
+<br />
+The default ATutor course uploads just fine now.<br />
+<br />
+The actual .htaccess file looks something like this:<br />
+<br />
+#### my ATutor .htaccess -- 08/11/2004<br />
+php_value upload_max_filesize 100M<br />
+php_value max_execution_time 600<br />
+#### end of ATutor .htaccess file<br />
+<br />
+Some documentation might suggest enclosing the values in double quotes.  I don't think it matters, but I generally try to use the most universalist structures whenever possible.  Your mileage may vary depending on the configuration of Apache or possibly the operating system.<br />
+<br />
+Post a question or comment if you're confused or can't resolve your own problems on this subject.<br />
+<br />
+Dave Nuttall<br />
+San Antonio, Texas</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2306"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-11 16:48:24</p>
+            </div>
+            <div class="postheader"><h3>Increased values to fix it!</h3></div>
+				
+			<div class="body">
+				<p>100M might be overkill.<br />
+<br />
+Another thing you could have tried was importing the content packages from the ATutor site using a URL instead of downloading the packages locally then uploading them.<br />
+<br />
+The ability to import content packages via URL is a very useful feature and is one of the ways to get around the max upload file size limit in PHP.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

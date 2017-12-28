@@ -1,0 +1,126 @@
+---
+ title: Autoenrollment
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Autoenrollment</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="23426"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-17 19:56:22</p>
+            </div>
+            <div class="postheader"><h3>Autoenrollment</h3></div>
+				
+			<div class="body">
+				<p>Hello.  I have 2.0 installed.<br />
+<br />
+Just a question about using the auto-enrollment feature.  Is the designed behavior intended to be that when the user creates their account, their enrollment status is "pending" and the instructor has to approve the request to be formally enrolled?  I was thinking that they would be automatically enrolled, but that doesn't seem to be the case for me.<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23429"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-18 10:34:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Auto-enrollment</h3></div>
+				
+			<div class="body">
+				<p>I do recall this feature enrolling and giving immediate access, but you are right, it seems to require instructor approval if its a private course.<br />
+<br />
+This was something we added many years ago, so perhaps my memory fails me. Maybe add a request to the issue tracker, and we'll investigate or try to get it into the next release.<br />
+<br />
+http://www.atutor.ca/atutor/mantis <br />
+<br />
+For now you can have new enrollments send an email to the instructor, set in Manage>Properties in the Access Setting</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23430"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-18 12:24:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Auto-enrollment</h3></div>
+				
+			<div class="body">
+				<p>I did a bit of deeper looking and in /ATutor/include/htmlauto_enroll_courses.inc.php lines 41-95 seem to be doing the work here.  It seems to me there are two short term options...<br />
+<br />
+1.) In the $sql in line 44, change 'n' to 'y'.<br />
+<br />
+2.) Comment out the if/else logic in lines 41-99 and just go directly with <br />
+[php]			$sql	= "INSERT INTO ".TABLE_PREFIX."course_enrollment VALUES ($member_id, $course, 'y', 0, '"._AT('student')."', 0)";<br />
+			$result = mysql_query($sql, $db);<br />
+[/php] <br />
+<br />
+<br />
+I opted for #2 because I think that will work with how I use ATutor, but that's probably not the most elegant way to do it.<br />
+<br />
+Do you still want me to post to the issue tracker?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23433"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-19 10:21:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Auto-enrollment</h3></div>
+				
+			<div class="body">
+				<p>Yes, please do make a note in the tracker, for the record.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23434"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-08-19 12:21:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Auto-enrollment</h3></div>
+				
+			<div class="body">
+				<p>Ok, it's done.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

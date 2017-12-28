@@ -1,0 +1,134 @@
+---
+ title: Strange Is this a permissions problem or something
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Strange Is this a permissions problem or something</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11165"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-20 13:26:39</p>
+            </div>
+            <div class="postheader"><h3>Strange Is this a permissions problem or something</h3></div>
+				
+			<div class="body">
+				<p>I've tried out the Payments module and its working fine. However, I'm using the same kind of code, but then something seems amiss. My ipn_response.php file is something like this:<br />
+<br />
+[php]<br />
+&lt;?php<br />
+$_user_location	= 'public';<br />
+define('AT_INCLUDE_PATH', '../../include/');<br />
+require(AT_INCLUDE_PATH.'vitals.inc.php');<br />
+require('verify.php');<br />
+<br />
+// read the post from PayPal system and add 'cmd'<br />
+$req = 'cmd=_notify-validate';<br />
+<br />
+foreach ($_POST as $key => $value) {<br />
+	$value = urlencode($stripslashes($value));<br />
+	$req .= "&$key=$value";<br />
+}<br />
+<br />
+$host = parse_url($_config['cc_url']);<br />
+$host = $host['host']; // either www.sandbox.paypal.com or just www.paypal.com<br />
+if (strcasecmp($host, 'www.sandbox.paypal.com') && strcasecmp($host, 'www.paypal.com')) {<br />
+	// don't want to post this to the wrong URI<br />
+	exit;<br />
+}<br />
+<br />
+// post back to PayPal system to validate<br />
+$header .= "POST /cgi-bin/webscr HTTP/1.0\r\n";<br />
+$header .= "Content-Type: application/x-www-form-urlencoded\r\n";<br />
+$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";<br />
+$fp = fsockopen($host, 80, $errno, $errstr, 30);<br />
+if (!$fp) { exit; }<br />
+<br />
+// assign posted variables to local variables<br />
+$item_name = $_POST['item_name'];<br />
+$item_number = $_POST['item_number'];<br />
+$payment_status = $_POST['payment_status'];<br />
+$payment_amount = $_POST['mc_gross'];<br />
+$payment_currency = $_POST['mc_currency'];<br />
+$txn_id = $_POST['txn_id'];<br />
+$receiver_email = $_POST['receiver_email'];<br />
+$payer_email = $_POST['payer_email'];<br />
+<br />
+if (!$fp) {<br />
+// HTTP ERROR<br />
+} else {<br />
+fputs ($fp, $header . $req);<br />
+while (!feof($fp)) {<br />
+$res = fgets ($fp, 1024);<br />
+if (strcmp ($res, "VERIFIED") == 0) {<br />
+	$check_payment_status = check_payment_status($payment_status);<br />
+	if($check_payment_status == 1) {<br />
+		$txn_id_status = check_txn_id($txn_id);<br />
+		if(!($txn_id_status)) {<br />
+			//The transaction is a genuine first time transaction. So insert the details into the database after checking the receiver email<br />
+			if($receiver_email == $_config['cc_receiver_email']) {<br />
+				//Receiver verified. Final check for the payment_amount using the item_number<br />
+				$correct_amount = check_for_correct_item($item_number,$payment_amount);<br />
+				if($correct_amount) {<br />
+					//Everything is verified at this stage. Now insert the transaction_id into the database<br />
+					$final_result = insert_txn_id($item_number,$payment_amount,$txn_id);<br />
+					$type_id = determine_course_or_combo($item_number,$payment_amount,$txn_id);<br />
+					//$type_id[0] = 1 => course_id, $type_id[0] = 0 => combo_id, $type_id[1] will contain either the course_id or combo_id depending on the type<br />
+					$result_member = validate_payment($type_id);<br />
+				}<br />
+			}<br />
+			<br />
+		}<br />
+		else echo "Fraud Transaction!!";<br />
+	}<br />
+}<br />
+else if (strcmp ($res, "INVALID") == 0) {<br />
+// log for manual investigation<br />
+}<br />
+}<br />
+fclose ($fp);<br />
+}<br />
+<br />
+$myFile = "logfile.txt";<br />
+$fh = fopen($myFile, 'w') or die("can't open file");<br />
+$stringData = "Done\n";<br />
+fwrite($fh, $stringData);<br />
+$stringData = "Writing\n";<br />
+fwrite($fh, $stringData);<br />
+fclose($fh);<br />
+<br />
+?><br />
+[/php] <br />
+<br />
+PayPal is unable to contact this file at all I guess... What could be the problem?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11166"></a>
+		<div class="forum-post-author">
+			<label class="title">legend</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-07-20 15:33:31</p>
+            </div>
+            <div class="postheader"><h3>Re: Strange... Is this a permissions problem or something?</h3></div>
+				
+			<div class="body">
+				<p>I accidentally used $_SESSION[member_id] instead of $member_id in the script... Anyways, problem solved now...</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

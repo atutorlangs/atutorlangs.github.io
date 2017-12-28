@@ -1,0 +1,81 @@
+---
+ title: Errors occurred  when moving Sent Message to inbox
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Errors occurred  when moving Sent Message to inbox</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25632"></a>
+		<div class="forum-post-author">
+			<label class="title">gylqz6</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-11-17 11:45:21</p>
+            </div>
+            <div class="postheader"><h3>Errors occurred  when moving Sent Message to inbox</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+<br />
+I have 2.2 installed. When I went to sent message area and clicked on move to inbox button, errors occurred. The information is listed below<br />
+Please Help~ Thanks.<br />
+<br />
+Action:<br />
+go "sent message" area and click  "move to inbox" show error.<br />
+<br />
+Error message 1: (language mode: english)<br />
+The following errors occurred:<br />
+ATutor was unable to access the database. If the problem persists, please report this to an Administrator with this date reference (11/17/2015 10:46:10 am)<br />
+ <br />
+Error message 2: (language mode: zh_tw)<br />
+[ AT_ERROR_DB_QUERY ]<br />
+<br />
+Log:<br />
+[17-Nov-2015 10:15:24 Asia/Taipei] SELECT * FROM AT_config<br />
+[17-Nov-2015 10:15:24 Asia/Taipei] SELECT * FROM AT_languages ORDER BY native_name<br />
+[17-Nov-2015 10:15:24 Asia/Taipei] SELECT status FROM AT_themes WHERE dir_name='default'<br />
+[17-Nov-2015 10:15:24 Asia/Taipei] SELECT customized FROM AT_themes WHERE dir_name = 'default'<br />
+[17-Nov-2015 10:15:24 Asia/Taipei] SELECT customized FROM AT_themes WHERE dir_name = 'default'<br />
+[17-Nov-2015 10:15:24 Asia/Taipei] SELECT * FROM AT_courses ORDER BY title<br />
+[17-Nov-2015 10:15:24 Asia/Taipei] SELECT dir_name, privilege, admin_privilege, status, cron_interval, cron_last_run FROM AT_modules WHERE status=2<br />
+[17-Nov-2015 10:15:24 Asia/Taipei] SELECT L.* FROM AT_language_text L, AT_language_pages P WHERE L.language_code="en" AND L.term=P.term AND P.page="/inbox/sent_messages.php" ORDER BY L.variable ASC<br />
+[17-Nov-2015 10:15:25 Asia/Taipei] SELECT L.* FROM AT_language_text L WHERE L.language_code="en" AND L.term="test" ORDER BY variable ASC LIMIT 1<br />
+[17-Nov-2015 10:15:25 Asia/Taipei] INSERT IGNORE INTO AT_language_pages (`term`, `page`) VALUES ("test", "/inbox/sent_messages.php")<br />
+[17-Nov-2015 10:15:25 Asia/Taipei] SELECT status FROM AT_members WHERE member_id=51<br />
+[17-Nov-2015 10:15:25 Asia/Taipei] SELECT login, first_name, second_name, last_name FROM AT_members WHERE member_id='51'<br />
+[17-Nov-2015 10:15:25 Asia/Taipei] SELECT E.course_id FROM AT_course_enrollment E WHERE E.member_id=51 AND E.approved&lt;>'n'<br />
+[17-Nov-2015 10:15:25 Asia/Taipei] SELECT COUNT(*) AS cnt FROM AT_messages WHERE to_member_id=51 AND new=1<br />
+[17-Nov-2015 10:15:25 Asia/Taipei] SELECT login, first_name, second_name, last_name FROM AT_members WHERE member_id='51'<br />
+[17-Nov-2015 10:15:25 Asia/Taipei] SELECT * FROM AT_messages_sent WHERE from_member_id=51 ORDER BY date_sent DESC<br />
+[17-Nov-2015 10:30:02 Asia/Taipei] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '51}, date_sent, 0, 0, subject, body FROM AT_messages_sent WHERE from_member_id=5' at line 1<br />
+SQL: INSERT INTO AT_messages SELECT 0, course_id, from_member_id, {51}, date_sent, 0, 0, subject, body FROM AT_messages_sent WHERE from_member_id=51 AND message_id IN (37,0)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25642"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-11-29 09:20:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Errors occurred  when moving Sent Message to inbox</h3></div>
+				
+			<div class="body">
+				<p>Confirmed. Issue has been reported.<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=5605</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,428 @@
+---
+ title: Playing big video files
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Playing big video files</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="9628"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-08 13:51:41</p>
+            </div>
+            <div class="postheader"><h3>Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+I wanted to play a big FLV file (33Mb). I tested to play this file in two systems: a local host server (running on my PC) and a distance server (running on a real Web server). The configuration of the two systems is more or less similar. However, the big video file can be viewed by Flash player only in the local system, not the distance one. I also tested a small FLV file (600Kb), and this file can be viewed by both systems.<br />
+<br />
+Please help. Thanks.<br />
+Vu Minh Chieu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9640"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-09 14:26:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+In the distance Web server, I created a simple HTML file embedding the big FLV file and it worked well.<br />
+<br />
+Could you please tell me how ATutor functions when a file (FLV or JPG or any type) is loaded to the Web browser? Maybe I can find something from this information. I doubt that there would be a problem when ATutor loads a big file from the directory named "AT_CONTENT_DIR".<br />
+<br />
+Many thanks,<br />
+Vu Minh Chieu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9644"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-09 17:27:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>It should be no different than playing these files from other Web pages. <br />
+<br />
+This often involves using the flash/movie authoring tool to generating the HTML to embed the movie into an ATutor content page, then uploading the associated movie files into the course content directory with the file manager, then adjusting the links to point to those files in the associated content pages (not necessarily in that order).<br />
+<br />
+You may need to adjust the maximum upload values in the system's php.ini file, and adjust the maximun individual and total file sizes in Admin>Courses>Properties. The default values for these are are otherwise usually set to a small size.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9648"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-09 23:52:19</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>I think this subject is interesting. Let me show and analyze a solution:<br />
+<br />
+- Suppose that my ATutor site is www.example.com/ATutor and I created the course content folder "course_content" inside the ATutor folder, meaning anyone can access to this folder from www.example.com/ATutor/course_content<br />
+- I created a SWF file (myvideo.swf) in which a big FLV file is embedded. Both files are stored in www.example.com/ATutor/course_content/1<br />
+- In ATutor, I used its authoring tool to create a content in which I wanted to insert the SWF file. At this point, there were two possibilities: (1) I used a relative link to the SWF file, that is "myvideo.swf", (2) I used an absolute link to the SWF file, that is "www.example.com/ATutor/course_content/1/myvideo.swf".<br />
+- Both previous solutions worked well with small FLV files. However, only the second solution worked well with big FLV files (33Mb). Why?<br />
+- I understand that the second solution is not perfect regarding security issue because anyone can access the video without an ATutor account.<br />
+<br />
+Please explain why the first solution did not work in that case and how to overcome this problem. If the problem is in the php.ini file, please show me exactly where. I do not think that the maximum upload option is a cause, because when I tested with the local host server in which this option was set to 16MB, it worked. I also modified the course size to 1GB and the max file size to 100Mb but it did not work.<br />
+<br />
+Thank you for continuing this discussion.<br />
+Vu Minh Chieu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9651"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-10 08:48:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>The ATutor file size settings will not override the php.ini settings. <br />
+<br />
+Use the search tool to find info on max_file_size. This issue has been covered many times.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9656"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-10 15:16:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>I am sorry, I could not find anything with max_file_size. I do not think it would be a cause, because I tested the same ATutor code package on a local host server and it worked.  I do not know how ATutor let the Web browser know the location of a file in the course content folder, because when I examined the source code of the HTML file, for example www.example.com/ATutor/content.php?cid=2, I did not see the absolute path to the video file.<br />
+<br />
+Chieu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9657"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-10 17:28:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>Sorry, That should have been "upload_max_filesize"<br />
+<br />
+See this thread.<br />
+http://www.atutor.ca/view/7/119/1.html</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9658"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-10 22:34:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>I do not have problem with uploading big files to ATutor. Because the distance Web server does not enable Zlib, I slightly modified the installation of ATutor so as to make ATutor function without Zlib enabled. Then, I directly copied the files from my PC to the course content folder handled by ATutor site. My question is that why ATutor worked well with big video files on a local host server but did not work on a distance Web server. Here are PHP infos of the two systems:<br />
+Local host: see attached file "local_PHP_info.htm"<br />
+Distance Web server: see attached file "distance_PHP_info.htm"<br />
+<br />
+I have a SWF file (2Kb) and a FLV file (33Mb) embedded in the SWF file.<br />
+<br />
+Vu Minh Chieu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9660"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-11 10:40:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>You have memory limit enabled. You could disable it or increase it from 8mb to 80mb in your php.ini<br />
+<br />
+However, since you are using Apache 2 the best solution would be to enable x-Sendfile and use that. <br />
+http://celebnamer.celebworld.ws/stuff/mod_xsendfile/<br />
+<br />
+Once the module is installed you can add 'x-sendfile' to the config table with the value 1. You might have to download ATutor 1.5.3.3 pl1 and copy the get.php file in place of yours to make use of that feature.<br />
+<br />
+Using x-sendfile will make Apache handle the request rather than PHP, which will be much faster.<br />
+<br />
+Enabling this Apache module should only be done if you are confidant in your server's security settings since it allows access to any file on the server regardless of location.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9775"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-26 14:12:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>I've tried disabling the memory limit completely, and upping max_execution_time to 6 minutes, and I can't get the "big video" to work, only the small one worked.<br />
+<br />
+Looking at the transfer logs, here's what I see when I access the small video:<br />
+<br />
+141.213.234.109 - - [26/Jan/2007:12:48:03 -0500] "GET /themat/content.php?cid=5 HTTP/1.1" 200 14217 "http://grip.umich.edu/themat/content.php?cid=3" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1"<br />
+141.213.234.109 - - [26/Jan/2007:12:48:03 -0500] "GET /themat/get.php/small_video.swf HTTP/1.1" 200 90447 "http://grip.umich.edu/themat/content.php?cid=5" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1"<br />
+141.213.234.109 - - [26/Jan/2007:12:48:04 -0500] "GET /themat/get.php/ESP18mod/animation_3scenes.flv HTTP/1.1" 200 1714690 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1"<br />
+<br />
+Here's what I see when I access the large video:<br />
+<br />
+<br />
+141.213.234.109 - - [26/Jan/2007:12:47:30 -0500] "GET /themat/content.php?cid=4 HTTP/1.1" 200 14437 "http://grip.umich.edu/themat/content.php?cid=3" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1"<br />
+141.213.234.109 - - [26/Jan/2007:12:47:31 -0500] "GET /themat/get.php/experimal_template.swf HTTP/1.1" 200 90528 "http://grip.umich.edu/themat/content.php?cid=4" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1"<br />
+141.213.234.109 - - [26/Jan/2007:12:47:31 -0500] "GET /themat/get.php/esp18mod.flv HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1"<br />
+<br />
+<br />
+In the call to /get.php/, in the case of the small video, it includes the path to that contains the file ("ESP18mod"):<br />
+<br />
+   GET /themat/get.php/ESP18mod/animation_3scenes.flv<br />
+<br />
+But in the case of the large video, it doesn't..<br />
+<br />
+   GET /themat/get.php/esp18mod.flv<br />
+<br />
+Both animation_3scenes.flv and esp18mod.flv are located in<br />
+<br />
+   /afs/umich.edu/group/acadaff/grip/resource/themat/1/ESP18mod.<br />
+<br />
+I checked several times and the path to the esp18mod.flv is correct.<br />
+<br />
+PLEASE CHECK get.php and tell me if you could find something.<br />
+<br />
+Vu Minh Chieu</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9776"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-26 15:25:30</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>Try adding the following line to include/lib/mime.inc.php<br />
+<br />
+[php]<br />
+<br />
+$mime['flv']  = array('video/x-flv', 'flv');<br />
+<br />
+[/php]<br />
+<br />
+I'm not sure it will make a difference, but its worth a try.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9777"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-26 15:41:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>Or add the following line to the apache httpd.conf file or a .htaccess file placed in the root directory of ATutor.<br />
+<br />
+[php]<br />
+<br />
+AddType video/x-flv .flv<br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9778"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-26 16:00:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>I tried the first suggestion but it did not work. I do not have admin rights so I could not try the second one now. Please remember that ATutor works well with small FLV files. And when locally installed, it also works well with big FLV files.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9779"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-26 17:05:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>The admin of my ATutor have just sent me the following suggestion, please give feedback on that.<br />
+<br />
+"Are you in touch with the developers?<br />
+<br />
+Could you ask why they chose to do this in get.php @ line 119?<br />
+<br />
+   echo @file_get_contents($real);<br />
+<br />
+rather than<br />
+<br />
+   readfile($real);<br />
+<br />
+<br />
+file_get_contents() reads the file into a string, which they are then echoing.<br />
+readfile() reads a file and and outputs it to the output buffer directly (w/no need for echo()).  It avoids the memory limit problem, because it's outputting the file as it's read as opposed to reading it into a string all at once, and then printing that string to the output buffer.<br />
+<br />
+At the very least, they should get rid @ at the beginning of @file_get_contents, because the @ tells the php interpreter to suppress all error messages associated with that call (which as made debugging this more difficult).<br />
+<br />
+I can get it working by upping the memory limit (I'm not sure why that didn't work for me earlier), but I'd like to see what they think about the file_get_contents() / readfile() change I'm proposing."</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9789"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-29 10:25:20</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>This issue has been added to our bug tracker and will be fixed in the next version.<br />
+<br />
+For now you can safely replace the file_get_contents() with the readfile() alternative.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="9792"></a>
+		<div class="forum-post-author">
+			<label class="title">vmchieu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-01-29 11:05:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Playing big video files</h3></div>
+				
+			<div class="body">
+				<p>Many thanks. Now it works very well.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

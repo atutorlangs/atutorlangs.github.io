@@ -1,0 +1,120 @@
+---
+ title: Installing patch without internet connection
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installing patch without internet connection</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="17770"></a>
+		<div class="forum-post-author">
+			<label class="title">mpolito1969</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-16 07:40:52</p>
+            </div>
+            <div class="postheader"><h3>Installing patch without internet connection</h3></div>
+				
+			<div class="body">
+				<p>I have installed aTutor on an intranet server which is not connected to internet (for security).<br />
+<br />
+Could anyone point me to some documentation about how to install patches in such a situation? I guess I could download patches and make a "local install" but I don't know how to do it.<br />
+<br />
+Ciao,<br />
+Max</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17778"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-16 08:51:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing patch without internet connection</h3></div>
+				
+			<div class="body">
+				<p>The patcher is a network tool, not really intended to be used without access to the update server. <br />
+<br />
+You can view the patches and manually download them from  <br />
+<br />
+http://update.atutor.ca/patch/1_6_2/<br />
+<br />
+Then zip the files together then apply them through the upload field in the patcher.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="17781"></a>
+		<div class="forum-post-author">
+			<label class="title">mpolito1969</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-16 09:22:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing patch without internet connection</h3></div>
+				
+			<div class="body">
+				<p>Sorry, only to be sure I have understood.<br />
+<br />
+I should download all patch.xml files, place them in the correct "patches\1_6_2-*" directories on the local machine, put a patch_list.xml in the "patches" directory then zip the "patches" directory and submit the patches.zip path to the patcher?<br />
+<br />
+Thanks.<br />
+<br />
+Ciao,<br />
+Max<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Then zip the files together then apply them through the upload field in the patcher.<br />
+[op]forums/view.php?fid=7;pid=17770;page=1#17778[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="17787"></a>
+		<div class="forum-post-author">
+			<label class="title">mpolito1969</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-06-16 11:02:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing patch without internet connection</h3></div>
+				
+			<div class="body">
+				<p>Done.<br />
+<br />
+Here is the procedure I followed, just in case someone else can be interested in applying patches off-line.<br />
+<br />
+Download all the patches using:<br />
+<br />
+wget -r -np http://update.atutor.ca/patch/1_6_2/<br />
+<br />
+now build all the .zip that need to be passed to the patcher module using the attached Perl script (it worked for me, use it at your own risk).<br />
+<br />
+It's been written on a Windows system but it should be easily ported to a Linux/Unix system.<br />
+<br />
+Ciao,<br />
+Max</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,58 @@
+---
+ title: falt is undefined error in Insert Image Popup
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>falt is undefined error in Insert Image Popup</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6121"></a>
+		<div class="forum-post-author">
+			<label class="title">sinus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-21 01:41:57</p>
+            </div>
+            <div class="postheader"><h3>falt is undefined error in Insert Image Popup</h3></div>
+				
+			<div class="body">
+				<p>i could not find the old thread, but there was an error in with HTMLArea's Insert Image pop-up window...<br />
+when i click OK, i get an error (in Internet Explorer) - "f_alt is undefined"<br />
+<br />
+i sort of fixed it by editing:<br />
+/jscripts/htmlarea/popups/insert_image.php<br />
+look for this line:<br />
+{[b]function onOK() [/b] <br />
+and then below it, insert:<br />
+[b]f_alt = " ";[/b] <br />
+<br />
+cheers...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6122"></a>
+		<div class="forum-post-author">
+			<label class="title">sinus</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-21 01:43:12</p>
+            </div>
+            <div class="postheader"><h3>correction:</h3></div>
+				
+			<div class="body">
+				<p>correction:<br />
+[b]function onOK() {[/b]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

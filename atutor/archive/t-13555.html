@@ -1,0 +1,159 @@
+---
+ title: Error in sending email
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Error in sending email</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="13555"></a>
+		<div class="forum-post-author">
+			<label class="title">shineh</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-22 06:58:50</p>
+            </div>
+            <div class="postheader"><h3>Error in sending email</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - Windows NT 5.2<br />
+  version of ATutor - 1.6<br />
+  versions of php - 5.1.4<br />
+  version of mysq l - 5.0.45<br />
+  webserver & version - IIS<br />
+  <br />
+I want to send an email to all users but i see the error message below:<br />
+There was an error sending the email message. <br />
+<br />
+What is the problem? Is there any file for configuring SMTP server? I wanna send emails through special email account and SMTP server.<br />
+Please help me.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13556"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-04-22 08:19:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in sending email</h3></div>
+				
+			<div class="body">
+				<p>set SMTP in the system's php.ini file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13923"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-06-02 13:30:08</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in sending email</h3></div>
+				
+			<div class="body">
+				<p>ATutor: 1.6.<br />
+PHP: 5.2.6 <br />
+MySQL: 5.0.45-community <br />
+OS: Linux 2.6.18-53.1.4.el5 <br />
+<br />
+I have the same problem. No mail work on my installation (at subscription, remember the password, internal email). <br />
+<br />
+The strange thing is that on the same server I have another instalation where everything works OK. <br />
+<br />
+Thank you.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13924"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-06-02 13:42:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in sending email</h3></div>
+				
+			<div class="body">
+				<p>In the case of Linux, you can still use the SMTP setting in php.ini, but a better method would be to get a working version of Sendmail running on the server. ATutor does not have its own mailer program, but instead relies on the mailer installed on the server, or accessed through a remote SMTP server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="13927"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-06-02 20:17:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in sending email</h3></div>
+				
+			<div class="body">
+				<p>My ISP sayd that SMTP is Ok on the server. Please remenber that in the same server in other domain Atutor send mails OK.<br />
+<br />
+Any sugestion?<br />
+Thanks greg.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="13970"></a>
+		<div class="forum-post-author">
+			<label class="title">miguelnu</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-06-06 10:21:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Error in sending email</h3></div>
+				
+			<div class="body">
+				<p>My conclusion is that I am stupid. <br />
+Reviewing the forums the problem was the setting: <br />
+<br />
+define ( 'MAIL_USE_SMTP', false); <br />
+<br />
+in config.inc.php, Its must to be: <br />
+<br />
+define ( 'MAIL_USE_SMTP', true); (I'm not using sendmail)<br />
+<br />
+Although I do not know why the installation left the option "false" <br />
+<br />
+Thank you all and I try to be less stupid. :-)</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

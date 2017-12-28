@@ -1,0 +1,66 @@
+---
+ title: Using audiovideo media in tests
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Using audiovideo media in tests</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6697"></a>
+		<div class="forum-post-author">
+			<label class="title">tob55</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-25 19:53:28</p>
+            </div>
+            <div class="postheader"><h3>Using audiovideo media in tests</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+Mine is a simple question. I am using ATutor 1.5.0. Is it possible to use audio and video files in test? If so could you provide a sample script for link such a file to a file in my file manager? Thank you<br />
+<br />
+Wayne</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6703"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-12-26 08:46:52</p>
+            </div>
+            <div class="postheader"><h3>Re: Using audio/video media in tests</h3></div>
+				
+			<div class="body">
+				<p>You should be able to upload your audio/video into the file manager, if upload and course quota size limit allow it, then when creating question use the Insert function in the popup file manager to insert a link to the file into the question.<br />
+<br />
+Or, you could try uing the EMBED element to prevload the audio/video, something like the following. You will need to adjust the value of src, either pointing the link directly to the files in your file manager if the content/ directory is within your ATutor installation, or using get.php to represent the path to the files if your content/ directory is outside your ATutor installation. <br />
+<br />
+&lt;embed src="/content/8/my_start_page.mp3" autostart="false" hidden="true" volumn="8"   name="my_start_page"> <br />
+<br />
+or<br />
+<br />
+&lt;embed src="/get.php/my_start_page.mp3" autostart="false" hidden="true" volumn="8"   name="my_start_page"> <br />
+<br />
+You could also use the OBJECT element to embed the audio/video in your test questions.<br />
+<br />
+Search the web for different examples of EMBED and OBJECT.<br />
+<br />
+OBJECT<br />
+http://www.htmlhelp.com/reference/html40/special/object.html</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

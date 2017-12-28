@@ -1,0 +1,167 @@
+---
+ title: Paypal setup
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Paypal setup</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="15403"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-04 23:50:33</p>
+            </div>
+            <div class="postheader"><h3>Paypal setup</h3></div>
+				
+			<div class="body">
+				<p>I would appreciate if anyone can help me provide what type of paypal merchant account is needed for the Atutor payment module.<br />
+Paypal currently has website payment standard, payflow gateway and express check checkout options and i am not sure what type is compatable with aTutor payment module.<br />
+<br />
+Also should the buyer have a paypal account OR can he pay via creditcatd WITHOUT having paypal account ?<br />
+<br />
+Any info is appreciated</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15405"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-05 08:16:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal setup</h3></div>
+				
+			<div class="body">
+				<p>Buy Now Bottons<br />
+<br />
+See the module readme file<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/mods/ecomm/readme</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15464"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-09 23:11:58</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal setup</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+  I setup the PayPal customer account and updated the requirted info in the payment module. Paypal proivded me with a button for the course - i would appreciate if you can let me know where to place the html paypal button code.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15467"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-10 10:22:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal setup</h3></div>
+				
+			<div class="body">
+				<p>You don't need to use the button. Paste the URL as described in the read, into the payment admin screen</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15482"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-12 19:55:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal setup</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+  That works. Thanks.<br />
+<br />
+ONE FLOW QUESTION:<br />
+  IS there a setting in aTutort so the student is automatically directed to a payment screen when the student selects a private course instead of the "your request is made and you will be notified when approved" screen?<br />
+<br />
+IF NOT can we customize the message to let the student know to go to the payment screen to make a payment and get access to the course immediately?<br />
+<br />
+Thanks for your help,<br />
+  Sri</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15484"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-13 09:40:40</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal setup</h3></div>
+				
+			<div class="body">
+				<p>There isn't an option, but it might be a good one to add to a future version. Perhaps suggest it in the feature requests forum. You can edit the language for now to make it more descriptive of making a payment.<br />
+<br />
+Now that I look closer, there is a bug in the installer that does not install all the language for the module. You may be missing some feedback message and you may need to run the last 13 lines of the module.sql file again (correcting the 13th from the bottom).<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/mods/ecomm/module.sql<br />
+<br />
+thx</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15487"></a>
+		<div class="forum-post-author">
+			<label class="title">sadusumilli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-10-13 19:18:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Paypal setup</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg. I am able to modify the messages</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

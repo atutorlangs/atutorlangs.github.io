@@ -1,0 +1,198 @@
+---
+ title: Safe mode
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Safe mode</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="18638"></a>
+		<div class="forum-post-author">
+			<label class="title">EAJ</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-10 08:11:42</p>
+            </div>
+            <div class="postheader"><h3>Safe mode</h3></div>
+				
+			<div class="body">
+				<p>Hello!<br />
+<br />
+I've just reached the point where i am through and through with moodle, and found this LCMS and feel i'd really love to give it a go. Unfortunately this E#%#%"#&W#%#"&/&%/ host of mine uses safe mode = on and does not allow me to change php.ini nor .htacess.<br />
+<br />
+Are there any ways to fiddle with the atutor code, to circumvent the settingscheck when installing it? I can live with not uploading anything,as the classes i hold will be of a practical nature.<br />
+<br />
+Kindet regards,<br />
+<br />
+Erik</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18639"></a>
+		<div class="forum-post-author">
+			<label class="title">EAJ</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-10 08:26:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Safe mode</h3></div>
+				
+			<div class="body">
+				<p>Hmm i should probably have added that i'm trying to install the 1.6.3 edition.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18640"></a>
+		<div class="forum-post-author">
+			<label class="title">EAJ</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-10 08:26:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Safe mode</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18641"></a>
+		<div class="forum-post-author">
+			<label class="title">EAJ</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-10 08:28:09</p>
+            </div>
+            <div class="postheader"><h3>Re: Safe mode</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+Operating system ATutor is installed on -<br />
+Linux<br />
+<br />
+  ATutor version -<br />
+1.6.3<br />
+<br />
+  Patch #s applied -<br />
+none, clean install<br />
+  ATutor theme name -<br />
+eh, i havent managed to install the default yet<br />
+<br />
+  PHP version -<br />
+5.2.3<br />
+<br />
+  MySQL version -<br />
+5<br />
+  Webserver & version -<br />
+Apache II<br />
+<br />
+  Copies of error messages -<br />
+Installationscript says safe mode is ON and wont let me proceed.<br />
+<br />
+  Changes to default settings -<br />
+none<br />
+<br />
+  Web browser being used -<br />
+Firefox</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18642"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-10 08:34:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Safe mode</h3></div>
+				
+			<div class="body">
+				<p>You could potentially comment out the safemode check in install/index.php to get ATutor installed, but any functionality in the system that writes to the server would not function. ATutor is not intended to be used with safemode turned on.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18644"></a>
+		<div class="forum-post-author">
+			<label class="title">EAJ</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-10 08:54:48</p>
+            </div>
+            <div class="postheader"><h3>Re: Safe mode</h3></div>
+				
+			<div class="body">
+				<p>Perhaps incorporating FTP support would be a good idea then. Joomla used that as a work around for safe mode plaqued systems =)<br />
+<br />
+Anywya, i commented out the part you mentioned and it's working now, so thanks! =)<br />
+<br />
+//Erik</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18645"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-10 16:00:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Safe mode</h3></div>
+				
+			<div class="body">
+				<p>There are so few systems out there running now in safemode its hard to justify a budget for adding separate FTP support. If someone really wanted it, and wanted to fund its development, we'd add it, but otherwise its not on our list of things to do. It would be much cheaper to find another host that has safemode turned off.<br />
+<br />
+Safemode is really just for overly paranoid ISPs.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

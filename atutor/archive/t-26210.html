@@ -1,0 +1,107 @@
+---
+ title: Very odd behavior in Question Bank list
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Very odd behavior in Question Bank list</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="26210"></a>
+		<div class="forum-post-author">
+			<label class="title">chipwiegand</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-03-28 17:42:54</p>
+            </div>
+            <div class="postheader"><h3>Very odd behavior in Question Bank list</h3></div>
+				
+			<div class="body">
+				<p>I have many questions in my question bank. I edited one and added some code to provide an audio clip link for the test-taker to listen to. The code is good and the question displays properly, the audio works as expected. The problem: the question bank list now has two columns. The new, right column has only the question that immediately follows the edited question, and that right-column is not selectable with the checkbox.<br />
+If I remove the new code the Question Bank list returns to its normal single column.<br />
+I have attached a pic that shows the two columns, and below is the code for the question.<br />
+=========Question Code=================================<br />
+&lt;h3>Listen to the audio clip and choose the best option to complete the sentence.&lt;/h3><br />
+&lt;p>&lt;a href="../audio/A1_Units1-5_ReviewTest_Exercise_Q29_part2.mp3" title="A1_Units1-5_ReviewTest_Exercise_Q29_part2" onclick="window.open('../audio/A1_Units1-5_ReviewTest_Exercise_Q29_part2.mp3','A1_Units1-5_ReviewTest_Exercise_Q29_part2','width=200,height=100,left=200,top=100');return false;">&lt;img src="../images/audio.png" border="0" alt="audio icon" width="35" height="35" />&lt;/a>Click to listen to the audio clip.&lt;/p><br />
+&lt;p>The speakers are in a _____.&lt;/p><br />
+============================================<br />
+<br />
+Operating system ATutor is installed on -<br />
+ATutor version -2.2.2<br />
+Patch #s applied -0001, 0002, 0003, 0005, 0006, 0007, 0008<br />
+ATutor theme name - ATutor Classic<br />
+PHP version -5.4.45<br />
+MySQL version -5.6.33-cll-lve<br />
+Webserver & version - Linux 2.6.32-673.26.1.lve1.4.20.el6.x86_64<br />
+Web browser being used - Chrome</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26217"></a>
+		<div class="forum-post-author">
+			<label class="title">chipwiegand</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-03-29 12:25:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Very odd behavior in Question Bank list</h3></div>
+				
+			<div class="body">
+				<p>I thought I would provide one more screenshot - this time you can see there are now four columns. I have added the code for the listening audio clip to four questions, as you can see in the screenshot text.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="26218"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-03-29 12:59:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Very odd behavior in Question Bank list</h3></div>
+				
+			<div class="body">
+				<p>Script is not allowed in test questions. My guess is it is failing on the quotes, which need to be escaped before going into the db, thus breaking the script.<br />
+<br />
+Won't be able to look into this for a while. You can track the issue in the bug tracker.<br />
+<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=5778</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="26236"></a>
+		<div class="forum-post-author">
+			<label class="title">chipwiegand</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2017-04-02 15:25:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Very odd behavior in Question Bank list</h3></div>
+				
+			<div class="body">
+				<p>Just an FYI: I edited the database entry for one of the "problem" questions by escaping, with the \ in front of all the ", but that made no difference, had no effect at all. Then I went back in and escaped all the single quotes, but that also had no effect at all.<br />
+<br />
+The only problem this causes is in the list in the question bank. The script itself works fine on the finished web page. The list of questions listed under the full test is displayed correctly.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,364 @@
+---
+ title: Can not delete file from File Storage
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Can not delete file from File Storage</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25395"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-24 02:39:17</p>
+            </div>
+            <div class="postheader"><h3>Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+In File Storage, when I select a file and click on delete button, the File Storage page appears with only the title and there is no message. When I check again, the file has not been deleted. Could you help me fix it.<br />
+<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25397"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-24 10:03:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>I'm not able to reproduce this. Files seem to delete as they should on our systems.<br />
+<br />
+Try on the demo site to see if you can reprodcue there.<br />
+http://www.atutor.ca/atutor/demo.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25400"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-25 10:46:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+I tried demo. It worked there. But in my atutor 2.2 its not working. Attached image shows what I get after doing delete action.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25401"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-25 10:59:53</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>It is difficult to say what the problem is exactly, but I might guess it is a server based file permissions issue on the content directory. See if you can delete file uploaded to the Manage>File Manager when logged in as an instructor.<br />
+<br />
+I'd suggest you mention the issue to your system administrator, who should be able to reset the permissions described in the installation instructions, and during the installation steps in the installer.<br />
+<br />
+http://www.atutor.ca/atutor/docs/installation.php#fresh<br />
+<br />
+We need more detail about the system ATutor is running on, to help further. See the default text you deleted when posting a message here.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25402"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-26 00:48:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -Ubuntu 14.04.1<br />
+  ATutor version - 2.2<br />
+  Patch #s applied - 0001, 0002, 0003, 0004, 0005, 0006, 0007, 0008, 0009, 0010, 0011, 0012, 0013, gg0005<br />
+  ATutor theme name - Atutor (default directory)<br />
+  PHP version - 5.5.9-1ubuntu4.5<br />
+  MySQL version - 5.5.41-0ubuntu0.14.04.1<br />
+  Webserver & version - Apache/2.4.7<br />
+  Copies of error messages - there is no error message<br />
+  Changes to default settings - 'Require Email Confirmation Upon Registration' set to enabled<br />
+  Web browser being used - Firefox 38.0.1<br />
+  ...and anything else relevant -<br />
+<br />
+Hello,<br />
+I check Manage-> File Manager as you suggested, deleting files is fine there. In file storage after I click on 'Delete' button, it supposed to display the message says 'Are you sure to delete ...', but it even does not shows this message. So I think it seems not to be file permession. <br />
+<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25404"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-26 12:55:24</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>I'd suggest taking a look at the tail of the error log after attempting to delete a file to see if it give you any indication where the problem is occuring. <br />
+<br />
+Unbuntu error log etails<br />
+http://askubuntu.com/questions/14763/where-are-the-apache-and-php-log-files<br />
+<br />
+Your system details look fine. Nothing there that might suggest a reason for the blank screen.<br />
+<br />
+When you installed ATutor, did you upload the ATutor bundle and unzip it on the server, or did you unzip it on your computer then upload all the file? The latter sometimes results in seamingly random errors like this, that can't be reprodcued elsewhere.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25405"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-26 15:01:56</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>If you uploaded the unzipped files from your computer, instead of uploading the bundle and unzipping, That could very well explain the issues you've been having. <br />
+<br />
+http://www.atutor.ca/atutor/docs/faq.php#2<br />
+<br />
+The only thing we can suggest, is reinstalling ATutor, uploading the bundle and unzipping on the server. Otherwise as you encounter issues review the php error log, and edit the files to correct the issue it reports (if you are able).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25406"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-30 01:20:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+For solving this problem I did check the trail of PHP and Apache log files, after occuring the problem. But there no log is added by happening this problem. I even set display_errors=On in php.ini and there is no error in web too. <br />
+So I wanted to try the SynkBack you suggested in atutor FAQ. This software seems to all be about backing up the systems, How this is helpful for me to see what files are downgraded in my atutor system?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25407"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-31 03:18:32</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+I installed Atutor 2.2 on another server with folowing information.<br />
+<br />
+  Operating system ATutor is installed on - centos-6-x86<br />
+  ATutor version - 2.2<br />
+  Patch #s applied - nothing<br />
+  ATutor theme name - Atutor (default)<br />
+  PHP version - 5.2.17<br />
+  MySQL version -  5.0.96<br />
+  Webserver & version - apache 2<br />
+  Copies of error messages - nothing<br />
+  Changes to default settings - nothing<br />
+  Web browser being used - Firefox 38.0.1<br />
+  ...and anything else relevant -<br />
+<br />
+This time I unpacked atutor on the server with no change, and I still have the same problem for deleting file from file storage. You can check it using this link 'http://iinetwork.org/elearning/ATutor/login.php' with username: user1 and password: user1<br />
+<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25408"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-05-31 10:44:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>I would suggest you do some debugging. You can enable debugging by uncommenting the AT_DEVEL line and changing the value from 0 to 1, in the include/vitals.inc.php file <br />
+<br />
+define('AT_DEVEL', 1);<br />
+<br />
+You can then embed the debug() function in the mods/_standard/file_storage/index.php file throughout the delete file section (around lines 266 to 331), and add the various variables as the value for the function to see what it outputs. The confirmation message at 285 is not appearing, so the issue is probably somewhere just before that.<br />
+<br />
+e.g. debug($_GET['files']); exit;<br />
+<br />
+You can then trace back from there, to determine where the problem occurs. Also keep an eye on the php error log for clues as you debug.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25409"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-01 07:13:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+Thank you. <br />
+According to debug I did, the code generates the confirm message correctlly, but it does not display it.  And the error happens somewhere in header.inc.php file which is included in code (line 298) before message gets printed. Because when I remove this line (298) the confirm message appears in the screen. It seems that this file deletes the confirm message.<br />
+I still don't know where this happens in "include/header.inc.php" file. If you guess please let me know. Atthached shows the message when header.inc.php is not included.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25412"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-03 11:57:18</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+The source error for deleting file in 'file storage' lies in the line 356 of header.tmpl.php. This line define another $msg varible which I think is conflicted with the one in 'mods\_standard\file_storage\index.php'.<br />
+<br />
+When I convert the line 356 of header.tmpl.php to comment(I mean remove it from code), the problem is being solved, but I lose the normall global messages in the system such as successfully login, successfully logout, successfully file deletion, ...<br />
+<br />
+Would you please help me how to distinguish between these messages in Atutor source code and solve the problem.<br />
+<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25414"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-06 12:21:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage- Problem Solved</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+In file 'ATutor\include\classes\Message\Message.class.php' which defines the Message class, the function 'printAll()' does not print 'confirm' type message. I added the line:<br />
+$this->printAbstract('confirm');<br />
+in function 'printAll()' of 'Message.class.php' file. Since this function is being called in 'header.tmpl.php' it now print the confirm message when you delete file in file storage. and it works. :)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25417"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-08 09:48:51</p>
+            </div>
+            <div class="postheader"><h3>Re: Can not delete file from File Storage- Problem Solved</h3></div>
+				
+			<div class="body">
+				<p>We've made a note of your find. thx.<br />
+<br />
+http://atutor.ca/atutor/mantis/view.php?id=5588</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

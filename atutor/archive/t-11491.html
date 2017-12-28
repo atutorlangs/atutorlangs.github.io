@@ -1,0 +1,148 @@
+---
+ title: French Language Pack Slows ATutor
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <strong><a href="exported_forum8.html">8</a></strong> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>French Language Pack Slows ATutor</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="11491"></a>
+		<div class="forum-post-author">
+			<label class="title">islander</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-27 09:21:02</p>
+            </div>
+            <div class="postheader"><h3>French Language Pack Slows ATutor</h3></div>
+				
+			<div class="body">
+				<p>System Specs are below:<br />
+<br />
+operating system - 2003 Microsoft Server<br />
+version of ATutor - 1.5.4<br />
+versions of php - 5.0.4<br />
+version of mysq l - 4.0.24<br />
+webserver & version - Apache/1.3.33 (win32) PHP/5.04<br />
+web browser being used - Internet Explorer 6<br />
+<br />
+Language Pack - French UTF-8<br />
+<br />
+Installation of French Language in ATutor version 1.5.3.3 and 1.5.4 caused the system to slow to an average of 16 seconds per page load on our system.  (usual page load takes 5-6 seconds on our system)<br />
+<br />
+Question 1.  Has anyone else experienced this problem?  Is there a fix?<br />
+<br />
+Question 2.  ATutor has been installed on a testing server with rather limited processing/RAM.  Do you have a minimum recommended server hardware spec.?  Our lines are fibre - what would be an expected average page load time with your recommended server hardware? [Need rationale for which production server to use ... "Best Available" would not be of use since everyone wants "the newest; highest" for their applications]<br />
+<br />
+Question 3.  If you had your preference, would you install on Windows or Linux server?  (We have both)<br />
+<br />
+Question 4.  We have 400 registered instructors on the ATutor system (mostly from instruction and awareness sessions).  Teacher "early adopters" are creating their own workspaces .. is there a point where ATutor performance will start to decline?  (Assuming that ample hard drive space is available on the server to support growing user base).<br />
+<br />
+Thanks in advance for the information that will enable us to expand our ATutor implementation.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11492"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-08-27 10:36:39</p>
+            </div>
+            <div class="postheader"><h3>Re: French Language Pack Slows ATutor</h3></div>
+				
+			<div class="body">
+				<p>Even 5-6 seconds is more time than it should take. It should not be more like 2-3 seconds max. Are you experiencing the same trouble with other languages?<br />
+<br />
+Have you tried converting the language pack to an ISO character set. See the conversion utility if you want to try that. Ignore the statement about using non UTF-8 packs.<br />
+<br />
+http://www.atutor.ca/atutor/translate/convert.php<br />
+<br />
+2. ATutor should run with minimal hardware requirements, though you may have trouble if instructors are all logged in at once. If you are planning  to setup a production system, then you will need some power in the hardware, to handle heavy traffic. <br />
+<br />
+3. Definately Linux for a production system, but Windows is fine for a test system.<br />
+<br />
+4. 400 instructors should be no problem. The main issue is users logged in at the same time, accessing pages simultaneously. With 400 instructors, you might have 20,000 students. You might experience load at the beginning a semester, when everyone tries to enter the system at once, but once that levels out, ATutor should run effectively even on low end hardware. We have several 20,000 student systems, none of which have evre presented any load problems.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11771"></a>
+		<div class="forum-post-author">
+			<label class="title">islander</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-27 09:36:21</p>
+            </div>
+            <div class="postheader"><h3>Re: French Language Pack Slows ATutor</h3></div>
+				
+			<div class="body">
+				<p>Thanks for the information, Greg.<br />
+<br />
+I have had great news in that our ATutor installation has been approved for upgrade.  So we will be re-checking the French Language problem after that.<br />
+<br />
+My server support group has a couple of questions.  The test server had 4 X 18 Gig hard drives.  Is that going to be sufficient space for a 20,000 to 30,000 student user base?  If not, what may be a ball park estimate assuming low - moderate multimedia content delivery and file storage usage.<br />
+<br />
+Would the hard drives have a NTFS file structure?<br />
+<br />
+Looking forward to your reply.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="11774"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-27 11:57:44</p>
+            </div>
+            <div class="postheader"><h3>Re: French Language Pack Slows ATutor</h3></div>
+				
+			<div class="body">
+				<p>If you're going to be running multimedia you'll probably want more space than 72Gig.  Though if you kept your MM in another location (like on YouTube), 72 would be enough to keep you going for a few years. But with the price of disk space these days, it wouldn't hurt to have a couple hundred Gig around. You can always add more space later.<br />
+<br />
+I'm not sure how file structure applies.  ATutor works with any file system. If you're planning on using a Windows NT server, I'd suggest instead using Linux for your production system.  PHP on Linux performs better.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="11779"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-09-28 03:13:56</p>
+            </div>
+            <div class="postheader"><h3>Re: French Language Pack Slows ATutor</h3></div>
+				
+			<div class="body">
+				<p>Hi Islander<br />
+i'm locking for the french version of ATutor 1.5.5. As I see in the translation section there is not much missing. It would be great if someone can finish it.<br />
+A big thanks<br />
+Thomas</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

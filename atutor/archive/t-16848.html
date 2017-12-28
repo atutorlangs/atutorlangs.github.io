@@ -1,0 +1,237 @@
+---
+ title: Warnings
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Warnings</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="16848"></a>
+		<div class="forum-post-author">
+			<label class="title">alecriai</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-05 19:24:11</p>
+            </div>
+            <div class="postheader"><h3>Warnings</h3></div>
+				
+			<div class="body">
+				<p>Things to describe: <br />
+  Operating system ATutor is installed on - winxp<br />
+  ATutor version - 1.6.2<br />
+  Patch #s applied - all<br />
+  ATutor theme name - Default<br />
+  PHP version - 5.2.8<br />
+  MySQL version - 5.0.51a-community<br />
+  Webserver & version - Apache	2.2.11 (Unix)<br />
+  Web browser being used - Firefox 3.0.7<br />
+  ...and anything else relevant -<br />
+<br />
+Trying to host on netsons (its settings are above), at login I see following warnings:<br />
+<br />
+++++++<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/chatacce/public_html/include/vitals.inc.php on line 137<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 73<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 156<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 156<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 156<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 156<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 170<br />
+<br />
+Warning: reset() [function.reset]: Passed variable is not an array or object in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 198<br />
+<br />
+Warning: current() [function.current]: Passed variable is not an array or object in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 199<br />
+<br />
+Warning: current() [function.current]: Passed variable is not an array or object in /home/chatacce/public_html/include/classes/Language/LanguageManager.class.php on line 204<br />
+There are no languages installed!<br />
++++++<br />
+<br />
+Thanks!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16851"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 09:06:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Warnings!</h3></div>
+				
+			<div class="body">
+				<p>It looks like the mysql connection information is incorrect. Make sure your login/password for mysql are right.<br />
+<br />
+Or, try installing again. Maybe something broke during your first attempt.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16853"></a>
+		<div class="forum-post-author">
+			<label class="title">alecriai</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 10:28:00</p>
+            </div>
+            <div class="postheader"><h3>Re: Warnings!</h3></div>
+				
+			<div class="body">
+				<p>I already tried more than 1 installation. And I'm sure that login-pass are correct.<br />
+<br />
+About the warnigs, my doubts are about the at_config table and the tables about languages.<br />
+Furthermore, I'm not sure about the correct format for the content_dir:<br />
+<br />
+define('AT_CONTENT_DIR', '/home/chatacce/public_html/content/');<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16854"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 11:08:26</p>
+            </div>
+            <div class="postheader"><h3>Re: Warnings!</h3></div>
+				
+			<div class="body">
+				<p>On windows it should be something like:<br />
+<br />
+<br />
+<br />
+'C:\\xampp\\htdocs\\ATutor_162\\content\\'</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16855"></a>
+		<div class="forum-post-author">
+			<label class="title">alecriai</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 11:15:45</p>
+            </div>
+            <div class="postheader"><h3>Re: Warnings!</h3></div>
+				
+			<div class="body">
+				<p>Consider that it's a remote folder...</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16857"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 11:19:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Warnings!</h3></div>
+				
+			<div class="body">
+				<p>Remote folder? You can't have a remote content folder.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16858"></a>
+		<div class="forum-post-author">
+			<label class="title">alecriai</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 11:26:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Warnings!</h3></div>
+				
+			<div class="body">
+				<p>I mean the content folder for the web hosted atutor.<br />
+I think I dont have clear ideas about this issue  :) How can I use content folder in this case?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="16859"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 12:18:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Warnings!</h3></div>
+				
+			<div class="body">
+				<p>I'm not sure what you mean. <br />
+<br />
+Have you tried a path to the content dir like the one I suggested?<br />
+<br />
+See the installation instructions if you are not sure.<br />
+<br />
+http://www.atutor.ca/atutor/docs/installation.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="16860"></a>
+		<div class="forum-post-author">
+			<label class="title">alecriai</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-03-06 22:04:01</p>
+            </div>
+            <div class="postheader"><h3>Re: Warnings!</h3></div>
+				
+			<div class="body">
+				<p>Thanks for your help, I think now it's ok.<br />
+Anyway, it works only using a remote path for the content folder, a local path gives me an error...</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,145 @@
+---
+ title: cant install as safemode is on whens its not
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>cant install as safemode is on whens its not</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19247"></a>
+		<div class="forum-post-author">
+			<label class="title">benpilarski</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-17 03:49:50</p>
+            </div>
+            <div class="postheader"><h3>cant install as safemode is on whens its not</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+Bascially i can't install atutor as it says <br />
+"safe_mode = Off" Detected as On  <br />
+When its acutally not, you can verify by visiting <br />
+http://learn.invisionuni.com/phpinfo.php<br />
+<br />
+I have contacted my host and they have done all they can and have verfifed that its off. So not sure what to do.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - linux<br />
+  ATutor version - 1.6.3<br />
+  Patch #s applied - n/a<br />
+  ATutor theme name - n/a<br />
+  PHP version - 5.2.10<br />
+  MySQL version - 5.0.83<br />
+  Webserver & version - plesk 9.2.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19250"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-17 10:20:20</p>
+            </div>
+            <div class="postheader"><h3>Re: can't install as</h3></div>
+				
+			<div class="body">
+				<p>This is not something we've ever seen happen before. I don't now where to point you. Here's the code that checks for safemode. It may be a issue with the particular version of PHP being used. <br />
+<br />
+[php]<br />
+<br />
+&lt;td>&lt;kbd>safe_mode = Off&lt;/kbd>&lt;/td><br />
+			&lt;td>&lt;?php if (ini_get('safe_mode')) {<br />
+							echo 'On&lt;/td>&lt;td align="center">'; <br />
+							echo $bad;<br />
+							$no_good = TRUE;<br />
+						} else {<br />
+							echo 'Off&lt;/td>&lt;td align="center">';<br />
+							echo $good;<br />
+						} ?>&lt;/td><br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19262"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-18 10:10:45</p>
+            </div>
+            <div class="postheader"><h3>Re: can't install as</h3></div>
+				
+			<div class="body">
+				<p>Can you attach a screenshot on the error?  Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19272"></a>
+		<div class="forum-post-author">
+			<label class="title">benpilarski</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-18 22:36:37</p>
+            </div>
+            <div class="postheader"><h3>Re: can't install as</h3></div>
+				
+			<div class="body">
+				<p>Hey thaanks for the replies, really do appreciate it.<br />
+<br />
+I have created and uploaded the files that you wanted greg http://learn.invisionuni.com/check1.php however it brings up a HTTP 500 Internal Server Error.<br />
+<br />
+here is a link to the screenshot harris requested.<br />
+http://learn.invisionuni.com/installerror.PNG<br />
+<br />
+And the php info file is still located at;<br />
+http://learn.invisionuni.com/phpinfo.php<br />
+<br />
+Thanks heaps,<br />
+<br />
+Ben</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19273"></a>
+		<div class="forum-post-author">
+			<label class="title">benpilarski</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-18 22:39:16</p>
+            </div>
+            <div class="postheader"><h3>Re: can't install as</h3></div>
+				
+			<div class="body">
+				<p>Sorry I forgot to mention i removed 1.6.3 completly and uploaded 1.6.4 and it sill displays the same message.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

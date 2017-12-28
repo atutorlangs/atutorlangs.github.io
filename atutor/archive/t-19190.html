@@ -1,0 +1,95 @@
+---
+ title: How can set My language as default
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>How can set My language as default</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19190"></a>
+		<div class="forum-post-author">
+			<label class="title">leobee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-03 22:44:56</p>
+            </div>
+            <div class="postheader"><h3>How can set My language as default</h3></div>
+				
+			<div class="body">
+				<p>ATutor version - 1.6.3<br />
+ <br />
+<br />
+I have set the "System Preferences" ->"Default Language" ->"hinese simplified",but when student open the home page,it show english yet.Every time,We must Change the index page on the bottom, "Translate to: Chinese Simplified | English".How Can i set my language as default when people open the home page.Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19191"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-03 23:07:48</p>
+            </div>
+            <div class="postheader"><h3>Re: How can set My language as default</h3></div>
+				
+			<div class="body">
+				<p>You can disable English, or set the language in your Preference settings. The user preference overrides the system setting.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19192"></a>
+		<div class="forum-post-author">
+			<label class="title">leobee</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-04 00:13:32</p>
+            </div>
+            <div class="postheader"><h3>Re: How can set My language as default</h3></div>
+				
+			<div class="body">
+				<p>I have set the language in My Preference settings as default,but it show english in home page at first time.<br />
+Where I can disable english? I only delete the english in Preference settings,but when I open the home page,it noted "There are no language installed".</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19199"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-12-07 10:18:58</p>
+            </div>
+            <div class="postheader"><h3>Re: How can set My language as default</h3></div>
+				
+			<div class="body">
+				<p>There's a bug in the 1.6.3 language manager that causes the no languages found error, which has since been fixed. You could try replacing the file with a fresh copy from the code repository to see if that helps.<br />
+<br />
+http://atutorsvn.atrc.utoronto.ca/repos/atutor/trunk/docs/include/classes/Language/LanguageManager.class.php<br />
+<br />
+Once you've replaced the file, you should be able to delete English. There is no disable. My mistake.<br />
+<br />
+FYI, there are three levels off language settings. The default system setting, the course setting for displaying courses in a particular language, and the user setting. The latter settings override the former settings.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

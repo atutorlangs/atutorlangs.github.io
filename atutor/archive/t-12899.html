@@ -1,0 +1,248 @@
+---
+ title: UTF8 not all converted
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <strong><a href="exported_forum7.html">7</a></strong> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>UTF8 not all converted</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="12899"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 00:56:28</p>
+            </div>
+            <div class="postheader"><h3>UTF8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>After ubgrading from version 1.5.5 to 1.6 a lot of the database has not been converted to UTF-8<br />
+I think I made a mistake at the upgrade<br />
+Is it possible to do it again wthout doing a roll back?<br />
+My problem is, the roll back is not so ease because it is on our company server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12906"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-20 17:36:52</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>We know about tables not being converted. It should not be a problem for the time being. And, module tables are not being converted. <br />
+<br />
+You shouldn't have any trouble.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12910"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-21 00:22:24</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>Is there a possibilitie to convert the existing tables on a easy way?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12923"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-21 12:37:04</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>We'll issue a patch soon, which you'll be able to run with the new Patcher module about to be released.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12944"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-25 08:45:42</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>I just tryed the convertion tool but it dit not run<br />
+<br />
+I created a directory caled utf8 and I uploaded the files.<br />
+<br />
+As I was calling the index.php the following error came up:<br />
+<br />
+Warning: main(../../include/vitals.inc.php): failed to open stream: No such file or directory in /home/www/web16/html/ATutor/utf8/index.php on line 3<br />
+<br />
+Warning: main(../../include/vitals.inc.php): failed to open stream: No such file or directory in /home/www/web16/html/ATutor/utf8/index.php on line 3<br />
+<br />
+Fatal error: main(): Failed opening required '../../include/vitals.inc.php' (include_path='.') in /home/www/web16/html/ATutor/utf8/index.php on line 3<br />
+<br />
+Wha is wrong?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12946"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-25 09:32:36</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+Are you trying to use module "utf8conv"? If you are, it has to be installed as a module before using it.<br />
+<br />
+Steps:<br />
+<br />
+1. download module file "utf8conv.tar.gz" and unzip. the unzipping will create a folder "utf8conv" with all scripts in<br />
+<br />
+2. copy the folder into ATutor "mods" folder. If your ATutor is installed at "/home/www/web16/html/ATutor/", copy "utf8conv" into "/home/www/web16/html/ATutor/mods/"<br />
+<br />
+3. login ATutor as administrator, click "Install Modules", select "utf8conv", click button "Install"<br />
+<br />
+4. Once installed, select module "UTF8 Conversion", click "Enable"<br />
+<br />
+5. now the module is installed and enabled. you will have a new tab "UTF8 Conversion". Go ahead and enjoy!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12959"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-26 07:53:18</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>Thanks Now I installed it as module<br />
+<br />
+Now I tryed to convert one file but it did'nt run<br />
+<br />
+Fatal error: Call to undefined function: strripos() in /home/www/******/html/training/cont/mods/utf8conv/utf8conv.php on line 154<br />
+<br />
+cont/mods/utf8conv/index_instructor.php<br />
+<br />
+Thanks for you Help</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12960"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-26 08:38:38</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+It's because your PHP version is lower than 5.0. Function strripos() is provided from PHP5.<br />
+<br />
+I've modified the script "utf8conv.php" a little bit to apply to PHP4, as attached. Please download it and replace your current "/home/www/******/html/training/cont/mods/utf8conv/utf8conv.php"<br />
+<br />
+Hope this would help.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="12963"></a>
+		<div class="forum-post-author">
+			<label class="title">ipool</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-27 02:15:04</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>Thanks a lot<br />
+it runns now<br />
+I've still a little problem<br />
+When I export a existing course and import it again, the test results are gone.<br />
+Is there a way to import a backup without deleting the results</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="12965"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-02-27 08:36:51</p>
+            </div>
+            <div class="postheader"><h3>Re: UTF-8 not all converted</h3></div>
+				
+			<div class="body">
+				<p>Backups are just the content and structure of a course. Data is not included.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

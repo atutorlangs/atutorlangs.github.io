@@ -1,0 +1,110 @@
+---
+ title: Include error on newly upgraded 163
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Include error on newly upgraded 163</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18654"></a>
+		<div class="forum-post-author">
+			<label class="title">vfrancois</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-14 01:39:11</p>
+            </div>
+            <div class="postheader"><h3>Include error on newly upgraded 163</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I'm back to Atutor with a 1.5.5 installation from a first host that I moved and upgraded successfully on my local webserver.<br />
+<br />
+But, when I put all the stuff on a new remote host, I get some include error (see below) opening the login page.<br />
+http://209.44.119.172/~vfpasse/atutor/login.php<br />
+<br />
+I cannot understand why it is wrong here and right with both the previous host and my local Server.<br />
+The included file does exist at the right place.<br />
+<br />
+I suspect something related to the fact that the to be included file is called from include/vitals.inc.php and the include instruction is <br />
+   <br />
+    require(AT_INCLUDE_PATH . '../themes/' . $_SESSION['prefs']['PREF_THEME'] . '/theme.cfg.php');<br />
+ <br />
+and AT_INCLUDE_PATH values "include/" himself...<br />
+<br />
+Any idea would be very appreciated.<br />
+<br />
+Thank you<br />
+<br />
+<br />
+PHPInfo : http://209.44.119.172/~vfpasse/phpinfo.php<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - Unix<br />
+  ATutor version - 1.6.3<br />
+  Patch #s applied - None<br />
+  ATutor theme name - scrhibe<br />
+  PHP version - 5.2.10<br />
+  MySQL version - 5.0.81-community<br />
+  Webserver & version - Apache 	2.2.11 (Unix)<br />
+  Copies of error messages -<br />
+Warning: require(include/../themes/scrhibe/theme.cfg.php) [function.require]: failed to open stream: No such file or directory in /home/vfpasse/public_html/atutor/include/vitals.inc.php on line 257<br />
+<br />
+Warning: require(include/../themes/scrhibe/theme.cfg.php) [function.require]: failed to open stream: No such file or directory in /home/vfpasse/public_html/atutor/include/vitals.inc.php on line 257<br />
+<br />
+Fatal error: require() [function.require]: Failed opening required 'include/../themes/scrhibe/theme.cfg.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/vfpasse/public_html/atutor/include/vitals.inc.php on line 257<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18658"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-14 08:51:59</p>
+            </div>
+            <div class="postheader"><h3>Re: Include error on newly upgraded 1.6.3</h3></div>
+				
+			<div class="body">
+				<p>I suspect the file, and probably its directory, are not readable. Check the permissions on you themes directory. it should be set to 755.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18659"></a>
+		<div class="forum-post-author">
+			<label class="title">vfrancois</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-09-14 11:56:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Include error on newly upgraded 1.6.3</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+You're right greg!  It's the therme's subfolder that was restricted to 740 instead of 755.<br />
+<br />
+Thank you so much!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

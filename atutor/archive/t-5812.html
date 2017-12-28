@@ -1,0 +1,62 @@
+---
+ title: zero sized reply problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>zero sized reply problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5812"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-14 03:52:31</p>
+            </div>
+            <div class="postheader"><h3>zero sized reply problem</h3></div>
+				
+			<div class="body">
+				<p>hi, <br />
+<br />
+get this (HTTP) error message when trying to upload any SCO over 10 mb:<br />
+<br />
+Zero Sized Reply<br />
+Squid did not receive any data for this request.<br />
+<br />
+I think this has something to do with our firewall [1], but  please enlighten me if you can.. also, when I look at the server I can see the file in a tmp folder, but it still doesn't show up as a SCO in Atutor. <br />
+<br />
+is there any possibility to uplolad the file via ftp to bypass this problem? I have tried to upload it to the server and specify the URL in the import package page, but get this error:<br />
+<br />
+You did not select a file to upload.<br />
+<br />
+1. http://www.squid-cache.org/Doc/FAQ/FAQ-11.html#ss11.51<br />
+<br />
+(atutor 1.5.1, apache 2, recommended mysql and php)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5813"></a>
+		<div class="forum-post-author">
+			<label class="title">vegard</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-14 04:27:35</p>
+            </div>
+            <div class="postheader"><h3>actually...</h3></div>
+				
+			<div class="body">
+				<p>solving my own problems here, our Squid settings were fine, but we solved the problem by increasing the post time in php from 30 seconds to two minutes..</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

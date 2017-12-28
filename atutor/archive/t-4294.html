@@ -1,0 +1,117 @@
+---
+ title: siteroot  page not found
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>siteroot  page not found</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4294"></a>
+		<div class="forum-post-author">
+			<label class="title">Vassago</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-12 04:39:49</p>
+            </div>
+            <div class="postheader"><h3>siteroot  page not found</h3></div>
+				
+			<div class="body">
+				<p>I have this problem now wich has cost me a lot of time. I've installed ATutor three times now. the first two in a sub-directory of a main website, the third time i gave it a own website. <br />
+The problem is that i keeps saying that it cannot find the page. After the first two installations (all succesfull) it should be redirected to the login.php page. but i see a lot of redirections happening but eventually it ended in a "no page found" error.<br />
+The third time (with own website, not a sub-directory) it actually found the login.php after a succesfull installation. but every link a clicked on ended up again in a "no page found" error. Also i saw that the StyleSheet wasn't loaded for the login page, cause everything was Times New Roman.<br />
+I think that ATutor uses the relative root-directory that starts from the document root of a website.<br />
+for example, if you use /include/config.inc.php it should search the file from the root of the website. I think that in my case it is not starting at the root but at the place it is processing it's page. so it works relative from the page place, not from the website root. that's probably why it can't find it's file's.<br />
+Offcourse it can also be something completly different.<br />
+But does anyone know how to fix this problem. I have full access to the server, so if i have to reconfigure the server that'll be no problem.<br />
+Below are the tech-specs.<br />
+<br />
+Things to describe: <br />
+  operating system -<br />
+  Server: Win2003 SP1 Webedition<br />
+  version of ATutor -<br />
+  ATutor 1.4.3<br />
+  versions of php -<br />
+  PHP 5.0.3<br />
+  version of mysq l -<br />
+  MySQL 4.1.10<br />
+  webserver & version -<br />
+  IIS 6.0 (Default Win2003 webedition webserver)<br />
+  copies of error messages -<br />
+  "No page found"<br />
+  changes to default settings -<br />
+  None<br />
+  web browser being used -<br />
+  IE 6.0<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4297"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-12 08:33:52</p>
+            </div>
+            <div class="postheader"><h3>IIS Issues</h3></div>
+				
+			<div class="body">
+				<p>There have been similar problems reported by others using IIS. IIS support for PHP leaves lot to be desired. If you are planning on setting up a production installation of ATutor, you should probably be using Apache 1.3.<br />
+<br />
+We do not have an IIS webserver available to reproduce the problems, so there's not much help we can offer.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="4301"></a>
+		<div class="forum-post-author">
+			<label class="title">Vassago</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-12 08:51:55</p>
+            </div>
+            <div class="postheader"><h3>Specification</h3></div>
+				
+			<div class="body">
+				<p>I already thought this was a IIS issue, but it have cost me a lot of expensive time to find this out. Perhaps i can give an advise; please notice this problem on the specification page, so no-one else will end up fixin' the problem at the wrong place.<br />
+Thankx for you response anyway.<br />
+<br />
+B.T.W. i'm conducting an research about open-source ELE's(Electronic Learning Enviroment) and i am sorry to say that Moodle hasn't got his problem's ;) <br />
+But that's just to stir things up..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4302"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-12 09:13:10</p>
+            </div>
+            <div class="postheader"><h3>Duly Noted</h3></div>
+				
+			<div class="body">
+				<p>Though we do recommend using Apache 1.3 in the requirements, we don't specifiy that other webservers are unlikely to provide the same performance as Apache. I've added a note about webservers to warn future users that all webservers are not created equal.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

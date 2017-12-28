@@ -1,0 +1,161 @@
+---
+ title: port atutor to subdomain
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>port atutor to subdomain</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22657"></a>
+		<div class="forum-post-author">
+			<label class="title">Nidiots</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-15 05:12:20</p>
+            </div>
+            <div class="postheader"><h3>port atutor to subdomain</h3></div>
+				
+			<div class="body">
+				<p>I installed Atutor 2.0.3 on my server  http://my_server.com/atutor<br />
+<br />
+now i have created a subdomain  http://atutor.my_server.com and point that to atutor directory<br />
+but now i can't access this <br />
+because when i write  http://atutor.my_server.com<br />
+<br />
+it take me to http://atutor.my_server.com/atutor/login.php<br />
+<br />
+and that not exist.. actually my server does't support .htaccess <br />
+so how can i do this..</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22658"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-15 08:52:59</p>
+            </div>
+            <div class="postheader"><h3>Re: port atutor to subdomain</h3></div>
+				
+			<div class="body">
+				<p>I'm not sure which web server you are using, but there should be a document root value that needs to be set to the root directory of your ATutor installation.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22659"></a>
+		<div class="forum-post-author">
+			<label class="title">Nidiots</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-15 10:10:42</p>
+            </div>
+            <div class="postheader"><h3>Re: port atutor to subdomain</h3></div>
+				
+			<div class="body">
+				<p>Actually i am hosting this on yahoo server which is apache.<br />
+i install this /edu folder. i can access this using my <br />
+http://nidiots.co.in/edu<br />
+now i created a subdomain edu.nidiots.co.in  but and point that to /edu folder  .. now when i am using this as <br />
+edu.nidiots.co.in   it shows me  no page found error because it change to edu.nidiots.co.in/edu/login.php<br />
+<br />
+i am thinking to change $_base_href and $_base_path<br />
+<br />
+ to exat point to this?<br />
+pls suggest me more pls?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22660"></a>
+		<div class="forum-post-author">
+			<label class="title">Nidiots</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-15 11:28:19</p>
+            </div>
+            <div class="postheader"><h3>Re: port atutor to subdomain</h3></div>
+				
+			<div class="body">
+				<p>As greg i just want that my url  http://nidiots.co.in/edu/<br />
+<br />
+become http://edu.nidiots.co.in<br />
+ i tried to change constant.inc.php  but it does't work</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22665"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-16 14:28:37</p>
+            </div>
+            <div class="postheader"><h3>Re: port atutor to subdomain</h3></div>
+				
+			<div class="body">
+				<p>I reply to your thread here. try to keep your posts in the same thread.<br />
+http://www.atutor.ca/view/17/22664/1.html<br />
+<br />
+It's difficult for me to say where the problem lies. Try emptying your browser's cookies. Otherwise, you should probably refer to Apache documentation on setting up virtual domains. ATutor should work fine on a virtual domain.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22666"></a>
+		<div class="forum-post-author">
+			<label class="title">Nidiots</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-11-16 14:53:45</p>
+            </div>
+            <div class="postheader"><h3>Re: port atutor to subdomain</h3></div>
+				
+			<div class="body">
+				<p>i tried this already? but not working. i contact my service provider they said there is some problem in index.php<br />
+<br />
+because when i access http://edu.nidiots.co.in  it transfer it to http://nidiots.co.in/edu/login.php.<br />
+<br />
+i also tried to access http://edu.nidiots.co.in/login.php<br />
+<br />
+but i see a page with out images and scripts.. and in source all images and scripts pointed to http://nidiots.co.in/edu/<br />
+<br />
+<br />
+Here i also want to mention that this is a community of student called nidiots who started this project to help NGOs to provide education to student from low budget families in india and nepal.<br />
+We are also planning for adding BIG BLUE BUTTON on this so that we can cover those areas where teachers are  few.<br />
+<br />
+I also appriciate you all work on this project and new feature added in atutor 2.0.3  most importantly  External tools.<br />
+beacuse we plan to use some to create some good education tools here.<br />
+                 Thanx Greg</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

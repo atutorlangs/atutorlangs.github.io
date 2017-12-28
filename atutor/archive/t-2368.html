@@ -1,0 +1,82 @@
+---
+ title: importing courses
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>importing courses</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="2368"></a>
+		<div class="forum-post-author">
+			<label class="title">fulop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-25 11:47:51</p>
+            </div>
+            <div class="postheader"><h3>importing courses</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+I am trying to import a course from one instance of ATutor to another. The source instance's version is 1.4.1 and the target instance's version is 1.4. When using the IMS tool, after importing the course, files (images, videos,etc..) are not stored in folder content/{cid}/ as i was expecting, but in folder content/{cid}/{name_of_the_course} and this causes broken links to these files. When using backup tool to overwrite the existing content, imported course does not contain the glossary definitions, nor the tests. how should I import the courses with both glossary defs and tests?<br />
+thanks<br />
+<br />
+Linux gentoo 2.6.7-gentoo-r8<br />
+Apache/2.0.50 (Gentoo/Linux) mod_ssl/2.0.50 OpenSSL/0.9.7d PHP/4.3.8<br />
+MySQL 4.0.20<br />
+Pentium III (Coppermine)@930.40<br />
+256MB RAM<br />
+phpinfo: gentoo.jsw.sk/info.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2370"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-08-26 11:59:24</p>
+            </div>
+            <div class="postheader"><h3>importing courses</h3></div>
+				
+			<div class="body">
+				<p>all content packages when imported are stored in a unique directory created for that package. it ensures that content packages do not override existing files and keeps things seperate. ATutor does not yet deal with embeded links within content very well, we will fix this in a future version. You should think carefully about whether it's worth embedding links in content rather than using the Related Topics option. You can send us a content package and we can take a look at it, there may be a different reason why the links break.<br />
+<br />
+Some versions of the backup may not be backwards compatible, but they're always forwards compatible.<br />
+<br />
+I think the best solution would be to upgrade both installations to 1.4.1 (or wait for 1.4.2 in a few weeks, or use a nightly build) and try the course backup that way (ensuring that both versions are the same).<br />
+<br />
+.joel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2406"></a>
+		<div class="forum-post-author">
+			<label class="title">fulop</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-03 04:21:07</p>
+            </div>
+            <div class="postheader"><h3>importing courses</h3></div>
+				
+			<div class="body">
+				<p>Thanks for reply,<br />
+I have found what makes links break. The course i've been trying to import had a slovak title with international characters - with diacritic (like "" or "&#269;"). After importing the package using the IMS tool, a directory with the name of the course has been created. All files are stored in this dir but the webserver could not find them. With english course titles I have no problem. Should I use only non-international characters in course titles?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

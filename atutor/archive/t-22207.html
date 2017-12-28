@@ -1,0 +1,253 @@
+---
+ title: Help with scorm package import
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Help with scorm package import</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22207"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-16 13:11:14</p>
+            </div>
+            <div class="postheader"><h3>Help with scorm package import</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+Looking for a bit of help with this. I've checked the forums but am no nearer a solution. I've tried importing a scorm package (installed the module first)into an empty course. The import window opens, then closes after a couple of seconds. After a while, I get a message 'Problem with Package Directory.' I realise I should check php.ini for max file size but cannot find this file anywhere - must be looking in the wrong place. Any help appreciated.<br />
+Jim<br />
+<br />
+ATutor Version:<br />
+1.6.1. <br />
+PHP Version:<br />
+5.2.0<br />
+MySQL Version:<br />
+5.0.27-standard-log</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22208"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-16 14:08:21</p>
+            </div>
+            <div class="postheader"><h3>A solution</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+Just to update. Perhaps I'm confused between what a scorm package is and scorm content. I uploaded the package I had (a basic course in Excel, created by an external provider) through content import then created a link from the page to the launch file and hey presto, it works.<br />
+Jim<br />
+:)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22209"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-16 14:47:31</p>
+            </div>
+            <div class="postheader"><h3>Re: A solution</h3></div>
+				
+			<div class="body">
+				<p>Content import uses IMS content standards, which SCORM happens to use as well. Sometimes you can import SCORM content with the import tool, though you end up missing some of the functionality associated with the SCORM package.<br />
+<br />
+As for the problem with package directory error, the directory needs to be created as per the instructions during installation, and made writeable.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22210"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-16 17:22:00</p>
+            </div>
+            <div class="postheader"><h3>Re: A solution</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+Thanks for your response - it did make me think on the drive home that it may have been a bit of a shortcut. You mention instructions during installation - I did not come across any instructions. I installed the scorm package module from the 'Modules'. Can you tell me where to find the instructions to install properly ?<br />
+Many thanks<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22214"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-17 08:53:59</p>
+            </div>
+            <div class="postheader"><h3>Re: A solution</h3></div>
+				
+			<div class="body">
+				<p>During the installation you should have received  error messages asking you to create a "sco" directory in the root directory of ATutor and make that directory writable.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22215"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-17 09:49:28</p>
+            </div>
+            <div class="postheader"><h3>Re: A solution</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+No - didn't see that message at all.<br />
+<br />
+I did find a sco folder in the root of atutor though but could not change the permissions on it. It was giving me an error '550 could not change directory' (using FireFTP to change permissions). In the end I asked my webhost to change the permissions for me and I managed to upload the package successfully. It opens from a link in packages ok now and works well. The only issue we have is that there is no tracking or test results coming through. I take it packages work in isolation of the LMS?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22216"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-17 10:14:53</p>
+            </div>
+            <div class="postheader"><h3>Re: A solution</h3></div>
+				
+			<div class="body">
+				<p>My guess then is you have ATutor installed on a Windows system using IIS. The problems you are experiencing sound typical of an IIS setup. We recommend using Apache for production systems.<br />
+<br />
+If not IIS, please describe the rest of the system<br />
+<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22217"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-17 11:10:58</p>
+            </div>
+            <div class="postheader"><h3>Re: A solution</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+info from our webhost:<br />
+<br />
+"It's a standard LAMP server (Linux/Apache/mySQL/PHP) running O/S Redhat ES 4  X86 <br />
+It's running Apache 2.2.4, PHP 5.2.0 and mySQL 5.0.27"<br />
+....and<br />
+ATutor version 1.6.1<br />
+Theme - I think is default 1.5<br />
+Patches 1-12 installed<br />
+<br />
+I'm accessing the LMS from a W7 PC with IE8<br />
+Cheers,<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22218"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-17 11:38:58</p>
+            </div>
+            <div class="postheader"><h3>Re: A solution</h3></div>
+				
+			<div class="body">
+				<p>This is not something I've not seen before. You should not have been able to install the module without it asking you to create the sco directory and set its permission. The module will not created the directory itself. <br />
+<br />
+My suggestion is you start over. Remove the module completely, then reinstall it. I'm unable to reproduce the problem myself, so until I can I'm not sure what else to suggest.<br />
+<br />
+And you may want to upgrade ATutor itself. The version you;re using is a bit old.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22219"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-17 18:21:03</p>
+            </div>
+            <div class="postheader"><h3>Re: A solution</h3></div>
+				
+			<div class="body">
+				<p>Certainly did not create it as part of this install but always possible that I did so at some stage in  the past I suppose - we've been using it for some years now. Will upgrade when time allows. It's working at present and can manage without the tracking, so will leave alone for now.<br />
+Thanks for your input.<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

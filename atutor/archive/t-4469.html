@@ -1,0 +1,91 @@
+---
+ title: Students pending approval
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Students pending approval</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4469"></a>
+		<div class="forum-post-author">
+			<label class="title">Valentine</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-02 04:30:56</p>
+            </div>
+            <div class="postheader"><h3>Students pending approval</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+I've given access to a student to "Enrollment Manager" : she can grant roles and permission but she does not have that line :<br />
+[blue] Enrolled: 36, 1 pending approval. Alumni: 0<br />
+[/blue] with the link to validate new users. That is the job she will have to do...<br />
+<br />
+How can she access to that line without being Tutor ?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4470"></a>
+		<div class="forum-post-author">
+			<label class="title">Valentine</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-05-02 05:33:36</p>
+            </div>
+            <div class="postheader"><h3>Found it !</h3></div>
+				
+			<div class="body">
+				<p>I've managed to do what I wanted, adding this to users/index.php :<br />
+<br />
+[green]			if ($row['privileges'] == 2592) {<br />
+			echo '&lt;br />'."\n";<br />
+			echo '&middot; '._AT('access').': ';<br />
+			$pending = '';<br />
+			switch ($row['access']){<br />
+				case 'public':<br />
+					echo _AT('public');<br />
+					break;<br />
+				case 'protected':<br />
+					echo _AT('protected');<br />
+					break;<br />
+				case 'private':<br />
+					echo _AT('private');<br />
+					$sql	  = "SELECT COUNT(*) FROM ".TABLE_PREFIX."course_enrollment WHERE course_id=$row[course_id] AND approved='n'";<br />
+					$c_result = mysql_query($sql, $db);<br />
+					$c_row	  = mysql_fetch_array($c_result);<br />
+					$num_rows_c = mysql_num_rows($c_result);<br />
+					if($c_row[0] > 0){<br />
+						$pending  = ', '.$c_row[0].' &lt;em>&lt;strong>'._AT('pending_approval2').' &lt;a href="bounce.php?course='.$row['course_id'].SEP.'p='.urlencode('tools/enrollment/index.php?current_tab=1').'"> '._AT('pending_approval3').'&lt;/a>&lt;/strong>&lt;/em>.';<br />
+					}<br />
+					break;<br />
+			}	<br />
+	  			$c_sql	  = "SELECT COUNT(*) FROM ".TABLE_PREFIX."course_enrollment WHERE course_id=$row[course_id] AND approved='y'";<br />
+				$c_result = mysql_query($c_sql, $db);<br />
+				$c_row	  = mysql_fetch_array($c_result);<br />
+<br />
+			/* minus 1 because the instructor doesn't count */<br />
+				echo "&lt;br />\n&middot; "._AT('enrolled').": ".($c_row[0]-1).$pending." ";<br />
+			} [/green] <br />
+<br />
+Privileges are given a code in AT_course_enrollment.<br />
+I'd be interested have the list of that code according to the privileges...<br />
+Exemple :<br />
+32 = File Manager<br />
+2592 = File Manager + Enrollment Manager<br />
+<br />
+Maybe we could work this out together and put this somewhere on that site ? I'm sure it could be useful to other developpers...</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

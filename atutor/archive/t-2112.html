@@ -1,0 +1,65 @@
+---
+ title: coursecontent
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>coursecontent</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2112"></a>
+		<div class="forum-post-author">
+			<label class="title">Shanforest</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-20 21:57:02</p>
+            </div>
+            <div class="postheader"><h3>coursecontent</h3></div>
+				
+			<div class="body">
+				<p>Ive found how to edit the header, the footer and the side menu. How do I edit the course_content ?<br />
+Mainly I want to remove the icon that sits by the name of the course, centre page, under the Help icon. I just want as much icon free space as poss.<br />
+<br />
+Also in the header no matter what I do the table/s that give the title graphic, the course name & the login stuff the layout behaves funny. Ive redone the tables simpler to try and get the hang of it but there must be commands from elsewhere that governs the width and placing.<br />
+<br />
+&lt;!-- TABLE 1 TOP ZONE --><br />
+&lt;table border=0 width="100%" border="1" cellpadding="0" cellspacing="0" id="maintable" summary=""><br />
+&lt;tr>&lt;td width="60%">&lt;h1>&lt;?php echo stripslashes(SITE_NAME); ?>&lt;/h1>&lt;/td><br />
+&lt;td class="login-box"> &lt;small>Merry meet&lt;br>&lt;?php echo $tmpl_user_name; ?>&nbsp;&lt;br>&lt;/small> &lt;small>&lt;?php echo $tmpl_log_link; ?>&lt;/small>&lt;/td><br />
+&lt;td><br />
+&lt;table width="355" height="50" align="right">&lt;tr>&lt;td style="background-image: url('&lt;?php echo $tmpl_base_path . HEADER_IMAGE; ?>'); background-repeat: no-repeat; background-position: 0px 0px;" nowrap="nowrap" valign="top"> &lt;/td>&lt;/tr>&lt;/table><br />
+&lt;/td>&lt;/tr>&lt;/table><br />
+&lt;!-- END TABLE 1 --></p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2118"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-21 08:22:38</p>
+            </div>
+            <div class="postheader"><h3>Icon Preference</h3></div>
+				
+			<div class="body">
+				<p>Why not set course preferences with icons turned off. You should not need to remove them from the source code.<br />
+<br />
+I assume you are modifying the template files in the default themes directory. Use the W3C markup validator to check for errors in your modifications. Take a snapshot of the source of an ATutor screen then upload the page to:<br />
+<br />
+http://validator.w3.org/<br />
+<br />
+Many properties are controlled in in the style sheet associated with theme templates.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

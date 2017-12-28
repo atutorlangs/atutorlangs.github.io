@@ -1,0 +1,327 @@
+---
+ title: ATutor cannot create some MySQL tables on FreeBSD
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor cannot create some MySQL tables on FreeBSD</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="20978"></a>
+		<div class="forum-post-author">
+			<label class="title">NuLL3rr0r</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-19 22:32:10</p>
+            </div>
+            <div class="postheader"><h3>ATutor cannot create some MySQL tables on FreeBSD</h3></div>
+				
+			<div class="body">
+				<p>Hi Folks,<br />
+<br />
+I've done ATutor 1.6.x Installation without any problem on CentOS/CPanel based VPS nearly 2 Years ago.<br />
+<br />
+Now I have an FreeBSD VPS that managed from Terminal.<br />
+<br />
+After two days I'm still struggling on and it's not possible to pass step 3 of the installation process. <br />
+<br />
+As you can see in the   "Copies of error messages -"<br />
+section, some tables created just fine but the creation of some of them failed with absolutely no luck, no matter how many times you're trying. <br />
+<br />
+This is the procedure that I've gone to create the needed database and username in mysql-client. (I also tried root user without any significant chance.)<br />
+<br />
+<br />
+use mysql;<br />
+INSERT INTO user (Host,User,Password) VALUES('localhost','atuser',PASSWORD('atpassword'));<br />
+flush privileges;<br />
+grant usage on *.* to atuser@localhost identified by 'atpassword';<br />
+flush privileges;<br />
+grant all privileges on atutor.* to atuser@localhost;<br />
+flush privileges;<br />
+<br />
+<br />
+<br />
+<br />
+  Operating system ATutor is installed on - FreeBSD<br />
+<br />
+  ATutor version - 2.0<br />
+<br />
+  Patch #s applied -<br />
+<br />
+  ATutor theme name - Default<br />
+<br />
+  PHP version - 5.3.2<br />
+<br />
+  MySQL version - 5.5.4-m3<br />
+<br />
+  Webserver & version - FreeBSD 8.1-RELEASE GENERIC  i386<br />
+<br />
+  Copies of error messages -<br />
+<br />
+ Feedback<br />
+Database atutor created successfully.<br />
+Connected to database atutor successfully.<br />
+Table AT_feeds created successfully.<br />
+Table AT_patches created successfully.<br />
+Table AT_patches_files created successfully.<br />
+Table AT_patches_files_actions created successfully.<br />
+Table AT_myown_patches created successfully.<br />
+Table AT_myown_patches_dependent created successfully.<br />
+Table AT_myown_patches_files created successfully.<br />
+Table AT_auto_enroll created successfully.<br />
+Table AT_auto_enroll_courses created successfully.<br />
+Table AT_grade_scales created successfully.<br />
+Table AT_grade_scales_detail created successfully.<br />
+Table AT_gradebook_tests created successfully.<br />
+Table AT_gradebook_detail created successfully.<br />
+Table AT_fha_student_tools created successfully.<br />
+Table AT_social_activities created successfully.<br />
+Table AT_social_applications created successfully.<br />
+Table AT_social_application_settings created successfully.<br />
+Table AT_social_members_applications created successfully.<br />
+Table AT_social_friends created successfully.<br />
+Table AT_social_friend_requests created successfully.<br />
+Table AT_social_member_position created successfully.<br />
+Table AT_social_member_education created successfully.<br />
+Table AT_social_member_websites created successfully.<br />
+Table AT_social_member_track created successfully.<br />
+Table AT_social_member_additional_information created successfully.<br />
+Table AT_social_member_contact created successfully.<br />
+Table AT_social_member_representation created successfully.<br />
+Table AT_social_member_personal created successfully.<br />
+Table AT_social_privacy_preferences created successfully.<br />
+Table AT_social_groups created successfully.<br />
+Table AT_social_groups_activities created successfully.<br />
+Table AT_social_groups_members created successfully.<br />
+Table AT_social_groups_invitations created successfully.<br />
+Table AT_social_groups_requests created successfully.<br />
+Table AT_social_groups_types created successfully.<br />
+Table AT_social_groups_board created successfully.<br />
+Table AT_social_user_settings created successfully.<br />
+Table AT_member_login_attempt created successfully.<br />
+Table AT_pa_albums created successfully.<br />
+Table AT_pa_photos created successfully.<br />
+Table AT_pa_course_album created successfully.<br />
+Table AT_pa_album_comments created successfully.<br />
+Table AT_pa_photo_comments created successfully.<br />
+<br />
+<br />
+ Error<br />
+Table AT_admins creation failed.<br />
+Table AT_admin_log creation failed.<br />
+Table AT_assignments creation failed.<br />
+Table AT_backups creation failed.<br />
+Table AT_blog_posts creation failed.<br />
+Table AT_blog_posts_comments creation failed.<br />
+Table AT_config creation failed.<br />
+Table AT_content creation failed.<br />
+Table AT_course_access creation failed.<br />
+Table AT_course_cats creation failed.<br />
+Table AT_content_tests_assoc creation failed.<br />
+Table AT_content_forums_assoc creation failed.<br />
+Table AT_course_enrollment creation failed.<br />
+Table AT_course_stats creation failed.<br />
+Table AT_courses creation failed.<br />
+Table AT_faq_topics creation failed.<br />
+Table AT_faq_entries creation failed.<br />
+Table AT_file_storage_groups creation failed.<br />
+Table AT_files creation failed.<br />
+Table AT_files_comments creation failed.<br />
+Table AT_folders creation failed.<br />
+Table AT_forums creation failed.<br />
+Table AT_forums_accessed creation failed.<br />
+Table AT_forums_courses creation failed.<br />
+Table AT_forums_groups creation failed.<br />
+Table AT_forums_subscriptions creation failed.<br />
+Table AT_forums_threads creation failed.<br />
+Table AT_glossary creation failed.<br />
+Table AT_groups creation failed.<br />
+Table AT_groups_members creation failed.<br />
+Table AT_groups_types creation failed.<br />
+Table AT_guests creation failed.<br />
+Table AT_handbook_notes creation failed.<br />
+Table AT_instructor_approvals creation failed.<br />
+Table AT_languages creation failed.<br />
+Table AT_links_categories creation failed.<br />
+Table AT_links creation failed.<br />
+Table AT_language_pages creation failed.<br />
+Table AT_master_list creation failed.<br />
+Table AT_members creation failed.<br />
+Table AT_member_track creation failed.<br />
+Table AT_messages creation failed.<br />
+Table AT_messages_sent creation failed.<br />
+Table AT_modules creation failed.<br />
+Table AT_news creation failed.<br />
+Table AT_polls creation failed.<br />
+Table AT_mail_queue creation failed.<br />
+Table AT_polls_members creation failed.<br />
+Table AT_related_content creation failed.<br />
+Table AT_reading_list creation failed.<br />
+Table AT_external_resources creation failed.<br />
+Table AT_tests creation failed.<br />
+Table AT_tests_answers creation failed.<br />
+Table AT_tests_groups creation failed.<br />
+Table AT_tests_questions creation failed.<br />
+Table AT_tests_questions_assoc creation failed.<br />
+Table AT_tests_questions_categories creation failed.<br />
+Table AT_tests_results creation failed.<br />
+Table AT_themes creation failed.<br />
+Table AT_users_online creation failed.<br />
+Table AT_primary_resources creation failed.<br />
+Table AT_primary_resources_types creation failed.<br />
+Table AT_resource_types creation failed.<br />
+Table AT_secondary_resources creation failed.<br />
+Table AT_secondary_resources_types creation failed.<br />
+Table AT_blog_subscription creation failed.<br />
+Table AT_content_prerequisites creation failed.<br />
+Table AT_oauth_client_servers creation failed.<br />
+Table AT_oauth_client_tokens creation failed.<br />
+Table AT_language_text creation failed.<br />
+<br />
+<br />
+<br />
+  Changes to default settings -<br />
+<br />
+  Web browser being used -<br />
+<br />
+Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Iron/6.0.475.1 Chrome/6.0.475.1 Safari/534.3<br />
+<br />
+Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.9) Gecko/20101014 Gentoo Firefox/3.6.9<br />
+<br />
+  ...and anything else relevant -<br />
+:( :( :( :( :(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20979"></a>
+		<div class="forum-post-author">
+			<label class="title">NuLL3rr0r</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-20 01:12:30</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor cannot create some MySQL tables on FreeBSD</h3></div>
+				
+			<div class="body">
+				<p>I tried to manually create the tables in mysql-clinet.<br />
+I copied the below command from atutor_schema.sql:<br />
+<br />
+CREATE TABLE `admins` (<br />
+   `login` VARCHAR( 30 ) NOT NULL default '',<br />
+   `password` VARCHAR( 40 ) NOT NULL default '',<br />
+   `real_name` VARCHAR( 120 ) NOT NULL default '',<br />
+   `email` VARCHAR( 50 ) NOT NULL default '',<br />
+   `language` varchar(5) NOT NULL default '',<br />
+   `privileges` MEDIUMINT UNSIGNED NOT NULL default 0,<br />
+   `last_login` TIMESTAMP NOT NULL default 0,<br />
+   PRIMARY KEY ( `login` )<br />
+) TYPE = MYISAM;<br />
+<br />
+<br />
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TYPE = MYISAM' at line 10<br />
+<br />
+Look likes all tables atutor_schema.sql have this problem (Actually the tables that failed).<br />
+<br />
+http://forums.mysql.com/read.php?102,20302,81862</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20980"></a>
+		<div class="forum-post-author">
+			<label class="title">NuLL3rr0r</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-20 01:27:46</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor cannot create some MySQL tables on FreeBSD</h3></div>
+				
+			<div class="body">
+				<p>tnx to this post http://bugs.mysql.com/bug.php?id=17501:<br />
+<br />
+I just found the solution, they said that the TYPE keyword is deprecated. I replaced all TYPE= with ENGINE= in both atutor_language_text.sql and atutor_schema.sql. Now it's just works fine.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20982"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-20 09:10:02</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor cannot create some MySQL tables on FreeBSD</h3></div>
+				
+			<div class="body">
+				<p>I wish MySQL would stop doing that. It's not the first time backwards compatibility has been broken. We'll note the problem, but probably won't do anything about it right away. <br />
+<br />
+http://bugs.mysql.com/bug.php?id=17501<br />
+<br />
+The current versions of MySQL 5.3* works fine with TYPE. This is the first report we've had of the problem.<br />
+<br />
+Its been noted in the bug tracker.<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=4595</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20998"></a>
+		<div class="forum-post-author">
+			<label class="title">NuLL3rr0r</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-22 08:07:12</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor cannot create some MySQL tables on FreeBSD</h3></div>
+				
+			<div class="body">
+				<p>First of all I must say thank you for your great job on ATutor. :)<br />
+<br />
+And another thanks for getting it fixed on 2.0.1 (but one table remains with old syntax in atutor_language_text.sql file).</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="21004"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-10-22 09:29:30</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor cannot create some MySQL tables on FreeBSD</h3></div>
+				
+			<div class="body">
+				<p>Noted, thanks. <br />
+<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=4595</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

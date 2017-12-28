@@ -1,0 +1,102 @@
+---
+ title: Search People in Networking
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Search People in Networking</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="25415"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-06 13:16:42</p>
+            </div>
+            <div class="postheader"><h3>Search People in Networking</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+When I do Search People in networking, it only displays the number of people found as search result. Isn't it supposed to display the name of people that it found, so that I can choose one to start a communication such as sending invitation. I think, when you search people, you don't mean to just see the number of people mached with search term, isn't it supposed to show the names with links? <br />
+<br />
+Thank you</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25416"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-08 09:43:38</p>
+            </div>
+            <div class="postheader"><h3>Re: Search People in Networking</h3></div>
+				
+			<div class="body">
+				<p>Yes, there does seem to be a problem there. Its been posted to the bug tracker. If you're able to submit a fix, that would be great.<br />
+<br />
+<br />
+http://atutor.ca/atutor/mantis/view.php?id=5587<br />
+<br />
+When you are entering letters in the Search field, does the suggestion list autogenerate there, with a list of names based on the letters typed?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25418"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-08 11:56:12</p>
+            </div>
+            <div class="postheader"><h3>Re: Search People in Networking</h3></div>
+				
+			<div class="body">
+				<p>Yes, it autogenerates a list of names based on search term.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25420"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-06-10 09:33:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Search People in Networking</h3></div>
+				
+			<div class="body">
+				<p>Hello,<br />
+<br />
+The problem of this issue lies in the output of getRelationship($id) function in '\mods\_standard\social\lib\classes\PrivacyControl\PrivacyController.class.php' file. This function outputs nothing. It can be fixed by changing the line:<br />
+if (!isset($relationship)){<br />
+<br />
+to: <br />
+if (empty($relationship)){<br />
+<br />
+because the result of isset() does not works with result of queryDB. Then it will work.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

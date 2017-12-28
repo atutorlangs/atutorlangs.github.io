@@ -1,0 +1,169 @@
+---
+ title: Installing Help
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Installing Help</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="19552"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-04 19:33:05</p>
+            </div>
+            <div class="postheader"><h3>Installing Help</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+all the installation files are in a tar.gz file. and instructions refer to unpacking these on the server. I use a hosted server and I have no idea how to issue a shell command. I only know how to ftp the file up there.<br />
+<br />
+Can you help me understand how to do that?<br />
+<br />
+Also, why don't you just create a zip file and let us upload them with an ftp program?<br />
+<br />
+Thanks,<br />
+<br />
+Robert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19553"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-04 22:05:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Help</h3></div>
+				
+			<div class="body">
+				<p>Just installed. Got the tar.gz file to uncompress and completed the installation. Got this message on login:<br />
+<br />
+Fatal error: Call to undefined function: stripos() in /homepages/17/d129260592/htdocs/E7Thunders/ATutor/include/vitals.inc.php on line 224<br />
+<br />
+I see others have had this too. What is the usual cause? I did the tar on the server as suggested.<br />
+<br />
+Robert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19555"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-05 04:15:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Help</h3></div>
+				
+			<div class="body">
+				<p>Loks like your hosting uses PHP 4. ATutor 1.6.4 requires PHP 5.0.2 or higher.<br />
+Have a look at this page please: http://www.atutor.ca/atutor/docs/requirements.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19557"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-05 11:54:02</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Help</h3></div>
+				
+			<div class="body">
+				<p>Thanks, I just figured since the installation did not mention that requirement that it would not be a problem. I am taking steps to upgrade to the 5.0.2 version now.<br />
+<br />
+Robert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19558"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-05 11:55:43</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Help</h3></div>
+				
+			<div class="body">
+				<p>Hm... Strange, I thought it did check the PHP version.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19559"></a>
+		<div class="forum-post-author">
+			<label class="title">meshael</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-05 12:39:27</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Help</h3></div>
+				
+			<div class="body">
+				<p>It did check it, but reported no problem with the PHP version. But now, I changed the .htaccess file by adding this line at the beginning:<br />
+<br />
+AddType x-mapp-php5 .php<br />
+<br />
+and now I can login.<br />
+<br />
+Thanks!<br />
+<br />
+Robert</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19560"></a>
+		<div class="forum-post-author">
+			<label class="title">IndieRect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-05 12:59:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Installing Help</h3></div>
+				
+			<div class="body">
+				<p>You're welcome, I'm glad it helped a bit in finding the solution.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

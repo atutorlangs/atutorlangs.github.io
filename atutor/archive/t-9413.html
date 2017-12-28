@@ -1,0 +1,66 @@
+---
+ title: Problems with charsets during impor course SCORM package
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problems with charsets during impor course SCORM package</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="9413"></a>
+		<div class="forum-post-author">
+			<label class="title">rim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-01 09:18:02</p>
+            </div>
+            <div class="postheader"><h3>Problems with charsets during impor course SCORM package</h3></div>
+				
+			<div class="body">
+				<p>Dear community,<br />
+there is a problem with course and SCORM packages titles (course and course chapters titles). My Atutor default charset is windows-1251 (Cyrrilic). After the course or SCORM package is imported the content is in windows-1251, but the titles are displayed in utf-8. How can I solve the problem? I need the titles to be displayed in windows-1251.<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  operating system - CentOS 2<br />
+  version of ATutor - 1.5.2<br />
+  versions of php - 5.0.4<br />
+  version of mysq l - 5.0.9<br />
+  webserver & version - Apache 2<br />
+  copies of error messages -<br />
+  changes to default settings -<br />
+  web browser being used -<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="9415"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-12-01 11:06:42</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems with charsets during impor (course, SCORM package)</h3></div>
+				
+			<div class="body">
+				<p>UTF-8 appears to be hard coded into the package player. It should probably be generated based on the character set defined in the package.  We were not involved with the creation of the SCORM player, but we may be able to take a look at this issues for a future release. I have made a reference in the bug tracker.<br />
+<br />
+For now you could try converting the package to utf-8. Or you could manually edit the files that set the character set<br />
+<br />
+/tools/packages/scorm-1.2/write.php<br />
+/tools/packages/scorm-1.2/read.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

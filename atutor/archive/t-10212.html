@@ -1,0 +1,124 @@
+---
+ title: ATutor misinterpreting array ref as ltem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <strong><a href="exported_forum9.html">9</a></strong> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>ATutor misinterpreting array ref as ltem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="10212"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-28 23:54:03</p>
+            </div>
+            <div class="postheader"><h3>ATutor misinterpreting array ref as ltem</h3></div>
+				
+			<div class="body">
+				<p>version of ATutor - 1.5.3.3<br />
+  web browser being used - Firefox, IE<br />
+<br />
+<br />
+I need to include programming code in my ATutor courses but am having a problem with ATutor recognizing array references such as old[i] as old&lt;em> when using ATutor's code tag [code] or simply replacing the [i] with &lt;em> and emphazing the text when enclosing the code with the &lt;code> tag. Why is this happening and is there a way to work around it or better yet, fix it?<br />
+<br />
+Thanks,<br />
+<br />
+Sandie</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10227"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-29 08:52:17</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor misinterpreting array ref as &lt;em></h3></div>
+				
+			<div class="body">
+				<p>Can you be more specific. What do you mean by  "recognizing array references"</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10239"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-29 13:26:55</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor misinterpreting array ref as &lt;em></h3></div>
+				
+			<div class="body">
+				<p>I will try explaining by using HTML special characters this time to represent the brackets since even this forum is interpreting it the same way and my brackets disappeared in my initial message...<br />
+<br />
+I mean, I am trying to reference an array element such as old&#91;i&#93; but ATutor interprets the "left bracket" i "right bracket" as an &lt;em> tag.  <br />
+<br />
+You can look at a test file that explains it in one my courses at http://ci-tutor.ncsa.uiuc.edu/ . From the home page click on the "Browse Courses" tab, then select "Introduction to MPI".  Once in the course, look at the "Test File" Section under Chapter 2 "Getting Started with MPI"<br />
+<br />
+I have a lot of code in this course and really don't want to have to replace the brackets with the HTML special characters :(.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="10240"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-29 14:22:12</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor misinterpreting array ref as &lt;em></h3></div>
+				
+			<div class="body">
+				<p>I see the problem.<br />
+<br />
+[ i ] is used for italics and [ em ]. To fix that you would have to edit /include/lib/output.inc.php and comment out lines 504-55:<br />
+[php]	$text = str_replace('[ i ]','&lt;em>',$text);<br />
+	$text = str_replace('[/ i ]','&lt;/em>',$text);[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="10241"></a>
+		<div class="forum-post-author">
+			<label class="title">skappes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2007-03-29 14:28:05</p>
+            </div>
+            <div class="postheader"><h3>Re: ATutor misinterpreting array ref as &lt;em></h3></div>
+				
+			<div class="body">
+				<p>I thought it could be fixed in the code somewhere but had no idea where.<br />
+<br />
+Thanks for your help!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

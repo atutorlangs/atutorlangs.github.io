@@ -1,0 +1,132 @@
+---
+ title: Problems with some central european characters content creating
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Problems with some central european characters content creating</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="6912"></a>
+		<div class="forum-post-author">
+			<label class="title">mudroch</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-20 17:53:18</p>
+            </div>
+            <div class="postheader"><h3>Problems with some central european characters content creating</h3></div>
+				
+			<div class="body">
+				<p>Hi, I have just installed ATutor 1.5.2 on Linux, PHP 4.1, with no problems.<br />
+I left all default settings - especialy languages. I left only english.<br />
+ <br />
+I tried to use visual editor to insert new pages. I wanted to use some central european characters in those pages. When I wrote them, there was no problem in displaying them, but when I clicked Save button, large part of my text disappeared. After few tries I realized, that disappeared whole text after few central european characters, but not all of them. I had problems with characters coded as &#353; or &#382; but no problem with characters like &#277; etc.<br />
+<br />
+I also tried it in demo application on www.atutor.ca, there was no problem with those characters.<br />
+<br />
+I would really appreciate any hint, how to solve this problem.<br />
+<br />
+Thanks much.<br />
+<br />
+Martin</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6913"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-20 19:50:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems with some central european characters (content creating)</h3></div>
+				
+			<div class="body">
+				<p>Upgrade PHP. The minimum requirement is 4.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6915"></a>
+		<div class="forum-post-author">
+			<label class="title">mudroch</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-21 05:19:37</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems with some central european characters (content creating)</h3></div>
+				
+			<div class="body">
+				<p>Sorry for wrong information, I have already instaled PHP version 4.3.10-16 from stable Debian release. The version of MySQL is 4.1.<br />
+<br />
+Martin</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6916"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-21 12:16:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems with some central european characters (content creating)</h3></div>
+				
+			<div class="body">
+				<p>See the TinyMCE site ragarding enabling language packs for it:<br />
+http://tinymce.moxiecode.com/<br />
+<br />
+The ATutor language pack for that language should also be installed, and enabled when you are creating content.<br />
+http://atutor.ca/atutor/translate/index.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6917"></a>
+		<div class="forum-post-author">
+			<label class="title">mudroch</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-21 14:36:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Problems with some central european characters (content creating)</h3></div>
+				
+			<div class="body">
+				<p>It seems that problem is solved. There was no problem with language pack. <br />
+<br />
+In file include/lib/tinymce.inc.php, where are TinyMCE settings stored, should be configuration option:<br />
+entity_encoding : "raw"<br />
+or <br />
+entity_encoding : "numeric"<br />
+<br />
+Setting entity_encoding : "named" which is also default, does not work and causes problem mentioned in first post.<br />
+<br />
+This solution does not depends on setting language of ATutor os TinyMCE.<br />
+<br />
+Martin</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

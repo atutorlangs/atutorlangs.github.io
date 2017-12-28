@@ -1,0 +1,137 @@
+---
+ title: problem with clean installation
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>problem with clean installation</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6069"></a>
+		<div class="forum-post-author">
+			<label class="title">jborzi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-12 09:05:10</p>
+            </div>
+            <div class="postheader"><h3>problem with clean installation</h3></div>
+				
+			<div class="body">
+				<p>Installation:<br />
+ATutor Version: 1.5.1 (build r5269 - 2005-08-16 12:59:49) <br />
+Operating System: Linux 2.4.21-32.ELsmp #1 SMP Fri Apr 15 21:17:59 EDT 2005 i686  <br />
+Web Server: Apache/2.0.46 (Red Hat)  <br />
+PHP Version: 4.3.2  <br />
+MySQL Version: 3.23.58  <br />
+URL: http://www.applied.com.mx/elp/<br />
+<br />
+This is the first time i try to use Atutor.<br />
+After installations, you can see these error message: <br />
+<br />
+Warning: main(include/phpCache/phpCache.inc.php): failed to open stream: No such file or directory in /home/httpd/vhosts/applied.com.mx/httpdocs/elp/include/vitals.inc.php on line 145<br />
+<br />
+Fatal error: main(): Failed opening required 'include/phpCache/phpCache.inc.php' (include_path='.:/usr/share/pear') in /home/httpd/vhosts/applied.com.mx/httpdocs/elp/include/vitals.inc.php on line 145<br />
+<br />
+Any idea ?<br />
+Thanks in advance<br />
+<br />
+Juan</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6072"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-12 11:29:49</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>double check that the include/phpCache/phpCache.inc.php file exists.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6073"></a>
+		<div class="forum-post-author">
+			<label class="title">jborzi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-12 13:48:40</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>Thanks Joel for your quick response.<br />
+<br />
+The include/phpCache/phpCache.inc.php file exists at the server...<br />
+<br />
+any other idea?<br />
+<br />
+Thanks in advance.<br />
+<br />
+Juan</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6078"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-14 11:29:38</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>Then why does trying to access it directly result in an error?<br />
+<br />
+Perhaps read privileges were removed from that file, or you're not looking in the right path?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6101"></a>
+		<div class="forum-post-author">
+			<label class="title">jborzi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-17 14:27:14</p>
+            </div>
+            <div class="postheader"><h3>problem solved</h3></div>
+				
+			<div class="body">
+				<p>Thanks Joel!<br />
+i found the error.<br />
+for a extrange reason, the ftp program i used to upload files to the server, renames capital letter from directory names.<br />
+i rename these files and it\'s working.<br />
+<br />
+juan</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

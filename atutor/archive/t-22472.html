@@ -1,0 +1,130 @@
+---
+ title: Create a new page in helloworld module
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Create a new page in helloworld module</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22472"></a>
+		<div class="forum-post-author">
+			<label class="title">Nidiots</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-22 11:37:12</p>
+            </div>
+            <div class="postheader"><h3>Create a new page in helloworld module</h3></div>
+				
+			<div class="body">
+				<p>i want to create a new page in hello world module,<br />
+<br />
+<br />
+i made the page and follow the instruction in documents but i can't access header and footer sec. my code of new page is ..<br />
+<br />
+<br />
+&lt;?php<br />
+if ($_SESSION['valid_user']) {<br />
+$_user_location	= 'users';<br />
+define('AT_INCLUDE_PATH', '../../include/');<br />
+//require (AT_INCLUDE_PATH.'vitals.inc.php');<br />
+<br />
+require (AT_INCLUDE_PATH.'header.inc.php');<br />
+}<br />
+<br />
+?><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+&lt;iframe width="800" height="800" src="http://127.0.0.2/library/open/demo/" id="frm">&lt;/iframe><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+&lt;?php require (AT_INCLUDE_PATH.'footer.inc.php'); ?></p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22473"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-22 12:04:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Create a new page in hello_world module</h3></div>
+				
+			<div class="body">
+				<p>You probably need to add the new page to the $_pages array. Look in the module.php file for an example, and add you new page into that file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22474"></a>
+		<div class="forum-post-author">
+			<label class="title">Nidiots</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-22 14:26:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Create a new page in hello_world module</h3></div>
+				
+			<div class="body">
+				<p>i added a new page in my module.php like...<br />
+<br />
+* student page.<br />
+ */<br />
+$this->_pages['mods/hello_world/index.php']['title_var'] = 'hello_world';<br />
+$this->_pages['mods/hello_world/index.php']['img']       = 'mods/hello_world/hello_world.jpg';<br />
+$_module_pages['mods/hello_world/index.php']['children']  = array('mods/hello_world/amf.php');<br />
+<br />
+<br />
+<br />
+as amf.php<br />
+<br />
+is there any problem....</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22475"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-09-22 15:29:28</p>
+            </div>
+            <div class="postheader"><h3>Re: Create a new page in hello_world module</h3></div>
+				
+			<div class="body">
+				<p>something like:<br />
+<br />
+$this->_pages['mods/_standard/hello_world/amf.php']['title_var'] = 'amf_text_etc';<br />
+$this->_pages['mods/_standard/hello_world/amf.php']['parent'] = 'tools/index.php';<br />
+<br />
+You can look through other modules' module.php files to see how they were created.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

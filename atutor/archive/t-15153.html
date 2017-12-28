@@ -1,0 +1,207 @@
+---
+ title: can login only one student
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <strong><a href="exported_forum6.html">6</a></strong> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>can login only one student</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="15153"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 11:12:27</p>
+            </div>
+            <div class="postheader"><h3>can login only one student</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+Operating system ATutor is installed on -<br />
+ATutor version - ATutor-1.6.1_pl1<br />
+Patch #s applied -<br />
+ATutor theme name -<br />
+PHP version -5.2.6<br />
+MySQL version -5.0.51a-community<br />
+Webserver & version - apache 2.2.9 (unix)<br />
+Copies of error messages -<br />
+Changes to default settings -<br />
+Web browser being used -<br />
+...and anything else relevant -<br />
+<br />
+Hello,<br />
+i want to upload a lot of student username and password to atutor in one time.<br />
+So i wrote a program an inserted students username nad password in atuter database directly. (in table with name members, and students's username and passwords were in txt file.)<br />
+and i encrypted password like atutor using sha-1factory.js file.<br />
+Now when i login with those username and password i only can login successfully with last one.<br />
+and i get "Invalid loginname/password combination"<br />
+But my program act on every user and pass same.<br />
+can you help me?<br />
+i attached one of my txtx file.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15154"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 11:26:45</p>
+            </div>
+            <div class="postheader"><h3>Re: can login only one student!</h3></div>
+				
+			<div class="body">
+				<p>Why not use the enrollment import tool?<br />
+<br />
+http://help.atutor.ca/instructor/enrollment_course_list.php?en</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15155"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 11:28:33</p>
+            </div>
+            <div class="postheader"><h3>Re: can login only one student!</h3></div>
+				
+			<div class="body">
+				<p>Because it imports just firstname,lastname and email.<br />
+and i want to import loginname and password.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15156"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 11:31:23</p>
+            </div>
+            <div class="postheader"><h3>Re: can login only one student!</h3></div>
+				
+			<div class="body">
+				<p>i see.<br />
+<br />
+for those usernames passwords you have used, try comparing in the database if it's the same.   As in, if your password is 'harris'<br />
+<br />
+then go to your database members table, do a select * from at_member where password = SHA1('harris')<br />
+and see if you can get that username out.<br />
+<br />
+Also, make sure that your email is unique, 'cause each user must have unique email.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15157"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 11:41:35</p>
+            </div>
+            <div class="postheader"><h3>Re: can login only one student!</h3></div>
+				
+			<div class="body">
+				<p>That's good sql statement.<br />
+i tested my password. and just last password was correct!<br />
+bu i have used the hex_sha1 function were in sha-1factory.js file in my program for encrypting passwords using javascript. <br />
+like this:<br />
+ passw= hex_sha1(passw) ;<br />
+is this way incorrect?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15158"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 11:46:56</p>
+            </div>
+            <div class="postheader"><h3>Re: can login only one student!</h3></div>
+				
+			<div class="body">
+				<p>Seems right to me.<br />
+<br />
+If your last password is being encoded correctly but the previous aren't, it seems like it's something within your loop.  I would suggest you to take our the hex_sha1 function for now, and simply run your program and see if the password are being stored correctly.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="15160"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 12:03:40</p>
+            </div>
+            <div class="postheader"><h3>Re: can login only one student!</h3></div>
+				
+			<div class="body">
+				<p>I tested the program for one username and password, and it was ok.<br />
+and in loop i have just one function that do encryption and send result to php script for insert in database.<br />
+and i did echo the passwords before encryption for testing my loop. they was correct before encryption!<br />
+may be the hex_sha1 function have problem in loop?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="15164"></a>
+		<div class="forum-post-author">
+			<label class="title">akram</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2008-09-12 12:34:24</p>
+            </div>
+            <div class="postheader"><h3>Re: can login only one student!</h3></div>
+				
+			<div class="body">
+				<p>I found it.<br />
+It is because of the next line character in txt file that is at end of each line except last line.<br />
+;) :D <br />
+Thank you for your help. and nice SQL statement.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

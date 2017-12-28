@@ -1,0 +1,133 @@
+---
+ title: Adding the entries to the LDAP problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <strong><a href="exported_forum12.html">12</a></strong> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Adding the entries to the LDAP problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="4257"></a>
+		<div class="forum-post-author">
+			<label class="title">monarch_bhojani</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-08 15:27:20</p>
+            </div>
+            <div class="postheader"><h3>Adding the entries to the LDAP problem</h3></div>
+				
+			<div class="body">
+				<p>Hello all,<br />
+               I have a code that adds the entries to the LDAP directory server and this code is in JAVA <br />
+But this code does compile but when i run it it gives Runtime error as<br />
+::::: Invalid credentials::::::<br />
+<br />
+The server is running when the code is run. for this do i need to specify certain schema in the .CONF file or anything else<br />
+The server I am using is OpenLDAP for Windows and Netscape directory SDK for JAVA<br />
+<br />
+ plz tell me about some another server available for LDAP support(free version) with JAVA (For Windows)<br />
+Plz tell me about the server and other information about LDAP Directory server so that i could find support for it easily<br />
+<br />
+The code is as below::::::::::::::::::<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+import netscape.ldap.*;<br />
+import java.util.*;<br />
+<br />
+public class Add {<br />
+    public static void main( String[] args )<br />
+	{<br />
+		/* Specify the DN we're adding */<br />
+		//String nickname = rock.nickname;<br />
+		String dn = "uid=ac" ;<br />
+<br />
+		/* Specify the attributes of the entry */<br />
+		String objectclass_values[] = { "top",<br />
+										"person",<br />
+										"organizationalPerson",<br />
+										"inetOrgPerson" };<br />
+		<br />
+<br />
+		LDAPAttributeSet attrs = new LDAPAttributeSet();<br />
+		LDAPAttribute attr = new LDAPAttribute( "objectclass" );<br />
+		for( int i = 0; i &lt; objectclass_values.length; i++ ) {<br />
+			attr.addValue( objectclass_values[i] );<br />
+		}<br />
+		attrs.add( attr );<br />
+<br />
+		<br />
+		attrs.add( new LDAPAttribute( "uid", "wbjensen" ) );<br />
+<br />
+		/* Create an entry with this DN and these attributes */<br />
+		LDAPEntry myEntry = new LDAPEntry( dn, attrs );<br />
+<br />
+		LDAPConnection ld = null;<br />
+		int status = -1;<br />
+		try {<br />
+			ld = new LDAPConnection();<br />
+			/* Connect to server */<br />
+			String MY_HOST = "localhost";<br />
+			int MY_PORT = 389;<br />
+			ld.connect( MY_HOST, MY_PORT );<br />
+<br />
+			/* Authenticate to the server as directory manager */<br />
+			String MGR_DN = "dc=monarch,dc=com";<br />
+			String MGR_PW = "ali";<br />
+			ld.authenticate( MGR_DN, MGR_PW );<br />
+			System.out.println("Entry established");<br />
+<br />
+			/* Now add the entry to the directory */<br />
+			ld.add( myEntry );<br />
+			System.out.println( "Entry added"  );<br />
+			System.out.println("Entry established1111");<br />
+		}<br />
+		catch( LDAPException e ) {<br />
+			if ( e.getLDAPResultCode() == LDAPException.ENTRY_ALREADY_EXISTS )<br />
+				System.out.println( "Error: Entry already present" );<br />
+			else<br />
+				System.out.println( "Error: " + e.toString()+"AA che error" );<br />
+		}<br />
+<br />
+		/* Done, so disconnect */<br />
+		if ( (ld != null) && ld.isConnected() ) {<br />
+			try {<br />
+			    ld.disconnect();<br />
+			} catch ( LDAPException e ) {<br />
+				System.out.println( "Error: " + e.toString() );<br />
+			}<br />
+		}<br />
+		System.exit(status);<br />
+    }<br />
+}</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="4279"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-04-11 13:43:05</p>
+            </div>
+            <div class="postheader"><h3>Talk to the creators</h3></div>
+				
+			<div class="body">
+				<p>LDAP support is not a part of the current ATutor source code, so I'm not sure which code you are referring to. If it is an LDAP utility for ATutor, we'd like to hear more. <br />
+<br />
+Where did you find it, and have you asked the creators for help?</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

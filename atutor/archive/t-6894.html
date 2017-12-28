@@ -1,0 +1,57 @@
+---
+ title:  in email addresses
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3> in email addresses</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6894"></a>
+		<div class="forum-post-author">
+			<label class="title">Shougeki</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-18 09:32:48</p>
+            </div>
+            <div class="postheader"><h3> in email addresses</h3></div>
+				
+			<div class="body">
+				<p>Im currently after installing 1.5.2 to a server here at work. Looking into using this as a training platform, and everything looks good so far.<br />
+<br />
+However for some stupid reason (and i mean really really stupid) whoever is in charge of the Exchange server decided it was a good idea to add ' to some peoples email address.<br />
+<br />
+This causes issues EVERYWHERE. However to change it in a global organisations policies isn't the top thing on their list....<br />
+<br />
+So is there any way of getting ATutor to actually read emails submitted with ' in them?<br />
+<br />
+Brian</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6904"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-01-19 18:54:31</p>
+            </div>
+            <div class="postheader"><h3>Re: ' in email addresses</h3></div>
+				
+			<div class="body">
+				<p>Technically you could, but it would mean going through the source code and use addslashes() to escape the quote, then use sptripslashes() to remove the escape when the message is displayed. There are many places where email addresses are used, and would require some effort.<br />
+<br />
+Using quotes in email addresses I'm sure will cause problems in many applications</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

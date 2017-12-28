@@ -1,0 +1,225 @@
+---
+ title: Please advise  Making ATutor attractive for children
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><strong><a href="exported_forum1.html">1</a></strong> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Please advise  Making ATutor attractive for children</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="25312"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-03-27 21:31:04</p>
+            </div>
+            <div class="postheader"><h3>Please advise  Making ATutor attractive for children</h3></div>
+				
+			<div class="body">
+				<p>I am invited to give a presentation in May on LCMS platforms to an audience of language teachers and language school operators in Japan. The school operators in particular are interested in aps for children's tablets.<br />
+<br />
+I looked at my ATutor website on my daughter's ipad mini and I was shocked by how awkward it is to use it. In mobile mode there is no content except the Welcome announcement. You have to hit that tiny off link in the upper left hand corner to get the Responsive template, and its graphics take up most of the screen space. The template does not adjust proportionally to the screen size, so the Side Menu takes up half the space vertically while the icons and content show up on the other half. This is a problem for my university students, but for the presentation -- it's a show stopper. <br />
+<br />
+It would seem that I need to create a whole new theme for children. But the home page must then be created as an Announcement, which still leaves a gaping hole between the top and bottom of the page. The only other alternative is an index.html page independent of the server side code. Is that even possible?<br />
+<br />
+Would it not be better to build a mobile ap for ATutor? Something I don't have the know how to do.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25313"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-03-28 00:58:34</p>
+            </div>
+            <div class="postheader"><h3>Re: Please advise - Making ATutor attractive for children.</h3></div>
+				
+			<div class="body">
+				<p>I might see a way how to do this. Theoretically, if I can trick the php code into thinking the first content page is actually the home page I can make the page look any way I want to and not have to worry about the children getting a blank home page. <br />
+<br />
+So my question for you now is: where do I find the initial call to the home page, and can I replace 'home' with 'content.php?cid=1' somewhere without breaking the template or making all my other users go to the same place?<br />
+<br />
+Or, alternatively, can I set a course home page in phpmyadmin? I am also wondering about the theme. I will use the simple theme to make the presentation pages, but my students will also be using the site, so is there a way to set a course specific theme, without it changing the rest of the site.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25314"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-03-28 08:35:49</p>
+            </div>
+            <div class="postheader"><h3>Re: Please advise - Making ATutor attractive for children.</h3></div>
+				
+			<div class="body">
+				<p>I'd suggest going with responsive rather than mobile theme. The mobile theme is beginning to show its age and will likely be shevled in a future version. <br />
+<br />
+For the home page, you can modify the content of the page in the Course Properties, Banner field. You could add a little javascript there to redirect to the first page, using window.location(), though that would make tha actual home page unavailable permanently. Or, add HTML to cerate a splash page.<br />
+<br />
+You can set category specific themes, and assign the course to that catageory. Admins create categories, which become listed in Course Properties for seection. Search the admin handbook for categories.<br />
+<br />
+You could always create your own theme, if those available are not suitable for your audience. See the theme designer documentation in the Handbook.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25319"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-04-03 03:56:41</p>
+            </div>
+            <div class="postheader"><h3>Re: Please advise - Making ATutor attractive for children.</h3></div>
+				
+			<div class="body">
+				<p>Does ATutor recognize .svg files, in addition to the other graphics files? It doesn't seem to. That makes things difficult in getting my illustrated pages to size properly.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25320"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-04-03 08:05:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Please advise - Making ATutor attractive for children.</h3></div>
+				
+			<div class="body">
+				<p>Browsers support SVG or not.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25341"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-04-25 17:44:44</p>
+            </div>
+            <div class="postheader"><h3>Re: Please advise - Making ATutor attractive for children.</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg,<br />
+<br />
+Another couple of questions on this topic.<br />
+<br />
+Working locally on the latest MAMP, I am trying to get thumbnail images to show up in the answer blanks of multiple choice tests. I loaded my image folder as a subfolder in the isensei images folder.<br />
+<br />
+When I typed in the first image url it showed up in the editor with a simple name.png. But the subsequent images did not, and none of them showed up in the answer blanks when I previewed the guestion.<br />
+<br />
+The second question concerns which file I need to change to alter the page flow so that instead of going to home they go directly to the tests page.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25342"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-04-25 17:53:49</p>
+            </div>
+            <div class="postheader"><h3>One other question</h3></div>
+				
+			<div class="body">
+				<p>I want to set up some tests so that the answer blanks appear inline. Particularly multiple choice, multiple answer and sequencing. Can that be done fairly easily and if so, what file would I need to alter?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="25343"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-04-26 08:47:51</p>
+            </div>
+            <div class="postheader"><h3>Re: One other question</h3></div>
+				
+			<div class="body">
+				<p>You'd need to create a new question type, which would involve creating a set of templates, <br />
+<br />
+https://github.com/atutor/ATutor/tree/master/themes/default/test_questions<br />
+<br />
+And creating the scripts to process the question, <br />
+https://github.com/atutor/ATutor/tree/master/mods/_standard/tests<br />
+<br />
+And, modify the QTI import/export to handle the new question type.<br />
+https://github.com/atutor/ATutor/tree/master/mods/_core/imsqti<br />
+<br />
+And, update the backups utility to handle backup/restore of the new question type:<br />
+https://github.com/atutor/ATutor/tree/master/mods/_core/backups<br />
+<br />
+Much easier would be the use multiple choice with an underlined space to represent the blank.<br />
+<br />
+Not sure about the missing images in the previous post. You'd need to do your own investigation to discover what's going on. If you can reprodcue the issue on the demo site, we'll investigate further. <br />
+<br />
+Try to keep new topics in their own threads, so they are easier to find later.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="25344"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2015-04-26 17:01:35</p>
+            </div>
+            <div class="postheader"><h3>Re: One other question</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg,  <br />
+<br />
+So if I put long underlines in the blanks I can drop images into them? That sounds almost too simple. But I will try it,<br />
+<br />
+The missing images I solved myself when I realized I had one of them loaded in wedsite's file manager.  I had put all the images in the ATutor images folder.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

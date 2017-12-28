@@ -1,0 +1,159 @@
+---
+ title: How can i set a default language
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>How can i set a default language</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="1986"></a>
+		<div class="forum-post-author">
+			<label class="title">carlocerulli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-05 12:41:16</p>
+            </div>
+            <div class="postheader"><h3>How can i set a default language</h3></div>
+				
+			<div class="body">
+				<p>hello,<br />
+<br />
+I've installed ATutor 1.4<br />
+<br />
+how can i set a default language different than English?<br />
+<br />
+thanks in advance,<br />
+carlo</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1987"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-05 16:22:13</p>
+            </div>
+            <div class="postheader"><h3>In config.inc.php</h3></div>
+				
+			<div class="body">
+				<p>Install the language pack you need, as described in the ATutor HowTo administrators section. Then set that language as the default in include/config.inc.php by changing the value of DEFAULT_LANGUAGE to the appropriate language code.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1991"></a>
+		<div class="forum-post-author">
+			<label class="title">carlocerulli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-06 05:33:00</p>
+            </div>
+            <div class="postheader"><h3>tanks</h3></div>
+				
+			<div class="body">
+				<p>done!<br />
+<br />
+tanks  :P</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2009"></a>
+		<div class="forum-post-author">
+			<label class="title">mgrassi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-09 09:36:17</p>
+            </div>
+            <div class="postheader"><h3>doesn't work for me</h3></div>
+				
+			<div class="body">
+				<p>I've done what you suggested, but after installing the italian language pack and setting define('DEFALUT_LANGUAGE', "it") I always get english as default language.<br />
+I have to manually swith to italian with the link at the end of the page.<br />
+Is it possibile to not show the English link at the end of the page?<br />
+<br />
+Thank you<br />
+Marco<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+Install the language pack you need, as described in the ATutor HowTo administrators section. Then set that language as the default in include/config.inc.php by changing the value of DEFAULT_LANGUAGE t...<br />
+[op]forums/view.php?fid=7;pid=1986;page=1#1987[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2010"></a>
+		<div class="forum-post-author">
+			<label class="title">carlocerulli</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-07-09 09:42:32</p>
+            </div>
+            <div class="postheader"><h3>here is the solution</h3></div>
+				
+			<div class="body">
+				<p>The problem is the default language of your web browser.<br />
+ATutor detects the default language of your browser and this setting ovverride the default language of atutor.<br />
+so if your browser has english as default lang, atutor will start with english as default lang even if your default in atutor is italian.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2454"></a>
+		<div class="forum-post-author">
+			<label class="title">mmader</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-09-15 04:19:44</p>
+            </div>
+            <div class="postheader"><h3>My solution</h3></div>
+				
+			<div class="body">
+				<p>I put the line:<br />
+<br />
+$temp_lang='it';<br />
+<br />
+before<br />
+<br />
+if (isset($_GET) && !empty($_GET['lang'])) {<br />
+		$temp_lang = $_GET['lang'];<br />
+    } else if (isset($_POST) && !empty($_POST['lang'])) {<br />
+        $temp_lang = $_POST['lang'];<br />
+    } else if (isset($_SESSION) && !empty($_SESSION['lang'])) {<br />
+		$temp_lang = $_SESSION['lang'];<br />
+    }<br />
+<br />
+in <br />
+<br />
+lib/select_lang.inc.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

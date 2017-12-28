@@ -1,0 +1,137 @@
+---
+ title: Tests and Surveys problems
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Tests and Surveys problems</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22752"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-05 07:17:39</p>
+            </div>
+            <div class="postheader"><h3>Tests and Surveys problems</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on - linux<br />
+  ATutor version - 2.0.2<br />
+  Patch #s applied - none<br />
+  ATutor theme name - default<br />
+  I'm on godaddy. it's all up to date<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used - N/A<br />
+  ...and anything else relevant -<br />
+<br />
+I'm using 2.0.2 because 2.0.3 did not permit me to use exe for scorm.<br />
+My students were getting trojan horse messages whenever the opened those functions.<br />
+<br />
+But I have problem with test and surveys that I also had in 2.0.3.<br />
+<br />
+The grading of the tests is very inconsistent, mostly when using the matching type questions.<br />
+<br />
+Students with all of them correct are scoring anywhere from zero to 10.<br />
+It is totally platform independent. <br />
+<br />
+It's subtracting a lot from their experience, and I haven not noticed these problems in earlier versions of the software.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22753"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-05 09:25:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests and Surveys problems</h3></div>
+				
+			<div class="body">
+				<p>Nothing has changed regarding exe for scorm. I do not imagine the trojan horse message has anything to do with ATutor or the exe content, though I suppose it is possible if the exe content you are using is itself infected. Can this student ensure he/she was not infected from some other source?<br />
+<br />
+Regarding matching questions, I did some testing with 2.0.3 but was unable to reproduce the problem. Marks seem to be generated properly, scoring the correct choice from a matching question as marks. <br />
+<br />
+When you assign a mark value to a matching question, is it divisible evenly by the number of items in the question?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22763"></a>
+		<div class="forum-post-author">
+			<label class="title">amboycharlie</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-07 01:50:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests and Surveys problems</h3></div>
+				
+			<div class="body">
+				<p>I give each question 1 point per match. So ten correct matches should yield a score of 10. They don't always. I find bad results on 20 to 30% of the tests. <br />
+<br />
+I've been using your LMS now for 10 years. This is the first year I have had a problem with any of its core functions. <br />
+<br />
+As for the trojan horse problem, I got the warning message myself each time I opened the eXe files in 2.0.3. After the change to 2.0.2, I no longer got the warning message. My students haven't complained about since.<br />
+<br />
+If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22770"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-01-11 18:09:33</p>
+            </div>
+            <div class="postheader"><h3>Re: Tests and Surveys problems</h3></div>
+				
+			<div class="body">
+				<p>I've reported the scoring inconsistency, though I'm not sure its fixable. It could be something with the PHP version you're using thgouh it stranage that 202 in fine. You may want to record the php version here and if others report the problem, perhaps we can find a pattern. Nothing has change in the code for testing between 2.0.2 and 2.0.3, there have been no other reports, and we've not been unable to reproduce the problem ourselves. We will take a little closer look during the next dev cycle and see what we can find.<br />
+<br />
+http://atutor.ca/atutor/mantis/view.php?id=4941<br />
+<br />
+As for the trojan message, again there's been no other reports, and without being able to reproduce the problem, we're reluctant to devote resources to investigate. My suspicion is there is something else going on not related to ATutor or eXe. <br />
+<br />
+One question I should ask, is where did you get your ATutor 2.0.3 bundle from? Sourceforge is where we distribute from. From elsewhere there is the possibility something may have found its way into the code.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

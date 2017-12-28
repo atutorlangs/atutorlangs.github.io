@@ -1,0 +1,145 @@
+---
+ title: SubNav LIst
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>SubNav LIst</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="20507"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-08 12:52:58</p>
+            </div>
+            <div class="postheader"><h3>SubNav LIst</h3></div>
+				
+			<div class="body">
+				<p>Hello.  In 2.0 I've been trying like crazy to find the "subnavlist" to edit a couple of things.  This is where the "My Courses" tab and "Request Instructor Account" tabs are located on ATutor/users/index.php when a student signs in.<br />
+<br />
+I think this section is generated in /ATutor/themes/default/include/header.tmpl.php in the &lt;div id="subnavlistcontainer"> section.  However, I see no way of changing anything.<br />
+<br />
+Am I missing something?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20508"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-08 13:20:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Sub-Nav LIst</h3></div>
+				
+			<div class="body">
+				<p>subnavlist is generated. To modify what appears in it, you need to edit the module.php files associated with the modules you want to modify the menus for. Edit the [children] to add and remove subnav links.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20509"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-08 15:19:06</p>
+            </div>
+            <div class="postheader"><h3>Re: Sub-Nav LIst</h3></div>
+				
+			<div class="body">
+				<p>Greg,<br />
+<br />
+Mainly, I'm looking to get rid of the "Request Instructor Account" on the users/index.php page.<br />
+<br />
+I've looked into a couple of module.php files where I thought it would be, but I'm not having any luck.  Any ideas on where I can find this one?<br />
+<br />
+Thanks.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20510"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-08 15:33:04</p>
+            </div>
+            <div class="postheader"><h3>Re: Sub-Nav LIst</h3></div>
+				
+			<div class="body">
+				<p>Turn it off in system preferences.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="20511"></a>
+		<div class="forum-post-author">
+			<label class="title">gtilflm</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-08 15:35:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Sub-Nav LIst</h3></div>
+				
+			<div class="body">
+				<p>I did, but the link to it remains.  When I click it, it's just a page with the header and footer.  <br />
+<br />
+I want to remove the link to it from the users/index.php page.  Any ideas there?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="20512"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-08-08 16:18:54</p>
+            </div>
+            <div class="postheader"><h3>Re: Sub-Nav LIst</h3></div>
+				
+			<div class="body">
+				<p>seems to be a bug.<br />
+http://www.atutor.ca/atutor/mantis/view.php?id=4468<br />
+<br />
+we'll need to investigate further to create a fix, but you can look in:<br />
+<br />
+docs/include/lib/menu_pages.php<br />
+<br />
+find children for:<br />
+users/index.php</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

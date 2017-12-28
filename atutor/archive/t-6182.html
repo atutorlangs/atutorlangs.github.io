@@ -1,0 +1,300 @@
+---
+ title: installation problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>installation problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="6182"></a>
+		<div class="forum-post-author">
+			<label class="title">saira</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-31 21:21:05</p>
+            </div>
+            <div class="postheader"><h3>installation problem</h3></div>
+				
+			<div class="body">
+				<p>Hello <br />
+<br />
+I have setup atutor on my local machine successfully and was able to perform every task locally (login, admin functions, student functions, instructor etc). When I ported the package from local machine to remote webserver , I started getting these errors;<br />
+<br />
+Warning: mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 72<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 154<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 168<br />
+<br />
+Warning: reset(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 196<br />
+<br />
+Warning: current(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 197<br />
+<br />
+Warning: current(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 202<br />
+There are no languages installed!<br />
+<br />
+I have already connected the application with database, and english is defined as language (there is only english present there right now). So, why is it saying No Languages Installed? Config.inc.php and content/ both are chmod to 0777. I dont know whether to keep or remove the install/ directory , right now its thre. Should I remove it ? Please help</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6184"></a>
+		<div class="forum-post-author">
+			<label class="title">saira</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-31 21:46:09</p>
+            </div>
+            <div class="postheader"><h3>Warning: mysql_fetch_array(): supplied argument is not</h3></div>
+				
+			<div class="body">
+				<p>If you are asking for help, provide lots of detail so problems can be reproduced.<br />
+<br />
+Things to describe: <br />
+  Apache-1.3.33 (Unix)<br />
+  operating system - Linux Based Webserver<br />
+  version of ATutor - 1.5<br />
+  versions of php - 4.3.11<br />
+  version of mysq l - 4.0.25-standard<br />
+  webserver & version - <br />
+  copies of error messages -<br />
+<br />
+Warning: mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 72<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 154<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 168<br />
+<br />
+Warning: reset(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 196<br />
+<br />
+Warning: current(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 197<br />
+<br />
+Warning: current(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 202<br />
+There are no languages installed!<br />
+<br />
+  changes to default settings - <br />
+<br />
+excluded documentation/ folder while uploading <br />
+  web browser being used - IE 6<br />
+  and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6185"></a>
+		<div class="forum-post-author">
+			<label class="title">saira</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-10-31 23:01:06</p>
+            </div>
+            <div class="postheader"><h3>plzzz help</h3></div>
+				
+			<div class="body">
+				<p>plz help atutor this is very urgent!!! i will be grateful:(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6189"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-01 11:59:35</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>what do you mean by "ported"?<br />
+<br />
+try installing a new version of atutor on your server.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6196"></a>
+		<div class="forum-post-author">
+			<label class="title">effwebapps</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-01 22:06:32</p>
+            </div>
+            <div class="postheader"><h3>Warning messages</h3></div>
+				
+			<div class="body">
+				<p>Hello <br />
+<br />
+This is Saira here again. Sorry i had to sign in with new id perhaps i have lost my old one. Thankyou for answering, but my problem is not yet solved.<br />
+<br />
+"Ported" simply means that i uploaded all the files and database tables on my remote server. www.effwebapps.com/elearn here it is.<br />
+<br />
+ I tried to run installation many times, but each time it says "ATutor appears to have been installed already." <br />
+<br />
+I had easily installed atutor 1.5 on my local machine running Win Xp, php 4.3.4, apache 2 and mysql 4. But it is giving strange warnings on remote server:<br />
+<br />
+Warning: mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 72<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 154<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 168<br />
+<br />
+Warning: reset(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 196<br />
+<br />
+Warning: current(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 197<br />
+<br />
+Warning: current(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 202<br />
+There are no languages installed!<br />
+<br />
+Though default language is already "en", and it was running well on local machine, i dont understand wat i should do because this is really very urgent and i am checking forum 10 times a day if i could find any help from atutor people themselves. Please Help!!!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6197"></a>
+		<div class="forum-post-author">
+			<label class="title">joel</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-02 10:16:16</p>
+            </div>
+            <div class="postheader"><h3>.</h3></div>
+				
+			<div class="body">
+				<p>edit the include/config.inc.php file and remove the line define('AT_INSTALL', TRUE);<br />
+at the end of the file.<br />
+save the file and it'll ask you to reinstall ATutor.<br />
+<br />
+You shouldn't move ATutor in the way you did. ATutor has to be installed you can't just copy it elsewhere and have it work.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6207"></a>
+		<div class="forum-post-author">
+			<label class="title">effwebapps</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-03 02:06:21</p>
+            </div>
+            <div class="postheader"><h3>Again the same warnings</h3></div>
+				
+			<div class="body">
+				<p>I tried this just now. The installation process over the remote server went all smooth, but at the end its again showing same errors. <br />
+<br />
+http://www.effwebapps.com/elearn/login.php?submit=%BB+Log-in%21<br />
+<br />
+Warning: mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/fakhir/public_html/elearn/include/vitals.inc.php on line 656<br />
+<br />
+Warning: mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 72<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 154<br />
+<br />
+Warning: Invalid argument supplied for foreach() in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 168<br />
+<br />
+Warning: reset(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 196<br />
+<br />
+Warning: current(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 197<br />
+<br />
+Warning: current(): Passed variable is not an array or object in /home/fakhir/public_html/elearn/include/classes/Language/LanguageManager.class.php on line 202<br />
+There are no languages installed!<br />
+<br />
+I have seen that a similar problem is faced by other users here as well. Why is that and how to solve it. please help!!!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6210"></a>
+		<div class="forum-post-author">
+			<label class="title">heidi</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-03 10:10:48</p>
+            </div>
+            <div class="postheader"><h3>install</h3></div>
+				
+			<div class="body">
+				<p>do a fresh install in your webserver directory and let us know how it goes.  <br />
+<br />
+i.e. do not install atutor elsewhere and then move it.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="6226"></a>
+		<div class="forum-post-author">
+			<label class="title">effwebapps</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-03 23:03:19</p>
+            </div>
+            <div class="postheader"><h3>ok, i do as directed</h3></div>
+				
+			<div class="body">
+				<p>Hello Sir<br />
+<br />
+I do as directed and will surely let you know about the progress.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="6242"></a>
+		<div class="forum-post-author">
+			<label class="title">effwebapps</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-11-06 16:02:08</p>
+            </div>
+            <div class="postheader"><h3>it works!!!</h3></div>
+				
+			<div class="body">
+				<p>Hello<br />
+<br />
+Thankyou, its working now. I uploaded a fresh copy of atutor 1.5.1 and installed directly from remote server. <br />
+<br />
+Once again, thankyou so much!!</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

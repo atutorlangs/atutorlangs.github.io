@@ -1,0 +1,158 @@
+---
+ title: Mobile theme loading problem
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Mobile theme loading problem</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="24475"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-27 08:52:38</p>
+            </div>
+            <div class="postheader"><h3>Mobile theme loading problem</h3></div>
+				
+			<div class="body">
+				<p>We have the latest ATuror installed<br />
+<br />
+Our host has highlighted an issue with the mobile theme with the file - ATutor/themes/mobile/include/TeraWurflRemoteClient.php<br />
+<br />
+Message from the host : "It is trying to fetch data from http://wurfl.thesedays.com/webservice.php which is causing an exception, causing the system to halt." <br />
+<br />
+Is this a genuine file and if so is it meant to be fetching data from this site ?<br />
+<br />
+Cheers<br />
+Jim<br />
+<br />
+ATutor Version:<br />
+2.1.1(unknown - 2013-11-27 13:40:12). Check Latest Version.<br />
+PHP Version:<br />
+5.2.17<br />
+MySQL Version:<br />
+OS:<br />
+Linux 2.6.27.57</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24476"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-27 09:04:05</p>
+            </div>
+            <div class="postheader"><h3>Re: Mobile theme</h3></div>
+				
+			<div class="body">
+				<p>We became aware of the problem ourselves yesterday. I'm trying to reach the developer of the theme to find out why its there. It was originally supposed to help identify mobile devices for purposes of adjusting the theme for each platform, though from what I can tell, it is no longer in use. You can safely comment out the five lines to fix the problem.<br />
+<br />
+ [php]<br />
+require ('TeraWurflRemoteClient.php');<br />
+$wurflObj = new TeraWurflRemoteClient('http://wurfl.thesedays.com/webservice.php');<br />
+$capabilities = array("product_info");<br />
+$data_format = TeraWurflRemoteClient::$FORMAT_JSON;<br />
+$wurflObj->getCapabilitiesFromAgent(null, $capabilities, $data_format); <br />
+<br />
+[/php]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24477"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-27 11:00:11</p>
+            </div>
+            <div class="postheader"><h3>Re: Mobile theme</h3></div>
+				
+			<div class="body">
+				<p>Thanks Greg<br />
+<br />
+Which file are the five lines in ?<br />
+<br />
+Cheers<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24478"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-27 11:17:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Mobile theme</h3></div>
+				
+			<div class="body">
+				<p>At the top of the mobile theme header file:<br />
+https://github.com/atutor/ATutor/blob/atutor_2_1_1/themes/mobile/include/header.tmpl.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="24479"></a>
+		<div class="forum-post-author">
+			<label class="title">onside</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-27 11:21:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Mobile theme</h3></div>
+				
+			<div class="body">
+				<p>Sorted !<br />
+<br />
+Many thanks<br />
+Jim</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="24486"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2013-11-29 09:38:21</p>
+            </div>
+            <div class="postheader"><h3>Re: Mobile theme</h3></div>
+				
+			<div class="body">
+				<p>If you have not already fix the above problem manually, a patch to correct this problem is now available for versions 2.0.1 to 2.1.1. Login as the system's administrator, open the Patcher, and look for the patch that corrects the mobile/tablet theme display problem.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

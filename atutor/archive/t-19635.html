@@ -1,0 +1,131 @@
+---
+ title: Scorm 12 Import
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Scorm 12 Import</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="19635"></a>
+		<div class="forum-post-author">
+			<label class="title">fordprefect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-24 09:54:03</p>
+            </div>
+            <div class="postheader"><h3>Scorm 12 Import</h3></div>
+				
+			<div class="body">
+				<p>Hi all.<br />
+<br />
+I'm attempting to import a SCORM course package, created in Ignite Pro 4.<br />
+<br />
+I've successfully imported the package but it fails to run - when I try to open it from Course/Manage/Scorm, I get a blank browser window.<br />
+<br />
+I've checked the directory which hold the package and can see that the original directory structure contained within the zip file I uploaded has been altered. Top level files are fine but anything that lived in a sub-directory has been flattened out, as per the following listing:<br />
+<br />
+-rwxrwxrwx 1 apache apache     201 2010-02-24 10:39 course\Glossary.xml<br />
+-rwxrwxrwx 1 apache apache      37 2010-02-24 10:39 course\ignitable.txt<br />
+-rwxrwxrwx 1 apache apache    9500 2010-02-24 10:39 course\l1\e1\Interactive\Step2.jpg<br />
+-rwxrwxrwx 1 apache apache   42901 2010-02-24 10:39 course\l1\e1\Lecture\Step10.jpg<br />
+-rwxrwxrwx 1 apache apache   42901 2010-02-24 10:39 course\l1\e1\Lecture\Step1.jpg<br />
+-rwxrwxrwx 1 apache apache   42901 2010-02-24 10:39 course\l1\e1\Lecture\Step3.jpg<br />
+-rwxrwxrwx 1 apache apache   33944 2010-02-24 10:39 course\l1\e1\Lecture\Step4.jpg<br />
+-rwxrwxrwx 1 apache apache   38927 2010-02-24 10:39 course\l1\e1\Lecture\Step5.jpg<br />
+-rwxrwxrwx 1 apache apache   41282 2010-02-24 10:39 course\l1\e1\Lecture\Step6.jpg<br />
+-rwxrwxrwx 1 apache apache   17119 2010-02-24 10:39 course\l1\e1\Lecture\Step7.jpg<br />
+-rwxrwxrwx 1 apache apache   13677 2010-02-24 10:39 course\l1\e1\Lecture\Step8.jpg<br />
+-rwxrwxrwx 1 apache apache    9488 2010-02-24 10:39 course\l1\e1\Lecture\Video\temp.jpg<br />
+-rwxrwxrwx 1 apache apache    5826 2010-02-24 10:39 course\l3\e10\Lecture\Step2.jpg<br />
+-rwxrwxrwx 1 apache apache 3537368 2010-02-24 10:39 course\l3\e10\Lecture\Video\Step2.flv<br />
+-rwxrwxrwx 1 apache apache    5814 2010-02-24 10:39 course\l3\e10\Lecture\Video\temp.jpg<br />
+<br />
+Note that these are not directory paths, but actually filenames which contain backslashes.<br />
+<br />
+Checking the Apache error log confirms that the Scorm is unable to run because it can't find the files that should be within a sub-directory.<br />
+<br />
+I can only assume that when the Scorm importer was run, it somehow messed everything up?<br />
+<br />
+Any advice would be greatly appreciated.<br />
+<br />
+Thanks,<br />
+<br />
+Ford<br />
+<br />
+Things to describe: <br />
+  Operating system ATutor is installed on -<br />
+  ATutor version -<br />
+  Patch #s applied -<br />
+  ATutor theme name -<br />
+  PHP version -<br />
+  MySQL version -<br />
+  Webserver & version -<br />
+  Copies of error messages -<br />
+  Changes to default settings -<br />
+  Web browser being used -<br />
+  ...and anything else relevant -</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19636"></a>
+		<div class="forum-post-author">
+			<label class="title">fordprefect</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-24 10:11:03</p>
+            </div>
+            <div class="postheader"><h3>Re: Scorm 1.2 Import</h3></div>
+				
+			<div class="body">
+				<p>Here's my setup: <br />
+<br />
+<br />
+Database:<br />
+    0.39 MB<br />
+Disk Usage:<br />
+    0.08 MB<br />
+Courses:<br />
+    1<br />
+Users:<br />
+    2<br />
+ATutor Version:<br />
+    1.6.4. Check Latest Version.<br />
+PHP Version:<br />
+    5.2.12<br />
+MySQL Version:<br />
+    5.1.42<br />
+OS:<br />
+    Linux 2.6.30.10-105.2.4.fc11.i686.PAE</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19637"></a>
+		<div class="forum-post-author">
+			<label class="title">cindy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2010-02-24 10:31:55</p>
+            </div>
+            <div class="postheader"><h3>Re: Scorm 1.2 Import</h3></div>
+				
+			<div class="body">
+				<p>Hi, can u send me the scorm package you were trying to upload? either attach here or send to my email: cindyqi dot li at utoronto dot ca</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

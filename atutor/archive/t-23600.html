@@ -1,0 +1,243 @@
+---
+ title: Upgrade problem LanguageManager related Atutor 21
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <strong><a href="exported_forum2.html">2</a></strong> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Upgrade problem LanguageManager related Atutor 21</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="23600"></a>
+		<div class="forum-post-author">
+			<label class="title">komputist</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-07 12:46:15</p>
+            </div>
+            <div class="postheader"><h3>Upgrade problem LanguageManager related Atutor 21</h3></div>
+				
+			<div class="body">
+				<p>When upgrading an ATutor 2.0.3 installation, I ended up getting these warnings when trying to log in:<br />
+<br />
+      .... [ 5-6 similar looking lines are deleted] .....<br />
+Warning: Invalid argument supplied for foreach() in /atutor/skolen/mods/_core/languages/classes/LanguageManager.class.php on line 173<br />
+Warning: reset() expects parameter 1 to be array, null given in /atutor/mods/_core/languages/classes/LanguageManager.class.php on line 201<br />
+Warning: current() expects parameter 1 to be array, null given in /atutor/mods/_core/languages/classes/LanguageManager.class.php on line 203<br />
+There are no languages installed!<br />
+<br />
+I suspect that the reason could be related to the fact that I have removed the English translation/localization. Can any one confirm this? Or could it be another reason?<br />
+<br />
+PS: The reason I removed the English translation was that otherwise, users would be served the English translation by default - which is not something we are interested in.<br />
+<br />
+PPS: I rolledback to the backed up installation for now, so I am still running ATutor 2.0.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23601"></a>
+		<div class="forum-post-author">
+			<label class="title">komputist</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-07 12:51:17</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>I forgot to say that one of the languages, Norwegian Bokml, is my own updated of the existing, uncomplete Norwegian Bokml translation. Also, the language tag for Norwegian Bokml was incorrect, so I changed that too. I don't know if this could play a role.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23602"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-07 13:12:46</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>It should have reinstalled the English when you updated. I'll take a closer look when I'm back in the office Tuesday.<br />
+<br />
+For now you can manually add the English to the db, attached. Edit each statement with the appropriate prefix, then run the sql file.<br />
+<br />
+eg. 'AT_language_text'</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23608"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-09 14:02:10</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>Found the problem and fixed it. You can download the new 2.1 bundle that was just posted to Sourceforge with the fix. It might take a couple hours for all the mirror sites to update, so wait a little while before downloading.<br />
+<br />
+http://atutor.ca/atutor/download.php<br />
+<br />
+<br />
+Be sure to export a copy of your no-nb language from the old site before upgrading, then reinstall it once the upgrade is complete.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23611"></a>
+		<div class="forum-post-author">
+			<label class="title">komputist</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-10 10:41:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>Thanks, will come in hand next time. For now I chose to add the English language back first before upgrading. <br />
+<br />
+(In theory Softaculous might have gotten the upgraded version - especially if you also upgraded the version number. I rely on Softacuolus for installing and upgrading - it relieves my brain from stress ...)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23612"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-10 11:24:14</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>We decided against a new version number, so hopefully Softaculous got the new one. <br />
+<br />
+If not, my guess is this is a fairly rare case, that is a softaculaous users who has deleted English. Otherwise this thread can describe the solution.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23616"></a>
+		<div class="forum-post-author">
+			<label class="title">komputist</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-10 12:42:07</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>Would it be possible to get of the *reason* why I removed English?  See the first message. (But to repeat: The reason is that when English is included, then it sets itself as the default language. I cannot have my users always switch from English to Norwegian, manually.)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23617"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-10 13:09:29</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>Maybe we can add an option to enable/disable installed languages.<br />
+<br />
+The way it works now the language defaults to the browser's set language if no language preference is set (e.g. on the login screen). When a user sets the language the first time through the links in the footer area, that becomes their default language there after. They should not need to switch each time.<br />
+<br />
+In any case, removing English should no longer be a problem beyond ATutor 2.1.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="23618"></a>
+		<div class="forum-post-author">
+			<label class="title">komputist</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-10 13:38:25</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>Aha, now I understand the problem. To solve that problem, I would propose that ATutor should have an option to define what the default language should be. Currently the default language aparently is English. But I need to be able to pick a Norwegian variant as the default.<br />
+<br />
+Background: Our situation in Norway is that there are 3 language tags which each could be interpreted as 'Norwegian', namely <br />
+<br />
+<br />
+  'no', - Norwegian<br />
+  'nb' - Norwegian Bokmal<br />
+  'nn'  - Norwegian Nynorsk<br />
+<br />
+(There are many language contexts which are similar  - e.g. in Yugoslavia therare 5 variants of what formerly was known as Serbo-Croat but which today are consiered distinct langauges, and there are also 10 or so languages that could each claim the name Chinese etc. And all this is refleced in the langauge tags.)<br />
+<br />
+The trouble is that, although 'no' covers both 'nb' and 'nn', linguistically, a user who has his or her browser set up to to prefer 'no' will not get 'nb' or 'nn' if 'no' is not available. Instead, the user will get "the default language". So this is probably the reason why I got English. As you can see, it is backwards to get "English" just because ATutor offers "nb"  instead of "no" - for instance..<br />
+<br />
+SOLUTION: So one way to improve the situation could be to add a preference inside Atutor whereby I can define what the default language should be - the language that gets served if there is no match between the preference of the user and the options in ATutor. Since I live in Norway and our customers are use to get some form of Norwegian as the default in most contexts of life her around, I would then like to be able to pick e.g. Norwegian Bokmal s the default language.<br />
+<br />
+By the way: Some Web browsers allows users to pick a secondary default. Thus, if you prefer 'Nynorsk' but Nynorsk is not available, then the suer can set her browser to  prefer 'Bokml' as the second best option. And this work fine in e.g. Firefox. But in Safari, the situation is that it does not operate with secondary language preferences. Which is an additional reason why there should be an option whereby the ATutor administrator can define what the default langauge should be whenever there is no match.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="23620"></a>
+		<div class="forum-post-author">
+			<label class="title">komputist</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2012-10-10 14:02:36</p>
+            </div>
+            <div class="postheader"><h3>Re: Upgrade problem, LanguageManager related, Atutor 2.1</h3></div>
+				
+			<div class="body">
+				<p>For what it is worth, may be this page is helpful http://www.w3.org/QA/2006/02/content_negotiation.html</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

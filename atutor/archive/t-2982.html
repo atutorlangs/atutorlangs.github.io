@@ -1,0 +1,128 @@
+---
+ title: Backing up tests and their associated results
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <strong><a href="exported_forum13.html">13</a></strong> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Backing up tests and their associated results</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="2982"></a>
+		<div class="forum-post-author">
+			<label class="title">blackwidow</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-05 11:12:41</p>
+            </div>
+            <div class="postheader"><h3>Backing up tests and their associated results</h3></div>
+				
+			<div class="body">
+				<p>ATutor 1.4.2 using a commercially hosted MySQL server.<br />
+<br />
+One area within ATutor which is not easily to backup is the students' submitted tests. As we're using a hosted server, I either have to use PhpMyAdmin to dump the appropriate tables or look at writing a script to automate the process for me. I'm currently leaning towards the latter.<br />
+<br />
+However, before I go out and try to possibly re-invent the wheel, I wondered if anyone else had come up with a method of regularly backing up tables on a hosted server?<br />
+<br />
+If I do have to resort to dumping tables via a script, what tables should I aim for. All of the _test tables?<br />
+<br />
+All suggestions welcome :)<br />
+<br />
+Mel</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2983"></a>
+		<div class="forum-post-author">
+			<label class="title">yyy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-05 13:06:14</p>
+            </div>
+            <div class="postheader"><h3>New test system in the works</h3></div>
+				
+			<div class="body">
+				<p>There was a CSV dump of text results available in earlier versions that had to be disabled temporarily for the current release. The testing system is being rebuilt. We hope to have the test result dump feature backin in the next release. For now you could display the test results and copy and paste the display<br />
+<br />
+You can currently backup the tests and questions themselves using a course backup.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2985"></a>
+		<div class="forum-post-author">
+			<label class="title">blackwidow</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-05 15:10:15</p>
+            </div>
+            <div class="postheader"><h3>Looking for something more global</h3></div>
+				
+			<div class="body">
+				<p>I am making regular backups of course content and test questions as/when courses are amended. The issue is really just the student test results.<br />
+<br />
+At present, we hope to encourage students to make copies of their own test results using the copy and paste method but I wouldn't like to rely on this. With approximately 40 separate tests across 6 courses, copy 'n' paste isn't really a practical option for a course admin with very limited time.<br />
+<br />
+A dump script that can be run once or twice a week still appears to be the most practical option.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+There was a CSV dump of text results available in earlier versions that had to be disabled temporarily for the current release. The testing system is being rebuilt. We hope to have the test result dum...<br />
+[op]forums/view.php?fid=7;pid=2982;page=1#2983[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="2986"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-05 16:25:07</p>
+            </div>
+            <div class="postheader"><h3>Dump is still there</h3></div>
+				
+			<div class="body">
+				<p>The dump scripts are still in the source code, though they need to be updated to match the new db structure. We did not have time to update the scripts before the last release, so they were just commented out. You will find them in tools/test/.. identified with csv in the filename, if you want to modify them to work with the new db structure. There will be a little effort involved, so you may want to wait for the New Year release.<br />
+<br />
+Things are going to change again for the next release, so any modifications to the files will become obsolete, but we will be creating new scripts so you can dump test data from the new testing system.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="2987"></a>
+		<div class="forum-post-author">
+			<label class="title">blackwidow</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-11-05 16:52:52</p>
+            </div>
+            <div class="postheader"><h3>Thanks</h3></div>
+				
+			<div class="body">
+				<p>I'll have a look at those scripts. I may be able to use them to solve my problem short term.<br />
+<br />
+Thanks for the heads up, greg.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

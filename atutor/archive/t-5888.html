@@ -1,0 +1,137 @@
+---
+ title: Enrolment Notification Email Body
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <strong><a href="exported_forum11.html">11</a></strong> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Enrolment Notification Email Body</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="5888"></a>
+		<div class="forum-post-author">
+			<label class="title">goody2shoes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-20 20:01:57</p>
+            </div>
+            <div class="postheader"><h3>Enrolment Notification Email Body</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+<br />
+My client is using ATutor 1.4.3.<br />
+<br />
+We would like to change the email notification a student gets when enrolled into a course so that they are also advised to change their password from the default password.<br />
+<br />
+I am wondering where the email is created. I thought it was created in the enroll.php file however tests show that my addition to the email message doesn't show up.<br />
+<br />
+So where is the php file that I need to modify?<br />
+<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5897"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-21 14:17:04</p>
+            </div>
+            <div class="postheader"><h3>Use the Language Manager</h3></div>
+				
+			<div class="body">
+				<p>All language can be edited using the administrators Language Manager. No language is contained in the ATutor files.<br />
+<br />
+Scan through the template language until you find the one you need to change.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5901"></a>
+		<div class="forum-post-author">
+			<label class="title">goody2shoes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-21 23:52:44</p>
+            </div>
+            <div class="postheader"><h3>Using the Language Manager</h3></div>
+				
+			<div class="body">
+				<p>Hi Greg<br />
+<br />
+firstly, thanks for your help.<br />
+<br />
+I have another question. I exported the english language and opened the sql file and found the insert statement I want to change to include extra info in the new account email. However, now I don't know how to overwrite the existing language and I don't want to stuff it up. I can't delete the existing english language because it is the only language on the database. If I imported the changed english language because they are insert statements in the sql file , and for the same table names as the english language, I would imagine it would just append these rows. Should I add a delete rows statement in the sql file so it does that first?<br />
+<br />
+This import/export interface is the only way I see I can change this email message.<br />
+<br />
+Thanks <br />
+Rebecca.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+All language can be edited using the administrators Language Manager. No language is contained in the ATutor files.<br />
+<br />
+Scan through the template language until you find the one you need to change.<br />
+[op]forums/view.php?fid=7;pid=5888;page=1#5897[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="5912"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-22 11:18:09</p>
+            </div>
+            <div class="postheader"><h3>Its easier than that</h3></div>
+				
+			<div class="body">
+				<p>You do not need to edit the files. After enabling translation in the Language Manager just click on template or msgs to list the language variables.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="5914"></a>
+		<div class="forum-post-author">
+			<label class="title">goody2shoes</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2005-09-22 19:55:10</p>
+            </div>
+            <div class="postheader"><h3>thanks ..</h3></div>
+				
+			<div class="body">
+				<p>Your help is much appreciated. I changed the var in vitals file and than was able to do this.<br />
+<br />
+Again, thanks.<br />
+<br />
+[reply][b]In reply to:[/b]<br />
+You do not need to edit the files. After enabling translation in the Language Manager just click on template or msgs to list the language variables.<br />
+[op]forums/view.php?fid=7;pid=5888;page=1#5912[/op][/reply]</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

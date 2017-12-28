@@ -1,0 +1,167 @@
+---
+ title: problem with glossary window
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <strong><a href="exported_forum10.html">10</a></strong> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>problem with glossary window</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="8263"></a>
+		<div class="forum-post-author">
+			<label class="title">sam79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-18 04:01:46</p>
+            </div>
+            <div class="postheader"><h3>problem with glossary window</h3></div>
+				
+			<div class="body">
+				<p>Hi <br />
+for the glossary terms, on a mouseover event ,the glossary window opens from left side to the right, also for the right handed languages but it should be vice versa .Now I have a problem with this and I want to change the direction ,how can I do this change ?please help me as soon as possible!<br />
+Thanks</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8266"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-18 09:20:45</p>
+            </div>
+            <div class="postheader"><h3>Re: problem with glossary window!</h3></div>
+				
+			<div class="body">
+				<p>in themes/default/inc.ude/header.inc.php add "direction:rtl;" to the overLib div style statement.<br />
+<br />
+We'll see what we can do about fixing this permanently for a future release.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8267"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-18 09:24:25</p>
+            </div>
+            <div class="postheader"><h3>Re: problem with glossary window!</h3></div>
+				
+			<div class="body">
+				<p>That should be header.tmpl.php</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8271"></a>
+		<div class="forum-post-author">
+			<label class="title">sam79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-19 00:57:02</p>
+            </div>
+            <div class="postheader"><h3>Re: problem with glossary window!</h3></div>
+				
+			<div class="body">
+				<p>Thanks greg<br />
+I did this change (in ATutor\themes\default\include\header.tmpl.php added &lt;div id="overDiv" style="position:absolute; direction:rtl;..) but it doesnt work! After I did this, nothing changed.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8272"></a>
+		<div class="forum-post-author">
+			<label class="title">sam79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-19 01:06:25</p>
+            </div>
+            <div class="postheader"><h3>Re: problem with glossary window!</h3></div>
+				
+			<div class="body">
+				<p>Of course, in a header.tmpl.php is not any overlib div, there is just a overDiv  div!!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8273"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-19 08:24:14</p>
+            </div>
+            <div class="postheader"><h3>Re: problem with glossary window!</h3></div>
+				
+			<div class="body">
+				<p>&lt;div id="overDiv" style="position:absolute; visibility:hidden; direction:rtl; z-index:1000;">&lt;/div></p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="8275"></a>
+		<div class="forum-post-author">
+			<label class="title">sam79</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-20 00:41:18</p>
+            </div>
+            <div class="postheader"><h3>Re: problem with glossary window!</h3></div>
+				
+			<div class="body">
+				<p>Thanks greg<br />
+I did this change before but it doesnt work!</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="8283"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2006-06-21 09:56:11</p>
+            </div>
+            <div class="postheader"><h3>Re: problem with glossary window!</h3></div>
+				
+			<div class="body">
+				<p>I'm not sure what to tell you. It works fine for us.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

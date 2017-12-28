@@ -1,0 +1,73 @@
+---
+ title: Video Upload
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Video Upload</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18226"></a>
+		<div class="forum-post-author">
+			<label class="title">sal399</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-04 01:18:33</p>
+            </div>
+            <div class="postheader"><h3>Video Upload</h3></div>
+				
+			<div class="body">
+				<p>Error: The following errors occurred:<br />
+The file exceeded the maximum allowable size limit of 20M.<br />
+<br />
+I know that this has been addressed over and over but I am stuck here I modified the following to allow videos that I want to be uploaded.<br />
+<br />
+config.inc<br />
+$MaxFileSize   =   31457280; /* 30 MB */<br />
+$MaxCourseSize =  31457280; /* 30 MB */<br />
+$MaxCourseFloat =  31457280; /* 30 MB */<br />
+<br />
+php.ini:<br />
+php_flag display_errors on<br />
+php_flag upload_max_filesize 30MB<br />
+<br />
+I uploaded a 5.9 Mb zip scorm 1.2 and it worked fine. I then uploaded a 11.9 Mb zip scorm 1.2 and it uploaded the file (file in progress) and then it hangs on ...../teacherbuilder.com/ATutor/tools/ims/ims_import.When I refresh the page manually it then gives me the following Atutor error:<br />
+Error: The following errors occurred:<br />
+The file exceeded the maximum allowable size limit of 20M. <br />
+<br />
+System Specs:<br />
+ATutor Version:<br />
+1.6.2. <br />
+PHP Version:<br />
+5.2.6<br />
+MySQL Version:<br />
+5.0.67-log<br />
+OS:<br />
+Linux 2.6.18-128.1.1.el5PAE-</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18230"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-04 08:57:47</p>
+            </div>
+            <div class="postheader"><h3>Re: Video Upload</h3></div>
+				
+			<div class="body">
+				<p>You need to set the max_upload_filesize in the system's php.ini file.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

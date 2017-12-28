@@ -1,0 +1,169 @@
+---
+ title: PHP mbstring
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <strong><a href="exported_forum5.html">5</a></strong> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>PHP mbstring</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="18244"></a>
+		<div class="forum-post-author">
+			<label class="title">tarheelgeek</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-04 14:16:24</p>
+            </div>
+            <div class="postheader"><h3>PHP mbstring</h3></div>
+				
+			<div class="body">
+				<p>Operating system ATutor is installed on - Win XP<br />
+  ATutor version - 1.6.3<br />
+  PHP version - 5.2.6<br />
+  MySQL version - 5.0.51a<br />
+  Webserver & version - Apache 2.2<br />
+<br />
+I have tried to enable mbstring <br />
+          - using apache httpd.conf(Load PHP Module)<br />
+          - altering php.ini (uncommenting fererence)<br />
+<br />
+and any other thing I could think of.  No Luck.<br />
+<br />
+Any ideas????<br />
+<br />
+Thank you in advance....<br />
+<br />
+Tarheelgeek</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18250"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-04 15:48:08</p>
+            </div>
+            <div class="postheader"><h3>Re: PHP mbstring</h3></div>
+				
+			<div class="body">
+				<p>Hi,<br />
+<br />
+All you needed to do is to alter <br />
+;extension=php_mbstring.dll<br />
+to <br />
+extension=php_mbstring.dll<br />
+<br />
+in the php.ini file.<br />
+<br />
+Make sure you are editing the right php.ini file, which is under xampp/apache/bin/</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18265"></a>
+		<div class="forum-post-author">
+			<label class="title">tarheelgeek</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-05 15:05:55</p>
+            </div>
+            <div class="postheader"><h3>Re: PHP mbstring</h3></div>
+				
+			<div class="body">
+				<p>Got it working but not your easy way.<br />
+<br />
+I installed PHP 5.2.10 using MSI - a real mistake.  <br />
+<br />
+After it was installed I downloaded the Zipped version and Unzipped it and moved the php_mbstring.dll to the /ext folder.<br />
+<br />
+Rebooted and 'viola' it's in and running.<br />
+<br />
+Tarheelgeek</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18266"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-05 15:11:04</p>
+            </div>
+            <div class="postheader"><h3>Re: PHP mbstring</h3></div>
+				
+			<div class="body">
+				<p>Ah! Good to hear.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="18268"></a>
+		<div class="forum-post-author">
+			<label class="title">tarheelgeek</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-05 15:15:30</p>
+            </div>
+            <div class="postheader"><h3>Re: PHP mbstring</h3></div>
+				
+			<div class="body">
+				<p>Lesson Learned:<br />
+<br />
+MAKE SURE THE .dll's ARE SYNCED UP WITH THE RELEASE VERSION of PHP.<br />
+<br />
+DO NOT USE THE MSI installer.<br />
+<br />
+Use the zipped version.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="18377"></a>
+		<div class="forum-post-author">
+			<label class="title">dannyboy</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-08-19 11:59:25</p>
+            </div>
+            <div class="postheader"><h3>Re: PHP mbstring</h3></div>
+				
+			<div class="body">
+				<p>hi tarheelgeek <br />
+<br />
+cloud you tell me in a step by step on how u got yours to work <br />
+this is what ive done <br />
+http://www.atutor.ca/view/7/18376/1.html and<br />
+<br />
+still getting the error <br />
+need help bad :D</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

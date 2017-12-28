@@ -1,0 +1,215 @@
+---
+ title: install fails 
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <strong><a href="exported_forum14.html">14</a></strong> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>install fails </h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="1565"></a>
+		<div class="forum-post-author">
+			<label class="title">lg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-04-29 08:04:27</p>
+            </div>
+            <div class="postheader"><h3>install fails </h3></div>
+				
+			<div class="body">
+				<p>Hi all<br />
+<br />
+New to aTutor ansd linux world i try to install it on a mandrake9.2<br />
+<br />
+all the install process seems to be good but i'm not able to login<br />
+<br />
+i launch http://localhost/~laurent/atutor/install/<br />
+all the process goes to end (execpt step5.php i had to hack to add unset($progress); at beginning)<br />
+<br />
+when i try to connect, it says that atutor is not installed and redirect me to the install process<br />
+<br />
+could someone help me <br />
+<br />
+Thans in advance<br />
+<br />
+laurent<br />
+---<br />
+conf. detail<br />
+-Apache-AdvancedExtranetServer/1.3.28 (Mandrake Linux/3.1.92mdk) PHP/4.3.3<br />
+-requirements for PhP are Ok<br />
+- MySQL Detected: Version Unknown --> installed 4.0.15<br />
+(tables are created correctly)</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1566"></a>
+		<div class="forum-post-author">
+			<label class="title">lg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-04-29 08:06:22</p>
+            </div>
+            <div class="postheader"><h3>more ..</h3></div>
+				
+			<div class="body">
+				<p>Hoops, sorry<br />
+aTutor Version : 1.3.3</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1567"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-04-29 10:05:59</p>
+            </div>
+            <div class="postheader"><h3>Complete step 5</h3></div>
+				
+			<div class="body">
+				<p>At step 5 you must set the permissions to writable on the listed directories and the config.inc.php file. You can not skip this step.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1568"></a>
+		<div class="forum-post-author">
+			<label class="title">lg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-04-29 10:18:10</p>
+            </div>
+            <div class="postheader"><h3>step5 is completed</h3></div>
+				
+			<div class="body">
+				<p>Hi greg<br />
+<br />
+thanks for your response<br />
+<br />
+Step5 has been completed and permissions seems to be correct<br />
+<br />
+here is what is displayed<br />
+ Feedback<br />
+<br />
+content/ is writeable.<br />
+content/import/ is writeable.<br />
+content/chat/ is writeable.<br />
+include/config.inc.php is writeable.<br />
+Data has been saved successfully.	<br />
+<br />
+looking at include file, all seems to be written correclty<br />
+<br />
+Nevertheless, i had the first time an error in step5 :<br />
+Fatal error: [] operator not supported for strings in /home/laurent/public_html/atutor/install/include/step5.php on line 37 <br />
+then, i added 	unset($progress); at the beginning of step5.php file<br />
+<br />
+what am i doing wrong ?<br />
+Feel free to ask formore informations<br />
+<br />
+Thanks again<br />
+<br />
+Laurent</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="1569"></a>
+		<div class="forum-post-author">
+			<label class="title">lg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-04-29 10:31:36</p>
+            </div>
+            <div class="postheader"><h3>it works !!!</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+<br />
+i did the install process one more time but the i filled even fields marked as default (answering yes/no)<br />
+<br />
+i now have acces to login screen<br />
+<br />
+lines that were not filled and prevent running<br />
+<br />
+define('EMAIL_NOTIFY',                 TRUE);<br />
+define('ALLOW_INSTRUCTOR_REQUESTS',    TRUE);<br />
+define('AUTO_APPROVE_INSTRUCTORS',     FALSE);<br />
+<br />
+it was<br />
+<br />
+define('EMAIL_NOTIFY',                 );<br />
+define('ALLOW_INSTRUCTOR_REQUESTS',    );<br />
+define('AUTO_APPROVE_INSTRUCTORS',    );<br />
+<br />
+becaus ei didn't respond to question (misunderstood the default meaning : what i should respond, and not what it will be aswered if i left blank)<br />
+<br />
+anyway, thanks for your help<br />
+<br />
+Laurent</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="1570"></a>
+		<div class="forum-post-author">
+			<label class="title">lg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2004-04-29 10:31:37</p>
+            </div>
+            <div class="postheader"><h3>it works !!!</h3></div>
+				
+			<div class="body">
+				<p>Hi<br />
+<br />
+i did the install process one more time but the i filled even fields marked as default (answering yes/no)<br />
+<br />
+i now have acces to login screen<br />
+<br />
+lines that were not filled and prevent running<br />
+<br />
+define('EMAIL_NOTIFY',                 TRUE);<br />
+define('ALLOW_INSTRUCTOR_REQUESTS',    TRUE);<br />
+define('AUTO_APPROVE_INSTRUCTORS',     FALSE);<br />
+<br />
+it was<br />
+<br />
+define('EMAIL_NOTIFY',                 );<br />
+define('ALLOW_INSTRUCTOR_REQUESTS',    );<br />
+define('AUTO_APPROVE_INSTRUCTORS',    );<br />
+<br />
+becaus ei didn't respond to question (misunderstood the default meaning : what i should respond, and not what it will be aswered if i left blank)<br />
+<br />
+anyway, thanks for your help<br />
+<br />
+Laurent</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

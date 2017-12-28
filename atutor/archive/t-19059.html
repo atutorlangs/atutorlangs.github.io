@@ -1,0 +1,105 @@
+---
+ title: how configure Atutor with a server smtp
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <a href="exported_forum3.html?page=3">3</a> <strong><a href="exported_forum4.html">4</a></strong> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>how configure Atutor with a server smtp</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="odd">
+		<a name="19059"></a>
+		<div class="forum-post-author">
+			<label class="title">amlim</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-13 11:41:35</p>
+            </div>
+            <div class="postheader"><h3>how configure Atutor with a server smtp</h3></div>
+				
+			<div class="body">
+				<p>Operating system ATutor is installed on - atutor is installed in hosting (o.s. ubuntu)<br />
+ATutor version -1.6.3<br />
+Patch #s applied -<br />
+PHP version - 5<br />
+MySQL version - 5.0.51a-3ubuntu5.4-log<br />
+<br />
+about "There was an error sending the email message" the administrator of the server where Atutor is installed told me that everything is ok and  suggested to personalize the php script atutor to send messages via SMTP (on Ubuntu system) with my mail address on the server?! How can I do? HELP<br />
+Anna :(</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19060"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-13 14:33:03</p>
+            </div>
+            <div class="postheader"><h3>Re: how configure Atutor with a server smtp?</h3></div>
+				
+			<div class="body">
+				<p>see:<br />
+<br />
+http://www.atutor.ca/atutor/docs/faq.php#1</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="19061"></a>
+		<div class="forum-post-author">
+			<label class="title">amlim25</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-13 15:50:07</p>
+            </div>
+            <div class="postheader"><h3>Re: how configure Atutor with a server smtp?</h3></div>
+				
+			<div class="body">
+				<p>I've already read the faq but the server where is installed atutor (hosting server) is ubuntu server and doesn't have sendmail installed!<br />
+But finally I find the way :); I edit the config.inc.php and I changed parameter SMTP to true (was false).<br />
+It works!<br />
+<br />
+I'm not satisfied by Atutor documentation because the section about installation and configuration/customization of Atutor is poor and not clear for the persons not secialized like me.<br />
+<br />
+Thank you the same<br />
+Anna</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="19062"></a>
+		<div class="forum-post-author">
+			<label class="title">greg</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2009-11-13 16:47:57</p>
+            </div>
+            <div class="postheader"><h3>Re: how configure Atutor with a server smtp?</h3></div>
+				
+			<div class="body">
+				<p>Most linux host systems these days have Sendmail installed by default, and you don't have to do anything to get mail working in ATutor. That's about as easy as we can make it.  Unfortunately in your case, that does not seem to be so. There are too many possible issue with various email setups for us to attempt to cover them all. The FAQ and documentation cover the more common situations.<br />
+<br />
+Setting up a mail system goes a little beyond what we'd include in ATutor documentation. You'd normally refer to the documentation for the mail system itself.<br />
+<br />
+This a community project, so if you have a special case, you might offer to write a little documentation yourself to help others who might have the same problem.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>

@@ -1,0 +1,110 @@
+---
+ title: Javascript error
+---
+<div class='threadlist'>
+<br /><div><a href='exported_forum1.html' class='midtext'>Back to: Thread list</a></div>
+<br /><br /><div><strong>Pages:</strong><a href="exported_forum1.html?page=1">1</a> <a href="exported_forum2.html?page=2">2</a> <strong><a href="exported_forum3.html">3</a></strong> <a href="exported_forum4.html?page=4">4</a> <a href="exported_forum5.html?page=5">5</a> <a href="exported_forum6.html?page=6">6</a> <a href="exported_forum7.html?page=7">7</a> <a href="exported_forum8.html?page=8">8</a> <a href="exported_forum9.html?page=9">9</a> <a href="exported_forum10.html?page=10">10</a> <a href="exported_forum11.html?page=11">11</a> <a href="exported_forum12.html?page=12">12</a> <a href="exported_forum13.html?page=13">13</a> <a href="exported_forum14.html?page=14">14</a> <a href="exported_forum15.html?page=15">15</a> </div>
+<div><p><br /><h3>Javascript error</h3></div><br />
+<div><ul class='forum-thread'>
+
+	<li class="even">
+		<a name="22239"></a>
+		<div class="forum-post-author">
+			<label class="title">HenryGR</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-24 17:27:40</p>
+            </div>
+            <div class="postheader"><h3>Javascript error</h3></div>
+				
+			<div class="body">
+				<p>To be sincere, I do not know wheter this error belongs to the Fluid them or it is inherent to any theme.<br />
+<br />
+As far as I was able to check, using different browsers (Firefox, Chromium and Opera) on different platforms (Windows Vista, Windows 7, Kubuntu and Ubuntu).<br />
+<br />
+I get the same error:<br />
+Error: jQuery("a.tooltip").tooltip is not a function<br />
+Source file: https://sidar.org/ATutor/content.php?cid=1<br />
+Line: 33<br />
+<br />
+May that be because the version of JQuery natively used in ATutor?</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22243"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-27 09:50:22</p>
+            </div>
+            <div class="postheader"><h3>Re: Javascript error</h3></div>
+				
+			<div class="body">
+				<p>Hi, thanks for the report.<br />
+<br />
+What version of ATutor are you running?  It could be a jQuery/jQuery UI version conflict with the one ATutor has.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="even">
+		<a name="22244"></a>
+		<div class="forum-post-author">
+			<label class="title">HenryGR</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-27 10:58:39</p>
+            </div>
+            <div class="postheader"><h3>Re: Javascript error</h3></div>
+				
+			<div class="body">
+				<p>Hi Harris,<br />
+Sytem reports:<br />
+<br />
+ATutor Version:<br />
+    2.0.2(r10589 - 2010-12-21 16:47:09). Check Latest Version.<br />
+PHP Version:<br />
+    5.3.3-7+squeeze1<br />
+MySQL Version:<br />
+    5.1.49-3<br />
+OS:<br />
+    Linux 2.6.32-5-686<br />
+<br />
+Regards.</p>
+			</div>
+		</div>
+	</li>
+
+	<li class="odd">
+		<a name="22245"></a>
+		<div class="forum-post-author">
+			<label class="title">harris</label><br />
+		</div>
+
+		<div class="forum-post-content">
+			
+			<div class="date">
+                <p>2011-06-27 11:29:50</p>
+            </div>
+            <div class="postheader"><h3>Re: Javascript error</h3></div>
+				
+			<div class="body">
+				<p>Thanks.  I have reproduced this on my system.  It seems like we are calling tooltip directly from jQuery.  jQuery needs the 1.9 UI plugin for tooltip to run, or we can use the FLUID's tooltip.<br />
+<br />
+I have added this to our bug tracker.</p>
+			</div>
+		</div>
+	</li>
+</ul></div>
