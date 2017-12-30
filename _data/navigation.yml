@@ -35,7 +35,7 @@ toc:
 - title: Developers
   url: http://atutor.github.io/devel/
   sublinks:
-    - title: Developer Docss
+    - title: Developer Docs
       url: https://atutor.github.io/developer/guidelines.html
     - title: Module Developer
       url:  https://atutor.github.io/developer/modules.html
