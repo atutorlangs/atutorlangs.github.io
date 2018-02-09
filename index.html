@@ -1,6 +1,7 @@
 ---
 title: ATutor Languages
 layout: home
+
 ---
 
 <div class="cd-container">
@@ -8,6 +9,7 @@ layout: home
             <h2>Translation</h2>
 <p>Starting in ATutor 2.2.3, languages listed here can be imported from GitHub using the Import tool in the ATutor Administrator's Language Manager. But, if for instance, a firewal prevents accessing this list, then download the zipped language pack from here and upload it through the Language Manager. As the admin of your ATutor installation, in System Preferences open Languages>Import. Use the Browse button to find the language pack you downloaded, then press import.</p>
             <ul>
+            {% comment %}
             {% assign public_repositories = site.github.public_repositories | sort: 'updated_at'| reverse %}
             {% for repository in public_repositories%}
                 {% if repository.fork == false  and repository.name != 'atutorlangs.github.io' %}
@@ -16,6 +18,7 @@ layout: home
 			<br />Last updated: {{ repository.updated_at }}</li>
                 {% endif %}
             {% endfor %}
+            {% endcomment %}
             </ul>
             </div>
 	</div>     	
